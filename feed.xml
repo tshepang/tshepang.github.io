@@ -3,9 +3,102 @@
     <title>Tshepang logs</title>
     <link href="http://tshepang.net/feed" rel="self" />
     <link href="http://tshepang.net/" />
-    <updated>2013-06-29T12:33:39+02:00</updated>
+    <updated>2013-06-29T13:04:29+02:00</updated>
     <id>http://tshepang.net/</id>
     <entry>
+        <title type="html"><![CDATA[from Pelican to liquidluck]]></title>
+        <author><name>Tshepang Lekhonkhobe</name></author>
+        <link href="http://tshepang.net/from-pelican-to-liquidluck"/>
+        <published>2013-06-29T00:00:00+02:00</published>
+        <updated>2013-06-29T13:04:29+02:00</updated>
+        <id>http://tshepang.net/from-pelican-to-liquidluck</id>
+        <category scheme="http://tshepang.net/tag/#blogging" term="blogging" label="blogging" />
+        <content type="html" xml:base="http://tshepang.net" xml:lang="en">
+            <![CDATA[ <p><strong>notes</strong>:</p>
+<ul class="simple">
+<li>This post was first published on <strong>2012-07-05</strong>,
+which is shortly after I started using <a class="reference external" href="http://liquidluck.readthedocs.org">liquidluck</a>.</li>
+<li>I have a separate post on <a class="reference external" href="http://tshepang.net/what-me-loves-about-static-website-generation">what I love about static website generators</a>.</li>
+</ul>
+<div class="section" id="why-pelican-rocks">
+<h2>why <a class="reference external" href="http://pelican.readthedocs.org">Pelican</a> rocks</h2>
+<ul class="simple">
+<li>It has categories
+(<a class="reference external" href="https://github.com/ralsina/nikola/issues/163">unlike nikola</a>)</li>
+<li>Post metadata:<ul>
+<li>if Date is not specified, file mtime is used (unlike <a class="reference external" href="http://blogofile.com">blogofile</a>)</li>
+<li>if Category is not specified, parent directory name is used
+(unlike blogofile)</li>
+<li>titles are allowed to have any character (unlike blogofile)</li>
+<li>there is an option to provide clean urls... remove trailing <tt class="docutils literal">.html</tt>
+(<a class="reference external" href="https://github.com/ralsina/nikola/issues/291">unlike nikola</a>)</li>
+</ul>
+</li>
+<li>Does not force one into having ugly date-based filesystem structure
+(<a class="reference external" href="https://bitbucket.org/vladris/tinkerer/issue/41">unlike tinkerer</a>)</li>
+</ul>
+</div>
+<div class="section" id="why-pelican-rocks-not">
+<h2>why Pelican rocks not</h2>
+<p>The default theme simply didn't fit my tastes,
+and <a class="reference external" href="http://tshepang.net/favorite-pelican-themes">the other themes weren't so satisfactory</a>.
+I spent way too long fiddling with them, and just couldn't be happy.</p>
+</div>
+<div class="section" id="why-liquidluck">
+<h2>why liquidluck</h2>
+<p>So I have moved to <a class="reference external" href="http://liquidluck.readthedocs.org">liquidluck</a>,
+and am hoping I will not be 'forced' to move again.
+It's way too much work, and it took multiple messages between me and
+<a class="reference external" href="http://lepture.com">the developer</a> of this sleek new static site generator just to get it
+to behave the way I like it.</p>
+<p>I had to override stuff that's done by the software, by using <a class="reference external" href="https://bitbucket.org/tshepang/blog/src/tip/custom.py">this script</a>,
+which helped give it the advantages that Pelican has over the
+other generators I mentioned, while also solving the one problem Pelican
+has.. lack of a good-enough theme.
+This was achieved with the help of that very helpful and responsive developer.</p>
+</div>
+<div class="section" id="issues">
+<h2>issues</h2>
+<ul>
+<li><p class="first">There is no visible way, at least for the default theme, to subscribe
+to RSS feeds of individual Categories.</p>
+</li>
+<li><p class="first">The text is a bit blurry/faint with the default theme,
+and none of <a class="reference external" href="http://tshepang.net/looking-at-liquidluck-themes">the other ones</a> are close to good-enough for my liking,
+all but the promising one named <a class="reference external" href="https://github.com/bingdian/liquidluck-theme-responsive">responsive</a>.
+It got 2 issues so far (see <a class="reference external" href="http://demo-responsive.tshepang.net">live demo</a>):</p>
+<ul class="simple">
+<li>Date is displayed at the bottom of a post...
+why make user scroll that far before presenting such a key piece of info.</li>
+<li>There is no link anywhere allowing to visit Home.</li>
+</ul>
+</li>
+<li><p class="first">Background color for <tt class="docutils literal">&lt;code&gt;</tt> text is too unusual,
+and results in an ugly look.
+It does not fit with the general general theme, so should be grey really,
+which would match with that of <tt class="docutils literal">&lt;pre&gt;</tt> text.
+If fixed it myself with the following change:</p>
+<pre class="literal-block">
+diff --git a/liquidluck/_themes/default/static/style.css b/liquidluck/_themes/default/static/style.css
+index e90de80..94fa7e8 100644
+--- a/liquidluck/_themes/default/static/style.css
++++ b/liquidluck/_themes/default/static/style.css
+&#64;&#64; -112,7 +112,7 &#64;&#64; pre {
+     border-radius: 3px;
+ }
+ code, tt {
+-    background-color: #fee9cc;
++    background-color: #eee;
+     color: rgba(0, 0, 0, 0.75);
+     padding: 1px 3px;
+     font-size: 12px;
+</pre>
+</li>
+</ul>
+</div>
+]]>
+        </content>
+    </entry><entry>
         <title type="html"><![CDATA[favorite FLOSS]]></title>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/favorite-floss"/>
@@ -1535,80 +1628,6 @@ Python for particular tasks</li>
 one of the many <a class="reference external" href="http://www.linuxfromscratch.org/hints/list.html">LFS hints</a>. I am looking forward to
 the challenge (which may result in me ditching Debian for home use).</li>
 </ul>
-]]>
-        </content>
-    </entry><entry>
-        <title type="html"><![CDATA[from Pelican to liquidluck]]></title>
-        <author><name>Tshepang Lekhonkhobe</name></author>
-        <link href="http://tshepang.net/from-pelican-to-liquidluck"/>
-        <published>2013-03-20T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:08+02:00</updated>
-        <id>http://tshepang.net/from-pelican-to-liquidluck</id>
-        <category scheme="http://tshepang.net/tag/#blogging" term="blogging" label="blogging" />
-        <content type="html" xml:base="http://tshepang.net" xml:lang="en">
-            <![CDATA[ <p><strong>notes</strong>:</p>
-<ul class="simple">
-<li>I have a separate post on <a class="reference external" href="http://tshepang.net/what-me-loves-about-static-website-generation">what I love about static website generators</a>.</li>
-<li>This post was first published on <strong>2012-07-05</strong>,
-which is shortly after I started using <a class="reference external" href="http://liquidluck.readthedocs.org">liquidluck</a>.</li>
-</ul>
-<div class="section" id="why-pelican-rocks">
-<h2>why <a class="reference external" href="http://pelican.readthedocs.org">Pelican</a> rocks</h2>
-<ul class="simple">
-<li>It has categories
-(<a class="reference external" href="https://github.com/ralsina/nikola/issues/163">unlike nikola</a>)</li>
-<li>Post metadata:<ul>
-<li>if Date is not specified, file mtime is used (unlike <a class="reference external" href="http://blogofile.com">blogofile</a>)</li>
-<li>if Category is not specified, parent directory name is used
-(unlike blogofile)</li>
-<li>titles are allowed to have any character (unlike blogofile)</li>
-<li>there is an option to provide clean urls... remove trailing <tt class="docutils literal">.html</tt>
-(<a class="reference external" href="https://github.com/ralsina/nikola/issues/291">unlike nikola</a>)</li>
-</ul>
-</li>
-<li>Does not force one into having ugly date-based filesystem structure
-(<a class="reference external" href="https://bitbucket.org/vladris/tinkerer/issue/41">unlike tinkerer</a>)</li>
-</ul>
-</div>
-<div class="section" id="why-pelican-rocks-not">
-<h2>why Pelican rocks not</h2>
-<p>The default theme simply didn't fit my tastes,
-and <a class="reference external" href="http://tshepang.net/favorite-pelican-themes">the other themes weren't so satisfactory</a>.
-I spent way too long fiddling with them, and just couldn't be happy.</p>
-</div>
-<div class="section" id="why-liquidluck">
-<h2>why liquidluck</h2>
-<p>So I have moved to <a class="reference external" href="http://liquidluck.readthedocs.org">liquidluck</a>,
-and am hoping I will not be 'forced' to move again.
-It's way too much work, and it took multiple messages between me and
-<a class="reference external" href="http://lepture.com">the developer</a> of this sleek new static site generator just to get it
-to behave the way I like it.</p>
-<p>I had to override stuff that's done by the software, by using <a class="reference external" href="https://bitbucket.org/tshepang/blog/src/tip/custom.py">this script</a>,
-which helped give it the advantages that Pelican has over the
-other generators I mentioned, while also solving the one problem Pelican
-has.. lack of a good-enough theme.
-This was achieved with the help of that very helpful and responsive developer.</p>
-</div>
-<div class="section" id="issues">
-<h2>issues</h2>
-<ul class="simple">
-<li>There is no visible way, at least for the default theme, to subscribe
-to RSS feeds of individual Categories.</li>
-<li>The text is a bit blurry/faint with the default theme,
-and none of <a class="reference external" href="http://tshepang.net/looking-at-liquidluck-themes">the other ones</a> are close to good-enough for my liking,
-all but the promising one named <a class="reference external" href="https://github.com/bingdian/liquidluck-theme-responsive">responsive</a>.
-It got 2 issues so far (see <a class="reference external" href="http://demo-responsive.tshepang.net">live demo</a>):<ul>
-<li>Date is displayed at the bottom of a post...
-why make user scroll that far before presenting such a key piece of info.</li>
-<li>There is no link anywhere allowing to visit Home.</li>
-</ul>
-</li>
-<li>Background color for <tt class="docutils literal">&lt;code&gt;</tt> text is too unusual,
-and results in an ugly look.
-It does not fit with the general general theme, so should be grey really,
-which would match with that of <tt class="docutils literal">&lt;pre&gt;</tt> text.</li>
-</ul>
-</div>
 ]]>
         </content>
     </entry><entry>

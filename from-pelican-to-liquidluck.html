@@ -45,8 +45,8 @@
             <div class="container"><div class="hentry">
     <h1 class="entry-title">from Pelican to liquidluck</h1>
     <div class="entry-meta">
-        <time class="updated" datetime="2013-03-20T00:00:00+02:00" pubdate>
-            <a href="/2013/">2013-03-20</a>
+        <time class="updated" datetime="2013-06-29T00:00:00+02:00" pubdate>
+            <a href="/2013/">2013-06-29</a>
         </time>
         <span class="author vcard">
             by <span class="fn">Tshepang Lekhonkhobe</span>
@@ -55,9 +55,9 @@
     <div class="entry-content">
         <p><strong>notes</strong>:</p>
 <ul class="simple">
-<li>I have a separate post on <a class="reference external" href="http://tshepang.net/what-me-loves-about-static-website-generation">what I love about static website generators</a>.</li>
 <li>This post was first published on <strong>2012-07-05</strong>,
 which is shortly after I started using <a class="reference external" href="http://liquidluck.readthedocs.org">liquidluck</a>.</li>
+<li>I have a separate post on <a class="reference external" href="http://tshepang.net/what-me-loves-about-static-website-generation">what I love about static website generators</a>.</li>
 </ul>
 <div class="section" id="why-pelican-rocks">
 <h2>why <a class="reference external" href="http://pelican.readthedocs.org">Pelican</a> rocks</h2>
@@ -98,22 +98,41 @@ This was achieved with the help of that very helpful and responsive developer.</
 </div>
 <div class="section" id="issues">
 <h2>issues</h2>
-<ul class="simple">
-<li>There is no visible way, at least for the default theme, to subscribe
-to RSS feeds of individual Categories.</li>
-<li>The text is a bit blurry/faint with the default theme,
+<ul>
+<li><p class="first">There is no visible way, at least for the default theme, to subscribe
+to RSS feeds of individual Categories.</p>
+</li>
+<li><p class="first">The text is a bit blurry/faint with the default theme,
 and none of <a class="reference external" href="http://tshepang.net/looking-at-liquidluck-themes">the other ones</a> are close to good-enough for my liking,
 all but the promising one named <a class="reference external" href="https://github.com/bingdian/liquidluck-theme-responsive">responsive</a>.
-It got 2 issues so far (see <a class="reference external" href="http://demo-responsive.tshepang.net">live demo</a>):<ul>
+It got 2 issues so far (see <a class="reference external" href="http://demo-responsive.tshepang.net">live demo</a>):</p>
+<ul class="simple">
 <li>Date is displayed at the bottom of a post...
 why make user scroll that far before presenting such a key piece of info.</li>
 <li>There is no link anywhere allowing to visit Home.</li>
 </ul>
 </li>
-<li>Background color for <tt class="docutils literal">&lt;code&gt;</tt> text is too unusual,
+<li><p class="first">Background color for <tt class="docutils literal">&lt;code&gt;</tt> text is too unusual,
 and results in an ugly look.
 It does not fit with the general general theme, so should be grey really,
-which would match with that of <tt class="docutils literal">&lt;pre&gt;</tt> text.</li>
+which would match with that of <tt class="docutils literal">&lt;pre&gt;</tt> text.
+If fixed it myself with the following change:</p>
+<pre class="literal-block">
+diff --git a/liquidluck/_themes/default/static/style.css b/liquidluck/_themes/default/static/style.css
+index e90de80..94fa7e8 100644
+--- a/liquidluck/_themes/default/static/style.css
++++ b/liquidluck/_themes/default/static/style.css
+&#64;&#64; -112,7 +112,7 &#64;&#64; pre {
+     border-radius: 3px;
+ }
+ code, tt {
+-    background-color: #fee9cc;
++    background-color: #eee;
+     color: rgba(0, 0, 0, 0.75);
+     padding: 1px 3px;
+     font-size: 12px;
+</pre>
+</li>
 </ul>
 </div>
 
