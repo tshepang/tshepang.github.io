@@ -3,14 +3,29 @@
     <title>Tshepang logs</title>
     <link href="http://tshepang.net/feed" rel="self" />
     <link href="http://tshepang.net/" />
-    <updated>2013-06-29T13:10:02+02:00</updated>
+    <updated>2013-06-29T13:45:46+02:00</updated>
     <id>http://tshepang.net/</id>
     <entry>
+        <title type="html"><![CDATA[top sites]]></title>
+        <author><name>Tshepang Lekhonkhobe</name></author>
+        <link href="http://tshepang.net/top-sites"/>
+        <published>2013-06-29T00:00:00+02:00</published>
+        <updated>2013-06-29T13:41:33+02:00</updated>
+        <id>http://tshepang.net/top-sites</id>
+        <content type="html" xml:base="http://tshepang.net" xml:lang="en">
+            <![CDATA[ <p><strong>atheist writing</strong>: <a class="reference external" href="http://scienceblogs.com/pharyngula/">Pharyngula</a></p>
+<p><strong>Linux-related news</strong>: <a class="reference external" href="http://lwn.net/">LWN</a></p>
+<p><strong>rationality</strong>: <a class="reference external" href="http://lesswrong.com/">Less Wrong</a></p>
+<p><strong>software development</strong>: <a class="reference external" href="http://stackoverflow.com/">Stack Overflow</a></p>
+<p><strong>HTML5</strong>: <a class="reference external" href="http://diveintohtml5.info/">diveintohtml5</a></p>
+]]>
+        </content>
+    </entry><entry>
         <title type="html"><![CDATA[from Pelican to liquidluck]]></title>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/from-pelican-to-liquidluck"/>
         <published>2013-06-29T00:00:00+02:00</published>
-        <updated>2013-06-29T13:10:02+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/from-pelican-to-liquidluck</id>
         <category scheme="http://tshepang.net/tag/#blogging" term="blogging" label="blogging" />
         <content type="html" xml:base="http://tshepang.net" xml:lang="en">
@@ -103,7 +118,7 @@ index e90de80..94fa7e8 100644
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/favorite-floss"/>
         <published>2013-06-29T00:00:00+02:00</published>
-        <updated>2013-06-29T12:08:21+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/favorite-floss</id>
         <category scheme="http://tshepang.net/tag/#untagged" term="untagged" label="untagged" />
         <content type="html" xml:base="http://tshepang.net" xml:lang="en">
@@ -125,102 +140,11 @@ OpenSSH</p>
 ]]>
         </content>
     </entry><entry>
-        <title type="html"><![CDATA[tools I use all the time]]></title>
-        <author><name>Tshepang Lekhonkhobe</name></author>
-        <link href="http://tshepang.net/tools-i-use-all-the-time"/>
-        <published>2013-06-29T00:00:00+02:00</published>
-        <updated>2013-06-29T12:33:39+02:00</updated>
-        <id>http://tshepang.net/tools-i-use-all-the-time</id>
-        <category scheme="http://tshepang.net/tag/#untagged" term="untagged" label="untagged" />
-        <content type="html" xml:base="http://tshepang.net" xml:lang="en">
-            <![CDATA[ <p>Following are tools I use all the time, but am not necessarily loving.
-For those I like a lot, see <a class="reference external" href="http://tshepang.net/favorite-floss">this list</a>.</p>
-<ul class="simple">
-<li>Debian: my primary OS, and also my favorite</li>
-<li>Emacs: general text editor</li>
-<li>Vim: it happens to be installed on a lot of systems at work, but I
-only rarely use it on my workstation</li>
-<li>GNOME: primary Desktop Environment<ul>
-<li>gnome-panel</li>
-<li>gnome-search-tool</li>
-<li>gnome-system-monitor</li>
-<li>nautilus</li>
-<li>file-roller</li>
-</ul>
-</li>
-<li>Evince: PDF reading</li>
-<li>Quod Libet: audio player</li>
-<li>Thunderbird: I prefer Evolution, but it gave me some issues I don't remember</li>
-<li>GNU toolchain (GCC, make, GLibC, ...)</li>
-<li>VLC</li>
-<li>Git</li>
-</ul>
-]]>
-        </content>
-    </entry><entry>
-        <title type="html"><![CDATA[top musicians]]></title>
-        <author><name>Tshepang Lekhonkhobe</name></author>
-        <link href="http://tshepang.net/top-musicians"/>
-        <published>2013-06-09T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:09+02:00</updated>
-        <id>http://tshepang.net/top-musicians</id>
-        <category scheme="http://tshepang.net/tag/#music" term="music" label="music" />
-        <content type="html" xml:base="http://tshepang.net" xml:lang="en">
-            <![CDATA[ <p>The best musicians in history,
-created with the help of <a class="reference external" href="http://tshepang.net/simple-point-system-for-rating-music">a simple point system</a>.</p>
-<ul class="simple">
-<li><a class="reference external" href="http://tshepang.net/top-tracks-fela-kuti">Fela Kuti</a>, 27</li>
-<li><a class="reference external" href="http://tshepang.net/top-tracks-burning-spear">Burning Spear</a>, 18</li>
-<li><a class="reference external" href="http://tshepang.net/letta-mbulu-vs-miriam-makeba">Letta Mbulu</a>, 15</li>
-<li><a class="reference external" href="http://tshepang.net/top-tracks-salif-keita">Salif Keita</a>, 14</li>
-<li><a class="reference external" href="http://tshepang.net/top-tracks-bob-marley">Bob Marley</a>, 13</li>
-<li><a class="reference external" href="http://tshepang.net/top-tracks-fugees">Fugees</a>, 12</li>
-<li><a class="reference external" href="http://tshepang.net/top-tracks-the-roots">The Roots</a>, 10</li>
-</ul>
-<hr class="docutils" />
-<p>For quite a while, this list of grandmasters consisted of just three
-musicians (Fela Kuti, Bob Marley, and Burning Spear); I was only
-surprised that the later entrants, Salif Keita and Letta Mbulu beat
-mighty Bob, and that was based on just my thinking without actually
-making a list of tracks. Intuition isn't always reliable.</p>
-]]>
-        </content>
-    </entry><entry>
-        <title type="html"><![CDATA[top sites]]></title>
-        <author><name>Tshepang Lekhonkhobe</name></author>
-        <link href="http://tshepang.net/top-sites"/>
-        <published>2013-06-09T00:00:00+02:00</published>
-        <updated>2013-06-09T14:28:32+02:00</updated>
-        <id>http://tshepang.net/top-sites</id>
-        <content type="html" xml:base="http://tshepang.net" xml:lang="en">
-            <![CDATA[ <p><strong>atheist writing</strong>: <a class="reference external" href="http://scienceblogs.com/pharyngula/">Pharyngula</a></p>
-<p><strong>Linux-related news</strong>: <a class="reference external" href="http://lwn.net/">LWN</a></p>
-<p><strong>rationality</strong>: <a class="reference external" href="http://lesswrong.com/">Less Wrong</a></p>
-<p><strong>software development</strong>: <a class="reference external" href="http://stackoverflow.com/">Stack Overflow</a></p>
-<p><strong>HTML5</strong>: <a class="reference external" href="http://diveintohtml5.info/">diveintohtml5</a></p>
-]]>
-        </content>
-    </entry><entry>
-        <title type="html"><![CDATA[where I live on the web]]></title>
-        <author><name>Tshepang Lekhonkhobe</name></author>
-        <link href="http://tshepang.net/where-i-live-on-the-web"/>
-        <published>2013-06-09T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:08+02:00</updated>
-        <id>http://tshepang.net/where-i-live-on-the-web</id>
-        <content type="html" xml:base="http://tshepang.net" xml:lang="en">
-            <![CDATA[ <p>I spend perhaps too much of my time online, and these are among the
-greatest culprits:</p>
-<p><strong>planets</strong>: <a class="reference external" href="http://planet.debian.org/">Debian</a>, <a class="reference external" href="http://planet.gnome.org/">GNOME</a>, <a class="reference external" href="http://planet.python.org/">Python</a></p>
-<p><strong>Python</strong>: <a class="reference external" href="http://mail.python.org/mailman/listinfo/python-dev">python-dev</a>, <a class="reference external" href="https://github.com/tshepang">GitHub</a></p>
-<p><strong>Stack Exchange</strong>: <a class="reference external" href="http://stackexchange.com/sites">Stack Exchange sites</a> (<a class="reference external" href="http://stackexchange.com/users/125744/tshepang">my profile</a>)</p>
-]]>
-        </content>
-    </entry><entry>
         <title type="html"><![CDATA[my current plans for wajig]]></title>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/my-current-plans-for-wajig"/>
-        <published>2013-06-09T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:06+02:00</updated>
+        <published>2013-06-29T00:00:00+02:00</published>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/my-current-plans-for-wajig</id>
         <category scheme="http://tshepang.net/tag/#wajig" term="wajig" label="wajig" />
         <category scheme="http://tshepang.net/tag/#Python" term="Python" label="Python" />
@@ -259,46 +183,11 @@ code</li>
 ]]>
         </content>
     </entry><entry>
-        <title type="html"><![CDATA[FLOSS pipedreams]]></title>
-        <author><name>Tshepang Lekhonkhobe</name></author>
-        <link href="http://tshepang.net/floss-pipedreams"/>
-        <published>2013-06-09T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:05+02:00</updated>
-        <id>http://tshepang.net/floss-pipedreams</id>
-        <category scheme="http://tshepang.net/tag/#GNOME" term="GNOME" label="GNOME" />
-        <category scheme="http://tshepang.net/tag/#Debian" term="Debian" label="Debian" />
-        <category scheme="http://tshepang.net/tag/#Python" term="Python" label="Python" />
-        <category scheme="http://tshepang.net/tag/#non-FLOSS" term="non-FLOSS" label="non-FLOSS" />
-        <content type="html" xml:base="http://tshepang.net" xml:lang="en">
-            <![CDATA[ <p>Within <a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software">FLOSS</a>, I do have preferences (e.g. Python over Perl),
-but this post is about my preferences over proprietary alternatives.</p>
-<p><strong>3D content creation</strong>:
-<a class="reference external" href="http://blender.org">Blender</a> should be mainstream... used in blockbusters</p>
-<p><strong>desktop</strong>:
-<a class="reference external" href="http://gnome.org">GNOME</a> should replace Mac OS X as THE desktop experience,
-and then steal the market</p>
-<p><strong>CRM/ERP</strong>:
-<a class="reference external" href="http://tryton.org">Tryton</a> (or <a class="reference external" href="http://openerp.com">OpenERP</a>) should steal SAP's market share</p>
-<p><strong>image manipulation</strong>:
-<a class="reference external" href="http://gimp.org">GIMP</a> should acquire feature-parity with Photoshop, and then steal the market</p>
-<p><strong>DBMS</strong>:
-<a class="reference external" href="http://postgresql.org">PostgreSQL</a> should acquire feature-parity with Oracle,
-and then steal the market</p>
-<p><strong>Operating system</strong>:
-<a class="reference external" href="http://debian.org">Debian</a> should be THE reference platform for various user types
-(large corporations, audio/video professionals, software developers,
-gamers, etc.), taking the market away from OS X and Windows</p>
-<p><strong>scientific computing</strong>:
-<a class="reference external" href="http://numpy.org">NumPy</a> and <a class="reference external" href="http://pandas.pydata.org">pandas</a> should acquire feature-parity with MATLAB,
-and then steal the market</p>
-]]>
-        </content>
-    </entry><entry>
         <title type="html"><![CDATA[superstar projects, and associated implementation languages]]></title>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/superstar-projects-and-associated-implementation-languages"/>
-        <published>2013-06-09T00:00:00+02:00</published>
-        <updated>2013-06-09T14:28:32+02:00</updated>
+        <published>2013-06-29T00:00:00+02:00</published>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/superstar-projects-and-associated-implementation-languages</id>
         <category scheme="http://tshepang.net/tag/#untagged" term="untagged" label="untagged" />
         <content type="html" xml:base="http://tshepang.net" xml:lang="en">
@@ -362,8 +251,8 @@ and then steal the market</p>
         <title type="html"><![CDATA[projects with excellent documentation]]></title>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/projects-with-excellent-documentation"/>
-        <published>2013-06-09T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:06+02:00</updated>
+        <published>2013-06-29T00:00:00+02:00</published>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/projects-with-excellent-documentation</id>
         <category scheme="http://tshepang.net/tag/#untagged" term="untagged" label="untagged" />
         <content type="html" xml:base="http://tshepang.net" xml:lang="en">
@@ -403,20 +292,22 @@ really looked yet.</p>
         <title type="html"><![CDATA[about 'developer of note' series]]></title>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/about-developer-of-note-series"/>
-        <published>2013-06-09T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:07+02:00</updated>
+        <published>2013-06-29T00:00:00+02:00</published>
+        <updated>2013-06-29T13:45:46+02:00</updated>
         <id>http://tshepang.net/about-developer-of-note-series</id>
         <category scheme="http://tshepang.net/tag/#developer-of-note" term="developer-of-note" label="developer-of-note" />
         <content type="html" xml:base="http://tshepang.net" xml:lang="en">
-            <![CDATA[ <p>I respect a lot of software developers,
-but many of those are not going to have an entru in this series.
-So, here's the criteria I use to regard someone as <a class="reference external" href="http://tshepang.net/tag/developer-of-note">developer of the note</a>:</p>
+            <![CDATA[ <p>I respect a lot of software developers, but many of those are not
+going to have an entry in this series, and not because they are lesser
+in my eyes.</p>
+<p>Here's the criteria I use to regard someone as <a class="reference external" href="http://tshepang.net/tag/developer-of-note">developer of the
+note</a>:</p>
 <ul class="simple">
 <li>I need a news item that would trigger a post.
 Thing is, if you write about someone,
 you actually need to have some content (duh!),
 and saying &quot;Guide van Rossum rocks for creating Python, and am grateful!&quot;
-is simply not enough, hence a need a for a trigger.
+is simply not enough, hence a need for a trigger.
 In fact, I used to call this series <em>developer of the moment</em>,
 but at some point felt that the new name is more fitting,
 especially since a few of these honorable developers actually generated
@@ -429,11 +320,122 @@ the sort of feeling that nearly drains me in tears (&quot;so sensitive&quot;).</
 ]]>
         </content>
     </entry><entry>
+        <title type="html"><![CDATA[tools I use all the time]]></title>
+        <author><name>Tshepang Lekhonkhobe</name></author>
+        <link href="http://tshepang.net/tools-i-use-all-the-time"/>
+        <published>2013-06-29T00:00:00+02:00</published>
+        <updated>2013-06-29T13:41:33+02:00</updated>
+        <id>http://tshepang.net/tools-i-use-all-the-time</id>
+        <category scheme="http://tshepang.net/tag/#untagged" term="untagged" label="untagged" />
+        <content type="html" xml:base="http://tshepang.net" xml:lang="en">
+            <![CDATA[ <p>Following are tools I use all the time, but am not necessarily loving.
+For those I like a lot, see <a class="reference external" href="http://tshepang.net/favorite-floss">this list</a>.</p>
+<ul class="simple">
+<li>Debian: my primary OS, and also my favorite</li>
+<li>Emacs: general text editor</li>
+<li>Vim: it happens to be installed on a lot of systems at work, but I
+only rarely use it on my workstation</li>
+<li>GNOME: primary Desktop Environment<ul>
+<li>gnome-panel</li>
+<li>gnome-search-tool</li>
+<li>gnome-system-monitor</li>
+<li>nautilus</li>
+<li>file-roller</li>
+</ul>
+</li>
+<li>Evince: PDF reading</li>
+<li>Quod Libet: audio player</li>
+<li>Thunderbird: I prefer Evolution, but it gave me some issues I don't remember</li>
+<li>GNU toolchain (GCC, make, GLibC, ...)</li>
+<li>VLC</li>
+<li>Git</li>
+</ul>
+]]>
+        </content>
+    </entry><entry>
+        <title type="html"><![CDATA[top musicians]]></title>
+        <author><name>Tshepang Lekhonkhobe</name></author>
+        <link href="http://tshepang.net/top-musicians"/>
+        <published>2013-06-09T00:00:00+02:00</published>
+        <updated>2013-06-09T12:23:09+02:00</updated>
+        <id>http://tshepang.net/top-musicians</id>
+        <category scheme="http://tshepang.net/tag/#music" term="music" label="music" />
+        <content type="html" xml:base="http://tshepang.net" xml:lang="en">
+            <![CDATA[ <p>The best musicians in history,
+created with the help of <a class="reference external" href="http://tshepang.net/simple-point-system-for-rating-music">a simple point system</a>.</p>
+<ul class="simple">
+<li><a class="reference external" href="http://tshepang.net/top-tracks-fela-kuti">Fela Kuti</a>, 27</li>
+<li><a class="reference external" href="http://tshepang.net/top-tracks-burning-spear">Burning Spear</a>, 18</li>
+<li><a class="reference external" href="http://tshepang.net/letta-mbulu-vs-miriam-makeba">Letta Mbulu</a>, 15</li>
+<li><a class="reference external" href="http://tshepang.net/top-tracks-salif-keita">Salif Keita</a>, 14</li>
+<li><a class="reference external" href="http://tshepang.net/top-tracks-bob-marley">Bob Marley</a>, 13</li>
+<li><a class="reference external" href="http://tshepang.net/top-tracks-fugees">Fugees</a>, 12</li>
+<li><a class="reference external" href="http://tshepang.net/top-tracks-the-roots">The Roots</a>, 10</li>
+</ul>
+<hr class="docutils" />
+<p>For quite a while, this list of grandmasters consisted of just three
+musicians (Fela Kuti, Bob Marley, and Burning Spear); I was only
+surprised that the later entrants, Salif Keita and Letta Mbulu beat
+mighty Bob, and that was based on just my thinking without actually
+making a list of tracks. Intuition isn't always reliable.</p>
+]]>
+        </content>
+    </entry><entry>
+        <title type="html"><![CDATA[where I live on the web]]></title>
+        <author><name>Tshepang Lekhonkhobe</name></author>
+        <link href="http://tshepang.net/where-i-live-on-the-web"/>
+        <published>2013-06-09T00:00:00+02:00</published>
+        <updated>2013-06-09T12:23:08+02:00</updated>
+        <id>http://tshepang.net/where-i-live-on-the-web</id>
+        <content type="html" xml:base="http://tshepang.net" xml:lang="en">
+            <![CDATA[ <p>I spend perhaps too much of my time online, and these are among the
+greatest culprits:</p>
+<p><strong>planets</strong>: <a class="reference external" href="http://planet.debian.org/">Debian</a>, <a class="reference external" href="http://planet.gnome.org/">GNOME</a>, <a class="reference external" href="http://planet.python.org/">Python</a></p>
+<p><strong>Python</strong>: <a class="reference external" href="http://mail.python.org/mailman/listinfo/python-dev">python-dev</a>, <a class="reference external" href="https://github.com/tshepang">GitHub</a></p>
+<p><strong>Stack Exchange</strong>: <a class="reference external" href="http://stackexchange.com/sites">Stack Exchange sites</a> (<a class="reference external" href="http://stackexchange.com/users/125744/tshepang">my profile</a>)</p>
+]]>
+        </content>
+    </entry><entry>
+        <title type="html"><![CDATA[FLOSS pipedreams]]></title>
+        <author><name>Tshepang Lekhonkhobe</name></author>
+        <link href="http://tshepang.net/floss-pipedreams"/>
+        <published>2013-06-09T00:00:00+02:00</published>
+        <updated>2013-06-09T12:23:05+02:00</updated>
+        <id>http://tshepang.net/floss-pipedreams</id>
+        <category scheme="http://tshepang.net/tag/#GNOME" term="GNOME" label="GNOME" />
+        <category scheme="http://tshepang.net/tag/#Debian" term="Debian" label="Debian" />
+        <category scheme="http://tshepang.net/tag/#Python" term="Python" label="Python" />
+        <category scheme="http://tshepang.net/tag/#non-FLOSS" term="non-FLOSS" label="non-FLOSS" />
+        <content type="html" xml:base="http://tshepang.net" xml:lang="en">
+            <![CDATA[ <p>Within <a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software">FLOSS</a>, I do have preferences (e.g. Python over Perl),
+but this post is about my preferences over proprietary alternatives.</p>
+<p><strong>3D content creation</strong>:
+<a class="reference external" href="http://blender.org">Blender</a> should be mainstream... used in blockbusters</p>
+<p><strong>desktop</strong>:
+<a class="reference external" href="http://gnome.org">GNOME</a> should replace Mac OS X as THE desktop experience,
+and then steal the market</p>
+<p><strong>CRM/ERP</strong>:
+<a class="reference external" href="http://tryton.org">Tryton</a> (or <a class="reference external" href="http://openerp.com">OpenERP</a>) should steal SAP's market share</p>
+<p><strong>image manipulation</strong>:
+<a class="reference external" href="http://gimp.org">GIMP</a> should acquire feature-parity with Photoshop, and then steal the market</p>
+<p><strong>DBMS</strong>:
+<a class="reference external" href="http://postgresql.org">PostgreSQL</a> should acquire feature-parity with Oracle,
+and then steal the market</p>
+<p><strong>Operating system</strong>:
+<a class="reference external" href="http://debian.org">Debian</a> should be THE reference platform for various user types
+(large corporations, audio/video professionals, software developers,
+gamers, etc.), taking the market away from OS X and Windows</p>
+<p><strong>scientific computing</strong>:
+<a class="reference external" href="http://numpy.org">NumPy</a> and <a class="reference external" href="http://pandas.pydata.org">pandas</a> should acquire feature-parity with MATLAB,
+and then steal the market</p>
+]]>
+        </content>
+    </entry><entry>
         <title type="html"><![CDATA[major projects using Mercurial]]></title>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/major-projects-using-mercurial"/>
         <published>2013-06-02T00:00:00+02:00</published>
-        <updated>2013-06-09T14:28:32+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/major-projects-using-mercurial</id>
         <category scheme="http://tshepang.net/tag/#VCS" term="VCS" label="VCS" />
         <content type="html" xml:base="http://tshepang.net" xml:lang="en">
@@ -459,7 +461,7 @@ ecosystem</li>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/ideal-static-blog-generator"/>
         <published>2013-06-02T00:00:00+02:00</published>
-        <updated>2013-06-09T14:28:32+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/ideal-static-blog-generator</id>
         <category scheme="http://tshepang.net/tag/#blogging" term="blogging" label="blogging" />
         <content type="html" xml:base="http://tshepang.net" xml:lang="en">
@@ -500,7 +502,7 @@ not require anything special in file contents.</li>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/links-2013-06-01"/>
         <published>2013-06-01T00:00:00+02:00</published>
-        <updated>2013-06-09T14:28:32+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/links-2013-06-01</id>
         <category scheme="http://tshepang.net/tag/#links" term="links" label="links" />
         <category scheme="http://tshepang.net/tag/#VCS" term="VCS" label="VCS" />
@@ -521,7 +523,7 @@ scared that my favorite VCS is becoming less and less relevant</li>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/god-of-war-trilogy"/>
         <published>2013-05-31T00:00:00+02:00</published>
-        <updated>2013-06-09T14:28:32+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/god-of-war-trilogy</id>
         <category scheme="http://tshepang.net/tag/#excellent" term="excellent" label="excellent" />
         <category scheme="http://tshepang.net/tag/#gaming" term="gaming" label="gaming" />
@@ -596,7 +598,7 @@ games, for I hate to struggle for too long.</li>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/i-nid-tu-rilex"/>
         <published>2013-05-28T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:08+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/i-nid-tu-rilex</id>
         <category scheme="http://tshepang.net/tag/#quote" term="quote" label="quote" />
         <content type="html" xml:base="http://tshepang.net" xml:lang="en">
@@ -614,7 +616,7 @@ expectation. This makes me feel guilty and stressed.</p>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/developer-of-note-nick-coghlan"/>
         <published>2013-05-28T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:06+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/developer-of-note-nick-coghlan</id>
         <category scheme="http://tshepang.net/tag/#developer-of-note" term="developer-of-note" label="developer-of-note" />
         <category scheme="http://tshepang.net/tag/#Python" term="Python" label="Python" />
@@ -654,7 +656,7 @@ to be a great champion in pushing for progress on that front.</p>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/developer-of-note-barry-warsaw"/>
         <published>2013-05-28T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:07+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/developer-of-note-barry-warsaw</id>
         <category scheme="http://tshepang.net/tag/#Debian" term="Debian" label="Debian" />
         <category scheme="http://tshepang.net/tag/#developer-of-note" term="developer-of-note" label="developer-of-note" />
@@ -676,7 +678,7 @@ Python 3 (<a class="reference external" href="http://www.wefearchange.org/2012/0
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/shutilwhich-rocks"/>
         <published>2013-05-26T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:06+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/shutilwhich-rocks</id>
         <category scheme="http://tshepang.net/tag/#Python" term="Python" label="Python" />
         <category scheme="http://tshepang.net/tag/#wajig" term="wajig" label="wajig" />
@@ -700,7 +702,7 @@ as <a class="reference external" href="https://code.google.com/p/wajig/source/de
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/enter-the-wu-tang-36-chambers"/>
         <published>2013-05-23T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:09+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/enter-the-wu-tang-36-chambers</id>
         <category scheme="http://tshepang.net/tag/#music" term="music" label="music" />
         <category scheme="http://tshepang.net/tag/#very-good" term="very-good" label="very-good" />
@@ -719,7 +721,7 @@ the first by the group, <a class="reference external" href="http://en.wikipedia.
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/job-of-qa"/>
         <published>2013-05-18T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:07+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/job-of-qa</id>
         <category scheme="http://tshepang.net/tag/#quote" term="quote" label="quote" />
         <category scheme="http://tshepang.net/tag/#non-Debian" term="non-Debian" label="non-Debian" />
@@ -745,7 +747,7 @@ to happen. This is something you need to reconcile yourself to.</blockquote>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/koolest-projekts"/>
         <published>2013-05-15T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:07+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/koolest-projekts</id>
         <category scheme="http://tshepang.net/tag/#Python" term="Python" label="Python" />
         <category scheme="http://tshepang.net/tag/#" term="" label="" />
@@ -774,7 +776,7 @@ point.</p>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/project-of-note-discourse"/>
         <published>2013-05-11T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:07+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/project-of-note-discourse</id>
         <category scheme="http://tshepang.net/tag/#non-Python" term="non-Python" label="non-Python" />
         <category scheme="http://tshepang.net/tag/#non-Debian" term="non-Debian" label="non-Debian" />
@@ -795,7 +797,7 @@ jealous that <a class="reference external" href="http://blog.discourse.org/2013/
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/links-2013-05-11"/>
         <published>2013-05-11T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:07+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/links-2013-05-11</id>
         <category scheme="http://tshepang.net/tag/#Python" term="Python" label="Python" />
         <category scheme="http://tshepang.net/tag/#GNOME" term="GNOME" label="GNOME" />
@@ -822,7 +824,7 @@ project, <a class="reference external" href="http://www.discourse.org">Discourse
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/me-loving-auto-fill-mode-emacs"/>
         <published>2013-05-10T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:06+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/me-loving-auto-fill-mode-emacs</id>
         <category scheme="http://tshepang.net/tag/#untagged" term="untagged" label="untagged" />
         <content type="html" xml:base="http://tshepang.net" xml:lang="en">
@@ -1177,7 +1179,7 @@ but each slightly modified to change theme name (<tt class="docutils literal">se
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/am-joining-gittip"/>
         <published>2013-04-13T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:07+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/am-joining-gittip</id>
         <category scheme="http://tshepang.net/tag/#Python" term="Python" label="Python" />
         <content type="html" xml:base="http://tshepang.net" xml:lang="en">
@@ -1248,7 +1250,7 @@ and have the desired effect once they are transmitted.</blockquote>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/me-likes-subprocessdevnull"/>
         <published>2013-04-11T00:00:00+02:00</published>
-        <updated>2013-06-09T14:28:32+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/me-likes-subprocessdevnull</id>
         <category scheme="http://tshepang.net/tag/#Python" term="Python" label="Python" />
         <category scheme="http://tshepang.net/tag/#VCS" term="VCS" label="VCS" />
@@ -1536,7 +1538,7 @@ the project, and I deeply appreciate.</p>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/me-loving-the-kiln-harmony-concept"/>
         <published>2013-04-03T00:00:00+02:00</published>
-        <updated>2013-06-09T14:28:32+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/me-loving-the-kiln-harmony-concept</id>
         <category scheme="http://tshepang.net/tag/#non-FLOSS" term="non-FLOSS" label="non-FLOSS" />
         <category scheme="http://tshepang.net/tag/#VCS" term="VCS" label="VCS" />
@@ -1847,7 +1849,7 @@ weird and wonderful <a class="reference external" href="http://movies.tshepang.n
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/easing-switching-between-git-and-mercurial"/>
         <published>2013-02-16T00:00:00+02:00</published>
-        <updated>2013-06-09T14:28:32+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/easing-switching-between-git-and-mercurial</id>
         <category scheme="http://tshepang.net/tag/#Python" term="Python" label="Python" />
         <category scheme="http://tshepang.net/tag/#VCS" term="VCS" label="VCS" />
@@ -2292,7 +2294,7 @@ his projects very well, at least in my eyes.</p>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/links-2012-10-23"/>
         <published>2012-10-23T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:05+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/links-2012-10-23</id>
         <category scheme="http://tshepang.net/tag/#links" term="links" label="links" />
         <content type="html" xml:base="http://tshepang.net" xml:lang="en">
@@ -2421,7 +2423,7 @@ Python.</p>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/links-2012-07-22"/>
         <published>2012-07-22T00:00:00+02:00</published>
-        <updated>2013-06-09T14:28:32+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/links-2012-07-22</id>
         <category scheme="http://tshepang.net/tag/#humor" term="humor" label="humor" />
         <category scheme="http://tshepang.net/tag/#links" term="links" label="links" />
@@ -2567,7 +2569,7 @@ adopted something similar</li>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/wajig-26-and-27"/>
         <published>2012-07-02T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:05+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/wajig-26-and-27</id>
         <category scheme="http://tshepang.net/tag/#wajig" term="wajig" label="wajig" />
         <category scheme="http://tshepang.net/tag/#Debian" term="Debian" label="Debian" />
@@ -2761,7 +2763,7 @@ of it is in C, that scary, no-hand-holding language.</p>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/links-2012-05-17"/>
         <published>2012-05-17T00:00:00+02:00</published>
-        <updated>2013-06-09T14:28:32+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/links-2012-05-17</id>
         <category scheme="http://tshepang.net/tag/#links" term="links" label="links" />
         <category scheme="http://tshepang.net/tag/#humor" term="humor" label="humor" />
@@ -2782,7 +2784,7 @@ actor.</li>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/me-loves-new-git-site-design"/>
         <published>2012-05-16T00:00:00+02:00</published>
-        <updated>2013-06-09T14:28:32+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/me-loves-new-git-site-design</id>
         <category scheme="http://tshepang.net/tag/#VCS" term="VCS" label="VCS" />
         <content type="html" xml:base="http://tshepang.net" xml:lang="en">
@@ -2820,7 +2822,7 @@ he'd give <a class="reference external" href="http://www.piware.de/2011/09/dropp
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/project-of-note-reprepro"/>
         <published>2012-05-11T00:00:00+02:00</published>
-        <updated>2013-06-09T14:28:32+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/project-of-note-reprepro</id>
         <category scheme="http://tshepang.net/tag/#Debian" term="Debian" label="Debian" />
         <category scheme="http://tshepang.net/tag/#project-of-note" term="project-of-note" label="project-of-note" />
@@ -2950,7 +2952,7 @@ Debian in 2012.</p>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/links-2012-04-12"/>
         <published>2012-04-12T00:00:00+02:00</published>
-        <updated>2013-06-09T14:28:32+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/links-2012-04-12</id>
         <category scheme="http://tshepang.net/tag/#Python" term="Python" label="Python" />
         <category scheme="http://tshepang.net/tag/#links" term="links" label="links" />
@@ -3382,7 +3384,7 @@ anything get to say what they want others to do.</p>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/links-2012-02-01"/>
         <published>2012-02-01T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:07+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/links-2012-02-01</id>
         <category scheme="http://tshepang.net/tag/#links" term="links" label="links" />
         <category scheme="http://tshepang.net/tag/#humor" term="humor" label="humor" />
@@ -3797,7 +3799,7 @@ expectations of web applications providers</li>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/thanks-to-the-debian-backports-team"/>
         <published>2011-07-14T00:00:00+02:00</published>
-        <updated>2013-06-09T14:28:32+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/thanks-to-the-debian-backports-team</id>
         <category scheme="http://tshepang.net/tag/#Debian" term="Debian" label="Debian" />
         <category scheme="http://tshepang.net/tag/#VCS" term="VCS" label="VCS" />
@@ -4290,7 +4292,7 @@ is far better and more detailed than I can muster.</p>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/floetic-2002"/>
         <published>2011-02-28T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:09+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/floetic-2002</id>
         <category scheme="http://tshepang.net/tag/#music" term="music" label="music" />
         <category scheme="http://tshepang.net/tag/#very-good" term="very-good" label="very-good" />
@@ -4905,7 +4907,7 @@ there waiting to connect.</p>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/using-pythons-subprocess-module"/>
         <published>2011-01-26T00:00:00+02:00</published>
-        <updated>2013-06-09T14:28:32+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/using-pythons-subprocess-module</id>
         <category scheme="http://tshepang.net/tag/#Python" term="Python" label="Python" />
         <content type="html" xml:base="http://tshepang.net" xml:lang="en">
@@ -5210,7 +5212,7 @@ access that is required for the task.</p>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/links-2011-01-17"/>
         <published>2011-01-17T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:06+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/links-2011-01-17</id>
         <category scheme="http://tshepang.net/tag/#links" term="links" label="links" />
         <content type="html" xml:base="http://tshepang.net" xml:lang="en">
@@ -5574,7 +5576,7 @@ Hits album.</p>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/bioshock"/>
         <published>2011-01-14T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:09+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/bioshock</id>
         <category scheme="http://tshepang.net/tag/#gaming" term="gaming" label="gaming" />
         <content type="html" xml:base="http://tshepang.net" xml:lang="en">
@@ -6356,7 +6358,7 @@ it desperately needed).</p>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/argument-from-beauty"/>
         <published>2010-08-30T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:08+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/argument-from-beauty</id>
         <category scheme="http://tshepang.net/tag/#atheism" term="atheism" label="atheism" />
         <category scheme="http://tshepang.net/tag/#humor" term="humor" label="humor" />
@@ -6562,7 +6564,7 @@ fixing an old gripe of mine.</p>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/xfrun4-rocks"/>
         <published>2010-05-10T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:06+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/xfrun4-rocks</id>
         <category scheme="http://tshepang.net/tag/#GNOME" term="GNOME" label="GNOME" />
         <category scheme="http://tshepang.net/tag/#non-GNOME" term="non-GNOME" label="non-GNOME" />
@@ -6713,7 +6715,7 @@ very democratic) proves there's still a lot of work to be done.</p>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/vox-days-omniderigence"/>
         <published>2010-04-07T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:08+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/vox-days-omniderigence</id>
         <category scheme="http://tshepang.net/tag/#atheism" term="atheism" label="atheism" />
         <content type="html" xml:base="http://tshepang.net" xml:lang="en">
@@ -6857,7 +6859,7 @@ from his other readers (check the comments <a class="reference external" href="h
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/my-deconversion"/>
         <published>2009-12-22T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:08+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/my-deconversion</id>
         <category scheme="http://tshepang.net/tag/#atheism" term="atheism" label="atheism" />
         <content type="html" xml:base="http://tshepang.net" xml:lang="en">
@@ -7147,7 +7149,7 @@ having been involved since 1995.</p>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/reprepro-saved-my-live"/>
         <published>2008-12-12T00:00:00+02:00</published>
-        <updated>2013-06-09T14:28:32+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/reprepro-saved-my-live</id>
         <category scheme="http://tshepang.net/tag/#Debian" term="Debian" label="Debian" />
         <content type="html" xml:base="http://tshepang.net" xml:lang="en">
@@ -8048,7 +8050,7 @@ but Google Reader makes it so easy it does not require me to think. Is kool.</p>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/1st-floss-patch-contribution"/>
         <published>2007-04-03T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:06+02:00</updated>
+        <updated>2013-06-29T13:41:33+02:00</updated>
         <id>http://tshepang.net/1st-floss-patch-contribution</id>
         <category scheme="http://tshepang.net/tag/#GNOME" term="GNOME" label="GNOME" />
         <category scheme="http://tshepang.net/tag/#Tracker" term="Tracker" label="Tracker" />
