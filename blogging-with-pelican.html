@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>blogging with Pelican - Tshepang logs</title>
+        <script>if (top !== self) top.location = self.location;</script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+        <link rel="stylesheet" href="/static/style.css?v=2c4d4" />
+        <link rel="stylesheet" href="/static/pygments.css?v=c6adc" />
+        
+        <link rel="alternate" type="application/rss+xml" href="/feed" title="Tshepang logs" />
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="/static/html5shiv.js?v=9a10c"></script>
+        <![endif]-->
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-16685250-3']);
+            _gaq.push(['_trackPageview']);
+            _gaq.push(['_trackPageLoadTime']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+        
+<link rel="canonical" href="/blogging-with-pelican" />
+
+
+    </head>
+    <body>
+        <header id="header">
+            <h1 id="brand"><a href="/">Tshepang logs</a></h1>
+            <nav id="nav" role="navigation">
+                
+                <a href="/misc/">misc</a>
+                <a href="/computing/">computing</a>
+                <a href="/arts/">arts</a>
+                <a href="/key-posts">| key-posts |</a>
+                <a href="/about-me">| about-me |</a>
+            </nav>
+        </header>
+
+        <div id="main">
+            <div class="container"><div class="hentry">
+    <h1 class="entry-title">blogging with Pelican</h1>
+    <div class="entry-meta">
+        <time class="updated" datetime="2013-04-08T00:00:00+02:00" pubdate>
+            <a href="/2013/">2013-04-08</a>
+        </time>
+        <span class="author vcard">
+            by <span class="fn">Tshepang Lekhonkhobe</span>
+        </span>
+    </div>
+    <div class="entry-content">
+        <p><strong>notes</strong>:</p>
+<ul class="simple">
+<li>I have a separate post on <a class="reference external" href="http://tshepang.net/what-me-loves-about-static-website-generation">what I love about static website generators</a>.</li>
+<li>This post was first published on <strong>2012-05-20</strong>,
+which is before <a class="reference external" href="http://tshepang.net/from-pelican-to-liquidluck">I started using liquidluck</a>, a competing tool.</li>
+</ul>
+<p><a class="reference external" href="http://pelican.notmyidea.org/">Pelican</a> is a static blog generator;
+it converts marked-up text files to html
+(Pelican supports <a class="reference external" href="http://en.wikipedia.org/wiki/Markdown">Markdown</a> and <a class="reference external" href="http://en.wikipedia.org/wiki/ReStructuredText">reStructuredText</a>).
+The resulting site is complete with an index (Archives view),
+Tags, Categories, and Pages (for non-bloggy stuff like a CV or About Me file).</p>
+<p>As for my blog, its tree structure looks like this:</p>
+<pre class="literal-block">
+build/...
+pages/{about-me.rst, key-posts.rst}
+posts/{arts/, computing/, misc/, movies/}
+CNAME
+fabfile.py
+new-post.py
+settings.py
+</pre>
+<ul class="simple">
+<li>The <tt class="docutils literal">build</tt> directory is where the output of the build process is
+stored.</li>
+<li>The <tt class="docutils literal">pages</tt> directory is for any content that isn't blog posts.</li>
+<li>The <tt class="docutils literal">posts</tt> directory is where the large chunk of content lives,
+the blog posts themselves.
+Each of the four directories in there represent a Category, for example:
+if you place some file in <tt class="docutils literal">arts/</tt>,
+the post will be marked as falling under <strong>arts</strong> Category.</li>
+<li>I host my blog on GitHub, using a service the call GitHub Pages.
+<tt class="docutils literal">CNAME</tt> is a file required by that service in the case where I want
+to use a domain other than <tt class="docutils literal">tshepang.github.io</tt>.
+It's content is <tt class="docutils literal">tshepang.net</tt>.</li>
+<li><a class="reference external" href="https://bitbucket.org/tshepang/blog-pelican/src/tip/fabfile.py">fabfile.py</a> contains the build instructions, all for convenience
+so that I only need to run 2 commands, one for the build, and another
+for GitHub upload. However, I mostly just run one command that does
+both.</li>
+<li>The <a class="reference external" href="https://bitbucket.org/tshepang/blog-pelican/src/tip/settings.py">settings.py</a> file contains Pelican configuration.
+It should be somewhat mostly self-explanatory, but for those things that
+aren't so obvious, do consult the documentation.</li>
+</ul>
+<p>Now as for the post itself, you need metadata to go with it.
+This is stuff like title, date, and tags.
+It can be tedious to create all such mundate stuff, especially the date.
+That's why I wrote <a class="reference external" href="https://bitbucket.org/tshepang/blog-pelican/src/tip/new-post.py">a script</a> that generates that file and populates it
+with the given metadata:</p>
+<pre class="literal-block">
+$ python new-post.py 'my blogging setup' misc --tags blogging
+</pre>
+<p>This is the metadata, and also the beginning of the file:</p>
+<pre class="literal-block">
+my blogging setup
+=================
+
+:date: 2012-04-12
+:tags: blogging
+</pre>
+<p>The script also opens the file in my favorite editor,
+so I can start adding content.</p>
+<p>When I'm done and happy with my latest changes,
+I ensure I'm in the root directory of my blog, commit
+(<tt class="docutils literal">hg commit <span class="pre">--message</span> 'new post'</tt>) and run:</p>
+<pre class="literal-block">
+$ fab
+</pre>
+<p>That's a <a class="reference external" href="http://fabfile.org">fabric</a> command the uses the instructions found in <tt class="docutils literal">fabfile.py</tt>.
+It builds the site, and then pushes is to GitHub Pages.
+It also pushes the sources to Bitbucket.
+Within a minute, the blog will be updated.</p>
+
+    </div>
+
+    
+
+    <div class="entry-tags">
+        <a href="/tag/#blogging">blogging</a>
+    </div>
+
+    <iframe style="border: 0; margin: 0; padding: 0;"
+        src="https://www.gittip.com/tshepang/widget.html"
+        width="48pt" height="22pt"></iframe>
+
+    
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'tshepanglogs';
+        var disqus_title = 'blogging with Pelican';
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    
+</div></div>
+        </div>
+
+        <footer id="footer">
+            <hr class="end" />
+            
+            <p class="copyright">
+            <span class="software">
+                Powered by <a href="http://lab.lepture.com/liquidluck/">Felix Felicis</a> 3.8,
+            </span>
+            <span class="theme">
+                Theme <a href="https://github.com/lepture/liquidluck-theme-moment" rel="nofollow">moment</a> 1.0 by <a href="http://lepture.com">Hsiaoming Yang</a>
+            </span>
+            </p>
+        </footer>
+        <script type="text/javascript" src="/static/mobile.js?v=3b6df"></script>
+        
+    </body>
+</html>

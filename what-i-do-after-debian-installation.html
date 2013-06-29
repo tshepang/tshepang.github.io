@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>what I do after Debian installation - Tshepang logs</title>
+        <script>if (top !== self) top.location = self.location;</script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+        <link rel="stylesheet" href="/static/style.css?v=2c4d4" />
+        <link rel="stylesheet" href="/static/pygments.css?v=c6adc" />
+        
+        <link rel="alternate" type="application/rss+xml" href="/feed" title="Tshepang logs" />
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="/static/html5shiv.js?v=9a10c"></script>
+        <![endif]-->
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-16685250-3']);
+            _gaq.push(['_trackPageview']);
+            _gaq.push(['_trackPageLoadTime']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+        
+<link rel="canonical" href="/what-i-do-after-debian-installation" />
+
+
+    </head>
+    <body>
+        <header id="header">
+            <h1 id="brand"><a href="/">Tshepang logs</a></h1>
+            <nav id="nav" role="navigation">
+                
+                <a href="/misc/">misc</a>
+                <a href="/computing/">computing</a>
+                <a href="/arts/">arts</a>
+                <a href="/key-posts">| key-posts |</a>
+                <a href="/about-me">| about-me |</a>
+            </nav>
+        </header>
+
+        <div id="main">
+            <div class="container"><div class="hentry">
+    <h1 class="entry-title">what I do after Debian installation</h1>
+    <div class="entry-meta">
+        <time class="updated" datetime="2012-11-10T00:00:00+02:00" pubdate>
+            <a href="/2012/">2012-11-10</a>
+        </time>
+        <span class="author vcard">
+            by <span class="fn">Tshepang Lekhonkhobe</span>
+        </span>
+    </div>
+    <div class="entry-content">
+        <p>I think anyone who has never done any OS install before can install
+Debian with any issue at all, provided they will not be doing any
+partitioning. It is that easy.</p>
+<p>As for me, I do a lot more installations than the average person, so I
+semi-automate the setup process with the help of this script:</p>
+<div class="highlight"><pre><span class="c">#!/bin/bash</span>
+
+<span class="c"># some convenience</span>
+<span class="nb">shopt</span> -s expand_aliases
+<span class="nb">source</span> ~/nna/conf/bash_aliases
+
+<span class="c"># config files</span>
+sudo cp ~/nna/conf/sources.list /etc/apt
+sudo cp ~/nna/conf/sudoers /etc
+
+<span class="c"># APT</span>
+sudo apt-get update
+sudo apt-get --allow-unauthenticated upgrade
+sudo apt-get --allow-unauthenticated dist-upgrade
+sudo apt-get --allow-unauthenticated install devscripts debhelper build-essential python3-apt gpm
+
+<span class="c"># wajig</span>
+<span class="o">(</span><span class="nb">cd</span> ~/src/wajig <span class="o">&amp;&amp;</span> iiwajig<span class="o">)</span>
+ibase <span class="o">&amp;&amp;</span> inondebian <span class="o">&amp;&amp;</span> itracker <span class="o">&amp;&amp;</span> icpython <span class="o">&amp;&amp;</span> ipurge
+
+<span class="c"># for Tracker</span>
+sudo sh -c <span class="s2">&quot;echo &#39;fs.inotify.max_user_watches=100000&#39; &gt;&gt; /etc/sysctl.conf&quot;</span>
+
+<span class="c"># so I can share via a webserver, or easily access from browser</span>
+sudo ln -s ~/.custom_repo /var/www/custom_repo
+</pre></div>
+<p>Contents of Debian repository list file:</p>
+<div class="highlight"><pre><span class="nv">$ </span>cat /etc/apt/sources.list
+deb file:/home/wena/.custom_repo tshepang main
+deb http://debian.mirror.ac.za/debian wheezy main contrib non-free
+</pre></div>
+<p>The <tt class="docutils literal">tshepang</tt> codename refers to my custom repository, the one
+managed by <a class="reference external" href="http://tshepang.net/project-of-note-reprepro">reprepro</a>.</p>
+<p>Contents of <strong>sudo</strong> setup file:</p>
+<div class="highlight"><pre><span class="nv">$ </span>sudo cat /etc/sudoers
+Defaults env_reset
+Defaults mail_badpass
+Defaults <span class="nv">secure_path</span><span class="o">=</span><span class="s2">&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;</span>
+root     <span class="nv">ALL</span><span class="o">=(</span>ALL<span class="o">)</span> ALL
+%sudo    <span class="nv">ALL</span><span class="o">=(</span>ALL<span class="o">)</span> ALL
+Defaults !tty_tickets
+Defaults <span class="nv">timestamp_timeout</span><span class="o">=</span>100
+</pre></div>
+<p>The one change from default <strong>sudo</strong> setup is so that each bash session
+can inherit sudo powers from another. It's one case where I trade
+<a class="reference external" href="http://ask.debian.net/questions/how-to-have-sudo-powers-shared-between-different-bash-sessions">security</a> for convenience. Another such case is increasing the
+ask-for-password timeout to 100 minutes, instead of the default 15
+minutes.</p>
+<p>And then these aliases, which point to scripts that install some
+packages:</p>
+<ul class="simple">
+<li><tt class="docutils literal">ibase</tt>: basic stuff I got to have, stuff like the components I use
+for my desktop apps, some CLI tools, and some documentation</li>
+<li><tt class="docutils literal">inondebian</tt>: packages that aren't part of Debian, e.g. stuff from
+external repositories, or nonm-free stuff from Debian repos</li>
+<li><tt class="docutils literal">itracker</tt>: I always run the git version of <a class="reference external" href="http://projects.gnome.org/tracker/">Tracker</a>, so these
+tools help me build it</li>
+<li><tt class="docutils literal">ipurge</tt>: stuff that was installed as Recommends dependencies of
+the above (e.g. <tt class="docutils literal"><span class="pre">gnome-bluetooth</span></tt>) or during Debian installation
+(e.g. <tt class="docutils literal">vim</tt>), but that I won't use</li>
+</ul>
+<p>The symbolic links is so that those I share a network with (LAN) can
+have easy web browser access to some stuff on my machine.</p>
+
+    </div>
+
+    
+
+    <div class="entry-tags">
+        <a href="/tag/#Debian">Debian</a>
+    </div>
+
+    <iframe style="border: 0; margin: 0; padding: 0;"
+        src="https://www.gittip.com/tshepang/widget.html"
+        width="48pt" height="22pt"></iframe>
+
+    
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'tshepanglogs';
+        var disqus_title = 'what I do after Debian installation';
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    
+</div></div>
+        </div>
+
+        <footer id="footer">
+            <hr class="end" />
+            
+            <p class="copyright">
+            <span class="software">
+                Powered by <a href="http://lab.lepture.com/liquidluck/">Felix Felicis</a> 3.8,
+            </span>
+            <span class="theme">
+                Theme <a href="https://github.com/lepture/liquidluck-theme-moment" rel="nofollow">moment</a> 1.0 by <a href="http://lepture.com">Hsiaoming Yang</a>
+            </span>
+            </p>
+        </footer>
+        <script type="text/javascript" src="/static/mobile.js?v=3b6df"></script>
+        
+    </body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>removing obsolete packages from a local Debian repository - Tshepang logs</title>
+        <script>if (top !== self) top.location = self.location;</script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+        <link rel="stylesheet" href="/static/style.css?v=2c4d4" />
+        <link rel="stylesheet" href="/static/pygments.css?v=c6adc" />
+        
+        <link rel="alternate" type="application/rss+xml" href="/feed" title="Tshepang logs" />
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="/static/html5shiv.js?v=9a10c"></script>
+        <![endif]-->
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-16685250-3']);
+            _gaq.push(['_trackPageview']);
+            _gaq.push(['_trackPageLoadTime']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+        
+<link rel="canonical" href="/removing-obsolete-packages-from-a-local-debian-repository" />
+
+
+    </head>
+    <body>
+        <header id="header">
+            <h1 id="brand"><a href="/">Tshepang logs</a></h1>
+            <nav id="nav" role="navigation">
+                
+                <a href="/misc/">misc</a>
+                <a href="/computing/">computing</a>
+                <a href="/arts/">arts</a>
+                <a href="/key-posts">| key-posts |</a>
+                <a href="/about-me">| about-me |</a>
+            </nav>
+        </header>
+
+        <div id="main">
+            <div class="container"><div class="hentry">
+    <h1 class="entry-title">removing obsolete packages from a local Debian repository</h1>
+    <div class="entry-meta">
+        <time class="updated" datetime="2012-02-21T00:00:00+02:00" pubdate>
+            <a href="/2012/">2012-02-21</a>
+        </time>
+        <span class="author vcard">
+            by <span class="fn">Tshepang Lekhonkhobe</span>
+        </span>
+    </div>
+    <div class="entry-content">
+        <div class="section" id="background-info">
+<h2>background info</h2>
+<p>Bandwidth in South Africa is neither readily-available nor cheap, so
+whenever I fetch and install Debian packages (e.g. <tt class="docutils literal"><span class="pre">apt-get</span> upgrade</tt>),
+I also keep them in a local custom repository. I use a great tool named
+<a class="reference external" href="http://mirrorer.alioth.debian.org/">reprepro</a> for this, and this is the command I use to update that
+repository, given the location of the fresh package files:</p>
+<pre class="literal-block">
+$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang /var/cache/apt/archives/*deb
+</pre>
+<p>What's nice about the command is that, if there is an older version of
+the pacakge I'm adding, it gets replaced, and the package index is
+update accordingly.</p>
+</div>
+<div class="section" id="and-now-to-the-topic-at-hand">
+<h2>and now to the topic at hand</h2>
+<p>I run that command more or less regularly, but very often the repository
+accumulates some junk:</p>
+<ul class="simple">
+<li>If a package gets renamed, reprepro has no way of knowing (at least
+as far as my setup goes). One notable case of this is Debian kernels,
+whose names match the major release versions (e.g.
+<tt class="docutils literal"><span class="pre">linux-image-3.1.0-1-686-pae</span></tt> becomes
+<tt class="docutils literal"><span class="pre">linux-image-3.2.0-1-686-pae</span></tt> when a new upstream release gets
+packaged). Lots other packages change names, and very often, for a
+variety of reasons (Debian is a little chaotic, often out of
+necessity, and it's amazing that its developers keep it so damn
+stable given all this change).</li>
+<li>If I add a package from an external repository or that I converted
+from an rpm, reprepro has no way of knowing that fact. Now if I stop
+using that package, it is just a waste of resources (CPU and disk
+usage).</li>
+</ul>
+<p>To help with the cleanup, I have written the following simple script:</p>
+<div class="highlight"><pre><span class="c">#!/usr/bin/env python3</span>
+
+<span class="kn">import</span> <span class="nn">apt_pkg</span>
+<span class="kn">import</span> <span class="nn">gzip</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
+
+<span class="n">CUSTOM_REPO</span> <span class="o">=</span> <span class="p">(</span><span class="s">&quot;/home/wena/.custom_repo/dists/tshepang/main/&quot;</span>
+               <span class="s">&quot;binary-i386/Packages.gz&quot;</span><span class="p">)</span>
+<span class="n">WHEEZY_REPO</span> <span class="o">=</span> <span class="p">(</span><span class="s">&quot;/var/lib/apt/lists/ftp.de.debian.org_debian_dists_testing_{}_&quot;</span>
+               <span class="s">&quot;binary-i386_Packages&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">custom_repo</span> <span class="o">=</span> <span class="n">apt_pkg</span><span class="o">.</span><span class="n">TagFile</span><span class="p">(</span><span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">CUSTOM_REPO</span><span class="p">,</span> <span class="s">&quot;rb&quot;</span><span class="p">))</span>
+    <span class="n">archive_areas</span> <span class="o">=</span> <span class="s">&quot;main contrib non-free&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">wheezy_packages</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">archive_area</span> <span class="ow">in</span> <span class="n">archive_areas</span><span class="p">:</span>
+        <span class="n">repo</span> <span class="o">=</span> <span class="n">WHEEZY_REPO</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">archive_area</span><span class="p">)</span>
+        <span class="n">repo</span> <span class="o">=</span> <span class="n">apt_pkg</span><span class="o">.</span><span class="n">TagFile</span><span class="p">(</span><span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">repo</span><span class="p">,</span> <span class="s">&quot;rb&quot;</span><span class="p">))</span>
+        <span class="n">wheezy_packages</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">pkg</span><span class="p">[</span><span class="s">&quot;Package&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">pkg</span> <span class="ow">in</span> <span class="n">repo</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">package</span> <span class="ow">in</span> <span class="n">custom_repo</span><span class="p">:</span>
+        <span class="n">package_name</span> <span class="o">=</span> <span class="n">package</span><span class="p">[</span><span class="s">&quot;Package&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">package_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">wheezy_packages</span><span class="p">:</span>
+            <span class="n">cmd</span> <span class="o">=</span> <span class="s">&quot;apt-cache policy &quot;</span> <span class="o">+</span> <span class="n">package_name</span>
+            <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">cmd</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+            <span class="n">choice</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&quot;remove from cache [Y/n]? &quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">choice</span> <span class="ow">or</span> <span class="n">choice</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">):</span>
+                <span class="n">cmd</span> <span class="o">=</span> <span class="p">(</span><span class="s">&quot;reprepro -vv --basedir /home/wena/.custom_repo/ &quot;</span>
+                       <span class="s">&quot;remove tshepang &quot;</span> <span class="o">+</span> <span class="n">package_name</span><span class="p">)</span>
+                <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">cmd</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+<p>And here's a snippet of its output:</p>
+<pre class="literal-block">
+cx-oracle:
+  Installed: 5.1.1-2
+  Candidate: 5.1.1-2
+  Version table:
+ *** 5.1.1-2 0
+        500 file:/home/wena/.custom_repo/ tshepang/main i386 Packages
+        100 /var/lib/dpkg/status
+remove from cache [Y/n]?
+</pre>
+<p>What it does is look for packages which are only available in my custom
+reposity, as compared with the one in Wheezy (soon to be Debian 7). It
+then prompts me on whether or not to remove it from that custom
+repository. Today, it helped me get rid of dozens of junk.</p>
+</div>
+
+    </div>
+
+    
+
+    <div class="entry-tags">
+        <a href="/tag/#Debian">Debian</a>
+    </div>
+
+    <iframe style="border: 0; margin: 0; padding: 0;"
+        src="https://www.gittip.com/tshepang/widget.html"
+        width="48pt" height="22pt"></iframe>
+
+    
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'tshepanglogs';
+        var disqus_title = 'removing obsolete packages from a local Debian repository';
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    
+</div></div>
+        </div>
+
+        <footer id="footer">
+            <hr class="end" />
+            
+            <p class="copyright">
+            <span class="software">
+                Powered by <a href="http://lab.lepture.com/liquidluck/">Felix Felicis</a> 3.8,
+            </span>
+            <span class="theme">
+                Theme <a href="https://github.com/lepture/liquidluck-theme-moment" rel="nofollow">moment</a> 1.0 by <a href="http://lepture.com">Hsiaoming Yang</a>
+            </span>
+            </p>
+        </footer>
+        <script type="text/javascript" src="/static/mobile.js?v=3b6df"></script>
+        
+    </body>
+</html>

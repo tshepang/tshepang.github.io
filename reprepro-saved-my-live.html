@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>reprepro saved my live - Tshepang logs</title>
+        <script>if (top !== self) top.location = self.location;</script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+        <link rel="stylesheet" href="/static/style.css?v=2c4d4" />
+        <link rel="stylesheet" href="/static/pygments.css?v=c6adc" />
+        
+        <link rel="alternate" type="application/rss+xml" href="/feed" title="Tshepang logs" />
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="/static/html5shiv.js?v=9a10c"></script>
+        <![endif]-->
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-16685250-3']);
+            _gaq.push(['_trackPageview']);
+            _gaq.push(['_trackPageLoadTime']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+        
+<link rel="canonical" href="/reprepro-saved-my-live" />
+
+
+    </head>
+    <body>
+        <header id="header">
+            <h1 id="brand"><a href="/">Tshepang logs</a></h1>
+            <nav id="nav" role="navigation">
+                
+                <a href="/misc/">misc</a>
+                <a href="/computing/">computing</a>
+                <a href="/arts/">arts</a>
+                <a href="/key-posts">| key-posts |</a>
+                <a href="/about-me">| about-me |</a>
+            </nav>
+        </header>
+
+        <div id="main">
+            <div class="container"><div class="hentry">
+    <h1 class="entry-title">reprepro saved my live</h1>
+    <div class="entry-meta">
+        <time class="updated" datetime="2008-12-12T00:00:00+02:00" pubdate>
+            <a href="/2008/">2008-12-12</a>
+        </time>
+        <span class="author vcard">
+            by <span class="fn">Tshepang Lekhonkhobe</span>
+        </span>
+    </div>
+    <div class="entry-content">
+        <p>Much of this is obsolete: I no longer build my own Debian packages.</p>
+<hr class="docutils" />
+<p>That's a joke title, but <a class="reference external" href="http://mirrorer.alioth.debian.org/">that fabulous tool</a> really did help me a
+lot. When doing package builds, all I need to run is the following
+after a build:</p>
+<div class="highlight"><pre><span class="nv">$ </span>rm *udeb
+<span class="nv">$ </span>reprepro --basedir ~/.repo_directory includedeb sid *deb
+<span class="nv">$ </span>sudo apt-get update
+</pre></div>
+<p>The first command removes debian-installer packages which I don't need,
+the second takes the remaining packages and adds them into the
+reprepro-managed Debian repository while also making them available in
+the Packages file, and the third updates the system's apt database in
+order to pick up the changes. Also, if I want to get rid of something
+from the repo, all I do is:</p>
+<pre class="literal-block">
+$ reprepro --basedir ~/.repo_directory removesrc sid glibc
+</pre>
+<p>I don't know why anyone would love to remove glibc binary packages, but
+it's that simple.</p>
+<p>Achieving this used to be painful before I discovered reprepro, for I
+did the whole thing manually, which was not scalable since old packages
+were sitting rotting in the repo, making it grow beyond 30GB (it now is
+about 10GB). This also meant that I ran 'apt-ftparchive packages' on the
+entire .debs each time I wanted an updated Packages file, and that was
+dozens of minutes of heavy I/O. This painful life has been going on for
+a number of months, and am stupid that I didn't search harder for a
+better solution.</p>
+<p>Before doing things this way, I was making use of the nifty <a class="reference external" href="http://aptoncd.sourceforge.net/">APTonCD</a>,
+but it started to become unusable due to excessive memory consumption
+after some system updates. It's not clear where the bug lies, nor do I
+know if it's a known problem, which I didn't report because I was using
+Ubuntu's package, a much improved and re-written 0.1.98, as opposed to
+Debian's 'bug-free' 0.1 (though I later discovered the bug to exist when
+running the package in Ubuntu 8.10 too).</p>
+<hr class="docutils" />
+<p><a class="reference external" href="http://tshepang.net/my-debian-package-management-setup">an update on how I do things now</a></p>
+
+    </div>
+
+    
+
+    <div class="entry-tags">
+        <a href="/tag/#Debian">Debian</a>
+    </div>
+
+    <iframe style="border: 0; margin: 0; padding: 0;"
+        src="https://www.gittip.com/tshepang/widget.html"
+        width="48pt" height="22pt"></iframe>
+
+    
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'tshepanglogs';
+        var disqus_title = 'reprepro saved my live';
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    
+</div></div>
+        </div>
+
+        <footer id="footer">
+            <hr class="end" />
+            
+            <p class="copyright">
+            <span class="software">
+                Powered by <a href="http://lab.lepture.com/liquidluck/">Felix Felicis</a> 3.8,
+            </span>
+            <span class="theme">
+                Theme <a href="https://github.com/lepture/liquidluck-theme-moment" rel="nofollow">moment</a> 1.0 by <a href="http://lepture.com">Hsiaoming Yang</a>
+            </span>
+            </p>
+        </footer>
+        <script type="text/javascript" src="/static/mobile.js?v=3b6df"></script>
+        
+    </body>
+</html>
