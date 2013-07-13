@@ -3,9 +3,36 @@
     <title>Tshepang logs</title>
     <link href="http://tshepang.net/computing/feed" rel="self" />
     <link href="http://tshepang.net/computing/" />
-    <updated>2013-06-29T17:28:27+02:00</updated>
+    <updated>2013-07-13T21:56:23+02:00</updated>
     <id>http://tshepang.net/computing/</id>
     <entry>
+        <title type="html"><![CDATA[major projects using Mercurial]]></title>
+        <author><name>Tshepang Lekhonkhobe</name></author>
+        <link href="http://tshepang.net/major-projects-using-mercurial"/>
+        <published>2013-07-13T00:00:00+02:00</published>
+        <updated>2013-07-13T21:56:23+02:00</updated>
+        <id>http://tshepang.net/major-projects-using-mercurial</id>
+        <category scheme="http://tshepang.net/tag/#VCS" term="VCS" label="VCS" />
+        <content type="html" xml:base="http://tshepang.net" xml:lang="en">
+            <![CDATA[ <p>Mercurial is the only version control system that I actually like, and
+I do celebrate each time I see a project use it. So, here I list the
+most notable projects I am aware of that do, which also gives me hope
+that it isn't being suffocated too much by Git:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://hg.mozilla.org/mozilla-central">Firefox</a>, on top 3 of all desktop web browsers (number of users)</li>
+<li><a class="reference external" href="http://hg.python.org/cpython">CPython</a>, on top 10 of all programming languages</li>
+<li><a class="reference external" href="http://selenic.com/hg">Mercurial</a>, 2nd only to Git in terms of DVCS popularity, though
+maybe lagging by 2 orders of magnitude :(</li>
+<li><a class="reference external" href="http://hg.openjdk.java.net">OpenJDK</a>, the top open source implementation of the Java platform</li>
+<li><a class="reference external" href="https://bitbucket.org/birkenfeld/sphinx">Sphinx</a>, documentation generator used in most Python projects</li>
+<li><a class="reference external" href="https://bitbucket.org/pypy/pypy">PyPy</a>, likely the most exciting development in the entire Python
+ecosystem</li>
+<li><a class="reference external" href="http://stackexchange.com">Stack Exchange</a> (proprietary), a family of Q&amp;A sites which are,
+in my opinion, the best yet</li>
+</ul>
+]]>
+        </content>
+    </entry><entry>
         <title type="html"><![CDATA[favorite FLOSS]]></title>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/favorite-floss"/>
@@ -277,32 +304,6 @@ gamers, etc.), taking the market away from OS X and Windows</p>
 <p><strong>scientific computing</strong>:
 <a class="reference external" href="http://numpy.org">NumPy</a> and <a class="reference external" href="http://pandas.pydata.org">pandas</a> should acquire feature-parity with MATLAB,
 and then steal the market</p>
-]]>
-        </content>
-    </entry><entry>
-        <title type="html"><![CDATA[major projects using Mercurial]]></title>
-        <author><name>Tshepang Lekhonkhobe</name></author>
-        <link href="http://tshepang.net/major-projects-using-mercurial"/>
-        <published>2013-06-02T00:00:00+02:00</published>
-        <updated>2013-06-29T15:17:39+02:00</updated>
-        <id>http://tshepang.net/major-projects-using-mercurial</id>
-        <category scheme="http://tshepang.net/tag/#VCS" term="VCS" label="VCS" />
-        <content type="html" xml:base="http://tshepang.net" xml:lang="en">
-            <![CDATA[ <p>Mercurial is the only version control system that I actually like, and
-I do celebrate each time I see a project use it. So, here I list the
-most notable projects I am aware of that do, which also gives me hope
-that it isn't being suffocated too much by Git. I ordered them by my
-some rough mix popularity and importance:</p>
-<ul class="simple">
-<li><a class="reference external" href="http://hg.mozilla.org/mozilla-central">Firefox</a>, on top 3 of all desktop web browsers (number of users)</li>
-<li><a class="reference external" href="http://hg.python.org/cpython">CPython</a>, on top 10 of all programming languages</li>
-<li><a class="reference external" href="http://selenic.com/hg">Mercurial</a>, 2nd only to Git in terms of DVCS popularity, though
-maybe lagging by 2 orders of magnitude :(</li>
-<li><a class="reference external" href="http://hg.openjdk.java.net">OpenJDK</a>, the top open source implementation of the Java platform</li>
-<li><a class="reference external" href="https://bitbucket.org/birkenfeld/sphinx">Sphinx</a>, documentation generator used in most Python projects</li>
-<li><a class="reference external" href="https://bitbucket.org/pypy/pypy">PyPy</a>, likely the most exciting development in the entire Python
-ecosystem</li>
-</ul>
 ]]>
         </content>
     </entry><entry>
