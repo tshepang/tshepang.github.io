@@ -3,7 +3,7 @@
     <title>Tshepang logs</title>
     <link href="http://tshepang.net/computing/feed" rel="self" />
     <link href="http://tshepang.net/computing/" />
-    <updated>2013-07-28T15:31:06+02:00</updated>
+    <updated>2013-07-31T00:14:09+02:00</updated>
     <id>http://tshepang.net/computing/</id>
     <entry>
         <title type="html"><![CDATA[mentioning alternatives on a prominent place]]></title>
@@ -1945,7 +1945,7 @@ Debian in 2012.</p>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/links-2012-04-12"/>
         <published>2012-04-12T00:00:00+02:00</published>
-        <updated>2013-06-29T15:17:39+02:00</updated>
+        <updated>2013-07-31T00:14:09+02:00</updated>
         <id>http://tshepang.net/links-2012-04-12</id>
         <category scheme="http://tshepang.net/tag/#Python" term="Python" label="Python" />
         <category scheme="http://tshepang.net/tag/#links" term="links" label="links" />
@@ -1956,7 +1956,6 @@ Debian in 2012.</p>
 <li><a class="reference external" href="http://inventwithpython.com/blog/2010/09/27/i-want-to-teach-my-kid-how-to-program/">excellent review of a book that uses Python to teach kids
 programming</a></li>
 <li><a class="reference external" href="http://tech.blog.aknin.name/2010/05/29/mailing-list-debates-considered-harmful/">mailing lists are less than ideal for debate/extended discussion</a></li>
-<li><a class="reference external" href="http://www.kennethreitz.com/repository-structure-and-python.html">a nice guide on packaging (small) Python projects</a></li>
 </ul>
 ]]>
         </content>
@@ -2429,20 +2428,20 @@ pointed to a 3rd party library</a>).</li>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/developer-of-note-john-palmieri"/>
         <published>2011-09-20T00:00:00+02:00</published>
-        <updated>2013-06-09T12:23:07+02:00</updated>
+        <updated>2013-07-31T00:06:28+02:00</updated>
         <id>http://tshepang.net/developer-of-note-john-palmieri</id>
         <category scheme="http://tshepang.net/tag/#developer-of-note" term="developer-of-note" label="developer-of-note" />
         <category scheme="http://tshepang.net/tag/#GNOME" term="GNOME" label="GNOME" />
         <category scheme="http://tshepang.net/tag/#Python" term="Python" label="Python" />
         <content type="html" xml:base="http://tshepang.net" xml:lang="en">
-            <![CDATA[ <p>Every so often, there appears a developer who pressures me away from my
-lazy, unfocused, and undisciplined ass to go do some useful programming.
-This time around it's <a class="reference external" href="http://www.j5live.com/">John Palmieri</a>, the most visible of the
-developers of <a class="reference external" href="https://live.gnome.org/PyGObject">PyGObject</a> (Python bindings for GTK+ and GLib).
-The old way of using GTK+ with Python has for years been PyGTK and this guy has
-been tirelessly working to move the world to the more modern PyGObject,
-and has led at least one coding sprint to help achieve this goal.
-He also appears friendly and humble. He rocks!</p>
+            <![CDATA[ <p>Every so often, there appears a developer who pressures me away from
+my lazy, unfocused, and undisciplined ass to go do some useful
+programming.  This time around it's John Palmieri, the most visible of
+the developers of <a class="reference external" href="https://live.gnome.org/PyGObject">PyGObject</a> (Python bindings for GTK+ and GLib).
+The old way of using GTK+ with Python has for years been PyGTK and
+this guy has been tirelessly working to move the world to the more
+modern PyGObject, and has led at least one coding sprint to help
+achieve this goal.  He also appears friendly and humble. He rocks!</p>
 ]]>
         </content>
     </entry><entry>
