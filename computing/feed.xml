@@ -3,9 +3,46 @@
     <title>Tshepang logs</title>
     <link href="http://tshepang.net/computing/feed" rel="self" />
     <link href="http://tshepang.net/computing/" />
-    <updated>2013-07-31T00:14:09+02:00</updated>
+    <updated>2013-08-02T23:54:09+02:00</updated>
     <id>http://tshepang.net/computing/</id>
     <entry>
+        <title type="html"><![CDATA[tools I use all the time]]></title>
+        <author><name>Tshepang Lekhonkhobe</name></author>
+        <link href="http://tshepang.net/tools-i-use-all-the-time"/>
+        <published>2013-08-02T00:00:00+02:00</published>
+        <updated>2013-08-02T23:54:09+02:00</updated>
+        <id>http://tshepang.net/tools-i-use-all-the-time</id>
+        <category scheme="http://tshepang.net/tag/#untagged" term="untagged" label="untagged" />
+        <content type="html" xml:base="http://tshepang.net" xml:lang="en">
+            <![CDATA[ <p>Following are tools I use all the time, but am not necessarily loving.
+For those I like a lot, see <a class="reference external" href="http://tshepang.net/favorite-floss">this list</a>.</p>
+<ul class="simple">
+<li>Debian: my primary OS, and also my favorite</li>
+<li>Emacs: general text editor</li>
+<li>Vim: it happens to be installed on a lot of systems at work, but I
+only rarely use it on my workstation</li>
+<li>GNOME: primary Desktop Environment<ul>
+<li>gnome-panel</li>
+<li>gnome-search-tool</li>
+<li>gnome-system-monitor</li>
+<li>nautilus</li>
+<li>file-roller</li>
+</ul>
+</li>
+<li><a class="reference external" href="http://lzone.de/liferea">Liferea</a>: would not be using this had it not been for Google Reader
+shutdown, but am glad they did cuz I like the tool, ugly and unkool
+as it is</li>
+<li>Evince: I would love to get a PDF reader with better navigation</li>
+<li>Quod Libet: audio player</li>
+<li>Thunderbird: I prefer Evolution, but it gave me some issues I don't remember</li>
+<li>GNU toolchain (GCC, make, GLibC, ...)</li>
+<li>VLC: ugly interface, solid application</li>
+<li>Git: do I have a choice?</li>
+<li>Mercurial: my favorite</li>
+</ul>
+]]>
+        </content>
+    </entry><entry>
         <title type="html"><![CDATA[mentioning alternatives on a prominent place]]></title>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/mentioning-alternatives-on-a-prominent-place"/>
@@ -275,39 +312,6 @@ some new triggers along the way.</li>
 some thing that I truly appreciate.
 At times, I fail to put into words just how much,
 the sort of feeling that nearly drains me in tears (&quot;so sensitive&quot;).</li>
-</ul>
-]]>
-        </content>
-    </entry><entry>
-        <title type="html"><![CDATA[tools I use all the time]]></title>
-        <author><name>Tshepang Lekhonkhobe</name></author>
-        <link href="http://tshepang.net/tools-i-use-all-the-time"/>
-        <published>2013-06-29T00:00:00+02:00</published>
-        <updated>2013-06-29T15:17:39+02:00</updated>
-        <id>http://tshepang.net/tools-i-use-all-the-time</id>
-        <category scheme="http://tshepang.net/tag/#untagged" term="untagged" label="untagged" />
-        <content type="html" xml:base="http://tshepang.net" xml:lang="en">
-            <![CDATA[ <p>Following are tools I use all the time, but am not necessarily loving.
-For those I like a lot, see <a class="reference external" href="http://tshepang.net/favorite-floss">this list</a>.</p>
-<ul class="simple">
-<li>Debian: my primary OS, and also my favorite</li>
-<li>Emacs: general text editor</li>
-<li>Vim: it happens to be installed on a lot of systems at work, but I
-only rarely use it on my workstation</li>
-<li>GNOME: primary Desktop Environment<ul>
-<li>gnome-panel</li>
-<li>gnome-search-tool</li>
-<li>gnome-system-monitor</li>
-<li>nautilus</li>
-<li>file-roller</li>
-</ul>
-</li>
-<li>Evince: PDF reading</li>
-<li>Quod Libet: audio player</li>
-<li>Thunderbird: I prefer Evolution, but it gave me some issues I don't remember</li>
-<li>GNU toolchain (GCC, make, GLibC, ...)</li>
-<li>VLC</li>
-<li>Git</li>
 </ul>
 ]]>
         </content>
