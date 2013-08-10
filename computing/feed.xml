@@ -3,7 +3,7 @@
     <title>Tshepang logs</title>
     <link href="http://tshepang.net/computing/feed" rel="self" />
     <link href="http://tshepang.net/computing/" />
-    <updated>2013-08-09T16:29:49+02:00</updated>
+    <updated>2013-08-10T15:12:29+02:00</updated>
     <id>http://tshepang.net/computing/</id>
     <entry>
         <title type="html"><![CDATA[links 2013-08-09]]></title>
@@ -846,15 +846,14 @@ see how long this one relationship lasts.</p>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/me-likes-subprocessdevnull"/>
         <published>2013-04-11T00:00:00+02:00</published>
-        <updated>2013-06-29T15:17:39+02:00</updated>
+        <updated>2013-08-10T15:12:29+02:00</updated>
         <id>http://tshepang.net/me-likes-subprocessdevnull</id>
         <category scheme="http://tshepang.net/tag/#Python" term="Python" label="Python" />
         <category scheme="http://tshepang.net/tag/#VCS" term="VCS" label="VCS" />
         <content type="html" xml:base="http://tshepang.net" xml:lang="en">
-            <![CDATA[ <p>If you want to run an external process from within Python,
-and are not interested in the error that process may emit,
-there are a few ways,
-and I will demonstrate by open a Python shell in a directory
+            <![CDATA[ <p>If you want to run an external process from within Python, and are not
+interested in the error that process may emit, there are a few ways,
+and I will demonstrate this by opening a Python shell in a directory
 that isn't version-controlled by <a class="reference external" href="http://mercurial.selenic.com">Mercurial</a>:</p>
 <ol class="arabic">
 <li><p class="first">So, we don't want to see this ugliness:</p>
