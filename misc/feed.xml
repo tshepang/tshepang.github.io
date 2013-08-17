@@ -3,53 +3,14 @@
     <title>Tshepang logs</title>
     <link href="http://tshepang.net/misc/feed" rel="self" />
     <link href="http://tshepang.net/misc/" />
-    <updated>2013-07-31T00:35:51+02:00</updated>
+    <updated>2013-08-17T11:45:17+02:00</updated>
     <id>http://tshepang.net/misc/</id>
     <entry>
-        <title type="html"><![CDATA[links 2013-07-09]]></title>
-        <author><name>Tshepang Lekhonkhobe</name></author>
-        <link href="http://tshepang.net/links-2013-07-09"/>
-        <published>2013-07-09T00:00:00+02:00</published>
-        <updated>2013-07-09T22:20:43+02:00</updated>
-        <id>http://tshepang.net/links-2013-07-09</id>
-        <category scheme="http://tshepang.net/tag/#humor" term="humor" label="humor" />
-        <category scheme="http://tshepang.net/tag/#links" term="links" label="links" />
-        <content type="html" xml:base="http://tshepang.net" xml:lang="en">
-            <![CDATA[ <ul class="simple">
-<li>I was surprised to find that <a class="reference external" href="http://skeptics.stackexchange.com/a/1172/167">most sex workers enjoy their trade</a>;
-it's a refreshing perspective, but as made clear by the post itself,
-there isn't sufficient scientific research to confirm it.</li>
-<li><a class="reference external" href="http://www.eyrie.org/~eagle/journal/2013-01/026.html">Consensus failure</a> looks like worthy criticism of consensus
-decision-making in large groups.</li>
-<li><a class="reference external" href="http://www.informationclearinghouse.info/article25936.htm">great explanation of the concept of Confirmation Bias</a>
-(<a class="reference external" href="http://youarenotsosmart.com/2010/06/23/confirmation-bias">honorable mention</a>)</li>
-<li><a class="reference external" href="http://www.eyrie.org/~eagle/journal/2012-12/006.html">great advice on which Charities to give to</a></li>
-<li>whoever said anything involving bowel humor can't be beautiful is
-wrong; <a class="reference external" href="http://theoatmeal.com/comics/tipping_tooting">here is proof</a></li>
-</ul>
-]]>
-        </content>
-    </entry><entry>
-        <title type="html"><![CDATA[top sites]]></title>
-        <author><name>Tshepang Lekhonkhobe</name></author>
-        <link href="http://tshepang.net/top-sites"/>
-        <published>2013-06-29T00:00:00+02:00</published>
-        <updated>2013-06-29T15:17:39+02:00</updated>
-        <id>http://tshepang.net/top-sites</id>
-        <content type="html" xml:base="http://tshepang.net" xml:lang="en">
-            <![CDATA[ <p><strong>atheist writing</strong>: <a class="reference external" href="http://scienceblogs.com/pharyngula/">Pharyngula</a></p>
-<p><strong>Linux-related news</strong>: <a class="reference external" href="http://lwn.net/">LWN</a></p>
-<p><strong>rationality</strong>: <a class="reference external" href="http://lesswrong.com/">Less Wrong</a></p>
-<p><strong>software development</strong>: <a class="reference external" href="http://stackoverflow.com/">Stack Overflow</a></p>
-<p><strong>HTML5</strong>: <a class="reference external" href="http://diveintohtml5.info/">diveintohtml5</a></p>
-]]>
-        </content>
-    </entry><entry>
         <title type="html"><![CDATA[from Pelican to liquidluck]]></title>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/from-pelican-to-liquidluck"/>
-        <published>2013-06-29T00:00:00+02:00</published>
-        <updated>2013-06-29T15:17:39+02:00</updated>
+        <published>2013-08-17T00:00:00+02:00</published>
+        <updated>2013-08-17T11:45:17+02:00</updated>
         <id>http://tshepang.net/from-pelican-to-liquidluck</id>
         <category scheme="http://tshepang.net/tag/#blogging" term="blogging" label="blogging" />
         <content type="html" xml:base="http://tshepang.net" xml:lang="en">
@@ -69,8 +30,7 @@ which is shortly after I started using <a class="reference external" href="http:
 <li>if Category is not specified, parent directory name is used
 (unlike blogofile)</li>
 <li>titles are allowed to have any character (unlike blogofile)</li>
-<li>there is an option to provide clean urls... remove trailing <tt class="docutils literal">.html</tt>
-(<a class="reference external" href="https://github.com/ralsina/nikola/issues/291">unlike nikola</a>)</li>
+<li>there is an option to provide clean urls... remove trailing <tt class="docutils literal">.html</tt></li>
 </ul>
 </li>
 <li>Does not force one into having ugly date-based filesystem structure
@@ -135,6 +95,45 @@ index e90de80..94fa7e8 100644
 </li>
 </ul>
 </div>
+]]>
+        </content>
+    </entry><entry>
+        <title type="html"><![CDATA[links 2013-07-09]]></title>
+        <author><name>Tshepang Lekhonkhobe</name></author>
+        <link href="http://tshepang.net/links-2013-07-09"/>
+        <published>2013-07-09T00:00:00+02:00</published>
+        <updated>2013-07-09T22:20:43+02:00</updated>
+        <id>http://tshepang.net/links-2013-07-09</id>
+        <category scheme="http://tshepang.net/tag/#humor" term="humor" label="humor" />
+        <category scheme="http://tshepang.net/tag/#links" term="links" label="links" />
+        <content type="html" xml:base="http://tshepang.net" xml:lang="en">
+            <![CDATA[ <ul class="simple">
+<li>I was surprised to find that <a class="reference external" href="http://skeptics.stackexchange.com/a/1172/167">most sex workers enjoy their trade</a>;
+it's a refreshing perspective, but as made clear by the post itself,
+there isn't sufficient scientific research to confirm it.</li>
+<li><a class="reference external" href="http://www.eyrie.org/~eagle/journal/2013-01/026.html">Consensus failure</a> looks like worthy criticism of consensus
+decision-making in large groups.</li>
+<li><a class="reference external" href="http://www.informationclearinghouse.info/article25936.htm">great explanation of the concept of Confirmation Bias</a>
+(<a class="reference external" href="http://youarenotsosmart.com/2010/06/23/confirmation-bias">honorable mention</a>)</li>
+<li><a class="reference external" href="http://www.eyrie.org/~eagle/journal/2012-12/006.html">great advice on which Charities to give to</a></li>
+<li>whoever said anything involving bowel humor can't be beautiful is
+wrong; <a class="reference external" href="http://theoatmeal.com/comics/tipping_tooting">here is proof</a></li>
+</ul>
+]]>
+        </content>
+    </entry><entry>
+        <title type="html"><![CDATA[top sites]]></title>
+        <author><name>Tshepang Lekhonkhobe</name></author>
+        <link href="http://tshepang.net/top-sites"/>
+        <published>2013-06-29T00:00:00+02:00</published>
+        <updated>2013-06-29T15:17:39+02:00</updated>
+        <id>http://tshepang.net/top-sites</id>
+        <content type="html" xml:base="http://tshepang.net" xml:lang="en">
+            <![CDATA[ <p><strong>atheist writing</strong>: <a class="reference external" href="http://scienceblogs.com/pharyngula/">Pharyngula</a></p>
+<p><strong>Linux-related news</strong>: <a class="reference external" href="http://lwn.net/">LWN</a></p>
+<p><strong>rationality</strong>: <a class="reference external" href="http://lesswrong.com/">Less Wrong</a></p>
+<p><strong>software development</strong>: <a class="reference external" href="http://stackoverflow.com/">Stack Overflow</a></p>
+<p><strong>HTML5</strong>: <a class="reference external" href="http://diveintohtml5.info/">diveintohtml5</a></p>
 ]]>
         </content>
     </entry><entry>
