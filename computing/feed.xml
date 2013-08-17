@@ -3,7 +3,7 @@
     <title>Tshepang logs</title>
     <link href="http://tshepang.net/computing/feed" rel="self" />
     <link href="http://tshepang.net/computing/" />
-    <updated>2013-08-10T15:12:29+02:00</updated>
+    <updated>2013-08-17T23:36:38+02:00</updated>
     <id>http://tshepang.net/computing/</id>
     <entry>
         <title type="html"><![CDATA[links 2013-08-09]]></title>
@@ -106,7 +106,7 @@ experience issues</li>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/mentioning-alternatives-on-a-prominent-place"/>
         <published>2013-07-28T00:00:00+02:00</published>
-        <updated>2013-07-28T15:31:06+02:00</updated>
+        <updated>2013-08-17T23:35:58+02:00</updated>
         <id>http://tshepang.net/mentioning-alternatives-on-a-prominent-place</id>
         <category scheme="http://tshepang.net/tag/#untagged" term="untagged" label="untagged" />
         <content type="html" xml:base="http://tshepang.net" xml:lang="en">
@@ -115,7 +115,7 @@ technologies on a project website.  It's even more interesting when
 this is done on a promiment page. Here's a few of those who do it:</p>
 <ul class="simple">
 <li><a class="reference external" href="http://ltib.org/home-intro">Linux Target Image Builder (LTIB)</a></li>
-<li><a class="reference external" href="http://wummel.github.io/linkchecker/other.html">LinkChecker</a> (linked from landing page)</li>
+<li><a class="reference external" href="http://wummel.github.io/linkchecker/other.html">LinkChecker</a> (linked from main page)</li>
 <li><a class="reference external" href="http://lzone.de/liferea">Liferea</a></li>
 <li><a class="reference external" href="https://github.com/gittip/www.gittip.com/blob/master/README.md">Gittip</a> (project README file)</li>
 <li><a class="reference external" href="http://pythonhosted.org/vcs/alternatives.html">vcs</a> (a section in the official documentation)</li>
@@ -414,7 +414,7 @@ and then steal the market</p>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/ideal-static-blog-generator"/>
         <published>2013-06-02T00:00:00+02:00</published>
-        <updated>2013-06-29T15:17:39+02:00</updated>
+        <updated>2013-08-17T23:36:38+02:00</updated>
         <id>http://tshepang.net/ideal-static-blog-generator</id>
         <category scheme="http://tshepang.net/tag/#blogging" term="blogging" label="blogging" />
         <content type="html" xml:base="http://tshepang.net" xml:lang="en">
@@ -423,7 +423,7 @@ missed:</p>
 <ul class="simple">
 <li><a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html">reStructuredText</a> support is mandatory, and so is being written in
 Python (I is a fanboy).</li>
-<li>3 alternatives for the Landing Page:<ul>
+<li>3 alternatives for the main page:<ul>
 <li>The latest post should be displayed in its entirety, and the rest
 displayed in an Archive view below it (so one can quickly search
 all post Titles without leaving that page).</li>
@@ -442,7 +442,7 @@ Tinkerer</a>).</li>
 distinguished by background colour; using different fonts is not
 good enough.</li>
 <li>Tags (and maybe Categories) should be displayed on each post.</li>
-<li>An feed icon that is visible from landing page (and maybe Category
+<li>An feed icon that is visible from the main page (and maybe Category
 pages).</li>
 <li>Blogofile has a strange requirement of having <a class="reference external" href="http://docs.blogofile.com/en/latest/posts.html">post headers be YAML
 format</a>. Maybe there's a good reason, but I want my generator to
