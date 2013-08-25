@@ -3,14 +3,14 @@
     <title>Tshepang logs</title>
     <link href="http://tshepang.net/computing/feed" rel="self" />
     <link href="http://tshepang.net/computing/" />
-    <updated>2013-08-25T14:12:24+02:00</updated>
+    <updated>2013-08-25T14:13:50+02:00</updated>
     <id>http://tshepang.net/computing/</id>
     <entry>
         <title type="html"><![CDATA[packaging my first Qt app]]></title>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/packaging-my-first-qt-app"/>
         <published>2013-08-24T00:00:00+02:00</published>
-        <updated>2013-08-25T14:12:24+02:00</updated>
+        <updated>2013-08-25T14:13:50+02:00</updated>
         <id>http://tshepang.net/packaging-my-first-qt-app</id>
         <category scheme="http://tshepang.net/tag/#Debian" term="Debian" label="Debian" />
         <category scheme="http://tshepang.net/tag/#non-Python" term="non-Python" label="non-Python" />
@@ -27,7 +27,7 @@ deprecated, probably in favor of the official guide above)</li>
 </li>
 <li><strong>hour 2-3</strong>: Reading the Debian Packaging Tutorial which led me to
 reading <tt class="docutils literal"><span class="pre">dpkg-source</span></tt> manpage, <tt class="docutils literal">dh_make</tt>, and modifying the
-resulting <tt class="docutils literal">debian/</tt> directory contents</li>
+resulting <tt class="docutils literal">debian/</tt> directory contents.</li>
 <li><strong>hour 4-6</strong>: Struggling to kill the lintian complaint,
 <tt class="docutils literal"><span class="pre">binary-without-manpage</span></tt>. I went as far as reading the source code
 (Perl) that performs the check, but that didn't help much. I could
