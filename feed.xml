@@ -3,7 +3,7 @@
     <title>Tshepang logs</title>
     <link href="http://tshepang.net/feed" rel="self" />
     <link href="http://tshepang.net/" />
-    <updated>2013-08-25T14:13:50+02:00</updated>
+    <updated>2013-08-25T14:15:06+02:00</updated>
     <id>http://tshepang.net/</id>
     <entry>
         <title type="html"><![CDATA[Letta Mbulu vs. Miriam Makeba]]></title>
@@ -139,7 +139,7 @@ making a list of tracks. Intuition isn't always reliable.</p>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/packaging-my-first-qt-app"/>
         <published>2013-08-24T00:00:00+02:00</published>
-        <updated>2013-08-25T14:13:50+02:00</updated>
+        <updated>2013-08-25T14:15:06+02:00</updated>
         <id>http://tshepang.net/packaging-my-first-qt-app</id>
         <category scheme="http://tshepang.net/tag/#Debian" term="Debian" label="Debian" />
         <category scheme="http://tshepang.net/tag/#non-Python" term="non-Python" label="non-Python" />
@@ -168,6 +168,8 @@ warning.</li>
 a clean chroot (pbuilder). This was with the help of Debian New
 Maintainers' Guide, again.</li>
 </ul>
+<p>The resulting package now lives at
+<a class="reference external" href="https://bitbucket.org/tshepang/ksig/src">https://bitbucket.org/tshepang/ksig/src</a>.</p>
 ]]>
         </content>
     </entry><entry>
