@@ -3,7 +3,7 @@
     <title>Tshepang logs</title>
     <link href="http://tshepang.net/feed" rel="self" />
     <link href="http://tshepang.net/" />
-    <updated>2013-08-25T14:15:06+02:00</updated>
+    <updated>2013-08-25T14:22:01+02:00</updated>
     <id>http://tshepang.net/</id>
     <entry>
         <title type="html"><![CDATA[Letta Mbulu vs. Miriam Makeba]]></title>
@@ -139,12 +139,16 @@ making a list of tracks. Intuition isn't always reliable.</p>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/packaging-my-first-qt-app"/>
         <published>2013-08-24T00:00:00+02:00</published>
-        <updated>2013-08-25T14:15:06+02:00</updated>
+        <updated>2013-08-25T14:22:01+02:00</updated>
         <id>http://tshepang.net/packaging-my-first-qt-app</id>
         <category scheme="http://tshepang.net/tag/#Debian" term="Debian" label="Debian" />
         <category scheme="http://tshepang.net/tag/#non-Python" term="non-Python" label="non-Python" />
         <content type="html" xml:base="http://tshepang.net" xml:lang="en">
-            <![CDATA[ <ul class="simple">
+            <![CDATA[ <p>Someone asked me to try get some KDE package into Debian. I estimated
+that it would take me around 10 hours to get it into good enough shape
+before asking some Debian Developer to upload it for me. Here goes
+some rough estimates:</p>
+<ul class="simple">
 <li><strong>hour 1</strong>: Find documentation on the subject; I got three after a
 quick search:<ul>
 <li><a class="reference external" href="http://developer.ubuntu.com/packaging/html">Ubuntu Packaging Guide</a></li>
@@ -155,13 +159,13 @@ deprecated, probably in favor of the official guide above)</li>
 </ul>
 </li>
 <li><strong>hour 2-3</strong>: Reading the Debian Packaging Tutorial which led me to
-reading <tt class="docutils literal"><span class="pre">dpkg-source</span></tt> manpage, <tt class="docutils literal">dh_make</tt>, and modifying the
-resulting <tt class="docutils literal">debian/</tt> directory contents.</li>
+reading <tt class="docutils literal"><span class="pre">dpkg-source</span></tt> manpage, using <tt class="docutils literal">dh_make</tt> to create a
+<tt class="docutils literal">debian/</tt> skeleton, and modifying the contents of that directory.</li>
 <li><strong>hour 4-6</strong>: Struggling to kill the lintian complaint,
 <tt class="docutils literal"><span class="pre">binary-without-manpage</span></tt>. I went as far as reading the source code
 (Perl) that performs the check, but that didn't help much. I could
 have saved hours by looking at the <a class="reference external" href="http://www.debian.org/doc/manuals/maint-guide">Debian New Maintainers' Guide</a>
-earlier. Also added <tt class="docutils literal">export <span class="pre">LDFLAGS=-Wl,-z,relro</span></tt> to
+earlier. I also added <tt class="docutils literal">export <span class="pre">LDFLAGS=-Wl,-z,relro</span></tt> to
 <tt class="docutils literal">debian/rules</tt> file to kill <tt class="docutils literal"><span class="pre">hardening-no-relro</span></tt> lintian
 warning.</li>
 <li><strong>hour 7-8</strong>: Determine what dependencies would be needed by building from
