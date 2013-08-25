@@ -3,14 +3,14 @@
     <title>Tshepang logs</title>
     <link href="http://tshepang.net/computing/feed" rel="self" />
     <link href="http://tshepang.net/computing/" />
-    <updated>2013-08-25T14:22:01+02:00</updated>
+    <updated>2013-08-25T14:26:30+02:00</updated>
     <id>http://tshepang.net/computing/</id>
     <entry>
         <title type="html"><![CDATA[packaging my first Qt app]]></title>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/packaging-my-first-qt-app"/>
         <published>2013-08-24T00:00:00+02:00</published>
-        <updated>2013-08-25T14:22:01+02:00</updated>
+        <updated>2013-08-25T14:26:30+02:00</updated>
         <id>http://tshepang.net/packaging-my-first-qt-app</id>
         <category scheme="http://tshepang.net/tag/#Debian" term="Debian" label="Debian" />
         <category scheme="http://tshepang.net/tag/#non-Python" term="non-Python" label="non-Python" />
@@ -44,7 +44,8 @@ a clean chroot (pbuilder). This was with the help of Debian New
 Maintainers' Guide, again.</li>
 </ul>
 <p>The resulting package now lives at
-<a class="reference external" href="https://bitbucket.org/tshepang/ksig/src">https://bitbucket.org/tshepang/ksig/src</a>.</p>
+<a class="reference external" href="https://bitbucket.org/tshepang/ksig/src">https://bitbucket.org/tshepang/ksig/src</a>. The changes I made, the
+actual packaging work, are in <a class="reference external" href="https://bitbucket.org/tshepang/ksig/src/ba388ea40c035340a5fccda1ced99e1bcfae94a3/debian">this directory</a>.</p>
 ]]>
         </content>
     </entry><entry>
