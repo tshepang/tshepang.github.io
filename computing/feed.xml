@@ -3,14 +3,14 @@
     <title>Tshepang logs</title>
     <link href="http://tshepang.net/computing/feed" rel="self" />
     <link href="http://tshepang.net/computing/" />
-    <updated>2013-08-27T04:04:09+02:00</updated>
+    <updated>2013-08-27T04:04:40+02:00</updated>
     <id>http://tshepang.net/computing/</id>
     <entry>
         <title type="html"><![CDATA[packaging my first Qt app]]></title>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/packaging-my-first-qt-app"/>
         <published>2013-08-27T00:00:00+02:00</published>
-        <updated>2013-08-27T04:04:09+02:00</updated>
+        <updated>2013-08-27T04:04:40+02:00</updated>
         <id>http://tshepang.net/packaging-my-first-qt-app</id>
         <category scheme="http://tshepang.net/tag/#Debian" term="Debian" label="Debian" />
         <category scheme="http://tshepang.net/tag/#non-Python" term="non-Python" label="non-Python" />
@@ -19,57 +19,37 @@
 that it would take me around 10 hours to get it into good enough shape
 before asking some Debian Developer to upload it for me. Here goes
 some rough estimates:</p>
-<ul>
-<li><p class="first"><strong>hour 1</strong>: Find documentation on the subject; I got three after a
-quick search:</p>
 <ul class="simple">
-<li><a href="#id12"><span class="problematic" id="id13">`Ubuntu Packaging Guide`__</span></a></li>
-<li><a href="#id12"><span class="problematic" id="id14">`Create Ubuntu DEB package from a Qt application`__</span></a> (marked as
+<li><strong>hour 1</strong>: Find documentation on the subject; I got three after a
+quick search:<ul>
+<li><a class="reference external" href="http://developer.ubuntu.com/packaging/html">Ubuntu Packaging Guide</a></li>
+<li><a class="reference external" href="https://wiki.ubuntu.com/PackagingGuideDeprecated/QtApplication">Create Ubuntu DEB package from a Qt application</a> (marked as
 deprecated, probably in favor of the official guide above)</li>
 <li>Debian Packaging Tutorial (from Debian package,
 <tt class="docutils literal"><span class="pre">packaging-tutorial</span></tt>)</li>
 </ul>
 </li>
-<li><p class="first"><strong>hour 2-3</strong>: Reading the Debian Packaging Tutorial which led me to
+<li><strong>hour 2-3</strong>: Reading the Debian Packaging Tutorial which led me to
 reading <tt class="docutils literal"><span class="pre">dpkg-source</span></tt> manpage, using <tt class="docutils literal">dh_make</tt> to create a
-<tt class="docutils literal">debian/</tt> skeleton, and modifying the contents of that directory.</p>
-</li>
-<li><p class="first"><strong>hour 4-6</strong>: Struggling to kill the lintian complaint,
+<tt class="docutils literal">debian/</tt> skeleton, and modifying the contents of that directory.</li>
+<li><strong>hour 4-6</strong>: Struggling to kill the lintian complaint,
 <tt class="docutils literal"><span class="pre">binary-without-manpage</span></tt>. I went as far as reading the source code
 (Perl) that performs the check, but that didn't help much. I could
-have saved hours by looking at the <a href="#id12"><span class="problematic" id="id15">`Debian New Maintainers' Guide`__</span></a>
+have saved hours by looking at the <a class="reference external" href="http://www.debian.org/doc/manuals/maint-guide">Debian New Maintainers' Guide</a>
 earlier. I also added <tt class="docutils literal">export <span class="pre">LDFLAGS=-Wl,-z,relro</span></tt> to
 <tt class="docutils literal">debian/rules</tt> file to kill <tt class="docutils literal"><span class="pre">hardening-no-relro</span></tt> lintian
-warning.</p>
-</li>
-<li><p class="first"><strong>hour 7-8</strong>: Determine what dependencies would be needed by building from
+warning.</li>
+<li><strong>hour 7-8</strong>: Determine what dependencies would be needed by building from
 a clean chroot (pbuilder). This was with the help of Debian New
-Maintainers' Guide, again.</p>
-</li>
-<li><p class="first"><strong>hour 9</strong>: Reading Debian <a href="#id1"><span class="problematic" id="id2">`</span></a>wiki page on Hardening <a href="#id3"><span class="problematic" id="id4">`</span></a>__ let me
+Maintainers' Guide, again.</li>
+<li><strong>hour 9</strong>: Reading Debian <a class="reference external" href="https://wiki.debian.org/Hardening">wiki page on Hardening</a> let me
 simplify my packaging further... removing the need to specify
-hardening flags explicitly (<a href="#id12"><span class="problematic" id="id16">commit__</span></a>). I also read details of
-getting a package uploaded, with the help of <a href="#id12"><span class="problematic" id="id17">DebianMentorsFaq__</span></a>.</p>
-<div class="system-message" id="id1">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 40); <em><a href="#id2">backlink</a></em></p>
-<p>Inline interpreted text or phrase reference start-string without end-string.</p>
-</div>
-<div class="system-message" id="id3">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 40); <em><a href="#id4">backlink</a></em></p>
-<p>Inline interpreted text or phrase reference start-string without end-string.</p>
-</div>
-</li>
+hardening flags explicitly (<a class="reference external" href="https://bitbucket.org/tshepang/ksig/commits/f4c7b60157b79847f918e3d8b24a74e6c5bec929">commit</a>). I also read details of
+getting a package uploaded, with the help of <a class="reference external" href="https://wiki.debian.org/DebianMentorsFaq">DebianMentorsFaq</a>.</li>
 </ul>
 <p>The resulting package now lives at
 <a class="reference external" href="https://bitbucket.org/tshepang/ksig/src">https://bitbucket.org/tshepang/ksig/src</a>. The changes I made, the
-actual packaging work, are in <a href="#id12"><span class="problematic" id="id18">`this directory`__</span></a>.</p>
-<div class="system-messages section">
-<h2>Docutils System Messages</h2>
-<div class="system-message" id="id12">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">&lt;string&gt;</tt>); <em>backlinks: <a href="#id13">1</a>, <a href="#id14">2</a>, <a href="#id15">3</a>, <a href="#id16">4</a>, <a href="#id17">5</a>, <a href="#id18">6</a></em></p>
-Anonymous hyperlink mismatch: 6 references but 7 targets.
-See &quot;backrefs&quot; attribute for IDs.</div>
-</div>
+actual packaging work, are in <a class="reference external" href="https://bitbucket.org/tshepang/ksig/src/f4c7b60157b79847f918e3d8b24a74e6c5bec929/debian">this directory</a>.</p>
 ]]>
         </content>
     </entry><entry>
