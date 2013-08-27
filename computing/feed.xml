@@ -3,36 +3,14 @@
     <title>Tshepang logs</title>
     <link href="http://tshepang.net/computing/feed" rel="self" />
     <link href="http://tshepang.net/computing/" />
-    <updated>2013-08-27T03:52:02+02:00</updated>
+    <updated>2013-08-27T03:52:51+02:00</updated>
     <id>http://tshepang.net/computing/</id>
     <entry>
-        <title type="html"><![CDATA[mentioning alternatives on a prominent place]]></title>
-        <author><name>Tshepang Lekhonkhobe</name></author>
-        <link href="http://tshepang.net/mentioning-alternatives-on-a-prominent-place"/>
-        <published>2013-08-27T00:00:00+02:00</published>
-        <updated>2013-08-27T03:14:45+02:00</updated>
-        <id>http://tshepang.net/mentioning-alternatives-on-a-prominent-place</id>
-        <category scheme="http://tshepang.net/tag/#untagged" term="untagged" label="untagged" />
-        <content type="html" xml:base="http://tshepang.net" xml:lang="en">
-            <![CDATA[ <p>It's an honorable thing to mention alternative and/or competing
-technologies on a project website.  It's even more interesting when
-this is done on a promiment page. Here's a few of those who do it:</p>
-<ul class="simple">
-<li><a class="reference external" href="http://ltib.org">Linux Target Image Builder (LTIB)</a></li>
-<li><a class="reference external" href="http://lzone.de/liferea">Liferea</a></li>
-<li><a class="reference external" href="http://humdi.net/vnstat">vnStat</a></li>
-<li><a class="reference external" href="http://wummel.github.io/linkchecker/other.html">LinkChecker</a> (linked from main page)</li>
-<li><a class="reference external" href="https://github.com/gittip/www.gittip.com/blob/master/README.md">Gittip</a> (project README file)</li>
-<li><a class="reference external" href="http://pythonhosted.org/vcs/alternatives.html">vcs</a> (a top-level section in the official documentation)</li>
-</ul>
-]]>
-        </content>
-    </entry><entry>
         <title type="html"><![CDATA[packaging my first Qt app]]></title>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/packaging-my-first-qt-app"/>
-        <published>2013-08-25T00:00:00+02:00</published>
-        <updated>2013-08-27T03:52:02+02:00</updated>
+        <published>2013-08-27T00:00:00+02:00</published>
+        <updated>2013-08-27T03:52:51+02:00</updated>
         <id>http://tshepang.net/packaging-my-first-qt-app</id>
         <category scheme="http://tshepang.net/tag/#Debian" term="Debian" label="Debian" />
         <category scheme="http://tshepang.net/tag/#non-Python" term="non-Python" label="non-Python" />
@@ -72,6 +50,28 @@ uploaded, with the help of <a class="reference external" href="https://bitbucket
 <p>The resulting package now lives at
 <a class="reference external" href="https://bitbucket.org/tshepang/ksig/src">https://bitbucket.org/tshepang/ksig/src</a>. The changes I made, the
 actual packaging work, are in <a class="reference external" href="https://wiki.debian.org/DebianMentorsFaq">this directory</a>.</p>
+]]>
+        </content>
+    </entry><entry>
+        <title type="html"><![CDATA[mentioning alternatives on a prominent place]]></title>
+        <author><name>Tshepang Lekhonkhobe</name></author>
+        <link href="http://tshepang.net/mentioning-alternatives-on-a-prominent-place"/>
+        <published>2013-08-27T00:00:00+02:00</published>
+        <updated>2013-08-27T03:14:45+02:00</updated>
+        <id>http://tshepang.net/mentioning-alternatives-on-a-prominent-place</id>
+        <category scheme="http://tshepang.net/tag/#untagged" term="untagged" label="untagged" />
+        <content type="html" xml:base="http://tshepang.net" xml:lang="en">
+            <![CDATA[ <p>It's an honorable thing to mention alternative and/or competing
+technologies on a project website.  It's even more interesting when
+this is done on a promiment page. Here's a few of those who do it:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://ltib.org">Linux Target Image Builder (LTIB)</a></li>
+<li><a class="reference external" href="http://lzone.de/liferea">Liferea</a></li>
+<li><a class="reference external" href="http://humdi.net/vnstat">vnStat</a></li>
+<li><a class="reference external" href="http://wummel.github.io/linkchecker/other.html">LinkChecker</a> (linked from main page)</li>
+<li><a class="reference external" href="https://github.com/gittip/www.gittip.com/blob/master/README.md">Gittip</a> (project README file)</li>
+<li><a class="reference external" href="http://pythonhosted.org/vcs/alternatives.html">vcs</a> (a top-level section in the official documentation)</li>
+</ul>
 ]]>
         </content>
     </entry><entry>

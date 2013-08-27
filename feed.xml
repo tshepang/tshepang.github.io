@@ -3,9 +3,56 @@
     <title>Tshepang logs</title>
     <link href="http://tshepang.net/feed" rel="self" />
     <link href="http://tshepang.net/" />
-    <updated>2013-08-27T03:52:02+02:00</updated>
+    <updated>2013-08-27T03:52:51+02:00</updated>
     <id>http://tshepang.net/</id>
     <entry>
+        <title type="html"><![CDATA[packaging my first Qt app]]></title>
+        <author><name>Tshepang Lekhonkhobe</name></author>
+        <link href="http://tshepang.net/packaging-my-first-qt-app"/>
+        <published>2013-08-27T00:00:00+02:00</published>
+        <updated>2013-08-27T03:52:51+02:00</updated>
+        <id>http://tshepang.net/packaging-my-first-qt-app</id>
+        <category scheme="http://tshepang.net/tag/#Debian" term="Debian" label="Debian" />
+        <category scheme="http://tshepang.net/tag/#non-Python" term="non-Python" label="non-Python" />
+        <content type="html" xml:base="http://tshepang.net" xml:lang="en">
+            <![CDATA[ <p>Someone asked me to try get some KDE package into Debian. I estimated
+that it would take me around 10 hours to get it into good enough shape
+before asking some Debian Developer to upload it for me. Here goes
+some rough estimates:</p>
+<ul class="simple">
+<li><strong>hour 1</strong>: Find documentation on the subject; I got three after a
+quick search:<ul>
+<li><a class="reference external" href="http://developer.ubuntu.com/packaging/html">Ubuntu Packaging Guide</a></li>
+<li><a class="reference external" href="https://wiki.ubuntu.com/PackagingGuideDeprecated/QtApplication">Create Ubuntu DEB package from a Qt application</a> (marked as
+deprecated, probably in favor of the official guide above)</li>
+<li>Debian Packaging Tutorial (from Debian package,
+<tt class="docutils literal"><span class="pre">packaging-tutorial</span></tt>)</li>
+</ul>
+</li>
+<li><strong>hour 2-3</strong>: Reading the Debian Packaging Tutorial which led me to
+reading <tt class="docutils literal"><span class="pre">dpkg-source</span></tt> manpage, using <tt class="docutils literal">dh_make</tt> to create a
+<tt class="docutils literal">debian/</tt> skeleton, and modifying the contents of that directory.</li>
+<li><strong>hour 4-6</strong>: Struggling to kill the lintian complaint,
+<tt class="docutils literal"><span class="pre">binary-without-manpage</span></tt>. I went as far as reading the source code
+(Perl) that performs the check, but that didn't help much. I could
+have saved hours by looking at the <a class="reference external" href="http://www.debian.org/doc/manuals/maint-guide">Debian New Maintainers' Guide</a>
+earlier. I also added <tt class="docutils literal">export <span class="pre">LDFLAGS=-Wl,-z,relro</span></tt> to
+<tt class="docutils literal">debian/rules</tt> file to kill <tt class="docutils literal"><span class="pre">hardening-no-relro</span></tt> lintian
+warning.</li>
+<li><strong>hour 7-8</strong>: Determine what dependencies would be needed by building from
+a clean chroot (pbuilder). This was with the help of Debian New
+Maintainers' Guide, again.</li>
+<li><strong>hour 9</strong>: Reading <a class="reference external" href="https://bitbucket.org/tshepang/ksig/src/ba388ea40c035340a5fccda1ced99e1bcfae94a3/debian">Debian wiki Hardening</a> let me simplify my
+packaging further... removing the need to specify hardening flags
+explicitly (<a class="reference external" href="https://wiki.debian.org/Hardening">commit</a>). I also read details of getting a package
+uploaded, with the help of <a class="reference external" href="https://bitbucket.org/tshepang/ksig/commits/f4c7b60157b79847f918e3d8b24a74e6c5bec929">DebianMentorsFaq</a>.</li>
+</ul>
+<p>The resulting package now lives at
+<a class="reference external" href="https://bitbucket.org/tshepang/ksig/src">https://bitbucket.org/tshepang/ksig/src</a>. The changes I made, the
+actual packaging work, are in <a class="reference external" href="https://wiki.debian.org/DebianMentorsFaq">this directory</a>.</p>
+]]>
+        </content>
+    </entry><entry>
         <title type="html"><![CDATA[mentioning alternatives on a prominent place]]></title>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/mentioning-alternatives-on-a-prominent-place"/>
@@ -154,53 +201,6 @@ musicians (Fela Kuti, Bob Marley, and Burning Spear); I was only
 surprised that the later entrants, Salif Keita and Letta Mbulu beat
 mighty Bob, and that was based on just my thinking without actually
 making a list of tracks. Intuition isn't always reliable.</p>
-]]>
-        </content>
-    </entry><entry>
-        <title type="html"><![CDATA[packaging my first Qt app]]></title>
-        <author><name>Tshepang Lekhonkhobe</name></author>
-        <link href="http://tshepang.net/packaging-my-first-qt-app"/>
-        <published>2013-08-25T00:00:00+02:00</published>
-        <updated>2013-08-27T03:52:02+02:00</updated>
-        <id>http://tshepang.net/packaging-my-first-qt-app</id>
-        <category scheme="http://tshepang.net/tag/#Debian" term="Debian" label="Debian" />
-        <category scheme="http://tshepang.net/tag/#non-Python" term="non-Python" label="non-Python" />
-        <content type="html" xml:base="http://tshepang.net" xml:lang="en">
-            <![CDATA[ <p>Someone asked me to try get some KDE package into Debian. I estimated
-that it would take me around 10 hours to get it into good enough shape
-before asking some Debian Developer to upload it for me. Here goes
-some rough estimates:</p>
-<ul class="simple">
-<li><strong>hour 1</strong>: Find documentation on the subject; I got three after a
-quick search:<ul>
-<li><a class="reference external" href="http://developer.ubuntu.com/packaging/html">Ubuntu Packaging Guide</a></li>
-<li><a class="reference external" href="https://wiki.ubuntu.com/PackagingGuideDeprecated/QtApplication">Create Ubuntu DEB package from a Qt application</a> (marked as
-deprecated, probably in favor of the official guide above)</li>
-<li>Debian Packaging Tutorial (from Debian package,
-<tt class="docutils literal"><span class="pre">packaging-tutorial</span></tt>)</li>
-</ul>
-</li>
-<li><strong>hour 2-3</strong>: Reading the Debian Packaging Tutorial which led me to
-reading <tt class="docutils literal"><span class="pre">dpkg-source</span></tt> manpage, using <tt class="docutils literal">dh_make</tt> to create a
-<tt class="docutils literal">debian/</tt> skeleton, and modifying the contents of that directory.</li>
-<li><strong>hour 4-6</strong>: Struggling to kill the lintian complaint,
-<tt class="docutils literal"><span class="pre">binary-without-manpage</span></tt>. I went as far as reading the source code
-(Perl) that performs the check, but that didn't help much. I could
-have saved hours by looking at the <a class="reference external" href="http://www.debian.org/doc/manuals/maint-guide">Debian New Maintainers' Guide</a>
-earlier. I also added <tt class="docutils literal">export <span class="pre">LDFLAGS=-Wl,-z,relro</span></tt> to
-<tt class="docutils literal">debian/rules</tt> file to kill <tt class="docutils literal"><span class="pre">hardening-no-relro</span></tt> lintian
-warning.</li>
-<li><strong>hour 7-8</strong>: Determine what dependencies would be needed by building from
-a clean chroot (pbuilder). This was with the help of Debian New
-Maintainers' Guide, again.</li>
-<li><strong>hour 9</strong>: Reading <a class="reference external" href="https://bitbucket.org/tshepang/ksig/src/ba388ea40c035340a5fccda1ced99e1bcfae94a3/debian">Debian wiki Hardening</a> let me simplify my
-packaging further... removing the need to specify hardening flags
-explicitly (<a class="reference external" href="https://wiki.debian.org/Hardening">commit</a>). I also read details of getting a package
-uploaded, with the help of <a class="reference external" href="https://bitbucket.org/tshepang/ksig/commits/f4c7b60157b79847f918e3d8b24a74e6c5bec929">DebianMentorsFaq</a>.</li>
-</ul>
-<p>The resulting package now lives at
-<a class="reference external" href="https://bitbucket.org/tshepang/ksig/src">https://bitbucket.org/tshepang/ksig/src</a>. The changes I made, the
-actual packaging work, are in <a class="reference external" href="https://wiki.debian.org/DebianMentorsFaq">this directory</a>.</p>
 ]]>
         </content>
     </entry><entry>
