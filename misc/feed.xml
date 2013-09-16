@@ -3,14 +3,14 @@
     <title>Tshepang logs</title>
     <link href="http://tshepang.net/misc/feed" rel="self" />
     <link href="http://tshepang.net/misc/" />
-    <updated>2013-08-17T11:45:17+02:00</updated>
+    <updated>2013-09-16T03:35:51+02:00</updated>
     <id>http://tshepang.net/misc/</id>
     <entry>
         <title type="html"><![CDATA[from Pelican to liquidluck]]></title>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/from-pelican-to-liquidluck"/>
         <published>2013-08-17T00:00:00+02:00</published>
-        <updated>2013-08-17T11:45:17+02:00</updated>
+        <updated>2013-09-16T03:35:51+02:00</updated>
         <id>http://tshepang.net/from-pelican-to-liquidluck</id>
         <category scheme="http://tshepang.net/tag/#blogging" term="blogging" label="blogging" />
         <content type="html" xml:base="http://tshepang.net" xml:lang="en">
@@ -24,7 +24,7 @@ which is shortly after I started using <a class="reference external" href="http:
 <h2>why <a class="reference external" href="http://pelican.readthedocs.org">Pelican</a> rocks</h2>
 <ul class="simple">
 <li>It has categories
-(<a class="reference external" href="https://github.com/ralsina/nikola/issues/163">unlike nikola</a>)</li>
+(<a class="reference external" href="https://github.com/getnikola/nikola/issues/163">unlike nikola</a>)</li>
 <li>Post metadata:<ul>
 <li>if Date is not specified, file mtime is used (unlike <a class="reference external" href="http://blogofile.com">blogofile</a>)</li>
 <li>if Category is not specified, parent directory name is used
