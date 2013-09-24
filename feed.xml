@@ -3,9 +3,48 @@
     <title>Tshepang logs</title>
     <link href="http://tshepang.net/feed" rel="self" />
     <link href="http://tshepang.net/" />
-    <updated>2013-09-16T03:54:16+02:00</updated>
+    <updated>2013-09-24T02:30:35+02:00</updated>
     <id>http://tshepang.net/</id>
     <entry>
+        <title type="html"><![CDATA[projects with excellent documentation]]></title>
+        <author><name>Tshepang Lekhonkhobe</name></author>
+        <link href="http://tshepang.net/projects-with-excellent-documentation"/>
+        <published>2013-09-24T00:00:00+02:00</published>
+        <updated>2013-09-24T02:30:35+02:00</updated>
+        <id>http://tshepang.net/projects-with-excellent-documentation</id>
+        <category scheme="http://tshepang.net/tag/#untagged" term="untagged" label="untagged" />
+        <content type="html" xml:base="http://tshepang.net" xml:lang="en">
+            <![CDATA[ <p>Here is a list of projects whose documentation I found to be
+highly-detailed and well-written.</p>
+<div class="section" id="big">
+<h2>big</h2>
+<ul class="simple">
+<li>The <a class="reference external" href="http://cmgm.stanford.edu/classes/unix/emacs.html">introductory tutorial of GNU Emacs</a> (looks a lot better when
+run from within Emacs), is written in a very gentle and careful way;
+it's among the best tutorials I've seen.  Same applies to <a class="reference external" href="http://www.gnu.org/software/emacs/manual/html_node/emacs">the Emacs
+manual</a>, which I'm tempted to call the best I've read yet. It
+really, really goes into painstaking detail, and seems to have been
+written by professional technical writers.</li>
+<li><a class="reference external" href="http://docs.python.org">CPython</a> - I used to appreciate this more before I got closely
+involved, noticing warts here and there, and therefore taking it for
+granted.</li>
+<li><a class="reference external" href="http://www.sqlite.org/docs.html">sqlite3</a> - quite extensive, especially for an embeddable DBMS</li>
+</ul>
+</div>
+<div class="section" id="small">
+<h2>small</h2>
+<ul class="simple">
+<li><a class="reference external" href="https://fedorahosted.org/suds/wiki/Documentation">Suds</a> - multiple, well-written examples</li>
+<li><a class="reference external" href="http://www.nongnu.org/rdiff-backup/examples.html">rdiff-backup usage examples</a> - much smaller than the others listed
+here, but nevertheless deserves mention because it's both gentle and
+thorough</li>
+</ul>
+<p>As a sidenote, I've heard great things about <a class="reference external" href="https://docs.djangoproject.com">Django's</a>, but haven't
+really looked yet.</p>
+</div>
+]]>
+        </content>
+    </entry><entry>
         <title type="html"><![CDATA[Person of Interest - Season 2 Episode 16]]></title>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/person-of-interest-season-2-episode-16"/>
@@ -647,47 +686,6 @@ code</li>
 <ul class="simple">
 <li>Ruby on Rails</li>
 </ul>
-</div>
-]]>
-        </content>
-    </entry><entry>
-        <title type="html"><![CDATA[projects with excellent documentation]]></title>
-        <author><name>Tshepang Lekhonkhobe</name></author>
-        <link href="http://tshepang.net/projects-with-excellent-documentation"/>
-        <published>2013-06-29T00:00:00+02:00</published>
-        <updated>2013-06-29T15:17:39+02:00</updated>
-        <id>http://tshepang.net/projects-with-excellent-documentation</id>
-        <category scheme="http://tshepang.net/tag/#untagged" term="untagged" label="untagged" />
-        <content type="html" xml:base="http://tshepang.net" xml:lang="en">
-            <![CDATA[ <p>Here is a list of projects whose documentation I found to be
-highly-detailed and well-written.</p>
-<div class="section" id="big">
-<h2>big</h2>
-<ul class="simple">
-<li>The <a class="reference external" href="http://cmgm.stanford.edu/classes/unix/emacs.html">introductory tutorial of GNU Emacs</a> (looks a lot better when
-run from within Emacs), is written in a very gentle and careful way;
-it's among the best tutorials I've seen.  Same applies to <a class="reference external" href="http://www.gnu.org/software/emacs/manual/html_node/emacs">the Emacs
-manual</a>, which I'm tempted to call the best I've read yet. It
-really, really goes into painstaking detail, and seems to have been
-written by professional technical writers.</li>
-<li><a class="reference external" href="http://docs.python.org">CPython</a> - I used to appreciate this more before I got closely
-involved, noticing warts here and there, and therefore taking it for
-granted.</li>
-<li><a class="reference external" href="http://valgrind.org/docs/manual/index.html">valgrind</a> - its docs properly represent its status as among the most
-respected of FLOSS projects</li>
-<li><a class="reference external" href="http://www.sqlite.org/docs.html">sqlite3</a> - quite extensive, especially for an embeddable DBMS</li>
-</ul>
-</div>
-<div class="section" id="small">
-<h2>small</h2>
-<ul class="simple">
-<li><a class="reference external" href="https://fedorahosted.org/suds/wiki/Documentation">Suds</a> - multiple, well-written examples</li>
-<li><a class="reference external" href="http://www.nongnu.org/rdiff-backup/examples.html">rdiff-backup usage examples</a> - much smaller than the others listed
-here, but nevertheless deserves mention because it's both gentle and
-thorough</li>
-</ul>
-<p>As a sidenote, I've heard great things about <a class="reference external" href="https://docs.djangoproject.com">Django's</a>, but haven't
-really looked yet.</p>
 </div>
 ]]>
         </content>
