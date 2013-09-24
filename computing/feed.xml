@@ -3,14 +3,14 @@
     <title>Tshepang logs</title>
     <link href="http://tshepang.net/computing/feed" rel="self" />
     <link href="http://tshepang.net/computing/" />
-    <updated>2013-09-24T21:13:34+02:00</updated>
+    <updated>2013-09-25T00:42:41+02:00</updated>
     <id>http://tshepang.net/computing/</id>
     <entry>
         <title type="html"><![CDATA[project of note: Valgrind]]></title>
         <author><name>Tshepang Lekhonkhobe</name></author>
         <link href="http://tshepang.net/project-of-note-valgrind"/>
         <published>2013-09-24T00:00:00+02:00</published>
-        <updated>2013-09-24T21:13:34+02:00</updated>
+        <updated>2013-09-25T00:42:41+02:00</updated>
         <id>http://tshepang.net/project-of-note-valgrind</id>
         <category scheme="http://tshepang.net/tag/#project-of-note" term="project-of-note" label="project-of-note" />
         <category scheme="http://tshepang.net/tag/#non-Python" term="non-Python" label="non-Python" />
@@ -21,44 +21,44 @@ tool, and though its primary use is detecting memory leaks, I am here
 going to explore its other functionality... calculating the cost of
 each line of code in the CPU. This is useful when tuning programs for
 performance.</p>
-<p>Here example code:</p>
-<pre class="literal-block">
-#include &lt;string.h&gt;
-#include &lt;errno.h&gt;
-#include &lt;stdio.h&gt;
-#include &lt;fcntl.h&gt;
-#include &lt;unistd.h&gt;
+<p>Following is example code; it accepts 2 arguments, a filename and
+content it will write to that file:</p>
+<div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
+<span class="cp">#include &lt;errno.h&gt;</span>
+<span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;fcntl.h&gt;</span>
+<span class="cp">#include &lt;unistd.h&gt;</span>
 
-int
-main (int argc, char **argv)
-{
-    char path[0xFF];
-    char content[0xFF];
-    int fd;
-    ssize_t written;
+<span class="kt">int</span>
+<span class="nf">main</span> <span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">char</span> <span class="n">path</span><span class="p">[</span><span class="mh">0xFF</span><span class="p">];</span>
+    <span class="kt">char</span> <span class="n">content</span><span class="p">[</span><span class="mh">0xFF</span><span class="p">];</span>
+    <span class="kt">int</span> <span class="n">fd</span><span class="p">;</span>
+    <span class="kt">ssize_t</span> <span class="n">written</span><span class="p">;</span>
 
-    if (argc &lt; 3) {
-        fprintf (stderr, &quot;usage: %s &lt;filename&gt; &lt;content&gt;\n&quot;, argv[0]);
-        return 1;
-    }
+    <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">fprintf</span> <span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;usage: %s &lt;filename&gt; &lt;content&gt;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
 
-    strcpy (path, argv[1]);
-    sprintf (content, &quot;%s\n&quot;, argv[2]);
+    <span class="n">strcpy</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+    <span class="n">sprintf</span> <span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
 
-    fd = creat (path, S_IRWXU);
-    if (fd == -1) {
-        fprintf (stderr, &quot;open error: %s ('%s')\n&quot;, strerror (errno), path);
-        return 1;
-    }
+    <span class="n">fd</span> <span class="o">=</span> <span class="n">creat</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">S_IRWXU</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">fd</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">fprintf</span> <span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;open error: %s (&#39;%s&#39;)</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">strerror</span> <span class="p">(</span><span class="n">errno</span><span class="p">),</span> <span class="n">path</span><span class="p">);</span>
+        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
 
-    written = write (fd, content, strlen (content));
-    if (written == -1) {
-        fprintf (stderr, &quot;write error: %s ('%s')\n&quot;, strerror (errno), path);
-        return 1;
-    }
-    return 0;
-}
-</pre>
+    <span class="n">written</span> <span class="o">=</span> <span class="n">write</span> <span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">content</span><span class="p">,</span> <span class="n">strlen</span> <span class="p">(</span><span class="n">content</span><span class="p">));</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">written</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">fprintf</span> <span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;write error: %s (&#39;%s&#39;)</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">strerror</span> <span class="p">(</span><span class="n">errno</span><span class="p">),</span> <span class="n">path</span><span class="p">);</span>
+        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
 <p>Build command (using GCC 4.8.1):</p>
 <pre class="literal-block">
 gcc -Wall -pedantic -g play.c -o play
