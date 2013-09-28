@@ -1,39 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
-
-    <meta name="tags" contents="Python" />
-    <meta name="tags" contents="GNOME" />
-    <meta name="tags" contents="links" />
-
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+        <title>links 2013-05-11</title>
+        <meta charset="utf-8" />
+        <link href='http://fonts.googleapis.com/css?family=ABeeZee|Carrois+Gothic|Source+Code+Pro:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="http://tshepang.net/theme/style/reset.css" type="text/css" />
+        <link rel="stylesheet" href="http://tshepang.net/theme/style/screen.css" type="text/css" />
+        <link rel="stylesheet" href="http://tshepang.net/theme/style/print.css" type="text/css" media="print" />
+        <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
+<body>
+    <header id="main">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" title="Home">Tshepang logs</a>
+            </div>
+        </div>
+    </header>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="http://tshepang.net">Tshepang logs <strong></strong></a></h1>
-        </header><!-- /#banner -->
-        <nav id="menu"><ul>
-            <li><a href="http://tshepang.net/about-me.html">about me</a></li>
-            <li><a href="http://tshepang.net/key-posts.html">key posts</a></li>
-        </ul></nav><!-- /#menu -->
-<section id="content" class="body">
-  <header>
-    <h2 class="entry-title">
-      <a href="http://tshepang.net/links-2013-05-11" rel="bookmark"
-         title="Permalink to links 2013-05-11">links 2013-05-11</a></h2>
- 
-  </header>
-  <footer class="post-info">
-    <abbr class="published" title="2013-05-11T00:00:00">
-      2013-05-11
-    </abbr>
-    <address class="vcard author">
-      By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
-    </address>
-  </footer><!-- /.post-info -->
-  <div class="entry-content">
-    <ul class="simple">
+    <div class="splash">
+        <div class="container">
+            <div class="welcome"></div>
+        </div>
+    </div>
+
+    <div class="container content">
+<article>
+    <header>
+<h2><a href="links-2013-05-11" rel="bookmark">
+    links 2013-05-11
+</a></h2>
+<time datetime="2013-05-11 00:00:00" pubdate>Posted on
+    2013-05-11
+</time>
+<address class="vcard author">
+    by <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">
+    Tshepang Lekhonkhobe</a>
+</address>
+<span class="category">in <a href="http://tshepang.net/computing">
+    computing</a>.
+        </span>
+    </header>
+
+    <div class="body">
+        <ul class="simple">
 <li><a class="reference external" href="https://github.com/ardahal">My first GitHub follower</a>; at this time, he is following 140
 others, so maybe I not so specialness.</li>
 <li><a class="reference external" href="http://hg.python.org/cpython/rev/d5ef330bac50">Python interpreter finally gets tab completion by default</a>;
@@ -48,13 +60,109 @@ it's written with PyPy in mind, but has excellent generic advice.</li>
 project, <a class="reference external" href="http://www.discourse.org">Discourse</a>.</li>
 </ul>
 
-  </div><!-- /.entry-content -->
-</section>
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-                which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-        </footer><!-- /#contentinfo -->
+    </div>
+
+    <footer>
+        <ul class="tags">            <li>
+                <a href="http://tshepang.net/tag/python">Python</a>
+            </li>            <li>
+                <a href="http://tshepang.net/tag/gnome">GNOME</a>
+            </li>            <li>
+                <a href="http://tshepang.net/tag/links">links</a>
+            </li>        </ul>
+    </footer>
+
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_identifier = "links-2013-05-11";
+        (function () {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.src = 'http://tshepanglogs.disqus.com/embed.js';
+            (document.head || document.body).appendChild(dsq);
+        })();
+    </script>
+</article>
+
+<script>
+    (function () {
+        'use strict';
+        var titleElm = document.querySelector('article > header');
+        var bodyElm = document.querySelector('article > .body');
+        if (!titleElm || !bodyElm)
+            return;
+
+        var limit = titleElm.offsetTop;
+        var titleCls = titleElm.classList;
+        var bodyCls = bodyElm.classList;
+        var floating = false;
+        window.onscroll = function (evt) {
+            var scrollTop = Math.max(document.body.scrollTop,
+                    document.documentElement.scrollTop);
+            if (!floating && limit <= scrollTop) {
+                titleCls.add('float');
+                bodyCls.add('body-padding');
+                floating = true;
+            }
+            else if (limit >= scrollTop) {
+                titleCls.remove('float');
+                bodyCls.remove('body-padding');
+                floating = false;
+            }
+        };
+    })();
+</script>
+    </div>
+
+    <div class="container footnote">
+    </div>
+
+    <div class="bottom">
+        <div class="container">
+            <div class="about">
+                <h3>About me</h3>
+                <img alt="Me!" class="avatar"
+                     src="http://www.gravatar.com/avatar/?size=64">
+                <p></p>
+                <p>
+                   You can contact me by emailing
+                   <a href="mailto:" rel="me"></a>.
+                </p>
+                <p>
+                    <a href="https://twitter.com/tshepang_dev"
+                       title="@tshepang_dev on Twitter" rel="me">Follow me on Twitter</a> and
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container footer">
+            <span>Powered by <a href="http://docs.getpelican.com">
+                Pelican</a> using <a href="https://github.com/BYK/pelican-neat">
+                neat theme</a>.
+            </span>
+            <nav>
+                <ul>
+                    <li><a href="archives.html" title="Archive"><strong>Archive</strong></a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-16685250-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
 </body>
 </html>
