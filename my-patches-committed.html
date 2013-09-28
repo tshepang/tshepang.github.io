@@ -1,48 +1,59 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
-<head>
-        <meta charset="utf-8" />
-        <title>my patches committed</title>
-        <link rel="stylesheet" href="http://tshepang.net/theme/css/main.css" />
-        <link href="http://tshepang.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tshepang logs Atom Feed" />
-
-        <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <title>my patches committed - Tshepang logs</title>
+        <script>if (top !== self) top.location = self.location;</script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+        <link rel="stylesheet" href="/static/style.css?v=709a5" />
+        <link rel="stylesheet" href="/static/pygments.css?v=c6adc" />
+        
+        <link rel="alternate" type="application/rss+xml" href="/feed" title="Tshepang logs" />
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="/static/html5shiv.js?v=9a10c"></script>
         <![endif]-->
-</head>
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-16685250-3']);
+            _gaq.push(['_trackPageview']);
+            _gaq.push(['_trackPageLoadTime']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+        
+<link rel="canonical" href="/my-patches-committed" />
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="http://tshepang.net/">Tshepang logs </a></h1>
-                <nav><ul>
-                    <li><a href="http://tshepang.net/about-me.html">about me</a></li>
-                    <li><a href="http://tshepang.net/key-posts.html">key posts</a></li>
-                    <li><a href="http://tshepang.net/arts">arts</a></li>
-                    <li class="active"><a href="http://tshepang.net/computing">computing</a></li>
-                    <li><a href="http://tshepang.net/misc">misc</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="http://tshepang.net/my-patches-committed" rel="bookmark"
-           title="Permalink to my patches committed">my patches committed</a></h1>
-<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="tshepang_dev">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-    </header>
 
+    </head>
+    <body>
+        <header id="header">
+            <h1 id="brand"><a href="/">Tshepang logs</a></h1>
+            <nav id="nav" role="navigation">
+                
+                <a href="/misc/">misc</a>
+                <a href="/computing/">computing</a>
+                <a href="/arts/">arts</a>
+                <a href="/key-posts">| key-posts |</a>
+                <a href="/about-me">| about-me |</a>
+            </nav>
+        </header>
+
+        <div id="main">
+            <div class="container"><div class="hentry">
+    <h1 class="entry-title">my patches committed</h1>
+    <div class="entry-meta">
+        <time class="updated" datetime="2010-04-06T00:00:00+02:00" pubdate>
+            <a href="/2010/">2010-04-06</a>
+        </time>
+        <span class="author vcard">
+            by <span class="fn">Tshepang Lekhonkhobe</span>
+        </span>
+    </div>
     <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2010-04-06T00:00:00">
-                2010-04-06
-        </abbr>
-
-        <address class="vcard author">
-                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
-        </address>
-<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
-<p>tags: <a href="http://tshepang.net/tag/gnome">GNOME</a><a href="http://tshepang.net/tag/tracker">Tracker</a></p>
-</footer><!-- /.post-info -->      <p>So, two of the <a class="reference external" href="http://tshepang.net/so-much-learned-via-tracker-bugfixing">patches I created</a> for <a class="reference external" href="http://projects.gnome.org/tracker/">Tracker</a> have been committed
+        <p>So, two of the <a class="reference external" href="http://tshepang.net/so-much-learned-via-tracker-bugfixing">patches I created</a> for <a class="reference external" href="http://projects.gnome.org/tracker/">Tracker</a> have been committed
 (commit <a class="reference external" href="http://tshepang.net/so-much-learned-via-tracker-bugfixing">1</a>, <a class="reference external" href="http://git.gnome.org/browse/tracker/commit/?id=ade2655a2f9fecf7100d58a8908493b9d71e2273">2</a>)!</p>
 <p>I consumed much info (and time) during the process, which entailed
 looking at Git usage (branch, checkout, commit, format-patch, ...)
@@ -51,59 +62,46 @@ through <a class="reference external" href="http://pvanhoof.be/blog/">Philip van
 <p>Philip van Hoof also <a class="reference external" href="http://git.gnome.org/browse/tracker/commit/?id=c5a15f8231c63488605d799b9670aba01898fde4">fixed</a> a hard-to-reproduce bug which was a pain
 for me. The fix is a workaround for a <a class="reference external" href="http://www.gtk.org/">GTK+</a> bug.</p>
 
-    </div><!-- /.entry-content -->
-    <div class="comments">
-      <h2>Comments !</h2>
-      <div id="disqus_thread"></div>
-      <script type="text/javascript">
-        var disqus_identifier = "my-patches-committed";
-        var disqus_url = "http://tshepang.net/my-patches-committed";
-        (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://tshepanglogs.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-      </script>
     </div>
 
-  </article>
-</section>
-        <section id="extras" class="body">
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="http://tshepang.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+    
 
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+    <div class="entry-tags">
+        <a href="/tag/#GNOME">GNOME</a><a href="/tag/#Tracker">Tracker</a>
+    </div>
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+    <iframe style="border: 0; margin: 0; padding: 0;"
+        src="https://www.gittip.com/tshepang/widget.html"
+        width="48pt" height="22pt"></iframe>
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
-
+    
+    <div id="disqus_thread"></div>
     <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-16685250-3']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+        var disqus_shortname = 'tshepanglogs';
+        var disqus_title = 'my patches committed';
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
     </script>
-<script type="text/javascript">
-    var disqus_shortname = 'tshepanglogs';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
-</body>
+    
+</div></div>
+        </div>
+
+        <footer id="footer">
+            <hr class="end" />
+            
+            <p class="copyright">
+            <span class="software">
+                Powered by <a href="http://lab.lepture.com/liquidluck/">Felix Felicis</a> 3.8.1,
+            </span>
+            <span class="theme">
+                Theme <a href="https://github.com/lepture/liquidluck-theme-moment" rel="nofollow">moment</a> 1.0 by <a href="http://lepture.com">Hsiaoming Yang</a>
+            </span>
+            </p>
+        </footer>
+        <script type="text/javascript" src="/static/mobile.js?v=3b6df"></script>
+        
+    </body>
 </html>
