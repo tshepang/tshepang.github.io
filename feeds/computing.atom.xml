@@ -1,35 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-09-28T23:01:31+02:00</updated><entry><title>my current plans for wajig</title><link href="http://tshepang.net/my-current-plans-for-wajig" rel="alternate"></link><updated>2013-09-28T23:01:31+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-28:my-current-plans-for-wajig</id><summary type="html">&lt;p&gt;Some stuff I might work on in future:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;I want to start using &lt;a class="reference external" href="https://github.com/kislyuk/argcomplete"&gt;argcomplete&lt;/a&gt; at some point, a more dynamic
-shell completion tool, replacing the current hand-rolled solution.
-I find shell programming hard, and argcomplete, which is inspired by
-&lt;a class="reference external" href="http://furius.ca/optcomplete/"&gt;optcomplete&lt;/a&gt; is a brilliant workaround.&lt;/li&gt;
-&lt;li&gt;Someone asked me to restore gjig, the GUI tool that &lt;a class="reference external" href="http://tshepang.net/wajig-21-released"&gt;I removed from
-wajig&lt;/a&gt; some releases ago. This will be an opportunity to learn
-GTK+ again. I did a bit of it, even contributing patches (&lt;a class="reference external" href="http://projects.gnome.org/tracker/"&gt;Tracker
-project&lt;/a&gt;), but was never quite confident. It's very likely that I
-won't work on this... too much work.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;But ultimately, I would love for the standard Debian packaging tools
-to get the the point where they make wajig irrelvant. After all, wajig
-was created to be a wrapper that helps ease the mess.&lt;/p&gt;
-&lt;hr class="docutils" /&gt;
-&lt;p&gt;Here's the work I did in the past working on wajig, have a look at
-&lt;a class="reference external" href="http://tshepang.net/tag/wajig"&gt;its tag&lt;/a&gt;. Off the top of my head:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;improved, simplied packaging&lt;/li&gt;
-&lt;li&gt;port to Python 3&lt;/li&gt;
-&lt;li&gt;port to argparse (from getopt), which also meant proper handling of
-subcommands&lt;/li&gt;
-&lt;li&gt;increased usage of python-apt, instead of hand-crafted (and ugly)
-code&lt;/li&gt;
-&lt;li&gt;a few feature additions&lt;/li&gt;
-&lt;li&gt;(lots of) modernising the code&lt;/li&gt;
-&lt;li&gt;(lots of) cleaning up&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;And over 800 commits later, I am glad.&lt;/p&gt;
-</summary><category term="wajig"></category><category term="Python"></category><category term="Tracker"></category></entry><entry><title>project of note: Valgrind</title><link href="http://tshepang.net/project-of-note-valgrind" rel="alternate"></link><updated>2013-09-25T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-25:project-of-note-valgrind</id><summary type="html">&lt;p&gt;I have, since using Valgrind (and reading a bit of its documentation)
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-09-25T00:00:00+02:00</updated><entry><title>project of note: Valgrind</title><link href="http://tshepang.net/project-of-note-valgrind" rel="alternate"></link><updated>2013-09-25T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-25:project-of-note-valgrind</id><summary type="html">&lt;p&gt;I have, since using Valgrind (and reading a bit of its documentation)
 some years ago, developed much respect for it. It is quite an advanced
 tool, and though its primary use is detecting memory leaks, I am here
 going to explore its other functionality... calculating the cost of
@@ -586,7 +556,37 @@ with high quality clear writing), favorite of which is the just-updated
 on the history, current state, and future plans regarding the story of
 packaging (and installation) in the Python ecosystem.  He also happens
 to be a great champion in pushing for progress on that front.&lt;/p&gt;
-</summary><category term="developer-of-note"></category><category term="Python"></category></entry><entry><title>shutil.which() rocks</title><link href="http://tshepang.net/shutilwhich-rocks" rel="alternate"></link><updated>2013-05-26T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-05-26:shutilwhich-rocks</id><summary type="html">&lt;p&gt;Unix/Linux systems have a simple (but useful) tool named &lt;cite&gt;which&lt;/cite&gt;,
+</summary><category term="developer-of-note"></category><category term="Python"></category></entry><entry><title>my current plans for wajig</title><link href="http://tshepang.net/my-current-plans-for-wajig" rel="alternate"></link><updated>2013-05-27T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-05-27:my-current-plans-for-wajig</id><summary type="html">&lt;p&gt;Some stuff I might work on in future:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;I want to start using &lt;a class="reference external" href="https://github.com/kislyuk/argcomplete"&gt;argcomplete&lt;/a&gt; at some point, a more dynamic
+shell completion tool, replacing the current hand-rolled solution.
+I find shell programming hard, and argcomplete, which is inspired by
+&lt;a class="reference external" href="http://furius.ca/optcomplete/"&gt;optcomplete&lt;/a&gt; is a brilliant workaround.&lt;/li&gt;
+&lt;li&gt;Someone asked me to restore gjig, the GUI tool that &lt;a class="reference external" href="http://tshepang.net/wajig-21-released"&gt;I removed from
+wajig&lt;/a&gt; some releases ago. This will be an opportunity to learn
+GTK+ again. I did a bit of it, even contributing patches (&lt;a class="reference external" href="http://projects.gnome.org/tracker/"&gt;Tracker
+project&lt;/a&gt;), but was never quite confident. It's very likely that I
+won't work on this... too much work.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;But ultimately, I would love for the standard Debian packaging tools
+to get the the point where they make wajig irrelvant. After all, wajig
+was created to be a wrapper that helps ease the mess.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;Here's the work I did in the past working on wajig, have a look at
+&lt;a class="reference external" href="http://tshepang.net/tag/wajig"&gt;its tag&lt;/a&gt;. Off the top of my head:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;improved, simplied packaging&lt;/li&gt;
+&lt;li&gt;port to Python 3&lt;/li&gt;
+&lt;li&gt;port to argparse (from getopt), which also meant proper handling of
+subcommands&lt;/li&gt;
+&lt;li&gt;increased usage of python-apt, instead of hand-crafted (and ugly)
+code&lt;/li&gt;
+&lt;li&gt;a few feature additions&lt;/li&gt;
+&lt;li&gt;(lots of) modernising the code&lt;/li&gt;
+&lt;li&gt;(lots of) cleaning up&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And over 800 commits later, I am glad.&lt;/p&gt;
+</summary><category term="wajig"></category><category term="Python"></category><category term="Tracker"></category></entry><entry><title>shutil.which() rocks</title><link href="http://tshepang.net/shutilwhich-rocks" rel="alternate"></link><updated>2013-05-26T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-05-26:shutilwhich-rocks</id><summary type="html">&lt;p&gt;Unix/Linux systems have a simple (but useful) tool named &lt;cite&gt;which&lt;/cite&gt;,
 whose main purpose is to indicate where in the filesystem a particular
 executable is installed. This functionality was added in Python 3.3,
 and though simple, I was looking forward to its availability in
