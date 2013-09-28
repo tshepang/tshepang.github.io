@@ -25,7 +25,61 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="http://tshepang.net/project-of-note-sphinx">project of note: Sphinx</a></h1>
+                    <h1 class="entry-title"><a href="http://tshepang.net/my-current-plans-for-wajig">my current plans for wajig</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2013-09-28T22:08:41.364641">
+                2013-09-28
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/wajig">wajig</a><a href="http://tshepang.net/tag/python">Python</a><a href="http://tshepang.net/tag/tracker">Tracker</a></p>
+</footer><!-- /.post-info --><p>Some stuff I might work on in future:</p>
+<ul class="simple">
+<li>I want to start using <a class="reference external" href="https://github.com/kislyuk/argcomplete">argcomplete</a> at some point, a more dynamic
+shell completion tool, replacing the current hand-rolled solution.
+I find shell programming hard, and argcomplete, which is inspired by
+<a class="reference external" href="http://furius.ca/optcomplete/">optcomplete</a> is a brilliant workaround.</li>
+<li>Someone asked me to restore gjig, the GUI tool that <a class="reference external" href="http://tshepang.net/wajig-21-released">I removed from
+wajig</a> some releases ago. This will be an opportunity to learn
+GTK+ again. I did a bit of it, even contributing patches (<a class="reference external" href="http://projects.gnome.org/tracker/">Tracker
+project</a>), but was never quite confident. It's very likely that I
+won't work on this... too much work.</li>
+</ul>
+<p>But ultimately, I would love for the standard Debian packaging tools
+to get the the point where they make wajig irrelvant. After all, wajig
+was created to be a wrapper that helps ease the mess.</p>
+<hr class="docutils" />
+<p>Here's the work I did in the past working on wajig, have a look at
+<a class="reference external" href="http://tshepang.net/tag/wajig">its tag</a>. Off the top of my head:</p>
+<ul class="simple">
+<li>improved, simplied packaging</li>
+<li>port to Python 3</li>
+<li>port to argparse (from getopt), which also meant proper handling of
+subcommands</li>
+<li>increased usage of python-apt, instead of hand-crafted (and ugly)
+code</li>
+<li>a few feature additions</li>
+<li>(lots of) modernising the code</li>
+<li>(lots of) cleaning up</li>
+</ul>
+<p>And over 800 commits later, I am glad.</p>
+<p>There are <a href="http://tshepang.net/my-current-plans-for-wajig#disqus_thread">comments</a>.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/project-of-note-sphinx" rel="bookmark"
+                           title="Permalink to project of note: Sphinx">project of note: Sphinx</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2013-08-08T00:00:00">
                 2013-08-08
@@ -36,37 +90,10 @@
         </address>
 <p>In <a href="http://tshepang.net/computing">computing</a>. </p>
 <p>tags: <a href="http://tshepang.net/tag/project-of-note">project-of-note</a><a href="http://tshepang.net/tag/python">Python</a></p>
-</footer><!-- /.post-info --><p><a class="reference external" href="http://sphinx-doc.org">Sphinx</a> is a tool that is used to generate documentation from
-<a class="reference external" href="http://en.wikipedia.org/wiki/ReStructuredText">reStructuredText</a> markup language, and is mainly used in the Python
-ecosystem. I honor it much for it is a really powerful system, and I
-have come to appreciate it a lot recently, with my work on documentation
-of software that falls under the Pylons project.</p>
-<p>It is a pity that the markup is not as simple as that of the more
-popular <a class="reference external" href="http://en.wikipedia.org/wiki/Markdown">Markdown</a>, but maybe that was out of necessity, since it is
-far more advanced: it was initially built as a replacement for the
-tools that build CPython documentation, which is quite extensive and
-needs lots of rails.</p>
-<hr class="docutils" />
-<p>As an example of that power, have a look at <a class="reference external" href="https://github.com/Pylons/pyramid_tutorials/commit/134190">these changes I made</a> for
-<a class="reference external" href="http://docs.pylonsproject.org/projects/pyramid_tutorials/en/latest/">pyramid_tutorials</a>. In that commit, the feature I used allows you to
-include code snippets directly from files, instead of doing the
-copy-paste dance, avoiding duplication and rot. This feature is known as
-<a class="reference external" href="http://sphinx-doc.org/markup/code.html#directive-literalinclude">literalinclude</a>.</p>
-<p>Another feature I recently worked with in the recent past with is
-<a class="reference external" href="http://sphinx-doc.org/ext/intersphinx.html#confval-intersphinx_mapping">intersphinx_mapping</a>. What it does it allow one to generate
-references in reST as if those reference were local. For example, if
-you wanted to generate a link to the CPython <tt class="docutils literal">open()</tt> built-in
-function, you would need only specify it as <tt class="docutils literal">:func:open</tt>.  This is
-as opposed to finding the actual link and specifying it normally.</p>
-<p>One other feature I discovered (but haven't used yet) is <a class="reference external" href="http://sphinx-doc.org/domains.html#info-field-lists">Info field
-lists</a> feature. To see it in action, visit <a class="reference external" href="https://postgres-py.readthedocs.org/en/latest/#postgres.Postgres.run">this link</a>, and then
-look at <a class="reference external" href="https://postgres-py.readthedocs.org/en/latest/_modules/postgres.html#Postgres.run">its markup</a>. It's gorgeous!</p>
-<p>There are <a href="http://tshepang.net/project-of-note-sphinx#disqus_thread">comments</a>.</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/project-of-note-sphinx">read more</a>
+<p>There are <a href="http://tshepang.net/project-of-note-sphinx#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
@@ -88,28 +115,6 @@ look at <a class="reference external" href="https://postgres-py.readthedocs.org/
 </footer><!-- /.post-info -->                
                 <a class="readmore" href="http://tshepang.net/challenges-facing-python-from-other-languages">read more</a>
 <p>There are <a href="http://tshepang.net/challenges-facing-python-from-other-languages#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://tshepang.net/my-current-plans-for-wajig" rel="bookmark"
-                           title="Permalink to my current plans for wajig">my current plans for wajig</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2013-06-29T15:17:39.236425">
-                2013-06-29
-        </abbr>
-
-        <address class="vcard author">
-                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
-        </address>
-<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
-<p>tags: <a href="http://tshepang.net/tag/wajig">wajig</a><a href="http://tshepang.net/tag/python">Python</a><a href="http://tshepang.net/tag/tracker">Tracker</a></p>
-</footer><!-- /.post-info -->                
-                <a class="readmore" href="http://tshepang.net/my-current-plans-for-wajig">read more</a>
-<p>There are <a href="http://tshepang.net/my-current-plans-for-wajig#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">

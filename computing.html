@@ -25,7 +25,61 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="http://tshepang.net/project-of-note-valgrind">project of note: Valgrind</a></h1>
+                    <h1 class="entry-title"><a href="http://tshepang.net/my-current-plans-for-wajig">my current plans for wajig</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2013-09-28T22:08:41.364641">
+                2013-09-28
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/wajig">wajig</a><a href="http://tshepang.net/tag/python">Python</a><a href="http://tshepang.net/tag/tracker">Tracker</a></p>
+</footer><!-- /.post-info --><p>Some stuff I might work on in future:</p>
+<ul class="simple">
+<li>I want to start using <a class="reference external" href="https://github.com/kislyuk/argcomplete">argcomplete</a> at some point, a more dynamic
+shell completion tool, replacing the current hand-rolled solution.
+I find shell programming hard, and argcomplete, which is inspired by
+<a class="reference external" href="http://furius.ca/optcomplete/">optcomplete</a> is a brilliant workaround.</li>
+<li>Someone asked me to restore gjig, the GUI tool that <a class="reference external" href="http://tshepang.net/wajig-21-released">I removed from
+wajig</a> some releases ago. This will be an opportunity to learn
+GTK+ again. I did a bit of it, even contributing patches (<a class="reference external" href="http://projects.gnome.org/tracker/">Tracker
+project</a>), but was never quite confident. It's very likely that I
+won't work on this... too much work.</li>
+</ul>
+<p>But ultimately, I would love for the standard Debian packaging tools
+to get the the point where they make wajig irrelvant. After all, wajig
+was created to be a wrapper that helps ease the mess.</p>
+<hr class="docutils" />
+<p>Here's the work I did in the past working on wajig, have a look at
+<a class="reference external" href="http://tshepang.net/tag/wajig">its tag</a>. Off the top of my head:</p>
+<ul class="simple">
+<li>improved, simplied packaging</li>
+<li>port to Python 3</li>
+<li>port to argparse (from getopt), which also meant proper handling of
+subcommands</li>
+<li>increased usage of python-apt, instead of hand-crafted (and ugly)
+code</li>
+<li>a few feature additions</li>
+<li>(lots of) modernising the code</li>
+<li>(lots of) cleaning up</li>
+</ul>
+<p>And over 800 commits later, I am glad.</p>
+<p>There are <a href="http://tshepang.net/my-current-plans-for-wajig#disqus_thread">comments</a>.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/project-of-note-valgrind" rel="bookmark"
+                           title="Permalink to project of note: Valgrind">project of note: Valgrind</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2013-09-25T00:00:00">
                 2013-09-25
@@ -36,224 +90,10 @@
         </address>
 <p>In <a href="http://tshepang.net/computing">computing</a>. </p>
 <p>tags: <a href="http://tshepang.net/tag/project-of-note">project-of-note</a><a href="http://tshepang.net/tag/non-python">non-Python</a></p>
-</footer><!-- /.post-info --><p>I have, since using Valgrind (and reading a bit of its documentation)
-some years ago, developed much respect for it. It is quite an advanced
-tool, and though its primary use is detecting memory leaks, I am here
-going to explore its other functionality... calculating the cost of
-each line of code in the CPU. This is useful when tuning programs for
-performance.</p>
-<p>Following is example code; it accepts 2 arguments, a filename and
-content it will write to that file:</p>
-<div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
-<span class="cp">#include &lt;errno.h&gt;</span>
-<span class="cp">#include &lt;stdio.h&gt;</span>
-<span class="cp">#include &lt;fcntl.h&gt;</span>
-<span class="cp">#include &lt;unistd.h&gt;</span>
-
-<span class="kt">int</span>
-<span class="nf">main</span> <span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="kt">char</span> <span class="n">path</span><span class="p">[</span><span class="mh">0xFF</span><span class="p">];</span>
-    <span class="kt">char</span> <span class="n">content</span><span class="p">[</span><span class="mh">0xFF</span><span class="p">];</span>
-    <span class="kt">int</span> <span class="n">fd</span><span class="p">;</span>
-    <span class="kt">ssize_t</span> <span class="n">written</span><span class="p">;</span>
-
-    <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">fprintf</span> <span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;usage: %s &lt;filename&gt; &lt;content&gt;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
-        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="n">strcpy</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
-    <span class="n">sprintf</span> <span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
-
-    <span class="n">fd</span> <span class="o">=</span> <span class="n">creat</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">S_IRWXU</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">fd</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">fprintf</span> <span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;open error: %s (&#39;%s&#39;)</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">strerror</span> <span class="p">(</span><span class="n">errno</span><span class="p">),</span> <span class="n">path</span><span class="p">);</span>
-        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="n">written</span> <span class="o">=</span> <span class="n">write</span> <span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">content</span><span class="p">,</span> <span class="n">strlen</span> <span class="p">(</span><span class="n">content</span><span class="p">));</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">written</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">fprintf</span> <span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;write error: %s (&#39;%s&#39;)</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">strerror</span> <span class="p">(</span><span class="n">errno</span><span class="p">),</span> <span class="n">path</span><span class="p">);</span>
-        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-<p>Build command (using GCC 4.8.1):</p>
-<pre class="literal-block">
-gcc -Wall -pedantic -g play.c -o play
-</pre>
-<p>System details:</p>
-<pre class="literal-block">
-$ uname --all
-Linux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU/Linux
-$ sudo lshw -class processor
-*-cpu
-     description: CPU
-     product: Intel(R) Core(TM) i5-2410M CPU &#64; 2.30GHz
-     vendor: Intel Corp.
-     physical id: 4
-     bus info: cpu&#64;0
-     version: Intel(R) Core(TM) i5-2410M CPU &#64; 2.30GHz
-     serial: To Be Filled By O.E.M.
-     slot: CPU 1
-     size: 2300MHz
-     capacity: 4GHz
-     width: 64 bits
-     clock: 100MHz
-     capabilities: x86-64 fpu fpu_exception wp vme de pse tsc msr
-     pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts
-     acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp
-     constant_tsc arch_perfmon pebs bts rep_good nopl xtopology
-     nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor
-     ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2
-     x2apic popcnt tsc_deadline_timer xsave avx lahf_lm ida arat epb
-     xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid
-     aes cpufreq
-     configuration: cores=2 enabledcores=1 threads=2
-</pre>
-<p>Running the resulting binary with <strong>Callgrind</strong>:</p>
-<pre class="literal-block">
-$ valgrind --tool=callgrind --callgrind-out-file=out ./play filename
-filecontent
-==5308== Callgrind, a call-graph generating cache profiler
-==5308== Copyright (C) 2002-2012, and GNU GPL'd, by Josef Weidendorfer
-et al.
-==5308== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright
-info
-==5308== Command: ./play filename filecontent
-==5308==
-==5308== For interactive control, run 'callgrind_control -h'.
-==5308==
-==5308== Events    : Ir
-==5308== Collected : 107520
-==5308==
-==5308== I   refs:      107,520
-$ cat filename
-filecontent
-</pre>
-<p>And finally, seeing closely the cost of each function call, where
-<strong>Ir</strong> stands for <strong>Instruction cache reads</strong>, which you can read as
-<em>number of CPU instructions</em>. I have used <tt class="docutils literal">tree=calling</tt> option so
-that I can see the cost of all operations called by a parent (marked
-with a <tt class="docutils literal">*</tt>)</p>
-<pre class="literal-block">
-$ callgrind_annotate --tree=calling out play.c
---------------------------------------------------------------------------------
-Profile data file 'out' (creator: callgrind-3.8.1)
---------------------------------------------------------------------------------
-I1 cache:
-D1 cache:
-LL cache:
-Timerange: Basic block 0 - 22326
-Trigger: Program termination
-Profiled target:  ./play filename filecontent (PID 5308, part 1)
-Events recorded:  Ir
-Events shown:     Ir
-Event sort order: Ir
-Thresholds:       99
-Include dirs:
-User annotated:   play.c
-Auto-annotation:  off
-
---------------------------------------------------------------------------------
-Ir
---------------------------------------------------------------------------------
-107,520  PROGRAM TOTALS
-
---------------------------------------------------------------------------------
-Ir  file:function
---------------------------------------------------------------------------------
-
-24,113  *  /build/eglibc-TepTGA/eglibc-2.17/elf/dl-lookup.c:do_lookup_x [/lib/x86_64-linux-gnu/ld-2.17.so]
-1,053  &gt;   /build/eglibc-TepTGA/eglibc-2.17/elf/dl-misc.c:_dl_name_match_p (25x) [/lib/x86_64-linux-gnu/ld-2.17.so]
-13,423  &gt;   /build/eglibc-TepTGA/eglibc-2.17/elf/dl-lookup.c:check_match.9345 (88x) [/lib/x86_64-linux-gnu/ld-2.17.so]
-
-18,264  *  /build/eglibc-TepTGA/eglibc-2.17/elf/dl-lookup.c:_dl_lookup_symbol_x [/lib/x86_64-linux-gnu/ld-2.17.so]
-38,589  &gt;   /build/eglibc-TepTGA/eglibc-2.17/elf/dl-lookup.c:do_lookup_x (94x) [/lib/x86_64-linux-gnu/ld-2.17.so]
-
-15,836  *  /build/eglibc-TepTGA/eglibc-2.17/elf/../sysdeps/x86_64/dl-machine.h:_dl_relocate_object
-13  &gt;   /build/eglibc-TepTGA/eglibc-2.17/string/../sysdeps/x86_64/multiarch/memmove.c:memcpy&#64;GLIBC_2.2.5 (1x) [/lib/x86_64-linux-gnu/libc-2.17.so]
-81  &gt;   /build/eglibc-TepTGA/eglibc-2.17/string/../sysdeps/x86_64/multiarch/strcmp.S:strcasecmp (1x) [/lib/x86_64-linux-gnu/libc-2.17.so]
-6  &gt;   /build/eglibc-TepTGA/eglibc-2.17/string/../sysdeps/x86_64/multiarch/strcmp.S:strncasecmp (1x) [/lib/x86_64-linux-gnu/libc-2.17.so]
-7  &gt;   /build/eglibc-TepTGA/eglibc-2.17/string/../sysdeps/x86_64/multiarch/memset.S:memset (1x) [/lib/x86_64-linux-gnu/libc-2.17.so]
-51,501  &gt;   /build/eglibc-TepTGA/eglibc-2.17/elf/dl-lookup.c:_dl_lookup_symbol_x (86x) [/lib/x86_64-linux-gnu/ld-2.17.so]
-18  &gt;   /build/eglibc-TepTGA/eglibc-2.17/string/../sysdeps/x86_64/multiarch/../memcpy.S:memcpy (1x) [/lib/x86_64-linux-gnu/ld-2.17.so]
-67  &gt;   /build/eglibc-TepTGA/eglibc-2.17/time/../sysdeps/unix/sysv/linux/x86_64/time.c:time (1x) [/lib/x86_64-linux-gnu/libc-2.17.so]
-67  &gt;   /build/eglibc-TepTGA/eglibc-2.17/time/../sysdeps/unix/sysv/linux/x86_64/gettimeofday.c:gettimeofday (1x) [/lib/x86_64-linux-gnu/libc-2.17.so]
-6  &gt;   /build/eglibc-TepTGA/eglibc-2.17/string/../sysdeps/x86_64/multiarch/strnlen.S:strnlen (1x) [/lib/x86_64-linux-gnu/libc-2.17.so]
-[snip; to be continued]
-</pre>
-<p>I have trimmed the output to bring focus to the most interesting
-output of all, which is the total cost for each line of my code:</p>
-<pre class="literal-block">
-[continued]
---------------------------------------------------------------------------------
--- User-annotated source: play.c
---------------------------------------------------------------------------------
-Ir
-
-.  #include &lt;string.h&gt;
-.  #include &lt;errno.h&gt;
-.  #include &lt;stdio.h&gt;
-.  #include &lt;fcntl.h&gt;
-.  #include &lt;unistd.h&gt;
-.
-.  int
-.  main (int argc, char **argv)
-5  {
-.      char path[0xFF];
-.      char content[0xFF];
-.      int fd;
-.      ssize_t written;
-.
-2      if (argc &lt; 3) {
-.     fprintf (stderr, &quot;usage: %s &lt;filename&gt; &lt;content&gt;\n&quot;, argv[0]);
-.     return 1;
-.      }
-.
-7      strcpy (path, argv[1]);
-21  =&gt; /build/eglibc-TepTGA/eglibc-2.17/string/../sysdeps/x86_64/multiarch/strcpy-sse2-unaligned.S:__strcpy_sse2_unaligned (1x)
-799  =&gt; /build/eglibc-TepTGA/eglibc-2.17/elf/../sysdeps/x86_64/dl-trampoline.S:_dl_runtime_resolve (1x)
-8      sprintf (content, &quot;%s\n&quot;, argv[2]);
-1,188  =&gt; /build/eglibc-TepTGA/eglibc-2.17/stdio-common/sprintf.c:sprintf (1x)
-805  =&gt; /build/eglibc-TepTGA/eglibc-2.17/elf/../sysdeps/x86_64/dl-trampoline.S:_dl_runtime_resolve (1x)
-.
-5      fd = creat (path, S_IRWXU);
-766  =&gt; /build/eglibc-TepTGA/eglibc-2.17/elf/../sysdeps/x86_64/dl-trampoline.S:_dl_runtime_resolve (1x)
-7  =&gt; /build/eglibc-TepTGA/eglibc-2.17/io/../sysdeps/unix/syscall-template.S:creat (1x)
-2      if (fd == -1) {
-.     fprintf (stderr, &quot;open error: %s ('%s')\n&quot;, strerror (errno), path);
-.     return 1;
-.      }
-.
-10      written = write (fd, content, strlen (content));
-7  =&gt; /build/eglibc-TepTGA/eglibc-2.17/io/../sysdeps/unix/syscall-template.S:write (1x)
-14  =&gt; /build/eglibc-TepTGA/eglibc-2.17/string/../sysdeps/x86_64/multiarch/strlen-sse2-pminub.S:__strlen_sse2_pminub (1x)
-1,567  =&gt; /build/eglibc-TepTGA/eglibc-2.17/elf/../sysdeps/x86_64/dl-trampoline.S:_dl_runtime_resolve (2x)
-2      if (written == -1) {
-.     fprintf (stderr, &quot;write error: %s ('%s')\n&quot;, strerror (errno), path);
-.     return 1;
-.      }
-1      return 0;
-2  }
-
---------------------------------------------------------------------------------
-Ir
---------------------------------------------------------------------------------
-0  percentage of events annotated
-</pre>
-<p>As an aside, note that the indentation is messed up a bit.</p>
-<p>---</p>
-<p>Since I normally work at too high a level to care about CPU
-instructions cycles at this detail, I found the exercise eye-opening.</p>
-<p>There are <a href="http://tshepang.net/project-of-note-valgrind#disqus_thread">comments</a>.</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/project-of-note-valgrind">read more</a>
+<p>There are <a href="http://tshepang.net/project-of-note-valgrind#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
@@ -473,28 +313,6 @@ instructions cycles at this detail, I found the exercise eye-opening.</p>
 </footer><!-- /.post-info -->                
                 <a class="readmore" href="http://tshepang.net/superstar-projects-and-associated-implementation-languages">read more</a>
 <p>There are <a href="http://tshepang.net/superstar-projects-and-associated-implementation-languages#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://tshepang.net/my-current-plans-for-wajig" rel="bookmark"
-                           title="Permalink to my current plans for wajig">my current plans for wajig</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2013-06-29T15:17:39.236425">
-                2013-06-29
-        </abbr>
-
-        <address class="vcard author">
-                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
-        </address>
-<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
-<p>tags: <a href="http://tshepang.net/tag/wajig">wajig</a><a href="http://tshepang.net/tag/python">Python</a><a href="http://tshepang.net/tag/tracker">Tracker</a></p>
-</footer><!-- /.post-info -->                
-                <a class="readmore" href="http://tshepang.net/my-current-plans-for-wajig">read more</a>
-<p>There are <a href="http://tshepang.net/my-current-plans-for-wajig#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
