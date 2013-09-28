@@ -372,10 +372,10 @@ once in a while, just in case!&lt;/td&gt;&lt;/tr&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p class="first"&gt;Archives view is not ideal, though it's not in a prominent location&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Categories are not shown in a prominent (e.g. on menu bar)&lt;/p&gt;
+&lt;li&gt;&lt;p class="first"&gt;Categories are not shown in a prominent place (e.g. on menu bar)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p class="first"&gt;when &lt;a class="reference external" href="https://github.com/byk/pelican-neat#configuration-options"&gt;custom fields&lt;/a&gt; are
-not specified, are handled badly&lt;/p&gt;
+not specified, they are handled in a naive manner&lt;/p&gt;
 &lt;img alt="" src="images/neat.png" /&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
