@@ -1,2183 +1,1675 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-        <title>Tshepang logs &middot; articles in the "misc" category</title>
-        <link rel="shortcut icon" href="http://tshepang.net/favicon.ico" />
-<link href="http://tshepang.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tshepang logs Atom Feed" />
+  <head>
+    <meta charset="utf-8">
+    <title>Tshepang logs - misc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Tshepang Lekhonkhobe">
 
-        <link rel="stylesheet" href="http://tshepang.net/theme/css/screen.css" type="text/css" />
-        <link rel="stylesheet" href="http://tshepang.net/theme/css/pygments.css" type="text/css" />
+    <!-- Le styles -->
+    <link rel="stylesheet" href="http://tshepang.net/theme/css/bootstrap.min.css" type="text/css" />
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+      .tag-1 {
+        font-size: 13pt;
+      }
+      .tag-2 {
+        font-size: 10pt;
+      }
+      .tag-2 {
+        font-size: 8pt;
+      }
+      .tag-4 {
+        font-size: 6pt;
+     }
+    </style>
+    <link href="http://tshepang.net/theme/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="http://tshepang.net/theme/css/font-awesome.css" rel="stylesheet">
 
+    <link href="http://tshepang.net/theme/css/pygments.css" rel="stylesheet">
 
-    </head>
-    <body>
-<div id="header">
-            <ul id="nav">
-                <li class="ephemeral selected"><a href="http://tshepang.net/misc">misc</a></li>
-                <li><a href="http://tshepang.net">Home</a></li>
-<li><a href="http://tshepang.net/about-me.html">about me</a></li>
-<li><a href="http://tshepang.net/key-posts.html">key posts</a></li>
-<li><a href="http://tshepang.net/archives.html">Archives</a></li>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="http://tshepang.net/theme/images/favicon.ico">
+    <link rel="apple-touch-icon" href="http://tshepang.net/theme/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="http://tshepang.net/theme/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="http://tshepang.net/theme/images/apple-touch-icon-114x114.png">
+
+    <link href="http://tshepang.net/" type="application/atom+xml" rel="alternate" title="Tshepang logs ATOM Feed" />
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="http://tshepang.net/index.html">Tshepang logs </a>
+          <div class="nav-collapse">
+            <ul class="nav">
+                <li><a href="http://tshepang.net/about-me.html">about me</a></li>
+                <li><a href="http://tshepang.net/key-posts.html">key posts</a></li>
+                          <li class="divider-vertical"></li>
+                  <li >
+                    <a href="http://tshepang.net/arts">
+						<i class="icon-folder-open icon-large"></i>arts
+					</a>
+                  </li>
+                  <li >
+                    <a href="http://tshepang.net/computing">
+						<i class="icon-folder-open icon-large"></i>computing
+					</a>
+                  </li>
+                  <li class="active">
+                    <a href="http://tshepang.net/misc">
+						<i class="icon-folder-open icon-large"></i>misc
+					</a>
+                  </li>
+
+                          <ul class="nav pull-right">
+                                <li><a href="http://tshepang.net/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+                          </ul>
+
             </ul>
-            <div class="header_box">
-                <h1><a href="http://tshepang.net">Tshepang logs</a></h1>
-            </div>
+            <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
+          </div><!--/.nav-collapse -->
         </div>
-        <div id="wrapper">
-            <div id="content">
-                <h4 class="date">Aug 17,  2013</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/from-pelican-to-liquidluck" rel="bookmark" title="Permanent Link to &quot;from Pelican to liquidluck&quot;">from Pelican to liquidluck</a>
-                    </h2>
+      </div>
+    </div>
 
-                    <p><strong>notes</strong>:</p>
-<ul class="simple">
-<li>This post was first published on <strong>2012-07-05</strong>,
-which is shortly after I started using <a class="reference external" href="http://liquidluck.readthedocs.org">liquidluck</a>.</li>
-<li>I have a separate post on <a class="reference external" href="http://tshepang.net/what-me-loves-about-static-website-generation">what I love about static website generators</a>.</li>
-</ul>
-<div class="section" id="why-pelican-rocks">
-<h2>why <a class="reference external" href="http://pelican.readthedocs.org">Pelican</a> rocks</h2>
-<ul class="simple">
-<li>It has categories
-(<a class="reference external" href="https://github.com/getnikola/nikola/issues/163">unlike nikola</a>)</li>
-<li>Post metadata:<ul>
-<li>if Date is not specified, file mtime is used (unlike <a class="reference external" href="http://blogofile.com">blogofile</a>)</li>
-<li>if Category is not specified, parent directory name is used
-(unlike blogofile)</li>
-<li>titles are allowed to have any character (unlike blogofile)</li>
-<li>there is an option to provide clean urls... remove trailing <tt class="docutils literal">.html</tt></li>
-</ul>
-</li>
-<li>Does not force one into having ugly date-based filesystem structure
-(<a class="reference external" href="https://bitbucket.org/vladris/tinkerer/issue/41">unlike tinkerer</a>)</li>
-</ul>
-</div>
-<div class="section" id="why-pelican-rocks-not">
-<h2>why Pelican rocks not</h2>
-<p>The default theme simply didn't fit my tastes,
-and <a class="reference external" href="http://tshepang.net/favorite-pelican-themes">the other themes weren't so satisfactory</a>.
-I spent way too long fiddling with them, and just couldn't be happy.</p>
-</div>
-<div class="section" id="why-liquidluck">
-<h2>why liquidluck</h2>
-<p>So I have moved to <a class="reference external" href="http://liquidluck.readthedocs.org">liquidluck</a>,
-and am hoping I will not be 'forced' to move again.
-It's way too much work, and it took multiple messages between me and
-<a class="reference external" href="http://lepture.com">the developer</a> of this sleek new static site generator just to get it
-to behave the way I like it.</p>
-<p>I had to override stuff that's done by the software, by using <a class="reference external" href="https://bitbucket.org/tshepang/blog/src/tip/custom.py">this script</a>,
-which helped give it the advantages that Pelican has over the
-other generators I mentioned, while also solving the one problem Pelican
-has.. lack of a good-enough theme.
-This was achieved with the help of that very helpful and responsive developer.</p>
-</div>
-<div class="section" id="issues">
-<h2>issues</h2>
-<ul>
-<li><p class="first">There is no visible way, at least for the default theme, to subscribe
-to RSS feeds of individual Categories.</p>
-</li>
-<li><p class="first">The text is a bit blurry/faint with the default theme,
-and none of <a class="reference external" href="http://tshepang.net/looking-at-liquidluck-themes">the other ones</a> are close to good-enough for my liking,
-all but the promising one named <a class="reference external" href="https://github.com/bingdian/liquidluck-theme-responsive">responsive</a>.
-It got 2 issues so far (see <a class="reference external" href="http://demo-responsive.tshepang.net">live demo</a>):</p>
-<ul class="simple">
-<li>Date is displayed at the bottom of a post...
-why make user scroll that far before presenting such a key piece of info.</li>
-<li>There is no link anywhere allowing to visit Home.</li>
-</ul>
-</li>
-<li><p class="first">Background color for <tt class="docutils literal">&lt;code&gt;</tt> text is too unusual,
-and results in an ugly look.
-It does not fit with the general general theme, so should be grey really,
-which would match with that of <tt class="docutils literal">&lt;pre&gt;</tt> text.
-I fixed it myself with the following patch:</p>
-<pre class="literal-block">
-diff --git a/liquidluck/_themes/default/static/style.css b/liquidluck/_themes/default/static/style.css
-index e90de80..94fa7e8 100644
---- a/liquidluck/_themes/default/static/style.css
-+++ b/liquidluck/_themes/default/static/style.css
-&#64;&#64; -112,7 +112,7 &#64;&#64; pre {
-     border-radius: 3px;
- }
- code, tt {
--    background-color: #fee9cc;
-+    background-color: #eee;
-     color: rgba(0, 0, 0, 0.75);
-     padding: 1px 3px;
-     font-size: 12px;
-</pre>
-</li>
-</ul>
-</div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="span9" id="content">
+        <div class="article">
+                <h1><a href="http://tshepang.net/from-pelican-to-liquidluck">from Pelican to liquidluck</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2013-08-17T00:00:00">
+        <i class="icon-calendar"></i>2013-08-17
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
 
 
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/from-pelican-to-liquidluck">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/blogging">blogging</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/blogging"><i class="icon-tag"></i>blogging</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/from-pelican-to-liquidluck">more ...</a>
                 </div>
-
-                <h4 class="date">Jul  9,  2013</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/links-2013-07-09" rel="bookmark" title="Permanent Link to &quot;links 2013-07-09&quot;">links 2013-07-09</a>
-                    </h2>
-
-                    <ul class="simple">
-<li>I was surprised to find that <a class="reference external" href="http://skeptics.stackexchange.com/a/1172/167">most sex workers enjoy their trade</a>;
-it's a refreshing perspective, but as made clear by the post itself,
-there isn't sufficient scientific research to confirm it.</li>
-<li><a class="reference external" href="http://www.eyrie.org/~eagle/journal/2013-01/026.html">Consensus failure</a> looks like worthy criticism of consensus
-decision-making in large groups.</li>
-<li><a class="reference external" href="http://www.informationclearinghouse.info/article25936.htm">great explanation of the concept of Confirmation Bias</a>
-(<a class="reference external" href="http://youarenotsosmart.com/2010/06/23/confirmation-bias">honorable mention</a>)</li>
-<li><a class="reference external" href="http://www.eyrie.org/~eagle/journal/2012-12/006.html">great advice on which Charities to give to</a></li>
-<li>whoever said anything involving bowel humor can't be beautiful is
-wrong; <a class="reference external" href="http://theoatmeal.com/comics/tipping_tooting">here is proof</a></li>
-</ul>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/links-2013-07-09">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/humor">humor</a>
-                            <a href="http://tshepang.net/tag/links">links</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Jun 29,  2013</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/top-sites" rel="bookmark" title="Permanent Link to &quot;top sites&quot;">top sites</a>
-                    </h2>
-
-                    <p><strong>atheist writing</strong>: <a class="reference external" href="http://scienceblogs.com/pharyngula/">Pharyngula</a></p>
-<p><strong>Linux-related news</strong>: <a class="reference external" href="http://lwn.net/">LWN</a></p>
-<p><strong>rationality</strong>: <a class="reference external" href="http://lesswrong.com/">Less Wrong</a></p>
-<p><strong>software development</strong>: <a class="reference external" href="http://stackoverflow.com/">Stack Overflow</a></p>
-<p><strong>HTML5</strong>: <a class="reference external" href="http://diveintohtml5.info/">diveintohtml5</a></p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/top-sites">posted at  3:17 pm</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Jun  9,  2013</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/where-i-live-on-the-web" rel="bookmark" title="Permanent Link to &quot;where I live on the web&quot;">where I live on the web</a>
-                    </h2>
-
-                    <p>I spend perhaps too much of my time online, and these are among the
-greatest culprits:</p>
-<p><strong>planets</strong>: <a class="reference external" href="http://planet.debian.org/">Debian</a>, <a class="reference external" href="http://planet.gnome.org/">GNOME</a>, <a class="reference external" href="http://planet.python.org/">Python</a></p>
-<p><strong>Python</strong>: <a class="reference external" href="http://mail.python.org/mailman/listinfo/python-dev">python-dev</a>, <a class="reference external" href="https://github.com/tshepang">GitHub</a></p>
-<p><strong>Stack Exchange</strong>: <a class="reference external" href="http://stackexchange.com/sites">Stack Exchange sites</a> (<a class="reference external" href="http://stackexchange.com/users/125744/tshepang">my profile</a>)</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/where-i-live-on-the-web">posted at 12:23 pm</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">May 28,  2013</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/i-nid-tu-rilex" rel="bookmark" title="Permanent Link to &quot;I nid tu rilex&quot;">I nid tu rilex</a>
-                    </h2>
-
-                    <!--  -->
-<blockquote>
-<p>I have an unrealistic expectation of myself. I fail to meet that
-expectation. This makes me feel guilty and stressed.</p>
-<p class="attribution">&mdash;from <a class="reference external" href="http://www.eyrie.org/~eagle/journal/2012-09/002.html">an excellent article</a> by Russ Allbery, a Debian Developer</p>
-</blockquote>
-<p>I need to take this advice seriously... I need to relax a bit.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/i-nid-tu-rilex">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/quote">quote</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Apr 21,  2013</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/notes-on-desirism" rel="bookmark" title="Permanent Link to &quot;notes on desirism&quot;">notes on desirism</a>
-                    </h2>
-
-                    <p>Stuff I scribbled down after listening to the first Season of a
-now-defunct <a class="reference external" href="http://commonsenseatheism.com/?p=11626">series on applied ethics</a>,
-all an attempt to make sense of it all:</p>
-<ul class="simple">
-<li>morality:<ul>
-<li>a subset of a theory of values</li>
-<li>it deals with:<ul>
-<li>obligation</li>
-<li>prohibition</li>
-<li>permission</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>value: concerned with reasons for action</li>
-<li>desires:<ul>
-<li>the only reasons for action that exist</li>
-<li>all value is ultimately based on desires</li>
-</ul>
-</li>
-<li>all intentional actions are grounded on believes and desires</li>
-<li>believes are motivationally inert</li>
-<li>what good people do:<ul>
-<li>promote desires that tend to fulfill other desires</li>
-<li>inhibit desires that tend to thwart other desires</li>
-</ul>
-</li>
-<li>what tools to use:<ul>
-<li>use praise to promote good desires</li>
-<li>use condemnation to inhibit bad desires</li>
-</ul>
-</li>
-<li>there are two forms of desires:<ul>
-<li>desires-as-means</li>
-<li>desires-as-ends (the type that actually matters)</li>
-</ul>
-</li>
-<li>shortcuts:<ul>
-<li>the only desires relevant to the discussion are <em>malleable</em> desires</li>
-<li>the only actions relevant to the discussion are <em>intentional</em> actions</li>
-</ul>
-</li>
-</ul>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/notes-on-desirism">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/ethics">ethics</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Apr 13,  2013</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/looking-at-liquidluck-themes" rel="bookmark" title="Permanent Link to &quot;looking at liquidluck themes&quot;">looking at liquidluck themes</a>
-                    </h2>
-
-                    <p>Following are demos of all liquidluck themes I could find,
-all running <a class="reference external" href="https://bitbucket.org/tshepang/blog/src">this source</a>,
-but each slightly modified to change theme name (<tt class="docutils literal">settings.py</tt>).</p>
-<ul>
-<li><p class="first"><a class="reference external" href="https://github.com/lepture/liquidluck-theme-moment">moment</a> (the default theme, which is used on this blog)</p>
-</li>
-<li><p class="first"><a class="reference external" href="https://github.com/bingdian/liquidluck-theme-responsive">responsive</a> (<a class="reference external" href="http://demo-responsive.tshepang.net">demo</a>)</p>
-</li>
-<li><p class="first"><a class="reference external" href="https://github.com/popomore/liquidluck-theme-reveal">reveal</a> (<a class="reference external" href="http://demo-reveal.tshepang.net">demo</a>)</p>
-</li>
-<li><p class="first"><a class="reference external" href="https://github.com/leandromouta/liquidluck-theme-thegrey">thegrey</a> (<a class="reference external" href="http://demo-thegrey.tshepang.net">demo</a>)</p>
-</li>
-<li><p class="first"><a class="reference external" href="https://github.com/microjo/liquidluck-theme-lovelymod">lovelymod</a> (<a class="reference external" href="http://demo-lovelymod.tshepang.net">demo</a>)</p>
-</li>
-<li><p class="first"><a class="reference external" href="https://github.com/bcho/liquidluck-theme-cb3f20">cb3f20</a> (<a class="reference external" href="http://demo-cb3f20.tshepang.net">demo</a>)</p>
-</li>
-<li><p class="first"><a class="reference external" href="https://github.com/lepture/liquidluck-theme-chiang">chiang</a> (<a class="reference external" href="http://demo-chiang.tshepang.net">demo</a>):</p>
-<ul>
-<li><p class="first">I get a blank page</p>
-</li>
-<li><p class="first">When building, it fails with:</p>
-<pre class="literal-block">
-[E 130413 20:53:48 base:42] 'None' has no attribute 'strftime'
-</pre>
-</li>
-</ul>
-</li>
-<li><p class="first"><a class="reference external" href="https://github.com/lianqin7/liquidluck-theme-icbu">icbu</a> (<a class="reference external" href="http://demo-icbu.tshepang.net">demo</a>):</p>
-<ul>
-<li><p class="first">When building, I get 2 of these messages:</p>
-<pre class="literal-block">
-[E 130413 23:40:19 base:42] 'dict object' has no attribute 'package'
-</pre>
-</li>
-</ul>
-</li>
-<li><p class="first"><a class="reference external" href="https://github.com/lepture/liquidluck-theme-octopress">octopress</a> (<a class="reference external" href="http://demo-octopress.tshepang.net">demo</a>):</p>
-<ul>
-<li><p class="first">When building, I get 4 of these messages:</p>
-<pre class="literal-block">
-[E 130413 23:33:53 base:42] list index out of range
-</pre>
-</li>
-</ul>
-</li>
-<li><p class="first"><a class="reference external" href="https://github.com/lepture/liquidluck-theme-bootstrap">bootstrap</a>: <a class="reference external" href="https://github.com/lepture/liquidluck-theme-bootstrap/issues/1">broken</a></p>
-</li>
-</ul>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/looking-at-liquidluck-themes">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/blogging">blogging</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Apr 12,  2013</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/a-nicer-sounding-word-than-propaganda" rel="bookmark" title="Permanent Link to &quot;a nicer-sounding word than 'propaganda'&quot;">a nicer-sounding word than 'propaganda'</a>
-                    </h2>
-
-                    <!--  -->
-<blockquote>
-<p>...O'Reilly meme-engineers a nice euphemism -- &quot;meme-engineering&quot; -- to
-describe what has previously been known as &quot;propaganda.&quot;</p>
-<p class="attribution">&mdash;<a class="reference external" href="http://thebaffler.com/past/the_meme_hustler">source</a></p>
-</blockquote>
-<p>This is a reaction to Tim O'Reilly's definition of that nicer-sounding term,
-which goes thus:</p>
-<blockquote>
-Just as gene engineering allows us to artificially shape genes,
-meme-engineering lets us organize and shape ideas so that they
-can be transmitted more effectively,
-and have the desired effect once they are transmitted.</blockquote>
-<p>All this could be out-of-context, but I didn't care to check for myself.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/a-nicer-sounding-word-than-propaganda">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/quote">quote</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/links-2013-04-12" rel="bookmark" title="Permanent Link to &quot;links 2013-04-12&quot;">links 2013-04-12</a>
-                    </h2>
-
-                    <ul class="simple">
-<li><a class="reference external" href="http://arunrocks.com/moving-blogs-to-pelican">a nice post</a> on why static blog generation rocks;
-much better (and more detailed) than <a class="reference external" href="http://tshepang.net/what-me-loves-about-static-website-generation">mine</a></li>
-<li><a class="reference external" href="http://xkcd.com/1102">the fallacy of fast growth</a></li>
-<li><a class="reference external" href="http://xkcd.com/933">being hardcore</a>; nice humor</li>
-<li><a class="reference external" href="http://english.blogoverflow.com/2012/12/the-give-that-keeps-on-gifting-the-protean-nature-of-english-words-and-why-thats-a-good-thing/">embracing an ever-changing language</a></li>
-<li>loving the clean design of <a class="reference external" href="http://craig.is/writing/chrome-logger/techspecs">this page</a>;
-most of all, I love the code/pre tag rendering.</li>
-</ul>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/links-2013-04-12">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/blogging">blogging</a>
-                            <a href="http://tshepang.net/tag/links">links</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Apr  8,  2013</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/blogging-with-pelican" rel="bookmark" title="Permanent Link to &quot;blogging with Pelican&quot;">blogging with Pelican</a>
-                    </h2>
-
-                    <p><strong>notes</strong>:</p>
-<ul class="simple">
-<li>I have a separate post on <a class="reference external" href="http://tshepang.net/what-me-loves-about-static-website-generation">what I love about static website generators</a>.</li>
-<li>This post was first published on <strong>2012-05-20</strong>,
-which is before <a class="reference external" href="http://tshepang.net/from-pelican-to-liquidluck">I started using liquidluck</a>, a competing tool.</li>
-</ul>
-<p><a class="reference external" href="http://pelican.notmyidea.org/">Pelican</a> is a static blog generator;
-it converts marked-up text files to html
-(Pelican supports <a class="reference external" href="http://en.wikipedia.org/wiki/Markdown">Markdown</a> and <a class="reference external" href="http://en.wikipedia.org/wiki/ReStructuredText">reStructuredText</a>).
-The resulting site is complete with an index (Archives view),
-Tags, Categories, and Pages (for non-bloggy stuff like a CV or About Me file).</p>
-<p>As for my blog, its tree structure looks like this:</p>
-<pre class="literal-block">
-build/...
-pages/{about-me.rst, key-posts.rst}
-posts/{arts/, computing/, misc/, movies/}
-CNAME
-fabfile.py
-new-post.py
-settings.py
-</pre>
-<ul class="simple">
-<li>The <tt class="docutils literal">build</tt> directory is where the output of the build process is
-stored.</li>
-<li>The <tt class="docutils literal">pages</tt> directory is for any content that isn't blog posts.</li>
-<li>The <tt class="docutils literal">posts</tt> directory is where the large chunk of content lives,
-the blog posts themselves.
-Each of the four directories in there represent a Category, for example:
-if you place some file in <tt class="docutils literal">arts/</tt>,
-the post will be marked as falling under <strong>arts</strong> Category.</li>
-<li>I host my blog on GitHub, using a service the call GitHub Pages.
-<tt class="docutils literal">CNAME</tt> is a file required by that service in the case where I want
-to use a domain other than <tt class="docutils literal">tshepang.github.io</tt>.
-It's content is <tt class="docutils literal">tshepang.net</tt>.</li>
-<li><a class="reference external" href="https://bitbucket.org/tshepang/blog-pelican/src/tip/fabfile.py">fabfile.py</a> contains the build instructions, all for convenience
-so that I only need to run 2 commands, one for the build, and another
-for GitHub upload. However, I mostly just run one command that does
-both.</li>
-<li>The <a class="reference external" href="https://bitbucket.org/tshepang/blog-pelican/src/tip/settings.py">settings.py</a> file contains Pelican configuration.
-It should be somewhat mostly self-explanatory, but for those things that
-aren't so obvious, do consult the documentation.</li>
-</ul>
-<p>Now as for the post itself, you need metadata to go with it.
-This is stuff like title, date, and tags.
-It can be tedious to create all such mundate stuff, especially the date.
-That's why I wrote <a class="reference external" href="https://bitbucket.org/tshepang/blog-pelican/src/tip/new-post.py">a script</a> that generates that file and populates it
-with the given metadata:</p>
-<pre class="literal-block">
-$ python new-post.py 'my blogging setup' misc --tags blogging
-</pre>
-<p>This is the metadata, and also the beginning of the file:</p>
-<pre class="literal-block">
-my blogging setup
-=================
-
-:date: 2012-04-12
-:tags: blogging
-</pre>
-<p>The script also opens the file in my favorite editor,
-so I can start adding content.</p>
-<p>When I'm done and happy with my latest changes,
-I ensure I'm in the root directory of my blog, commit
-(<tt class="docutils literal">hg commit <span class="pre">--message</span> 'new post'</tt>) and run:</p>
-<pre class="literal-block">
-$ fab
-</pre>
-<p>That's a <a class="reference external" href="http://fabfile.org">fabric</a> command the uses the instructions found in <tt class="docutils literal">fabfile.py</tt>.
-It builds the site, and then pushes is to GitHub Pages.
-It also pushes the sources to Bitbucket.
-Within a minute, the blog will be updated.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/blogging-with-pelican">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/blogging">blogging</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Apr  7,  2013</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/a-bit-of-poetry" rel="bookmark" title="Permanent Link to &quot;a bit of poetry&quot;">a bit of poetry</a>
-                    </h2>
-
-                    <!--  -->
-<blockquote>
-<p>There will always be justifications that a war is needed because
-of this oppressor or that incursion or this unforgivable action.</p>
-<p class="attribution">&mdash;<a class="reference external" href="https://news.ycombinator.com/item?id=5506999">source</a></p>
-</blockquote>
-<p>I thought that was well-put. English can be a beautiful language.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/a-bit-of-poetry">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/quote">quote</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Apr  6,  2013</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/what-me-loves-about-static-website-generation" rel="bookmark" title="Permanent Link to &quot;what me loves about static website generation&quot;">what me loves about static website generation</a>
-                    </h2>
-
-                    <p>There's a ridiculous amount of power and flexiblity in having all the
-blog sources locally:</p>
-<ul class="simple">
-<li>One can use text editor of choice, which is a big help,
-given the quality of web-based editors in general.</li>
-<li>What this implies is that I can now put the blog in a <a class="reference external" href="http://en.wikipedia.org/wiki/Revision_control">VCS</a>.
-This acts as some sort of backup too,
-since I place my sources on <a class="reference external" href="https://bitbucket.org/tshepang/blog">a remote server</a>. <a class="footnote-reference" href="#id2" id="id1">[1]</a></li>
-<li>This also means that I can do a heck of a lot of edits without being
-connected to the web, or deeper changes like playing search-replace
-through the entire blog.</li>
-</ul>
-<div class="section" id="cons">
-<h2>cons</h2>
-<ul class="simple">
-<li>The complexity of <a class="reference external" href="http://tshepang.net/blogging-with-pelican">the setup</a> is going to scare many people away.</li>
-<li>It can take a lot of time to setup;
-For me, this was made worse by having a lot of posts, as well as
-<a class="reference external" href="http://tshepang.net/favorite-pelican-themes">being rather particular</a> about the look and functionality of the output.</li>
-</ul>
-<table class="docutils footnote" frame="void" id="id2" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>I used to run a command like <tt class="docutils literal">wget <span class="pre">--mirror</span> <span class="pre">http://tshepang.net</span></tt>
-once in a while, just in case!</td></tr>
-</tbody>
-</table>
-</div>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/what-me-loves-about-static-website-generation">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/blogging">blogging</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Mar 17,  2013</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/favorite-pelican-themes" rel="bookmark" title="Permanent Link to &quot;favorite Pelican themes&quot;">favorite Pelican themes</a>
-                    </h2>
-
-                    <p>I don't like the default <a class="reference external" href="http://docs.getpelican.com/en/latest/">Pelican</a> theme, <tt class="docutils literal">notmyidea</tt>:</p>
-<ul class="simple">
-<li>It is decent, but the post metadata feels cramped where its placed.</li>
-<li>The is no visible link to tags, never-mind a tag cloud (which is handy).</li>
-<li>I just don't like the general look.</li>
-</ul>
-<p>So, I had a look at the others:</p>
-<div class="section" id="just-read">
-<h2><a class="reference external" href="https://github.com/getpelican/pelican-themes/tree/master/Just-Read">Just Read</a></h2>
-<ul class="simple">
-<li>[<strong>win</strong>] elegant and simple design (<strong>my favorite of all</strong>)</li>
-<li>[<strong>win</strong>] displays pages as a list, all but the newest one in the view</li>
-<li>Categories are 2nd-class citizens: they aren't shown on the index page</li>
-<li>bullets are done wrong: the bullet-ed text is not indented</li>
-<li>on post view, there is no distinction between Tags and Categories</li>
-<li>too much border space on code snippets (<strong>pre</strong> tag?)</li>
-<li>background for code snippets is not distinctive</li>
-</ul>
-</div>
-<div class="section" id="tuxlite-tbs">
-<h2><a class="reference external" href="https://github.com/getpelican/pelican-themes/tree/master/tuxlite_tbs">tuxlite_tbs</a></h2>
-<ul class="simple">
-<li>[<strong>win</strong>] clean and simple design: nice menu-bar and sidebars</li>
-<li>tags aren't shown along-aside posts</li>
-</ul>
-</div>
-<div class="section" id="mockingbird">
-<h2><a class="reference external" href="https://github.com/wrl/pelican-mockingbird">Mockingbird</a></h2>
-<ul class="simple">
-<li>[<strong>win</strong>] very nice and clean design</li>
-<li>date on Archives looks like shit</li>
-<li>background for code snippets is not distinctive</li>
-<li>Categories only visible on individual Posts</li>
-<li>ignores Twitter setting</li>
-<li>does not support Disqus</li>
-</ul>
-</div>
-<div class="section" id="neat">
-<h2><a class="reference external" href="https://github.com/byk/pelican-neat">neat</a></h2>
-<ul>
-<li><p class="first">[<strong>win</strong>] the look is different; it feels calm</p>
-</li>
-<li><p class="first">Archives view is not ideal, though it's not in a prominent location</p>
-</li>
-<li><p class="first">Categories are not shown in a prominent place (e.g. on menu bar)</p>
-</li>
-<li><p class="first">when <a class="reference external" href="https://github.com/byk/pelican-neat#configuration-options">custom fields</a> are
-not specified, they are handled in a naive manner</p>
-<img alt="" src="images/neat.png" />
-</li>
-</ul>
-</div>
-<div class="section" id="chunk">
-<h2><a class="reference external" href="https://github.com/tbunnyman/pelican-chunk">Chunk</a></h2>
-<ul class="simple">
-<li>[<strong>win</strong>] a trendy look</li>
-<li>oversized text, especially blog title</li>
-<li>background for code snippets is not distinctive</li>
-<li>Archives look like shit</li>
-<li>ignores Twitter setting</li>
-</ul>
-</div>
-<div class="section" id="bootstrap-2">
-<h2><a class="reference external" href="https://github.com/getpelican/pelican-themes/tree/master/bootstrap2">Bootstrap 2</a></h2>
-<ul class="simple">
-<li>[<strong>win</strong>] the Menu bar is unbeatable</li>
-<li>the general look is too busy:<ul>
-<li>the Categories and Tags on the right must go</li>
-<li>who wants snippets on posts</li>
-<li>showing Category and Tag on main views</li>
-</ul>
-</li>
-<li>separate tag cloud page missing</li>
-<li>line length too long</li>
-</ul>
-</div>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/favorite-pelican-themes">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/blogging">blogging</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Dec 26,  2012</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/misconceptions-i-had" rel="bookmark" title="Permanent Link to &quot;misconceptions I had&quot;">misconceptions I had</a>
-                    </h2>
-
-                    <p>From <a class="reference external" href="http://en.wikipedia.org/wiki/List_of_common_misconceptions">one of the most important articles on Wikipedia</a>:</p>
-<ul class="simple">
-<li>the most surprising one is that microwaves do not work by emitting
-waves at resonance frequency of water; they work using <a class="reference external" href="http://en.wikipedia.org/wiki/Dielectric_heating">some other
-method</a></li>
-<li>the Great Wall of China is not visible from space (unaided)</li>
-<li>seasons are not caused by the Earth being closer to the Sun in the
-summer than in the winter</li>
-<li>we are not born with all brain cells we will ever have; this is a
-recent discovery (2000s)</li>
-<li>Frankenstein was actually the name of the creator of the monster, not
-the monster itself</li>
-<li>Thomas Edison did not invent the light bulb</li>
-</ul>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/misconceptions-i-had">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Dec 19,  2012</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/links-2012-12-19" rel="bookmark" title="Permanent Link to &quot;links 2012-12-19&quot;">links 2012-12-19</a>
-                    </h2>
-
-                    <ul class="simple">
-<li><a class="reference external" href="http://www.youtube.com/watch?feature=player_embedded&amp;v=cQl6jUjFjp4">This guy presents</a> 2 incredible ideas; one has been running for
-years (humans translating text that's hard to read by machines, while
-authenticating themselves as humans - <a class="reference external" href="http://en.wikipedia.org/wiki/ReCAPTCHA">reCAPTCHA</a>), and another that
-is brand new, known as <a class="reference external" href="http://duolingo.com/">Duolingo</a>.</li>
-<li><a class="reference external" href="http://www.youtube.com/watch?v=-3ml3GP_5fg">Sbhonyonyo the ugly mermaid</a> - this is habsolutely (sic) hilarious!</li>
-<li><a class="reference external" href="https://news.ycombinator.com/item?id=4787587">on the supremacy of Japanese toilets</a>; whoever said toilet humor
-can't be smart and hilarious at the same time</li>
-<li><a class="reference external" href="http://xkcd.com/915">Connoisseur</a> - poking fun at the definition of the word</li>
-<li><a class="reference external" href="http://xkcd.com/77/">Bored With the Internet</a> - very relevant cartoon, except it applies
-to my love for movies, whereby, while watching, am already thinking
-what I will write in my review; sometimes I think I am a loser</li>
-</ul>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/links-2012-12-19">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/links">links</a>
-                            <a href="http://tshepang.net/tag/humor">humor</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Aug  2,  2012</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/me-got-meself-another-coding-job" rel="bookmark" title="Permanent Link to &quot;me got meself another coding job&quot;">me got meself another coding job</a>
-                    </h2>
-
-                    <p>Some years ago, I was totally excited by having <a class="reference external" href="http://tshepang.net/me-got-meself-a-coding-job">my first job working on
-software</a>. I am very grateful for the chance the owner, who interviewed
-me for the position, took on me. I learned an incredible amount of
-stuff, though I didn't enjoy much of it (had to do lots of Java among
-other ugly things).</p>
-<p>Some months ago, a friend enticed me to the idea of doing something
-else, giving me contacts for <a class="reference external" href="http://www.embedded-iq.com">some company</a> building software and
-electronics products for the mining industry. So I wasn't actually
-looking for work, but I was glad of the opportunity since I was sort of
-stagnating, and it really looked like this new company did some more fun
-stuff, and I got the vibe that I'd really get challenged.</p>
-<p>It's been 3 months now, and my guess was right. I keep getting surprised
-by the levels of smart I encounter regurlarly. These are the sorts of
-people I simply can't match with my lesser brain, but I'm glad to work
-with, since I learn so much.</p>
-<p>The systems we build are embedded, so I spend most of my time working
-with C and C++, and it tends to be a serious challenge, given that
-there's a lot less hand-holding with those than with my favorite,
-Python.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/me-got-meself-another-coding-job">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/luck">luck</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Jul 14,  2012</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/valve-appears-anarchistic" rel="bookmark" title="Permanent Link to &quot;Valve appears anarchistic&quot;">Valve appears anarchistic</a>
-                    </h2>
-
-                    <p>While reading <a class="reference external" href="http://www.gamasutra.com/view/feature/3408">how this legendary game creator is run</a> (or at least
-used to be), I was pretty much reminded that's kinda how an
-anarchistic business would be run. I was pleasantly surprised to later
-encounter a section named <em>The Workers Control the Means of
-Production</em> on the same article. Kool stuff. [<a class="reference external" href="http://assets.sbnation.com/assets/1074301/Valve_Handbook_LowRes.pdf">via</a>]</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/valve-appears-anarchistic">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/anarchism">anarchism</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Jul  7,  2012</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/links-2012-07-07" rel="bookmark" title="Permanent Link to &quot;links 2012-07-07&quot;">links 2012-07-07</a>
-                    </h2>
-
-                    <ul class="simple">
-<li><a class="reference external" href="http://www.guardian.co.uk/society/2010/jul/25/female-circumcision-children-british-law">some women get their pussies mutilated for some shitty reasons!</a></li>
-<li><a class="reference external" href="http://commonsenseatheism.com/?p=10389">Luke Muehlhauser on feminism</a> - superb writing</li>
-<li><a class="reference external" href="http://www.infidels.org/library/modern/julian_baggini/review-martin.html">the futility of theist vs. atheist debate</a></li>
-<li>I really enjoyed the humor in the humorous <a class="reference external" href="http://www.youtube.com/watch?v=gAYL5H46QnQ">Threw It On the Ground</a>
-music video; even the music is nice</li>
-<li>me not sure I would qualify for a job at Netflix, due its <a class="reference external" href="http://www.slideshare.net/reed2001/culture-1798664">highly
-demanding culture</a> would be extra kool if more large companies
-adopted something similar</li>
-</ul>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/links-2012-07-07">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/atheism">atheism</a>
-                            <a href="http://tshepang.net/tag/links">links</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Jun 16,  2012</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/on-taste-and-morality" rel="bookmark" title="Permanent Link to &quot;on taste and morality&quot;">on taste and morality</a>
-                    </h2>
-
-                    <!--  -->
-<blockquote>
-<p>I have an aversion to eating liver. I do not like the smell, or the
-taste, of eating liver. However, in spite of my personal aversion,
-it would be wrong for me to use this to justify prohibiting others
-from eating liver. Because I do not like it, I do not eat it. I
-could say that I do not like to eat liver because it is
-intrinsically bad, and because it is intrinsically bad anybody who
-likes the taste of liver must be defective. I could try to make that
-argument, but there would be no merit to it. I would be wrong. In my
-error, I would be interfering with the liberty of others for no good
-reason.</p>
-<p class="attribution">&mdash;<a class="reference external" href="http://atheistethicist.blogspot.com/2005/11/homosexuality.html">Homosexuality</a>.</p>
-</blockquote>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/on-taste-and-morality">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/ethics">ethics</a>
-                            <a href="http://tshepang.net/tag/quote">quote</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Apr  9,  2012</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/links-2012-04-09" rel="bookmark" title="Permanent Link to &quot;links 2012-04-09&quot;">links 2012-04-09</a>
-                    </h2>
-
-                    <ul class="simple">
-<li><a class="reference external" href="http://paulgraham.com/hs.html">What You'll Wish You'd Known</a> is one the best essays I've read yet;
-it basically is advice for people still in high school. Beware though
-that the writer, Paul Graham, is very bold person. He makes a lot of
-assertions, without much in the way of backing it all up. Sure he's
-well-read and experienced, but it appears he relies a lot on his
-intuitions. Inaccurate as it may be, this essay has a lot of insight
-and is very encouraging (e.g. don't underestimate your abilities).</li>
-<li><a class="reference external" href="http://www.mothercityliving.co.za/do-you-have-talents/#comment-21944">a nice objection</a> to <a class="reference external" href="http://www.mothercityliving.co.za/do-you-have-talents/#comment-21943">loud noise</a></li>
-<li><a class="reference external" href="http://gizmodo.com/5691604/how-ma-bell-shelved-the-future-for-60-years">the (un)greatness of Bell Labs</a></li>
-<li><a class="reference external" href="http://www.codinghorror.com/blog/2011/10/on-parenthood.html">On Parenthood</a> - incredible write-up on the joys of having a
-child... this isn't material I normally read, but I felt compelled
-considering my admiration for the writer, a famous software
-developer; it almost makes me look forward to my first</li>
-<li><a class="reference external" href="http://reason.com/archives/2004/12/22/is-heaven-populated-chiefly-by">an impressive criticism of anti-abortionists</a> (<a class="reference external" href="http://commonsenseatheism.com/?p=8955#comment-43867">via</a>)</li>
-</ul>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/links-2012-04-09">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/links">links</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Apr  2,  2012</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/trying-out-calepin" rel="bookmark" title="Permanent Link to &quot;trying out Calepin&quot;">trying out Calepin</a>
-                    </h2>
-
-                    <p><strong>update</strong>: The lack of reliability, worst of which was constant
-unavailability of my blog lead me to move on, this time to <a class="reference external" href="http://pelican.notmyidea.org">Pelican</a>,
-and hosted by <a class="reference external" href="http://pages.github.com">GitHub Pages</a>. <a class="reference external" href="http://tshepang.net/blogging-with-pelican">Here's the setup</a>.</p>
-<hr class="docutils" />
-<p>I've been meaning to move my blog(s) away from Posterous, due to its UI
-problems and ridiculously-slow page loads. I finally did it with the
-help of <a class="reference external" href="http://calepin.co/">Calepin</a>, which itself has a bunch of problems, which is
-forgiveable given that it's a Beta product:</p>
-<ul class="simple">
-<li>The presentation is way too simple/plain, and doesn't provide a way
-to customise it.</li>
-<li>I spent hours struggling with Dropbox login integration, where I
-often had to go to Chrome's Incognito mode, and at some point, had to
-delete my Dropbox account as well, just to get it to work.</li>
-<li>It seems crazy that each time I want to publish I have to visit the
-web page to hit Publish, when Calepin should simply monitor the
-Dropbox account.</li>
-<li>The blog is unreachable whenever I publish. This isn't such a big
-deal of course, but c'mon.</li>
-<li>When hitting Publish, it takes way too long (several seconds) before
-the page is rendered on the blog.</li>
-<li>...and am sure there will be more as time goes (proven by the fact
-that this list kept growing as I typed this post)</li>
-</ul>
-<p>Despite all these problems, it will have to do for now, until I find
-another host, and maybe this time I will have to spend some cash.</p>
-<p>In the interest of balance, here's <cite>what attracted me</cite>.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/trying-out-calepin">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/blogging">blogging</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Feb 13,  2012</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/on-voting" rel="bookmark" title="Permanent Link to &quot;on voting&quot;">on voting</a>
-                    </h2>
-
-                    <!--  -->
-<blockquote>
-<p>&quot;Voting&quot; reminds me too much of situations where people who don't do
-anything get to say what they want others to do.</p>
-<p class="attribution">&mdash;<a class="reference external" href="http://mail.python.org/pipermail/python-dev/2011-March/108902.html">source</a></p>
-</blockquote>
-<p><a class="reference external" href="http://en.wikipedia.org/wiki/Guido_van_Rossum">Guido van Rossum</a> on a proposed Python project roadmap.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/on-voting">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/humor">humor</a>
-                            <a href="http://tshepang.net/tag/quote">quote</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Jan  3,  2012</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/surprising-discovery-of-the-day" rel="bookmark" title="Permanent Link to &quot;surprising discovery of the day&quot;">surprising discovery of the day</a>
-                    </h2>
-
-                    <p>I was not aware that there were two separate words,
-<strong>quiet</strong> and <strong>quite</strong>. I used them for their meanings
-interchangeably, using both spellings unaware.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/surprising-discovery-of-the-day">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">May 17,  2011</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/links-2011-05-17" rel="bookmark" title="Permanent Link to &quot;links 2011-05-17&quot;">links 2011-05-17</a>
-                    </h2>
-
-                    <ul class="simple">
-<li><a class="reference external" href="http://www.banksy.co.uk/menu.html">Amazing works of art</a> by perhaps the world's best street artist, Banksy.</li>
-<li>Motion Twin IS <a class="reference external" href="http://translate.google.fr/translate?js=n&amp;prev=_t&amp;hl=fr&amp;ie=UTF-8&amp;layout=2&amp;eotf=1&amp;sl=fr&amp;tl=en&amp;u=http://fr.techcrunch.com/2008/08/14/fr-motion-twin-createurs-de-labrutefr-une-startup-pas-comme-les-autres-interview/">a company to work 'for'</a>; the French tranlation is
-not perfect but is close enough to help make sense of the inspiring
-story.</li>
-<li><a class="reference external" href="http://hezmatt.org/~mpalmer/blog/general/how_to_frustrate_your_train_driver.html">delicious humor</a></li>
-<li><a class="reference external" href="http://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/">nice humor regarding names</a></li>
-</ul>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/links-2011-05-17">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/humor">humor</a>
-                            <a href="http://tshepang.net/tag/links">links</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Apr 11,  2011</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/the-need-for-quality-in-healthcare" rel="bookmark" title="Permanent Link to &quot;the need for quality in healthcare&quot;">the need for quality in healthcare</a>
-                    </h2>
-
-                    <!--  -->
-<blockquote>
-<p>For every drowned and pulseless child rescued by intensive care,
-there are many more who don't make it—and not just because their
-bodies are too far gone. Machines break down; a team can't get
-moving fast enough; a simple step is forgotten. Such cases don't get
-written up in The Annals of Thoracic Surgery, but they are the norm.
-Intensive-care medicine has become the art of managing extreme
-complexity—and a test of whether such complexity can, in fact, be
-humanly mastered.</p>
-<p class="attribution">&mdash;<a class="reference external" href="http://www.newyorker.com/reporting/2007/12/10/071210fa_fact_gawande?currentPage=all">The Checklist</a></p>
-</blockquote>
-<p>That's some scary shit. Read the whole article to get the context
-(i.e. the heroic work involved in saving that girl's life).
-It's a great read.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/the-need-for-quality-in-healthcare">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/quote">quote</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Feb 28,  2011</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/another-visit-to-eastern-cape" rel="bookmark" title="Permanent Link to &quot;another visit to Eastern Cape&quot;">another visit to Eastern Cape</a>
-                    </h2>
-
-                    <p><a class="reference external" href="http://tshepang.net/a-visit-to-eastern-cape">Last time</a>, I raved about my experiences at a friend's home place,
-Nyosini. My memory is not to be completely trusted, but this second (or
-third, if we count attending <a class="reference external" href="http://tshepang.net/one-less-angel">a funeral</a>). one was even better. Such
-hospitality is what I'm sure most people on the planet have never
-experienced. We (me and two friends, who were just as impressed) were
-treated like royalty. We slept there just one night though, so we spent
-nearly all our time there in one yard.</p>
-<p>I have never seen a family quite like this. My own family is quite
-close, but definitely not as kindly as this one. And by the way, there
-are no exceptions. The love they have, and express, for each other is...
-damn I wish I was a better writer.</p>
-<p>I met Bongo again, and the guy's character hasn't changed a bit... maybe
-even more shy than last time, I can't tell. Lwazi and Siya weren't there
-(boarding school).</p>
-<p>One could say it was me (us?) paying homage to that wonderful family
-(it's been over 3 years), but also an excuse to go enjoy the warmth of
-their welcome, not to mention the gorgeous scenery of the surrounding
-hills.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/another-visit-to-eastern-cape">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Feb 22,  2011</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/ouch" rel="bookmark" title="Permanent Link to &quot;ouch!&quot;">ouch!</a>
-                    </h2>
-
-                    <!--  -->
-<blockquote>
-<p>...while Eliezer Yudkowsky has a ton of interesting things to say
-about a lot of subjects, he's also philosophically incompetent (at
-least in some areas) and I worry that enshrining him as your guru
-will dull your philosophical acuity.</p>
-<p class="attribution">&mdash;<a class="reference external" href="http://commonsenseatheism.com/?p=14502#comment-97473">source</a></p>
-</blockquote>
-<p>A comment by someone simply known as Mark in Luke Muehlhauser's post,
-<a class="reference external" href="http://commonsenseatheism.com/?p=14502">New Directions for CommonSenseAtheism.com</a>.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/ouch">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/quote">quote</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Jan 22,  2011</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/getting-rid-of-junk" rel="bookmark" title="Permanent Link to &quot;getting rid of junk&quot;">getting rid of junk</a>
-                    </h2>
-
-                    <p>PZ Myers of <a class="reference external" href="http://scienceblogs.com/pharyngula/">Pharyngula</a> fame is the best atheist writer I've read yet,
-and his blog challenges that of Luke Muehlhauser's <a class="reference external" href="http://commonsenseatheism.com/">Common Sense Atheism</a>
-as the best atheism blog I've read yet.
-Watch him <a class="reference external" href="http://scienceblogs.com/pharyngula/2010/09/26/sunday-sacrilege-a-funeral-for/">trash away</a> his Bible and Koran,
-in a far more symbolic way than I did with my Bible some years ago...
-I simply piled it on top of the rest of the trash.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/getting-rid-of-junk">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/atheism">atheism</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Jan 10,  2011</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/links-2011-01-10" rel="bookmark" title="Permanent Link to &quot;links 2011-01-10&quot;">links 2011-01-10</a>
-                    </h2>
-
-                    <ul class="simple">
-<li><a class="reference external" href="http://www.edge.org/3rd_culture/paul07/paul07_index.html">the greatest threat to religion</a></li>
-<li><a class="reference external" href="http://commonsenseatheism.com/?p=13688">a nice collection of links</a> regarding scientific studies of
-religion</li>
-<li><a class="reference external" href="http://commonsenseatheism.com/?p=9539">the single most beneficial thing we can do in order to make the
-world better place</a>, according to Alonzo Fyfe</li>
-<li><a class="reference external" href="http://lesswrong.com/lw/373/how_to_save_the_world/">How to Save the World</a> (<a class="reference external" href="http://commonsenseatheism.com/?p=12297">via</a>)</li>
-<li>among the most controversial of Alonzo Fyfe's posts (judging by the
-huge number of comments), <a class="reference external" href="http://commonsenseatheism.com/?p=9537">Tivial Hobbies</a> talks about the
-uselessness of things like watching sports and playing video games</li>
-</ul>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/links-2011-01-10">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/links">links</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Dec  1,  2010</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/great-customer-service" rel="bookmark" title="Permanent Link to &quot;great customer service&quot;">great customer service</a>
-                    </h2>
-
-                    <p>So these guys at <a class="reference external" href="http://maps.google.com/maps?q=-25.776454,28.349731">BMW Bavarian East Pretoria</a> (it has since been closed),
-a motorbike dealership, got me impressed with their great customer service.
-The standard procedure is to lend customers a bike for a few hours to use
-during the day, which normally happens when one takes the bike in for service.
-My <a class="reference external" href="http://en.wikipedia.org/wiki/BMW_F650CS">F650CS</a> was giving me some trouble which actually perplexed them for
-more than those few hours... a few weeks actually.</p>
-<p>So why I says they rock:</p>
-<ul class="simple">
-<li>I wasn't charged for the extra (perhaps dozens) hours of labour.</li>
-<li>I was lent a bike (actually 3, since the troubleshooting went for so
-long that they needed to sell 2 of those bikes in the meanwhile).</li>
-<li>Not sure if I should call this negligence, but there seems to be some
-deep trust these guys have for their customers, because no one cared
-to check if I could ride the variety of bikes they lent me. That's
-gorgeous, especially considering that one of the bikes they lent me was
-the superhot <a class="reference external" href="http://en.wikipedia.org/wiki/BMW_F800S">BMW F800S</a>.</li>
-</ul>
-<p>Of course there is also the element of them encouraging loyalty,
-but this still goes beyond the normal &quot;customer is king&quot; routine.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/great-customer-service">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Nov 23,  2010</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/obama-administration-not-too-shabby" rel="bookmark" title="Permanent Link to &quot;Obama administration not too shabby&quot;">Obama administration not too shabby</a>
-                    </h2>
-
-                    <p>Given that I have very little interest in American politics, I find
-<a class="reference external" href="http://whatthefuckhasobamadonesofar.com/">some of the Obama administration's achievements</a> impressive (with
-great help from a refreshing presentation). (<a class="reference external" href="http://commonsenseatheism.com/?p=12294">via</a>)</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/obama-administration-not-too-shabby">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Nov 21,  2010</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/igalia-rocks" rel="bookmark" title="Permanent Link to &quot;Igalia rocks!&quot;">Igalia rocks!</a>
-                    </h2>
-
-                    <!--  -->
-<blockquote>
-<p>Every person joining us is expected to evolve through the different
-stages: from employee to pre-partner and finally to partner, a
-co-owner of the company.</p>
-<p class="attribution">&mdash;<a class="reference external" href="http://www.igalia.com/about-us/internal-responsibility">source</a></p>
-</blockquote>
-<p>Just one of the things that make <a class="reference external" href="http://www.igalia.com/">Igalia</a> a very attractive employer...
-just a step away from being <a class="reference external" href="http://www.software.coop/info/coopdev.html/">a proper worker coop</a>.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/igalia-rocks">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/quote">quote</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Nov  2,  2010</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/tumblr-suckage" rel="bookmark" title="Permanent Link to &quot;Tumblr suckage&quot;">Tumblr suckage</a>
-                    </h2>
-
-                    <p><strong>update</strong>: after an unbearably-long downtime, I decided to make the
-switch, this time to <strong>Posterous</strong> (now-defunct).</p>
-<hr class="docutils" />
-<p>As much as I love Tumblr, I got a few complaints:</p>
-<ul class="simple">
-<li>performance for some tasks is really bad; the most annoying one is
-the time it takes for the Edit button to appear</li>
-<li>search is real bad; often it doesn't find stuff I know is there;
-sometimes I have to re-run the search before seeing results</li>
-<li><strong>Pages</strong>: I can't use Markdown to edit them</li>
-<li><strong>Pages</strong>: I'm not presented with the Edit button at all; I instead
-have to do it via the Dashboard, then click Customize, then click
-Pages, then scroll and find the page I wanna edit!</li>
-<li><a class="reference external" href="http://royal.pingdom.com/2010/12/17/the-most-reliable-and-unreliable-blogging-services-2/">horrible uptime</a></li>
-</ul>
-<p>I'm not sure if these problems will be fixed (I've reported one bug,
-without any real feedback). The collective of these problems makes me
-wanna search for another blog host. The challenge with the move is doing
-the laborious internal re-linking over again.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/tumblr-suckage">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/blogging">blogging</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Oct 20,  2010</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/lukes-brain" rel="bookmark" title="Permanent Link to &quot;Luke's brain&quot;">Luke's brain</a>
-                    </h2>
-
-                    <!--  -->
-<blockquote>
-<p>My brain did not evolve to have accurate intuitions about what is
-morally right or wrong or rational. My brain evolved to eat and
-fuck.</p>
-<p class="attribution">&mdash;<a class="reference external" href="http://commonsenseatheism.com/?p=12106">In Defense of Radical Value Pluralism</a></p>
-</blockquote>
-<p>Another gem by the <a class="reference external" href="http://tshepang.net/common-sense-atheism-rocks">fabulous</a> Luke Muehlhauser.
-The post is a fun read; check it out.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/lukes-brain">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/ethics">ethics</a>
-                            <a href="http://tshepang.net/tag/humor">humor</a>
-                            <a href="http://tshepang.net/tag/quote">quote</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Sep 30,  2010</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/untrustworthy-brains" rel="bookmark" title="Permanent Link to &quot;untrustworthy brains&quot;">untrustworthy brains</a>
-                    </h2>
-
-                    <!--  -->
-<blockquote>
-<p>The shortness of our lifespans makes us magnify the events we
-experience and diminish the ones we have access to only via books.</p>
-<p class="attribution">&mdash;<a class="reference external" href="http://etbe.coker.com.au/2008/09/11/islamophobia/#comment-15823">source</a></p>
-</blockquote>
-<p>I think this applies even if all these events are limited to personal
-experience, where the more recent experiences ones too often overshadow
-the older ones... &quot;That was the best sex ever!&quot;.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/untrustworthy-brains">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/quote">quote</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Sep 14,  2010</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/on-anarchism" rel="bookmark" title="Permanent Link to &quot;on Anarchism&quot;">on Anarchism</a>
-                    </h2>
-
-                    <p>There have been many great benefits I got from <a class="reference external" href="http://www.debian.org">the Debian project</a>,
-but among the most important is my introduction to Anarchism, a radical
-political theory that opposes all forms of official hierarchy
-(capitalism, communism, religion, etc), arguing that such things tend to
-result in oppression.</p>
-<p>How I got access to that is via a package known as <a class="reference external" href="http://packages.debian.org/stable/anarchism">anarchism</a>, a set
-of documents formally known as <a class="reference external" href="http://anarchism.pageabode.com/afaq/index.html">An Anarchist FAQ</a>. It's a very
-comprehensive coverage of the theory, and going through it brought both
-enlightenment and frustration, for it explained so many things that I
-took for granted, while pointing out the causes. The theory is basically
-presented as the best possible society humans could ever have.</p>
-<p>As for me, I'm not sure if it's actually true, although I lean more
-towards it than alternatives (and I haven't read anything extensive on
-competing theories, but intuition/experience tells me that capitalism,
-communism, and religion all suck tremendously). I need more study to be
-more sure, especially because the objections to Anarchism are heavy.</p>
-<p>To me it's a scarier concept to introduce yourself as an anarchist than
-as an atheist or a homosexual, because the implications are greater. In
-fact, they are so great, that the word <em>anarchy</em> itself has been
-associated with chaos. That's an expected knee-jerk reaction you'll get
-when you punt things like &quot;I reject all forms of official authority,
-including all governments!&quot;. But it would be nice if people who shudder
-at the concept to spend time with <a class="reference external" href="http://anarchism.pageabode.com/afaq/index.html">that great document</a>.</p>
-<p>My attraction to the theory perhaps is due to my radically liberal
-tendencies (EG, I don't see anything wrong with fucking my biological
-mother, provided it's consensual, and there's no pregnancy). I don't
-know where these tendencies originate, considering that I was a
-religious nut back in my early teens, scared of the concept of hell and
-similar forms of bullshit.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/on-anarchism">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/politics">politics</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Aug 30,  2010</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/argument-from-beauty" rel="bookmark" title="Permanent Link to &quot;Argument from Beauty&quot;">Argument from Beauty</a>
-                    </h2>
-
-                    <p>So there's a bunch of <a class="reference external" href="http://en.wikipedia.org/wiki/Existence_of_God">arguments for the existence of God</a>, and
-learning about them is actually fun for me. I find the <a class="reference external" href="http://en.wikipedia.org/wiki/Argument_from_beauty">Argument from
-beauty</a>, though not the strongest of all, the most seductive. It's ever
-so nice when I joke about it, like when I see a super-hot gal (the sort
-you'd be glad to eat her shit just to have a taste of her pussy) or
-enjoying a wonderful meal (like the one I enjoyed last weekend when
-visiting Botswana). I'd throw something like, &quot;How could such a gal have
-evolved to this form through blind forces of nature! God-did-it!&quot;.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/argument-from-beauty">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/atheism">atheism</a>
-                            <a href="http://tshepang.net/tag/humor">humor</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Aug 20,  2010</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/trusting-ones-feelings" rel="bookmark" title="Permanent Link to &quot;trusting one's feelings&quot;">trusting one's feelings</a>
-                    </h2>
-
-                    <!--  -->
-<blockquote>
-<p>I never trusted my feelings. I always thought that feelings were the
-prejudices and bigotries that I was raised with, and were never to
-be given any weight unless I could put a solid foundation of reason
-underneath them.</p>
-<p class="attribution">&mdash;<a class="reference external" href="http://atheistethicist.blogspot.com/2008/03/reflections-on-rejected-moral-theories.html">Reflections on Rejected Moral Theories</a></p>
-</blockquote>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/trusting-ones-feelings">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/ethics">ethics</a>
-                            <a href="http://tshepang.net/tag/quote">quote</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Jun  2,  2010</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/new-blogging-platform" rel="bookmark" title="Permanent Link to &quot;new blogging platform&quot;">new blogging platform</a>
-                    </h2>
-
-                    <p>Blogger's post editor is so bad that I've been promising myself to move
-elsewhere for quite a while. I checked on <a class="reference external" href="http://superuser.com">Super User</a> what their
-recommendations are and they pointed mostly to Wordpress (which I found
-too ugly) but someone there also pointed to <a class="reference external" href="http://tumblr.com">Tumblr</a>, which I never
-heard of before. It really is more than a blogging platform (which was
-all I was actually looking for), and it does look good except for the
-fact that I miss the sidebar functionality which allows me to place
-things like favorite blogs, favorite posts, etc.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/new-blogging-platform">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/blogging">blogging</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Apr 13,  2010</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/a-visit-to-botswana" rel="bookmark" title="Permanent Link to &quot;a visit to Botswana&quot;">a visit to Botswana</a>
-                    </h2>
-
-                    <p>This past weekend, I finally went to this neighbouring country of ours,
-Botswana. It which was the first time I ever left South Africa. I was
-welcomed by wonderful people, and the visit was limited to its largest
-city — Gaborone — which is beautiful, sparse, and vast, when compared to
-my country's own cities.</p>
-<p>One of its residents got shocked when I argued that South Africa doesn't
-have a unifying identity, arguing that the country is too diverse to
-have such. Instead she argued that such is country's very strength which
-led to her pointing out the following wins:</p>
-<ul class="simple">
-<li>diverse (and therefore strong) economy; she stated Botswana is
-over-reliant on diamonds</li>
-<li>diverse tourist attractions; Botswana's tourism is nearly
-non-existent in comparison</li>
-<li>diverse export market; Botswana is all diamonds, again</li>
-<li>press freedom - my input, which she agreed with</li>
-<li>high foreign investment</li>
-<li>diverse cultures</li>
-<li>high media production standards; Botswana has only one tv channel and
-the little exposure I got of it expresses amateurish levels of
-production</li>
-<li>passionate people (highlighting freedom fighters that enabled black
-rule; highlighting the toyi-toyi culture)</li>
-</ul>
-<p>The conversation opened my eyes a little bit, that there's a lot to
-appreciate about South Africa. As I talked to more Botswana residents,
-and read one critical piece of journalistic writing, Botswana, despite
-being far more peaceful and having superior living standards (minimal
-crime, kindly people, minimal poverty, far-reaching welfare), has some
-serious warts smelly bits: abortion and homosexuality are illegal. I was
-shocked by these two, and most especially about the second one. What the
-fuck! And that the residents voted for such (the country is apparently
-very democratic) proves there's still a lot of work to be done.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/a-visit-to-botswana">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Apr  7,  2010</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/vox-days-omniderigence" rel="bookmark" title="Permanent Link to &quot;Vox Day's 'omniderigence'&quot;">Vox Day's 'omniderigence'</a>
-                    </h2>
-
-                    <p>I really enjoyed reading the section titled Omniderigence in <a class="reference external" href="http://voxday.blogspot.com/">Vox
-Day</a>'s book, 'The Irrational Atheist'. The term, which he coined,
-means the use of one's infinite powers which by the way he disagrees
-with. As far as I've read, his appears the most sensical description
-of Godf I've heard and is a radical departure from what your (stereo)typical
-Christian would state.</p>
-<p><strong>sidenotes</strong></p>
-<ul class="simple">
-<li>This guy is a real good writer and I enjoyed his analogy of his
-religious believes and game-design, in another section named 'Gods of
-the Machine'.</li>
-<li>He explains the term <a class="reference external" href="http://voxday.blogspot.com/2006/06/mailvox-on-omniderigence.html">elsewhere</a> too.</li>
-<li>Check out his <a class="reference external" href="http://commonsenseatheism.com/?p=4476">debate</a> with atheist blogger, <a class="reference external" href="http://commonsenseatheism.com/?page_id=3">Luke Muehlhauser</a>.
-That's the debate that led me to the Vox's book.</li>
-</ul>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/vox-days-omniderigence">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/atheism">atheism</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Mar 23,  2010</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/debate-mike-licona-vs-richard-carrier" rel="bookmark" title="Permanent Link to &quot;debate: Mike Licona vs Richard Carrier&quot;">debate: Mike Licona vs Richard Carrier</a>
-                    </h2>
-
-                    <p>I recently listened to a 2.5 hour-long <a class="reference external" href="http://namb.edgeboss.net/download/namb/audio_files/apologetics_debates/debate-licona_carrier.mp3">debate</a> between two scholars,
-<a class="reference external" href="http://en.wikipedia.org/wiki/Richard_Carrier">Richard Carrier</a> and <a class="reference external" href="http://en.wikipedia.org/wiki/Mike_Licona">Mike Licona</a>, which alerted me to the fact that
-Jesus' Resurrection is regarded, at least to Christian apologists, to be
-very central to the Christian faith (here's <a class="reference external" href="http://agnosticpopularfront.blogspot.com/2004/04/carrier-vs-licona-in-los-angeles-ca.html">an unsatisfactory
-review</a>). I became far more impressed with Richard's performance than
-Mike's:</p>
-<ul class="simple">
-<li>Mike was the only one who displayed some arrogance (a silly joke here
-and a chuckle there, unsuccessfully forcing his opponent to use the
-word delusion instead of hallucination, etc.).</li>
-<li>Richard was more convincing (and the knowledge he displayed of this
-topic is mind-numbing).</li>
-<li>He was more clear with his arguments.</li>
-<li>He was seemingly more prepared (his opponent probably thought he was
-going to be a walkover).</li>
-<li>Mike was a bit embarassing at times when mentioning The Passion of
-Christ, especially the time when he was praising Jesus (I cringed a
-bit there), and Richard, by the way, ignored references to that
-movie.</li>
-</ul>
-<p>Based on these points, I vote for Richard as the winner, with the
-disclaimer that the latter part of the debate was getting too technical
-for me to follow thoroughly.</p>
-<hr class="docutils" />
-<p><strong>sidenotes</strong>:</p>
-<ul class="simple">
-<li>See <a class="reference external" href="http://commonsenseatheism.com/?page_id=3">Luke Muehlhauser</a>'s <a class="reference external" href="http://commonsenseatheism.com/?p=30">well-argued take</a> on the issue of the
-Resurrection.</li>
-<li>Luke's blog, <a class="reference external" href="http://commonsenseatheism.com">Common Sense Atheism</a> (<a class="reference external" href="http://tshepang.net/common-sense-atheism-rocks">praise</a>), apparently has <a class="reference external" href="http://commonsenseatheism.com/?p=50">the
-largest collection of links to atheist vs theist debates</a> and is
-therefore a great resource.</li>
-</ul>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/debate-mike-licona-vs-richard-carrier">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/atheism">atheism</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Jan  8,  2010</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/common-sense-atheism-rocks" rel="bookmark" title="Permanent Link to &quot;'Common Sense Atheism' rocks!&quot;">'Common Sense Atheism' rocks!</a>
-                    </h2>
-
-                    <p>I've read dozens of posts by <a class="reference external" href="http://commonsenseatheism.com/?p=12">Luke Muehlhauser</a> at his <a class="reference external" href="http://commonsenseatheism.com">Common Sense
-Atheism</a> site, among the best blogs I've read ever, which also happens
-to be the first and only atheism blog I regularly read. The guy
-regularly manages to enthrall me with his thorough and very broad
-outlook on the topic, managing to put words where I'd fail (or even
-sub-topics I wouldn't expect anyone would write about), his intelligence
-(EG when debating some real smart theists), the courage of promoting
-some <a class="reference external" href="http://commonsenseatheism.com/?p=1924">off-beat ideas</a>, not to mention the quality of much of the
-commentary he receives from readers. What makes these even more
-impressive is that the guy is in the 1st half of his twenties.</p>
-<p>[<strong>sidenote</strong>] My favorite posts are too many, so here's his own links
-to <a class="reference external" href="http://commonsenseatheism.com/?p=6086">what he deems most useful</a>. He has also received serious praise
-from his other readers (check the comments <a class="reference external" href="http://commonsenseatheism.com/?p=1174">here</a>)</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/common-sense-atheism-rocks">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/atheism">atheism</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Dec 22,  2009</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/my-deconversion" rel="bookmark" title="Permanent Link to &quot;my deconversion&quot;">my deconversion</a>
-                    </h2>
-
-                    <p>One of the top atheism bloggers today, <a class="reference external" href="http://commonsenseatheism.com/?page_id=3">Luke Muehlhauser</a>, posted a
-<a class="reference external" href="http://commonsenseatheism.com/?p=4545">gorgeous snippet</a> by a Christian who happens to be unhappy with the
-contents of the Bible, a story which is scarily similar to mine.</p>
-<p>Often people ask when I became atheist, and I can't answer them with a
-date since it was more of a process, and reading the Bible (the entire
-thing) was among the earliest steps towards that end — the God I
-imagined couldn't allowed things as <a class="reference external" href="http://commonsenseatheism.com/?p=21">horrendous</a> as portrayed in the Old
-Testament. I kept praying, asking God to help me keep my faith, but no
-one answered :(</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/my-deconversion">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/atheism">atheism</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Sep 24,  2009</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/tainted-teresa" rel="bookmark" title="Permanent Link to &quot;tainted Teresa&quot;">tainted Teresa</a>
-                    </h2>
-
-                    <p>While I was thinking of the topic I covered in <a class="reference external" href="http://tshepang.net/noble-dreams">noble dreams</a>,
-Mother Teresa appeared in my mind due the imagery of nobility that she
-possesses. I decided to go check out <a class="reference external" href="http://en.wikipedia.org/wiki/Mother_Teresa">her story</a> for inspiration,
-and came back disappointed and even shocked at much of her (alleged)
-shortcomings.</p>
-<p>Nevertheless, I was captivated by her words:</p>
-<blockquote>
-<p>[our mission is to take care of] the hungry, the naked, the
-homeless, the crippled, the blind, the lepers, all those people who
-feel unwanted, unloved, uncared for throughout society, people that
-have become a burden to the society and are shunned by everyone.</p>
-<p class="attribution">&mdash;<a class="reference external" href="http://en.wikipedia.org/wiki/Mother_Teresa#Missionaries_of_Charity">source</a></p>
-</blockquote>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/tainted-teresa">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/ethics">ethics</a>
-                            <a href="http://tshepang.net/tag/quote">quote</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Sep 17,  2009</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/noble-dreams" rel="bookmark" title="Permanent Link to &quot;noble dreams&quot;">noble dreams</a>
-                    </h2>
-
-                    <p><strong>update</strong>: I am not running a business anymore (I gave up trying), and
-the major dream mentioned here died with it. So am keeping this here for
-its historical value... it's also not bad writing.</p>
-<hr class="docutils" />
-<p>I was having a discussion with a colleague over chat software, asking
-her about her major dreams. After some deliberations, and after
-revealing my own dream of helping a million people, I was touched when
-she stated she wanted to open a clinic offering free services as well as
-a place to help unemployed mothers. I immediately wished I was rich
-enough to grant her the dream.</p>
-<p>One reason I asked this question is I'm actually interested in what's in
-other people's minds and am often looking for inspiration. Her dream
-reminds of a fantasy I once had, like if I had a billion Rands (divide
-by ~8 to get US$), what I'd do is build a hospital and fund it for years
-on end. That's largely because SA public hospitals generally stink, both
-literally and figuratively. And while on that topic, I was recently
-discussing with a friend that there were other issues that escalated the
-problem before we even talk of insufficient funding: efficiency and
-corruption.</p>
-<p>While still on the dreaming side of things, someone mentioned that a
-dream that truly drives a person is normally ego-driven. Reminds me of a
-great dream of becoming a DD (Debian Developer) which <a class="reference external" href="http://tshepang.net/unrealized-dreams">kinda died</a>. An
-acquaintance also has an ego-driven dream of owning a private medical
-lab. He did however admitted that it was a negotiable dream, and that
-qualifies it as a fantasy.</p>
-<p>While still on medical things, there's yet another acquaintance whose
-dream it is to build a clinic of some sort, but I actually forgot the
-details. What's interesting however is that when I asked specific
-questions like how big it is and some such, she couldn't answer, stating
-not having visualised it that far. I have learnt the importance of
-visualising a dream thoroughly because that solidifies it pretty well,
-helping it get further away from the fantasy category.</p>
-<p>Another friend also touched me when he mentioned one dream of setting up
-a soup kitchen for homeless people. Noble stuff that.</p>
-<p>Dreams are great because focusing on them help reduce the pain of
-hardship. They can be as simple as &quot;the salary will help me pay that
-debt, and maintain my lifestyle too&quot;, and those are worthwhile dreams
-too, at least enough to have millions of displeased workers wake up
-every morning to get to work. I've also met quite a number of people
-whose main dream is retirement. It used to be my driving passion and
-motivator in building my business, but I'm now more driven by what I'll
-do with the ample time I'll have at my disposal after that moment, and
-even more than that, am driven my the million lives dream (helping a
-million people), most especially the ways in which I'll make that
-happen: starting worker co-operatives, free IT training, FLOSS
-(Free/Libre an Open Source Software) development funding...</p>
-<p>Actually noble dreams, the &quot;I want to help improve the world&quot; sort, are
-my favorites and I always get excited when someone mentions such, not
-those of &quot;I want to have this house and that car&quot;. I probably am
-dishonest with myself, but as much as I drool at the sight and thought
-of a Bentley Continental GT, pumping the retail cost of that beauty into
-feeding a 100 hungry kids for a month is more my thing. I do of course
-have non-noble dreams: travelling Africa and the world for fun,
-acquiring a decent entertainment system and a serious gaming PC (am I a
-sucker for hardware-pushing high-end games!), visit international film
-festivals (am I a sucker for movies!), and even produce some short
-movies, preferably animated, preferably with FLOSS (I am a
-politically-charged wannabe!).</p>
-<p>A friend of mine, a sports sucker, wants to sponsor one kid to go
-professional in that field. Having loved to have had such an opportunity
-as a kid, he wants to ensure some deserving kid doesn't meet the same
-fate (and end up in career s/he dislikes). I know at least two other
-highly-gifted people who didn't further their sporting careers due to
-lack of support (likely financial). That's painful actually and
-shouldn't happen to anyone. Another friend of mine wants to open a
-dancing facility to help get kids off the streets. I'm not sure if
-that's a negotiable dream or not (it didn't sound like a priority item,
-neither did the sports sponsorship thing by the way) but we are to find
-out in due time...</p>
-<p>A brother of mine, a gifted and multi-talented (composer, producer,
-arranger, mixer, vocalist, sound engineer, writer) musician, wants to
-help groom and promote a number of small-time artists. That would really
-help in an industry where talent isn't enough to propel one further.
-Also, this is in an industry where too many lacking that talent are
-propelled forward regardless.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/noble-dreams">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/there-had-better-not-be-life-out-there" rel="bookmark" title="Permanent Link to &quot;there had better not be life out there!&quot;">there had better not be life out there!</a>
-                    </h2>
-
-                    <p>I thoroughly enjoyed re-reading <a class="reference external" href="http://www.nickbostrom.com/extraterrestrial.pdf">an essay</a> on why we better hope we
-don't discover extra-terrestrial life. It's 8 pages of superb writing
-and is pretty thorough (check how he explains the myriad possibilities,
-and how he challenges even those), and nearly as exciting as the 1st
-time I read Richard Feynman's &quot;<a class="reference external" href="http://www.nanoparticles.org/pdf/Feynman.pdf">There's Plenty of Room At the
-Bottom</a>&quot;. I consider this essential reading for any enquiring mind.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/there-had-better-not-be-life-out-there">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/future-tech">future-tech</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/unrealized-dreams" rel="bookmark" title="Permanent Link to &quot;unrealized dreams&quot;">unrealized dreams</a>
-                    </h2>
-
-                    <p>My biggest dream for a long while was becoming a DD (Debian Developer),
-but why am I not pursuing that? Let me just say laziness and lack of
-motivation, or even lack of focus. There's so many things I want to be
-technically proficient at and it's tough to choose one (Python coding,
-Debian system admin, GTK+, <a class="reference external" href="http://projects.gnome.org/tracker/">Tracker</a>, Xorg). And there's distractions
-all over the place.</p>
-<p>Whether I'm going ahead with this is still unresolved so the dream ain't
-nearly dead, but the dead dream is that of becoming an academic in some
-field. As with FLOSS there's many interesting fields to choose from
-(mathematics, electronics, computer science, physics) but I ain't going
-any of these routes, most likely because I don't enjoy formal education,
-disliking the pressures involved. Hating stress, I would rather pursue
-these on my own as I'm doing with FLOSS. Or maybe I'm just a chicken,
-afraid of committing! I mean I didn't even finish my university degree
-due to similar excuses I mention above. Ah well...</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/unrealized-dreams">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Feb 13,  2009</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/the-mighty-mitch-sala" rel="bookmark" title="Permanent Link to &quot;the mighty Mitch Sala&quot;">the mighty Mitch Sala</a>
-                    </h2>
-
-                    <p>If ever you admire someone excessively to a point of nearly letting out
-a tear, you tend to get worried, perhaps due to pride, that you may be
-too obsessed. This was a case when Mitch Sala, an impossibly-successful
-Australian businessman, who undertook a job to inspire more people to be
-successful in Amway. He came through to South Africa and made a powerful
-presentation, &quot;and I even got to shake his hand!&quot;</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/the-mighty-mitch-sala">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Dec 23,  2008</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/anarchism-rocks" rel="bookmark" title="Permanent Link to &quot;anarchism rocks?&quot;">anarchism rocks?</a>
-                    </h2>
-
-                    <p>I was innocently doing some FLOSS reading when I bumped on a real
-gorgeous description on why anarchy is the <a class="reference external" href="http://loupgaroublond.blogspot.com/2008/12/open-source-and-anarchism.html?showComment=1229842200000#c4468517513122259751">best possible society ever
-imagined</a>.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/anarchism-rocks">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/politics">politics</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Nov  7,  2008</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/farewell-at-old-job" rel="bookmark" title="Permanent Link to &quot;farewell at old job&quot;">farewell at old job</a>
-                    </h2>
-
-                    <p>I was yesterday honored with a farewell party at my company, at which I
-worked as integration technician (opto-electro-mechanical engineering
-industry) for nearly five years. And there was even chocolates for me to
-take home with, while having people throwing accolades at me like I was
-sort of useful... I really should be thankful for the accomodation (and
-monies) I was granted and am excited for <a class="reference external" href="http://tshepang.net/me-got-meself-a-coding-job">the next challenge</a>.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/farewell-at-old-job">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Oct 12,  2008</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/me-got-meself-a-coding-job" rel="bookmark" title="Permanent Link to &quot;me got meself a coding job&quot;">me got meself a coding job</a>
-                    </h2>
-
-                    <p>I had one of the most exciting moments in my life when I got offered a
-job at a <a class="reference external" href="http://www.tauspace.com">software development company</a> (the title is Analyst: Software
-Engineering). I don't even know what my planned-for tasks are, and I was
-all the more surprised because I think I didn't do well at the
-interview. Great news is I didn't expect a coding job so soon,
-especially given I don't have previous professional exposure.</p>
-<p>I am an electronic technician (lesser than an engineer) by trade and am
-pretty unhappy in my current job (testing, calibration, and
-fault-finding of gyro-stabilised airborne surveillance/observation
-systems). That's partly because I don't really get challenged since I'm
-on a production line. I do strongly doubt I'd be job-hunting was I in
-development/engineering.</p>
-<p>Best of all however is I'll be working on software, a dream job really,
-considering I love computers and all, and specifically the software part
-of it. Electronics is fine too, but the last time I really got close to
-it was back in school, and I'm here talking of design, not &quot;testing,
-calibration...&quot;.</p>
-<p>How lucky can one get!</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/me-got-meself-a-coding-job">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/luck">luck</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Jul 16,  2008</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/being-friendly-towards-customers" rel="bookmark" title="Permanent Link to &quot;being friendly towards customers&quot;">being friendly towards customers</a>
-                    </h2>
-
-                    <p>I just a read <a class="reference external" href="http://www.joelonsoftware.com/articles/fog0000000052.html">a very interesting post</a> on how to gain market share,
-and what prompted me to post is the following snippet which states the
-advantages of being friendly towards customers:</p>
-<blockquote>
-...It reminds me of independent booksellers, who said &quot;why should I
-make it comfortable for people to read books in my store? I want
-them to buy the books!&quot; And then one day Barnes and Nobles puts
-<em>couches</em> and <em>cafes</em> in the stores and practically <em>begged</em> people
-to read books in their store without buying them. Now you've got all
-these customers sitting in their stores for <em>hours</em> at a time,
-mittengrabben all the books with their filthy hands, and the
-probability that they find something they want to buy is linearly
-proportional to the amount of time they spend in the store, and even
-the dinkiest Barnes and Nobles superstore in Iowa City rakes in
-hundreds of dollars a <em>minute</em> while the independent booksellers are
-going out of business. Honey, Shakespeare and Company on Manhattan's
-Upper West Side did <em>not</em> close because Barnes and Nobles had
-cheaper prices, it closed because Barnes and Nobles had <em>more human
-beings in the building</em>.</blockquote>
-<p>I used to frequent some local book/magazine franchise whose merchandise
-I liked but just couldn't afford.
-That made the experience uncomfortable, the risk of being told to leave.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/being-friendly-towards-customers">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/quote">quote</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Jul 13,  2008</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/nuclear-power-needs-greater-exploitation" rel="bookmark" title="Permanent Link to &quot;nuclear power needs greater exploitation?&quot;">nuclear power needs greater exploitation?</a>
-                    </h2>
-
-                    <!--  -->
-<blockquote>
-<p>So hybrid cars are just one piece of the bigger solution because the
-problem is huge. Spewing billions of tons of carbon, plus 20,000
-tons of thorium and uranium, plus thousands of tons of mercury and
-arsenic into the air and our lungs is just stupid. It is especially
-wrong for people to fear nuclear power whose worst accident was
-Chernobyl with 50 dead and 4000 made very ill when coal kills more
-than that in about an hour.</p>
-<p class="attribution">&mdash;<a class="reference external" href="http://www.softmachines.org/wordpress/?p=268#comment-18443">source</a></p>
-</blockquote>
-<p>Another person who believes that harnessing the power of the atom
-is the way to go to help avert the global energy crisis.
-I am compelled to agree, though the issue is a complex one.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/nuclear-power-needs-greater-exploitation">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/quote">quote</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Feb  5,  2008</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/wtc-twin-towers-and-the-bbc-documentary" rel="bookmark" title="Permanent Link to &quot;WTC twin towers and the BBC documentary&quot;">WTC twin towers and the BBC documentary</a>
-                    </h2>
-
-                    <p>I normally dislike documentaries which tend to be dumbed-down,
-over-emphasizing certain concepts, and worse still, treated with
-over-dramatic music and other cinematic touches like re-enactments and
-camera play. That's why Part 1 of Imagination: A Short History of Tall
-Buildings, happens to be quite a relief, since it turns to be of mild
-presentation with excellent use of music, apart from also being a very
-effective piece in its primary purpose of providing information. It
-actually brings again to life my love for high-rises which, in my
-memory, really began when I saw a tremendously gorgeous picture of the
-Manhattan skyline, with the twin towers at the center, an image I found
-in World Book Encyclopedia back in 1995. That image made me fall in love
-with those twin towers, which to me were the most interesting structures
-in all of New York, such that I still don't understand why I hear that
-many didn't like the structures, the reason for which I still have to
-find out.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/wtc-twin-towers-and-the-bbc-documentary">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Aug 16,  2007</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/anarchism-and-the-gpl" rel="bookmark" title="Permanent Link to &quot;Anarchism and the GPL&quot;">Anarchism and the GPL</a>
-                    </h2>
-
-                    <p>I was reading some old Debian posts where there was an argument brewing
-regarding the existence of anarchy within Debian. A notable point raised
-was that the existence of the GPL, the leading FLOSS licence, was
-impossible because a licence's existence requires laws to exist. The
-argument was that, since anarchy is against law (due to the idea that
-law is designed to defend the elites and oppress the majority), then
-there can't be free software.</p>
-<p>What's notable about the argument is that it's a pretty dumb. Now since
-anarchy ain't mainstream, it seems okay to use the current system to
-enforce some form of anarchy by law (use what little you have). GPL
-creator himself states that free software (subset of FLOSS) existed in
-MIT without requiring licences and then states that it's companies which
-refused open access to code, forcing GPL creator (Richard Stallman) to
-start a project to develop a truly free Operating System. In an
-anarchistic society, there certainly seems to be no motivation to
-develop non-FLOSS, but in today's rogue society, there's plenty.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/anarchism-and-the-gpl">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/politics">politics</a>
-                            <a href="http://tshepang.net/tag/anarchism">Anarchism</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Aug  7,  2007</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/one-less-angel" rel="bookmark" title="Permanent Link to &quot;one less angel&quot;">one less angel</a>
-                    </h2>
-
-                    <p>There are not that many people I know personally who are angels, and one
-of those died recently as a result of a car and truck collision. The
-other occupants in the car, all three of them, did not survive either.
-The tragedy is more notable because the guy, Yandisa Mfokazi, was among
-my greatest friends ever. This is the guy whose family treated me like
-royalty on a <a class="reference external" href="http://tshepang.net/a-visit-to-eastern-cape">recent visit</a>.</p>
-<p>Of all personal losses I have ever experienced, this is the greatest.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/one-less-angel">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Jul  9,  2007</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/swarm-theory" rel="bookmark" title="Permanent Link to &quot;swarm theory&quot;">swarm theory</a>
-                    </h2>
-
-                    <p>It's interesting that <a class="reference external" href="http://anarchism.pageabode.com/afaq/secIcon.html">the article</a> that documents swarm behaviour
-confirms the philosophy that I've held for a few years now that states
-that &quot;human society is too complex to comprehend&quot;. It's also interesting
-that the article's conclusion is pretty compatible with a [society
-imagined by anarchists][].</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/swarm-theory">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Jun  1,  2007</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/anarchism-and-teen-sexuality" rel="bookmark" title="Permanent Link to &quot;Anarchism and teen sexuality&quot;">Anarchism and teen sexuality</a>
-                    </h2>
-
-                    <p>There's a well-researched document named The Anarchist FAQ (AFAQ)
-included in Debian which I spent some time reading. This wasn't a
-first-time effort by the way, for the doc is very large. What prompted
-the post is the very radical idea contained therein that parents should
-encourage their teens to engage in sexual activity, defending such a
-position by pointing to evidence that much social decay owes to sexual
-taboos. It's really amazing what I read and I haven't been intrigued so
-much by a philosophical theory in such a long time. Oh, and by the way,
-anarchism is an extremely attractive theory, though I have very many
-questions still. I'll keep studying to understand more.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/anarchism-and-teen-sexuality">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/politics">politics</a>
-                            <a href="http://tshepang.net/tag/anarchism">Anarchism</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">May 18,  2007</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/nanotech-and-open-source" rel="bookmark" title="Permanent Link to &quot;Nanotech and Open Source&quot;">Nanotech and Open Source</a>
-                    </h2>
-
-                    <p>I was fascinated to find that Christine Peterson of Nanotech fame
-<a class="reference external" href="http://www.foresight.org/about/Peterson.html">coined</a> the term Open Source (more or less, a business-friendly name
-for Free/Libre software, leading to a common compromise of calling the
-entire thing FLOSS for Free/Libre/Open Source Software). I remember Eric
-Drexler, possibly the greatest force in that most anticipated of
-technologies, mentioning something about FLOSS but I didn't know that he
-was so closely-invoved as to personally interact with Bruce Perens, one
-of the key FLOSS representatives.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/nanotech-and-open-source">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/future-tech">future-tech</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">May  7,  2007</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/a-visit-to-eastern-cape" rel="bookmark" title="Permanent Link to &quot;a visit to Eastern Cape&quot;">a visit to Eastern Cape</a>
-                    </h2>
-
-                    <p>I enjoyed the beautiful countryside of Nyosini, a small (a few hundred
-households?) rural village nearby a buzzing Mount Frere, a town set atop
-a hill of the same name. This <a class="reference external" href="http://en.wikipedia.org/wiki/Eastern_Cape">Eastern Cape</a> village is the home of a
-friend of mine and the visit happened to be an excuse to see the
-province for the first time in my life, and the highlight was the
-amazing hospitality granted by the home we stayed during most of the
-visit, and the closeness of family I experienced here is unmatched in
-memory. Notable and positive mention ought be granted to 3 characters
-(Lwazi, Bongo, Siya) for reasons I'm too lazy to mention, much like I
-won't mention yet 3 more characters. [<a class="reference external" href="http://tshepang.net/another-visit-to-eastern-cape">another visit</a>]</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/a-visit-to-eastern-cape">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/misc" rel="tag">misc</a>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <div class="clear"></div>
-                <div id="footer">
-                    <p>
-                    Mockingbird theme by <a href="http://nevanscott.com/">Nevan Scott</a>
-                    &middot;
-                    <a class="atom" href="http://tshepang.net/feeds/all.atom.xml">Feed</a>
-                </div>
-            </div>
-            <div class="clear"></div>
         </div>
-    <script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    <script type="text/javascript">
-    try {
-        var pageTracker = _gat._getTracker("UA-16685250-3");
-    pageTracker._trackPageview();
-    } catch(err) {}</script>
-    </body>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/links-2013-07-09">links 2013-07-09</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2013-07-09T00:00:00">
+        <i class="icon-calendar"></i>2013-07-09
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/humor"><i class="icon-tag"></i>humor</a>
+	<a href="http://tshepang.net/tag/links"><i class="icon-tag"></i>links</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/links-2013-07-09">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/top-sites">top sites</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2013-06-29T15:17:39.244426">
+        <i class="icon-calendar"></i>2013-06-29
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/top-sites">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/where-i-live-on-the-web">where I live on the web</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2013-06-09T12:23:08.798008">
+        <i class="icon-calendar"></i>2013-06-09
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/where-i-live-on-the-web">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/i-nid-tu-rilex">I nid tu rilex</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2013-05-28T00:00:00">
+        <i class="icon-calendar"></i>2013-05-28
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/quote"><i class="icon-tag"></i>quote</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/i-nid-tu-rilex">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/notes-on-desirism">notes on desirism</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2013-04-21T00:00:00">
+        <i class="icon-calendar"></i>2013-04-21
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/ethics"><i class="icon-tag"></i>ethics</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/notes-on-desirism">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/looking-at-liquidluck-themes">looking at liquidluck themes</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2013-04-13T00:00:00">
+        <i class="icon-calendar"></i>2013-04-13
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/blogging"><i class="icon-tag"></i>blogging</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/looking-at-liquidluck-themes">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/a-nicer-sounding-word-than-propaganda">a nicer-sounding word than 'propaganda'</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2013-04-12T00:00:00">
+        <i class="icon-calendar"></i>2013-04-12
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/quote"><i class="icon-tag"></i>quote</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/a-nicer-sounding-word-than-propaganda">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/links-2013-04-12">links 2013-04-12</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2013-04-12T00:00:00">
+        <i class="icon-calendar"></i>2013-04-12
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/blogging"><i class="icon-tag"></i>blogging</a>
+	<a href="http://tshepang.net/tag/links"><i class="icon-tag"></i>links</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/links-2013-04-12">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/blogging-with-pelican">blogging with Pelican</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2013-04-08T00:00:00">
+        <i class="icon-calendar"></i>2013-04-08
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/blogging"><i class="icon-tag"></i>blogging</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/blogging-with-pelican">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/a-bit-of-poetry">a bit of poetry</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2013-04-07T00:00:00">
+        <i class="icon-calendar"></i>2013-04-07
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/quote"><i class="icon-tag"></i>quote</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/a-bit-of-poetry">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/what-me-loves-about-static-website-generation">what me loves about static website generation</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2013-04-06T00:00:00">
+        <i class="icon-calendar"></i>2013-04-06
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/blogging"><i class="icon-tag"></i>blogging</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/what-me-loves-about-static-website-generation">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/favorite-pelican-themes">favorite Pelican themes</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2013-03-17T00:00:00">
+        <i class="icon-calendar"></i>2013-03-17
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/blogging"><i class="icon-tag"></i>blogging</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/favorite-pelican-themes">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/misconceptions-i-had">misconceptions I had</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2012-12-26T00:00:00">
+        <i class="icon-calendar"></i>2012-12-26
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/misconceptions-i-had">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/links-2012-12-19">links 2012-12-19</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2012-12-19T00:00:00">
+        <i class="icon-calendar"></i>2012-12-19
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/links"><i class="icon-tag"></i>links</a>
+	<a href="http://tshepang.net/tag/humor"><i class="icon-tag"></i>humor</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/links-2012-12-19">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/me-got-meself-another-coding-job">me got meself another coding job</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2012-08-02T00:00:00">
+        <i class="icon-calendar"></i>2012-08-02
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/luck"><i class="icon-tag"></i>luck</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/me-got-meself-another-coding-job">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/valve-appears-anarchistic">Valve appears anarchistic</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2012-07-14T00:00:00">
+        <i class="icon-calendar"></i>2012-07-14
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/anarchism"><i class="icon-tag"></i>anarchism</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/valve-appears-anarchistic">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/links-2012-07-07">links 2012-07-07</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2012-07-07T00:00:00">
+        <i class="icon-calendar"></i>2012-07-07
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/atheism"><i class="icon-tag"></i>atheism</a>
+	<a href="http://tshepang.net/tag/links"><i class="icon-tag"></i>links</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/links-2012-07-07">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/on-taste-and-morality">on taste and morality</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2012-06-16T00:00:00">
+        <i class="icon-calendar"></i>2012-06-16
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/ethics"><i class="icon-tag"></i>ethics</a>
+	<a href="http://tshepang.net/tag/quote"><i class="icon-tag"></i>quote</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/on-taste-and-morality">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/links-2012-04-09">links 2012-04-09</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2012-04-09T00:00:00">
+        <i class="icon-calendar"></i>2012-04-09
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/links"><i class="icon-tag"></i>links</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/links-2012-04-09">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/trying-out-calepin">trying out Calepin</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2012-04-02T00:00:00">
+        <i class="icon-calendar"></i>2012-04-02
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/blogging"><i class="icon-tag"></i>blogging</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/trying-out-calepin">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/on-voting">on voting</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2012-02-13T00:00:00">
+        <i class="icon-calendar"></i>2012-02-13
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/humor"><i class="icon-tag"></i>humor</a>
+	<a href="http://tshepang.net/tag/quote"><i class="icon-tag"></i>quote</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/on-voting">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/surprising-discovery-of-the-day">surprising discovery of the day</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2012-01-03T00:00:00">
+        <i class="icon-calendar"></i>2012-01-03
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/surprising-discovery-of-the-day">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/links-2011-05-17">links 2011-05-17</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2011-05-17T00:00:00">
+        <i class="icon-calendar"></i>2011-05-17
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/humor"><i class="icon-tag"></i>humor</a>
+	<a href="http://tshepang.net/tag/links"><i class="icon-tag"></i>links</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/links-2011-05-17">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/the-need-for-quality-in-healthcare">the need for quality in healthcare</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2011-04-11T00:00:00">
+        <i class="icon-calendar"></i>2011-04-11
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/quote"><i class="icon-tag"></i>quote</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/the-need-for-quality-in-healthcare">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/another-visit-to-eastern-cape">another visit to Eastern Cape</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2011-02-28T00:00:00">
+        <i class="icon-calendar"></i>2011-02-28
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/another-visit-to-eastern-cape">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/ouch">ouch!</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2011-02-22T00:00:00">
+        <i class="icon-calendar"></i>2011-02-22
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/quote"><i class="icon-tag"></i>quote</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/ouch">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/getting-rid-of-junk">getting rid of junk</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2011-01-22T00:00:00">
+        <i class="icon-calendar"></i>2011-01-22
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/atheism"><i class="icon-tag"></i>atheism</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/getting-rid-of-junk">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/links-2011-01-10">links 2011-01-10</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2011-01-10T00:00:00">
+        <i class="icon-calendar"></i>2011-01-10
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/links"><i class="icon-tag"></i>links</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/links-2011-01-10">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/great-customer-service">great customer service</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2010-12-01T00:00:00">
+        <i class="icon-calendar"></i>2010-12-01
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/great-customer-service">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/obama-administration-not-too-shabby">Obama administration not too shabby</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2010-11-23T00:00:00">
+        <i class="icon-calendar"></i>2010-11-23
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/obama-administration-not-too-shabby">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/igalia-rocks">Igalia rocks!</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2010-11-21T00:00:00">
+        <i class="icon-calendar"></i>2010-11-21
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/quote"><i class="icon-tag"></i>quote</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/igalia-rocks">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/tumblr-suckage">Tumblr suckage</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2010-11-02T00:00:00">
+        <i class="icon-calendar"></i>2010-11-02
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/blogging"><i class="icon-tag"></i>blogging</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/tumblr-suckage">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/lukes-brain">Luke's brain</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2010-10-20T00:00:00">
+        <i class="icon-calendar"></i>2010-10-20
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/ethics"><i class="icon-tag"></i>ethics</a>
+	<a href="http://tshepang.net/tag/humor"><i class="icon-tag"></i>humor</a>
+	<a href="http://tshepang.net/tag/quote"><i class="icon-tag"></i>quote</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/lukes-brain">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/untrustworthy-brains">untrustworthy brains</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2010-09-30T00:00:00">
+        <i class="icon-calendar"></i>2010-09-30
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/quote"><i class="icon-tag"></i>quote</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/untrustworthy-brains">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/on-anarchism">on Anarchism</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2010-09-14T00:00:00">
+        <i class="icon-calendar"></i>2010-09-14
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/politics"><i class="icon-tag"></i>politics</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/on-anarchism">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/argument-from-beauty">Argument from Beauty</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2010-08-30T00:00:00">
+        <i class="icon-calendar"></i>2010-08-30
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/atheism"><i class="icon-tag"></i>atheism</a>
+	<a href="http://tshepang.net/tag/humor"><i class="icon-tag"></i>humor</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/argument-from-beauty">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/trusting-ones-feelings">trusting one's feelings</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2010-08-20T00:00:00">
+        <i class="icon-calendar"></i>2010-08-20
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/ethics"><i class="icon-tag"></i>ethics</a>
+	<a href="http://tshepang.net/tag/quote"><i class="icon-tag"></i>quote</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/trusting-ones-feelings">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/new-blogging-platform">new blogging platform</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2010-06-02T00:00:00">
+        <i class="icon-calendar"></i>2010-06-02
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/blogging"><i class="icon-tag"></i>blogging</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/new-blogging-platform">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/a-visit-to-botswana">a visit to Botswana</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2010-04-13T00:00:00">
+        <i class="icon-calendar"></i>2010-04-13
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/a-visit-to-botswana">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/vox-days-omniderigence">Vox Day's 'omniderigence'</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2010-04-07T00:00:00">
+        <i class="icon-calendar"></i>2010-04-07
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/atheism"><i class="icon-tag"></i>atheism</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/vox-days-omniderigence">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/debate-mike-licona-vs-richard-carrier">debate: Mike Licona vs Richard Carrier</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2010-03-23T00:00:00">
+        <i class="icon-calendar"></i>2010-03-23
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/atheism"><i class="icon-tag"></i>atheism</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/debate-mike-licona-vs-richard-carrier">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/common-sense-atheism-rocks">'Common Sense Atheism' rocks!</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2010-01-08T00:00:00">
+        <i class="icon-calendar"></i>2010-01-08
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/atheism"><i class="icon-tag"></i>atheism</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/common-sense-atheism-rocks">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/my-deconversion">my deconversion</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2009-12-22T00:00:00">
+        <i class="icon-calendar"></i>2009-12-22
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/atheism"><i class="icon-tag"></i>atheism</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/my-deconversion">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/tainted-teresa">tainted Teresa</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2009-09-24T00:00:00">
+        <i class="icon-calendar"></i>2009-09-24
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/ethics"><i class="icon-tag"></i>ethics</a>
+	<a href="http://tshepang.net/tag/quote"><i class="icon-tag"></i>quote</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/tainted-teresa">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/noble-dreams">noble dreams</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2009-09-17T00:00:00">
+        <i class="icon-calendar"></i>2009-09-17
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/noble-dreams">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/there-had-better-not-be-life-out-there">there had better not be life out there!</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2009-09-17T00:00:00">
+        <i class="icon-calendar"></i>2009-09-17
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/future-tech"><i class="icon-tag"></i>future-tech</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/there-had-better-not-be-life-out-there">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/unrealized-dreams">unrealized dreams</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2009-09-17T00:00:00">
+        <i class="icon-calendar"></i>2009-09-17
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/unrealized-dreams">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/the-mighty-mitch-sala">the mighty Mitch Sala</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2009-02-13T00:00:00">
+        <i class="icon-calendar"></i>2009-02-13
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/the-mighty-mitch-sala">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/anarchism-rocks">anarchism rocks?</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2008-12-23T00:00:00">
+        <i class="icon-calendar"></i>2008-12-23
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/politics"><i class="icon-tag"></i>politics</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/anarchism-rocks">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/farewell-at-old-job">farewell at old job</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2008-11-07T00:00:00">
+        <i class="icon-calendar"></i>2008-11-07
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/farewell-at-old-job">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/me-got-meself-a-coding-job">me got meself a coding job</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2008-10-12T00:00:00">
+        <i class="icon-calendar"></i>2008-10-12
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/luck"><i class="icon-tag"></i>luck</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/me-got-meself-a-coding-job">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/being-friendly-towards-customers">being friendly towards customers</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2008-07-16T00:00:00">
+        <i class="icon-calendar"></i>2008-07-16
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/quote"><i class="icon-tag"></i>quote</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/being-friendly-towards-customers">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/nuclear-power-needs-greater-exploitation">nuclear power needs greater exploitation?</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2008-07-13T00:00:00">
+        <i class="icon-calendar"></i>2008-07-13
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/quote"><i class="icon-tag"></i>quote</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/nuclear-power-needs-greater-exploitation">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/wtc-twin-towers-and-the-bbc-documentary">WTC twin towers and the BBC documentary</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2008-02-05T00:00:00">
+        <i class="icon-calendar"></i>2008-02-05
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/wtc-twin-towers-and-the-bbc-documentary">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/anarchism-and-the-gpl">Anarchism and the GPL</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2007-08-16T00:00:00">
+        <i class="icon-calendar"></i>2007-08-16
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/politics"><i class="icon-tag"></i>politics</a>
+	<a href="http://tshepang.net/tag/anarchism"><i class="icon-tag"></i>Anarchism</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/anarchism-and-the-gpl">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/one-less-angel">one less angel</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2007-08-07T00:00:00">
+        <i class="icon-calendar"></i>2007-08-07
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/one-less-angel">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/swarm-theory">swarm theory</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2007-07-09T00:00:00">
+        <i class="icon-calendar"></i>2007-07-09
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/swarm-theory">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/anarchism-and-teen-sexuality">Anarchism and teen sexuality</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2007-06-01T00:00:00">
+        <i class="icon-calendar"></i>2007-06-01
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/politics"><i class="icon-tag"></i>politics</a>
+	<a href="http://tshepang.net/tag/anarchism"><i class="icon-tag"></i>Anarchism</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/anarchism-and-teen-sexuality">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/nanotech-and-open-source">Nanotech and Open Source</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2007-05-18T00:00:00">
+        <i class="icon-calendar"></i>2007-05-18
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/future-tech"><i class="icon-tag"></i>future-tech</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/nanotech-and-open-source">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/a-visit-to-eastern-cape">a visit to Eastern Cape</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2007-05-07T00:00:00">
+        <i class="icon-calendar"></i>2007-05-07
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/misc"><i class="icon-folder-open"></i>misc</a>.
+
+
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/a-visit-to-eastern-cape">more ...</a>
+                </div>
+        </div>
+        <hr />
+
+                <section id="content" class="body">
+                <h1>Pages</h1>
+                        <li><a href="http://tshepang.net/about-me.html">about me</a></li>
+                        <li><a href="http://tshepang.net/key-posts.html">key posts</a></li>
+                </section>
+        </div><!--/span-->
+
+                <div class="span3 well sidebar-nav" id="sidebar">
+<ul class="nav nav-list">
+
+<li class="nav-header"><h4><i class="icon-folder-close icon-large"></i>Categories</h4></li>
+<li>
+<a href="http://tshepang.net/arts">
+    <i class="icon-folder-open icon-large"></i>arts
+</a>
+</li>
+<li>
+<a href="http://tshepang.net/computing">
+    <i class="icon-folder-open icon-large"></i>computing
+</a>
+</li>
+<li>
+<a href="http://tshepang.net/misc">
+    <i class="icon-folder-open icon-large"></i>misc
+</a>
+</li>
+
+<li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/wajig">
+        <i class="icon-tag icon-large"></i>wajig
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/non-floss">
+        <i class="icon-tag icon-large"></i>non-FLOSS
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/politics">
+        <i class="icon-tag icon-large"></i>politics
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://tshepang.net/tag/jazz">
+        <i class="icon-tag icon-large"></i>jazz
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://tshepang.net/tag/stage">
+        <i class="icon-tag icon-large"></i>stage
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://tshepang.net/tag/hip-hop">
+        <i class="icon-tag icon-large"></i>hip-hop
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://tshepang.net/tag/">
+        <i class="icon-tag icon-large"></i>
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://tshepang.net/tag/documentary">
+        <i class="icon-tag icon-large"></i>documentary
+    </a>
+</li>
+<li class="tag-1">
+    <a href="http://tshepang.net/tag/project-of-note">
+        <i class="icon-tag icon-large"></i>project-of-note
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://tshepang.net/tag/decent">
+        <i class="icon-tag icon-large"></i>decent
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://tshepang.net/tag/luck">
+        <i class="icon-tag icon-large"></i>luck
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://tshepang.net/tag/future-tech">
+        <i class="icon-tag icon-large"></i>future-tech
+    </a>
+</li>
+<li class="tag-1">
+    <a href="http://tshepang.net/tag/links">
+        <i class="icon-tag icon-large"></i>links
+    </a>
+</li>
+<li class="tag-1">
+    <a href="http://tshepang.net/tag/music">
+        <i class="icon-tag icon-large"></i>music
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/very-good">
+        <i class="icon-tag icon-large"></i>very-good
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/hardware">
+        <i class="icon-tag icon-large"></i>hardware
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/gaming">
+        <i class="icon-tag icon-large"></i>gaming
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/humor">
+        <i class="icon-tag icon-large"></i>humor
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/atheism">
+        <i class="icon-tag icon-large"></i>atheism
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/vcs">
+        <i class="icon-tag icon-large"></i>VCS
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://tshepang.net/tag/short">
+        <i class="icon-tag icon-large"></i>short
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/top-tracks">
+        <i class="icon-tag icon-large"></i>top-tracks
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://tshepang.net/tag/unrated">
+        <i class="icon-tag icon-large"></i>unrated
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://tshepang.net/tag/tv">
+        <i class="icon-tag icon-large"></i>tv
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://tshepang.net/tag/comic">
+        <i class="icon-tag icon-large"></i>comic
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/blogging">
+        <i class="icon-tag icon-large"></i>blogging
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/ethics">
+        <i class="icon-tag icon-large"></i>ethics
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/tracker">
+        <i class="icon-tag icon-large"></i>Tracker
+    </a>
+</li>
+<li class="tag-1">
+    <a href="http://tshepang.net/tag/non-python">
+        <i class="icon-tag icon-large"></i>non-Python
+    </a>
+</li>
+<li class="tag-1">
+    <a href="http://tshepang.net/tag/untagged">
+        <i class="icon-tag icon-large"></i>untagged
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://tshepang.net/tag/excellent">
+        <i class="icon-tag icon-large"></i>excellent
+    </a>
+</li>
+<li class="tag-1">
+    <a href="http://tshepang.net/tag/debian">
+        <i class="icon-tag icon-large"></i>Debian
+    </a>
+</li>
+<li class="tag-1">
+    <a href="http://tshepang.net/tag/developer-of-note">
+        <i class="icon-tag icon-large"></i>developer-of-note
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://tshepang.net/tag/good">
+        <i class="icon-tag icon-large"></i>good
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://tshepang.net/tag/rock">
+        <i class="icon-tag icon-large"></i>rock
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/non-debian">
+        <i class="icon-tag icon-large"></i>non-Debian
+    </a>
+</li>
+<li class="tag-1">
+    <a href="http://tshepang.net/tag/gnome">
+        <i class="icon-tag icon-large"></i>GNOME
+    </a>
+</li>
+<li class="tag-1">
+    <a href="http://tshepang.net/tag/python">
+        <i class="icon-tag icon-large"></i>Python
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://tshepang.net/tag/classical">
+        <i class="icon-tag icon-large"></i>classical
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://tshepang.net/tag/anarchism">
+        <i class="icon-tag icon-large"></i>anarchism
+    </a>
+</li>
+<li class="tag-1">
+    <a href="http://tshepang.net/tag/quote">
+        <i class="icon-tag icon-large"></i>quote
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://tshepang.net/tag/non-gnome">
+        <i class="icon-tag icon-large"></i>non-GNOME
+    </a>
+</li>
+
+<li class="nav-header"><h4><i class="icon-twitter-sign"></i>Twitter</h4></li>
+<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 4,
+  interval: 30000,
+  width: 'auto',
+  height: 300,
+  theme: {
+	shell: {
+	  background: '#f5f5f5',
+	  color: '#000000'
+	},
+	tweets: {
+	  background: '#ffffff',
+	  color: '#000000',
+	  links: '#1a50a1'
+	}
+  },
+  features: {
+	scrollbar: false,
+	loop: false,
+	live: false,
+	behavior: 'all'
+  }
+}).render().setUser('tshepang_dev').start();
+</script>
+
+</ul>        </div><!--/.well -->
+
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <address id="about">
+                Proudly powered by <a href="http://pelican.notmyidea.org/">Pelican <i class="icon-external-link"></i></a>,
+                                which takes great advantage of <a href="http://python.org">Python <i class="icon-external-link"></i></a>.
+        </address><!-- /#about -->
+
+        <p>The theme is from <a href="http://twitter.github.com/bootstrap/">Bootstrap from Twitter <i class="icon-external-link"></i></a>,
+                   and <a href="http://fortawesome.github.com/Font-Awesome/">Font-Awesome <i class="icon-external-link"></i></a>, thanks!</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+	var pageTracker = _gat._getTracker("UA-16685250-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<script type="text/javascript">
+    var disqus_shortname = 'tshepanglogs';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+
+    <!-- Le javascript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://tshepang.net/theme/js/jquery-1.7.2.min.js"></script>
+    <script src="http://tshepang.net/theme/js/bootstrap.min.js"></script>
+  </body>
 </html>

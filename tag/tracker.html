@@ -1,395 +1,657 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-        <title>Tshepang logs &middot; articles tagged "Tracker"</title>
-        <link rel="shortcut icon" href="http://tshepang.net/favicon.ico" />
-<link href="http://tshepang.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tshepang logs Atom Feed" />
+  <head>
+    <meta charset="utf-8">
+    <title>Tshepang logs - Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Tshepang Lekhonkhobe">
 
-        <link rel="stylesheet" href="http://tshepang.net/theme/css/screen.css" type="text/css" />
-        <link rel="stylesheet" href="http://tshepang.net/theme/css/pygments.css" type="text/css" />
+    <!-- Le styles -->
+    <link rel="stylesheet" href="http://tshepang.net/theme/css/bootstrap.min.css" type="text/css" />
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+      .tag-1 {
+        font-size: 13pt;
+      }
+      .tag-2 {
+        font-size: 10pt;
+      }
+      .tag-2 {
+        font-size: 8pt;
+      }
+      .tag-4 {
+        font-size: 6pt;
+     }
+    </style>
+    <link href="http://tshepang.net/theme/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="http://tshepang.net/theme/css/font-awesome.css" rel="stylesheet">
 
+    <link href="http://tshepang.net/theme/css/pygments.css" rel="stylesheet">
 
-    </head>
-    <body>
-<div id="header">
-            <ul id="nav">
-                <li class="ephemeral selected"><a href="http://tshepang.net/tag/tracker.html">Tracker</a></li>
-                <li><a href="http://tshepang.net">Home</a></li>
-<li><a href="http://tshepang.net/about-me.html">about me</a></li>
-<li><a href="http://tshepang.net/key-posts.html">key posts</a></li>
-<li><a href="http://tshepang.net/archives.html">Archives</a></li>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="http://tshepang.net/theme/images/favicon.ico">
+    <link rel="apple-touch-icon" href="http://tshepang.net/theme/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="http://tshepang.net/theme/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="http://tshepang.net/theme/images/apple-touch-icon-114x114.png">
+
+    <link href="http://tshepang.net/" type="application/atom+xml" rel="alternate" title="Tshepang logs ATOM Feed" />
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="http://tshepang.net/index.html">Tshepang logs </a>
+          <div class="nav-collapse">
+            <ul class="nav">
+                <li><a href="http://tshepang.net/about-me.html">about me</a></li>
+                <li><a href="http://tshepang.net/key-posts.html">key posts</a></li>
+                          <li class="divider-vertical"></li>
+                  <li >
+                    <a href="http://tshepang.net/arts">
+						<i class="icon-folder-open icon-large"></i>arts
+					</a>
+                  </li>
+                  <li >
+                    <a href="http://tshepang.net/computing">
+						<i class="icon-folder-open icon-large"></i>computing
+					</a>
+                  </li>
+                  <li >
+                    <a href="http://tshepang.net/misc">
+						<i class="icon-folder-open icon-large"></i>misc
+					</a>
+                  </li>
+
+                          <ul class="nav pull-right">
+                                <li><a href="http://tshepang.net/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+                          </ul>
+
             </ul>
-            <div class="header_box">
-                <h1><a href="http://tshepang.net">Tshepang logs</a></h1>
-            </div>
+            <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
+          </div><!--/.nav-collapse -->
         </div>
-        <div id="wrapper">
-            <div id="content">
-                <h4 class="date">May 27,  2013</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/my-current-plans-for-wajig" rel="bookmark" title="Permanent Link to &quot;my current plans for wajig&quot;">my current plans for wajig</a>
-                    </h2>
+      </div>
+    </div>
 
-                    <p>Some stuff I might work on in future:</p>
-<ul class="simple">
-<li>I want to start using <a class="reference external" href="https://github.com/kislyuk/argcomplete">argcomplete</a> at some point, a more dynamic
-shell completion tool, replacing the current hand-rolled solution.
-I find shell programming hard, and argcomplete, which is inspired by
-<a class="reference external" href="http://furius.ca/optcomplete/">optcomplete</a> is a brilliant workaround.</li>
-<li>Someone asked me to restore gjig, the GUI tool that <a class="reference external" href="http://tshepang.net/wajig-21-released">I removed from
-wajig</a> some releases ago. This will be an opportunity to learn
-GTK+ again. I did a bit of it, even contributing patches (<a class="reference external" href="http://projects.gnome.org/tracker/">Tracker
-project</a>), but was never quite confident. It's very likely that I
-won't work on this... too much work.</li>
-</ul>
-<p>But ultimately, I would love for the standard Debian packaging tools
-to get the the point where they make wajig irrelvant. After all, wajig
-was created to be a wrapper that helps ease the mess.</p>
-<hr class="docutils" />
-<p>Here's the work I did in the past working on wajig, have a look at
-<a class="reference external" href="http://tshepang.net/tag/wajig">its tag</a>. Off the top of my head:</p>
-<ul class="simple">
-<li>improved, simplied packaging</li>
-<li>port to Python 3</li>
-<li>port to argparse (from getopt), which also meant proper handling of
-subcommands</li>
-<li>increased usage of python-apt, instead of hand-crafted (and ugly)
-code</li>
-<li>a few feature additions</li>
-<li>(lots of) modernising the code</li>
-<li>(lots of) cleaning up</li>
-</ul>
-<p>And over 800 commits later, I am glad.</p>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="span9" id="content">
+        <div class="article">
+                <h1><a href="http://tshepang.net/my-current-plans-for-wajig">my current plans for wajig</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2013-05-27T00:00:00">
+        <i class="icon-calendar"></i>2013-05-27
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/computing"><i class="icon-folder-open"></i>computing</a>.
 
 
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/my-current-plans-for-wajig">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/computing" rel="tag">computing</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/wajig">wajig</a>
-                            <a href="http://tshepang.net/tag/python">Python</a>
-                            <a href="http://tshepang.net/tag/tracker" class="selected">Tracker</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/wajig"><i class="icon-tag"></i>wajig</a>
+	<a href="http://tshepang.net/tag/python"><i class="icon-tag"></i>Python</a>
+	<a href="http://tshepang.net/tag/tracker"><i class="icon-tag"></i>Tracker</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/my-current-plans-for-wajig">more ...</a>
                 </div>
-
-                <h4 class="date">Sep 10,  2010</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/developer-of-note-martyn-russell" rel="bookmark" title="Permanent Link to &quot;developer of note: Martyn Russell&quot;">developer of note: Martyn Russell</a>
-                    </h2>
-
-                    <p>Martyn Russell is <a class="reference external" href="http://projects.gnome.org/tracker/">Tracker</a>'s release manager,
-and being a fan of the project since the early pre-1.0 days,
-I have quite familiar with his work.
-But what triggered this honor is his work on <a class="reference external" href="http://blogs.gnome.org/mr/2010/09/08/tracker-needle/">Tracker Needle</a>
-(written in Vala), Tracker's new GUI search tool,
-to replace the inadequate Tracker Search Tool (written in C).
-I've taken a look, and the design is pretty modern
-(check the video he gives in his <a class="reference external" href="http://blogs.gnome.org/mr/2010/09/08/tracker-needle/">announcement</a>).</p>
-<p>But Martyn has of course done <a class="reference external" href="http://git.gnome.org/browse/tracker/log/?qt=author&amp;q=martyn">far more</a> for Tracker, and does a pretty
-damn good job managing the release.
-One thing he did outside of Tracker that I'm aware of is the
-re-design the <a class="reference external" href="http://gtk.org">http://gtk.org</a> page, giving it a very modern look (which
-it desperately needed).</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/developer-of-note-martyn-russell">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/computing" rel="tag">computing</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/developer-of-note">developer-of-note</a>
-                            <a href="http://tshepang.net/tag/gnome">GNOME</a>
-                            <a href="http://tshepang.net/tag/tracker" class="selected">Tracker</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Aug 13,  2010</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/developer-of-note-philip-van-hoof" rel="bookmark" title="Permanent Link to &quot;developer of note: Philip van Hoof&quot;">developer of note: Philip van Hoof</a>
-                    </h2>
-
-                    <p>There hasn't been anyone who has <a class="reference external" href="http://pvanhoof.be/blog/index.php/category/tracker">publicly talked about Tracker</a> as
-hard as Phillip van Hoof ever since the project was started a few years
-ago. He has recently <a class="reference external" href="http://mail.gnome.org/archives/tracker-list/2010-August/msg00008.html">outlined the current improvements and future
-plans</a> to make it rock even harder (and of course I understand very
-little of it, since there's jargon all over the place, and <a class="reference external" href="http://projects.gnome.org/tracker/">Tracker</a>
-actually covers new ground).</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/developer-of-note-philip-van-hoof">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/computing" rel="tag">computing</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/developer-of-note">developer-of-note</a>
-                            <a href="http://tshepang.net/tag/gnome">GNOME</a>
-                            <a href="http://tshepang.net/tag/tracker" class="selected">Tracker</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">May 20,  2010</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/developer-of-note-aleksander-morgado" rel="bookmark" title="Permanent Link to &quot;developer of note: Aleksander Morgado&quot;">developer of note: Aleksander Morgado</a>
-                    </h2>
-
-                    <p>The <a class="reference external" href="http://projects.gnome.org/tracker/">Tracker</a> team got this new guy, <a class="reference external" href="http://sigquit.wordpress.com/">Aleksander Morgado</a>, <a class="reference external" href="http://mail.gnome.org/archives/tracker-list/2010-May/msg00006.html">doing</a>
-<a class="reference external" href="http://mail.gnome.org/archives/tracker-list/2010-May/msg00037.html">fabulous</a> <a class="reference external" href="http://mail.gnome.org/archives/tracker-list/2010-May/msg00054.html">work</a> <a class="reference external" href="http://mail.gnome.org/archives/tracker-list/2010-April/msg00097.html">on</a> Tracker's extraction code.
-He does so while also providing thorough info on his activities.</p>
-<p>One thing that prompted me to honor him is his work on adding options to
-disable stop words, as well as to enable number indexing,
-fixing an old gripe of mine.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/developer-of-note-aleksander-morgado">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/computing" rel="tag">computing</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/developer-of-note">developer-of-note</a>
-                            <a href="http://tshepang.net/tag/gnome">GNOME</a>
-                            <a href="http://tshepang.net/tag/tracker" class="selected">Tracker</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Apr 14,  2010</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/developer-of-note-michael-biebl" rel="bookmark" title="Permanent Link to &quot;developer of note: Michael Biebl&quot;">developer of note: Michael Biebl</a>
-                    </h2>
-
-                    <p>So I really do honor all Debian Developers especially when they are
-named <a class="reference external" href="http://qa.debian.org/developer.php?login=biebl&#64;debian.org">Michael Biebl</a>. This guy is the lone maintainer of <a class="reference external" href="http://projects.gnome.org/tracker/">Tracker</a>
-and rsyslog in Debian (among others). Not just that but he is also a
-co-maintainer of a large number of GNOME technologies (gnome-session,
-dbus, avahi, gnome-power-manager, gvfs, hal, network-manager...).</p>
-<p>I love especially his role as some sorta QA for Tracker (he's done a
-terrific job of it — most recently offering <a class="reference external" href="http://mail.gnome.org/archives/tracker-list/2010-April/msg00044.html">a bunch of patches</a> to fix
-some linking problems in the code). Oh, and I'm not the only one who
-noticed — <a class="reference external" href="http://tshepang.net/developer-of-note-josselin-mouette">the great Josselin Mouette</a>, <a class="reference external" href="http://np237.livejournal.com/26532.html">did offer accolades too</a> for
-Michael's other work.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/developer-of-note-michael-biebl">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/computing" rel="tag">computing</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/debian">Debian</a>
-                            <a href="http://tshepang.net/tag/developer-of-note">developer-of-note</a>
-                            <a href="http://tshepang.net/tag/tracker" class="selected">Tracker</a>
-                            <a href="http://tshepang.net/tag/gnome">GNOME</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Apr  6,  2010</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/my-patches-committed" rel="bookmark" title="Permanent Link to &quot;my patches committed&quot;">my patches committed</a>
-                    </h2>
-
-                    <p>So, two of the <a class="reference external" href="http://tshepang.net/so-much-learned-via-tracker-bugfixing">patches I created</a> for <a class="reference external" href="http://projects.gnome.org/tracker/">Tracker</a> have been committed
-(commit <a class="reference external" href="http://tshepang.net/so-much-learned-via-tracker-bugfixing">1</a>, <a class="reference external" href="http://git.gnome.org/browse/tracker/commit/?id=ade2655a2f9fecf7100d58a8908493b9d71e2273">2</a>)!</p>
-<p>I consumed much info (and time) during the process, which entailed
-looking at Git usage (branch, checkout, commit, format-patch, ...)
-through <a class="reference external" href="http://pvanhoof.be/blog/">Philip van Hoof</a>'s guidance.</p>
-<hr class="docutils" />
-<p>Philip van Hoof also <a class="reference external" href="http://git.gnome.org/browse/tracker/commit/?id=c5a15f8231c63488605d799b9670aba01898fde4">fixed</a> a hard-to-reproduce bug which was a pain
-for me. The fix is a workaround for a <a class="reference external" href="http://www.gtk.org/">GTK+</a> bug.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/my-patches-committed">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/computing" rel="tag">computing</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/gnome">GNOME</a>
-                            <a href="http://tshepang.net/tag/tracker" class="selected">Tracker</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Apr  2,  2010</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/so-much-learned-via-tracker-bugfixing" rel="bookmark" title="Permanent Link to &quot;so much learned via Tracker bugfixing&quot;">so much learned via Tracker bugfixing</a>
-                    </h2>
-
-                    <p>It's been maybe over a year since I've submitted a patch to any FLOSS
-project and have done so <a class="reference external" href="https://bugzilla.gnome.org/show_bug.cgi?id=614608">three</a> <a class="reference external" href="https://bugzilla.gnome.org/show_bug.cgi?id=614609">times</a> <a class="reference external" href="https://bugzilla.gnome.org/show_bug.cgi?id=614610">today</a>, all for <a class="reference external" href="http://projects.gnome.org/tracker/">Tracker</a>,
-perhaps my most favorite of all pieces of code.</p>
-<p>This started with me nagging <a class="reference external" href="http://blogs.gnome.org/mr/">Martyn Russell</a>, Release Manager for
-Tracker, about the suckage which was exposed by my usage of <a class="reference external" href="http://projects.gnome.org/tracker/images/screenshots/screenshot-tracker-preferences.png">Tracker's
-preferences GUI</a>. He proceeded to encourage me to write a patch, which
-I did. Later on <a class="reference external" href="http://gimpfoo.de/">Michael Natterer</a> of GIMP fame guided me on some UI
-polish work.</p>
-<p>I consumed much info (and time) during the process, which entailed
-looking at the following:</p>
-<ul class="simple">
-<li><a class="reference external" href="http://developer.gnome.org/gtk2/stable/">GTK+ API</a></li>
-<li>Tracker's configuration internals.</li>
-<li>1st look at <a class="reference external" href="http://live.gnome.org/Vala">Vala</a>, the language with which the preferences GUI is
-written.</li>
-<li>Tinkering with <a class="reference external" href="http://glade.gnome.org/">Glade</a>, a RAD tool for quick GUI development, which
-makes things so much easier, especially considering that GTK+ isn't
-so straightforward.</li>
-</ul>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/so-much-learned-via-tracker-bugfixing">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/computing" rel="tag">computing</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/gnome">GNOME</a>
-                            <a href="http://tshepang.net/tag/tracker" class="selected">Tracker</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Mar  4,  2008</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/more-tracker-goodness" rel="bookmark" title="Permanent Link to &quot;more Tracker goodness&quot;">more Tracker goodness</a>
-                    </h2>
-
-                    <p><a class="reference external" href="http://projects.gnome.org/tracker/">Tracker</a>'s applet has recently received a revamp which, when clicked,
-launches Tracker Search Tool instead of displaying the search box.
-That's a minor detail considering <a class="reference external" href="http://jamiemcc.livejournal.com/11308.html">the other work</a> included in the 2
-recent releases, most especially the option to auto-pause the daemon
-when X events (mouse movement, keyboard presses) are taking place, a
-feature which helps with system responsiveness. This shit rocks,
-absolutely!</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/more-tracker-goodness">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/computing" rel="tag">computing</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/tracker" class="selected">Tracker</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Feb  1,  2008</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/tracker-goodness" rel="bookmark" title="Permanent Link to &quot;Tracker goodness&quot;">Tracker goodness</a>
-                    </h2>
-
-                    <p><a class="reference external" href="http://projects.gnome.org/tracker/">Tracker</a> hasn't been around as long as Beagle has but seems more
-advanced, possessing various utilities like the applet which can be used
-to launch all Tracker GUI utilities (Tracker Search Tool, Tracker
-Preferences, and Tracker Statistics), displaying the daemon (trackerd)
-status, providing the functionality of pausing the Tracker daemon, as
-well as providing a (convenient) search dialogue [<a class="reference external" href="http://tshepang.net/more-tracker-goodness">update</a>]. I wonder
-if Beagle has lovely tools like this, but it's main advantage is that it
-supports far more data formats that Tracker does, while it still is
-hungry for memory (version 0.3.2).</p>
-<p>One particular thing that encouraged this post however is Tracker
-Statistics, when I discovered that it actually is self-updating. This
-change, which I apparently missed, was committed October last year, and
-got me really impressed. Now if only all those advanced options were
-less buggy...</p>
-<p>While I'm at it I might as well mention how much I love the new Tracker
-Preferences feature which makes it restart/reindex user's data depending
-on what preferences were changed. That's gorgeous. Now if only it
-performed such restarting/reindex faster than it often does (especially
-when it is indexing), since one often has to wait 'forever' for such to
-happen.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/tracker-goodness">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/computing" rel="tag">computing</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/tracker" class="selected">Tracker</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Jul 25,  2007</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/tracker-060" rel="bookmark" title="Permanent Link to &quot;Tracker 0.6.0&quot;">Tracker 0.6.0</a>
-                    </h2>
-
-                    <p>6 months have passed since the <a class="reference external" href="http://mail.gnome.org/archives/tracker-list/2007-January/msg00249.html">previous Tracker release</a> and it's real
-great to have <a class="reference external" href="http://mail.gnome.org/archives/tracker-list/2007-July/msg00297.html">another fresh one</a>. During development, its GUI
-interface (TST) has went through two revamps, each being an improvement
-on the previous one. This implies that those who have only ever used
-that January's release have missed a TST which had categories (All
-Files, Documents, Images, ...) which were presented as tabs, which
-shouldn't matter anyways since the current interface, which uses a
-sidebar instead, rocks like hell. Another highlight is the inclusion of
-tracker-preferences UI which allows for easy configuration.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/tracker-060">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/computing" rel="tag">computing</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/tracker" class="selected">Tracker</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <h4 class="date">Apr  3,  2007</h4>
-                <div class="post">
-<h2 class="title">
-                        <a href="http://tshepang.net/1st-floss-patch-contribution" rel="bookmark" title="Permanent Link to &quot;1st FLOSS patch contribution&quot;">1st FLOSS patch contribution</a>
-                    </h2>
-
-                    <p>Back in January 2007, I sent a patch that slightly improved the README
-file found in the root directory of <a class="reference external" href="http://projects.gnome.org/tracker/">Tracker</a>, an exciting project that
-is meant to be a data indexer (like <a class="reference external" href="http://en.wikipedia.org/wiki/Google_Desktop">Google Desktop</a>) and much more.
-This is what I consider the first ever FLOSS contribution I ever made. I
-went on to make some minor code patches which also taught me a few
-things, like <a class="reference external" href="http://developer.gnome.org/gtk2/stable/">GTK+</a> and <a class="reference external" href="http://developer.gnome.org/glib/stable/">GLib API</a>.</p>
-
-
-                    <div class="clear"></div>
-                    <div class="info">
-<a href="http://tshepang.net/1st-floss-patch-contribution">posted at 12:00 am</a>&nbsp;&middot;&nbsp;<a href="http://tshepang.net/computing" rel="tag">computing</a>
-                        <div class="tags">
-                            <a href="http://tshepang.net/tag/gnome">GNOME</a>
-                            <a href="http://tshepang.net/tag/tracker" class="selected">Tracker</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-
-                <div class="clear"></div>
-                <div id="footer">
-                    <p>
-                    Mockingbird theme by <a href="http://nevanscott.com/">Nevan Scott</a>
-                    &middot;
-                    <a class="atom" href="http://tshepang.net/feeds/all.atom.xml">Feed</a>
-                </div>
-            </div>
-            <div class="clear"></div>
         </div>
-    <script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    <script type="text/javascript">
-    try {
-        var pageTracker = _gat._getTracker("UA-16685250-3");
-    pageTracker._trackPageview();
-    } catch(err) {}</script>
-    </body>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/developer-of-note-martyn-russell">developer of note: Martyn Russell</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2010-09-10T00:00:00">
+        <i class="icon-calendar"></i>2010-09-10
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/computing"><i class="icon-folder-open"></i>computing</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/developer-of-note"><i class="icon-tag"></i>developer-of-note</a>
+	<a href="http://tshepang.net/tag/gnome"><i class="icon-tag"></i>GNOME</a>
+	<a href="http://tshepang.net/tag/tracker"><i class="icon-tag"></i>Tracker</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/developer-of-note-martyn-russell">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/developer-of-note-philip-van-hoof">developer of note: Philip van Hoof</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2010-08-13T00:00:00">
+        <i class="icon-calendar"></i>2010-08-13
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/computing"><i class="icon-folder-open"></i>computing</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/developer-of-note"><i class="icon-tag"></i>developer-of-note</a>
+	<a href="http://tshepang.net/tag/gnome"><i class="icon-tag"></i>GNOME</a>
+	<a href="http://tshepang.net/tag/tracker"><i class="icon-tag"></i>Tracker</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/developer-of-note-philip-van-hoof">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/developer-of-note-aleksander-morgado">developer of note: Aleksander Morgado</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2010-05-20T00:00:00">
+        <i class="icon-calendar"></i>2010-05-20
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/computing"><i class="icon-folder-open"></i>computing</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/developer-of-note"><i class="icon-tag"></i>developer-of-note</a>
+	<a href="http://tshepang.net/tag/gnome"><i class="icon-tag"></i>GNOME</a>
+	<a href="http://tshepang.net/tag/tracker"><i class="icon-tag"></i>Tracker</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/developer-of-note-aleksander-morgado">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/developer-of-note-michael-biebl">developer of note: Michael Biebl</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2010-04-14T00:00:00">
+        <i class="icon-calendar"></i>2010-04-14
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/computing"><i class="icon-folder-open"></i>computing</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/debian"><i class="icon-tag"></i>Debian</a>
+	<a href="http://tshepang.net/tag/developer-of-note"><i class="icon-tag"></i>developer-of-note</a>
+	<a href="http://tshepang.net/tag/tracker"><i class="icon-tag"></i>Tracker</a>
+	<a href="http://tshepang.net/tag/gnome"><i class="icon-tag"></i>GNOME</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/developer-of-note-michael-biebl">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/my-patches-committed">my patches committed</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2010-04-06T00:00:00">
+        <i class="icon-calendar"></i>2010-04-06
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/computing"><i class="icon-folder-open"></i>computing</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/gnome"><i class="icon-tag"></i>GNOME</a>
+	<a href="http://tshepang.net/tag/tracker"><i class="icon-tag"></i>Tracker</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/my-patches-committed">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/so-much-learned-via-tracker-bugfixing">so much learned via Tracker bugfixing</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2010-04-02T00:00:00">
+        <i class="icon-calendar"></i>2010-04-02
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/computing"><i class="icon-folder-open"></i>computing</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/gnome"><i class="icon-tag"></i>GNOME</a>
+	<a href="http://tshepang.net/tag/tracker"><i class="icon-tag"></i>Tracker</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/so-much-learned-via-tracker-bugfixing">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/more-tracker-goodness">more Tracker goodness</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2008-03-04T00:00:00">
+        <i class="icon-calendar"></i>2008-03-04
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/computing"><i class="icon-folder-open"></i>computing</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/tracker"><i class="icon-tag"></i>Tracker</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/more-tracker-goodness">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/tracker-goodness">Tracker goodness</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2008-02-01T00:00:00">
+        <i class="icon-calendar"></i>2008-02-01
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/computing"><i class="icon-folder-open"></i>computing</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/tracker"><i class="icon-tag"></i>Tracker</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/tracker-goodness">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/tracker-060">Tracker 0.6.0</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2007-07-25T00:00:00">
+        <i class="icon-calendar"></i>2007-07-25
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/computing"><i class="icon-folder-open"></i>computing</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/tracker"><i class="icon-tag"></i>Tracker</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/tracker-060">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="http://tshepang.net/1st-floss-patch-contribution">1st FLOSS patch contribution</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2007-04-03T00:00:00">
+        <i class="icon-calendar"></i>2007-04-03
+</abbr>
+<span class="label">By</span>
+<a href="http://tshepang.net/author/tshepang-lekhonkhobe.html"><i class="icon-user"></i>Tshepang Lekhonkhobe</a>
+<span class="label">Category</span>
+<a href="http://tshepang.net/computing"><i class="icon-folder-open"></i>computing</a>.
+
+
+<span class="label">Tags</span>
+	<a href="http://tshepang.net/tag/gnome"><i class="icon-tag"></i>GNOME</a>
+	<a href="http://tshepang.net/tag/tracker"><i class="icon-tag"></i>Tracker</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary">
+                        <a class="btn primary xsmall" href="http://tshepang.net/1st-floss-patch-contribution">more ...</a>
+                </div>
+        </div>
+        <hr />
+
+                <section id="content" class="body">
+                <h1>Pages</h1>
+                        <li><a href="http://tshepang.net/about-me.html">about me</a></li>
+                        <li><a href="http://tshepang.net/key-posts.html">key posts</a></li>
+                </section>
+        </div><!--/span-->
+
+                <div class="span3 well sidebar-nav" id="sidebar">
+<ul class="nav nav-list">
+
+<li class="nav-header"><h4><i class="icon-folder-close icon-large"></i>Categories</h4></li>
+<li>
+<a href="http://tshepang.net/arts">
+    <i class="icon-folder-open icon-large"></i>arts
+</a>
+</li>
+<li>
+<a href="http://tshepang.net/computing">
+    <i class="icon-folder-open icon-large"></i>computing
+</a>
+</li>
+<li>
+<a href="http://tshepang.net/misc">
+    <i class="icon-folder-open icon-large"></i>misc
+</a>
+</li>
+
+<li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/wajig">
+        <i class="icon-tag icon-large"></i>wajig
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/non-floss">
+        <i class="icon-tag icon-large"></i>non-FLOSS
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/politics">
+        <i class="icon-tag icon-large"></i>politics
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://tshepang.net/tag/jazz">
+        <i class="icon-tag icon-large"></i>jazz
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://tshepang.net/tag/stage">
+        <i class="icon-tag icon-large"></i>stage
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://tshepang.net/tag/hip-hop">
+        <i class="icon-tag icon-large"></i>hip-hop
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://tshepang.net/tag/">
+        <i class="icon-tag icon-large"></i>
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://tshepang.net/tag/documentary">
+        <i class="icon-tag icon-large"></i>documentary
+    </a>
+</li>
+<li class="tag-1">
+    <a href="http://tshepang.net/tag/project-of-note">
+        <i class="icon-tag icon-large"></i>project-of-note
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://tshepang.net/tag/decent">
+        <i class="icon-tag icon-large"></i>decent
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://tshepang.net/tag/luck">
+        <i class="icon-tag icon-large"></i>luck
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://tshepang.net/tag/future-tech">
+        <i class="icon-tag icon-large"></i>future-tech
+    </a>
+</li>
+<li class="tag-1">
+    <a href="http://tshepang.net/tag/links">
+        <i class="icon-tag icon-large"></i>links
+    </a>
+</li>
+<li class="tag-1">
+    <a href="http://tshepang.net/tag/music">
+        <i class="icon-tag icon-large"></i>music
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/very-good">
+        <i class="icon-tag icon-large"></i>very-good
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/hardware">
+        <i class="icon-tag icon-large"></i>hardware
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/gaming">
+        <i class="icon-tag icon-large"></i>gaming
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/humor">
+        <i class="icon-tag icon-large"></i>humor
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/atheism">
+        <i class="icon-tag icon-large"></i>atheism
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/vcs">
+        <i class="icon-tag icon-large"></i>VCS
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://tshepang.net/tag/short">
+        <i class="icon-tag icon-large"></i>short
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/top-tracks">
+        <i class="icon-tag icon-large"></i>top-tracks
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://tshepang.net/tag/unrated">
+        <i class="icon-tag icon-large"></i>unrated
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://tshepang.net/tag/tv">
+        <i class="icon-tag icon-large"></i>tv
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://tshepang.net/tag/comic">
+        <i class="icon-tag icon-large"></i>comic
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/blogging">
+        <i class="icon-tag icon-large"></i>blogging
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/ethics">
+        <i class="icon-tag icon-large"></i>ethics
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/tracker">
+        <i class="icon-tag icon-large"></i>Tracker
+    </a>
+</li>
+<li class="tag-1">
+    <a href="http://tshepang.net/tag/non-python">
+        <i class="icon-tag icon-large"></i>non-Python
+    </a>
+</li>
+<li class="tag-1">
+    <a href="http://tshepang.net/tag/untagged">
+        <i class="icon-tag icon-large"></i>untagged
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://tshepang.net/tag/excellent">
+        <i class="icon-tag icon-large"></i>excellent
+    </a>
+</li>
+<li class="tag-1">
+    <a href="http://tshepang.net/tag/debian">
+        <i class="icon-tag icon-large"></i>Debian
+    </a>
+</li>
+<li class="tag-1">
+    <a href="http://tshepang.net/tag/developer-of-note">
+        <i class="icon-tag icon-large"></i>developer-of-note
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://tshepang.net/tag/good">
+        <i class="icon-tag icon-large"></i>good
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://tshepang.net/tag/rock">
+        <i class="icon-tag icon-large"></i>rock
+    </a>
+</li>
+<li class="tag-2">
+    <a href="http://tshepang.net/tag/non-debian">
+        <i class="icon-tag icon-large"></i>non-Debian
+    </a>
+</li>
+<li class="tag-1">
+    <a href="http://tshepang.net/tag/gnome">
+        <i class="icon-tag icon-large"></i>GNOME
+    </a>
+</li>
+<li class="tag-1">
+    <a href="http://tshepang.net/tag/python">
+        <i class="icon-tag icon-large"></i>Python
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://tshepang.net/tag/classical">
+        <i class="icon-tag icon-large"></i>classical
+    </a>
+</li>
+<li class="tag-3">
+    <a href="http://tshepang.net/tag/anarchism">
+        <i class="icon-tag icon-large"></i>anarchism
+    </a>
+</li>
+<li class="tag-1">
+    <a href="http://tshepang.net/tag/quote">
+        <i class="icon-tag icon-large"></i>quote
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://tshepang.net/tag/non-gnome">
+        <i class="icon-tag icon-large"></i>non-GNOME
+    </a>
+</li>
+
+<li class="nav-header"><h4><i class="icon-twitter-sign"></i>Twitter</h4></li>
+<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 4,
+  interval: 30000,
+  width: 'auto',
+  height: 300,
+  theme: {
+	shell: {
+	  background: '#f5f5f5',
+	  color: '#000000'
+	},
+	tweets: {
+	  background: '#ffffff',
+	  color: '#000000',
+	  links: '#1a50a1'
+	}
+  },
+  features: {
+	scrollbar: false,
+	loop: false,
+	live: false,
+	behavior: 'all'
+  }
+}).render().setUser('tshepang_dev').start();
+</script>
+
+</ul>        </div><!--/.well -->
+
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <address id="about">
+                Proudly powered by <a href="http://pelican.notmyidea.org/">Pelican <i class="icon-external-link"></i></a>,
+                                which takes great advantage of <a href="http://python.org">Python <i class="icon-external-link"></i></a>.
+        </address><!-- /#about -->
+
+        <p>The theme is from <a href="http://twitter.github.com/bootstrap/">Bootstrap from Twitter <i class="icon-external-link"></i></a>,
+                   and <a href="http://fortawesome.github.com/Font-Awesome/">Font-Awesome <i class="icon-external-link"></i></a>, thanks!</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+	var pageTracker = _gat._getTracker("UA-16685250-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<script type="text/javascript">
+    var disqus_shortname = 'tshepanglogs';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+
+    <!-- Le javascript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://tshepang.net/theme/js/jquery-1.7.2.min.js"></script>
+    <script src="http://tshepang.net/theme/js/bootstrap.min.js"></script>
+  </body>
 </html>
