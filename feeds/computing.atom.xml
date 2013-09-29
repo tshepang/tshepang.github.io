@@ -1,33 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-09-29T18:46:48+02:00</updated><entry><title>projects with excellent documentation</title><link href="http://tshepang.net/projects-with-excellent-documentation" rel="alternate"></link><updated>2013-09-29T18:46:48+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:projects-with-excellent-documentation</id><summary type="html">&lt;p&gt;Here is a list of projects whose documentation I found to be
-highly-detailed and well-written.&lt;/p&gt;
-&lt;div class="section" id="big"&gt;
-&lt;h2&gt;big&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;The &lt;a class="reference external" href="http://cmgm.stanford.edu/classes/unix/emacs.html"&gt;introductory tutorial of GNU Emacs&lt;/a&gt; (looks a lot better when
-run from within Emacs), is written in a very gentle and careful way;
-it's among the best tutorials I've seen.  Same applies to &lt;a class="reference external" href="http://www.gnu.org/software/emacs/manual/html_node/emacs"&gt;the Emacs
-manual&lt;/a&gt;, which I'm tempted to call the best I've read yet. It
-really, really goes into painstaking detail, and seems to have been
-written by professional technical writers.&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://docs.python.org"&gt;CPython&lt;/a&gt; - I used to appreciate this more before I got closely
-involved, noticing warts here and there, and therefore taking it for
-granted.&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.sqlite.org/docs.html"&gt;sqlite3&lt;/a&gt; - quite extensive, especially for an embeddable DBMS&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="small"&gt;
-&lt;h2&gt;small&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://fedorahosted.org/suds/wiki/Documentation"&gt;Suds&lt;/a&gt; - multiple, well-written examples&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.nongnu.org/rdiff-backup/examples.html"&gt;rdiff-backup usage examples&lt;/a&gt; - much smaller than the others listed
-here, but nevertheless deserves mention because it's both gentle and
-thorough&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;As a sidenote, I've heard great things about &lt;a class="reference external" href="https://docs.djangoproject.com"&gt;Django's&lt;/a&gt;, but haven't
-really looked yet.&lt;/p&gt;
-&lt;/div&gt;
-</summary><category term="untagged"></category></entry><entry><title>superstar projects, and associated implementation languages</title><link href="http://tshepang.net/superstar-projects-and-associated-implementation-languages" rel="alternate"></link><updated>2013-09-29T18:46:48+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:superstar-projects-and-associated-implementation-languages</id><summary type="html">&lt;div class="section" id="c"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-09-29T18:46:48+02:00</updated><entry><title>superstar projects, and associated implementation languages</title><link href="http://tshepang.net/superstar-projects-and-associated-implementation-languages" rel="alternate"></link><updated>2013-09-29T18:46:48+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:superstar-projects-and-associated-implementation-languages</id><summary type="html">&lt;div class="section" id="c"&gt;
 &lt;h2&gt;C&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;GCC&lt;/li&gt;
@@ -403,7 +375,35 @@ Ir
 &lt;p&gt;---&lt;/p&gt;
 &lt;p&gt;Since I normally work at too high a level to care about CPU
 instructions cycles at this detail, I found the exercise eye-opening.&lt;/p&gt;
-</summary><category term="project-of-note"></category><category term="non-Python"></category></entry><entry><title>mentioning alternatives on a prominent place</title><link href="http://tshepang.net/mentioning-alternatives-on-a-prominent-place" rel="alternate"></link><updated>2013-08-27T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-08-27:mentioning-alternatives-on-a-prominent-place</id><summary type="html">&lt;p&gt;It's an honorable thing to mention alternative and/or competing
+</summary><category term="project-of-note"></category><category term="non-Python"></category></entry><entry><title>projects with excellent documentation</title><link href="http://tshepang.net/projects-with-excellent-documentation" rel="alternate"></link><updated>2013-09-23T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-23:projects-with-excellent-documentation</id><summary type="html">&lt;p&gt;Here is a list of projects whose documentation I found to be
+highly-detailed and well-written.&lt;/p&gt;
+&lt;div class="section" id="big"&gt;
+&lt;h2&gt;big&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The &lt;a class="reference external" href="http://cmgm.stanford.edu/classes/unix/emacs.html"&gt;introductory tutorial of GNU Emacs&lt;/a&gt; (looks a lot better when
+run from within Emacs), is written in a very gentle and careful way;
+it's among the best tutorials I've seen.  Same applies to &lt;a class="reference external" href="http://www.gnu.org/software/emacs/manual/html_node/emacs"&gt;the Emacs
+manual&lt;/a&gt;, which I'm tempted to call the best I've read yet. It
+really, really goes into painstaking detail, and seems to have been
+written by professional technical writers.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://docs.python.org"&gt;CPython&lt;/a&gt; - I used to appreciate this more before I got closely
+involved, noticing warts here and there, and therefore taking it for
+granted.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.sqlite.org/docs.html"&gt;sqlite3&lt;/a&gt; - quite extensive, especially for an embeddable DBMS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="small"&gt;
+&lt;h2&gt;small&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://fedorahosted.org/suds/wiki/Documentation"&gt;Suds&lt;/a&gt; - multiple, well-written examples&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.nongnu.org/rdiff-backup/examples.html"&gt;rdiff-backup usage examples&lt;/a&gt; - much smaller than the others listed
+here, but nevertheless deserves mention because it's both gentle and
+thorough&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As a sidenote, I've heard great things about &lt;a class="reference external" href="https://docs.djangoproject.com"&gt;Django's&lt;/a&gt;, but haven't
+really looked yet.&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="untagged"></category></entry><entry><title>mentioning alternatives on a prominent place</title><link href="http://tshepang.net/mentioning-alternatives-on-a-prominent-place" rel="alternate"></link><updated>2013-08-27T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-08-27:mentioning-alternatives-on-a-prominent-place</id><summary type="html">&lt;p&gt;It's an honorable thing to mention alternative and/or competing
 technologies on a project website.  It's even more interesting when
 this is done on a promiment page. Here's a few of those who do it:&lt;/p&gt;
 &lt;ul class="simple"&gt;
