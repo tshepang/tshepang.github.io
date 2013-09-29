@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-09-29T17:04:11+02:00</updated><entry><title>about 'developer of note' series</title><link href="http://tshepang.net/about-developer-of-note-series" rel="alternate"></link><updated>2013-09-29T17:04:11+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:about-developer-of-note-series</id><summary type="html">&lt;p&gt;I respect a lot of software developers, but many of those are not
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-09-29T17:16:42+02:00</updated><entry><title>about 'developer of note' series</title><link href="http://tshepang.net/about-developer-of-note-series" rel="alternate"></link><updated>2013-09-29T17:16:42+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:about-developer-of-note-series</id><summary type="html">&lt;p&gt;I respect a lot of software developers, but many of those are not
 going to have an entry in this series, and not because they are lesser
 in my eyes.&lt;/p&gt;
 &lt;p&gt;Here's the criteria I use to regard someone as &lt;a class="reference external" href="http://tshepang.net/tags#developer-of-note-ref"&gt;developer of the
@@ -18,12 +18,40 @@ some new triggers along the way.&lt;/li&gt;
 some thing that I truly appreciate.
 At times, I fail to put into words just how much.&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="developer-of-note"></category></entry><entry><title>top sites</title><link href="http://tshepang.net/top-sites" rel="alternate"></link><updated>2013-09-29T16:23:42+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:top-sites</id><summary type="html">&lt;p&gt;&lt;strong&gt;atheist writing&lt;/strong&gt;: &lt;a class="reference external" href="http://scienceblogs.com/pharyngula/"&gt;Pharyngula&lt;/a&gt;&lt;/p&gt;
+</summary><category term="developer-of-note"></category></entry><entry><title>top sites</title><link href="http://tshepang.net/top-sites" rel="alternate"></link><updated>2013-09-29T17:14:41+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:top-sites</id><summary type="html">&lt;p&gt;&lt;strong&gt;atheist writing&lt;/strong&gt;: &lt;a class="reference external" href="http://scienceblogs.com/pharyngula/"&gt;Pharyngula&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Linux-related news&lt;/strong&gt;: &lt;a class="reference external" href="http://lwn.net/"&gt;LWN&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;rationality&lt;/strong&gt;: &lt;a class="reference external" href="http://lesswrong.com/"&gt;Less Wrong&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;software development&lt;/strong&gt;: &lt;a class="reference external" href="http://stackoverflow.com/"&gt;Stack Overflow&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;HTML5&lt;/strong&gt;: &lt;a class="reference external" href="http://diveintohtml5.info/"&gt;diveintohtml5&lt;/a&gt;&lt;/p&gt;
-</summary></entry><entry><title>superstar projects, and associated implementation languages</title><link href="http://tshepang.net/superstar-projects-and-associated-implementation-languages" rel="alternate"></link><updated>2013-09-29T16:23:42+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:superstar-projects-and-associated-implementation-languages</id><summary type="html">&lt;div class="section" id="c"&gt;
+</summary></entry><entry><title>projects with excellent documentation</title><link href="http://tshepang.net/projects-with-excellent-documentation" rel="alternate"></link><updated>2013-09-29T17:14:41+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:projects-with-excellent-documentation</id><summary type="html">&lt;p&gt;Here is a list of projects whose documentation I found to be
+highly-detailed and well-written.&lt;/p&gt;
+&lt;div class="section" id="big"&gt;
+&lt;h2&gt;big&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The &lt;a class="reference external" href="http://cmgm.stanford.edu/classes/unix/emacs.html"&gt;introductory tutorial of GNU Emacs&lt;/a&gt; (looks a lot better when
+run from within Emacs), is written in a very gentle and careful way;
+it's among the best tutorials I've seen.  Same applies to &lt;a class="reference external" href="http://www.gnu.org/software/emacs/manual/html_node/emacs"&gt;the Emacs
+manual&lt;/a&gt;, which I'm tempted to call the best I've read yet. It
+really, really goes into painstaking detail, and seems to have been
+written by professional technical writers.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://docs.python.org"&gt;CPython&lt;/a&gt; - I used to appreciate this more before I got closely
+involved, noticing warts here and there, and therefore taking it for
+granted.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.sqlite.org/docs.html"&gt;sqlite3&lt;/a&gt; - quite extensive, especially for an embeddable DBMS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="small"&gt;
+&lt;h2&gt;small&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://fedorahosted.org/suds/wiki/Documentation"&gt;Suds&lt;/a&gt; - multiple, well-written examples&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.nongnu.org/rdiff-backup/examples.html"&gt;rdiff-backup usage examples&lt;/a&gt; - much smaller than the others listed
+here, but nevertheless deserves mention because it's both gentle and
+thorough&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As a sidenote, I've heard great things about &lt;a class="reference external" href="https://docs.djangoproject.com"&gt;Django's&lt;/a&gt;, but haven't
+really looked yet.&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="untagged"></category></entry><entry><title>superstar projects, and associated implementation languages</title><link href="http://tshepang.net/superstar-projects-and-associated-implementation-languages" rel="alternate"></link><updated>2013-09-29T17:14:41+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:superstar-projects-and-associated-implementation-languages</id><summary type="html">&lt;div class="section" id="c"&gt;
 &lt;h2&gt;C&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;GCC&lt;/li&gt;
@@ -77,7 +105,7 @@ At times, I fail to put into words just how much.&lt;/li&gt;
 &lt;li&gt;Ruby on Rails&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</summary><category term="untagged"></category></entry><entry><title>tools I use all the time</title><link href="http://tshepang.net/tools-i-use-all-the-time" rel="alternate"></link><updated>2013-09-29T16:23:42+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:tools-i-use-all-the-time</id><summary type="html">&lt;p&gt;Following are tools I use all the time, but am not necessarily loving.
+</summary><category term="untagged"></category></entry><entry><title>tools I use all the time</title><link href="http://tshepang.net/tools-i-use-all-the-time" rel="alternate"></link><updated>2013-09-29T17:14:41+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:tools-i-use-all-the-time</id><summary type="html">&lt;p&gt;Following are tools I use all the time, but am not necessarily loving.
 For those I like a lot, see &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;this list&lt;/a&gt;.&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/li&gt;
@@ -107,35 +135,7 @@ experience issues&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://meldmerge.org"&gt;Meld&lt;/a&gt;: the most excellent diff tool I've used yet&lt;/li&gt;
 &lt;li&gt;git-cola: &lt;a class="reference external" href="http://tshepang.net/project-of-note-git-cola"&gt;why me loves it&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="untagged"></category></entry><entry><title>projects with excellent documentation</title><link href="http://tshepang.net/projects-with-excellent-documentation" rel="alternate"></link><updated>2013-09-29T16:23:42+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:projects-with-excellent-documentation</id><summary type="html">&lt;p&gt;Here is a list of projects whose documentation I found to be
-highly-detailed and well-written.&lt;/p&gt;
-&lt;div class="section" id="big"&gt;
-&lt;h2&gt;big&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;The &lt;a class="reference external" href="http://cmgm.stanford.edu/classes/unix/emacs.html"&gt;introductory tutorial of GNU Emacs&lt;/a&gt; (looks a lot better when
-run from within Emacs), is written in a very gentle and careful way;
-it's among the best tutorials I've seen.  Same applies to &lt;a class="reference external" href="http://www.gnu.org/software/emacs/manual/html_node/emacs"&gt;the Emacs
-manual&lt;/a&gt;, which I'm tempted to call the best I've read yet. It
-really, really goes into painstaking detail, and seems to have been
-written by professional technical writers.&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://docs.python.org"&gt;CPython&lt;/a&gt; - I used to appreciate this more before I got closely
-involved, noticing warts here and there, and therefore taking it for
-granted.&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.sqlite.org/docs.html"&gt;sqlite3&lt;/a&gt; - quite extensive, especially for an embeddable DBMS&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="small"&gt;
-&lt;h2&gt;small&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://fedorahosted.org/suds/wiki/Documentation"&gt;Suds&lt;/a&gt; - multiple, well-written examples&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.nongnu.org/rdiff-backup/examples.html"&gt;rdiff-backup usage examples&lt;/a&gt; - much smaller than the others listed
-here, but nevertheless deserves mention because it's both gentle and
-thorough&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;As a sidenote, I've heard great things about &lt;a class="reference external" href="https://docs.djangoproject.com"&gt;Django's&lt;/a&gt;, but haven't
-really looked yet.&lt;/p&gt;
-&lt;/div&gt;
-</summary><category term="untagged"></category></entry><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2013-09-29T16:23:42+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
+</summary><category term="untagged"></category></entry><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2013-09-29T17:14:41+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
 I do celebrate each time I see a project use it. So, here I list the
 most notable projects I am aware of that do, which also gives me hope
 that it isn't being suffocated too much by Git:&lt;/p&gt;
@@ -151,7 +151,7 @@ ecosystem&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://stackexchange.com"&gt;Stack Exchange&lt;/a&gt; (proprietary), a family of Q&amp;amp;A sites which are,
 in my opinion, the best yet&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="VCS"></category></entry><entry><title>favorite FLOSS</title><link href="http://tshepang.net/favorite-floss" rel="alternate"></link><updated>2013-09-29T16:23:42+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:favorite-floss</id><summary type="html">&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
+</summary><category term="VCS"></category></entry><entry><title>favorite FLOSS</title><link href="http://tshepang.net/favorite-floss" rel="alternate"></link><updated>2013-09-29T17:14:41+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:favorite-floss</id><summary type="html">&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
 it has to both be personally useful and I have to like it a lot:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;backup:&lt;/strong&gt; &lt;a class="reference external" href="http://tshepang.net/project-of-note-rdiff-backup"&gt;rdiff-backup&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;desktop&lt;/strong&gt;: &lt;a class="reference external" href="http://www.gnome.org"&gt;GNOME&lt;/a&gt;&lt;/p&gt;
@@ -166,7 +166,7 @@ OpenSSH&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;version control system&lt;/strong&gt;: &lt;a class="reference external" href="http://mercurial.selenic.com"&gt;Mercurial&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;web browser&lt;/strong&gt;: Chrome/Chromium&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;non-FLOSS:&lt;/strong&gt; &lt;a class="reference external" href="http://disqus.com"&gt;Disqus&lt;/a&gt;, &lt;a class="reference external" href="http://mail.google.com/mail"&gt;Gmail&lt;/a&gt;, &lt;a class="reference external" href="http://stackexchange.com"&gt;Stack Exchange&lt;/a&gt;, &lt;a class="reference external" href="http://bitbucket.org"&gt;Bitbucket&lt;/a&gt;&lt;/p&gt;
-</summary><category term="untagged"></category></entry><entry><title>top musicians</title><link href="http://tshepang.net/top-musicians" rel="alternate"></link><updated>2013-09-29T16:23:42+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:top-musicians</id><summary type="html">&lt;p&gt;The best musicians in history,
+</summary><category term="untagged"></category></entry><entry><title>top musicians</title><link href="http://tshepang.net/top-musicians" rel="alternate"></link><updated>2013-09-29T17:14:41+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:top-musicians</id><summary type="html">&lt;p&gt;The best musicians in history,
 created with the help of &lt;a class="reference external" href="http://tshepang.net/simple-point-system-for-rating-music"&gt;a simple point system&lt;/a&gt;.&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/top-tracks-fela-kuti"&gt;Fela Kuti&lt;/a&gt;, 27&lt;/li&gt;
@@ -184,7 +184,7 @@ musicians (Fela Kuti, Bob Marley, and Burning Spear); I was only
 surprised that the later entrants, Salif Keita and Letta Mbulu beat
 mighty Bob, and that was based on just my thinking without actually
 making a list of tracks. Intuition isn't always reliable.&lt;/p&gt;
-</summary><category term="music"></category></entry><entry><title>top tracks: Fela Kuti</title><link href="http://tshepang.net/top-tracks-fela-kuti" rel="alternate"></link><updated>2013-09-29T16:23:42+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:top-tracks-fela-kuti</id><summary type="html">&lt;div class="section" id="landmarks"&gt;
+</summary><category term="music"></category></entry><entry><title>top tracks: Fela Kuti</title><link href="http://tshepang.net/top-tracks-fela-kuti" rel="alternate"></link><updated>2013-09-29T17:14:41+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:top-tracks-fela-kuti</id><summary type="html">&lt;div class="section" id="landmarks"&gt;
 &lt;h2&gt;3 landmarks&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;strong&gt;Lady&lt;/strong&gt; (&lt;em&gt;Shakara&lt;/em&gt; - 1972)&lt;/li&gt;
