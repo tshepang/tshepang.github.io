@@ -1,24 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-09-29T17:16:42+02:00</updated><entry><title>about 'developer of note' series</title><link href="http://tshepang.net/about-developer-of-note-series" rel="alternate"></link><updated>2013-09-29T17:16:42+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:about-developer-of-note-series</id><summary type="html">&lt;p&gt;I respect a lot of software developers, but many of those are not
-going to have an entry in this series, and not because they are lesser
-in my eyes.&lt;/p&gt;
-&lt;p&gt;Here's the criteria I use to regard someone as &lt;a class="reference external" href="http://tshepang.net/tags#developer-of-note-ref"&gt;developer of the
-note&lt;/a&gt;:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;I need a news item that would trigger a post.
-Thing is, if you write about someone,
-you actually need to have some content (duh!),
-and saying &amp;quot;Guide van Rossum rocks for creating Python, and am grateful!&amp;quot;
-is simply not enough, hence a need for a trigger.
-In fact, I used to call this series &lt;em&gt;developer of the moment&lt;/em&gt;,
-but at some point felt that the new name is more fitting,
-especially since a few of these honorable developers actually generated
-some new triggers along the way.&lt;/li&gt;
-&lt;li&gt;The more obvious requirement is that the developer need to have done
-some thing that I truly appreciate.
-At times, I fail to put into words just how much.&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="developer-of-note"></category></entry><entry><title>projects with excellent documentation</title><link href="http://tshepang.net/projects-with-excellent-documentation" rel="alternate"></link><updated>2013-09-29T17:14:41+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:projects-with-excellent-documentation</id><summary type="html">&lt;p&gt;Here is a list of projects whose documentation I found to be
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-09-29T18:46:48+02:00</updated><entry><title>projects with excellent documentation</title><link href="http://tshepang.net/projects-with-excellent-documentation" rel="alternate"></link><updated>2013-09-29T18:46:48+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:projects-with-excellent-documentation</id><summary type="html">&lt;p&gt;Here is a list of projects whose documentation I found to be
 highly-detailed and well-written.&lt;/p&gt;
 &lt;div class="section" id="big"&gt;
 &lt;h2&gt;big&lt;/h2&gt;
@@ -46,7 +27,7 @@ thorough&lt;/li&gt;
 &lt;p&gt;As a sidenote, I've heard great things about &lt;a class="reference external" href="https://docs.djangoproject.com"&gt;Django's&lt;/a&gt;, but haven't
 really looked yet.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="untagged"></category></entry><entry><title>superstar projects, and associated implementation languages</title><link href="http://tshepang.net/superstar-projects-and-associated-implementation-languages" rel="alternate"></link><updated>2013-09-29T17:14:41+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:superstar-projects-and-associated-implementation-languages</id><summary type="html">&lt;div class="section" id="c"&gt;
+</summary><category term="untagged"></category></entry><entry><title>superstar projects, and associated implementation languages</title><link href="http://tshepang.net/superstar-projects-and-associated-implementation-languages" rel="alternate"></link><updated>2013-09-29T18:46:48+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:superstar-projects-and-associated-implementation-languages</id><summary type="html">&lt;div class="section" id="c"&gt;
 &lt;h2&gt;C&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;GCC&lt;/li&gt;
@@ -100,7 +81,7 @@ really looked yet.&lt;/p&gt;
 &lt;li&gt;Ruby on Rails&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</summary><category term="untagged"></category></entry><entry><title>tools I use all the time</title><link href="http://tshepang.net/tools-i-use-all-the-time" rel="alternate"></link><updated>2013-09-29T17:14:41+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:tools-i-use-all-the-time</id><summary type="html">&lt;p&gt;Following are tools I use all the time, but am not necessarily loving.
+</summary><category term="untagged"></category></entry><entry><title>tools I use all the time</title><link href="http://tshepang.net/tools-i-use-all-the-time" rel="alternate"></link><updated>2013-09-29T18:46:48+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:tools-i-use-all-the-time</id><summary type="html">&lt;p&gt;Following are tools I use all the time, but am not necessarily loving.
 For those I like a lot, see &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;this list&lt;/a&gt;.&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/li&gt;
@@ -130,7 +111,7 @@ experience issues&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://meldmerge.org"&gt;Meld&lt;/a&gt;: the most excellent diff tool I've used yet&lt;/li&gt;
 &lt;li&gt;git-cola: &lt;a class="reference external" href="http://tshepang.net/project-of-note-git-cola"&gt;why me loves it&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="untagged"></category></entry><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2013-09-29T17:14:41+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
+</summary><category term="untagged"></category></entry><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2013-09-29T18:46:48+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
 I do celebrate each time I see a project use it. So, here I list the
 most notable projects I am aware of that do, which also gives me hope
 that it isn't being suffocated too much by Git:&lt;/p&gt;
@@ -146,7 +127,26 @@ ecosystem&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://stackexchange.com"&gt;Stack Exchange&lt;/a&gt; (proprietary), a family of Q&amp;amp;A sites which are,
 in my opinion, the best yet&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="VCS"></category></entry><entry><title>favorite FLOSS</title><link href="http://tshepang.net/favorite-floss" rel="alternate"></link><updated>2013-09-29T17:14:41+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:favorite-floss</id><summary type="html">&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
+</summary><category term="VCS"></category></entry><entry><title>about 'developer of note' series</title><link href="http://tshepang.net/about-developer-of-note-series" rel="alternate"></link><updated>2013-09-29T18:46:48+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:about-developer-of-note-series</id><summary type="html">&lt;p&gt;I respect a lot of software developers, but many of those are not
+going to have an entry in this series, and not because they are lesser
+in my eyes.&lt;/p&gt;
+&lt;p&gt;Here's the criteria I use to regard someone as &lt;a class="reference external" href="http://tshepang.net/tags#developer-of-note-ref"&gt;developer of the
+note&lt;/a&gt;:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;I need a news item that would trigger a post.
+Thing is, if you write about someone,
+you actually need to have some content (duh!),
+and saying &amp;quot;Guide van Rossum rocks for creating Python, and am grateful!&amp;quot;
+is simply not enough, hence a need for a trigger.
+In fact, I used to call this series &lt;em&gt;developer of the moment&lt;/em&gt;,
+but at some point felt that the new name is more fitting,
+especially since a few of these honorable developers actually generated
+some new triggers along the way.&lt;/li&gt;
+&lt;li&gt;The more obvious requirement is that the developer need to have done
+some thing that I truly appreciate.
+At times, I fail to put into words just how much.&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="developer-of-note"></category></entry><entry><title>favorite FLOSS</title><link href="http://tshepang.net/favorite-floss" rel="alternate"></link><updated>2013-09-29T18:46:48+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:favorite-floss</id><summary type="html">&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
 it has to both be personally useful and I have to like it a lot:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;backup:&lt;/strong&gt; &lt;a class="reference external" href="http://tshepang.net/project-of-note-rdiff-backup"&gt;rdiff-backup&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;desktop&lt;/strong&gt;: &lt;a class="reference external" href="http://www.gnome.org"&gt;GNOME&lt;/a&gt;&lt;/p&gt;
