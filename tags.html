@@ -1,48 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-        <title>Tshepang logs - Tags</title>
-        <meta charset="utf-8" />
-        <link href="http://tshepang.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tshepang logs Full Atom Feed" />
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Tshepang logs - Tags KenIngle.com</title>
 
-        <link rel="stylesheet" href="http://tshepang.net/theme/css/rdark.css" />
-	<link rel="stylesheet" type="text/css" href="http://tshepang.net/theme/css/main.css" />
-        <link href="http://tshepang.net/" type="application/atom+xml" rel="alternate" title="Tshepang logs ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-        <script type="text/javascript">
-        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-        </script>
-        <script type="text/javascript">
-        try {
-          var pageTracker = _gat._getTracker("UA-16685250-3");
-          pageTracker._trackPageview();
-        } catch(err) {}
-        </script>
-	
-<!-- Using MathJax, with the delimiters $ -->
-<!-- Conflict with pygments for the .mo and .mi -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-  "HTML-CSS": {
-  styles: {
-  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
-  },
-  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
-  });
-</script>
+    <link rel="stylesheet" href="http://tshepang.net/theme/css/main.css">
+    <link rel="stylesheet" href="http://tshepang.net/theme/css/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div><img src="" class="grv-img"/></div>
+        <div class="title"><a href="http://tshepang.net/">Tshepang logs </a></div>
+        <div class="sub-title"></div>
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-</head>
-</head>
+<p>
+    <div class="view"><a href="http://tshepang.net/about-me.html">about me</a></div>
+    <div class="view"><a href="http://tshepang.net/key-posts.html">key posts</a></div>
+  <div class="view"><a href="http://tshepang.net/archives.html">Archives</a></div>
+</p>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="http://tshepang.net">Tshepang logs <strong></strong></a></h1>
-        </header><!-- /#banner -->
-        <nav id="menu"><ul>
-            <li><a href="http://tshepang.net/about-me.html">about me</a></li>
-            <li><a href="http://tshepang.net/key-posts.html">key posts</a></li>
-        </ul></nav><!-- /#menu -->
+<!-- Social links -->
+
+      </header>
+      <section>
     <h1>Tags for Tshepang logs</h1>        <li><a href="http://tshepang.net/tag/"></a> (1)</li>
         <li><a href="http://tshepang.net/tag/anarchism">Anarchism</a> (3)</li>
         <li><a href="http://tshepang.net/tag/atheism">atheism</a> (7)</li>
@@ -85,11 +71,33 @@
         <li><a href="http://tshepang.net/tag/vcs">VCS</a> (7)</li>
         <li><a href="http://tshepang.net/tag/very-good">very-good</a> (4)</li>
         <li><a href="http://tshepang.net/tag/wajig">wajig</a> (13)</li>
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-                which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-        </footer><!-- /#contentinfo -->
-</body>
+      </section>
+      <footer>
+        <p><small>&copy; Tshepang logs &mdash; Theme based on Sundown by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <!-- Scale fix -->
+    <script>
+      var metas = document.getElementsByTagName('meta');
+      var i;
+      
+      if (navigator.userAgent.match(/iPhone/i)) {
+        for (i=0; i<metas.length; i++) {
+          if (metas[i].name == "viewport") {
+            metas[i].content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
+          }
+        }
+      
+        document.addEventListener("gesturestart", gestureStart, false);
+      }
+
+      function gestureStart() {
+        for (i=0; i<metas.length; i++) {
+          if (metas[i].name == "viewport") {
+            metas[i].content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
+          }
+        }
+      }
+    </script>
+  </body>
 </html>
