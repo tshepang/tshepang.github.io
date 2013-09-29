@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-09-25T00:00:00+02:00</updated><entry><title>project of note: Valgrind</title><link href="http://tshepang.net/project-of-note-valgrind" rel="alternate"></link><updated>2013-09-25T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-25:project-of-note-valgrind</id><summary type="html">&lt;p&gt;I have, since using Valgrind (and reading a bit of its documentation)
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-09-29T00:00:00+02:00</updated><entry><title>ideal static blog generator</title><link href="http://tshepang.net/ideal-static-blog-generator" rel="alternate"></link><updated>2013-09-29T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:ideal-static-blog-generator</id><summary type="html">&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
+missed:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt; support is mandatory, and so is being written in
+Python (I is a fanboy).&lt;/li&gt;
+&lt;li&gt;3 alternatives for the main page:&lt;ul&gt;
+&lt;li&gt;The latest post should be displayed in its entirety, and the rest
+displayed in an Archive view below it (so one can quickly search
+all post Titles without leaving that page).&lt;/li&gt;
+&lt;li&gt;It should be an About Page.&lt;/li&gt;
+&lt;li&gt;It should present Archive View.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Categories should be determined by directory into which a post is
+placed if not explicitly specified (in file metadata section).&lt;/li&gt;
+&lt;li&gt;Ability to determine post date from file mtime.&lt;/li&gt;
+&lt;li&gt;Post Date should never be placed at the bottom of a Post.&lt;/li&gt;
+&lt;li&gt;An option to have clean urls (i.e. trailing &lt;tt class="docutils literal"&gt;.html&lt;/tt&gt; removed).&lt;/li&gt;
+&lt;li&gt;Date-based directory structure should not be mandatory (&lt;a class="reference external" href="https://bitbucket.org/vladris/tinkerer/issue/41"&gt;unlike with
+Tinkerer&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Inline literals and literal blocks (for code) should be
+distinguished by background colour; using different fonts is not
+good enough.&lt;/li&gt;
+&lt;li&gt;Tags (and maybe Categories) should be displayed on each post.&lt;/li&gt;
+&lt;li&gt;A feed icon that is visible from the main page (and maybe Category
+pages).&lt;/li&gt;
+&lt;li&gt;Blogofile has a strange requirement of having &lt;a class="reference external" href="http://docs.blogofile.com/en/latest/posts.html"&gt;post headers be YAML
+format&lt;/a&gt;. Maybe there's a good reason, but I want my generator to
+not require anything special in file contents.&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="blogging"></category></entry><entry><title>project of note: Valgrind</title><link href="http://tshepang.net/project-of-note-valgrind" rel="alternate"></link><updated>2013-09-25T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-25:project-of-note-valgrind</id><summary type="html">&lt;p&gt;I have, since using Valgrind (and reading a bit of its documentation)
 some years ago, developed much respect for it. It is quite an advanced
 tool, and though its primary use is detecting memory leaks, I am here
 going to explore its other functionality... calculating the cost of
@@ -481,37 +511,7 @@ gamers, etc.), taking the market away from OS X and Windows&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;scientific computing&lt;/strong&gt;:
 &lt;a class="reference external" href="http://numpy.org"&gt;NumPy&lt;/a&gt; and &lt;a class="reference external" href="http://pandas.pydata.org"&gt;pandas&lt;/a&gt; should acquire feature-parity with MATLAB,
 and then steal the market&lt;/p&gt;
-</summary><category term="GNOME"></category><category term="Debian"></category><category term="Python"></category><category term="non-FLOSS"></category></entry><entry><title>ideal static blog generator</title><link href="http://tshepang.net/ideal-static-blog-generator" rel="alternate"></link><updated>2013-06-02T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-06-02:ideal-static-blog-generator</id><summary type="html">&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
-missed:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt; support is mandatory, and so is being written in
-Python (I is a fanboy).&lt;/li&gt;
-&lt;li&gt;3 alternatives for the main page:&lt;ul&gt;
-&lt;li&gt;The latest post should be displayed in its entirety, and the rest
-displayed in an Archive view below it (so one can quickly search
-all post Titles without leaving that page).&lt;/li&gt;
-&lt;li&gt;It should be an About Page.&lt;/li&gt;
-&lt;li&gt;It should present Archive View.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Categories should be determined by directory into which a post is
-placed if not explicitly specified (in file metadata section).&lt;/li&gt;
-&lt;li&gt;Ability to determine post date from file mtime.&lt;/li&gt;
-&lt;li&gt;Post Date should always precede post content.&lt;/li&gt;
-&lt;li&gt;An option to have clean urls (i.e. trailing &lt;tt class="docutils literal"&gt;.html&lt;/tt&gt; removed).&lt;/li&gt;
-&lt;li&gt;Date-based directory structure should not be mandatory (&lt;a class="reference external" href="https://bitbucket.org/vladris/tinkerer/issue/41"&gt;unlike with
-Tinkerer&lt;/a&gt;).&lt;/li&gt;
-&lt;li&gt;Inline literals and literal blocks (for code) should be
-distinguished by background colour; using different fonts is not
-good enough.&lt;/li&gt;
-&lt;li&gt;Tags (and maybe Categories) should be displayed on each post.&lt;/li&gt;
-&lt;li&gt;A feed icon that is visible from the main page (and maybe Category
-pages).&lt;/li&gt;
-&lt;li&gt;Blogofile has a strange requirement of having &lt;a class="reference external" href="http://docs.blogofile.com/en/latest/posts.html"&gt;post headers be YAML
-format&lt;/a&gt;. Maybe there's a good reason, but I want my generator to
-not require anything special in file contents.&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="blogging"></category></entry><entry><title>links 2013-06-01</title><link href="http://tshepang.net/links-2013-06-01" rel="alternate"></link><updated>2013-06-01T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-06-01:links-2013-06-01</id><summary type="html">&lt;ul class="simple"&gt;
+</summary><category term="GNOME"></category><category term="Debian"></category><category term="Python"></category><category term="non-FLOSS"></category></entry><entry><title>links 2013-06-01</title><link href="http://tshepang.net/links-2013-06-01" rel="alternate"></link><updated>2013-06-01T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-06-01:links-2013-06-01</id><summary type="html">&lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://julien.danjou.info/blog/2013/rant-about-github-pull-request-workflow-implementation"&gt;a detailed look&lt;/a&gt; at the shortcomings of GitHub Pull Requests workflow&lt;/li&gt;
 &lt;li&gt;it is sad seeing projects using Git, instead of Mercurial; it's
 sadder still seeing them &lt;a class="reference external" href="http://www.sqlalchemy.org/blog/2013/05/25/sqlalchemy-migrated-to-git"&gt;move from Mercurial to Git&lt;/a&gt;; I am
