@@ -75,6 +75,8 @@
 <li>I have a separate post on <a class="reference external" href="http://tshepang.net/what-me-loves-about-static-website-generation">what I love about static website generators</a>.</li>
 <li>This post was first published on <strong>2012-05-20</strong>,
 which is before <a class="reference external" href="http://tshepang.net/from-pelican-to-liquidluck">I started using liquidluck</a>, a competing tool.</li>
+<li>And then I moved back <strong>2013-09-29</strong> due to development inactivity
+of liquidluck.</li>
 </ul>
 <p><a class="reference external" href="http://pelican.notmyidea.org/">Pelican</a> is a static blog generator;
 it converts marked-up text files to html
@@ -85,10 +87,11 @@ Tags, Categories, and Pages (for non-bloggy stuff like a CV or About Me file).</
 <pre class="literal-block">
 build/...
 pages/{about-me.rst, key-posts.rst}
-posts/{arts/, computing/, misc/, movies/}
+posts/{arts/, computing/, misc/}
 CNAME
 fabfile.py
 new-post.py
+README.rst
 settings.py
 </pre>
 <ul class="simple">
@@ -104,18 +107,19 @@ the post will be marked as falling under <strong>arts</strong> Category.</li>
 <tt class="docutils literal">CNAME</tt> is a file required by that service in the case where I want
 to use a domain other than <tt class="docutils literal">tshepang.github.io</tt>.
 It's content is <tt class="docutils literal">tshepang.net</tt>.</li>
-<li><a class="reference external" href="https://bitbucket.org/tshepang/blog-pelican/src/tip/fabfile.py">fabfile.py</a> contains the build instructions, all for convenience
+<li><a class="reference external" href="https://bitbucket.org/tshepang/blog/src/tip/fabfile.py">fabfile.py</a> contains the build instructions, all for convenience
 so that I only need to run 2 commands, one for the build, and another
 for GitHub upload. However, I mostly just run one command that does
 both.</li>
-<li>The <a class="reference external" href="https://bitbucket.org/tshepang/blog-pelican/src/tip/settings.py">settings.py</a> file contains Pelican configuration.
+<li>The <a class="reference external" href="https://bitbucket.org/tshepang/blog/src/tip/settings.py">settings.py</a> file contains Pelican configuration.
 It should be somewhat mostly self-explanatory, but for those things that
 aren't so obvious, do consult the documentation.</li>
+<li><a class="reference external" href="https://bitbucket.org/tshepang/blog/src/tip/README.rst">README.rst</a> has some basic instructions, as well as repository license.</li>
 </ul>
 <p>Now as for the post itself, you need metadata to go with it.
 This is stuff like title, date, and tags.
 It can be tedious to create all such mundate stuff, especially the date.
-That's why I wrote <a class="reference external" href="https://bitbucket.org/tshepang/blog-pelican/src/tip/new-post.py">a script</a> that generates that file and populates it
+That's why I wrote <a class="reference external" href="https://bitbucket.org/tshepang/blog/src/tip/new-post.py">a script</a> that generates that file and populates it
 with the given metadata:</p>
 <pre class="literal-block">
 $ python new-post.py 'my blogging setup' misc --tags blogging
@@ -130,14 +134,14 @@ my blogging setup
 </pre>
 <p>The script also opens the file in my favorite editor,
 so I can start adding content.</p>
-<p>When I'm done and happy with my latest changes,
+<p>When I'm done with the changes,
 I ensure I'm in the root directory of my blog, commit
 (<tt class="docutils literal">hg commit <span class="pre">--message</span> 'new post'</tt>) and run:</p>
 <pre class="literal-block">
 $ fab
 </pre>
-<p>That's a <a class="reference external" href="http://fabfile.org">fabric</a> command the uses the instructions found in <tt class="docutils literal">fabfile.py</tt>.
-It builds the site, and then pushes is to GitHub Pages.
+<p>That's a <a class="reference external" href="http://fabfile.org">fabric</a> command that uses the instructions found in <tt class="docutils literal">fabfile.py</tt>.
+It builds the site, and then pushes it to GitHub Pages.
 It also pushes the sources to Bitbucket.
 Within a minute, the blog will be updated.</p>
 
@@ -145,9 +149,7 @@ Within a minute, the blog will be updated.</p>
             <nav>
             <ul class="articles_timeline">
  
-                <li class="previous_article">« <a href="http://tshepang.net/a-bit-of-poetry" title="Previous: a bit of poetry">a bit of poetry</a></li>
- 
-                <li class="next_article"><a href="http://tshepang.net/me-likes-subprocessdevnull" title="Next: me likes subprocess.DEVNULL">me likes subprocess.DEVNULL</a> »</li>
+                <li class="previous_article">« <a href="http://tshepang.net/favorite-buildings" title="Previous: favorite buildings">favorite buildings</a></li>
             </ul>
             </nav>
             </aside>
@@ -187,7 +189,7 @@ Within a minute, the blog will be updated.</p>
         <div class="span2" style="float:right;font-size:0.9em;">
  
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2013-04-08T00:00:00">Apr 8, 2013</time>
+            <time pubdate="pubdate" datetime="2013-09-30T00:00:00">Sep 30, 2013</time>
             <h4>Category</h4>
             <a class="category-link" href="/categories.html#misc-ref">misc</a> 
             <h4>Tags</h4>

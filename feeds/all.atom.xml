@@ -1,5 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-09-30T00:00:00+02:00</updated><entry><title>favorite buildings</title><link href="http://tshepang.net/favorite-buildings" rel="alternate"></link><updated>2013-09-30T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-30:favorite-buildings</id><summary type="html">&lt;ul class="simple"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-09-30T00:00:00+02:00</updated><entry><title>blogging with Pelican</title><link href="http://tshepang.net/blogging-with-pelican" rel="alternate"></link><updated>2013-09-30T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-30:blogging-with-pelican</id><summary type="html">&lt;p&gt;&lt;strong&gt;notes&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;I have a separate post on &lt;a class="reference external" href="http://tshepang.net/what-me-loves-about-static-website-generation"&gt;what I love about static website generators&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;This post was first published on &lt;strong&gt;2012-05-20&lt;/strong&gt;,
+which is before &lt;a class="reference external" href="http://tshepang.net/from-pelican-to-liquidluck"&gt;I started using liquidluck&lt;/a&gt;, a competing tool.&lt;/li&gt;
+&lt;li&gt;And then I moved back &lt;strong&gt;2013-09-29&lt;/strong&gt; due to development inactivity
+of liquidluck.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://pelican.notmyidea.org/"&gt;Pelican&lt;/a&gt; is a static blog generator;
+it converts marked-up text files to html
+(Pelican supports &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Markdown"&gt;Markdown&lt;/a&gt; and &lt;a class="reference external" href="http://en.wikipedia.org/wiki/ReStructuredText"&gt;reStructuredText&lt;/a&gt;).
+The resulting site is complete with an index (Archives view),
+Tags, Categories, and Pages (for non-bloggy stuff like a CV or About Me file).&lt;/p&gt;
+&lt;p&gt;As for my blog, its tree structure looks like this:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+build/...
+pages/{about-me.rst, key-posts.rst}
+posts/{arts/, computing/, misc/}
+CNAME
+fabfile.py
+new-post.py
+README.rst
+settings.py
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The &lt;tt class="docutils literal"&gt;build&lt;/tt&gt; directory is where the output of the build process is
+stored.&lt;/li&gt;
+&lt;li&gt;The &lt;tt class="docutils literal"&gt;pages&lt;/tt&gt; directory is for any content that isn't blog posts.&lt;/li&gt;
+&lt;li&gt;The &lt;tt class="docutils literal"&gt;posts&lt;/tt&gt; directory is where the large chunk of content lives,
+the blog posts themselves.
+Each of the four directories in there represent a Category, for example:
+if you place some file in &lt;tt class="docutils literal"&gt;arts/&lt;/tt&gt;,
+the post will be marked as falling under &lt;strong&gt;arts&lt;/strong&gt; Category.&lt;/li&gt;
+&lt;li&gt;I host my blog on GitHub, using a service the call GitHub Pages.
+&lt;tt class="docutils literal"&gt;CNAME&lt;/tt&gt; is a file required by that service in the case where I want
+to use a domain other than &lt;tt class="docutils literal"&gt;tshepang.github.io&lt;/tt&gt;.
+It's content is &lt;tt class="docutils literal"&gt;tshepang.net&lt;/tt&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://bitbucket.org/tshepang/blog/src/tip/fabfile.py"&gt;fabfile.py&lt;/a&gt; contains the build instructions, all for convenience
+so that I only need to run 2 commands, one for the build, and another
+for GitHub upload. However, I mostly just run one command that does
+both.&lt;/li&gt;
+&lt;li&gt;The &lt;a class="reference external" href="https://bitbucket.org/tshepang/blog/src/tip/settings.py"&gt;settings.py&lt;/a&gt; file contains Pelican configuration.
+It should be somewhat mostly self-explanatory, but for those things that
+aren't so obvious, do consult the documentation.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://bitbucket.org/tshepang/blog/src/tip/README.rst"&gt;README.rst&lt;/a&gt; has some basic instructions, as well as repository license.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now as for the post itself, you need metadata to go with it.
+This is stuff like title, date, and tags.
+It can be tedious to create all such mundate stuff, especially the date.
+That's why I wrote &lt;a class="reference external" href="https://bitbucket.org/tshepang/blog/src/tip/new-post.py"&gt;a script&lt;/a&gt; that generates that file and populates it
+with the given metadata:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ python new-post.py 'my blogging setup' misc --tags blogging
+&lt;/pre&gt;
+&lt;p&gt;This is the metadata, and also the beginning of the file:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+my blogging setup
+=================
+
+:date: 2012-04-12
+:tags: blogging
+&lt;/pre&gt;
+&lt;p&gt;The script also opens the file in my favorite editor,
+so I can start adding content.&lt;/p&gt;
+&lt;p&gt;When I'm done with the changes,
+I ensure I'm in the root directory of my blog, commit
+(&lt;tt class="docutils literal"&gt;hg commit &lt;span class="pre"&gt;--message&lt;/span&gt; 'new post'&lt;/tt&gt;) and run:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ fab
+&lt;/pre&gt;
+&lt;p&gt;That's a &lt;a class="reference external" href="http://fabfile.org"&gt;fabric&lt;/a&gt; command that uses the instructions found in &lt;tt class="docutils literal"&gt;fabfile.py&lt;/tt&gt;.
+It builds the site, and then pushes it to GitHub Pages.
+It also pushes the sources to Bitbucket.
+Within a minute, the blog will be updated.&lt;/p&gt;
+</summary><category term="blogging"></category></entry><entry><title>favorite buildings</title><link href="http://tshepang.net/favorite-buildings" rel="alternate"></link><updated>2013-09-30T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-30:favorite-buildings</id><summary type="html">&lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://en.wikipedia.org/wiki/Burj_Khalifa"&gt;Burj Khalifa&lt;/a&gt;:&lt;ul&gt;
 &lt;li&gt;tallest building on earth&lt;/li&gt;
 &lt;li&gt;beautiful, iconic design&lt;/li&gt;
@@ -1429,77 +1503,7 @@ in which case the previous example would be preferable.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;This &lt;a class="reference external" href="http://hg.python.org/cpython/rev/eaf93e156dff"&gt;small and wonderful feature&lt;/a&gt; is &lt;a class="reference external" href="http://docs.python.org/3/whatsnew/3.3.html#subprocess"&gt;new as of Python 3.3&lt;/a&gt;.&lt;/p&gt;
-</summary><category term="Python"></category><category term="VCS"></category></entry><entry><title>blogging with Pelican</title><link href="http://tshepang.net/blogging-with-pelican" rel="alternate"></link><updated>2013-04-08T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-04-08:blogging-with-pelican</id><summary type="html">&lt;p&gt;&lt;strong&gt;notes&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;I have a separate post on &lt;a class="reference external" href="http://tshepang.net/what-me-loves-about-static-website-generation"&gt;what I love about static website generators&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;This post was first published on &lt;strong&gt;2012-05-20&lt;/strong&gt;,
-which is before &lt;a class="reference external" href="http://tshepang.net/from-pelican-to-liquidluck"&gt;I started using liquidluck&lt;/a&gt;, a competing tool.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a class="reference external" href="http://pelican.notmyidea.org/"&gt;Pelican&lt;/a&gt; is a static blog generator;
-it converts marked-up text files to html
-(Pelican supports &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Markdown"&gt;Markdown&lt;/a&gt; and &lt;a class="reference external" href="http://en.wikipedia.org/wiki/ReStructuredText"&gt;reStructuredText&lt;/a&gt;).
-The resulting site is complete with an index (Archives view),
-Tags, Categories, and Pages (for non-bloggy stuff like a CV or About Me file).&lt;/p&gt;
-&lt;p&gt;As for my blog, its tree structure looks like this:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-build/...
-pages/{about-me.rst, key-posts.rst}
-posts/{arts/, computing/, misc/, movies/}
-CNAME
-fabfile.py
-new-post.py
-settings.py
-&lt;/pre&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;The &lt;tt class="docutils literal"&gt;build&lt;/tt&gt; directory is where the output of the build process is
-stored.&lt;/li&gt;
-&lt;li&gt;The &lt;tt class="docutils literal"&gt;pages&lt;/tt&gt; directory is for any content that isn't blog posts.&lt;/li&gt;
-&lt;li&gt;The &lt;tt class="docutils literal"&gt;posts&lt;/tt&gt; directory is where the large chunk of content lives,
-the blog posts themselves.
-Each of the four directories in there represent a Category, for example:
-if you place some file in &lt;tt class="docutils literal"&gt;arts/&lt;/tt&gt;,
-the post will be marked as falling under &lt;strong&gt;arts&lt;/strong&gt; Category.&lt;/li&gt;
-&lt;li&gt;I host my blog on GitHub, using a service the call GitHub Pages.
-&lt;tt class="docutils literal"&gt;CNAME&lt;/tt&gt; is a file required by that service in the case where I want
-to use a domain other than &lt;tt class="docutils literal"&gt;tshepang.github.io&lt;/tt&gt;.
-It's content is &lt;tt class="docutils literal"&gt;tshepang.net&lt;/tt&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://bitbucket.org/tshepang/blog-pelican/src/tip/fabfile.py"&gt;fabfile.py&lt;/a&gt; contains the build instructions, all for convenience
-so that I only need to run 2 commands, one for the build, and another
-for GitHub upload. However, I mostly just run one command that does
-both.&lt;/li&gt;
-&lt;li&gt;The &lt;a class="reference external" href="https://bitbucket.org/tshepang/blog-pelican/src/tip/settings.py"&gt;settings.py&lt;/a&gt; file contains Pelican configuration.
-It should be somewhat mostly self-explanatory, but for those things that
-aren't so obvious, do consult the documentation.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Now as for the post itself, you need metadata to go with it.
-This is stuff like title, date, and tags.
-It can be tedious to create all such mundate stuff, especially the date.
-That's why I wrote &lt;a class="reference external" href="https://bitbucket.org/tshepang/blog-pelican/src/tip/new-post.py"&gt;a script&lt;/a&gt; that generates that file and populates it
-with the given metadata:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-$ python new-post.py 'my blogging setup' misc --tags blogging
-&lt;/pre&gt;
-&lt;p&gt;This is the metadata, and also the beginning of the file:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-my blogging setup
-=================
-
-:date: 2012-04-12
-:tags: blogging
-&lt;/pre&gt;
-&lt;p&gt;The script also opens the file in my favorite editor,
-so I can start adding content.&lt;/p&gt;
-&lt;p&gt;When I'm done and happy with my latest changes,
-I ensure I'm in the root directory of my blog, commit
-(&lt;tt class="docutils literal"&gt;hg commit &lt;span class="pre"&gt;--message&lt;/span&gt; 'new post'&lt;/tt&gt;) and run:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-$ fab
-&lt;/pre&gt;
-&lt;p&gt;That's a &lt;a class="reference external" href="http://fabfile.org"&gt;fabric&lt;/a&gt; command the uses the instructions found in &lt;tt class="docutils literal"&gt;fabfile.py&lt;/tt&gt;.
-It builds the site, and then pushes is to GitHub Pages.
-It also pushes the sources to Bitbucket.
-Within a minute, the blog will be updated.&lt;/p&gt;
-</summary><category term="blogging"></category></entry><entry><title>a bit of poetry</title><link href="http://tshepang.net/a-bit-of-poetry" rel="alternate"></link><updated>2013-04-07T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-04-07:a-bit-of-poetry</id><summary type="html">&lt;!--  --&gt;
+</summary><category term="Python"></category><category term="VCS"></category></entry><entry><title>a bit of poetry</title><link href="http://tshepang.net/a-bit-of-poetry" rel="alternate"></link><updated>2013-04-07T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-04-07:a-bit-of-poetry</id><summary type="html">&lt;!--  --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;There will always be justifications that a war is needed because
 of this oppressor or that incursion or this unforgivable action.&lt;/p&gt;
