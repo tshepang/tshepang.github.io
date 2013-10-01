@@ -112,41 +112,41 @@ content it will write to that file:</p>
 32
 33
 34
-35</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
-<span class="cp">#include &lt;errno.h&gt;</span>
-<span class="cp">#include &lt;stdio.h&gt;</span>
-<span class="cp">#include &lt;fcntl.h&gt;</span>
-<span class="cp">#include &lt;unistd.h&gt;</span>
+35</pre></div></td><td class="code"><div class="highlight"><pre> <span class="err">#</span><span class="n">include</span> <span class="o">&lt;</span><span class="n">string</span><span class="p">.</span><span class="n">h</span><span class="o">&gt;</span>
+ <span class="err">#</span><span class="n">include</span> <span class="o">&lt;</span><span class="n">errno</span><span class="p">.</span><span class="n">h</span><span class="o">&gt;</span>
+ <span class="err">#</span><span class="n">include</span> <span class="o">&lt;</span><span class="n">stdio</span><span class="p">.</span><span class="n">h</span><span class="o">&gt;</span>
+ <span class="err">#</span><span class="n">include</span> <span class="o">&lt;</span><span class="n">fcntl</span><span class="p">.</span><span class="n">h</span><span class="o">&gt;</span>
+ <span class="err">#</span><span class="n">include</span> <span class="o">&lt;</span><span class="n">unistd</span><span class="p">.</span><span class="n">h</span><span class="o">&gt;</span>
 
-<span class="kt">int</span>
-<span class="nf">main</span> <span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="kt">char</span> <span class="n">path</span><span class="p">[</span><span class="mh">0xFF</span><span class="p">];</span>
-    <span class="kt">char</span> <span class="n">content</span><span class="p">[</span><span class="mh">0xFF</span><span class="p">];</span>
-    <span class="kt">int</span> <span class="n">fd</span><span class="p">;</span>
-    <span class="kt">ssize_t</span> <span class="n">written</span><span class="p">;</span>
+ <span class="kt">int</span>
+ <span class="n">main</span> <span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+ <span class="p">{</span>
+     <span class="kt">char</span> <span class="n">path</span><span class="p">[</span><span class="mh">0xFF</span><span class="p">];</span>
+     <span class="kt">char</span> <span class="n">content</span><span class="p">[</span><span class="mh">0xFF</span><span class="p">];</span>
+     <span class="kt">int</span> <span class="n">fd</span><span class="p">;</span>
+     <span class="kt">ssize_t</span> <span class="n">written</span><span class="p">;</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">fprintf</span> <span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;usage: %s &lt;filename&gt; &lt;content&gt;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
-        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="p">}</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+         <span class="n">fprintf</span> <span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;usage: %s &lt;filename&gt; &lt;content&gt;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+         <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+     <span class="p">}</span>
 
-    <span class="n">strcpy</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
-    <span class="n">sprintf</span> <span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+     <span class="n">strcpy</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+     <span class="n">sprintf</span> <span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
 
-    <span class="n">fd</span> <span class="o">=</span> <span class="n">creat</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">S_IRWXU</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">fd</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">fprintf</span> <span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;open error: %s (&#39;%s&#39;)</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">strerror</span> <span class="p">(</span><span class="n">errno</span><span class="p">),</span> <span class="n">path</span><span class="p">);</span>
-        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="p">}</span>
+     <span class="n">fd</span> <span class="o">=</span> <span class="n">creat</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">S_IRWXU</span><span class="p">);</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">fd</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+         <span class="n">fprintf</span> <span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;open error: %s (&#39;%s&#39;)</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">strerror</span> <span class="p">(</span><span class="n">errno</span><span class="p">),</span> <span class="n">path</span><span class="p">);</span>
+         <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+     <span class="p">}</span>
 
-    <span class="n">written</span> <span class="o">=</span> <span class="n">write</span> <span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">content</span><span class="p">,</span> <span class="n">strlen</span> <span class="p">(</span><span class="n">content</span><span class="p">));</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">written</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">fprintf</span> <span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;write error: %s (&#39;%s&#39;)</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">strerror</span> <span class="p">(</span><span class="n">errno</span><span class="p">),</span> <span class="n">path</span><span class="p">);</span>
-        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+     <span class="n">written</span> <span class="o">=</span> <span class="n">write</span> <span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">content</span><span class="p">,</span> <span class="n">strlen</span> <span class="p">(</span><span class="n">content</span><span class="p">));</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">written</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+         <span class="n">fprintf</span> <span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;write error: %s (&#39;%s&#39;)</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">strerror</span> <span class="p">(</span><span class="n">errno</span><span class="p">),</span> <span class="n">path</span><span class="p">);</span>
+         <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+ <span class="p">}</span>
 </pre></div>
 </td></tr></table><p>Build command (using GCC 4.8.1):</p>
 <pre class="literal-block">
