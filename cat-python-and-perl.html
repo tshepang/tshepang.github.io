@@ -72,28 +72,42 @@
 
             <p>I came across <a class="reference external" href="http://greenteapress.com/perl/perl.pdf">a tutorial</a> that showes how to implement a simple cat in
 Perl. I've modified their example for the sake of simplicity:</p>
-<div class="highlight"><pre><span class="k">sub </span><span class="nf">cat</span> <span class="p">{</span>
-    <span class="k">foreach</span> <span class="k">my</span> <span class="nv">$filename</span> <span class="p">(</span><span class="nv">@_</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nb">open</span> <span class="n">FILE</span><span class="p">,</span> <span class="nv">$filename</span><span class="p">;</span>
-        <span class="k">while</span> <span class="p">(</span><span class="k">my</span> <span class="nv">$line</span> <span class="o">=</span> <span class="sr">&lt;FILE&gt;</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">print</span> <span class="nv">$line</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-<span class="n">cat</span> <span class="nv">@ARGV</span><span class="p">;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre> <span class="k">sub </span><span class="nf">cat</span> <span class="p">{</span>
+     <span class="k">foreach</span> <span class="k">my</span> <span class="nv">$filename</span> <span class="p">(</span><span class="nv">@_</span><span class="p">)</span> <span class="p">{</span>
+         <span class="nb">open</span> <span class="n">FILE</span><span class="p">,</span> <span class="nv">$filename</span><span class="p">;</span>
+         <span class="k">while</span> <span class="p">(</span><span class="k">my</span> <span class="nv">$line</span> <span class="o">=</span> <span class="sr">&lt;FILE&gt;</span><span class="p">)</span> <span class="p">{</span>
+             <span class="k">print</span> <span class="nv">$line</span><span class="p">;</span>
+         <span class="p">}</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+ <span class="n">cat</span> <span class="nv">@ARGV</span><span class="p">;</span>
 </pre></div>
-<p>Running this script (e.g. <tt class="docutils literal">perl cat.pl file</tt>)
+</td></tr></table><p>Running this script (e.g. <tt class="docutils literal">perl cat.pl file</tt>)
 will display those files as if you ran <tt class="docutils literal">cat file</tt>.</p>
 <p>I decided to see how the Python example would look like:</p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">sys</span>
-<span class="k">def</span> <span class="nf">cat</span><span class="p">(</span><span class="n">files</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
-        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">FILE</span><span class="p">:</span>
-            <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">FILE</span><span class="p">:</span>
-                <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span>
-<span class="n">cat</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre> <span class="kn">import</span> <span class="nn">sys</span>
+ <span class="k">def</span> <span class="nf">cat</span><span class="p">(</span><span class="n">files</span><span class="p">):</span>
+     <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">FILE</span><span class="p">:</span>
+             <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">FILE</span><span class="p">:</span>
+                 <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+ <span class="n">cat</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
 </pre></div>
-<p>Running this script (e.g. <tt class="docutils literal">python3 cat.py file1 file2</tt>)
+</td></tr></table><p>Running this script (e.g. <tt class="docutils literal">python3 cat.py file1 file2</tt>)
 will give exactly the same result as above.</p>
 <div class="section" id="notes">
 <h2>notes</h2>
