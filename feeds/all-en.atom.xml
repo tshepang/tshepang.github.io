@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-09-30T23:28:04+02:00</updated><entry><title>about 'developer of note' series</title><link href="http://tshepang.net/about-developer-of-note-series" rel="alternate"></link><updated>2013-09-30T23:28:04+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-30:about-developer-of-note-series</id><summary type="html">&lt;p&gt;I respect a lot of software developers, but many of those are not
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-10-02T00:00:00+02:00</updated><entry><title>favorite FLOSS</title><link href="http://tshepang.net/favorite-floss" rel="alternate"></link><updated>2013-10-02T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-02:favorite-floss</id><summary type="html">&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
+it has to both be personally useful and I have to like it a lot:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;backup:&lt;/strong&gt; &lt;a class="reference external" href="http://tshepang.net/project-of-note-rdiff-backup"&gt;rdiff-backup&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;desktop&lt;/strong&gt;: &lt;a class="reference external" href="http://www.gnome.org"&gt;GNOME&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;development&lt;/strong&gt;: Python, Emacs, &lt;a class="reference external" href="http://tshepang.net/project-of-note-git-cola"&gt;git-cola&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;misc utilities:&lt;/strong&gt; grep, &lt;a class="reference external" href="http://tshepang.net/project-of-note-sudo"&gt;Sudo&lt;/a&gt;, &lt;a class="reference external" href="http://tshepang.net/project-of-note-reprepro"&gt;reprepro&lt;/a&gt;, Lsof, less, Meld,
+Uptimed, top, &lt;a class="reference external" href="http://projects.gnome.org/tracker"&gt;Tracker&lt;/a&gt;, Ex Falso, wajig, GNOME system monitor applet,
+&lt;a class="reference external" href="http://tshepang.net/xfrun4-rocks"&gt;xfrun4&lt;/a&gt;, coreutils (wc, tail), &lt;a class="reference external" href="http://tshepang.net/project-of-note-linkchecker"&gt;LinkChecker&lt;/a&gt;, &lt;a class="reference external" href="http://guichaz.free.fr/iotop"&gt;Iotop&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Man_page"&gt;man&lt;/a&gt;,
+OpenSSH, &lt;a class="reference external" href="http://humdi.net/vnstat"&gt;vnstat&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;spreadsheet:&lt;/strong&gt; gnumeric&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;terminal emulator&lt;/strong&gt;: GNOME Terminal&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;virtualisation&lt;/strong&gt;: VirtualBox&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;version control system&lt;/strong&gt;: &lt;a class="reference external" href="http://mercurial.selenic.com"&gt;Mercurial&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;web browser&lt;/strong&gt;: Chrome/Chromium&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;non-FLOSS:&lt;/strong&gt; &lt;a class="reference external" href="http://disqus.com"&gt;Disqus&lt;/a&gt;, &lt;a class="reference external" href="http://mail.google.com/mail"&gt;Gmail&lt;/a&gt;, Stack &lt;a href="#id1"&gt;&lt;span class="problematic" id="id2"&gt;Exchange_&lt;/span&gt;&lt;/a&gt;, &lt;a class="reference external" href="http://bitbucket.org"&gt;Bitbucket&lt;/a&gt;&lt;/p&gt;
+&lt;div class="system-messages section"&gt;
+&lt;h2&gt;Docutils System Messages&lt;/h2&gt;
+&lt;div class="system-message" id="id1"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;/home/tshepang/projects/blog/content/computing/favorite FLOSS.rst&lt;/tt&gt;, line 32); &lt;em&gt;&lt;a href="#id2"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+Unknown target name: &amp;quot;exchange&amp;quot;.&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="untagged"></category></entry><entry><title>about 'developer of note' series</title><link href="http://tshepang.net/about-developer-of-note-series" rel="alternate"></link><updated>2013-09-30T23:28:04+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-30:about-developer-of-note-series</id><summary type="html">&lt;p&gt;I respect a lot of software developers, but many of those are not
 going to have an entry in this series, and not because they are lesser
 in my eyes.&lt;/p&gt;
 &lt;p&gt;Here's the criteria I use to regard someone as &lt;a class="reference external" href="http://tshepang.net/tags#developer-of-note-ref"&gt;developer of the
@@ -847,22 +868,7 @@ decision-making in large groups.&lt;/li&gt;
 &lt;li&gt;whoever said anything involving bowel humor can't be beautiful is
 wrong; &lt;a class="reference external" href="http://theoatmeal.com/comics/tipping_tooting"&gt;here is proof&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="humor"></category><category term="links"></category></entry><entry><title>favorite FLOSS</title><link href="http://tshepang.net/favorite-floss" rel="alternate"></link><updated>2013-06-29T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-06-29:favorite-floss</id><summary type="html">&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
-it has to both be personally useful and I have to like it a lot:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;backup:&lt;/strong&gt; &lt;a class="reference external" href="http://tshepang.net/project-of-note-rdiff-backup"&gt;rdiff-backup&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;desktop&lt;/strong&gt;: &lt;a class="reference external" href="http://www.gnome.org"&gt;GNOME&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;development&lt;/strong&gt;: Python, Emacs, &lt;a class="reference external" href="http://tshepang.net/project-of-note-git-cola"&gt;git-cola&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;misc utilities:&lt;/strong&gt; grep, &lt;a class="reference external" href="http://tshepang.net/project-of-note-sudo"&gt;Sudo&lt;/a&gt;, &lt;a class="reference external" href="http://tshepang.net/project-of-note-reprepro"&gt;reprepro&lt;/a&gt;, Lsof, less, Meld,
-Uptimed, top, &lt;a class="reference external" href="http://projects.gnome.org/tracker"&gt;Tracker&lt;/a&gt;, Ex Falso, wajig, GNOME system monitor applet,
-&lt;a class="reference external" href="http://tshepang.net/xfrun4-rocks"&gt;xfrun4&lt;/a&gt;, coreutils (wc, tail), &lt;a class="reference external" href="http://tshepang.net/project-of-note-linkchecker"&gt;LinkChecker&lt;/a&gt;, &lt;a class="reference external" href="http://guichaz.free.fr/iotop"&gt;Iotop&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Man_page"&gt;man&lt;/a&gt;,
-OpenSSH&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;spreadsheet:&lt;/strong&gt; gnumeric&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;terminal emulator&lt;/strong&gt;: GNOME Terminal&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;virtualisation&lt;/strong&gt;: VirtualBox&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;version control system&lt;/strong&gt;: &lt;a class="reference external" href="http://mercurial.selenic.com"&gt;Mercurial&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;web browser&lt;/strong&gt;: Chrome/Chromium&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;non-FLOSS:&lt;/strong&gt; &lt;a class="reference external" href="http://disqus.com"&gt;Disqus&lt;/a&gt;, &lt;a class="reference external" href="http://mail.google.com/mail"&gt;Gmail&lt;/a&gt;, &lt;a class="reference external" href="http://stackexchange.com"&gt;Stack Exchange&lt;/a&gt;, &lt;a class="reference external" href="http://bitbucket.org"&gt;Bitbucket&lt;/a&gt;&lt;/p&gt;
-</summary><category term="untagged"></category></entry><entry><title>top tracks: Fela Kuti</title><link href="http://tshepang.net/top-tracks-fela-kuti" rel="alternate"></link><updated>2013-06-29T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-06-29:top-tracks-fela-kuti</id><summary type="html">&lt;div class="section" id="landmarks"&gt;
+</summary><category term="humor"></category><category term="links"></category></entry><entry><title>top tracks: Fela Kuti</title><link href="http://tshepang.net/top-tracks-fela-kuti" rel="alternate"></link><updated>2013-06-29T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-06-29:top-tracks-fela-kuti</id><summary type="html">&lt;div class="section" id="landmarks"&gt;
 &lt;h2&gt;3 landmarks&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;strong&gt;Lady&lt;/strong&gt; (&lt;em&gt;Shakara&lt;/em&gt; - 1972)&lt;/li&gt;
