@@ -14,6 +14,37 @@ OpenSSH, &lt;a class="reference external" href="http://humdi.net/vnstat"&gt;vnst
 &lt;p&gt;&lt;strong&gt;version control system&lt;/strong&gt;: &lt;a class="reference external" href="http://mercurial.selenic.com"&gt;Mercurial&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;web browser&lt;/strong&gt;: Chrome/Chromium&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;non-FLOSS:&lt;/strong&gt; &lt;a class="reference external" href="http://disqus.com"&gt;Disqus&lt;/a&gt;, &lt;a class="reference external" href="http://mail.google.com/mail"&gt;Gmail&lt;/a&gt;, &lt;a class="reference external" href="http://stackexchange.com"&gt;Stack Exchange&lt;/a&gt;, &lt;a class="reference external" href="http://bitbucket.org"&gt;Bitbucket&lt;/a&gt;&lt;/p&gt;
+</summary><category term="untagged"></category></entry><entry><title>tools I use all the time</title><link href="http://tshepang.net/tools-i-use-all-the-time" rel="alternate"></link><updated>2013-10-02T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-02:tools-i-use-all-the-time</id><summary type="html">&lt;p&gt;Following are tools I use all the time, but am not necessarily loving.
+For those I like a lot, see &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;this list&lt;/a&gt;.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Emacs&lt;/strong&gt;: general text editor&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vim&lt;/strong&gt;: it happens to be installed on a lot of systems at work, but I
+only rarely use it on my workstation&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GNOME&lt;/strong&gt;: primary Desktop Environment&lt;ul&gt;
+&lt;li&gt;gnome-panel&lt;/li&gt;
+&lt;li&gt;gnome-search-tool&lt;/li&gt;
+&lt;li&gt;gnome-system-monitor&lt;/li&gt;
+&lt;li&gt;nautilus&lt;/li&gt;
+&lt;li&gt;file-roller&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://lzone.de/liferea"&gt;Liferea&lt;/a&gt;: would not be using this had it not been for Google Reader
+shutdown, but am glad they did cuz I like the tool, ugly and unkool
+as it is&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Evince&lt;/strong&gt;: I would love to get a PDF reader with better navigation&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Quod Libet&lt;/strong&gt;: audio player&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Thunderbird&lt;/strong&gt;: I prefer Evolution, but it gave me some issues I don't remember&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GNU toolchain&lt;/strong&gt; (GCC, make, GLibC, ...)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VLC&lt;/strong&gt;: ugly interface, solid application&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Git&lt;/strong&gt;: do I have a choice?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mercurial&lt;/strong&gt;: my favorite&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Google Chrome&lt;/strong&gt;: I occasionally drop into Firefox when I
+experience issues&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://meldmerge.org"&gt;Meld&lt;/a&gt;: the most excellent diff tool I've used yet&lt;/li&gt;
+&lt;li&gt;git-cola: &lt;a class="reference external" href="http://tshepang.net/project-of-note-git-cola"&gt;why me loves it&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://tmux.sourceforge.net"&gt;tmux&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </summary><category term="untagged"></category></entry><entry><title>about 'developer of note' series</title><link href="http://tshepang.net/about-developer-of-note-series" rel="alternate"></link><updated>2013-09-30T23:28:04+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-30:about-developer-of-note-series</id><summary type="html">&lt;p&gt;I respect a lot of software developers, but many of those are not
 going to have an entry in this series, and not because they are lesser
 in my eyes.&lt;/p&gt;
@@ -436,38 +467,7 @@ as opposed to finding the actual link and specifying it normally.&lt;/p&gt;
 &lt;p&gt;One other feature I discovered (but haven't used yet) is &lt;a class="reference external" href="http://sphinx-doc.org/domains.html#info-field-lists"&gt;Info field
 lists&lt;/a&gt; feature. To see it in action, visit &lt;a class="reference external" href="https://postgres-py.readthedocs.org/en/latest/#postgres.Postgres.run"&gt;this link&lt;/a&gt;, and then
 look at &lt;a class="reference external" href="https://postgres-py.readthedocs.org/en/latest/_modules/postgres.html#Postgres.run"&gt;its markup&lt;/a&gt;. It's gorgeous!&lt;/p&gt;
-</summary><category term="project-of-note"></category><category term="Python"></category></entry><entry><title>tools I use all the time</title><link href="http://tshepang.net/tools-i-use-all-the-time" rel="alternate"></link><updated>2013-08-03T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-08-03:tools-i-use-all-the-time</id><summary type="html">&lt;p&gt;Following are tools I use all the time, but am not necessarily loving.
-For those I like a lot, see &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;this list&lt;/a&gt;.&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Emacs&lt;/strong&gt;: general text editor&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Vim&lt;/strong&gt;: it happens to be installed on a lot of systems at work, but I
-only rarely use it on my workstation&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GNOME&lt;/strong&gt;: primary Desktop Environment&lt;ul&gt;
-&lt;li&gt;gnome-panel&lt;/li&gt;
-&lt;li&gt;gnome-search-tool&lt;/li&gt;
-&lt;li&gt;gnome-system-monitor&lt;/li&gt;
-&lt;li&gt;nautilus&lt;/li&gt;
-&lt;li&gt;file-roller&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://lzone.de/liferea"&gt;Liferea&lt;/a&gt;: would not be using this had it not been for Google Reader
-shutdown, but am glad they did cuz I like the tool, ugly and unkool
-as it is&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Evince&lt;/strong&gt;: I would love to get a PDF reader with better navigation&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Quod Libet&lt;/strong&gt;: audio player&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Thunderbird&lt;/strong&gt;: I prefer Evolution, but it gave me some issues I don't remember&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GNU toolchain&lt;/strong&gt; (GCC, make, GLibC, ...)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;VLC&lt;/strong&gt;: ugly interface, solid application&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Git&lt;/strong&gt;: do I have a choice?&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Mercurial&lt;/strong&gt;: my favorite&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Google Chrome&lt;/strong&gt;: I occasionally drop into Firefox when I
-experience issues&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://meldmerge.org"&gt;Meld&lt;/a&gt;: the most excellent diff tool I've used yet&lt;/li&gt;
-&lt;li&gt;git-cola: &lt;a class="reference external" href="http://tshepang.net/project-of-note-git-cola"&gt;why me loves it&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://tmux.sourceforge.net"&gt;tmux&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="untagged"></category></entry><entry><title>links 2013-07-17</title><link href="http://tshepang.net/links-2013-07-17" rel="alternate"></link><updated>2013-07-17T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-07-17:links-2013-07-17</id><summary type="html">&lt;ul class="simple"&gt;
+</summary><category term="project-of-note"></category><category term="Python"></category></entry><entry><title>links 2013-07-17</title><link href="http://tshepang.net/links-2013-07-17" rel="alternate"></link><updated>2013-07-17T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-07-17:links-2013-07-17</id><summary type="html">&lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://www.comp.leeds.ac.uk/nde/papers/teachpy3.html"&gt;why Python 3&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://bitbucket.org/tusharmakkar08"&gt;my first Bitbucket follower&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://thechangelog.com/open-products"&gt;Open Products&lt;/a&gt; is an excellent essay by the admirable Chad
