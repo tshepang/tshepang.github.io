@@ -211,6 +211,15 @@ not specified, they are handled in a naive manner:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;This post was first published on &lt;strong&gt;2012-07-05&lt;/strong&gt;,
 which is shortly after I started using &lt;a class="reference external" href="http://liquidluck.readthedocs.org"&gt;liquidluck&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;I have since moved back to Pelican on &lt;strong&gt;2013-09-29&lt;/strong&gt;, with using
+&lt;a class="reference external" href="http://oncrashreboot.com/elegant-a-clean-theme-for-pelican-with-search-feature.html"&gt;Elegant theme&lt;/a&gt;. Reason: is stalled development of liquidluck
+(e.g. author &lt;a class="reference external" href="https://github.com/lepture/liquidluck/issues/101"&gt;is busy with other projects&lt;/a&gt;, and is doing &lt;a class="reference external" href="https://github.com/lepture/liquidluck/issues/104#issuecomment-22825084"&gt;some
+large changes to liquidluck in a branch&lt;/a&gt;). There is also &lt;a class="reference external" href="https://github.com/lepture/liquidluck/issues/created_by/tshepang?sort=updated&amp;amp;state=open"&gt;a
+backlog of doc improvements&lt;/a&gt; I submitted, which are not even
+acknowledged. Do not consider this a complaint... the author in fact
+gave me more than I gave him... a nice piece of software. In fact, I
+might go back at some point, and will keep maintaining &lt;a class="reference external" href="http://tshepang.net/looking-at-liquidluck-themes"&gt;live demos
+of the various liquidluck themes&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;I have a separate post on &lt;a class="reference external" href="http://tshepang.net/what-me-loves-about-static-website-generation"&gt;what I love about static website generators&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="section" id="why-pelican-rocks"&gt;
@@ -558,13 +567,13 @@ developer; it almost makes me look forward to my first&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://reason.com/archives/2004/12/22/is-heaven-populated-chiefly-by"&gt;an impressive criticism of anti-abortionists&lt;/a&gt; (&lt;a class="reference external" href="http://commonsenseatheism.com/?p=8955#comment-43867"&gt;via&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 </summary><category term="links"></category></entry><entry><title>trying out Calepin</title><link href="http://tshepang.net/trying-out-calepin" rel="alternate"></link><updated>2012-04-02T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2012-04-02:trying-out-calepin</id><summary type="html">&lt;p&gt;&lt;strong&gt;update&lt;/strong&gt;: The lack of reliability, worst of which was constant
-unavailability of my blog lead me to move on, this time to &lt;a class="reference external" href="http://pelican.notmyidea.org"&gt;Pelican&lt;/a&gt;,
-and hosted by &lt;a class="reference external" href="http://pages.github.com"&gt;GitHub Pages&lt;/a&gt;. &lt;a class="reference external" href="http://tshepang.net/blogging-with-pelican"&gt;Here's the setup&lt;/a&gt;.&lt;/p&gt;
+unavailability of my blog, led me to move on. This time it's &lt;a class="reference external" href="http://pelican.notmyidea.org"&gt;Pelican&lt;/a&gt;,
+hosted by &lt;a class="reference external" href="http://pages.github.com"&gt;GitHub Pages&lt;/a&gt;. &lt;a class="reference external" href="http://tshepang.net/blogging-with-pelican"&gt;Here's the setup&lt;/a&gt;.&lt;/p&gt;
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;I've been meaning to move my blog(s) away from Posterous, due to its UI
 problems and ridiculously-slow page loads. I finally did it with the
-help of &lt;a class="reference external" href="http://calepin.co/"&gt;Calepin&lt;/a&gt;, which itself has a bunch of problems, which is
-forgiveable given that it's a Beta product:&lt;/p&gt;
+help of &lt;a class="reference external" href="http://calepin.co/"&gt;Calepin&lt;/a&gt;, which itself has a bunch of problems. These are
+forgivable since it's a Beta product:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;The presentation is way too simple/plain, and doesn't provide a way
 to customise it.&lt;/li&gt;
@@ -583,7 +592,7 @@ that this list kept growing as I typed this post)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Despite all these problems, it will have to do for now, until I find
 another host, and maybe this time I will have to spend some cash.&lt;/p&gt;
-&lt;p&gt;In the interest of balance, here's &lt;cite&gt;what attracted me&lt;/cite&gt;.&lt;/p&gt;
+&lt;p&gt;In the interest of balance, here's &lt;a class="reference external" href="http://tshepang.net/what-me-loves-about-static-website-generation"&gt;what attracted me&lt;/a&gt;.&lt;/p&gt;
 </summary><category term="blogging"></category></entry><entry><title>on voting</title><link href="http://tshepang.net/on-voting" rel="alternate"></link><updated>2012-02-13T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2012-02-13:on-voting</id><summary type="html">&lt;!--  --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&amp;quot;Voting&amp;quot; reminds me too much of situations where people who don't do
