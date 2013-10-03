@@ -1,5 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-10-02T00:00:00+02:00</updated><entry><title>favorite FLOSS</title><link href="http://tshepang.net/favorite-floss" rel="alternate"></link><updated>2013-10-02T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-02:favorite-floss</id><summary type="html">&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-10-03T00:00:00+02:00</updated><entry><title>from Pelican to liquidluck</title><link href="http://tshepang.net/from-pelican-to-liquidluck" rel="alternate"></link><updated>2013-10-03T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-03:from-pelican-to-liquidluck</id><summary type="html">&lt;p&gt;&lt;strong&gt;notes&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;This post was first published on &lt;strong&gt;2012-07-05&lt;/strong&gt;,
+which is shortly after I started using &lt;a class="reference external" href="http://liquidluck.readthedocs.org"&gt;liquidluck&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;I have since moved back to Pelican on &lt;strong&gt;2013-09-29&lt;/strong&gt;, with &lt;a class="reference external" href="http://oncrashreboot.com/elegant-a-clean-theme-for-pelican-with-search-feature.html"&gt;Elegant
+theme&lt;/a&gt;. Reason: is stalled development of liquidluck (e.g. author
+&lt;a class="reference external" href="https://github.com/lepture/liquidluck/issues/101"&gt;is busy with other projects&lt;/a&gt;, and is doing &lt;a class="reference external" href="https://github.com/lepture/liquidluck/issues/104#issuecomment-22825084"&gt;some large changes to
+liquidluck in a branch&lt;/a&gt;). There is also &lt;a class="reference external" href="https://github.com/lepture/liquidluck/issues/created_by/tshepang?sort=updated&amp;amp;state=open"&gt;a backlog of doc
+improvements&lt;/a&gt; I submitted, which are not even acknowledged. Do not
+consider this a complaint... the author in fact gave me more than I
+gave him... a nice piece of software. In fact, I might go back at
+some point, and will keep maintaining &lt;a class="reference external" href="http://tshepang.net/looking-at-liquidluck-themes"&gt;live demos of the various
+liquidluck themes&lt;/a&gt;. Meanwhile, Pelican is likely the most
+actively-developed static site generator in the Python eco-system.&lt;/li&gt;
+&lt;li&gt;I have a separate post on &lt;a class="reference external" href="http://tshepang.net/what-me-loves-about-static-website-generation"&gt;what I love about static website generators&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="section" id="why-pelican-rocks"&gt;
+&lt;h2&gt;why &lt;a class="reference external" href="http://pelican.readthedocs.org"&gt;Pelican&lt;/a&gt; rocks&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;It has categories
+(&lt;a class="reference external" href="https://github.com/getnikola/nikola/issues/163"&gt;unlike nikola&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Post metadata:&lt;ul&gt;
+&lt;li&gt;if Date is not specified, file mtime is used (unlike &lt;a class="reference external" href="http://blogofile.com"&gt;blogofile&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;if Category is not specified, parent directory name is used
+(unlike blogofile)&lt;/li&gt;
+&lt;li&gt;titles are allowed to have any character (unlike blogofile)&lt;/li&gt;
+&lt;li&gt;there is an option to provide clean urls... remove trailing &lt;tt class="docutils literal"&gt;.html&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Does not force one into having ugly date-based filesystem structure
+(&lt;a class="reference external" href="https://bitbucket.org/vladris/tinkerer/issue/41"&gt;unlike tinkerer&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="why-pelican-rocks-not"&gt;
+&lt;h2&gt;why Pelican rocks not&lt;/h2&gt;
+&lt;p&gt;The default theme simply didn't fit my tastes,
+and &lt;a class="reference external" href="http://tshepang.net/favorite-pelican-themes"&gt;the other themes weren't so satisfactory&lt;/a&gt;.
+I spent way too long fiddling with them, and just couldn't be happy.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="why-liquidluck"&gt;
+&lt;h2&gt;why liquidluck&lt;/h2&gt;
+&lt;p&gt;So I have moved to &lt;a class="reference external" href="http://liquidluck.readthedocs.org"&gt;liquidluck&lt;/a&gt;,
+and am hoping I will not be 'forced' to move again.
+It's way too much work, and it took multiple messages between me and
+&lt;a class="reference external" href="http://lepture.com"&gt;the developer&lt;/a&gt; of this sleek new static site generator just to get it
+to behave the way I like it.&lt;/p&gt;
+&lt;p&gt;I had to override stuff that's done by the software, by using &lt;a class="reference external" href="https://bitbucket.org/tshepang/blog/src/1602cdf8/custom.py"&gt;this script&lt;/a&gt;,
+which helped give it the advantages that Pelican has over the
+other generators I mentioned, while also solving the one problem Pelican
+has.. lack of a good-enough theme.
+This was achieved with the help of that very helpful and responsive developer.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="issues"&gt;
+&lt;h2&gt;issues&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;There is no visible way, at least for the default theme, to subscribe
+to RSS feeds of individual Categories.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;The text is a bit blurry/faint with the default theme,
+and none of &lt;a class="reference external" href="http://tshepang.net/looking-at-liquidluck-themes"&gt;the other ones&lt;/a&gt; are close to good-enough for my liking,
+all but the promising one named &lt;a class="reference external" href="https://github.com/bingdian/liquidluck-theme-responsive"&gt;responsive&lt;/a&gt;.
+It got 2 issues so far (see &lt;a class="reference external" href="http://demo-responsive.tshepang.net"&gt;live demo&lt;/a&gt;):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Date is displayed at the bottom of a post...
+why make user scroll that far before presenting such a key piece of info.&lt;/li&gt;
+&lt;li&gt;There is no link anywhere allowing to visit Home.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Background color for &lt;tt class="docutils literal"&gt;&amp;lt;code&amp;gt;&lt;/tt&gt; text is too unusual,
+and results in an ugly look.
+It does not fit with the general general theme, so should be grey really,
+which would match with that of &lt;tt class="docutils literal"&gt;&amp;lt;pre&amp;gt;&lt;/tt&gt; text.
+I fixed it myself with the following patch:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+diff --git a/liquidluck/_themes/default/static/style.css b/liquidluck/_themes/default/static/style.css
+index e90de80..94fa7e8 100644
+--- a/liquidluck/_themes/default/static/style.css
++++ b/liquidluck/_themes/default/static/style.css
+&amp;#64;&amp;#64; -112,7 +112,7 &amp;#64;&amp;#64; pre {
+     border-radius: 3px;
+ }
+ code, tt {
+-    background-color: #fee9cc;
++    background-color: #eee;
+     color: rgba(0, 0, 0, 0.75);
+     padding: 1px 3px;
+     font-size: 12px;
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</summary><category term="blogging"></category></entry><entry><title>favorite FLOSS</title><link href="http://tshepang.net/favorite-floss" rel="alternate"></link><updated>2013-10-02T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-02:favorite-floss</id><summary type="html">&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
 it has to both be personally useful and I have to like it a lot:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;backup:&lt;/strong&gt; &lt;a class="reference external" href="http://tshepang.net/project-of-note-rdiff-backup"&gt;rdiff-backup&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;desktop&lt;/strong&gt;: &lt;a class="reference external" href="http://www.gnome.org"&gt;GNOME&lt;/a&gt;&lt;/p&gt;
@@ -714,97 +805,7 @@ musicians (Fela Kuti, Bob Marley, and Burning Spear); I was only
 surprised that the later entrants, Salif Keita and Letta Mbulu beat
 mighty Bob, and that was based on just my thinking without actually
 making a list of tracks. Intuition isn't always reliable.&lt;/p&gt;
-</summary><category term="music"></category></entry><entry><title>from Pelican to liquidluck</title><link href="http://tshepang.net/from-pelican-to-liquidluck" rel="alternate"></link><updated>2013-08-17T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-08-17:from-pelican-to-liquidluck</id><summary type="html">&lt;p&gt;&lt;strong&gt;notes&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;This post was first published on &lt;strong&gt;2012-07-05&lt;/strong&gt;,
-which is shortly after I started using &lt;a class="reference external" href="http://liquidluck.readthedocs.org"&gt;liquidluck&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;I have since moved back to Pelican on &lt;strong&gt;2013-09-29&lt;/strong&gt;, with using
-&lt;a class="reference external" href="http://oncrashreboot.com/elegant-a-clean-theme-for-pelican-with-search-feature.html"&gt;Elegant theme&lt;/a&gt;. Reason: is stalled development of liquidluck
-(e.g. author &lt;a class="reference external" href="https://github.com/lepture/liquidluck/issues/101"&gt;is busy with other projects&lt;/a&gt;, and is doing &lt;a class="reference external" href="https://github.com/lepture/liquidluck/issues/104#issuecomment-22825084"&gt;some
-large changes to liquidluck in a branch&lt;/a&gt;). There is also &lt;a class="reference external" href="https://github.com/lepture/liquidluck/issues/created_by/tshepang?sort=updated&amp;amp;state=open"&gt;a
-backlog of doc improvements&lt;/a&gt; I submitted, which are not even
-acknowledged. Do not consider this a complaint... the author in fact
-gave me more than I gave him... a nice piece of software. In fact, I
-might go back at some point, and will keep maintaining &lt;a class="reference external" href="http://tshepang.net/looking-at-liquidluck-themes"&gt;live demos
-of the various liquidluck themes&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;I have a separate post on &lt;a class="reference external" href="http://tshepang.net/what-me-loves-about-static-website-generation"&gt;what I love about static website generators&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class="section" id="why-pelican-rocks"&gt;
-&lt;h2&gt;why &lt;a class="reference external" href="http://pelican.readthedocs.org"&gt;Pelican&lt;/a&gt; rocks&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;It has categories
-(&lt;a class="reference external" href="https://github.com/getnikola/nikola/issues/163"&gt;unlike nikola&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Post metadata:&lt;ul&gt;
-&lt;li&gt;if Date is not specified, file mtime is used (unlike &lt;a class="reference external" href="http://blogofile.com"&gt;blogofile&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;if Category is not specified, parent directory name is used
-(unlike blogofile)&lt;/li&gt;
-&lt;li&gt;titles are allowed to have any character (unlike blogofile)&lt;/li&gt;
-&lt;li&gt;there is an option to provide clean urls... remove trailing &lt;tt class="docutils literal"&gt;.html&lt;/tt&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Does not force one into having ugly date-based filesystem structure
-(&lt;a class="reference external" href="https://bitbucket.org/vladris/tinkerer/issue/41"&gt;unlike tinkerer&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="why-pelican-rocks-not"&gt;
-&lt;h2&gt;why Pelican rocks not&lt;/h2&gt;
-&lt;p&gt;The default theme simply didn't fit my tastes,
-and &lt;a class="reference external" href="http://tshepang.net/favorite-pelican-themes"&gt;the other themes weren't so satisfactory&lt;/a&gt;.
-I spent way too long fiddling with them, and just couldn't be happy.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="why-liquidluck"&gt;
-&lt;h2&gt;why liquidluck&lt;/h2&gt;
-&lt;p&gt;So I have moved to &lt;a class="reference external" href="http://liquidluck.readthedocs.org"&gt;liquidluck&lt;/a&gt;,
-and am hoping I will not be 'forced' to move again.
-It's way too much work, and it took multiple messages between me and
-&lt;a class="reference external" href="http://lepture.com"&gt;the developer&lt;/a&gt; of this sleek new static site generator just to get it
-to behave the way I like it.&lt;/p&gt;
-&lt;p&gt;I had to override stuff that's done by the software, by using &lt;a class="reference external" href="https://bitbucket.org/tshepang/blog/src/1602cdf8/custom.py"&gt;this script&lt;/a&gt;,
-which helped give it the advantages that Pelican has over the
-other generators I mentioned, while also solving the one problem Pelican
-has.. lack of a good-enough theme.
-This was achieved with the help of that very helpful and responsive developer.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="issues"&gt;
-&lt;h2&gt;issues&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;There is no visible way, at least for the default theme, to subscribe
-to RSS feeds of individual Categories.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;The text is a bit blurry/faint with the default theme,
-and none of &lt;a class="reference external" href="http://tshepang.net/looking-at-liquidluck-themes"&gt;the other ones&lt;/a&gt; are close to good-enough for my liking,
-all but the promising one named &lt;a class="reference external" href="https://github.com/bingdian/liquidluck-theme-responsive"&gt;responsive&lt;/a&gt;.
-It got 2 issues so far (see &lt;a class="reference external" href="http://demo-responsive.tshepang.net"&gt;live demo&lt;/a&gt;):&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Date is displayed at the bottom of a post...
-why make user scroll that far before presenting such a key piece of info.&lt;/li&gt;
-&lt;li&gt;There is no link anywhere allowing to visit Home.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Background color for &lt;tt class="docutils literal"&gt;&amp;lt;code&amp;gt;&lt;/tt&gt; text is too unusual,
-and results in an ugly look.
-It does not fit with the general general theme, so should be grey really,
-which would match with that of &lt;tt class="docutils literal"&gt;&amp;lt;pre&amp;gt;&lt;/tt&gt; text.
-I fixed it myself with the following patch:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-diff --git a/liquidluck/_themes/default/static/style.css b/liquidluck/_themes/default/static/style.css
-index e90de80..94fa7e8 100644
---- a/liquidluck/_themes/default/static/style.css
-+++ b/liquidluck/_themes/default/static/style.css
-&amp;#64;&amp;#64; -112,7 +112,7 &amp;#64;&amp;#64; pre {
-     border-radius: 3px;
- }
- code, tt {
--    background-color: #fee9cc;
-+    background-color: #eee;
-     color: rgba(0, 0, 0, 0.75);
-     padding: 1px 3px;
-     font-size: 12px;
-&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-</summary><category term="blogging"></category></entry><entry><title>links 2013-08-09</title><link href="http://tshepang.net/links-2013-08-09" rel="alternate"></link><updated>2013-08-09T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-08-09:links-2013-08-09</id><summary type="html">&lt;ul class="simple"&gt;
+</summary><category term="music"></category></entry><entry><title>links 2013-08-09</title><link href="http://tshepang.net/links-2013-08-09" rel="alternate"></link><updated>2013-08-09T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-08-09:links-2013-08-09</id><summary type="html">&lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://github.com/jashkenas/coffee-script/issues/2864#issuecomment-15159370"&gt;some of the challenges of maintaining a popular FLOSS project&lt;/a&gt; (&lt;a class="reference external" href="http://www.binpress.com/blog/2013/04/14/open-source-cannot-live-on-donations-alone"&gt;via&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://medium.com/building-gittip/bb770ab13101"&gt;great summary of current status of Gittip&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://news.ycombinator.com/item?id=5916687"&gt;what it would take to build a general purpose search engine&lt;/a&gt;&lt;/li&gt;
