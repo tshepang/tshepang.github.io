@@ -3,17 +3,18 @@
 &lt;ul class="simple"&gt;
 &lt;li&gt;This post was first published on &lt;strong&gt;2012-07-05&lt;/strong&gt;,
 which is shortly after I started using &lt;a class="reference external" href="http://liquidluck.readthedocs.org"&gt;liquidluck&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;I have since moved back to Pelican on &lt;strong&gt;2013-09-29&lt;/strong&gt;, with &lt;a class="reference external" href="http://oncrashreboot.com/elegant-a-clean-theme-for-pelican-with-search-feature.html"&gt;Elegant
-theme&lt;/a&gt;. Reason: is slow development of liquidluck (e.g. author &lt;a class="reference external" href="https://github.com/lepture/liquidluck/issues/101"&gt;is
-busy with other projects&lt;/a&gt;, and is doing &lt;a class="reference external" href="https://github.com/lepture/liquidluck/issues/104#issuecomment-22825084"&gt;some large changes to
-liquidluck in a branch&lt;/a&gt;). There is also &lt;a class="reference external" href="https://github.com/lepture/liquidluck/issues/created_by/tshepang?sort=updated&amp;amp;state=open"&gt;a backlog of doc
-improvements&lt;/a&gt; I submitted, which are not even acknowledged. Do not
-consider this a complaint... the author in fact gave me more than I
-gave him... a nice piece of software. In fact, I might go back at
-some point, and will keep maintaining &lt;a class="reference external" href="http://tshepang.net/looking-at-liquidluck-themes"&gt;live demos of the various
-liquidluck themes&lt;/a&gt;. Meanwhile, Pelican is likely the most
-actively-developed static site generator in the Python ecosystem.&lt;/li&gt;
-&lt;li&gt;I have a separate post on &lt;a class="reference external" href="http://tshepang.net/what-me-loves-about-static-website-generation"&gt;what I love about static website generators&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;I have since moved back to Pelican on &lt;strong&gt;2013-09-29&lt;/strong&gt;, with &lt;a href="#id7"&gt;&lt;span class="problematic" id="id8"&gt;`Elegant
+theme`__&lt;/span&gt;&lt;/a&gt;. Reason: slow liquidluck development (&lt;a href="#id7"&gt;&lt;span class="problematic" id="id9"&gt;`the author is busy
+with other projects`__&lt;/span&gt;&lt;/a&gt;), though he has more recently been doing
+&lt;a href="#id13"&gt;&lt;span class="problematic" id="id14"&gt;`some large changes to in a branch`_&lt;/span&gt;&lt;/a&gt; which I assume is not ready
+_. There is also &lt;a href="#id7"&gt;&lt;span class="problematic" id="id10"&gt;`a backlog of doc improvements`__&lt;/span&gt;&lt;/a&gt; I submitted,
+which are not even acknowledged. Do not consider this a
+complaint... the author in fact gave me more than I gave him... a
+nice piece of software. In fact, I might go back at some point, and
+will keep maintaining &lt;a href="#id7"&gt;&lt;span class="problematic" id="id11"&gt;`live demos of the various liquidluck
+themes`__&lt;/span&gt;&lt;/a&gt;. Meanwhile, Pelican is likely the most actively-developed
+static site generator in the Python ecosystem.&lt;/li&gt;
+&lt;li&gt;I have a separate post on &lt;a href="#id7"&gt;&lt;span class="problematic" id="id12"&gt;`what I love about static website generators`__&lt;/span&gt;&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="section" id="why-pelican-rocks"&gt;
 &lt;h2&gt;why &lt;a class="reference external" href="http://pelican.readthedocs.org"&gt;Pelican&lt;/a&gt; rocks&lt;/h2&gt;
@@ -89,6 +90,16 @@ index e90de80..94fa7e8 100644
 &lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="system-messages section"&gt;
+&lt;h2&gt;Docutils System Messages&lt;/h2&gt;
+&lt;div class="system-message" id="id7"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;/home/tshepang/projects/blog/content/misc/from Pelican to liquidluck.rst&lt;/tt&gt;); &lt;em&gt;backlinks: &lt;a href="#id8"&gt;1&lt;/a&gt;, &lt;a href="#id9"&gt;2&lt;/a&gt;, &lt;a href="#id10"&gt;3&lt;/a&gt;, &lt;a href="#id11"&gt;4&lt;/a&gt;, &lt;a href="#id12"&gt;5&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+Anonymous hyperlink mismatch: 5 references but 6 targets.
+See &amp;quot;backrefs&amp;quot; attribute for IDs.&lt;/div&gt;
+&lt;div class="system-message" id="id13"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;/home/tshepang/projects/blog/content/misc/from Pelican to liquidluck.rst&lt;/tt&gt;, line 12); &lt;em&gt;&lt;a href="#id14"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+Unknown target name: &amp;quot;some large changes to in a branch&amp;quot;.&lt;/div&gt;
 &lt;/div&gt;
 </summary><category term="blogging"></category></entry><entry><title>blogging with Pelican</title><link href="http://tshepang.net/blogging-with-pelican" rel="alternate"></link><updated>2013-09-30T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-30:blogging-with-pelican</id><summary type="html">&lt;p&gt;&lt;strong&gt;notes&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul class="simple"&gt;
