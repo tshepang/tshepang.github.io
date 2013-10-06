@@ -106,7 +106,7 @@ Tags, Categories, and Pages (for non-bloggy stuff like a CV or About Me file).&l
 &lt;p&gt;As for my blog, its tree structure looks like this:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 build/...
-pages/{about-me.rst, key-posts.rst}
+pages/about-me.rst
 posts/{arts/, computing/, misc/}
 CNAME
 fabfile.py
