@@ -141,8 +141,8 @@ find out.</p>
 
         </div>
         </section>
-    </div>
-    </article>
+</div>
+</article>
                 </div>
                 <div class="span1"></div>
             </div>
@@ -180,5 +180,21 @@ Attribution-ShareAlike 3.0 Unported License</a>.</li>
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
     </script>
+        <script  language="javascript" type="text/javascript">
+            function uncollapse() {
+                var hash_str = window.location.hash;
+                if (window.location.hash.match(/^#comment-\d+$/))
+                {
+                    var hash_str = '#disqus_thread';
+                }
+                $(hash_str).collapse({
+                    toggle: true
+                    })
+            }
+        </script>
+
+        <script type="text/javascript" language="JavaScript">
+            uncollapse(); 
+        </script>
     </body>
 </html>
