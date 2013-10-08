@@ -1112,8 +1112,8 @@ does not appear afraid of voicing controversial thoughts, or even
 express arrogance.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://mail.gnome.org/archives/desktop-devel-list/2007-October/msg00136.html"&gt;I first heard of him&lt;/a&gt; through a project that was to revolutionise Unix
 audio, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/PulseAudio"&gt;PulseAudio&lt;/a&gt;. Using it was not really the best of experiences
-(I don't yet need any of its advanced features,
-and it consumed too many CPU cybles),
+(it consumed too much CPU time, which wasn't a good trade-off given I
+didn't need any of its advanced features),
 but it may well have just been the way Debian configured it at the time.&lt;/p&gt;
 &lt;p&gt;Later on, he started work on an init system that was to replace
 exisiting ones on Linux-based systems, known as &lt;a class="reference external" href="http://tshepang.net/project-of-note-systemd"&gt;systemd&lt;/a&gt;. This is
