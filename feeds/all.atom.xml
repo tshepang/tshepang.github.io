@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-10-04T00:00:00+02:00</updated><entry><title>links 2013-10-04</title><link href="http://tshepang.net/links-2013-10-04" rel="alternate"></link><updated>2013-10-04T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-04:links-2013-10-04</id><summary type="html">&lt;ul class="simple"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-10-09T00:00:00+02:00</updated><entry><title>projects with excellent documentation</title><link href="http://tshepang.net/projects-with-excellent-documentation" rel="alternate"></link><updated>2013-10-09T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-09:projects-with-excellent-documentation</id><summary type="html">&lt;p&gt;Here is a list of projects whose documentation I found to be
+highly-detailed and well-written.&lt;/p&gt;
+&lt;div class="section" id="big"&gt;
+&lt;h2&gt;big&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The &lt;a class="reference external" href="http://cmgm.stanford.edu/classes/unix/emacs.html"&gt;introductory tutorial of GNU Emacs&lt;/a&gt; (looks a lot better when
+run from within Emacs), is written in a very gentle and careful way;
+it's among the best tutorials I've seen.  Same applies to &lt;a class="reference external" href="http://www.gnu.org/software/emacs/manual/html_node/emacs"&gt;the Emacs
+manual&lt;/a&gt;, which I'm tempted to call the best I've read yet. It
+really, really goes into painstaking detail, and seems to have been
+written by professional technical writers.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://docs.python.org"&gt;CPython&lt;/a&gt; - this is quite massive, so although quality is generally
+high, it varies depending on where you are; &lt;a class="reference external" href="http://docs.python.org/3/library/collections"&gt;an example of
+excellence&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.sqlite.org/docs.html"&gt;sqlite3&lt;/a&gt; - quite extensive, especially for an embeddable DBMS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="small"&gt;
+&lt;h2&gt;small&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://fedorahosted.org/suds/wiki/Documentation"&gt;Suds&lt;/a&gt; - multiple, well-written examples&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.nongnu.org/rdiff-backup/examples.html"&gt;rdiff-backup usage examples&lt;/a&gt; - much smaller than the others listed
+here, but nevertheless deserves mention because it's both gentle and
+thorough&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As a sidenote, I've heard great things about Django'&lt;a class="reference external" href="https://docs.djangoproject.com"&gt;s&lt;/a&gt;, but haven't
+really looked yet.&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="untagged"></category></entry><entry><title>links 2013-10-04</title><link href="http://tshepang.net/links-2013-10-04" rel="alternate"></link><updated>2013-10-04T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-04:links-2013-10-04</id><summary type="html">&lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://lists.debian.org/debian-project/2013/08/msg00011.html"&gt;a nicely summarised survey of fresh Debian contributors&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://lists.debian.org/debian-gtk-gnome/2013/09/msg00014.html"&gt;excellent response to an unpleasant reply&lt;/a&gt; - &lt;a class="reference external" href="http://tshepang.net/developer-of-note-michael-biebl"&gt;I admire Michael
 Biebl&lt;/a&gt;, but don't remember him be this harsh&lt;/li&gt;
@@ -673,35 +701,7 @@ Ir
 &lt;p&gt;---&lt;/p&gt;
 &lt;p&gt;Since I normally work at too high a level to care about CPU
 instructions cycles at this detail, I found the exercise eye-opening.&lt;/p&gt;
-</summary><category term="project-of-note"></category><category term="non-Python"></category></entry><entry><title>projects with excellent documentation</title><link href="http://tshepang.net/projects-with-excellent-documentation" rel="alternate"></link><updated>2013-09-23T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-23:projects-with-excellent-documentation</id><summary type="html">&lt;p&gt;Here is a list of projects whose documentation I found to be
-highly-detailed and well-written.&lt;/p&gt;
-&lt;div class="section" id="big"&gt;
-&lt;h2&gt;big&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;The &lt;a class="reference external" href="http://cmgm.stanford.edu/classes/unix/emacs.html"&gt;introductory tutorial of GNU Emacs&lt;/a&gt; (looks a lot better when
-run from within Emacs), is written in a very gentle and careful way;
-it's among the best tutorials I've seen.  Same applies to &lt;a class="reference external" href="http://www.gnu.org/software/emacs/manual/html_node/emacs"&gt;the Emacs
-manual&lt;/a&gt;, which I'm tempted to call the best I've read yet. It
-really, really goes into painstaking detail, and seems to have been
-written by professional technical writers.&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://docs.python.org"&gt;CPython&lt;/a&gt; - I used to appreciate this more before I got closely
-involved, noticing warts here and there, and therefore taking it for
-granted.&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.sqlite.org/docs.html"&gt;sqlite3&lt;/a&gt; - quite extensive, especially for an embeddable DBMS&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="small"&gt;
-&lt;h2&gt;small&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://fedorahosted.org/suds/wiki/Documentation"&gt;Suds&lt;/a&gt; - multiple, well-written examples&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.nongnu.org/rdiff-backup/examples.html"&gt;rdiff-backup usage examples&lt;/a&gt; - much smaller than the others listed
-here, but nevertheless deserves mention because it's both gentle and
-thorough&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;As a sidenote, I've heard great things about &lt;a class="reference external" href="https://docs.djangoproject.com"&gt;Django's&lt;/a&gt;, but haven't
-really looked yet.&lt;/p&gt;
-&lt;/div&gt;
-</summary><category term="untagged"></category></entry><entry><title>Person of Interest - Season 2 Episode 16</title><link href="http://tshepang.net/person-of-interest-season-2-episode-16" rel="alternate"></link><updated>2013-09-06T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-06:person-of-interest-season-2-episode-16</id><summary type="html">&lt;p&gt;I am a big fan of the series, &lt;em&gt;Person of Interest&lt;/em&gt;. There is much to
+</summary><category term="project-of-note"></category><category term="non-Python"></category></entry><entry><title>Person of Interest - Season 2 Episode 16</title><link href="http://tshepang.net/person-of-interest-season-2-episode-16" rel="alternate"></link><updated>2013-09-06T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-06:person-of-interest-season-2-episode-16</id><summary type="html">&lt;p&gt;I am a big fan of the series, &lt;em&gt;Person of Interest&lt;/em&gt;. There is much to
 celebrate, among which is the wonderful portrayal of the brilliant
 creator of the machine that (illegally) looks for patterns in society
 so as to predict, with high certainty, the people will be involved in
