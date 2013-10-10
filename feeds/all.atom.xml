@@ -14,7 +14,38 @@ OpenSSH, &lt;a class="reference external" href="http://humdi.net/vnstat"&gt;vnst
 &lt;p&gt;&lt;strong&gt;version control system&lt;/strong&gt;: &lt;a class="reference external" href="http://mercurial.selenic.com"&gt;Mercurial&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;web browser&lt;/strong&gt;: Chrome/Chromium&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;non-FLOSS:&lt;/strong&gt; &lt;a class="reference external" href="http://disqus.com"&gt;Disqus&lt;/a&gt;, &lt;a class="reference external" href="http://mail.google.com/mail"&gt;Gmail&lt;/a&gt;, &lt;a class="reference external" href="http://stackexchange.com"&gt;Stack Exchange&lt;/a&gt;, &lt;a class="reference external" href="http://bitbucket.org"&gt;Bitbucket&lt;/a&gt;&lt;/p&gt;
-</summary><category term="list"></category></entry><entry><title>projects with excellent documentation</title><link href="http://tshepang.net/projects-with-excellent-documentation" rel="alternate"></link><updated>2013-10-09T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-09:projects-with-excellent-documentation</id><summary type="html">&lt;p&gt;Here is a list of projects whose documentation I found to be
+</summary><category term="list"></category></entry><entry><title>my first server</title><link href="http://tshepang.net/my-first-server" rel="alternate"></link><updated>2013-10-10T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-10:my-first-server</id><summary type="html">&lt;p&gt;The closest I ever came to needing own server is for hosting &lt;a class="reference external" href="http://tshepang.net/tags.html#blogging-ref"&gt;my
+blog&lt;/a&gt;, but I've had plenty of free services available to me, latest
+being &lt;a class="reference external" href="http://pages.github.com"&gt;GitHub Pages&lt;/a&gt;. When &lt;a class="reference external" href="https://www.digitalocean.com"&gt;DigitalOcean&lt;/a&gt; &lt;a class="reference external" href="http://thechangelog.com/107"&gt;offered a $10 credit&lt;/a&gt;
+(enough to buy two months of the most basic offering... 1 CPU core,
+0.5GB RAM, 20GB storage), I thought why not.&lt;/p&gt;
+&lt;p&gt;As for the experience, I was quite impressed by the performance. It's
+no wonder why the service receives so much praise from all over the
+place; it's quite a lot for that ridiculous $5 fee. I've never
+experienced storage this fast... my laptop has a hard-drive and the
+SSD on my work machine is unimpressive. The CPU also appears powerful,
+though I haven't stressed it yet.&lt;/p&gt;
+&lt;p&gt;I've spent the last few hours setting it up, after which I created a
+snapshot, which is something to restore from in case of trouble. I
+even destroyed and re-created it, just to make sure it works. This was
+the second-worst experience playing with this service... it's so damn
+slow! And by that, I mean destroying a Droplet (their name for the VM)
+takes well over a minute, same as re-creating it. Maybe I'm being too
+demanding, maybe it can't be helped, especially given the price, but
+it's still slow as fuck.&lt;/p&gt;
+&lt;p&gt;What about the worst experience? It's the Console Access, which allows
+for recovery in case of issues. It was painful to use since it's so
+slow, and kept inserting wrong characters in place of the username. It
+also tends to fail with the message:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Failed to establish a connection to the console. Please reload.
+&lt;/pre&gt;
+&lt;p&gt;It's not a big issue anyways, since this will be a rarely-used
+feature.&lt;/p&gt;
+&lt;p&gt;And no, I still don't know yet what I'll use this for. Maybe I'll host
+my blog there, moving it from the GitHub service. Regardless, it's
+nice to have a machine accesible from anywhere on the web.&lt;/p&gt;
+</summary><category term="Debian"></category></entry><entry><title>projects with excellent documentation</title><link href="http://tshepang.net/projects-with-excellent-documentation" rel="alternate"></link><updated>2013-10-09T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-09:projects-with-excellent-documentation</id><summary type="html">&lt;p&gt;Here is a list of projects whose documentation I found to be
 highly-detailed and well-written.&lt;/p&gt;
 &lt;div class="section" id="big"&gt;
 &lt;h2&gt;big&lt;/h2&gt;
