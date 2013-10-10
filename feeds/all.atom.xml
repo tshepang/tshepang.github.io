@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-10-09T00:00:00+02:00</updated><entry><title>projects with excellent documentation</title><link href="http://tshepang.net/projects-with-excellent-documentation" rel="alternate"></link><updated>2013-10-09T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-09:projects-with-excellent-documentation</id><summary type="html">&lt;p&gt;Here is a list of projects whose documentation I found to be
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-10-10T00:00:00+02:00</updated><entry><title>favorite FLOSS</title><link href="http://tshepang.net/favorite-floss" rel="alternate"></link><updated>2013-10-10T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-10:favorite-floss</id><summary type="html">&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
+it has to both be personally useful and I have to like it a lot:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;backup:&lt;/strong&gt; &lt;a class="reference external" href="http://tshepang.net/project-of-note-rdiff-backup"&gt;rdiff-backup&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;desktop&lt;/strong&gt;: &lt;a class="reference external" href="http://www.gnome.org"&gt;GNOME&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;development&lt;/strong&gt;: Python, Emacs, &lt;a class="reference external" href="http://tshepang.net/project-of-note-git-cola"&gt;git-cola&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;misc utilities:&lt;/strong&gt; grep, &lt;a class="reference external" href="http://tshepang.net/project-of-note-sudo"&gt;Sudo&lt;/a&gt;, &lt;a class="reference external" href="http://tshepang.net/project-of-note-reprepro"&gt;reprepro&lt;/a&gt;, Lsof, less, Meld,
+Uptimed, top, &lt;a class="reference external" href="http://projects.gnome.org/tracker"&gt;Tracker&lt;/a&gt;, Ex Falso, wajig, GNOME system monitor applet,
+&lt;a class="reference external" href="http://tshepang.net/xfrun4-rocks"&gt;xfrun4&lt;/a&gt;, coreutils (wc, tail), &lt;a class="reference external" href="http://tshepang.net/project-of-note-linkchecker"&gt;LinkChecker&lt;/a&gt;, &lt;a class="reference external" href="http://guichaz.free.fr/iotop"&gt;Iotop&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Man_page"&gt;man&lt;/a&gt;,
+OpenSSH, &lt;a class="reference external" href="http://humdi.net/vnstat"&gt;vnstat&lt;/a&gt;, &lt;a class="reference external" href="http://tmux.sourceforge.net"&gt;tmux&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;spreadsheet:&lt;/strong&gt; gnumeric&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;terminal emulator&lt;/strong&gt;: GNOME Terminal&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;virtualisation&lt;/strong&gt;: VirtualBox&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;version control system&lt;/strong&gt;: &lt;a class="reference external" href="http://mercurial.selenic.com"&gt;Mercurial&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;web browser&lt;/strong&gt;: Chrome/Chromium&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;non-FLOSS:&lt;/strong&gt; &lt;a class="reference external" href="http://disqus.com"&gt;Disqus&lt;/a&gt;, &lt;a class="reference external" href="http://mail.google.com/mail"&gt;Gmail&lt;/a&gt;, &lt;a class="reference external" href="http://stackexchange.com"&gt;Stack Exchange&lt;/a&gt;, &lt;a class="reference external" href="http://bitbucket.org"&gt;Bitbucket&lt;/a&gt;&lt;/p&gt;
+</summary><category term="list"></category></entry><entry><title>projects with excellent documentation</title><link href="http://tshepang.net/projects-with-excellent-documentation" rel="alternate"></link><updated>2013-10-09T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-09:projects-with-excellent-documentation</id><summary type="html">&lt;p&gt;Here is a list of projects whose documentation I found to be
 highly-detailed and well-written.&lt;/p&gt;
 &lt;div class="section" id="big"&gt;
 &lt;h2&gt;big&lt;/h2&gt;
@@ -131,22 +146,7 @@ index e90de80..94fa7e8 100644
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</summary><category term="blogging"></category></entry><entry><title>favorite FLOSS</title><link href="http://tshepang.net/favorite-floss" rel="alternate"></link><updated>2013-10-02T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-02:favorite-floss</id><summary type="html">&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
-it has to both be personally useful and I have to like it a lot:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;backup:&lt;/strong&gt; &lt;a class="reference external" href="http://tshepang.net/project-of-note-rdiff-backup"&gt;rdiff-backup&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;desktop&lt;/strong&gt;: &lt;a class="reference external" href="http://www.gnome.org"&gt;GNOME&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;development&lt;/strong&gt;: Python, Emacs, &lt;a class="reference external" href="http://tshepang.net/project-of-note-git-cola"&gt;git-cola&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;misc utilities:&lt;/strong&gt; grep, &lt;a class="reference external" href="http://tshepang.net/project-of-note-sudo"&gt;Sudo&lt;/a&gt;, &lt;a class="reference external" href="http://tshepang.net/project-of-note-reprepro"&gt;reprepro&lt;/a&gt;, Lsof, less, Meld,
-Uptimed, top, &lt;a class="reference external" href="http://projects.gnome.org/tracker"&gt;Tracker&lt;/a&gt;, Ex Falso, wajig, GNOME system monitor applet,
-&lt;a class="reference external" href="http://tshepang.net/xfrun4-rocks"&gt;xfrun4&lt;/a&gt;, coreutils (wc, tail), &lt;a class="reference external" href="http://tshepang.net/project-of-note-linkchecker"&gt;LinkChecker&lt;/a&gt;, &lt;a class="reference external" href="http://guichaz.free.fr/iotop"&gt;Iotop&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Man_page"&gt;man&lt;/a&gt;,
-OpenSSH, &lt;a class="reference external" href="http://humdi.net/vnstat"&gt;vnstat&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;spreadsheet:&lt;/strong&gt; gnumeric&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;terminal emulator&lt;/strong&gt;: GNOME Terminal&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;virtualisation&lt;/strong&gt;: VirtualBox&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;version control system&lt;/strong&gt;: &lt;a class="reference external" href="http://mercurial.selenic.com"&gt;Mercurial&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;web browser&lt;/strong&gt;: Chrome/Chromium&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;non-FLOSS:&lt;/strong&gt; &lt;a class="reference external" href="http://disqus.com"&gt;Disqus&lt;/a&gt;, &lt;a class="reference external" href="http://mail.google.com/mail"&gt;Gmail&lt;/a&gt;, &lt;a class="reference external" href="http://stackexchange.com"&gt;Stack Exchange&lt;/a&gt;, &lt;a class="reference external" href="http://bitbucket.org"&gt;Bitbucket&lt;/a&gt;&lt;/p&gt;
-</summary><category term="list"></category></entry><entry><title>tools I use all the time</title><link href="http://tshepang.net/tools-i-use-all-the-time" rel="alternate"></link><updated>2013-10-02T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-02:tools-i-use-all-the-time</id><summary type="html">&lt;p&gt;Following are tools I use all the time, but am not necessarily loving.
+</summary><category term="blogging"></category></entry><entry><title>tools I use all the time</title><link href="http://tshepang.net/tools-i-use-all-the-time" rel="alternate"></link><updated>2013-10-02T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-02:tools-i-use-all-the-time</id><summary type="html">&lt;p&gt;Following are tools I use all the time, but am not necessarily loving.
 For those I like a lot, see &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;this list&lt;/a&gt;.&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/li&gt;
