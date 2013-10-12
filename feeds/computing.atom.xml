@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-10-12T00:00:00+02:00</updated><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2013-10-12T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-12:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
-For those I like a lot, see &lt;a href="#id15"&gt;&lt;span class="problematic" id="id16"&gt;`this list`__&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;strong&gt;GNOME&lt;/strong&gt;: primary Desktop Environment&lt;/p&gt;
+For those I like a lot, see &lt;a href="#id7"&gt;&lt;span class="problematic" id="id8"&gt;`this list`__&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GNOME&lt;/strong&gt;: primary Desktop Environment&lt;ul&gt;
 &lt;li&gt;gnome-panel&lt;/li&gt;
 &lt;li&gt;gnome-search-tool&lt;/li&gt;
 &lt;li&gt;gnome-system-monitor&lt;/li&gt;
@@ -13,79 +11,47 @@ For those I like a lot, see &lt;a href="#id15"&gt;&lt;span class="problematic" i
 &lt;li&gt;file-roller&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;editors&lt;/p&gt;
-&lt;ul class="simple"&gt;
+&lt;li&gt;editors&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Emacs&lt;/strong&gt;: my favorite&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Vim&lt;/strong&gt;: it happens to be installed on a lot of systems at work,
 and I do like it some&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;software development&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;strong&gt;git-cola&lt;/strong&gt;: &lt;a href="#id15"&gt;&lt;span class="problematic" id="id17"&gt;`why me loves it`__&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;strong&gt;GNU toolchain&lt;/strong&gt; (GCC, make, GLibC, ...)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;strong&gt;Git&lt;/strong&gt;: as if I had a choice... work and open source&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;strong&gt;Mercurial&lt;/strong&gt;: my favorite&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a href="#id2"&gt;&lt;span class="problematic" id="id3"&gt;**&lt;/span&gt;&lt;/a&gt;Meld**__: the most excellent diff tool I've used yet&lt;/p&gt;
-&lt;div class="system-message" id="id2"&gt;
-&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;tt class="docutils"&gt;/home/tshepang/projects/blog/content/computing/tools I use all the time.rst&lt;/tt&gt;, line 36); &lt;em&gt;&lt;a href="#id3"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Inline strong start-string without end-string.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/li&gt;
+&lt;li&gt;software development&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git-cola&lt;/strong&gt;: &lt;a href="#id7"&gt;&lt;span class="problematic" id="id9"&gt;`why me loves it`__&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GNU toolchain&lt;/strong&gt; (GCC, make, GLibC, ...)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Git&lt;/strong&gt;: as if I had a choice... work and open source&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mercurial&lt;/strong&gt;: my favorite&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Meld&lt;/strong&gt;__: the most excellent diff tool I've used yet&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;entertainment&lt;/p&gt;
 &lt;ul class="simple"&gt;
+&lt;li&gt;entertainment&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Quod Libet&lt;/strong&gt;: audio player&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;VLC&lt;/strong&gt;: ugly interface, solid application&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;misc&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;strong&gt;Evince&lt;/strong&gt;: I would love to get a PDF reader with better navigation&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;strong&gt;Google Chrome&lt;/strong&gt;: I occasionally drop into Firefox when I
-experience issues, as well as for testing&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;strong&gt;Gnumeric&lt;/strong&gt;: it's faster than LibreOffice spreadsheet, and has
-superior search interface&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a href="#id6"&gt;&lt;span class="problematic" id="id7"&gt;**&lt;/span&gt;&lt;/a&gt;Liferea**__: would not be using this had it not been for Google Reader
+&lt;li&gt;misc&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Evince&lt;/strong&gt;: I would love to get a PDF reader with better navigation&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Google Chrome&lt;/strong&gt;: I occasionally drop into Firefox when I
+experience issues, as well as for testing&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gnumeric&lt;/strong&gt;: it's faster than LibreOffice spreadsheet, and has
+superior search interface&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Liferea&lt;/strong&gt;__: would not be using this had it not been for Google Reader
 shutdown, but am glad they did cuz I like the tool, ugly and unkool
-as it is&lt;/p&gt;
-&lt;div class="system-message" id="id6"&gt;
-&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;tt class="docutils"&gt;/home/tshepang/projects/blog/content/computing/tools I use all the time.rst&lt;/tt&gt;, line 53); &lt;em&gt;&lt;a href="#id7"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Inline strong start-string without end-string.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;strong&gt;Thunderbird&lt;/strong&gt;: I prefer Evolution, but it gave me some issues I
-don't remember&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a href="#id8"&gt;&lt;span class="problematic" id="id9"&gt;**&lt;/span&gt;&lt;/a&gt;tmux**__&lt;/p&gt;
-&lt;div class="system-message" id="id8"&gt;
-&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;tt class="docutils"&gt;/home/tshepang/projects/blog/content/computing/tools I use all the time.rst&lt;/tt&gt;, line 58); &lt;em&gt;&lt;a href="#id9"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Inline strong start-string without end-string.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a href="#id10"&gt;&lt;span class="problematic" id="id11"&gt;**&lt;/span&gt;&lt;/a&gt;Transmission**__: the only torrent client I ever used&lt;/p&gt;
-&lt;div class="system-message" id="id10"&gt;
-&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;tt class="docutils"&gt;/home/tshepang/projects/blog/content/computing/tools I use all the time.rst&lt;/tt&gt;, line 59); &lt;em&gt;&lt;a href="#id11"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Inline strong start-string without end-string.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/li&gt;
+as it is&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Thunderbird&lt;/strong&gt;: I prefer Evolution, but it gave me some issues I
+don't remember&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;tmux&lt;/strong&gt;__&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Transmission&lt;/strong&gt;__: the only torrent client I ever used&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="system-messages section"&gt;
 &lt;h2&gt;Docutils System Messages&lt;/h2&gt;
-&lt;div class="system-message" id="id15"&gt;
-&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;/home/tshepang/projects/blog/content/computing/tools I use all the time.rst&lt;/tt&gt;); &lt;em&gt;backlinks: &lt;a href="#id16"&gt;1&lt;/a&gt;, &lt;a href="#id17"&gt;2&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;div class="system-message" id="id7"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;/home/tshepang/projects/blog/content/computing/tools I use all the time.rst&lt;/tt&gt;); &lt;em&gt;backlinks: &lt;a href="#id8"&gt;1&lt;/a&gt;, &lt;a href="#id9"&gt;2&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 Anonymous hyperlink mismatch: 2 references but 6 targets.
 See &amp;quot;backrefs&amp;quot; attribute for IDs.&lt;/div&gt;
 &lt;/div&gt;
