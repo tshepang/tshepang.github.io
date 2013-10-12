@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-10-12T00:00:00+02:00</updated><entry><title>tools I use all the time</title><link href="http://tshepang.net/tools-i-use-all-the-time" rel="alternate"></link><updated>2013-10-12T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-12:tools-i-use-all-the-time</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
-For those I like a lot, see &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;this list&lt;/a&gt;.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-10-12T00:00:00+02:00</updated><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2013-10-12T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-12:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
+For those I like a lot, see &lt;a href="#id7"&gt;&lt;span class="problematic" id="id8"&gt;`this list`__&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Emacs&lt;/strong&gt;: general text editor&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Vim&lt;/strong&gt;: it happens to be installed on a lot of systems at work&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;GNOME&lt;/strong&gt;: primary Desktop Environment&lt;ul&gt;
 &lt;li&gt;gnome-panel&lt;/li&gt;
 &lt;li&gt;gnome-search-tool&lt;/li&gt;
@@ -13,23 +11,50 @@ For those I like a lot, see &lt;a class="reference external" href="http://tshepa
 &lt;li&gt;file-roller&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://lzone.de/liferea"&gt;Liferea&lt;/a&gt;: would not be using this had it not been for Google Reader
+&lt;li&gt;editors&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Emacs&lt;/strong&gt;: my favorite&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vim&lt;/strong&gt;: it happens to be installed on a lot of systems at work,
+and I do like it some&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;software development&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git-cola&lt;/strong&gt;: &lt;a href="#id7"&gt;&lt;span class="problematic" id="id9"&gt;`why me loves it`__&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GNU toolchain&lt;/strong&gt; (GCC, make, GLibC, ...)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Git&lt;/strong&gt;: as if I had a choice... work and open source&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mercurial&lt;/strong&gt;: my favorite&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Meld__&lt;/strong&gt;: the most excellent diff tool I've used yet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;entertainment&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Quod Libet&lt;/strong&gt;: audio player&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VLC&lt;/strong&gt;: ugly interface, solid application&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;misc&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Evince&lt;/strong&gt;: I would love to get a PDF reader with better navigation&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Google Chrome&lt;/strong&gt;: I occasionally drop into Firefox when I
+experience issues, as well as for testing&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gnumeric&lt;/strong&gt;: it's faster than LibreOffice spreadsheet, and has
+superior search interface&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Liferea__&lt;/strong&gt;: would not be using this had it not been for Google Reader
 shutdown, but am glad they did cuz I like the tool, ugly and unkool
 as it is&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Evince&lt;/strong&gt;: I would love to get a PDF reader with better navigation&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Quod Libet&lt;/strong&gt;: audio player&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Thunderbird&lt;/strong&gt;: I prefer Evolution, but it gave me some issues I don't remember&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GNU toolchain&lt;/strong&gt; (GCC, make, GLibC, ...)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;VLC&lt;/strong&gt;: ugly interface, solid application&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Git&lt;/strong&gt;: do I have a choice?&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Mercurial&lt;/strong&gt;: my favorite&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Google Chrome&lt;/strong&gt;: I occasionally drop into Firefox when I
-experience issues&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://meldmerge.org"&gt;Meld&lt;/a&gt;: the most excellent diff tool I've used yet&lt;/li&gt;
-&lt;li&gt;git-cola: &lt;a class="reference external" href="http://tshepang.net/project-of-note-git-cola"&gt;why me loves it&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://tmux.sourceforge.net"&gt;tmux&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.transmissionbt.com"&gt;Transmission&lt;/a&gt;: the only torrent client I ever used&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Thunderbird&lt;/strong&gt;: I prefer Evolution, but it gave me some issues I
+don't remember&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;tmux__&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Transmission__&lt;/strong&gt;: the only torrent client I ever used&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="system-messages section"&gt;
+&lt;h2&gt;Docutils System Messages&lt;/h2&gt;
+&lt;div class="system-message" id="id7"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;/home/tshepang/projects/blog/content/computing/tools I use all the time.rst&lt;/tt&gt;); &lt;em&gt;backlinks: &lt;a href="#id8"&gt;1&lt;/a&gt;, &lt;a href="#id9"&gt;2&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+Anonymous hyperlink mismatch: 2 references but 6 targets.
+See &amp;quot;backrefs&amp;quot; attribute for IDs.&lt;/div&gt;
+&lt;/div&gt;
 </summary><category term="list"></category></entry><entry><title>favorite FLOSS</title><link href="http://tshepang.net/favorite-floss" rel="alternate"></link><updated>2013-10-10T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-10:favorite-floss</id><summary type="html">&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
 it has to both be personally useful and I have to like it a lot:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;backup:&lt;/strong&gt; &lt;a class="reference external" href="http://tshepang.net/project-of-note-rdiff-backup"&gt;rdiff-backup&lt;/a&gt;&lt;/p&gt;
