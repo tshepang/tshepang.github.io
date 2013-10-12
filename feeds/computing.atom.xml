@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-10-10T00:00:00+02:00</updated><entry><title>favorite FLOSS</title><link href="http://tshepang.net/favorite-floss" rel="alternate"></link><updated>2013-10-10T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-10:favorite-floss</id><summary type="html">&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-10-12T00:00:00+02:00</updated><entry><title>tools I use all the time</title><link href="http://tshepang.net/tools-i-use-all-the-time" rel="alternate"></link><updated>2013-10-12T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-12:tools-i-use-all-the-time</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
+For those I like a lot, see &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;this list&lt;/a&gt;.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Emacs&lt;/strong&gt;: general text editor&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vim&lt;/strong&gt;: it happens to be installed on a lot of systems at work&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GNOME&lt;/strong&gt;: primary Desktop Environment&lt;ul&gt;
+&lt;li&gt;gnome-panel&lt;/li&gt;
+&lt;li&gt;gnome-search-tool&lt;/li&gt;
+&lt;li&gt;gnome-system-monitor&lt;/li&gt;
+&lt;li&gt;nautilus&lt;/li&gt;
+&lt;li&gt;file-roller&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://lzone.de/liferea"&gt;Liferea&lt;/a&gt;: would not be using this had it not been for Google Reader
+shutdown, but am glad they did cuz I like the tool, ugly and unkool
+as it is&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Evince&lt;/strong&gt;: I would love to get a PDF reader with better navigation&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Quod Libet&lt;/strong&gt;: audio player&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Thunderbird&lt;/strong&gt;: I prefer Evolution, but it gave me some issues I don't remember&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GNU toolchain&lt;/strong&gt; (GCC, make, GLibC, ...)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VLC&lt;/strong&gt;: ugly interface, solid application&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Git&lt;/strong&gt;: do I have a choice?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mercurial&lt;/strong&gt;: my favorite&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Google Chrome&lt;/strong&gt;: I occasionally drop into Firefox when I
+experience issues&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://meldmerge.org"&gt;Meld&lt;/a&gt;: the most excellent diff tool I've used yet&lt;/li&gt;
+&lt;li&gt;git-cola: &lt;a class="reference external" href="http://tshepang.net/project-of-note-git-cola"&gt;why me loves it&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://tmux.sourceforge.net"&gt;tmux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.transmissionbt.com"&gt;Transmission&lt;/a&gt;: the only torrent client I ever used&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="list"></category></entry><entry><title>favorite FLOSS</title><link href="http://tshepang.net/favorite-floss" rel="alternate"></link><updated>2013-10-10T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-10:favorite-floss</id><summary type="html">&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
 it has to both be personally useful and I have to like it a lot:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;backup:&lt;/strong&gt; &lt;a class="reference external" href="http://tshepang.net/project-of-note-rdiff-backup"&gt;rdiff-backup&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;desktop&lt;/strong&gt;: &lt;a class="reference external" href="http://www.gnome.org"&gt;GNOME&lt;/a&gt;&lt;/p&gt;
@@ -86,38 +117,7 @@ presentable the presentation is.&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://tech.dropbox.com/2012/12/welcome-guido/"&gt;great kudos for (the great) Guido van Rossum&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names"&gt;Falsehoods Programmers Believe About Names&lt;/a&gt; - interesting&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="Debian"></category><category term="Python"></category><category term="links"></category></entry><entry><title>tools I use all the time</title><link href="http://tshepang.net/tools-i-use-all-the-time" rel="alternate"></link><updated>2013-10-02T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-02:tools-i-use-all-the-time</id><summary type="html">&lt;p&gt;Following are tools I use all the time, but am not necessarily loving.
-For those I like a lot, see &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;this list&lt;/a&gt;.&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Emacs&lt;/strong&gt;: general text editor&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Vim&lt;/strong&gt;: it happens to be installed on a lot of systems at work, but I
-only rarely use it on my workstation&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GNOME&lt;/strong&gt;: primary Desktop Environment&lt;ul&gt;
-&lt;li&gt;gnome-panel&lt;/li&gt;
-&lt;li&gt;gnome-search-tool&lt;/li&gt;
-&lt;li&gt;gnome-system-monitor&lt;/li&gt;
-&lt;li&gt;nautilus&lt;/li&gt;
-&lt;li&gt;file-roller&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://lzone.de/liferea"&gt;Liferea&lt;/a&gt;: would not be using this had it not been for Google Reader
-shutdown, but am glad they did cuz I like the tool, ugly and unkool
-as it is&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Evince&lt;/strong&gt;: I would love to get a PDF reader with better navigation&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Quod Libet&lt;/strong&gt;: audio player&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Thunderbird&lt;/strong&gt;: I prefer Evolution, but it gave me some issues I don't remember&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GNU toolchain&lt;/strong&gt; (GCC, make, GLibC, ...)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;VLC&lt;/strong&gt;: ugly interface, solid application&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Git&lt;/strong&gt;: do I have a choice?&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Mercurial&lt;/strong&gt;: my favorite&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Google Chrome&lt;/strong&gt;: I occasionally drop into Firefox when I
-experience issues&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://meldmerge.org"&gt;Meld&lt;/a&gt;: the most excellent diff tool I've used yet&lt;/li&gt;
-&lt;li&gt;git-cola: &lt;a class="reference external" href="http://tshepang.net/project-of-note-git-cola"&gt;why me loves it&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://tmux.sourceforge.net"&gt;tmux&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="list"></category></entry><entry><title>about 'developer of note' series</title><link href="http://tshepang.net/about-developer-of-note-series" rel="alternate"></link><updated>2013-09-30T23:28:04+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-30:about-developer-of-note-series</id><summary type="html">&lt;p&gt;I respect a lot of software developers, but many of those are not
+</summary><category term="Debian"></category><category term="Python"></category><category term="links"></category></entry><entry><title>about 'developer of note' series</title><link href="http://tshepang.net/about-developer-of-note-series" rel="alternate"></link><updated>2013-09-30T23:28:04+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-30:about-developer-of-note-series</id><summary type="html">&lt;p&gt;I respect a lot of software developers, but many of those are not
 going to have an entry in this series, and not because they are lesser
 in my eyes.&lt;/p&gt;
 &lt;p&gt;Here's the criteria I use to regard someone as &lt;a class="reference external" href="http://tshepang.net/tags#developer-of-note-ref"&gt;developer of the
