@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-10-13T00:00:00+02:00</updated><entry><title>my first Debian upload</title><link href="http://tshepang.net/my-first-debian-upload" rel="alternate"></link><updated>2013-10-13T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-13:my-first-debian-upload</id><summary type="html">&lt;p&gt;Output of my first ever upload to Debian (using &lt;a class="reference external" href="http://packages.debian.org/dput"&gt;dput&lt;/a&gt;):&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-10-13T00:00:00+02:00</updated><entry><title>developer of note: Armin Rigo</title><link href="http://tshepang.net/developer-of-note-armin-rigo" rel="alternate"></link><updated>2013-10-13T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-13:developer-of-note-armin-rigo</id><summary type="html">&lt;p&gt;Co-founder and lead developer of arguably the most exciting project in
+the entire Python ecosystem, &lt;a class="reference external" href="http://pypy.org"&gt;PyPy&lt;/a&gt;.  He is also credited with doing
+the bulk of the work in building its &lt;a class="reference external" href="http://tshepang.net/great-praise-for-the-rpython-translation-toolchain"&gt;legendary RPython translation
+framework&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;What inspired this post (originally published 2013-03-31) is the
+incredible honor given by the great Raymond Hettinger in &lt;a class="reference external" href="http://pyvideo.org/video/1669/keynote-3"&gt;one of his
+PyCon US 2013 talks&lt;/a&gt;, where he deems him &amp;quot;probably the smartest
+person I have ever met&amp;quot;.  Given that there isn't a shortage of
+brilliance in the Python community, that's some serious kudos.&lt;/p&gt;
+&lt;p&gt;Also, here is what one of speakers at that conferences said:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;... Armin Rigo is awesome - he's perhaps the only incredibly
+intelligent person involved with programming I've met who seemed
+genuinely happy about life (and not grumpy at all).&lt;/p&gt;
+&lt;p class="attribution"&gt;&amp;mdash;&lt;a class="reference external" href="http://ashfall.github.io/blog/2013/03/23/pycon-2013-down-the-rabbit-hole"&gt;source&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</summary><category term="developer-of-note"></category><category term="Python"></category><category term="quote"></category></entry><entry><title>my first Debian upload</title><link href="http://tshepang.net/my-first-debian-upload" rel="alternate"></link><updated>2013-10-13T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-13:my-first-debian-upload</id><summary type="html">&lt;p&gt;Output of my first ever upload to Debian (using &lt;a class="reference external" href="http://packages.debian.org/dput"&gt;dput&lt;/a&gt;):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 Trying to upload package to ftp-master (ftp.upload.debian.org)
 Checking signature on .changes
@@ -1707,17 +1724,7 @@ so that it doesn't matter which of the two I'm using.
 This comes in a form of a product named &lt;a class="reference external" href="http://blog.fogcreek.com/announcing-kiln-harmony-the-future-of-dvcs/"&gt;Kiln Harmony&lt;/a&gt;,
 which also turns out to be &lt;a class="reference external" href="https://news.ycombinator.com/item?id=5363085"&gt;a complex beast&lt;/a&gt; behind-the-scenes.
 Would be kool to see a FLOSS implementation of this.&lt;/p&gt;
-</summary><category term="non-FLOSS"></category><category term="VCS"></category></entry><entry><title>developer of note: Armin Rigo</title><link href="http://tshepang.net/developer-of-note-armin-rigo" rel="alternate"></link><updated>2013-03-31T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-03-31:developer-of-note-armin-rigo</id><summary type="html">&lt;p&gt;Co-founder and lead developer of arguably the most exciting project in the
-entire Python ecosystem, &lt;a class="reference external" href="http://pypy.org"&gt;PyPy&lt;/a&gt;.
-He is also credited with doing the bulk of the work in building its
-&lt;a class="reference external" href="http://tshepang.net/great-praise-for-the-rpython-translation-toolchain"&gt;legendary RPython translation framework&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;---&lt;/p&gt;
-&lt;p&gt;What inspired this post is the incredible honor given by the great
-Raymond Hettinger in &lt;a class="reference external" href="http://pyvideo.org/video/1669/keynote-3"&gt;one of his PyCon US 2013 talks&lt;/a&gt;,
-where he deems him &amp;quot;probably the smartest person I have ever met&amp;quot;.
-Given that there isn't a shortage of brilliance in the Python community,
-that's some serious kudos.&lt;/p&gt;
-</summary><category term="developer-of-note"></category><category term="Python"></category></entry><entry><title>developer of note: Vinay Sajip</title><link href="http://tshepang.net/developer-of-note-vinay-sajip" rel="alternate"></link><updated>2013-03-31T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-03-31:developer-of-note-vinay-sajip</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://plumberjack.blogspot.com/"&gt;Vinay Sajip&lt;/a&gt; is the maintainer of &lt;a class="reference external" href="http://docs.python.org/library/logging"&gt;logging&lt;/a&gt;, a Python logging
+</summary><category term="non-FLOSS"></category><category term="VCS"></category></entry><entry><title>developer of note: Vinay Sajip</title><link href="http://tshepang.net/developer-of-note-vinay-sajip" rel="alternate"></link><updated>2013-03-31T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-03-31:developer-of-note-vinay-sajip</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://plumberjack.blogspot.com/"&gt;Vinay Sajip&lt;/a&gt; is the maintainer of &lt;a class="reference external" href="http://docs.python.org/library/logging"&gt;logging&lt;/a&gt;, a Python logging
 library/module, available in the standard library. What prompted this
 post is his tireless improvements, not just to the software itself, but
 also the documentation surrounding it (&lt;a class="reference external" href="http://plumberjack.blogspot.com/2011/04/logging-documentation-for-python-27.html"&gt;example&lt;/a&gt;). It's all the more
