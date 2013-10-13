@@ -1,5 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-10-12T00:00:00+02:00</updated><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2013-10-12T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-12:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-10-13T00:00:00+02:00</updated><entry><title>my first Debian upload</title><link href="http://tshepang.net/my-first-debian-upload" rel="alternate"></link><updated>2013-10-13T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-13:my-first-debian-upload</id><summary type="html">&lt;p&gt;Output of my first ever upload to Debian (using &lt;a class="reference external" href="http://packages.debian.org/dput"&gt;dput&lt;/a&gt;):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Trying to upload package to ftp-master (ftp.upload.debian.org)
+Checking signature on .changes
+gpg: Signature made Sun 13 Oct 2013 09:21:35 SAST using RSA key ID 500BF4A2
+gpg: Good signature from &amp;quot;Tshepang Lekhonkhobe &amp;lt;tshepang&amp;#64;gmail.com&amp;gt;&amp;quot;
+Good signature on ../wajig_2.10_amd64.changes.
+Checking signature on .dsc
+gpg: Signature made Sun 13 Oct 2013 09:21:31 SAST using RSA key ID 500BF4A2
+gpg: Good signature from &amp;quot;Tshepang Lekhonkhobe &amp;lt;tshepang&amp;#64;gmail.com&amp;gt;&amp;quot;
+Good signature on ../wajig_2.10.dsc.
+Uploading to ftp-master (via ftp to ftp.upload.debian.org):
+  Uploading wajig_2.10.dsc: done.
+  Uploading wajig_2.10.tar.gz: done.
+  Uploading wajig_2.10_all.deb: done.
+  Uploading wajig_2.10_amd64.changes: done.
+Successfully uploaded packages.
+&lt;/pre&gt;
+&lt;p&gt;(&lt;a class="reference external" href="http://packages.qa.debian.org/w/wajig/news/20131013T074831Z.html"&gt;the package was accepted within 30 minutes&lt;/a&gt;)&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;And, yeah, that means &lt;a class="reference external" href="http://bugs.debian.org/cgi-bin/bugreport.cgi?msg=12;bug=723802"&gt;I am now Debian Maintainer&lt;/a&gt;. Other than
+giving me more freedom, this helps reduce the workload on &lt;a class="reference external" href="http://dirk.eddelbuettel.com"&gt;Dirk
+Eddelbuetel&lt;/a&gt;, who has been uploading wajig for several years now. He
+even &lt;a class="reference external" href="http://lists.debian.org/debian-newmaint/2013/09/msg00029.html"&gt;became an Advocate&lt;/a&gt; for &lt;a class="reference external" href="http://lists.debian.org/debian-newmaint/2013/09/msg00028.html"&gt;my application&lt;/a&gt;.  This process
+started several weeks ago when a Debian Developer named &lt;a class="reference external" href="http://mithrandi.net/blog"&gt;Tristan
+Seligmann&lt;/a&gt; signed my key &lt;a class="footnote-reference" href="#id9" id="id1"&gt;[1]&lt;/a&gt;.&lt;/p&gt;
+&lt;table class="docutils footnote" frame="void" id="id9" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;before applying to be a Maintainer, a Debian Developer needs to
+sign your key as a way of verifying your identity&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</summary><category term="Debian"></category><category term="wajig"></category></entry><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2013-10-12T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-12:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
 For those I like a lot, see &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;this list&lt;/a&gt;.&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;ul&gt;
