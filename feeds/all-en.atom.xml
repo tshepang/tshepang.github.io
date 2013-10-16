@@ -6,18 +6,17 @@ one while on another's repository... error.&lt;/p&gt;
 &lt;p&gt;I then decided to ease the pain my creating &lt;a class="reference external" href="https://bitbucket.org/tshepang/scripts/src/tip/vcs.py"&gt;a script&lt;/a&gt; which checks which
 VCS system I'm on, and displays the relevant command.
 Here are the relevant BASH aliases:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vb&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/utils/vcs.py --branch)&amp;#39;&lt;/span&gt;
-&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vd&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/utils/vcs.py --diff)&amp;#39;&lt;/span&gt;
-&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vl&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/utils/vcs.py --log)&amp;#39;&lt;/span&gt;
-&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vp&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/utils/vcs.py --push)&amp;#39;&lt;/span&gt;
-&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/utils/vcs.py --status)&amp;#39;&lt;/span&gt;
-&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vu&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/utils/vcs.py --pull)&amp;#39;&lt;/span&gt;
-&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vc&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/utils/vcs.py --commit)&amp;#39;&lt;/span&gt;
-&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vo&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/utils/vcs.py --checkout)&amp;#39;&lt;/span&gt;
-&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vr&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/utils/vcs.py --revert)&amp;#39;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vb&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/scripts/vcs.py --branch)&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vd&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/scripts/vcs.py --diff)&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vl&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/scripts/vcs.py --log)&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vp&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/scripts/vcs.py --push)&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/scripts/vcs.py --status)&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vu&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/scripts/vcs.py --pull)&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vc&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/scripts/vcs.py --commit)&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vo&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/scripts/vcs.py --checkout)&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vr&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/scripts/vcs.py --revert)&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Displaying the output instead of running them directly from the script
-gives me the flexibility of adding to the command, for example:&lt;/p&gt;
+&lt;p&gt;Some examples of usage:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# committing&lt;/span&gt;
 vc &lt;span class="s1"&gt;&amp;#39;describe the change&amp;#39;&lt;/span&gt;
 &lt;span class="c"&gt;# checking history of a file&lt;/span&gt;
