@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-10-16T00:00:00+02:00</updated><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2013-10-16T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-16:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-10-16T00:00:00+02:00</updated><entry><title>easing switching between Git and Mercurial</title><link href="http://tshepang.net/easing-switching-between-git-and-mercurial" rel="alternate"></link><updated>2013-10-16T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-16:easing-switching-between-git-and-mercurial</id><summary type="html">&lt;p&gt;Each chance I get, I use Mercurial (e.g. personal stuff), and use Git
+when I don't have much of a choice (e.g. FLOSS and work). That is, I
+use both quite a lot, and too often I find myself running commands for
+one while on another's repository... error.&lt;/p&gt;
+&lt;p&gt;I then decided to ease the pain my creating &lt;a class="reference external" href="https://bitbucket.org/tshepang/scripts/src/tip/vcs.py"&gt;a script&lt;/a&gt; which checks which
+VCS system I'm on, and displays the relevant command.
+Here are the relevant BASH aliases:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vb&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/utils/vcs.py --branch)&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vd&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/utils/vcs.py --diff)&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vl&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/utils/vcs.py --log)&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vp&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/utils/vcs.py --push)&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/utils/vcs.py --status)&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vu&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/utils/vcs.py --pull)&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vc&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/utils/vcs.py --commit)&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vo&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/utils/vcs.py --checkout)&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vr&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/utils/vcs.py --revert)&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Displaying the output instead of running them directly from the script
+gives me the flexibility of adding to the command, for example:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# committing&lt;/span&gt;
+vc &lt;span class="s1"&gt;&amp;#39;describe the change&amp;#39;&lt;/span&gt;
+&lt;span class="c"&gt;# checking history of a file&lt;/span&gt;
+vl README
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This makes my life so much easier, since I no longer have to care
+which VCS I'm on, at least for the most common of commands. I am
+pleased with self.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;As a sidenote, if you want to cycle between the changesets (Mercurial
+term) or Commits (Git term), use the following search term on your
+pager (tested with &lt;a class="reference external" href="http://www.greenwoodsoftware.com/less"&gt;less&lt;/a&gt;, which is Debian/Ubuntu default pager):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+(^changeset)|(^commit)
+&lt;/pre&gt;
+</summary><category term="Python"></category><category term="VCS"></category></entry><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2013-10-16T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-16:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
 For those I like a lot, see &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;this list&lt;/a&gt;.&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;ul&gt;
@@ -1786,35 +1820,7 @@ memory serves me well), and is funny at times. The ending is strange
 though, and I guess deliberately pointless.&lt;/p&gt;
 &lt;p&gt;I was inspired to watch this due the director, who later on made the
 weird and wonderful &lt;a class="reference external" href="http://movies.tshepang.net/seven-psychopaths-2012"&gt;Seven Psychopaths&lt;/a&gt;.&lt;/p&gt;
-</summary><category term="good"></category><category term="short"></category></entry><entry><title>easing switching between Git and Mercurial</title><link href="http://tshepang.net/easing-switching-between-git-and-mercurial" rel="alternate"></link><updated>2013-02-16T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-02-16:easing-switching-between-git-and-mercurial</id><summary type="html">&lt;p&gt;For a long time I've been meaning to write a script that eases switching
-between the only VCS systems I use, Mercurial and Git. Each chance I
-get, I use Mercurial (e.g. personal stuff), and use Git when I don't
-have much of a choice (e.g. FLOSS and work). That is, I use both quite a
-lot, and too often I find myself running commands for one while on
-another's repository.&lt;/p&gt;
-&lt;p&gt;I then decided to ease the pain my creating &lt;a class="reference external" href="https://bitbucket.org/tshepang/scripts/src/tip/vcs.py"&gt;a script&lt;/a&gt; which checks which
-VCS system I'm on, and displays the relevant command.
-Here are the relevant aliases:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vb&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/utils/vcs.py --branch)&amp;#39;&lt;/span&gt;
-&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vd&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/utils/vcs.py --diff)&amp;#39;&lt;/span&gt;
-&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vl&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/utils/vcs.py --log)&amp;#39;&lt;/span&gt;
-&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vp&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/utils/vcs.py --push)&amp;#39;&lt;/span&gt;
-&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/utils/vcs.py --status)&amp;#39;&lt;/span&gt;
-&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vu&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/utils/vcs.py --pull)&amp;#39;&lt;/span&gt;
-&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vc&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/utils/vcs.py --commit)&amp;#39;&lt;/span&gt;
-&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vo&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/utils/vcs.py --checkout)&amp;#39;&lt;/span&gt;
-&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vr&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(python ~/projects/utils/vcs.py --revert)&amp;#39;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Displaying the output instead of running them directly from the script
-gives me the flexibility of adding to the command, for example:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# committing&lt;/span&gt;
-vc &lt;span class="s1"&gt;&amp;#39;describe the change&amp;#39;&lt;/span&gt;
-&lt;span class="c"&gt;# checking history of a file&lt;/span&gt;
-vl README
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This makes my life so much easier, since I no longer have to care where
-I'm at, at least for the most common of commands. I am pleased with self.&lt;/p&gt;
-</summary><category term="Python"></category><category term="VCS"></category></entry><entry><title>great praise for the RPython translation toolchain</title><link href="http://tshepang.net/great-praise-for-the-rpython-translation-toolchain" rel="alternate"></link><updated>2013-02-12T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-02-12:great-praise-for-the-rpython-translation-toolchain</id><summary type="html">&lt;!--  --&gt;
+</summary><category term="good"></category><category term="short"></category></entry><entry><title>great praise for the RPython translation toolchain</title><link href="http://tshepang.net/great-praise-for-the-rpython-translation-toolchain" rel="alternate"></link><updated>2013-02-12T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-02-12:great-praise-for-the-rpython-translation-toolchain</id><summary type="html">&lt;!--  --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I am a curmudgeon and I find most new developments in software to be
 thoroughly uninteresting. RPython is different. It's the most

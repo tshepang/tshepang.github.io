@@ -73,15 +73,13 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
 
-            <p>For a long time I've been meaning to write a script that eases switching
-between the only VCS systems I use, Mercurial and Git. Each chance I
-get, I use Mercurial (e.g. personal stuff), and use Git when I don't
-have much of a choice (e.g. FLOSS and work). That is, I use both quite a
-lot, and too often I find myself running commands for one while on
-another's repository.</p>
+            <p>Each chance I get, I use Mercurial (e.g. personal stuff), and use Git
+when I don't have much of a choice (e.g. FLOSS and work). That is, I
+use both quite a lot, and too often I find myself running commands for
+one while on another's repository... error.</p>
 <p>I then decided to ease the pain my creating <a class="reference external" href="https://bitbucket.org/tshepang/scripts/src/tip/vcs.py">a script</a> which checks which
 VCS system I'm on, and displays the relevant command.
-Here are the relevant aliases:</p>
+Here are the relevant BASH aliases:</p>
 <div class="highlight"><pre><span class="nb">alias </span><span class="nv">vb</span><span class="o">=</span><span class="s1">&#39;$(python ~/projects/utils/vcs.py --branch)&#39;</span>
 <span class="nb">alias </span><span class="nv">vd</span><span class="o">=</span><span class="s1">&#39;$(python ~/projects/utils/vcs.py --diff)&#39;</span>
 <span class="nb">alias </span><span class="nv">vl</span><span class="o">=</span><span class="s1">&#39;$(python ~/projects/utils/vcs.py --log)&#39;</span>
@@ -99,8 +97,16 @@ vc <span class="s1">&#39;describe the change&#39;</span>
 <span class="c"># checking history of a file</span>
 vl README
 </pre></div>
-<p>This makes my life so much easier, since I no longer have to care where
-I'm at, at least for the most common of commands. I am pleased with self.</p>
+<p>This makes my life so much easier, since I no longer have to care
+which VCS I'm on, at least for the most common of commands. I am
+pleased with self.</p>
+<hr class="docutils" />
+<p>As a sidenote, if you want to cycle between the changesets (Mercurial
+term) or Commits (Git term), use the following search term on your
+pager (tested with <a class="reference external" href="http://www.greenwoodsoftware.com/less">less</a>, which is Debian/Ubuntu default pager):</p>
+<pre class="literal-block">
+(^changeset)|(^commit)
+</pre>
 
 <section>
 <div class="accordion" id="accordion2">
@@ -138,9 +144,7 @@ I'm at, at least for the most common of commands. I am pleased with self.</p>
             <nav>
             <ul class="articles_timeline">
  
-                <li class="previous_article">« <a href="http://tshepang.net/great-praise-for-the-rpython-translation-toolchain" title="Previous: great praise for the RPython translation toolchain">great praise for the RPython translation toolchain</a></li>
- 
-                <li class="next_article"><a href="http://tshepang.net/six-shooter-2005" title="Next: Six Shooter (2005)">Six Shooter (2005)</a> »</li>
+                <li class="previous_article">« <a href="http://tshepang.net/floss-i-use-a-lot" title="Previous: FLOSS I use a-lot">FLOSS I use a-lot</a></li>
             </ul>
             </nav>
             </aside>
@@ -149,7 +153,7 @@ I'm at, at least for the most common of commands. I am pleased with self.</p>
         <div class="span2" style="float:right;font-size:0.9em;">
  
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2013-02-16T00:00:00">Feb 16, 2013</time>
+            <time pubdate="pubdate" datetime="2013-10-16T00:00:00">Oct 16, 2013</time>
             <h4>Category</h4>
             <a class="category-link" href="/categories.html#computing-ref">computing</a> 
             <h4>Tags</h4>
