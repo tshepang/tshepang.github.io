@@ -78,23 +78,25 @@ when I don't have much of a choice (e.g. FLOSS and work). That is, I
 use both quite a lot, and too often I find myself running commands for
 one while on another's repository... error.</p>
 <p>I then decided to ease the pain my creating <a class="reference external" href="https://bitbucket.org/tshepang/scripts/src/tip/vcs.py">a script</a> which checks which
-VCS system I'm on, and displays the relevant command.
-Here are the relevant BASH aliases:</p>
-<div class="highlight"><pre><span class="nb">alias </span><span class="nv">vb</span><span class="o">=</span><span class="s1">&#39;$(python ~/projects/scripts/vcs.py --branch)&#39;</span>
-<span class="nb">alias </span><span class="nv">vd</span><span class="o">=</span><span class="s1">&#39;$(python ~/projects/scripts/vcs.py --diff)&#39;</span>
-<span class="nb">alias </span><span class="nv">vl</span><span class="o">=</span><span class="s1">&#39;$(python ~/projects/scripts/vcs.py --log)&#39;</span>
-<span class="nb">alias </span><span class="nv">vp</span><span class="o">=</span><span class="s1">&#39;$(python ~/projects/scripts/vcs.py --push)&#39;</span>
-<span class="nb">alias </span><span class="nv">vs</span><span class="o">=</span><span class="s1">&#39;$(python ~/projects/scripts/vcs.py --status)&#39;</span>
-<span class="nb">alias </span><span class="nv">vu</span><span class="o">=</span><span class="s1">&#39;$(python ~/projects/scripts/vcs.py --pull)&#39;</span>
-<span class="nb">alias </span><span class="nv">vc</span><span class="o">=</span><span class="s1">&#39;$(python ~/projects/scripts/vcs.py --commit)&#39;</span>
-<span class="nb">alias </span><span class="nv">vo</span><span class="o">=</span><span class="s1">&#39;$(python ~/projects/scripts/vcs.py --checkout)&#39;</span>
-<span class="nb">alias </span><span class="nv">vr</span><span class="o">=</span><span class="s1">&#39;$(python ~/projects/scripts/vcs.py --revert)&#39;</span>
-</pre></div>
+VCS system I'm on, and displays the relevant command.</p>
 <p>Some examples of usage:</p>
-<div class="highlight"><pre><span class="c"># committing</span>
-vc <span class="s1">&#39;describe the change&#39;</span>
-<span class="c"># checking history of a file</span>
-vl README
+<div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd</span> &lt;hg repo&gt;
+<span class="nv">$ </span>./vcs.py --log
+hg log --no-merges --patch --stat --verbose
+<span class="nv">$ </span><span class="nb">cd</span> &lt;git repo&gt;
+<span class="nv">$ </span>./vcs.py --log
+git log --no-merges --patch --stat
+</pre></div>
+<p>Here are the relevant BASH aliases:</p>
+<div class="highlight"><pre><span class="nb">alias </span><span class="nv">vb</span><span class="o">=</span><span class="s1">&#39;$(~/projects/scripts/vcs.py --branch)&#39;</span>
+<span class="nb">alias </span><span class="nv">vd</span><span class="o">=</span><span class="s1">&#39;$(~/projects/scripts/vcs.py --diff)&#39;</span>
+<span class="nb">alias </span><span class="nv">vl</span><span class="o">=</span><span class="s1">&#39;$(~/projects/scripts/vcs.py --log)&#39;</span>
+<span class="nb">alias </span><span class="nv">vp</span><span class="o">=</span><span class="s1">&#39;$(~/projects/scripts/vcs.py --push)&#39;</span>
+<span class="nb">alias </span><span class="nv">vs</span><span class="o">=</span><span class="s1">&#39;$(~/projects/scripts/vcs.py --status)&#39;</span>
+<span class="nb">alias </span><span class="nv">vu</span><span class="o">=</span><span class="s1">&#39;$(~/projects/scripts/vcs.py --pull)&#39;</span>
+<span class="nb">alias </span><span class="nv">vc</span><span class="o">=</span><span class="s1">&#39;$(~/projects/scripts/vcs.py --commit)&#39;</span>
+<span class="nb">alias </span><span class="nv">vo</span><span class="o">=</span><span class="s1">&#39;$(~/projects/scripts/vcs.py --checkout)&#39;</span>
+<span class="nb">alias </span><span class="nv">vr</span><span class="o">=</span><span class="s1">&#39;$(~/projects/scripts/vcs.py --revert)&#39;</span>
 </pre></div>
 <p>This makes my life so much easier, since I no longer have to care
 which VCS I'm on, at least for the most common of commands. I am
