@@ -1273,7 +1273,7 @@ considered among the most exciting of all Python projects.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.discourse.org"&gt;Discourse&lt;/a&gt; (&lt;a class="reference external" href="http://tshepang.net/project-of-note-discourse"&gt;project_of_note&lt;/a&gt;)&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://freedesktop.org/wiki/Software/systemd"&gt;systemd&lt;/a&gt; (&lt;a class="reference external" href="http://tshepang.net/project-of-note-systemd"&gt;project-of-note&lt;/a&gt;)&lt;/p&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://freedesktop.org/wiki/Software/systemd"&gt;systemd&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This one has since been &lt;a class="reference external" href="http://0pointer.de/blog/projects/systemd"&gt;announced in April 2010&lt;/a&gt;, but I still do
 find it kool. It is sad that it still receives so much unlove from
 so many people, much of which isn't constructive. I am hoping it
@@ -2034,7 +2034,7 @@ audio, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Pulse
 didn't need any of its advanced features),
 but it may well have just been the way Debian configured it at the time.&lt;/p&gt;
 &lt;p&gt;Later on, he started work on an init system that was to replace
-exisiting ones on Linux-based systems, known as &lt;a class="reference external" href="http://tshepang.net/project-of-note-systemd"&gt;systemd&lt;/a&gt;. This is
+exisiting ones on Linux-based systems, known as &lt;a class="reference external" href="http://www.freedesktop.org/wiki/Software/systemd"&gt;systemd&lt;/a&gt;. This is
 among the FLOSS projects that did genuinely excite me, and for years I
 was waiting for it to be Debian default. Sadly, too many issues were
 raised, including the refusal of Lennart to support non-Linux systems,
@@ -3899,21 +3899,7 @@ complete access to the system, one hands out only the amount of
 access that is required for the task.&lt;/p&gt;
 &lt;p class="attribution"&gt;&amp;mdash;&lt;a class="reference external" href="http://ask.debian.net/questions/4cac81ff19ce953ad306ccab/answers/4cac8a1719ce953ad306dbf0"&gt;source&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-</summary><category term="project-of-note"></category><category term="quote"></category></entry><entry><title>project of note: systemd</title><link href="http://tshepang.net/project-of-note-systemd" rel="alternate"></link><updated>2011-01-18T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2011-01-18:project-of-note-systemd</id><summary type="html">&lt;p&gt;The &lt;a class="reference external" href="http://tshepang.net/developer-of-note-lennart-poettering"&gt;great&lt;/a&gt; &lt;a class="reference external" href="http://0pointer.de/blog/projects"&gt;Lennart Poettering&lt;/a&gt; has done it again, rocking the FLOSS
-world a bit with his good-looking new init system, systemd. He got &lt;a class="reference external" href="http://0pointer.de/blog/projects/systemd.html"&gt;a
-lengthy post&lt;/a&gt; discussing its design, and what captivated me the most is
-his plans to have it replace gnome-session. Reason is that for me the
-lesser the daemons we have, the better, and FLOSS technologies are in
-desperate need for standard components. This is the sort of thing he is
-battling to do with reducing the need for a myriad GNU/Linux audio
-technologies, by providing PulseAudio as repalcement.&lt;/p&gt;
-&lt;p&gt;One of the great problems with Linux-based desktops is integration:
-distro devs either have to neglect certain areas (EG, discarding
-non-mainstream hardware/software architectures) or go to great pains to
-integrate various techs in order to have easy-to-use 'products', and I
-think both Ubuntu and Fedora are doing the former while Debian is doing
-the latter, hence Debian tends to feel less polished than these others.&lt;/p&gt;
-</summary><category term="project-of-note"></category></entry><entry><title>project of note: Twisted</title><link href="http://tshepang.net/project-of-note-twisted" rel="alternate"></link><updated>2011-01-18T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2011-01-18:project-of-note-twisted</id><summary type="html">&lt;p&gt;I've been impressed by &lt;a class="reference external" href="http://stackoverflow.com/q/2974781"&gt;the claims made for Twisted&lt;/a&gt;, which erased the
+</summary><category term="project-of-note"></category><category term="quote"></category></entry><entry><title>project of note: Twisted</title><link href="http://tshepang.net/project-of-note-twisted" rel="alternate"></link><updated>2011-01-18T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2011-01-18:project-of-note-twisted</id><summary type="html">&lt;p&gt;I've been impressed by &lt;a class="reference external" href="http://stackoverflow.com/q/2974781"&gt;the claims made for Twisted&lt;/a&gt;, which erased the
 erroneous thought I've been having that it's just another web framework.
 Well, it appears it doesn't really have an equal, and is something
 completely different.&lt;/p&gt;
