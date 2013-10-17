@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-10-16T00:00:00+02:00</updated><entry><title>easing switching between Git and Mercurial</title><link href="http://tshepang.net/easing-switching-between-git-and-mercurial" rel="alternate"></link><updated>2013-10-16T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-16:easing-switching-between-git-and-mercurial</id><summary type="html">&lt;p&gt;Each chance I get, I use Mercurial (e.g. personal stuff), and use Git
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-10-17T00:00:00+02:00</updated><entry><title>project of note: git-cola</title><link href="http://tshepang.net/project-of-note-git-cola" rel="alternate"></link><updated>2013-10-17T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-17:project-of-note-git-cola</id><summary type="html">&lt;p&gt;I use &lt;a class="reference external" href="http://git-cola.github.io"&gt;git-cola&lt;/a&gt; mostly when I want to commit various hunks separately;
+it makes that task real easy.&lt;/p&gt;
+&lt;p&gt;I was impressed by its equivalent functionality for the git
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;--amend&lt;/span&gt;&lt;/tt&gt; option the first time I saw it. If you click on the
+&lt;strong&gt;Amend Last Commit&lt;/strong&gt; radio button, it actually displays the commit
+message of that previous commit.  I was surprised to see it,
+especially since on clicking that option, I quickly ran to the
+command-line to copy that commit message, only to see the message
+waiting for me, ready to be edited away.&lt;/p&gt;
+&lt;p&gt;Another feature I really like is that if you attempt to commit something
+without staging it first, instead of just complaining, if offers to
+&lt;em&gt;stage and commit&lt;/em&gt; all in one click. Nice.&lt;/p&gt;
+&lt;p&gt;These functionalities are real simple, but they really make for a
+pleasant user experience. Pity I haven't seen a tool as easy to use in
+the land of Mercurial. There, I use the command-line &lt;tt class="docutils literal"&gt;hg record&lt;/tt&gt;
+which isn't as pleasant.&lt;/p&gt;
+</summary><category term="project-of-note"></category><category term="VCS"></category></entry><entry><title>easing switching between Git and Mercurial</title><link href="http://tshepang.net/easing-switching-between-git-and-mercurial" rel="alternate"></link><updated>2013-10-16T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-16:easing-switching-between-git-and-mercurial</id><summary type="html">&lt;p&gt;Each chance I get, I use Mercurial (e.g. personal stuff), and use Git
 when I don't have much of a choice (e.g. FLOSS and work). That is, I
 use both quite a lot, and too often I find myself running commands for
 one while on another's repository... error.&lt;/p&gt;
@@ -2076,29 +2092,7 @@ systems&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://www.kryogenix.org/days/2012/03/04/my-new-phone-2012-edition"&gt;Why choose N9 (Meego) over anything Android and iPhone&lt;/a&gt; (&lt;a class="reference external" href="http://www.kryogenix.org/days/2012/08/03/me-and-the-nokia-n9"&gt;and why
 not&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="links"></category></entry><entry><title>project of note: git-cola</title><link href="http://tshepang.net/project-of-note-git-cola" rel="alternate"></link><updated>2012-08-17T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2012-08-17:project-of-note-git-cola</id><summary type="html">&lt;p&gt;A colleague has since introduced the tool for me, and I use it whenever
-I want to do separate commits for uncommited changes, to avoid having to
-do the unkool &lt;tt class="docutils literal"&gt;git add &amp;lt;filename&amp;gt; &amp;amp;&amp;amp; git commit&lt;/tt&gt; dance. I also use it
-when I want to commit various hunks separately, and the tool makes that
-task real easy.&lt;/p&gt;
-&lt;p&gt;I was recently impressed by its equivalent functionality for the git
-&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;--amend&lt;/span&gt;&lt;/tt&gt; option. If you click on the &lt;strong&gt;Amend Last Commit&lt;/strong&gt; radio
-button, it actually displays the commit message of that previous commit.
-I was surprised to see it, especially since on clicking that option, I
-quickly ran to the command-line to copy that commit message, only to see
-the message waiting for me, ready to be edited away.&lt;/p&gt;
-&lt;p&gt;Another feature I really like is that if you attempt to commit something
-without staging it first, instead of just complaining, if offers to
-&lt;em&gt;stage and commit&lt;/em&gt; all in one click. Nice.&lt;/p&gt;
-&lt;p&gt;These functionalities are real simple, but they really make for a
-pleasant user experience.&lt;/p&gt;
-&lt;hr class="docutils" /&gt;
-&lt;p&gt;When I checked its Debian PTS page, I got surprised by the glaring lack
-of bug reports, as well as a small number of Debian releases. I found it
-sad when I visited it's &lt;a class="reference external" href="http://qa.debian.org/popcon.php?package=git-cola"&gt;popcon page&lt;/a&gt; (which is linked from that PTS
-page), and got surprised by the low number of installations it has by
-Debian users.&lt;/p&gt;
-</summary><category term="project-of-note"></category></entry><entry><title>developer of note: Michael Meeks</title><link href="http://tshepang.net/developer-of-note-michael-meeks" rel="alternate"></link><updated>2012-08-09T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2012-08-09:developer-of-note-michael-meeks</id><summary type="html">&lt;p&gt;Being the most visible LibreOffice (and formerly, OpenOffice.org)
+</summary><category term="links"></category></entry><entry><title>developer of note: Michael Meeks</title><link href="http://tshepang.net/developer-of-note-michael-meeks" rel="alternate"></link><updated>2012-08-09T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2012-08-09:developer-of-note-michael-meeks</id><summary type="html">&lt;p&gt;Being the most visible LibreOffice (and formerly, OpenOffice.org)
 developer for a few years now, he is also a tireless communicator and
 organiser. The switch from OpenOffice.org to LibreOffice was not exactly
 a smooth, but this guy kept showing a positive attitude throughout. In
