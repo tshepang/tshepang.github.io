@@ -31,7 +31,40 @@ format&lt;/a&gt;. Maybe there's a good reason, but I want my generator to
 not require anything special in file contents.&lt;/li&gt;
 &lt;li&gt;(minor) Ability to determine Publish date from file mtime&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="blogging"></category></entry><entry><title>project of note: git-cola</title><link href="http://tshepang.net/project-of-note-git-cola" rel="alternate"></link><updated>2013-10-17T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-17:project-of-note-git-cola</id><summary type="html">&lt;p&gt;I use &lt;a class="reference external" href="http://git-cola.github.io"&gt;git-cola&lt;/a&gt; mostly when I want to commit various hunks separately;
+</summary><category term="blogging"></category></entry><entry><title>projects with excellent documentation</title><link href="http://tshepang.net/projects-with-excellent-documentation" rel="alternate"></link><updated>2013-10-19T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-19:projects-with-excellent-documentation</id><summary type="html">&lt;p&gt;Here is a list of projects whose documentation I found to be
+highly-detailed and well-written.&lt;/p&gt;
+&lt;div class="section" id="big"&gt;
+&lt;h2&gt;big&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The &lt;a class="reference external" href="http://cmgm.stanford.edu/classes/unix/emacs.html"&gt;introductory tutorial of GNU Emacs&lt;/a&gt; (looks a lot better when
+run from within Emacs), is written in a very gentle and careful way;
+it's among the best tutorials I've seen.  Same applies to &lt;a class="reference external" href="http://www.gnu.org/software/emacs/manual/html_node/emacs"&gt;the Emacs
+manual&lt;/a&gt;, which I'm tempted to call the best I've read yet. It
+really, really goes into painstaking detail, and seems to have been
+written by professional technical writers.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://docs.python.org"&gt;CPython&lt;/a&gt; - this is quite massive, so although quality is generally
+high, it varies depending on where you are; &lt;a class="reference external" href="http://docs.python.org/3/library/collections"&gt;an example of
+excellence&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.sqlite.org/docs.html"&gt;sqlite3&lt;/a&gt; - quite extensive, especially for an embeddable DBMS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="small"&gt;
+&lt;h2&gt;small&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://fedorahosted.org/suds/wiki/Documentation"&gt;Suds&lt;/a&gt; - multiple, well-written examples&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.nongnu.org/rdiff-backup/examples.html"&gt;rdiff-backup usage examples&lt;/a&gt; - much smaller than the others listed
+here, but nevertheless deserves mention because it's both gentle and
+thorough&lt;/li&gt;
+&lt;li&gt;While working on giving a product of ours &lt;a class="reference external" href="https://docs.djangoproject.com"&gt;at work&lt;/a&gt; the ability to
+speak &lt;a class="reference external" href="http://tshepang.net/me-got-meself-another-coding-job"&gt;SocketCAN&lt;/a&gt;, I really appreciated its &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Socketcan"&gt;official
+documentation&lt;/a&gt;. It is very well-written and thorough (though it
+assumes prior knowledge of working with Linux sockets).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;As a sidenote, I've heard great things about Django'&lt;a class="reference external" href="http://www.kernel.org/doc/Documentation/networking/can.txt"&gt;s&lt;/a&gt;, but haven't
+really looked yet.&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="list"></category></entry><entry><title>project of note: git-cola</title><link href="http://tshepang.net/project-of-note-git-cola" rel="alternate"></link><updated>2013-10-17T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-17:project-of-note-git-cola</id><summary type="html">&lt;p&gt;I use &lt;a class="reference external" href="http://git-cola.github.io"&gt;git-cola&lt;/a&gt; mostly when I want to commit various hunks separately;
 it makes that task real easy.&lt;/p&gt;
 &lt;p&gt;I was impressed by its equivalent functionality for the git
 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;--amend&lt;/span&gt;&lt;/tt&gt; option the first time I saw it. If you click on the
@@ -237,35 +270,7 @@ feature.&lt;/p&gt;
 &lt;p&gt;And no, I still don't know yet what I'll use this for. Maybe I'll host
 my blog there, moving it from the GitHub service. Regardless, it's
 nice to have a machine accesible from anywhere on the web.&lt;/p&gt;
-</summary><category term="Debian"></category></entry><entry><title>projects with excellent documentation</title><link href="http://tshepang.net/projects-with-excellent-documentation" rel="alternate"></link><updated>2013-10-09T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-09:projects-with-excellent-documentation</id><summary type="html">&lt;p&gt;Here is a list of projects whose documentation I found to be
-highly-detailed and well-written.&lt;/p&gt;
-&lt;div class="section" id="big"&gt;
-&lt;h2&gt;big&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;The &lt;a class="reference external" href="http://cmgm.stanford.edu/classes/unix/emacs.html"&gt;introductory tutorial of GNU Emacs&lt;/a&gt; (looks a lot better when
-run from within Emacs), is written in a very gentle and careful way;
-it's among the best tutorials I've seen.  Same applies to &lt;a class="reference external" href="http://www.gnu.org/software/emacs/manual/html_node/emacs"&gt;the Emacs
-manual&lt;/a&gt;, which I'm tempted to call the best I've read yet. It
-really, really goes into painstaking detail, and seems to have been
-written by professional technical writers.&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://docs.python.org"&gt;CPython&lt;/a&gt; - this is quite massive, so although quality is generally
-high, it varies depending on where you are; &lt;a class="reference external" href="http://docs.python.org/3/library/collections"&gt;an example of
-excellence&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.sqlite.org/docs.html"&gt;sqlite3&lt;/a&gt; - quite extensive, especially for an embeddable DBMS&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="small"&gt;
-&lt;h2&gt;small&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://fedorahosted.org/suds/wiki/Documentation"&gt;Suds&lt;/a&gt; - multiple, well-written examples&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.nongnu.org/rdiff-backup/examples.html"&gt;rdiff-backup usage examples&lt;/a&gt; - much smaller than the others listed
-here, but nevertheless deserves mention because it's both gentle and
-thorough&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;As a sidenote, I've heard great things about Django'&lt;a class="reference external" href="https://docs.djangoproject.com"&gt;s&lt;/a&gt;, but haven't
-really looked yet.&lt;/p&gt;
-&lt;/div&gt;
-</summary><category term="list"></category></entry><entry><title>links 2013-10-04</title><link href="http://tshepang.net/links-2013-10-04" rel="alternate"></link><updated>2013-10-04T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-04:links-2013-10-04</id><summary type="html">&lt;ul class="simple"&gt;
+</summary><category term="Debian"></category></entry><entry><title>links 2013-10-04</title><link href="http://tshepang.net/links-2013-10-04" rel="alternate"></link><updated>2013-10-04T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-04:links-2013-10-04</id><summary type="html">&lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://lists.debian.org/debian-project/2013/08/msg00011.html"&gt;a nicely summarised survey of fresh Debian contributors&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://lists.debian.org/debian-gtk-gnome/2013/09/msg00014.html"&gt;excellent response to an unpleasant reply&lt;/a&gt; - &lt;a class="reference external" href="http://tshepang.net/developer-of-note-michael-biebl"&gt;I admire Michael
 Biebl&lt;/a&gt;, but don't remember him be this harsh&lt;/li&gt;
@@ -1283,21 +1288,7 @@ normally writes tiny updates), he exposes the great progress that
 LibreOffice has had. This is not the most glamorous of software
 projects, but it certainly is among the most important in the world of
 &lt;a class="reference external" href="http://en.wikipedia.org/wiki/FLOSS"&gt;FLOSS&lt;/a&gt;, and it's kool to have people keeping it going.&lt;/p&gt;
-</summary><category term="developer-of-note"></category></entry><entry><title>links 2012-07-22</title><link href="http://tshepang.net/links-2012-07-22" rel="alternate"></link><updated>2012-07-22T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2012-07-22:links-2012-07-22</id><summary type="html">&lt;ul class="simple"&gt;
-&lt;li&gt;Great points on &lt;a class="reference external" href="http://rhodesmill.org/brandon/2012/reading-planet-python/"&gt;the limitations of Planet Python&lt;/a&gt;, my main source
-of news on Python-related stuff.&lt;/li&gt;
-&lt;li&gt;People tend to oppose radical change and then later on admit that
-change wasn't that bad; in &lt;a class="reference external" href="http://www.earth.li/~noodles/blog/2012/05/6-months-of-gnome-shell.html"&gt;this one case&lt;/a&gt;, an apology was even
-given.&lt;/li&gt;
-&lt;li&gt;A &lt;a class="reference external" href="http://me.veekun.com/blog/2012/05/23/python-faq-passing/"&gt;great explanation&lt;/a&gt; to the question &lt;em&gt;Does Python pass by
-reference or pass by value?&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;Am working on giving a product of ours ability to speak Socket CAN,
-and I really appreciate its &lt;a class="reference external" href="http://www.kernel.org/doc/Documentation/networking/can.txt"&gt;official documentation&lt;/a&gt; on it, which
-is quite well-written and thorough (but assumes prior knowledge of
-working sockets); one more reason to be grateful of the Linux kernel
-project.&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="humor"></category><category term="links"></category></entry><entry><title>matplotlib rocks</title><link href="http://tshepang.net/matplotlib-rocks" rel="alternate"></link><updated>2012-07-19T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2012-07-19:matplotlib-rocks</id><summary type="html">&lt;p&gt;Have a look at this code:&lt;/p&gt;
+</summary><category term="developer-of-note"></category></entry><entry><title>matplotlib rocks</title><link href="http://tshepang.net/matplotlib-rocks" rel="alternate"></link><updated>2012-07-19T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2012-07-19:matplotlib-rocks</id><summary type="html">&lt;p&gt;Have a look at this code:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;matplotlib&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;pyplot&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;random&lt;/span&gt;
 
 &lt;span class="n"&gt;x_axis&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
