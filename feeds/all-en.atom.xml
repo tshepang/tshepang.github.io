@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-10-17T00:00:00+02:00</updated><entry><title>project of note: git-cola</title><link href="http://tshepang.net/project-of-note-git-cola" rel="alternate"></link><updated>2013-10-17T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-17:project-of-note-git-cola</id><summary type="html">&lt;p&gt;I use &lt;a class="reference external" href="http://git-cola.github.io"&gt;git-cola&lt;/a&gt; mostly when I want to commit various hunks separately;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-10-19T00:00:00+02:00</updated><entry><title>ideal static blog generator</title><link href="http://tshepang.net/ideal-static-blog-generator" rel="alternate"></link><updated>2013-10-19T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-19:ideal-static-blog-generator</id><summary type="html">&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
+missed:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt; support is mandatory, and so is being written in
+Python (I is a fanboy).&lt;/li&gt;
+&lt;li&gt;Ordered by preference:&lt;ul&gt;
+&lt;li&gt;The latest post should be displayed in its entirety, followed by
+an Archives View (just Post title and date) or a subset
+(i.e. Recent Posts).&lt;/li&gt;
+&lt;li&gt;It should be an Archives View (or a subset).&lt;/li&gt;
+&lt;li&gt;It should be an About Page.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Categories should be determined by directory into which a file (the
+raw material for a Post) is placed. Specifying this in the metadata
+section of the file should of course take precedence.&lt;/li&gt;
+&lt;li&gt;Publish date should never be placed at the bottom of a Post. It is
+too important a piece metadata to treat this way.&lt;/li&gt;
+&lt;li&gt;An option to have clean urls (i.e. trailing &lt;tt class="docutils literal"&gt;.html&lt;/tt&gt; removed).&lt;/li&gt;
+&lt;li&gt;Date-based directory structure should not be mandatory (&lt;a class="reference external" href="https://bitbucket.org/vladris/tinkerer/issue/41"&gt;unlike with
+Tinkerer&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Inline literals and literal blocks (for code) should be
+distinguished by background colour; using a different font is just not
+good enough.&lt;/li&gt;
+&lt;li&gt;Tags (and maybe Categories) should be displayed on each post.&lt;/li&gt;
+&lt;li&gt;A feed icon that is visible from the main page (and maybe Category
+pages).&lt;/li&gt;
+&lt;li&gt;Blogofile has a strange requirement of having &lt;a class="reference external" href="http://docs.blogofile.com/en/latest/posts.html"&gt;post headers be YAML
+format&lt;/a&gt;. Maybe there's a good reason, but I want my generator to
+not require anything special in file contents.&lt;/li&gt;
+&lt;li&gt;(minor) Ability to determine Publish date from file mtime&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="blogging"></category></entry><entry><title>project of note: git-cola</title><link href="http://tshepang.net/project-of-note-git-cola" rel="alternate"></link><updated>2013-10-17T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-17:project-of-note-git-cola</id><summary type="html">&lt;p&gt;I use &lt;a class="reference external" href="http://git-cola.github.io"&gt;git-cola&lt;/a&gt; mostly when I want to commit various hunks separately;
 it makes that task real easy.&lt;/p&gt;
 &lt;p&gt;I was impressed by its equivalent functionality for the git
 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;--amend&lt;/span&gt;&lt;/tt&gt; option the first time I saw it. If you click on the
@@ -634,37 +666,7 @@ not specified, they are handled in a naive manner:&lt;/p&gt;
 &lt;li&gt;Ruby on Rails&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</summary><category term="Python"></category><category term="non-Python"></category><category term="non-FLOSS"></category></entry><entry><title>ideal static blog generator</title><link href="http://tshepang.net/ideal-static-blog-generator" rel="alternate"></link><updated>2013-09-29T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-29:ideal-static-blog-generator</id><summary type="html">&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
-missed:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt; support is mandatory, and so is being written in
-Python (I is a fanboy).&lt;/li&gt;
-&lt;li&gt;3 alternatives for the main page:&lt;ul&gt;
-&lt;li&gt;The latest post should be displayed in its entirety, and the rest
-displayed in an Archive view below it (so one can quickly search
-all post Titles without leaving that page).&lt;/li&gt;
-&lt;li&gt;It should be an About Page.&lt;/li&gt;
-&lt;li&gt;It should present Archive View.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Categories should be determined by directory into which a post is
-placed if not explicitly specified (in file metadata section).&lt;/li&gt;
-&lt;li&gt;Ability to determine post date from file mtime.&lt;/li&gt;
-&lt;li&gt;Post Date should never be placed at the bottom of a Post.&lt;/li&gt;
-&lt;li&gt;An option to have clean urls (i.e. trailing &lt;tt class="docutils literal"&gt;.html&lt;/tt&gt; removed).&lt;/li&gt;
-&lt;li&gt;Date-based directory structure should not be mandatory (&lt;a class="reference external" href="https://bitbucket.org/vladris/tinkerer/issue/41"&gt;unlike with
-Tinkerer&lt;/a&gt;).&lt;/li&gt;
-&lt;li&gt;Inline literals and literal blocks (for code) should be
-distinguished by background colour; using different fonts is not
-good enough.&lt;/li&gt;
-&lt;li&gt;Tags (and maybe Categories) should be displayed on each post.&lt;/li&gt;
-&lt;li&gt;A feed icon that is visible from the main page (and maybe Category
-pages).&lt;/li&gt;
-&lt;li&gt;Blogofile has a strange requirement of having &lt;a class="reference external" href="http://docs.blogofile.com/en/latest/posts.html"&gt;post headers be YAML
-format&lt;/a&gt;. Maybe there's a good reason, but I want my generator to
-not require anything special in file contents.&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="blogging"></category></entry><entry><title>project of note: Valgrind</title><link href="http://tshepang.net/project-of-note-valgrind" rel="alternate"></link><updated>2013-09-25T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-25:project-of-note-valgrind</id><summary type="html">&lt;p&gt;I have, since using Valgrind (and reading a bit of its documentation)
+</summary><category term="Python"></category><category term="non-Python"></category><category term="non-FLOSS"></category></entry><entry><title>project of note: Valgrind</title><link href="http://tshepang.net/project-of-note-valgrind" rel="alternate"></link><updated>2013-09-25T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-09-25:project-of-note-valgrind</id><summary type="html">&lt;p&gt;I have, since using Valgrind (and reading a bit of its documentation)
 some years ago, developed much respect for it. It is quite an advanced
 tool, and though its primary use is detecting memory leaks, I am here
 going to explore its other functionality... calculating the cost of

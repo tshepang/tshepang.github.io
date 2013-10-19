@@ -78,23 +78,24 @@ missed:</p>
 <ul class="simple">
 <li><a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html">reStructuredText</a> support is mandatory, and so is being written in
 Python (I is a fanboy).</li>
-<li>3 alternatives for the main page:<ul>
-<li>The latest post should be displayed in its entirety, and the rest
-displayed in an Archive view below it (so one can quickly search
-all post Titles without leaving that page).</li>
+<li>Ordered by preference:<ul>
+<li>The latest post should be displayed in its entirety, followed by
+an Archives View (just Post title and date) or a subset
+(i.e. Recent Posts).</li>
+<li>It should be an Archives View (or a subset).</li>
 <li>It should be an About Page.</li>
-<li>It should present Archive View.</li>
 </ul>
 </li>
-<li>Categories should be determined by directory into which a post is
-placed if not explicitly specified (in file metadata section).</li>
-<li>Ability to determine post date from file mtime.</li>
-<li>Post Date should never be placed at the bottom of a Post.</li>
+<li>Categories should be determined by directory into which a file (the
+raw material for a Post) is placed. Specifying this in the metadata
+section of the file should of course take precedence.</li>
+<li>Publish date should never be placed at the bottom of a Post. It is
+too important a piece metadata to treat this way.</li>
 <li>An option to have clean urls (i.e. trailing <tt class="docutils literal">.html</tt> removed).</li>
 <li>Date-based directory structure should not be mandatory (<a class="reference external" href="https://bitbucket.org/vladris/tinkerer/issue/41">unlike with
 Tinkerer</a>).</li>
 <li>Inline literals and literal blocks (for code) should be
-distinguished by background colour; using different fonts is not
+distinguished by background colour; using a different font is just not
 good enough.</li>
 <li>Tags (and maybe Categories) should be displayed on each post.</li>
 <li>A feed icon that is visible from the main page (and maybe Category
@@ -102,6 +103,7 @@ pages).</li>
 <li>Blogofile has a strange requirement of having <a class="reference external" href="http://docs.blogofile.com/en/latest/posts.html">post headers be YAML
 format</a>. Maybe there's a good reason, but I want my generator to
 not require anything special in file contents.</li>
+<li>(minor) Ability to determine Publish date from file mtime</li>
 </ul>
 
 <section>
@@ -140,9 +142,7 @@ not require anything special in file contents.</li>
             <nav>
             <ul class="articles_timeline">
  
-                <li class="previous_article">« <a href="http://tshepang.net/project-of-note-valgrind" title="Previous: project of note: Valgrind">project of note: Valgrind</a></li>
- 
-                <li class="next_article"><a href="http://tshepang.net/superstar-projects-and-associated-implementation-languages" title="Next: superstar projects, and associated implementation languages">superstar projects, and associated implementation languages</a> »</li>
+                <li class="previous_article">« <a href="http://tshepang.net/project-of-note-git-cola" title="Previous: project of note: git-cola">project of note: git-cola</a></li>
             </ul>
             </nav>
             </aside>
@@ -151,7 +151,7 @@ not require anything special in file contents.</li>
         <div class="span2" style="float:right;font-size:0.9em;">
  
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2013-09-29T00:00:00">Sep 29, 2013</time>
+            <time pubdate="pubdate" datetime="2013-10-19T00:00:00">Oct 19, 2013</time>
             <h4>Category</h4>
             <a class="category-link" href="/categories.html#computing-ref">computing</a> 
             <h4>Tags</h4>
