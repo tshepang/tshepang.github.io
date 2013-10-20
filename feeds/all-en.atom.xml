@@ -2160,8 +2160,8 @@ uglier.&lt;/p&gt;
 &lt;p&gt;If I provide 3 as command line argument, I get this:&lt;/p&gt;
 &lt;img alt="image resulting from running the code above" src="images/matplotlib-2.png" /&gt;
 &lt;p&gt;This feature left me pleasantly surprised.&lt;/p&gt;
-</summary><category term="Python"></category></entry><entry><title>Debian 7 will release with wajig 2.7.3</title><link href="http://tshepang.net/debian-7-will-release-with-wajig-273" rel="alternate"></link><updated>2012-07-17T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2012-07-17:debian-7-will-release-with-wajig-273</id><summary type="html">&lt;p&gt;I once claimed that Debian 7 (Wheezy) will release with version 2.7 of
-wajig, but soon after, I noticed that an exception occurs if you run a
+</summary><category term="Python"></category></entry><entry><title>Debian 7 will release with wajig 2.7.3</title><link href="http://tshepang.net/debian-7-will-release-with-wajig-273" rel="alternate"></link><updated>2012-07-17T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2012-07-17:debian-7-will-release-with-wajig-273</id><summary type="html">&lt;p&gt;I once claimed that Debian 7 &amp;quot;wheezy&amp;quot; will release with version 2.7 of
+wajig, but soon after, I experienced an exception that occurs if you run a
 command like &lt;tt class="docutils literal"&gt;wajig new&lt;/tt&gt; if one of the newly-available packages was
 available for the configured foreign architecture, but not for the
 native one (&lt;a class="reference external" href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=679969"&gt;bug 679969&lt;/a&gt;). To fix that, I released 2.7.1, but I
