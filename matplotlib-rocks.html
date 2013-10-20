@@ -82,6 +82,8 @@
 <span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_axis</span><span class="p">,</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="mi">10</span><span class="p">))</span>
 <span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
+<p>With <a class="reference external" href="http://matplotlib.org">matplolib</a> installed, running the code above should resulted in
+the following image:</p>
 <img alt="image resulting from running the code above" src="images/matplotlib-1.png" />
 <p>You will notice that there's 2 graphs drawn over the same axis, nothing
 special. What I really loved about matplotlib is that I did not need to
@@ -90,8 +92,10 @@ previously</a>). The colors were chosen automatically. It was helpful
 especially in my case because I needed a way to specify an arbitrary
 number of graphs. Without this magical feature, the code would be a lot
 uglier.</p>
-<p>Here's goes:</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="kn">import</span> <span class="nn">argparse</span> <span class="nn">import</span> <span class="nn">random</span>
+<p>Here goes:</p>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span>
+<span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">random</span>
 
 <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
 <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&#39;number_of_graphs&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
@@ -103,7 +107,7 @@ uglier.</p>
 <span class="n">pyplot</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
-<p>If I provide 3 as command line argument, I get his:</p>
+<p>If I provide 3 as command line argument, I get this:</p>
 <img alt="image resulting from running the code above" src="images/matplotlib-2.png" />
 <p>This feature left me pleasantly surprised.</p>
 
