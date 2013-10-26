@@ -6,8 +6,8 @@
         <meta name="author" content="Tshepang Lekhonkhobe" />
         <meta name="copyright" content="Tshepang Lekhonkhobe" />
 
-<meta name="keywords" content="links, Python, computing, " />
-        <title>links 2012-04-08  · Tshepang logs
+<meta name="keywords" content="Python, computing, " />
+        <title>a bit of benchmarking  · Tshepang logs
 </title>
         <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
@@ -66,28 +66,118 @@
 <article>
 <div class="row-fluid">
     <header class="page_header span10 offset2">
-    <h1><a href="http://tshepang.net/links-2012-04-08"> links 2012-04-08  </a></h1>
+    <h1><a href="http://tshepang.net/a-bit-of-benchmarking"> a bit of benchmarking  </a></h1>
     </header>
 </div>
 
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
 
-            <ul class="simple">
-<li><a class="reference external" href="http://www.alistapart.com/articles/neveruseawarning">a great post</a> about the advantages of undo over warning dialogs</li>
-<li><a class="reference external" href="http://blog.stackoverflow.com/2011/01/state-of-the-stack-2010-a-message-from-your-ceo/">the great success of Stack Overflow, and the associated Stack
-Exchange network</a> – lots of light humor</li>
-<li><a class="reference external" href="http://www.comp.leeds.ac.uk/nde/papers/teachpy3.html">why Python 3 is more suitable for teaching programming</a></li>
-<li><a class="reference external" href="http://diveintohtml5.info/past.html">history of HTML</a> – the research and presentation is impressive</li>
-<li><a class="reference external" href="http://www.alistapart.com/articles/neveruseawarning">a look</a> at the high fragmentation of programming languages</li>
+            <p>I was curious how my home machine performs compared to my work
+machine. Each of these have 4 logical processors (and 8GB of RAM), so
+are sort of comparable.</p>
+<p>Some details for home machine:</p>
+<pre class="literal-block">
+$ uname --all
+Linux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU/Linux
+$ cat /proc/cpuinfo | sed --quiet '5p'
+model name      : Intel(R) Core(TM) i5-2410M CPU &#64; 2.30GHz
+</pre>
+<p>Some details for work machine:</p>
+<pre class="literal-block">
+$ uname --all
+Linux twork 3.10-3-amd64 #1 SMP Debian 3.10.11-1 (2013-09-10) x86_64 GNU/Linux
+$ cat /proc/cpuinfo | sed --quiet '5p'
+model name      : AMD Phenom(tm) II X4 970 Processor
+</pre>
+<p>I ran two benchmarks, both from the latest VCS version of Python, on
+the <tt class="docutils literal">default</tt> hg branch:</p>
+<pre class="literal-block">
+$ hg tip
+changeset:   86643:af67cfcd4089
+tag:         tip
+user:        Tim Peters &lt;tim&#64;python.org&gt;
+date:        Fri Oct 25 20:46:51 2013 -0500
+summary:     Issue #19399: fix sporadic test_subprocess failure.
+</pre>
+<ul>
+<li><p class="first">Building the latest VCS version of CPython:</p>
+<p>Command:</p>
+<pre class="literal-block">
+make distclean; time (./configure &amp;&amp; make --silent --jobs=4)
+</pre>
+<p>Results for home machine:</p>
+<pre class="literal-block">
+real    2m7.223s
+user    3m24.836s
+sys     0m9.840s
+</pre>
+<p>Results for work machine:</p>
+<pre class="literal-block">
+real    2m1.802s
+user    2m24.032s
+sys     0m12.180s
+</pre>
+</li>
+<li><p class="first">Running the test suite:</p>
+<p>Command:</p>
+<pre class="literal-block">
+time ./python -m test --multiprocess=0
+</pre>
+<p><strong>--multiprocess=0</strong> means that there will be 6 tests run in
+parallel; that is the number logical cores (4 in my case) + 2 (to
+avoid waiting too long for tests which are largely idle)</p>
+<p>Results for home machine:</p>
+<pre class="literal-block">
+real    3m38.528s
+user    6m47.824s
+sys     0m30.220s
+</pre>
+<p>Results for work machine:</p>
+<pre class="literal-block">
+real    2m29.072s
+user    4m9.856s
+sys     0m26.428s
+</pre>
+</li>
 </ul>
+<p>Just for kicks, I decided to check how long building Linux
+would take; for this, I used Linus' latest major release:</p>
+<pre class="literal-block">
+$ git log -1
+commit 6e4664525b1db28f8c4e1130957f70a94c19213e
+Author: Linus Torvalds &lt;torvalds&#64;linux-foundation.org&gt;
+Date:   Mon Sep 2 13:46:10 2013 -0700
+
+Linux 3.11
+</pre>
+<p>I also used the default menuconfig settings, and then ran
+<tt class="docutils literal">make</tt>. Here goes:</p>
+<pre class="literal-block">
+Results for home machine::
+
+  real    43m17.624s
+  user    145m25.756s
+  sys     9m9.104s
+
+Results for work machine::
+
+  real    28m16.326s
+  user    65m51.120s
+  sys     5m35.364s
+</pre>
+<p>Note that the results for home machine may be skewed by the fact that
+it kept getting throttled due to overheating. I only noticed this when
+building Linux, which is a far more demanding task.</p>
+<hr class="docutils" />
+<p><a class="reference external" href="http://stackoverflow.com/a/556411/321731">Nice post on the meaning of the output</a></p>
 
 <section>
 <div class="accordion" id="accordion2">
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://tshepang.net/links-2012-04-08#disqus_thread">
+                href="http://tshepang.net/a-bit-of-benchmarking#disqus_thread">
                 Comments
             </a>
         </div>
@@ -97,8 +187,8 @@ Exchange network</a> – lots of light humor</li>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'tshepanglogs';
-        var disqus_identifier = 'http://tshepang.net/links-2012-04-08';
-    var disqus_url = 'http://tshepang.net/links-2012-04-08';
+        var disqus_identifier = 'http://tshepang.net/a-bit-of-benchmarking';
+    var disqus_url = 'http://tshepang.net/a-bit-of-benchmarking';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -118,9 +208,7 @@ Exchange network</a> – lots of light humor</li>
             <nav>
             <ul class="articles_timeline">
  
-                <li class="previous_article">« <a href="http://tshepang.net/finding-great-developers-by-joel-spolsky" title="Previous: 'Finding Great Developers' by Joel Spolsky">'Finding Great Developers' by Joel Spolsky</a></li>
- 
-                <li class="next_article"><a href="http://tshepang.net/links-2012-04-09" title="Next: links 2012-04-09">links 2012-04-09</a> »</li>
+                <li class="previous_article">« <a href="http://tshepang.net/ideal-static-blog-generator" title="Previous: ideal static blog generator">ideal static blog generator</a></li>
             </ul>
             </nav>
             </aside>
@@ -129,14 +217,11 @@ Exchange network</a> – lots of light humor</li>
         <div class="span2" style="float:right;font-size:0.9em;">
  
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2012-04-08T00:00:00">Apr 8, 2012</time>
+            <time pubdate="pubdate" datetime="2013-10-26T00:00:00">Oct 26, 2013</time>
             <h4>Category</h4>
             <a class="category-link" href="/categories.html#computing-ref">computing</a> 
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article"> 
-                <li><a href="/tags.html#links-ref">links
-                    <span>30</span>
-</a></li>
                 <li><a href="/tags.html#Python-ref">Python
                     <span>55</span>
 </a></li>
