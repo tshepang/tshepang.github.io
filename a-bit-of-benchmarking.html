@@ -90,7 +90,7 @@ Linux twork 3.10-3-amd64 #1 SMP Debian 3.10.11-1 (2013-09-10) x86_64 GNU/Linux
 $ cat /proc/cpuinfo | sed --quiet '5p'
 model name      : AMD Phenom(tm) II X4 970 Processor
 </pre>
-<p>I ran two benchmarks, both from the latest VCS version of Python, on
+<p>I ran two benchmarks, both from the latest VCS version of CPython, on
 the <tt class="docutils literal">default</tt> hg branch:</p>
 <pre class="literal-block">
 $ hg tip
@@ -142,7 +142,7 @@ sys     0m26.428s
 </li>
 </ul>
 <p>Just for kicks, I decided to check how long building Linux
-would take; for this, I used Linus' latest major release:</p>
+would take; for this, I used latest 'final' release from Linus' git tree:</p>
 <pre class="literal-block">
 $ git log -1
 commit 6e4664525b1db28f8c4e1130957f70a94c19213e
@@ -153,19 +153,20 @@ Linux 3.11
 </pre>
 <p>I also used the default menuconfig settings, and then ran
 <tt class="docutils literal">make</tt>. Here goes:</p>
+<blockquote>
+<p>Results for home machine:</p>
 <pre class="literal-block">
-Results for home machine::
-
-  real    43m17.624s
-  user    145m25.756s
-  sys     9m9.104s
-
-Results for work machine::
-
-  real    28m16.326s
-  user    65m51.120s
-  sys     5m35.364s
+real    43m17.624s
+user    145m25.756s
+sys     9m9.104s
 </pre>
+<p>Results for work machine:</p>
+<pre class="literal-block">
+real    28m16.326s
+user    65m51.120s
+sys     5m35.364s
+</pre>
+</blockquote>
 <p>Note that the results for home machine may be skewed by the fact that
 it kept getting throttled due to overheating. I only noticed this when
 building Linux, which is a far more demanding task.</p>
