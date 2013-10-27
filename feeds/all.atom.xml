@@ -19,7 +19,7 @@ Linux twork 3.10-3-amd64 #1 SMP Debian 3.10.11-1 (2013-09-10) x86_64 GNU/Linux
 $ cat /proc/cpuinfo | sed --quiet '5p'
 model name      : AMD Phenom(tm) II X4 970 Processor
 &lt;/pre&gt;
-&lt;p&gt;VPS:&lt;/p&gt;
+&lt;p&gt;DigitalOcean VPS:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 $ uname --all
 Linux tcloud 3.2.0-4-amd64 #1 SMP Debian 3.2.41-2+deb7u2 x86_64
