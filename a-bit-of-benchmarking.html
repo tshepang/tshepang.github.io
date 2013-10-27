@@ -75,74 +75,105 @@
 
             <p>I was curious how my home machine performs compared to my work
 machine. Each of these have 4 logical processors (and 8GB of RAM), so
-are sort of comparable.</p>
-<p>Some details for home machine:</p>
+are sort of comparable. I also added the <a class="reference external" href="https://www.digitalocean.com/?refcode=25b4887810cc">DigitalOcean</a> VPS with
+those specs (<a class="reference external" href="https://www.digitalocean.com/pricing">currently $80 per month</a>) because... why not.</p>
+<div class="section" id="machine-specs">
+<h2>Machine Specs</h2>
+<p>Home machine:</p>
 <pre class="literal-block">
 $ uname --all
 Linux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU/Linux
 $ cat /proc/cpuinfo | sed --quiet '5p'
 model name      : Intel(R) Core(TM) i5-2410M CPU &#64; 2.30GHz
 </pre>
-<p>Some details for work machine:</p>
+<p>Work machine:</p>
 <pre class="literal-block">
 $ uname --all
 Linux twork 3.10-3-amd64 #1 SMP Debian 3.10.11-1 (2013-09-10) x86_64 GNU/Linux
 $ cat /proc/cpuinfo | sed --quiet '5p'
 model name      : AMD Phenom(tm) II X4 970 Processor
 </pre>
-<p>I ran two benchmarks, both from the latest VCS version of CPython, on
-the <tt class="docutils literal">default</tt> hg branch:</p>
+<p>VPS:</p>
 <pre class="literal-block">
-$ hg tip
-changeset:   86643:af67cfcd4089
-tag:         tip
-user:        Tim Peters &lt;tim&#64;python.org&gt;
-date:        Fri Oct 25 20:46:51 2013 -0500
-summary:     Issue #19399: fix sporadic test_subprocess failure.
+$ uname --all
+Linux tcloud 3.2.0-4-amd64 #1 SMP Debian 3.2.41-2+deb7u2 x86_64
+GNU/Linux
+$ cat /proc/cpuinfo | sed --quiet '5p'
+model name      : QEMU Virtual CPU version 1.0
 </pre>
-<ul>
-<li><p class="first">Building the latest VCS version of CPython:</p>
-<p>Command:</p>
+</div>
+<div class="section" id="cpython-benchmarks">
+<h2>CPython benchmarks</h2>
+<p>I ran two benchmarks, both from the latest VCS version of CPython,
+development branch:</p>
+<pre class="literal-block">
+$ hg identify --id --branch
+b6a1a78818fe default
+</pre>
+<div class="section" id="build">
+<h3>Build</h3>
+<p>Here's the command I used:</p>
 <pre class="literal-block">
 make distclean; time (./configure &amp;&amp; make --silent --jobs=4)
 </pre>
-<p>Results for home machine:</p>
+<div class="section" id="results">
+<h4>Results</h4>
+<p>Home machine:</p>
 <pre class="literal-block">
-real    2m7.223s
-user    3m24.836s
-sys     0m9.840s
+real    2m11.687s
+user    3m18.104s
+sys     0m9.964s
 </pre>
-<p>Results for work machine:</p>
+<p>Work machine:</p>
 <pre class="literal-block">
-real    2m1.802s
-user    2m24.032s
-sys     0m12.180s
+real    2m2.707s
+user    2m24.200s
+sys     0m12.280s
 </pre>
-</li>
-<li><p class="first">Running the test suite:</p>
-<p>Command:</p>
+<p>VPS:</p>
+<pre class="literal-block">
+real    2m4.855s
+user    2m36.398s
+sys     0m15.517s
+</pre>
+</div>
+</div>
+<div class="section" id="test-suite">
+<h3>Test suite</h3>
+<p>Here's the command I used:</p>
 <pre class="literal-block">
 time ./python -m test --multiprocess=0
 </pre>
-<p><strong>--multiprocess=0</strong> means that there will be 6 tests run in
-parallel; that is the number logical cores (4 in my case) + 2 (to
-avoid waiting too long for tests which are largely idle)</p>
-<p>Results for home machine:</p>
+<p><strong>--multiprocess=0</strong> means that there will be 6 tests run in parallel;
+that is the number logical cores (4 in my case) + 2 (to avoid waiting
+too long for tests which are largely idle)</p>
+<div class="section" id="id1">
+<h4>Results</h4>
+<p>Home machine:</p>
 <pre class="literal-block">
-real    3m38.528s
-user    6m47.824s
-sys     0m30.220s
+real    3m42.571s
+user    7m13.124s
+sys     0m33.320s
 </pre>
-<p>Results for work machine:</p>
+<p>Work machine:</p>
 <pre class="literal-block">
-real    2m29.072s
-user    4m9.856s
-sys     0m26.428s
+real    2m29.957s
+user    4m9.052s
+sys     0m27.364s
 </pre>
-</li>
-</ul>
-<p>Just for kicks, I decided to check how long building Linux
-would take; for this, I used latest 'final' release from Linus' git tree:</p>
+<p>VPS:</p>
+<pre class="literal-block">
+real    2m11.536s
+user    4m26.837s
+sys     0m38.546s
+</pre>
+</div>
+</div>
+</div>
+<div class="section" id="linux-kernel-build">
+<h2>Linux kernel build</h2>
+<p>Just for kicks, I decided to check how long building Linux would take;
+for this, I used latest 'final' release from Linus' git tree:</p>
 <pre class="literal-block">
 $ git log -1
 commit 6e4664525b1db28f8c4e1130957f70a94c19213e
@@ -151,27 +182,38 @@ Date:   Mon Sep 2 13:46:10 2013 -0700
 
 Linux 3.11
 </pre>
-<p>I also used the default menuconfig settings, and then ran
-<tt class="docutils literal">make</tt>. Here goes:</p>
-<blockquote>
-<p>Results for home machine:</p>
+<p>Here's the command I used:</p>
 <pre class="literal-block">
-real    43m17.624s
-user    145m25.756s
-sys     9m9.104s
+make defconfig &amp;&amp; time make
 </pre>
-<p>Results for work machine:</p>
+<div class="section" id="id2">
+<h3>Results</h3>
+<p>Home machine:</p>
 <pre class="literal-block">
-real    28m16.326s
-user    65m51.120s
-sys     5m35.364s
+real    6m11.622s
+user    21m2.664s
+sys     1m15.324s
 </pre>
-</blockquote>
-<p>Note that the results for home machine may be skewed by the fact that
-it kept getting throttled due to overheating. I only noticed this when
-building Linux, which is a far more demanding task.</p>
-<hr class="docutils" />
-<p><a class="reference external" href="http://stackoverflow.com/a/556411/321731">Nice post on the meaning of the output</a></p>
+<p>Work machine:</p>
+<pre class="literal-block">
+real    2m40.275s
+user    8m55.624s
+sys     0m42.860s
+</pre>
+<p>VPS:</p>
+<pre class="literal-block">
+real    3m34.518s
+user    12m2.289s
+sys     1m15.817s
+</pre>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion</h2>
+<p>My work machine is faster than the DigitalOcean offering of comparable
+specs, and much faster than my home machine, a laptop.</p>
+<p>(<a class="reference external" href="http://stackoverflow.com/a/556411/321731">detailed explanation the output</a>)</p>
+</div>
 
 <section>
 <div class="accordion" id="accordion2">
@@ -218,7 +260,7 @@ building Linux, which is a far more demanding task.</p>
         <div class="span2" style="float:right;font-size:0.9em;">
  
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2013-10-26T00:00:00">Oct 26, 2013</time>
+            <time pubdate="pubdate" datetime="2013-10-27T00:00:00">Oct 27, 2013</time>
             <h4>Category</h4>
             <a class="category-link" href="/categories.html#computing-ref">computing</a> 
             <h4>Tags</h4>

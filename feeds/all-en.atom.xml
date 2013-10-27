@@ -1,74 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-10-26T00:00:00+02:00</updated><entry><title>a bit of benchmarking</title><link href="http://tshepang.net/a-bit-of-benchmarking" rel="alternate"></link><updated>2013-10-26T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-26:a-bit-of-benchmarking</id><summary type="html">&lt;p&gt;I was curious how my home machine performs compared to my work
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-10-27T00:00:00+02:00</updated><entry><title>a bit of benchmarking</title><link href="http://tshepang.net/a-bit-of-benchmarking" rel="alternate"></link><updated>2013-10-27T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-27:a-bit-of-benchmarking</id><summary type="html">&lt;p&gt;I was curious how my home machine performs compared to my work
 machine. Each of these have 4 logical processors (and 8GB of RAM), so
-are sort of comparable.&lt;/p&gt;
-&lt;p&gt;Some details for home machine:&lt;/p&gt;
+are sort of comparable. I also added the &lt;a class="reference external" href="https://www.digitalocean.com/?refcode=25b4887810cc"&gt;DigitalOcean&lt;/a&gt; VPS with
+those specs (&lt;a class="reference external" href="https://www.digitalocean.com/pricing"&gt;currently $80 per month&lt;/a&gt;) because... why not.&lt;/p&gt;
+&lt;div class="section" id="machine-specs"&gt;
+&lt;h2&gt;Machine Specs&lt;/h2&gt;
+&lt;p&gt;Home machine:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 $ uname --all
 Linux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU/Linux
 $ cat /proc/cpuinfo | sed --quiet '5p'
 model name      : Intel(R) Core(TM) i5-2410M CPU &amp;#64; 2.30GHz
 &lt;/pre&gt;
-&lt;p&gt;Some details for work machine:&lt;/p&gt;
+&lt;p&gt;Work machine:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 $ uname --all
 Linux twork 3.10-3-amd64 #1 SMP Debian 3.10.11-1 (2013-09-10) x86_64 GNU/Linux
 $ cat /proc/cpuinfo | sed --quiet '5p'
 model name      : AMD Phenom(tm) II X4 970 Processor
 &lt;/pre&gt;
-&lt;p&gt;I ran two benchmarks, both from the latest VCS version of CPython, on
-the &lt;tt class="docutils literal"&gt;default&lt;/tt&gt; hg branch:&lt;/p&gt;
+&lt;p&gt;VPS:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-$ hg tip
-changeset:   86643:af67cfcd4089
-tag:         tip
-user:        Tim Peters &amp;lt;tim&amp;#64;python.org&amp;gt;
-date:        Fri Oct 25 20:46:51 2013 -0500
-summary:     Issue #19399: fix sporadic test_subprocess failure.
+$ uname --all
+Linux tcloud 3.2.0-4-amd64 #1 SMP Debian 3.2.41-2+deb7u2 x86_64
+GNU/Linux
+$ cat /proc/cpuinfo | sed --quiet '5p'
+model name      : QEMU Virtual CPU version 1.0
 &lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;Building the latest VCS version of CPython:&lt;/p&gt;
-&lt;p&gt;Command:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="cpython-benchmarks"&gt;
+&lt;h2&gt;CPython benchmarks&lt;/h2&gt;
+&lt;p&gt;I ran two benchmarks, both from the latest VCS version of CPython,
+development branch:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ hg identify --id --branch
+b6a1a78818fe default
+&lt;/pre&gt;
+&lt;div class="section" id="build"&gt;
+&lt;h3&gt;Build&lt;/h3&gt;
+&lt;p&gt;Here's the command I used:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 make distclean; time (./configure &amp;amp;&amp;amp; make --silent --jobs=4)
 &lt;/pre&gt;
-&lt;p&gt;Results for home machine:&lt;/p&gt;
+&lt;div class="section" id="results"&gt;
+&lt;h4&gt;Results&lt;/h4&gt;
+&lt;p&gt;Home machine:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-real    2m7.223s
-user    3m24.836s
-sys     0m9.840s
+real    2m11.687s
+user    3m18.104s
+sys     0m9.964s
 &lt;/pre&gt;
-&lt;p&gt;Results for work machine:&lt;/p&gt;
+&lt;p&gt;Work machine:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-real    2m1.802s
-user    2m24.032s
-sys     0m12.180s
+real    2m2.707s
+user    2m24.200s
+sys     0m12.280s
 &lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Running the test suite:&lt;/p&gt;
-&lt;p&gt;Command:&lt;/p&gt;
+&lt;p&gt;VPS:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+real    2m4.855s
+user    2m36.398s
+sys     0m15.517s
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="test-suite"&gt;
+&lt;h3&gt;Test suite&lt;/h3&gt;
+&lt;p&gt;Here's the command I used:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 time ./python -m test --multiprocess=0
 &lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;--multiprocess=0&lt;/strong&gt; means that there will be 6 tests run in
-parallel; that is the number logical cores (4 in my case) + 2 (to
-avoid waiting too long for tests which are largely idle)&lt;/p&gt;
-&lt;p&gt;Results for home machine:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;--multiprocess=0&lt;/strong&gt; means that there will be 6 tests run in parallel;
+that is the number logical cores (4 in my case) + 2 (to avoid waiting
+too long for tests which are largely idle)&lt;/p&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h4&gt;Results&lt;/h4&gt;
+&lt;p&gt;Home machine:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-real    3m38.528s
-user    6m47.824s
-sys     0m30.220s
+real    3m42.571s
+user    7m13.124s
+sys     0m33.320s
 &lt;/pre&gt;
-&lt;p&gt;Results for work machine:&lt;/p&gt;
+&lt;p&gt;Work machine:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-real    2m29.072s
-user    4m9.856s
-sys     0m26.428s
+real    2m29.957s
+user    4m9.052s
+sys     0m27.364s
 &lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Just for kicks, I decided to check how long building Linux
-would take; for this, I used latest 'final' release from Linus' git tree:&lt;/p&gt;
+&lt;p&gt;VPS:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+real    2m11.536s
+user    4m26.837s
+sys     0m38.546s
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="linux-kernel-build"&gt;
+&lt;h2&gt;Linux kernel build&lt;/h2&gt;
+&lt;p&gt;Just for kicks, I decided to check how long building Linux would take;
+for this, I used latest 'final' release from Linus' git tree:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 $ git log -1
 commit 6e4664525b1db28f8c4e1130957f70a94c19213e
@@ -77,27 +108,38 @@ Date:   Mon Sep 2 13:46:10 2013 -0700
 
 Linux 3.11
 &lt;/pre&gt;
-&lt;p&gt;I also used the default menuconfig settings, and then ran
-&lt;tt class="docutils literal"&gt;make&lt;/tt&gt;. Here goes:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Results for home machine:&lt;/p&gt;
+&lt;p&gt;Here's the command I used:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-real    43m17.624s
-user    145m25.756s
-sys     9m9.104s
+make defconfig &amp;amp;&amp;amp; time make
 &lt;/pre&gt;
-&lt;p&gt;Results for work machine:&lt;/p&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h3&gt;Results&lt;/h3&gt;
+&lt;p&gt;Home machine:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-real    28m16.326s
-user    65m51.120s
-sys     5m35.364s
+real    6m11.622s
+user    21m2.664s
+sys     1m15.324s
 &lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Note that the results for home machine may be skewed by the fact that
-it kept getting throttled due to overheating. I only noticed this when
-building Linux, which is a far more demanding task.&lt;/p&gt;
-&lt;hr class="docutils" /&gt;
-&lt;p&gt;&lt;a class="reference external" href="http://stackoverflow.com/a/556411/321731"&gt;Nice post on the meaning of the output&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Work machine:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+real    2m40.275s
+user    8m55.624s
+sys     0m42.860s
+&lt;/pre&gt;
+&lt;p&gt;VPS:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+real    3m34.518s
+user    12m2.289s
+sys     1m15.817s
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conclusion"&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;My work machine is faster than the DigitalOcean offering of comparable
+specs, and much faster than my home machine, a laptop.&lt;/p&gt;
+&lt;p&gt;(&lt;a class="reference external" href="http://stackoverflow.com/a/556411/321731"&gt;detailed explanation the output&lt;/a&gt;)&lt;/p&gt;
+&lt;/div&gt;
 </summary><category term="Python"></category></entry><entry><title>ideal static blog generator</title><link href="http://tshepang.net/ideal-static-blog-generator" rel="alternate"></link><updated>2013-10-19T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-19:ideal-static-blog-generator</id><summary type="html">&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
 missed:&lt;/p&gt;
 &lt;ul class="simple"&gt;
