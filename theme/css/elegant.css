@@ -159,9 +159,20 @@ article p a:hover, article ol a:hover, article div.article-content ul:not(.artic
 .article-content blockquote {
     padding: 0px 0px 0px 20px;
     margin: 20px 0px 20px 0px;
-    border-left: 5px solid rgb(100,100,100);
     margin-left: 2em;
+    border-left:0px;
 }
+
+.article-content blockquote:before {
+    content: "\f10d";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    font-size: 18px;
+    color: rgb(100,100,100);
+    margin-left: -2em;
+ }
 
 .article-content blockquote p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -169,26 +180,28 @@ article p a:hover, article ol a:hover, article div.article-content ul:not(.artic
     text-transform: none;
     font-size: 1.2em;
     line-height: 1.7em;
+    margin-top:-20px;
 }
 
 .article-content ul {
     list-style-type: circle;
-    font-size:1em;
+    font-size:1.2em;
 }
 
 .article-content ol {
     list-style-type: decimal;
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
 .article-content li {
     margin:1px 0px 1px 20px;
     list-style-position: outside;
+    line-height: 1.7em;
 }
 
 .article-content dl {
     list-style-type: decimal;
-    font-size: 1em;
+    font-size: 1.2em;
     list-style-position: outside;
     margin:20px 0px 20px 20px;
 }
@@ -196,10 +209,11 @@ article p a:hover, article ol a:hover, article div.article-content ul:not(.artic
 .article-content dd {
     margin:1px 0px 1px 20px;
     padding:3px 0px 3px 0px;
+    line-height: 1.7em;
 }
 
 .article-content dt {
-    font-size:1.3em;
+    font-size:1.2em;
 }
 
 .page_header h1 {
@@ -361,8 +375,9 @@ ul.top-menu li a {
     font-style:italic;
 }    
 
-img {
-    border: 1px solid #EEEEEE;
+.article-content img {
+    padding:5px;
+    border: 2px solid #EEEEEE;
 }
 
 .table-of-content .toc {
@@ -394,4 +409,13 @@ h6:hover > a.headerlink,
 dt:hover > a.headerlink {
     visibility: visible;
     text-decoration:none;
+}
+.sidebar-social-links {
+    font-size: 1.2em;
+    color: rgb(100,100,100);
+    text-decoration: none;
+    padding-right: 3px;
+}
+.sidebar-social-links i:hover {
+    color: black;
 }
