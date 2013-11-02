@@ -90,7 +90,6 @@ td.code {
 .list-of-tags {
     list-style:none;
     margin:0;
-    padding:5px 0 ;
     overflow:hidden;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -350,10 +349,23 @@ ul.top-menu li a {
 
 #mc_embed_signup input.email {
     width:100%;
+    font-size: 0.9em;
 }
 
 #mc_embed_signup .button {
-    font-size: 1.1em;
+    font-size: 1em;
+    font-weight: normal;
+    color: black;
+    background-color: #EEEEEE;
+    border: 1px solid lightgray;
+}
+
+#mc_embed_signup .button:hover {
+    background-color: #DFDFDF;
+}
+
+#mc_embed_signup input[type="email"] {
+    height: 100%;
 }
 
 /* front page */
