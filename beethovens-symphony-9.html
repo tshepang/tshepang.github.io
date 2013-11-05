@@ -14,13 +14,6 @@
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="http://tshepang.net/theme/css/elegant.css" media="screen">
         <link rel="stylesheet" type="text/css" href="http://tshepang.net/theme/css/solarizedlight.css" media="screen">
-        <link rel="shortcut icon" href="http://tshepang.net/theme/images/favicon.ico" type="image/x-icon" />
-        <link rel="apple-touch-icon" href="http://tshepang.net/theme/images/apple-touch-icon.png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="http://tshepang.net/theme/images/apple-touch-icon-57x57.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="http://tshepang.net/theme/images/apple-touch-icon-72x72.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="http://tshepang.net/theme/images/apple-touch-icon-114x114.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="http://tshepang.net/theme/images/apple-touch-icon-144x144.png" />
-        <link rel="icon" href="http://tshepang.net/theme/images/apple-touch-icon-144x144.png" />
         <link href="http://tshepang.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tshepang logs - Full Atom Feed" />
     <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -48,9 +41,9 @@
                         <ul class="nav pull-right top-menu">
                             <li ><a href="http://tshepang.net">Home</a></li>
                             <li ><a href="http://tshepang.net/about-me.html">about me</a></li>
-                            <li ><a href="http://tshepang.net/categories">Categories</a></li>
-                            <li ><a href="http://tshepang.net/tags">Tags</a></li>
-                            <li ><a href="http://tshepang.net/archives">Archives</a></li>
+                            <li ><a href="http://tshepang.net/categories.html">Categories</a></li>
+                            <li ><a href="http://tshepang.net/tags.html">Tags</a></li>
+                            <li ><a href="http://tshepang.net/archives.html">Archives</a></li>
                             <li><form class="navbar-search" action="http://tshepang.net/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
                         </ul>
                     </div>
@@ -144,16 +137,16 @@ Orchestra.</p>
                     <span>1</span>
 </a></li>
             </ul>
-<h4>Stay in Touch</h4>
-<a href="http://stackexchange.com/users/125744/tshepang" title="stack-exchange" class="sidebar-social-links" target="_blank">
+<h4>Contact</h4>
+<a href="http://stackexchange.com/users/125744/tshepang" title="My stack-exchange Profile" class="sidebar-social-links" target="_blank">
     <i class="fa fa-stack-exchange sidebar-social-links"></i></a>
-<a href="https://bitbucket.org/tshepang" title="bitbucket" class="sidebar-social-links" target="_blank">
+<a href="https://bitbucket.org/tshepang" title="My bitbucket Profile" class="sidebar-social-links" target="_blank">
     <i class="fa fa-bitbucket sidebar-social-links"></i></a>
-<a href="https://github.com/tshepang" title="github" class="sidebar-social-links" target="_blank">
+<a href="https://github.com/tshepang" title="My github Profile" class="sidebar-social-links" target="_blank">
     <i class="fa fa-github sidebar-social-links"></i></a>
-<a href="https://twitter.com/tshepang_dev" title="twitter" class="sidebar-social-links" target="_blank">
+<a href="https://twitter.com/tshepang_dev" title="My twitter Profile" class="sidebar-social-links" target="_blank">
     <i class="fa fa-twitter sidebar-social-links"></i></a>
-<a href="mailto:tshepang@gmail.com" title="email" class="sidebar-social-links" target="_blank">
+<a href="mailto:tshepang@gmail.com" title="My email Address" class="sidebar-social-links" target="_blank">
     <i class="fa fa-envelope sidebar-social-links"></i></a>
         </div>
         </section>
@@ -196,21 +189,20 @@ Attribution-ShareAlike 3.0 Unported License</a>.</li>
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
     </script>
-        <script  language="javascript" type="text/javascript">
-            function uncollapse() {
-                var hash_str = window.location.hash;
-                if (window.location.hash.match(/^#comment-\d+$/))
-                {
-                    var hash_str = '#disqus_thread';
-                }
-                $(hash_str).collapse({
-                    toggle: true
-                    })
-            }
-        </script>
-
-        <script type="text/javascript" language="JavaScript">
-            uncollapse(); 
-        </script>
+<script  language="javascript" type="text/javascript">
+function uncollapse() {
+    var hash_str = window.location.hash;
+    if (window.location.hash.match(/^#comment-\d+$/))
+    {
+        var hash_str = '#disqus_thread';
+    }
+    $(hash_str).collapse({
+        toggle: true
+    })
+}
+</script>
+<script type="text/javascript" language="JavaScript">
+    uncollapse(); 
+</script>
     </body>
 </html>
