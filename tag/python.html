@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Tshepang logs - Python</title>
+        <link rel="stylesheet" href="http://tshepang.net/theme/css/main.css" />
+        <link href="http://tshepang.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tshepang logs Atom Feed" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://tshepang.net/">Tshepang logs </a></h1>
+                <nav><ul>
+                    <li><a href="http://tshepang.net/about-me.html">about me</a></li>
+                    <li><a href="http://tshepang.net/arts">arts</a></li>
+                    <li><a href="http://tshepang.net/computing">computing</a></li>
+                    <li><a href="http://tshepang.net/misc">misc</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="http://tshepang.net/a-bit-of-benchmarking">a bit of benchmarking</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2013-10-27T00:00:00">
+                2013-10-27
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info --><p>I was curious how my home machine performs compared to my work
+machine. Each of these have 4 logical processors (and 8GB of RAM), so
+are sort of comparable. I also added the <a class="reference external" href="https://www.digitalocean.com/?refcode=25b4887810cc">DigitalOcean</a> VPS with
+those specs (<a class="reference external" href="https://www.digitalocean.com/pricing">currently $80 per month</a>) because... why not.</p>
+<div class="section" id="machine-specs">
+<h2>Machine Specs</h2>
+<p>Each machine runs Debian testing (codename &quot;jessie&quot;). Following is the
+output of these commands for each machine:</p>
+<pre class="literal-block">
+uname --all
+cat /proc/cpuinfo | sed --quiet '5p'
+</pre>
+<p>Home machine:</p>
+<pre class="literal-block">
+Linux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU/Linux
+model name      : Intel(R) Core(TM) i5-2410M CPU &#64; 2.30GHz
+</pre>
+<p>Work machine:</p>
+<pre class="literal-block">
+Linux twork 3.10-3-amd64 #1 SMP Debian 3.10.11-1 (2013-09-10) x86_64 GNU/Linux
+model name      : AMD Phenom(tm) II X4 970 Processor
+</pre>
+<p>DigitalOcean VPS:</p>
+<pre class="literal-block">
+Linux tcloud 3.11-1-amd64 #1 SMP Debian 3.11.5-1 (2013-10-17) x86_64 GNU/Linux
+model name      : QEMU Virtual CPU version 1.0
+</pre>
+</div>
+<div class="section" id="cpython-benchmarks">
+<h2>CPython benchmarks</h2>
+<p>I ran two benchmarks, both from the latest VCS version of CPython,
+development branch:</p>
+<pre class="literal-block">
+$ hg identify --id --branch
+b6a1a78818fe default
+</pre>
+<div class="section" id="build">
+<h3>Build</h3>
+<p>Here's the command I used:</p>
+<pre class="literal-block">
+make distclean; time (./configure &amp;&amp; make --silent --jobs=4)
+</pre>
+<div class="section" id="results">
+<h4>Results</h4>
+<p>Home machine:</p>
+<pre class="literal-block">
+real    2m11.687s
+user    3m18.104s
+sys     0m9.964s
+</pre>
+<p>Work machine:</p>
+<pre class="literal-block">
+real    2m2.707s
+user    2m24.200s
+sys     0m12.280s
+</pre>
+<p>VPS:</p>
+<pre class="literal-block">
+real    2m30.931s
+user    3m7.272s
+sys     0m16.592s
+</pre>
+</div>
+</div>
+<div class="section" id="test-suite">
+<h3>Test suite</h3>
+<p>Here's the command I used:</p>
+<pre class="literal-block">
+time ./python -m test --multiprocess=0
+</pre>
+<p><strong>--multiprocess=0</strong> means that there will be 6 tests run in parallel;
+that is the number logical cores (4 in my case) + 2 (to avoid waiting
+too long for tests which are largely idle)</p>
+<div class="section" id="id1">
+<h4>Results</h4>
+<p>Home machine:</p>
+<pre class="literal-block">
+real    3m42.571s
+user    7m13.124s
+sys     0m33.320s
+</pre>
+<p>Work machine:</p>
+<pre class="literal-block">
+real    2m29.957s
+user    4m9.052s
+sys     0m27.364s
+</pre>
+<p>VPS:</p>
+<pre class="literal-block">
+real    2m19.174s
+user    5m5.444s
+sys     0m40.008s
+</pre>
+</div>
+</div>
+</div>
+<div class="section" id="linux-kernel-build">
+<h2>Linux kernel build</h2>
+<p>Just for kicks, I decided to check how long building Linux would take;
+for this, I used latest 'final' release from Linus' git tree:</p>
+<pre class="literal-block">
+$ git log -1
+commit 6e4664525b1db28f8c4e1130957f70a94c19213e
+Author: Linus Torvalds &lt;torvalds&#64;linux-foundation.org&gt;
+Date:   Mon Sep 2 13:46:10 2013 -0700
+
+Linux 3.11
+</pre>
+<p>Here's the commands I used:</p>
+<pre class="literal-block">
+make distclean &amp;&amp; make defconfig &amp;&amp; time make
+</pre>
+<div class="section" id="id2">
+<h3>Results</h3>
+<p>Home machine:</p>
+<pre class="literal-block">
+real    6m11.622s
+user    21m2.664s
+sys     1m15.324s
+</pre>
+<p>Work machine:</p>
+<pre class="literal-block">
+real    2m40.275s
+user    8m55.624s
+sys     0m42.860s
+</pre>
+<p>VPS:</p>
+<pre class="literal-block">
+real    3m41.240s
+user    12m21.120s
+sys     1m17.844s
+</pre>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion</h2>
+<p>My work machine is faster than the DigitalOcean offering of comparable
+specs, and much faster than my home machine, a laptop.</p>
+<p>(<a class="reference external" href="http://stackoverflow.com/a/556411/321731">detailed explanation of the output</a>)</p>
+</div>
+<p>There are <a href="http://tshepang.net/a-bit-of-benchmarking#disqus_thread">comments</a>.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/easing-switching-between-git-and-mercurial" rel="bookmark"
+                           title="Permalink to easing switching between Git and Mercurial">easing switching between Git and Mercurial</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-10-16T00:00:00">
+                2013-10-16
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a><a href="http://tshepang.net/tag/vcs">VCS</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/easing-switching-between-git-and-mercurial">read more</a>
+<p>There are <a href="http://tshepang.net/easing-switching-between-git-and-mercurial#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/where-i-live-on-the-web" rel="bookmark"
+                           title="Permalink to where I live on the web">where I live on the web</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-10-16T00:00:00">
+                2013-10-16
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/misc">misc</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/debian">Debian</a><a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/where-i-live-on-the-web">read more</a>
+<p>There are <a href="http://tshepang.net/where-i-live-on-the-web#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/developer-of-note-armin-rigo" rel="bookmark"
+                           title="Permalink to developer of note: Armin Rigo">developer of note: Armin Rigo</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-10-13T00:00:00">
+                2013-10-13
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/developer-of-note">developer-of-note</a><a href="http://tshepang.net/tag/python">Python</a><a href="http://tshepang.net/tag/quote">quote</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/developer-of-note-armin-rigo">read more</a>
+<p>There are <a href="http://tshepang.net/developer-of-note-armin-rigo#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/links-2013-10-04" rel="bookmark"
+                           title="Permalink to links 2013-10-04">links 2013-10-04</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-10-04T00:00:00">
+                2013-10-04
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/debian">Debian</a><a href="http://tshepang.net/tag/python">Python</a><a href="http://tshepang.net/tag/links">links</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/links-2013-10-04">read more</a>
+<p>There are <a href="http://tshepang.net/links-2013-10-04#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/superstar-projects-and-associated-implementation-languages" rel="bookmark"
+                           title="Permalink to superstar projects, and associated implementation languages">superstar projects, and associated implementation languages</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-09-30T00:00:00">
+                2013-09-30
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a><a href="http://tshepang.net/tag/non-python">non-Python</a><a href="http://tshepang.net/tag/non-floss">non-FLOSS</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/superstar-projects-and-associated-implementation-languages">read more</a>
+<p>There are <a href="http://tshepang.net/superstar-projects-and-associated-implementation-languages#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/project-of-note-sphinx" rel="bookmark"
+                           title="Permalink to project of note: Sphinx">project of note: Sphinx</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-08-08T00:00:00">
+                2013-08-08
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/project-of-note">project-of-note</a><a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/project-of-note-sphinx">read more</a>
+<p>There are <a href="http://tshepang.net/project-of-note-sphinx#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/floss-pipedreams" rel="bookmark"
+                           title="Permalink to FLOSS pipedreams">FLOSS pipedreams</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-06-09T12:23:05.710008">
+                2013-06-09
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/gnome">GNOME</a><a href="http://tshepang.net/tag/debian">Debian</a><a href="http://tshepang.net/tag/python">Python</a><a href="http://tshepang.net/tag/non-floss">non-FLOSS</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/floss-pipedreams">read more</a>
+<p>There are <a href="http://tshepang.net/floss-pipedreams#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/developer-of-note-barry-warsaw" rel="bookmark"
+                           title="Permalink to developer of note: Barry Warsaw">developer of note: Barry Warsaw</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-05-28T00:00:00">
+                2013-05-28
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/debian">Debian</a><a href="http://tshepang.net/tag/developer-of-note">developer-of-note</a><a href="http://tshepang.net/tag/non-debian">non-Debian</a><a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/developer-of-note-barry-warsaw">read more</a>
+<p>There are <a href="http://tshepang.net/developer-of-note-barry-warsaw#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/developer-of-note-nick-coghlan" rel="bookmark"
+                           title="Permalink to developer of note: Nick Coghlan">developer of note: Nick Coghlan</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-05-28T00:00:00">
+                2013-05-28
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/developer-of-note">developer-of-note</a><a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/developer-of-note-nick-coghlan">read more</a>
+<p>There are <a href="http://tshepang.net/developer-of-note-nick-coghlan#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/my-current-plans-for-wajig" rel="bookmark"
+                           title="Permalink to my current plans for wajig">my current plans for wajig</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-05-27T00:00:00">
+                2013-05-27
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/wajig">wajig</a><a href="http://tshepang.net/tag/python">Python</a><a href="http://tshepang.net/tag/tracker">Tracker</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/my-current-plans-for-wajig">read more</a>
+<p>There are <a href="http://tshepang.net/my-current-plans-for-wajig#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/shutilwhich-rocks" rel="bookmark"
+                           title="Permalink to shutil.which() rocks">shutil.which() rocks</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-05-26T00:00:00">
+                2013-05-26
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a><a href="http://tshepang.net/tag/wajig">wajig</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/shutilwhich-rocks">read more</a>
+<p>There are <a href="http://tshepang.net/shutilwhich-rocks#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/koolest-projekts" rel="bookmark"
+                           title="Permalink to koolest projekts">koolest projekts</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-05-15T00:00:00">
+                2013-05-15
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a><a href="http://tshepang.net/tag/non-python">non-Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/koolest-projekts">read more</a>
+<p>There are <a href="http://tshepang.net/koolest-projekts#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/links-2013-05-11" rel="bookmark"
+                           title="Permalink to links 2013-05-11">links 2013-05-11</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-05-11T00:00:00">
+                2013-05-11
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a><a href="http://tshepang.net/tag/gnome">GNOME</a><a href="http://tshepang.net/tag/links">links</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/links-2013-05-11">read more</a>
+<p>There are <a href="http://tshepang.net/links-2013-05-11#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/python-pipedreams" rel="bookmark"
+                           title="Permalink to Python pipedreams">Python pipedreams</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-04-27T00:00:00">
+                2013-04-27
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/python-pipedreams">read more</a>
+<p>There are <a href="http://tshepang.net/python-pipedreams#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/am-joining-gittip" rel="bookmark"
+                           title="Permalink to am joining Gittip">am joining Gittip</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-04-13T00:00:00">
+                2013-04-13
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/am-joining-gittip">read more</a>
+<p>There are <a href="http://tshepang.net/am-joining-gittip#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/me-likes-subprocessdevnull" rel="bookmark"
+                           title="Permalink to me likes subprocess.DEVNULL">me likes subprocess.DEVNULL</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-04-11T00:00:00">
+                2013-04-11
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a><a href="http://tshepang.net/tag/vcs">VCS</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/me-likes-subprocessdevnull">read more</a>
+<p>There are <a href="http://tshepang.net/me-likes-subprocessdevnull#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/links-2013-04-05" rel="bookmark"
+                           title="Permalink to links 2013-04-05">links 2013-04-05</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-04-05T00:00:00">
+                2013-04-05
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/gnome">GNOME</a><a href="http://tshepang.net/tag/python">Python</a><a href="http://tshepang.net/tag/non-python">non-Python</a><a href="http://tshepang.net/tag/links">links</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/links-2013-04-05">read more</a>
+<p>There are <a href="http://tshepang.net/links-2013-04-05#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/developer-of-note-vinay-sajip" rel="bookmark"
+                           title="Permalink to developer of note: Vinay Sajip">developer of note: Vinay Sajip</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-03-31T00:00:00">
+                2013-03-31
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/developer-of-note">developer-of-note</a><a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/developer-of-note-vinay-sajip">read more</a>
+<p>There are <a href="http://tshepang.net/developer-of-note-vinay-sajip#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/links-2013-03-24" rel="bookmark"
+                           title="Permalink to links 2013-03-24">links 2013-03-24</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-03-24T00:00:00">
+                2013-03-24
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/non-debian">non-Debian</a><a href="http://tshepang.net/tag/humor">humor</a><a href="http://tshepang.net/tag/python">Python</a><a href="http://tshepang.net/tag/links">links</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/links-2013-03-24">read more</a>
+<p>There are <a href="http://tshepang.net/links-2013-03-24#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/links-2013-03-14" rel="bookmark"
+                           title="Permalink to links 2013-03-14">links 2013-03-14</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-03-14T00:00:00">
+                2013-03-14
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a><a href="http://tshepang.net/tag/gnome">GNOME</a><a href="http://tshepang.net/tag/non-debian">non-Debian</a><a href="http://tshepang.net/tag/non-floss">non-FLOSS</a><a href="http://tshepang.net/tag/links">links</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/links-2013-03-14">read more</a>
+<p>There are <a href="http://tshepang.net/links-2013-03-14#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/on-growing-up" rel="bookmark"
+                           title="Permalink to on growing up">on growing up</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-03-01T00:00:00">
+                2013-03-01
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/humor">humor</a><a href="http://tshepang.net/tag/python">Python</a><a href="http://tshepang.net/tag/quote">quote</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/on-growing-up">read more</a>
+<p>There are <a href="http://tshepang.net/on-growing-up#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/great-praise-for-the-rpython-translation-toolchain" rel="bookmark"
+                           title="Permalink to great praise for the RPython translation toolchain">great praise for the RPython translation toolchain</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-02-12T00:00:00">
+                2013-02-12
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a><a href="http://tshepang.net/tag/quote">quote</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/great-praise-for-the-rpython-translation-toolchain">read more</a>
+<p>There are <a href="http://tshepang.net/great-praise-for-the-rpython-translation-toolchain#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/developer-of-note-jeff-forcier" rel="bookmark"
+                           title="Permalink to developer of note: Jeff Forcier">developer of note: Jeff Forcier</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-01-15T00:00:00">
+                2013-01-15
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a><a href="http://tshepang.net/tag/developer-of-note">developer-of-note</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/developer-of-note-jeff-forcier">read more</a>
+<p>There are <a href="http://tshepang.net/developer-of-note-jeff-forcier#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/links-2013-01-02" rel="bookmark"
+                           title="Permalink to links 2013-01-02">links 2013-01-02</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-01-02T00:00:00">
+                2013-01-02
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a><a href="http://tshepang.net/tag/non-python">non-Python</a><a href="http://tshepang.net/tag/links">links</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/links-2013-01-02">read more</a>
+<p>There are <a href="http://tshepang.net/links-2013-01-02#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/matplotlib-rocks" rel="bookmark"
+                           title="Permalink to matplotlib rocks">matplotlib rocks</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-07-19T00:00:00">
+                2012-07-19
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/matplotlib-rocks">read more</a>
+<p>There are <a href="http://tshepang.net/matplotlib-rocks#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/sorting-dictionary-items-by-value" rel="bookmark"
+                           title="Permalink to sorting dictionary items by value">sorting dictionary items by value</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-06-26T00:00:00">
+                2012-06-26
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/sorting-dictionary-items-by-value">read more</a>
+<p>There are <a href="http://tshepang.net/sorting-dictionary-items-by-value#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/developer-of-note-victor-stinner" rel="bookmark"
+                           title="Permalink to developer of note: Victor Stinner">developer of note: Victor Stinner</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-06-09T00:00:00">
+                2012-06-09
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/developer-of-note">developer-of-note</a><a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/developer-of-note-victor-stinner">read more</a>
+<p>There are <a href="http://tshepang.net/developer-of-note-victor-stinner#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/my-argparse-tutorial-now-part-of-official-python-documentation" rel="bookmark"
+                           title="Permalink to my Argparse tutorial now part of official Python documentation">my Argparse tutorial now part of official Python documentation</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-05-07T00:00:00">
+                2012-05-07
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/my-argparse-tutorial-now-part-of-official-python-documentation">read more</a>
+<p>There are <a href="http://tshepang.net/my-argparse-tutorial-now-part-of-official-python-documentation#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/links-2012-04-12" rel="bookmark"
+                           title="Permalink to links 2012-04-12">links 2012-04-12</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-04-12T00:00:00">
+                2012-04-12
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a><a href="http://tshepang.net/tag/links">links</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/links-2012-04-12">read more</a>
+<p>There are <a href="http://tshepang.net/links-2012-04-12#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/david-beazleys-pycon-us-2012-keynote" rel="bookmark"
+                           title="Permalink to David Beazley's PyCon US 2012 Keynote">David Beazley's PyCon US 2012 Keynote</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-04-09T00:00:00">
+                2012-04-09
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/david-beazleys-pycon-us-2012-keynote">read more</a>
+<p>There are <a href="http://tshepang.net/david-beazleys-pycon-us-2012-keynote#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/links-2012-04-08" rel="bookmark"
+                           title="Permalink to links 2012-04-08">links 2012-04-08</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-04-08T00:00:00">
+                2012-04-08
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/links">links</a><a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/links-2012-04-08">read more</a>
+<p>There are <a href="http://tshepang.net/links-2012-04-08#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/links-2012-03-27" rel="bookmark"
+                           title="Permalink to links 2012-03-27">links 2012-03-27</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-03-27T00:00:00">
+                2012-03-27
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/gnome">GNOME</a><a href="http://tshepang.net/tag/links">links</a><a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/links-2012-03-27">read more</a>
+<p>There are <a href="http://tshepang.net/links-2012-03-27#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/wajig-23-released" rel="bookmark"
+                           title="Permalink to wajig 2.3 released">wajig 2.3 released</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-03-25T00:00:00">
+                2012-03-25
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/debian">Debian</a><a href="http://tshepang.net/tag/python">Python</a><a href="http://tshepang.net/tag/wajig">wajig</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/wajig-23-released">read more</a>
+<p>There are <a href="http://tshepang.net/wajig-23-released#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/links-2012-02-15" rel="bookmark"
+                           title="Permalink to links 2012-02-15">links 2012-02-15</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-02-15T00:00:00">
+                2012-02-15
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/links">links</a><a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/links-2012-02-15">read more</a>
+<p>There are <a href="http://tshepang.net/links-2012-02-15#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/project-of-note-requests" rel="bookmark"
+                           title="Permalink to project of note: Requests">project of note: Requests</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2011-12-31T00:00:00">
+                2011-12-31
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/project-of-note">project-of-note</a><a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/project-of-note-requests">read more</a>
+<p>There are <a href="http://tshepang.net/project-of-note-requests#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/java-gripes" rel="bookmark"
+                           title="Permalink to Java gripes">Java gripes</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2011-11-02T00:00:00">
+                2011-11-02
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/non-python">non-Python</a><a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/java-gripes">read more</a>
+<p>There are <a href="http://tshepang.net/java-gripes#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/developer-of-note-john-palmieri" rel="bookmark"
+                           title="Permalink to developer of note: John Palmieri">developer of note: John Palmieri</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2011-09-20T00:00:00">
+                2011-09-20
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/developer-of-note">developer-of-note</a><a href="http://tshepang.net/tag/gnome">GNOME</a><a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/developer-of-note-john-palmieri">read more</a>
+<p>There are <a href="http://tshepang.net/developer-of-note-john-palmieri#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/my-first-code-contribution-to-the-cpython-project" rel="bookmark"
+                           title="Permalink to my first code contribution to the CPython project">my first code contribution to the CPython project</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2011-06-10T00:00:00">
+                2011-06-10
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/my-first-code-contribution-to-the-cpython-project">read more</a>
+<p>There are <a href="http://tshepang.net/my-first-code-contribution-to-the-cpython-project#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/cleansing-multiple-build-directories" rel="bookmark"
+                           title="Permalink to cleansing multiple build directories">cleansing multiple build directories</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2011-03-26T00:00:00">
+                2011-03-26
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a><a href="http://tshepang.net/tag/gnome">GNOME</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/cleansing-multiple-build-directories">read more</a>
+<p>There are <a href="http://tshepang.net/cleansing-multiple-build-directories#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/cat-python-and-perl" rel="bookmark"
+                           title="Permalink to cat, Python, and Perl">cat, Python, and Perl</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2011-03-15T00:00:00">
+                2011-03-15
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/non-python">non-Python</a><a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/cat-python-and-perl">read more</a>
+<p>There are <a href="http://tshepang.net/cat-python-and-perl#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/plotting-with-matplotlib" rel="bookmark"
+                           title="Permalink to plotting with matplotlib">plotting with matplotlib</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2011-02-17T00:00:00">
+                2011-02-17
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/plotting-with-matplotlib">read more</a>
+<p>There are <a href="http://tshepang.net/plotting-with-matplotlib#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/project-of-note-matplotlib" rel="bookmark"
+                           title="Permalink to project of note: matplotlib">project of note: matplotlib</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2011-02-17T00:00:00">
+                2011-02-17
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/project-of-note">project-of-note</a><a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/project-of-note-matplotlib">read more</a>
+<p>There are <a href="http://tshepang.net/project-of-note-matplotlib#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/comparing-debian-repositories" rel="bookmark"
+                           title="Permalink to comparing Debian repositories">comparing Debian repositories</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2011-02-09T00:00:00">
+                2011-02-09
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/debian">Debian</a><a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/comparing-debian-repositories">read more</a>
+<p>There are <a href="http://tshepang.net/comparing-debian-repositories#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/links-2011-02-07" rel="bookmark"
+                           title="Permalink to links 2011-02-07">links 2011-02-07</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2011-02-07T00:00:00">
+                2011-02-07
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/links">links</a><a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/links-2011-02-07">read more</a>
+<p>There are <a href="http://tshepang.net/links-2011-02-07#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/splitting-strings" rel="bookmark"
+                           title="Permalink to splitting strings">splitting strings</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2011-02-01T00:00:00">
+                2011-02-01
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a><a href="http://tshepang.net/tag/non-python">non-Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/splitting-strings">read more</a>
+<p>There are <a href="http://tshepang.net/splitting-strings#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/basic-configparser-usage" rel="bookmark"
+                           title="Permalink to basic ConfigParser usage">basic ConfigParser usage</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2011-01-28T00:00:00">
+                2011-01-28
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/basic-configparser-usage">read more</a>
+<p>There are <a href="http://tshepang.net/basic-configparser-usage#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/basic-usage-of-python-with-oracle-db-in-debian" rel="bookmark"
+                           title="Permalink to basic usage of Python with Oracle DB, in Debian">basic usage of Python with Oracle DB, in Debian</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2011-01-27T00:00:00">
+                2011-01-27
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/basic-usage-of-python-with-oracle-db-in-debian">read more</a>
+<p>There are <a href="http://tshepang.net/basic-usage-of-python-with-oracle-db-in-debian#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/using-pythons-subprocess-module" rel="bookmark"
+                           title="Permalink to using Python's subprocess module">using Python's subprocess module</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2011-01-26T00:00:00">
+                2011-01-26
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/using-pythons-subprocess-module">read more</a>
+<p>There are <a href="http://tshepang.net/using-pythons-subprocess-module#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/shlex-and-subprocess" rel="bookmark"
+                           title="Permalink to shlex and subprocess">shlex and subprocess</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2011-01-25T00:00:00">
+                2011-01-25
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/shlex-and-subprocess">read more</a>
+<p>There are <a href="http://tshepang.net/shlex-and-subprocess#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/accessing-oracle-db-using-python-in-debian" rel="bookmark"
+                           title="Permalink to accessing Oracle DB using Python, in Debian">accessing Oracle DB using Python, in Debian</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2011-01-15T00:00:00">
+                2011-01-15
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/debian">Debian</a><a href="http://tshepang.net/tag/python">Python</a><a href="http://tshepang.net/tag/non-floss">non-FLOSS</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/accessing-oracle-db-using-python-in-debian">read more</a>
+<p>There are <a href="http://tshepang.net/accessing-oracle-db-using-python-in-debian#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/my-pet-project" rel="bookmark"
+                           title="Permalink to my pet project">my pet project</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2010-06-09T00:00:00">
+                2010-06-09
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/my-pet-project">read more</a>
+<p>There are <a href="http://tshepang.net/my-pet-project#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/python-people-vs-java-people" rel="bookmark"
+                           title="Permalink to Python people vs. Java people">Python people vs. Java people</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2010-05-04T00:00:00">
+                2010-05-04
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/non-python">non-Python</a><a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/python-people-vs-java-people">read more</a>
+<p>There are <a href="http://tshepang.net/python-people-vs-java-people#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/python-perl-and-now-java" rel="bookmark"
+                           title="Permalink to Python, Perl, and now Java">Python, Perl, and now Java</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2009-05-05T00:00:00">
+                2009-05-05
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/non-python">non-Python</a><a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/python-perl-and-now-java">read more</a>
+<p>There are <a href="http://tshepang.net/python-perl-and-now-java#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://tshepang.net/my-1st-python-tool" rel="bookmark"
+                           title="Permalink to my 1st Python tool">my 1st Python tool</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2008-11-07T00:00:00">
+                2008-11-07
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://tshepang.net/author/tshepang-lekhonkhobe.html">Tshepang Lekhonkhobe</a>
+        </address>
+<p>In <a href="http://tshepang.net/computing">computing</a>. </p>
+<p>tags: <a href="http://tshepang.net/tag/python">Python</a></p>
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="http://tshepang.net/my-1st-python-tool">read more</a>
+<p>There are <a href="http://tshepang.net/my-1st-python-tool#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+            </ol><!-- /#posts-list -->
+            </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="http://tshepang.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="http://stackexchange.com/users/125744/tshepang">stack-exchange</a></li>
+                            <li><a href="https://bitbucket.org/tshepang">bitbucket</a></li>
+                            <li><a href="https://github.com/tshepang">github</a></li>
+                            <li><a href="https://twitter.com/tshepang_dev">twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-16685250-3']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+<script type="text/javascript">
+    var disqus_shortname = 'tshepanglogs';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>
