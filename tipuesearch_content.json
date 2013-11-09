@@ -7,12 +7,6 @@
             "title": "about me"
         }, 
         {
-            "text": "", 
-            "tags": "computing", 
-            "loc": "http://tshepang.net/aa", 
-            "title": "aa"
-        }, 
-        {
             "text": "I was curious how my home machine performs compared to my work\nmachine. Each of these have 4 logical processors (and 8GB of RAM), so\nare sort of comparable. I also added the DigitalOcean VPS with\nthose specs (currently $80 per month) because... why not.\n\nMachine Specs\nEach machine runs Debian testing (codename \"jessie\"). Following is the\noutput of these commands for each machine:\n\nuname --all\ncat /proc/cpuinfo | sed --quiet '5p'\n\nHome machine:\n\nLinux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU/Linux\nmodel name      : Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz\n\nWork machine:\n\nLinux twork 3.10-3-amd64 #1 SMP Debian 3.10.11-1 (2013-09-10) x86_64 GNU/Linux\nmodel name      : AMD Phenom(tm) II X4 970 Processor\n\nDigitalOcean VPS:\n\nLinux tcloud 3.11-1-amd64 #1 SMP Debian 3.11.5-1 (2013-10-17) x86_64 GNU/Linux\nmodel name      : QEMU Virtual CPU version 1.0\n\n\n\nCPython benchmarks\nI ran two benchmarks, both from the latest VCS version of CPython,\ndevelopment branch:\n\n$ hg identify --id --branch\nb6a1a78818fe default\n\n\nBuild\nHere's the command I used:\n\nmake distclean; time (./configure && make --silent --jobs=4)\n\n\nResults\nHome machine:\n\nreal    2m11.687s\nuser    3m18.104s\nsys     0m9.964s\n\nWork machine:\n\nreal    2m2.707s\nuser    2m24.200s\nsys     0m12.280s\n\nVPS:\n\nreal    2m30.931s\nuser    3m7.272s\nsys     0m16.592s\n\n\n\n\nTest suite\nHere's the command I used:\n\ntime ./python -m test --multiprocess=0\n\n--multiprocess=0 means that there will be 6 tests run in parallel;\nthat is the number logical cores (4 in my case) + 2 (to avoid waiting\ntoo long for tests which are largely idle)\n\nResults\nHome machine:\n\nreal    3m42.571s\nuser    7m13.124s\nsys     0m33.320s\n\nWork machine:\n\nreal    2m29.957s\nuser    4m9.052s\nsys     0m27.364s\n\nVPS:\n\nreal    2m19.174s\nuser    5m5.444s\nsys     0m40.008s\n\n\n\n\n\nLinux kernel build\nJust for kicks, I decided to check how long building Linux would take;\nfor this, I used latest 'final' release from Linus' git tree:\n\n$ git log -1\ncommit 6e4664525b1db28f8c4e1130957f70a94c19213e\nAuthor: Linus Torvalds <torvalds@linux-foundation.org>\nDate:   Mon Sep 2 13:46:10 2013 -0700\n\nLinux 3.11\n\nHere's the commands I used:\n\nmake distclean && make defconfig && time make\n\n\nResults\nHome machine:\n\nreal    6m11.622s\nuser    21m2.664s\nsys     1m15.324s\n\nWork machine:\n\nreal    2m40.275s\nuser    8m55.624s\nsys     0m42.860s\n\nVPS:\n\nreal    3m41.240s\nuser    12m21.120s\nsys     1m17.844s\n\n\n\n\nConclusion\nMy work machine is faster than the DigitalOcean offering of comparable\nspecs, and much faster than my home machine, a laptop.\n(detailed explanation of the output)\n\n", 
             "tags": "computing", 
             "loc": "http://tshepang.net/a-bit-of-benchmarking", 
@@ -755,30 +749,6 @@
             "tags": "arts", 
             "loc": "http://tshepang.net/battlestar-galactica-season-3-episode-20", 
             "title": "Battlestar Galactica - Season 3 Episode 20"
-        }, 
-        {
-            "text": "", 
-            "tags": "computing", 
-            "loc": "http://tshepang.net/d", 
-            "title": "d"
-        }, 
-        {
-            "text": "", 
-            "tags": "computing", 
-            "loc": "http://tshepang.net/c", 
-            "title": "c"
-        }, 
-        {
-            "text": "", 
-            "tags": "computing", 
-            "loc": "http://tshepang.net/b", 
-            "title": "b"
-        }, 
-        {
-            "text": "", 
-            "tags": "computing", 
-            "loc": "http://tshepang.net/a", 
-            "title": "a"
         }, 
         {
             "text": "Okay, so Java sucks 'a bit', but the following surprised me:\n\nI struggled to find a way to count the number of elements in an\narray. In a string it's done thus: \"four\".length(). Given that, I\nexpected that {'f', 'o', 'u', 'r'}.length() would gimme the same\nresult. Nah! I found that I had to do\nnew char [] {'f', 'o', 'u', 'r'}.length, and yes, without the\nbrackets after length. WTF! There might be a good reason for such\n(seeming) inconsistency of course, but I've been spoilt by Python's\nelegant equivalents: len(\"four\") and len(['f','o', 'u', 'r'])\nwhich all give the same result. (sidenote: len() is a Python\nbuilt-in function, which explains why there's no dot notation there).\nThe standard library doesn't have CSV handling! I had to find an\nexternal library for that!\nGiven 2 strings, I can't do str1==str2 for comparison, but am\nforced to use the string method, equals: str1.equals(str2). This\nbit me a few times, and am sure am not the only one.\nThe standard library doesn't have .INI file handling (Someone\npointed to a 3rd party library).\n\n", 
