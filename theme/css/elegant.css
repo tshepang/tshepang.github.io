@@ -109,7 +109,7 @@ http://www.tipue.com/search
     font-family: Baskerville, Garamond, Georgia, "DejaVu Serif", "Times New Roman", Times, Serif;
     font-size: 3em;
     font-weight: normal;
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0 20px 0;
     padding: 5px 5px 15px 5px;
 }
 .tipue_search_content_title
@@ -226,14 +226,13 @@ a {
     font-family: 'Monaco', 'Inconsolata', 'Andale Mono', 'Lucida Console', 'Bitstream Vera Sans Mono', 'Courier New', Courier, Monospace;
 }
 /* Top navigation menu */
-ul.top-menu li a {
+.top-menu li a {
     font-weight: bold;
 }
 /* Footer */
-div#footer {
+#footer {
     border-top: 1px solid  rgba(0, 0, 0, .2);
-    font-family: Calibri, Tahoma, Arial, Sans-Serif;
-    font-size: .7em;
+    font: .7em Calibri, Tahoma, Arial, Sans-Serif;
     margin: 15px 0;
     padding: 2px 5px 0;
 }
@@ -245,30 +244,49 @@ ul.footer-content {
 ul.footer-content li {
     padding-left: 5px;
 }
-ul.footer-content li.elegant-power {
+.elegant-power {
     float: right;
 }
-ul.footer-content li.elegant-license {
+.elegant-license {
     float: left;
 }
-ul.footer-content li.elegant-subtitle {
+.elegant-subtitle {
     float: left;
 }
 /* comment */
 #comment-message {
     color: #808080;
-    font-family: 'PT Serif', Georgia, Times, 'Times New Roman', Serif;
-    font-size: 1em;
 }
-a.disqus-comment-count {
+.disqus-comment-count {
     font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, Sans-Serif;
     font-size: .9em;
 }
-div#disqus_thread {
+#disqus_thread {
     padding-left: 10px;
     padding-right: 10px;
 }
 /* Syntax Highlight */
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+@media (max-width:979px) {
+    .linenos {
+        display:none !important;
+    }
+}
+.linenos {
+    width:5%;
+}
+.linenos div pre {
+    text-align:right;
+}
+pre {
+    overflow: auto;
+    white-space: pre;
+    word-break: normal;
+    word-wrap: normal;
+}
 .highlight pre {
     background-color: #fdf6e3;
     border-radius: 3px 3px 3px 3px;
@@ -312,12 +330,11 @@ td.code {
     float: none;
     line-height: 28px;
 }
-h2.tag-title {
+.tag-title {
     font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, Sans-Serif;
 }
-ul.articles-in-tag li {
-    font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, Sans-Serif;
-    font-size: 1.1em;
+.articles-in-tag li {
+    font: 1.1em/1.6em 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, Sans-Serif;
 }
 /* Article */
 article p a,
@@ -334,8 +351,7 @@ article div.article-content ul:not(.articles_timeline) a:hover {
     text-shadow: none;
 }
 .article-content {
-    font-family: 'PT Serif', Georgia, Times, 'Times New Roman', Serif;
-    font-size: 1.2em;
+    font: 1.2em/1.6em 'PT Serif', Georgia, Times, 'Times New Roman', Serif;
     max-width: 50em;
     text-align: justify;
 }
@@ -354,8 +370,7 @@ article div.article-content ul:not(.articles_timeline) a:hover {
 .article-content blockquote:before {
     color: #646464;
     content: '\f10d';
-    font-family: FontAwesome;
-    font-size: 18px;
+    font: 18px FontAwesome;
     font-style: normal;
     font-weight: normal;
     margin-left: -2em;
@@ -418,11 +433,11 @@ ul.articles_timeline {
     margin: 0;
     padding-bottom: 30px;
 }
-ul.articles_timeline li.next_article {
+ul.articles_timeline .next_article {
     float: right;
     margin: 0;
 }
-ul.articles_timeline li.previous_article  {
+ul.articles_timeline .previous_article  {
     float: left;
     margin: 0;
 }
@@ -478,8 +493,7 @@ ul.list-articles-category {
 }
 ul.list-articles-category li span {
     color: #AAA;
-    font-family: 'PT Sans', 'Helvetica Neue', Arial, Sans-Serif;
-    font-size: .9em;
+    font: .9em 'PT Sans', 'Helvetica Neue', Arial, Sans-Serif;
     margin-right: 10px;
 }
 a.category-link {
@@ -527,6 +541,7 @@ ul.list-all-articles li time {
     text-align: left;
 }
 #mc_embed_signup input {
+    -moz-appearance: none;
     -webkit-appearance: none;
     border: 1px solid #999;
 }
@@ -587,14 +602,18 @@ ul.list-all-articles li time {
 }
 .proj_desc {
     color: #999;
-    font-family: 'PT Sans', 'Helvetica Neue', Arial, Sans-Serif;
-    font-size: .9em;
+    font: .9em 'PT Sans', 'Helvetica Neue', Arial, Sans-Serif;
 }
 /* reST specific rules*/
 .literal {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
     background-color: #f7f7f9;
+    border-radius: 3px;
     border: 1px solid #e1e1e8;
     color: #d14;
+    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+    font-size: 12px;
     padding: 2px 4px;
     white-space: nowrap;
 }
