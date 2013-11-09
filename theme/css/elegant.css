@@ -270,16 +270,20 @@ table {
     table-layout: fixed;
     width: 100%;
 }
+td {
+    vertical-align: top;
+}
 @media (max-width:979px) {
     .linenos {
         display:none !important;
     }
 }
 .linenos {
-    width:5%;
+    width: 30px;
 }
 .linenos div pre {
-    text-align:right;
+    text-align: right;
+    overflow: hidden;
 }
 pre {
     overflow: auto;
@@ -560,8 +564,8 @@ ul.list-all-articles li time {
 #mc_embed_signup input.button {
     display: block;
     margin: 0 0 10px 0;
-    min-width: 90px;
-    width: 100%
+    min-width: 130px;
+    width: 100%;
 }
 #mc_embed_signup input[type='email'] {
     height: 100%;
