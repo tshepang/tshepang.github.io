@@ -1,5 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-10-27T00:00:00+02:00</updated><entry><title>a bit of benchmarking</title><link href="http://tshepang.net/a-bit-of-benchmarking" rel="alternate"></link><updated>2013-10-27T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-27:a-bit-of-benchmarking</id><summary type="html">&lt;p&gt;I was curious how my home machine performs compared to my work
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-11-16T00:00:00+02:00</updated><entry><title>hierarchy of FLOSS projects</title><link href="http://tshepang.net/hierarchy-of-floss-projects" rel="alternate"></link><updated>2013-11-16T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-11-16:hierarchy-of-floss-projects</id><summary type="html">&lt;p&gt;From top to bottom:&lt;/p&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;Author&lt;/p&gt;
+&lt;p&gt;Sometimes referred to as primary author, to distinguish between
+other people who have contributed to the project, this is the
+creator. At times, someone in the lower ranks of the hierarchy
+happen to be more active in the project than the Author, in which
+case the Author often makes them Maintainer, explicitly or
+not.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Maintainer&lt;/p&gt;
+&lt;p&gt;This is someone ultimately responsible for the project: handles bug
+reports, decides which changes to accept from lower contributors,
+and performs releases. Note that there can be more than one, unlike
+is the case with Author.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Contributor&lt;/p&gt;
+&lt;p&gt;This is someone who submits improvements to project, either
+documentation or code. It can be a one-time contribution, but in
+case where this is frequent and spans a certain amount of time, she
+can move onto becoming a Maintainer.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Bug Reporter&lt;/p&gt;
+&lt;p&gt;This is someone who suggests improvements to the project. Depending
+on the project, any of these are used: a mailing list, an IRC
+channel, a social networking service, email, or a dedicated
+Issue/Bug tracking system can be used.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;User&lt;/p&gt;
+&lt;p&gt;What the user is depends on the project, of course. Just to be
+clear, in the case of Python project, the user is a software
+developer, not the person who ends up using something written in
+the language.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The 'individual' in title means I'm ignoring non-human entities, like
+companies. I'm also ignoring non-core activities, like marketers or
+sysadmins, or even teachers. Those are not going to be easy to fit in
+this simple story, and are not common to that many FLOSS (Free/Libre
+and Open Source) projects.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;In the case of &lt;a class="reference external" href="http://linux.togaware.com/survivor/wajig.html"&gt;wajig&lt;/a&gt;, I am the Maintainer and Graham Williams is the
+Author. In the case of &lt;a class="reference external" href="https://github.com/paramiko/paramiko"&gt;paramiko&lt;/a&gt;, a far more important project, &lt;a class="reference external" href="http://bitprophet.org/blog/2012/09/29/paramiko-and-ssh"&gt;Jeff
+Forcier is the Maintainer&lt;/a&gt;. The project was however created by
+&lt;a class="reference external" href="http://robey.lag.net"&gt;Robey Pointer&lt;/a&gt;, and &lt;a class="reference external" href="http://robey.lag.net/2009/02/16/paramiko-is-on-github-now.html"&gt;he did not imagine&lt;/a&gt; it would end
+up being THE Python SSH library today.&lt;/p&gt;
+</summary><category term="untagged"></category></entry><entry><title>a bit of benchmarking</title><link href="http://tshepang.net/a-bit-of-benchmarking" rel="alternate"></link><updated>2013-10-27T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-27:a-bit-of-benchmarking</id><summary type="html">&lt;p&gt;I was curious how my home machine performs compared to my work
 machine. Each of these have 4 logical processors (and 8GB of RAM), so
 are sort of comparable. I also added the &lt;a class="reference external" href="https://www.digitalocean.com/?refcode=25b4887810cc"&gt;DigitalOcean&lt;/a&gt; VPS with
 those specs (&lt;a class="reference external" href="https://www.digitalocean.com/pricing"&gt;currently $80 per month&lt;/a&gt;) because... why not.&lt;/p&gt;
@@ -2057,7 +2103,7 @@ Unstable... way too much bandwidth.&lt;/p&gt;
 same issue with Eclipse&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=340298"&gt;wonderful openness&lt;/a&gt; – the sort of reporting that raises the
 expectations of web applications providers&lt;/li&gt;
-&lt;li&gt;a real nice &lt;a class="reference external" href="https://chrome.google.com/webstore/detail/mgijmajocgfcbeboacabfgobmjgjcoja"&gt;Chromium dictionary Extension&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;a real nice &lt;a class="reference external" href="https://chrome.google.com/webstore/detail/google-dictionary-by-goog/mgijmajocgfcbeboacabfgobmjgjcoja"&gt;Chromium dictionary Extension&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://www.pitivi.org/i/history.png"&gt;a graph&lt;/a&gt; showing the history FLOSS video editors&lt;/li&gt;
 &lt;/ul&gt;
 </summary><category term="links"></category></entry><entry><title>thanks to the Debian backports team</title><link href="http://tshepang.net/thanks-to-the-debian-backports-team" rel="alternate"></link><updated>2011-07-14T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2011-07-14:thanks-to-the-debian-backports-team</id><summary type="html">&lt;p&gt;So I got this new HP laptop, Probook 4530s, and installed Debian 6
