@@ -343,13 +343,13 @@ td.code {
 /* Article */
 article p a,
 article ol a,
-article div.article-content ul:not(.articles_timeline) a {
+article div.article-content ul:not(.articles-timeline) a {
     border-bottom: thin dashed #A9A9A9;
     color: #000;
 }
 article p a:hover,
 article ol a:hover,
-article div.article-content ul:not(.articles_timeline) a:hover {
+article div.article-content ul:not(.articles-timeline) a:hover {
     border-bottom: none;
     text-decoration: none;
     text-shadow: none;
@@ -379,14 +379,16 @@ article div.article-content ul:not(.articles_timeline) a:hover {
     font-weight: normal;
     margin-left: -2em;
     text-decoration: inherit;
+    position:absolute;
 }
-.article-content blockquote p {
+.article-content blockquote {
     font-family: 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
     font-size: inherit;
     font-variant: normal;
     line-height: 1.7em;
-    margin-top: -20px;
     text-transform: none;
+    font-weight: 300;
+    position:relative;
 }
 .article-content ul {
     font-size: inherit;
@@ -415,7 +417,7 @@ article div.article-content ul:not(.articles_timeline) a:hover {
 .article-content dt {
     font-size: inherit;
 }
-.page_header h1 {
+.page-header h1 {
     border-bottom: 1px solid #8f8686;
     color: #8B0000;
     font-size: 3em;
@@ -423,25 +425,25 @@ article div.article-content ul:not(.articles_timeline) a:hover {
     margin: 20px 0;
     padding: 5px 5px 15px;
 }
-.page_header h1 small {
+.page-header h1 small {
     color: #8f7474;
 }
-.page_header h1 a {
+.page-header h1 a {
     color: #8B0000;
 }
-.page_header h1 a:hover {
+.page-header h1 a:hover {
     text-decoration: none;
 }
-ul.articles_timeline {
+ul.articles-timeline {
     list-style: none;
     margin: 0;
     padding-bottom: 30px;
 }
-ul.articles_timeline .next_article {
+ul.articles-timeline .next-article {
     float: right;
     margin: 0;
 }
-ul.articles_timeline .previous_article  {
+ul.articles-timeline .previous-article  {
     float: left;
     margin: 0;
 }
@@ -533,26 +535,26 @@ ul.list-all-articles li time {
     font-size: .9em;
 }
 /* MailChimp */
-#mc_embed_signup {
+#mc-embed-signup {
     font-family: inherit;
     font-size: inherit;
     margin: 10px 0;
 }
-#mc_embed_signup form {
+#mc-embed-signup form {
     display: block;
     padding: 0;
     position: relative;
     text-align: left;
 }
-#mc_embed_signup input {
+#mc-embed-signup input {
     -moz-appearance: none;
     -webkit-appearance: none;
     border: 1px solid #999;
 }
-#mc_embed_signup input:focus {
+#mc-embed-signup input:focus {
     border-color: #333;
 }
-#mc_embed_signup input.email {
+#mc-embed-signup input.email {
     display: block;
     font-size: .9em;
     margin: 0 4% 10px 0;
@@ -561,16 +563,16 @@ ul.list-all-articles li time {
     text-indent: 5px;
     width: 100%;
 }
-#mc_embed_signup input.button {
+#mc-embed-signup input.button {
     display: block;
     margin: 0 0 10px 0;
     min-width: 130px;
     width: 100%;
 }
-#mc_embed_signup input[type='email'] {
+#mc-embed-signup input[type='email'] {
     height: 100%;
 }
-#mc_embed_signup .button {
+#mc-embed-signup .button {
     background-color: #EEE;
     border-radius: 4px;
     border: 1px solid #D3D3D3;
@@ -590,10 +592,10 @@ ul.list-all-articles li time {
     white-space: nowrap;
     width: auto;
 }
-#mc_embed_signup .button: hover {
+#mc-embed-signup .button: hover {
     background-color: #DFDFDF;
 }
-#mc_embed_signup .clear {
+#mc-embed-signup .clear {
     clear: none;
     display: inline;
 }
@@ -604,7 +606,7 @@ ul.list-all-articles li time {
     font-size: 75%;
     font-weight: normal;
 }
-.proj_desc {
+.proj-desc {
     color: #999;
     font: .9em 'PT Sans', 'Helvetica Neue', Arial, Sans-Serif;
 }
@@ -627,26 +629,27 @@ ul.list-all-articles li time {
     font-style: italic;
 }
 /* Use following classes to add floating images to your post */
-div .float-image {
-    margin: 1.5em;
+div.figure, .article-content img {
     text-align: center;
 }
-div .float-image img {
+div.figure img {
     width: 100%;
 }
-div .float-image p {
+div.figure p.caption {
     color: gray;
     font-size: .6em;
     margin: 0;
 }
-div .float-image p a {
+div.figure p.caption a {
     border: none;
     color: gray;
 }
-div .float-right {
+div.figure.align-right, .article-content img.align-right {
     float: right;
+    margin: 1.5em 0 1.5em 1.5em;
 }
-div .float-left {
+div.figure.align-left, .article-content img.align-left {
     float: left;
+    margin: 1.5em 1.5em 1.5em 0;
 }
 
