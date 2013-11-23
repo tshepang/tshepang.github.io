@@ -366,21 +366,17 @@ article div.article-content ul:not(.articles-timeline) a:hover {
     text-decoration: none;
     text-shadow: none;
 }
-.article-content, div.recent-posts p {
+.article-content {
     font: 1.2em/1.6em 'PT Serif', Georgia, Times, 'Times New Roman', Serif;
+    max-width: 50em;
     text-align: justify;
 }
-.article-content {
-    max-width: 50em;
-}
-.article-content p, div.recent-posts p {
+.article-content p {
     font-size: inherit;
     font-variant: normal;
     line-height: 1.6em;
-    text-transform: none;
-}
-.article-content p {
     margin: 20px 0;
+    text-transform: none;
 }
 .article-content blockquote {
     border-left: 0;
@@ -505,7 +501,7 @@ ul.list-articles-category {
     margin: 0 0 0 5px;
 }
 ul.list-articles-category li span {
-    color: #8F8F8F;
+    color: #AAA;
     font: .9em 'PT Sans', 'Helvetica Neue', Arial, Sans-Serif;
     margin-right: 10px;
 }
@@ -547,52 +543,43 @@ div.blog-archives h2 {
     line-height: 0.6em;
     position: relative;
 }
-div.blog-archives article, div.recent-posts article {
-    border-bottom: 1px dotted #AAA;
-}
 div.blog-archives article {
+    border-bottom: 1px dotted #AAA;
     margin-left: 6em;
     padding-bottom: 0.7em;
     padding-left: 4.5em;
     position: relative;
 }
-div.blog-archives h1, div.recent-posts h1 {
+div.blog-archives h1 {
     font-size: 2em;
     margin-bottom: 0;
 }
-div.blog-archives h1 small, div.recent-posts h1 small {
-    font-size: .7em;
+div.blog-archives h1 small {
+    font-size: .8em;
 }
 div.blog-archives time {
+    color: #8F8F8F;
     float: right;
-    font: .9em 'PT Sans', 'Helvetica Neue', Arial, Sans-Serif;
+    font-family: 'PT Sans', 'Helvetica Neue', Arial, Sans-Serif;
+    font-size: 1em;
     left: 0;
     line-height: .3em;
     position: absolute;
     text-align: right;
     top: 1.8em;
 }
-div.blog-archives footer, div.recent-posts section {
+div.blog-archives footer {
     color: #8F8F8F;
-    font: .9em 'PT Sans', 'Helvetica Neue', Arial, Sans-Serif;
+    font-size: .9em;
 }
-div.blog-archives footer a, div.recent-posts section a {
-    color: inherit;
+div.blog-archives footer a {
+    color: #8F8F8F;
+    font-size: .9em;
     padding-left: .3em;
 }
-div.blog-archives footer a:hover, div.recent-posts section a:hover {
+div.blog-archives footer a:hover {
     border-bottom: 1px dashed;
-    text-decoration: none;
-}
-div.recent-posts footer {
-    font-size: 1.1em;
-    padding-bottom: 10px;
-}
-div.recent-posts section time {
-    padding-right: .4em;
-}
-div.recent-posts {
-    margin-left: 1em;
+    text-decoration:none;
 }
 @media (max-width: 767px) {
     div.blog-archives article {
