@@ -116,6 +116,7 @@ will have to reply on <a class="reference external" href="http://www.rankingtheb
             <nav>
             <ul class="articles-timeline">
                 <li class="previous-article">« <a href="http://tshepang.net/hierarchy-of-individuals-in-floss-projects" title="Previous: hierarchy of individuals in FLOSS projects">hierarchy of individuals in FLOSS projects</a></li>
+                <li class="next-article"><a href="http://tshepang.net/data-integrity-fabric-is-been-having-it" title="Next: data integrity... fabric is been having it">data integrity... fabric is been having it</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -143,7 +144,7 @@ will have to reply on <a class="reference external" href="http://www.rankingtheb
                     <span>31</span>
 </a></li>
                 <li><a href="http://tshepang.net/tags.html#python-ref">Python
-                    <span>57</span>
+                    <span>58</span>
 </a></li>
             </ul>
 <h4>Stay in Touch</h4>
@@ -200,18 +201,17 @@ Attribution-ShareAlike 3.0 Unported License</a>.</li>
     </script>
 <script  language="javascript" type="text/javascript">
 function uncollapse() {
-    var hash_str = window.location.hash;
-    if (window.location.hash.match(/^#comment-\d+$/))
-    {
-        var hash_str = '#disqus_thread';
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
     }
-    $(hash_str).collapse({
-        toggle: true
-    })
 }
 </script>
 <script type="text/javascript" language="JavaScript">
-    uncollapse(); 
+    uncollapse();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
 </script>
     </body>
 </html>

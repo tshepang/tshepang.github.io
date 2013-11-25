@@ -140,7 +140,7 @@ as <a class="reference external" href="https://code.google.com/p/wajig/source/de
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
                 <li><a href="http://tshepang.net/tags.html#python-ref">Python
-                    <span>57</span>
+                    <span>58</span>
 </a></li>
                 <li><a href="http://tshepang.net/tags.html#wajig-ref">wajig
                     <span>14</span>
@@ -200,18 +200,17 @@ Attribution-ShareAlike 3.0 Unported License</a>.</li>
     </script>
 <script  language="javascript" type="text/javascript">
 function uncollapse() {
-    var hash_str = window.location.hash;
-    if (window.location.hash.match(/^#comment-\d+$/))
-    {
-        var hash_str = '#disqus_thread';
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
     }
-    $(hash_str).collapse({
-        toggle: true
-    })
 }
 </script>
 <script type="text/javascript" language="JavaScript">
-    uncollapse(); 
+    uncollapse();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
 </script>
     </body>
 </html>
