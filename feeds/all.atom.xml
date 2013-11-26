@@ -160,7 +160,7 @@ Name=Custom
 Exec=/etc/X11/Xsession
 Type=XSession
 &lt;/pre&gt;
-&lt;p&gt;On selecting the entry, labeled &lt;tt class="docutils literal"&gt;Custom&lt;/tt&gt;, that appears on LightDM,
+&lt;p&gt;On selecting the entry labeled &lt;tt class="docutils literal"&gt;Custom&lt;/tt&gt; that appears on LightDM,
 and logging in, the following will get executed:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 $ cat ~/.xsesseions
