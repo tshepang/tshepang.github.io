@@ -232,7 +232,7 @@ exec dwm
  static Key keys[] = {
         /* modifier                     key        function        argument */
 &lt;/pre&gt;
-&lt;p&gt;Note that this is against the Debian package, versioned &lt;strong&gt;6.0-6&lt;/strong&gt;. I
+&lt;p&gt;Note that this diff is against the Debian package, versioned &lt;strong&gt;6.0-6&lt;/strong&gt;. I
 could not change the modifer key with the upstream version of dwm.&lt;/p&gt;
 &lt;p&gt;You will notice that I'm still using some GNOME packages, specifically
 Nautilus and GNOME Terminal, both of which remain my favorites.&lt;/p&gt;
