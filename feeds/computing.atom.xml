@@ -146,7 +146,8 @@ well be just how it was built in Debian, but that also means there
 were build options that allowed such tight coupling in the first
 place. GDM has served me well for years, but I'm not interested in all
 those tools it brings with.&lt;/p&gt;
-&lt;p&gt;Anyways, enough with that. Here's how I disable the annoying beep:&lt;/p&gt;
+&lt;p&gt;Anyways, enough with that. Here's what I got to disable the annoying
+beep:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 $ cat ~/.xinputrc
 set bell-style none
@@ -163,7 +164,7 @@ Type=XSession
 &lt;p&gt;On selecting the entry labeled &lt;tt class="docutils literal"&gt;Custom&lt;/tt&gt; that appears on LightDM,
 and logging in, the following will get executed:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-$ cat ~/.xsesseions
+$ cat ~/.xsession
 gnome-terminal --hide-menubar \
                --tab-with-profile=Default \
                --tab-with-profile=Default \
