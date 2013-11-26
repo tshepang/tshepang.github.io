@@ -1049,7 +1049,7 @@ exists elsewhere, but I actually never used it.&lt;/p&gt;
 &lt;p&gt;Related to that is the &lt;a class="reference external" href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Fill-Commands"&gt;fill-paragraph&lt;/a&gt; command, which is invoked via
 the Alt+q shortcut (M-q) in Emacs speak. What it does is reformat the
 paragraph as if it was typed while in Auto Fill Mode. Is gorgeous!&lt;/p&gt;
-</summary><category term="Emacs"></category></entry><entry><title>Python pipedreams</title><link href="http://tshepang.net/python-pipedreams" rel="alternate"></link><updated>2013-04-27T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-04-27:python-pipedreams</id><summary type="html">&lt;p&gt;None of these is likely to happen at all.
+</summary><category term="Emacs"></category><category term="Scribes"></category><category term="Geany"></category></entry><entry><title>Python pipedreams</title><link href="http://tshepang.net/python-pipedreams" rel="alternate"></link><updated>2013-04-27T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-04-27:python-pipedreams</id><summary type="html">&lt;p&gt;None of these is likely to happen at all.
 It's even safe to use the word &lt;em&gt;never&lt;/em&gt; with a great amount of certainty;
 but I wanted to document them anyway, if for no other reason than rescue
 them from the exclusiveness of my mind:&lt;/p&gt;
@@ -3300,7 +3300,7 @@ PEP-8 fix.&lt;/p&gt;
 &lt;p&gt;[&lt;strong&gt;a day later&lt;/strong&gt;] Inspired by that offer, the &lt;a class="reference external" href="http://code.google.com/u/113620423708378221129/"&gt;nice guy&lt;/a&gt; that founded
 the project created a VCS repo for it, and even offered me &lt;a class="reference external" href="http://code.google.com/p/wajig/people/list"&gt;commit
 rights&lt;/a&gt;. I was amazed by the trust.&lt;/p&gt;
-</summary><category term="wajig"></category></entry><entry><title>my pet project</title><link href="http://tshepang.net/my-pet-project" rel="alternate"></link><updated>2010-06-09T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2010-06-09:my-pet-project</id><summary type="html">&lt;p&gt;I've been working on a personal (unofficial) project for some weeks now
+</summary><category term="wajig"></category><category term="QuodLibet"></category></entry><entry><title>my pet project</title><link href="http://tshepang.net/my-pet-project" rel="alternate"></link><updated>2010-06-09T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2010-06-09:my-pet-project</id><summary type="html">&lt;p&gt;I've been working on a personal (unofficial) project for some weeks now
 at work whose goal is automated testing of the system I maintain at
 work. The system involves interfacing with Oracle, and the UI I used for
 that is the retarded (blocky, and ugly UI, resource hog) Oracle SQL
@@ -3412,13 +3412,14 @@ shit. Anyways let's see how the ride will pan out.&lt;/p&gt;
 powerful but its syntax ugly and over-varied — too much of a free-form
 language. That's bad for someone used to the gracious elegance of mighty
 Python. If I could stay away from it, I would!&lt;/p&gt;
-</summary><category term="non-Python"></category><category term="Python"></category></entry><entry><title>discarding Scribes for Geany</title><link href="http://tshepang.net/discarding-scribes-for-geany" rel="alternate"></link><updated>2009-01-23T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2009-01-23:discarding-scribes-for-geany</id><summary type="html">&lt;p&gt;The &lt;a class="reference external" href="http://tshepang.net/scribes-satisfies-some-more"&gt;version of Scribes in development&lt;/a&gt; didn't prove too satisfactory
-after a while (black background which I didn't care to investigate how
-to revert to normal, among whatever other trouble I don't remember) and
-there was me also unloving the idea of switching text editors, so
-decided to get &lt;a class="reference external" href="http://tshepang.net/project-of-note-geany"&gt;stuck with Geany&lt;/a&gt;, and am not complaining much. It's
-been a year-and-a-half of pleasure and pain and it was well worth it.&lt;/p&gt;
-</summary><category term="untagged"></category></entry><entry><title>developer of note: Manoj Srivastava</title><link href="http://tshepang.net/developer-of-note-manoj-srivastava" rel="alternate"></link><updated>2008-12-19T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2008-12-19:developer-of-note-manoj-srivastava</id><summary type="html">&lt;p&gt;Manoj Srivastava has for a number of years been Project Secretary,
+</summary><category term="non-Python"></category><category term="Python"></category></entry><entry><title>discarding Scribes for Geany</title><link href="http://tshepang.net/discarding-scribes-for-geany" rel="alternate"></link><updated>2009-01-23T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2009-01-23:discarding-scribes-for-geany</id><summary type="html">&lt;p&gt;The &lt;a class="reference external" href="http://tshepang.net/scribes-satisfies-some-more"&gt;version of Scribes in development&lt;/a&gt; didn't prove too
+satisfactory after a while (black background which I didn't care to
+investigate how to revert to normal, among whatever other trouble I
+don't remember) and there was me also unloving the idea of switching
+text editors, so decided to get &lt;a class="reference external" href="http://tshepang.net/project-of-note-geany"&gt;stuck with Geany&lt;/a&gt;, and am not
+complaining much. It's been a year-and-a-half of pleasure and pain and
+it was well worth it.&lt;/p&gt;
+</summary><category term="Scribes"></category><category term="Geany"></category></entry><entry><title>developer of note: Manoj Srivastava</title><link href="http://tshepang.net/developer-of-note-manoj-srivastava" rel="alternate"></link><updated>2008-12-19T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2008-12-19:developer-of-note-manoj-srivastava</id><summary type="html">&lt;p&gt;Manoj Srivastava has for a number of years been Project Secretary,
 a very key role in Debian, a role where the incumbent
 runs project voting. What prompted this post is &lt;a class="reference external" href="http://lists.debian.org/debian-vote/2008/12/msg00275.html"&gt;his recent
 resignation&lt;/a&gt;, which was encouraged by hostility towards the handling of
@@ -3501,7 +3502,7 @@ would also close.&lt;/li&gt;
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;&lt;strong&gt;sidenote&lt;/strong&gt;: Code-folding is still absent although I won't need to use
 it since &lt;a class="reference external" href="http://tshepang.net/project-of-note-geany"&gt;Geany&lt;/a&gt; does a nice job already.&lt;/p&gt;
-</summary><category term="untagged"></category></entry><entry><title>1 more machine, 2 less</title><link href="http://tshepang.net/1-more-machine-2-less" rel="alternate"></link><updated>2008-11-13T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2008-11-13:1-more-machine-2-less</id><summary type="html">&lt;p&gt;Since I've departed from previous job, I've lost access to &lt;a class="reference external" href="http://tshepang.net/my-machines"&gt;two machines&lt;/a&gt;,
+</summary><category term="Scribes"></category></entry><entry><title>1 more machine, 2 less</title><link href="http://tshepang.net/1-more-machine-2-less" rel="alternate"></link><updated>2008-11-13T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2008-11-13:1-more-machine-2-less</id><summary type="html">&lt;p&gt;Since I've departed from previous job, I've lost access to &lt;a class="reference external" href="http://tshepang.net/my-machines"&gt;two machines&lt;/a&gt;,
 but more than made up for it by acquiring an Acer Travelmate 6592,
 a feature-rich laptop complete with wireless connectivity (802.11a/b/g),
 Bluetooth, card readers, fingerprint scanner, webcam, Firewire,
@@ -3737,7 +3738,7 @@ design is arrogant too, though I don't think so. Scribes is just
 excellent and I don't see the need for another editor, except if it had
 code 'folding' and started-up faster than the current Scribes' 10
 seconds. [&lt;strong&gt;update&lt;/strong&gt;: such &lt;a class="reference external" href="http://tshepang.net/project-of-note-geany"&gt;a replacement&lt;/a&gt; was eventually discovered!]&lt;/p&gt;
-</summary><category term="untagged"></category></entry><entry><title>Tracker 0.6.0</title><link href="http://tshepang.net/tracker-060" rel="alternate"></link><updated>2007-07-25T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2007-07-25:tracker-060</id><summary type="html">&lt;p&gt;6 months have passed since the &lt;a class="reference external" href="http://mail.gnome.org/archives/tracker-list/2007-January/msg00249.html"&gt;previous Tracker release&lt;/a&gt; and it's real
+</summary><category term="Scribes"></category><category term="QuodLibet"></category></entry><entry><title>Tracker 0.6.0</title><link href="http://tshepang.net/tracker-060" rel="alternate"></link><updated>2007-07-25T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2007-07-25:tracker-060</id><summary type="html">&lt;p&gt;6 months have passed since the &lt;a class="reference external" href="http://mail.gnome.org/archives/tracker-list/2007-January/msg00249.html"&gt;previous Tracker release&lt;/a&gt; and it's real
 great to have &lt;a class="reference external" href="http://mail.gnome.org/archives/tracker-list/2007-July/msg00297.html"&gt;another fresh one&lt;/a&gt;. During development, its GUI
 interface (TST) has went through two revamps, each being an improvement
 on the previous one. This implies that those who have only ever used
@@ -3805,7 +3806,7 @@ stately (and beloved) &lt;a class="reference external" href="http://www.gnome.or
 &lt;li&gt;there's some other nifty nice features like various editing
 capabilities which are far more powerful than gedit provides&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="Debian"></category><category term="GNOME"></category></entry><entry><title>1st usage of RSS feeds</title><link href="http://tshepang.net/1st-usage-of-rss-feeds" rel="alternate"></link><updated>2007-04-16T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2007-04-16:1st-usage-of-rss-feeds</id><summary type="html">&lt;p&gt;Browsing &lt;a class="reference external" href="http://planet.debian.org"&gt;Debian Planet&lt;/a&gt; today led me to the usage of Google Reader.
+</summary><category term="Debian"></category><category term="GNOME"></category><category term="Scribes"></category></entry><entry><title>1st usage of RSS feeds</title><link href="http://tshepang.net/1st-usage-of-rss-feeds" rel="alternate"></link><updated>2007-04-16T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2007-04-16:1st-usage-of-rss-feeds</id><summary type="html">&lt;p&gt;Browsing &lt;a class="reference external" href="http://planet.debian.org"&gt;Debian Planet&lt;/a&gt; today led me to the usage of Google Reader.
 I've been ignoring this technology because I was too lazy to figure it out,
 but Google Reader makes it so easy it does not require me to think. Is kool.&lt;/p&gt;
 </summary><category term="Debian"></category></entry><entry><title>1st FLOSS patch contribution</title><link href="http://tshepang.net/1st-floss-patch-contribution" rel="alternate"></link><updated>2007-04-03T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2007-04-03:1st-floss-patch-contribution</id><summary type="html">&lt;p&gt;Back in January 2007, I sent a patch that slightly improved the README
