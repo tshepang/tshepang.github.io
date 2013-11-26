@@ -68,7 +68,14 @@ don't remember&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="list"></category></entry><entry><title>links 2013-11-18</title><link href="http://tshepang.net/links-2013-11-18" rel="alternate"></link><updated>2013-11-18T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-11-18:links-2013-11-18</id><summary type="html">&lt;ul class="simple"&gt;
+</summary><category term="list"></category></entry><entry><title>pleasantly surprised by replace-string (Emacs)</title><link href="http://tshepang.net/pleasantly-surprised-by-replace-string-emacs" rel="alternate"></link><updated>2013-11-26T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-11-26:pleasantly-surprised-by-replace-string-emacs</id><summary type="html">&lt;p&gt;If you want to replace some string in Emacs, the primary function to
+use is &lt;strong&gt;replace-string&lt;/strong&gt; (I think). If the strings, 'old' and 'new'
+are provided, it will, by default, replace all occurrences, regardless
+of case, while also preserving case of whatever 'old' was. It's
+magical yes, but who doesn't like some magic once in a while,
+especially when it's so convenient... and so sane.&lt;/p&gt;
+&lt;p&gt;(&lt;a class="reference external" href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Replacement-and-Case.html#Replacement-and-Case"&gt;official description&lt;/a&gt;)&lt;/p&gt;
+</summary><category term="Emacs"></category></entry><entry><title>links 2013-11-18</title><link href="http://tshepang.net/links-2013-11-18" rel="alternate"></link><updated>2013-11-18T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-11-18:links-2013-11-18</id><summary type="html">&lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://joey.hess.usesthis.com"&gt;an impressively modest computing (and living) setup&lt;/a&gt; - this is
 probably the most respected of Debian Developers&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://bugs.debian.org/cgi-bin/bugreport.cgi?msg=66;att=0;bug=718323"&gt;a nice explanation&lt;/a&gt; of why a specific Creative Commons license
@@ -326,7 +333,7 @@ documentation&lt;/a&gt;. It is very well-written and thorough (though it
 assumes prior knowledge of working with Linux sockets).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</summary><category term="list"></category></entry><entry><title>project of note: git-cola</title><link href="http://tshepang.net/project-of-note-git-cola" rel="alternate"></link><updated>2013-10-17T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-17:project-of-note-git-cola</id><summary type="html">&lt;p&gt;I use &lt;a class="reference external" href="http://git-cola.github.io"&gt;git-cola&lt;/a&gt; mostly when I want to commit various hunks separately;
+</summary><category term="list"></category><category term="Emacs"></category><category term="Python"></category></entry><entry><title>project of note: git-cola</title><link href="http://tshepang.net/project-of-note-git-cola" rel="alternate"></link><updated>2013-10-17T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-17:project-of-note-git-cola</id><summary type="html">&lt;p&gt;I use &lt;a class="reference external" href="http://git-cola.github.io"&gt;git-cola&lt;/a&gt; mostly when I want to commit various hunks separately;
 it makes that task real easy.&lt;/p&gt;
 &lt;p&gt;I was impressed by its equivalent functionality for the git
 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;--amend&lt;/span&gt;&lt;/tt&gt; option the first time I saw it. If you click on the
@@ -1020,7 +1027,7 @@ it's written with PyPy in mind, but has excellent generic advice.&lt;/li&gt;
 &lt;li&gt;I enjoyed &lt;a class="reference external" href="http://thechangelog.com/86"&gt;this podcast&lt;/a&gt; where Jeff Atwood talks about his new
 project, &lt;a class="reference external" href="http://www.discourse.org"&gt;Discourse&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="Python"></category><category term="GNOME"></category><category term="links"></category></entry><entry><title>project of note: Discourse</title><link href="http://tshepang.net/project-of-note-discourse" rel="alternate"></link><updated>2013-05-11T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-05-11:project-of-note-discourse</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://www.codinghorror.com/blog/2013/02/civilized-discourse-construction-kit.html"&gt;The announcement&lt;/a&gt; by project lead, Jeff Atwood, sold me. This is one
+</summary><category term="Python"></category><category term="GNOME"></category><category term="links"></category><category term="Emacs"></category></entry><entry><title>project of note: Discourse</title><link href="http://tshepang.net/project-of-note-discourse" rel="alternate"></link><updated>2013-05-11T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-05-11:project-of-note-discourse</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://www.codinghorror.com/blog/2013/02/civilized-discourse-construction-kit.html"&gt;The announcement&lt;/a&gt; by project lead, Jeff Atwood, sold me. This is one
 rather incredible guy, a game changer of sorts, most notable for
 helping create what is likely &lt;a class="reference external" href="http://stackoverflow.com"&gt;the most important programming resource
 on the web&lt;/a&gt;. So whenever he goes and creates something else, I
@@ -1042,7 +1049,7 @@ exists elsewhere, but I actually never used it.&lt;/p&gt;
 &lt;p&gt;Related to that is the &lt;a class="reference external" href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Fill-Commands"&gt;fill-paragraph&lt;/a&gt; command, which is invoked via
 the Alt+q shortcut (M-q) in Emacs speak. What it does is reformat the
 paragraph as if it was typed while in Auto Fill Mode. Is gorgeous!&lt;/p&gt;
-</summary><category term="untagged"></category></entry><entry><title>Python pipedreams</title><link href="http://tshepang.net/python-pipedreams" rel="alternate"></link><updated>2013-04-27T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-04-27:python-pipedreams</id><summary type="html">&lt;p&gt;None of these is likely to happen at all.
+</summary><category term="Emacs"></category></entry><entry><title>Python pipedreams</title><link href="http://tshepang.net/python-pipedreams" rel="alternate"></link><updated>2013-04-27T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-04-27:python-pipedreams</id><summary type="html">&lt;p&gt;None of these is likely to happen at all.
 It's even safe to use the word &lt;em&gt;never&lt;/em&gt; with a great amount of certainty;
 but I wanted to document them anyway, if for no other reason than rescue
 them from the exclusiveness of my mind:&lt;/p&gt;
@@ -2970,7 +2977,7 @@ review process&lt;/a&gt;, a good indicator that this isn't a toy.&lt;/p&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://www.pixelbeat.org/misc/google_stars.html"&gt;high profile FLOSS developers employed by Google&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;I have never seen such &lt;a class="reference external" href="http://me.veekun.com/blog/2012/04/09/php-a-fractal-of-bad-design/"&gt;detailed criticism&lt;/a&gt; of a programming language.&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="links"></category></entry><entry><title>accessing Oracle DB using Python, in Debian</title><link href="http://tshepang.net/accessing-oracle-db-using-python-in-debian" rel="alternate"></link><updated>2011-01-15T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2011-01-15:accessing-oracle-db-using-python-in-debian</id><summary type="html">&lt;p&gt;The following instructions assume that you are using &lt;a class="reference external" href="http://www.debian.org/releases/squeeze/"&gt;Debian Squeeze&lt;/a&gt;,
+</summary><category term="links"></category><category term="Emacs"></category></entry><entry><title>accessing Oracle DB using Python, in Debian</title><link href="http://tshepang.net/accessing-oracle-db-using-python-in-debian" rel="alternate"></link><updated>2011-01-15T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2011-01-15:accessing-oracle-db-using-python-in-debian</id><summary type="html">&lt;p&gt;The following instructions assume that you are using &lt;a class="reference external" href="http://www.debian.org/releases/squeeze/"&gt;Debian Squeeze&lt;/a&gt;,
 the current 'stable' release. The instructions hereare very specific, so
 look elsewhere for &lt;a class="reference external" href="http://agiletesting.blogspot.com/2005/05/installing-and-using-cxoracle-on-unix.html"&gt;something more generic&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;downloads&lt;/strong&gt;:&lt;/p&gt;

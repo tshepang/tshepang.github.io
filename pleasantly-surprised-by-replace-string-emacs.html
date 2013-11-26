@@ -6,8 +6,8 @@
         <meta name="author" content="Tshepang Lekhonkhobe" />
         <meta name="copyright" content="Tshepang Lekhonkhobe" />
 
-<meta name="keywords" content="Debian, Python, non-FLOSS, computing, " />
-        <title>accessing Oracle DB using Python, in Debian  · Tshepang logs
+<meta name="keywords" content="Emacs, computing, " />
+        <title>pleasantly surprised by replace-string (Emacs)  · Tshepang logs
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="http://tshepang.net/theme/css/elegant.css" media="screen">
@@ -61,43 +61,27 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://tshepang.net/accessing-oracle-db-using-python-in-debian"> accessing Oracle DB using Python, in Debian  </a></h1>
+    <h1><a href="http://tshepang.net/pleasantly-surprised-by-replace-string-emacs"> pleasantly surprised by replace-string (Emacs)  </a></h1>
     </header>
 </div>
 
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
 
-            <p>The following instructions assume that you are using <a class="reference external" href="http://www.debian.org/releases/squeeze/">Debian Squeeze</a>,
-the current 'stable' release. The instructions hereare very specific, so
-look elsewhere for <a class="reference external" href="http://agiletesting.blogspot.com/2005/05/installing-and-using-cxoracle-on-unix.html">something more generic</a>.</p>
-<p><strong>downloads</strong>:</p>
-<ul class="simple">
-<li>Get registered on Oracle website, and download
-oracle-instantclient11.2-basic*.rpm (~40MB).</li>
-<li>Get <a class="reference external" href="http://cx-oracle.sourceforge.net/">cx-Oracle</a> rpm for your specific Python version and your
-specific processor (in my case, 3.1 and i386 respectively).</li>
-</ul>
-<p><strong>installation and setup</strong>:</p>
-<div class="highlight"><pre>sudo apt-get install libpython3.1 libaio1 alien
-sudo alien --install oracle-instantclient11.2-basic*rpm cx_Oracle*rpm
-sudo ln -s /usr/lib/python3.1/site-packages/cx_Oracle.so /usr/lib/python3.1/lib-dynload
-sudo ln -s /usr/lib/oracle/11.2/client/lib/libnnz11.so /usr/lib
-sudo ln -s /usr/lib/oracle/11.2/client/lib/libclntsh.so.11.1 /usr/lib
-<span class="nb">echo export </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/lib/oracle/11.2/client/lib &gt;&gt; ~/.bashrc
-<span class="nb">source</span> ~/.bashrc
-python3 -c <span class="s1">&#39;import cx_Oracle&#39;</span>
-</pre></div>
-<p>If that last line executes without printing a message to the screen, the
-install is most likely successful.</p>
-<p>For basic usage, see <a class="reference external" href="http://tshepang.net/basic-usage-of-python-with-oracle-db-in-debian">this tiny tutorial</a>.</p>
+            <p>If you want to replace some string in Emacs, the primary function to
+use is <strong>replace-string</strong> (I think). If the strings, 'old' and 'new'
+are provided, it will, by default, replace all occurrences, regardless
+of case, while also preserving case of whatever 'old' was. It's
+magical yes, but who doesn't like some magic once in a while,
+especially when it's so convenient... and so sane.</p>
+<p>(<a class="reference external" href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Replacement-and-Case.html#Replacement-and-Case">official description</a>)</p>
 
 <section>
 <div class="accordion" id="accordion2">
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://tshepang.net/accessing-oracle-db-using-python-in-debian#disqus_thread">
+                href="http://tshepang.net/pleasantly-surprised-by-replace-string-emacs#disqus_thread">
                 Comments
             </a>
         </div>
@@ -107,8 +91,8 @@ install is most likely successful.</p>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'tshepanglogs';
-        var disqus_identifier = 'http://tshepang.net/accessing-oracle-db-using-python-in-debian';
-    var disqus_url = 'http://tshepang.net/accessing-oracle-db-using-python-in-debian';
+        var disqus_identifier = 'http://tshepang.net/pleasantly-surprised-by-replace-string-emacs';
+    var disqus_url = 'http://tshepang.net/pleasantly-surprised-by-replace-string-emacs';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -127,8 +111,8 @@ install is most likely successful.</p>
             <hr/>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/poll-results-of-debian-users-favorite-floss" title="Previous: poll results of debian-user's favorite FLOSS">poll results of debian-user's favorite FLOSS</a></li>
-                <li class="next-article"><a href="http://tshepang.net/links-2011-01-17" title="Next: links 2011-01-17">links 2011-01-17</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/links-2013-11-18" title="Previous: links 2013-11-18">links 2013-11-18</a></li>
+                <li class="next-article"><a href="http://tshepang.net/floss-i-use-a-lot" title="Next: FLOSS I use a-lot">FLOSS I use a-lot</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -136,21 +120,15 @@ install is most likely successful.</p>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2011-01-15T00:00:00">Jan 15, 2011</time>
+            <time pubdate="pubdate" datetime="2013-11-26T00:00:00">Nov 26, 2013</time>
 
 
             <h4>Category</h4>
             <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://tshepang.net/tags.html#debian-ref">Debian
-                    <span>46</span>
-</a></li>
-                <li><a href="http://tshepang.net/tags.html#non-floss-ref">non-FLOSS
-                    <span>6</span>
-</a></li>
-                <li><a href="http://tshepang.net/tags.html#python-ref">Python
-                    <span>58</span>
+                <li><a href="http://tshepang.net/tags.html#emacs-ref">Emacs
+                    <span>5</span>
 </a></li>
             </ul>
         </div>
