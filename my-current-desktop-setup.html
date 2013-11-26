@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Tshepang Lekhonkhobe" />
+        <meta name="copyright" content="Tshepang Lekhonkhobe" />
+
+<meta name="keywords" content="GNOME, Debian, computing, " />
+        <title>my current desktop setup  · Tshepang logs
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="http://tshepang.net/theme/css/elegant.css" media="screen">
+        <link rel="shortcut icon" href="http://tshepang.net/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="http://tshepang.net/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="http://tshepang.net/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="http://tshepang.net/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="http://tshepang.net/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="http://tshepang.net/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="http://tshepang.net/theme/images/apple-touch-icon-144x144.png" />
+        <link href="http://tshepang.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tshepang logs - Full Atom Feed" />
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-16685250-3']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="http://tshepang.net/"><span class=site-name>Tshepang logs</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="http://tshepang.net">Home</a></li>
+                            <li ><a href="http://tshepang.net/about-me.html">about me</a></li>
+                            <li ><a href="http://tshepang.net/categories.html">Categories</a></li>
+                            <li ><a href="http://tshepang.net/tags.html">Tags</a></li>
+                            <li ><a href="http://tshepang.net/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="http://tshepang.net/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+    <h1><a href="http://tshepang.net/my-current-desktop-setup"> my current desktop setup  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <p>With recent Debian GNOME updates, something got broken enough that I
+could not login to my account when using GDM. I saw this as a good
+opportunity to finally try something other than GNOME as my primary
+environment on my home machine. I have before tinkered with other GUI
+environments (XFCE, KDE 3, FluxBox, LXDE, and most recently, Window
+Maker) and kept going back, but I think this time I will actually
+abandon GNOME permanently. This is after being an adherent for nearly
+a decade.</p>
+<p>I been playing with <a class="reference external" href="http://dwm.suckless.org">dwm</a> for the past few days, and the experience
+has convinced me to stay. I am attracted to the philosophy of
+minimalism, though I find they do take things a bit far in requiring
+users to tinker with C source code in order to configure it. Luckily
+it's not hard, and there's examples out there. It just takes a while
+since there isn't a comprehensive guide I could find.</p>
+<p>For my login manager, I use <a class="reference external" href="http://www.freedesktop.org/wiki/Software/LightDM">LightDM</a>. I added this line to its
+configuration, in <tt class="docutils literal">[SeatDefaults]</tt> section:</p>
+<pre class="literal-block">
+greeter-hide-users=false
+</pre>
+<p>It removes the need to manually enter my username each time I want to
+login.</p>
+<p>Reason I'm not using GDM? I wanted something light, which also
+wouldn't pull in dozens of packages that I won't use. For example:</p>
+<pre class="literal-block">
+$ sudo apt-get install --no-install-recommends gdm3
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+  bluez dconf-cli evolution-data-server evolution-data-server-common
+  gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-gck-1 gir1.2-gcr-3
+  gir1.2-gdesktopenums-3.0 gir1.2-gdm3 gir1.2-gkbd-3.0 gir1.2-gmenu-3.0
+  gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0 gir1.2-ibus-1.0
+  gir1.2-mutter-3.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0 gir1.2-soup-2.4
+  gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2 gir1.2-xkl-1.0 gjs
+  gnome-bluetooth gnome-settings-daemon gnome-shell gnome-shell-common
+  gnome-themes-standard gnome-themes-standard-data libbluetooth3 libcamel-1.2-43
+  libcaribou-common libcaribou0 libebackend-1.2-6 libebook-1.2-14
+  libebook-contacts-1.2-0 libecal-1.2-15 libedata-book-1.2-17 libedata-cal-1.2-20
+  libedataserver-1.2-17 libgdata-common libgdata13 libgdm1 libgnome-menu-3-0
+  libgoa-1.0-0 libgoa-1.0-common libgweather-3-3 libgweather-common libibus-1.0-5
+  libical0 libmission-control-plugins0 libmutter0b liboauth0 libopenobex1
+  libpackagekit-glib2-16 libpulse-mainloop-glib0 librest-0.7-0 libsoup-gnome2.4-1
+  libtelepathy-glib0 libtelepathy-logger3 libwacom-common libwacom2 mutter-common
+  obex-data-server obexd-client telepathy-mission-control-5
+Suggested packages:
+  evolution evolution-data-server-dbg gnome-orca gnome-user-share telepathy-haze
+Recommended packages:
+  zenity gvfs-backends gnome-control-center pulseaudio gkbd-capplet gnome-contacts
+  gnome-user-guide gtk2-engines-pixbuf gnome-accessibility-themes packagekit
+The following NEW packages will be installed:
+  bluez dconf-cli evolution-data-server evolution-data-server-common gdm3
+  gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-gck-1 gir1.2-gcr-3
+  gir1.2-gdesktopenums-3.0 gir1.2-gdm3 gir1.2-gkbd-3.0 gir1.2-gmenu-3.0
+  gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0 gir1.2-ibus-1.0
+  gir1.2-mutter-3.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0 gir1.2-soup-2.4
+  gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2 gir1.2-xkl-1.0 gjs
+  gnome-bluetooth gnome-settings-daemon gnome-shell gnome-shell-common
+  gnome-themes-standard gnome-themes-standard-data libbluetooth3 libcamel-1.2-43
+  libcaribou-common libcaribou0 libebackend-1.2-6 libebook-1.2-14
+  libebook-contacts-1.2-0 libecal-1.2-15 libedata-book-1.2-17 libedata-cal-1.2-20
+  libedataserver-1.2-17 libgdata-common libgdata13 libgdm1 libgnome-menu-3-0
+  libgoa-1.0-0 libgoa-1.0-common libgweather-3-3 libgweather-common libibus-1.0-5
+  libical0 libmission-control-plugins0 libmutter0b liboauth0 libopenobex1
+  libpackagekit-glib2-16 libpulse-mainloop-glib0 librest-0.7-0 libsoup-gnome2.4-1
+  libtelepathy-glib0 libtelepathy-logger3 libwacom-common libwacom2 mutter-common
+  obex-data-server obexd-client telepathy-mission-control-5
+0 upgraded, 67 newly installed, 0 to remove and 45 not upgraded.
+Need to get 0 B/31.0 MB of archives.
+After this operation, 90.8 MB of additional disk space will be used.
+</pre>
+<p>GNOME philosophy tends towards tight integration, leading to things
+being not as modular as ideal, where we end up with a display ending
+up depending on a Contacts tool and the Bluetooth stack. It may very
+well be just how it was built in Debian, but that also means there
+were build options that allowed such tight coupling in the first
+place. GDM has served me well for years, but I'm not interested in all
+those tools it brings with.</p>
+<p>Anyways, enough with that. Here's how I disable the annoying beep:</p>
+<pre class="literal-block">
+$ cat ~/.xinputrc
+set bell-style none
+</pre>
+<p>I also added a custom <cite>.desktop</cite> file which will get selectable on
+LightDM UI:</p>
+<pre class="literal-block">
+$ cat /usr/share/xsessions/custom.desktop
+[Desktop Entry]
+Name=Custom
+Exec=/etc/X11/Xsession
+Type=XSession
+</pre>
+<p>On selecting the entry, labeled <tt class="docutils literal">Custom</tt>, that appears on LightDM,
+and logging in, the following will get executed:</p>
+<pre class="literal-block">
+$ cat ~/.xsesseions
+gnome-terminal --hide-menubar \
+               --tab-with-profile=Default \
+               --tab-with-profile=Default \
+               --tab-with-profile=Default \
+               --tab-with-profile=Default &amp;
+firefox &amp;
+nautilus --no-desktop &amp;
+nm-applet &amp;
+trayer &amp;
+
+xmodmap -e &quot;clear Lock&quot;
+xmodmap -e &quot;keycode 66 = Super_L&quot;
+
+synclient TapButton1=1
+synclient ClickFinger2=2
+syndaemon -dti 1
+
+while true; do
+   xsetroot -name &quot;$( date +&quot;%F %R&quot; )&quot;
+   sleep 1m
+done &amp;
+
+exec dwm
+</pre>
+<p>Finally, this is what my dwm config changes look like:</p>
+<pre class="literal-block">
+--- a/config.def.h  Tue Nov 26 00:12:27 2013 +0200
++++ b/config.def.h  Tue Nov 26 00:12:52 2013 +0200
+&#64;&#64; -14,12 +14,16 &#64;&#64;
+ static const Bool topbar            = True;     /* False means bottom bar */
+
+ /* tagging */
+-static const char *tags[] = { &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot; };
++static const char *tags[] = { &quot;web&quot;, &quot;files&quot;, &quot;terminal&quot;, &quot;misc&quot; };
+
+ static const Rule rules[] = {
+-   /* class      instance    title       tags mask     isfloating   monitor */
+-   { &quot;Gimp&quot;,       NULL,       NULL,       0,            True,        -1 },
+-   { &quot;Iceweasel&quot;,  NULL,       NULL,       1 &lt;&lt; 8,       False,       -1 },
++  /* class             instance  title  tags mask  isfloating   monitor */
++  { &quot;Firefox&quot;,         NULL,     NULL,  1 &lt;&lt; 0,    False,       -1 },
++  { &quot;Nautilus&quot;,        NULL,     NULL,  1 &lt;&lt; 1,    False,       -1 },
++  { &quot;Gnome-terminal&quot;,  NULL,     NULL,  1 &lt;&lt; 2,    False,       -1 },
++  { &quot;Liferea&quot;,         NULL,     NULL,  1 &lt;&lt; 3,    False,       -1 },
++  { &quot;Meld&quot;,            NULL,     NULL,  1 &lt;&lt; 3,    False,       -1 },
++  { &quot;trayer&quot;,          NULL,     NULL,  1 &lt;&lt; 3,    False,       -1 },
+ };
+
+ /* layout(s) */
+&#64;&#64; -35,7 +39,7 &#64;&#64;
+ };
+
+ /* key definitions */
+-#define MODKEY Mod1Mask
++#define MODKEY Mod4Mask
+ #define TAGKEYS(KEY,TAG) \
+        { MODKEY,                       KEY,      view,           {.ui = 1 &lt;&lt; TAG} }, \
+        { MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 &lt;&lt; TAG} }, \
+&#64;&#64; -47,7 +51,7 &#64;&#64;
+
+ /* commands */
+ static const char *dmenucmd[] = { &quot;dmenu_run&quot;, &quot;-fn&quot;, font, &quot;-nb&quot;, normbgcolor, &quot;-nf&quot;, normfgcolor, &quot;-sb&quot;, selbgcolor, &quot;-sf&quot;, selfgcolor, NULL };
+-static const char *termcmd[]  = { &quot;x-terminal-emulator&quot;, NULL };
++static const char *termcmd[]  = { &quot;gnome-terminal&quot;, &quot;--hide-menubar&quot; };
+
+ static Key keys[] = {
+        /* modifier                     key        function        argument */
+</pre>
+<p>Note that this is against the Debian package, versioned <strong>6.0-6</strong>. I
+could not change the modifer key with the upstream version of dwm.</p>
+<p>You will notice that I'm still using some GNOME packages, specifically
+Nautilus and GNOME Terminal, both of which remain my favorites.</p>
+<p>I'm lazy to explain this all, but a web search should help.</p>
+
+<section>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
+                href="http://tshepang.net/my-current-desktop-setup#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'tshepanglogs';
+        var disqus_identifier = 'http://tshepang.net/my-current-desktop-setup';
+    var disqus_url = 'http://tshepang.net/my-current-desktop-setup';
+
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+            <aside>
+            <hr/>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="http://tshepang.net/pleasantly-surprised-by-replace-string-emacs" title="Previous: pleasantly surprised by replace-string (Emacs)">pleasantly surprised by replace-string (Emacs)</a></li>
+                <li class="next-article"><a href="http://tshepang.net/floss-i-use-a-lot" title="Next: FLOSS I use a-lot">FLOSS I use a-lot</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2013-11-26T00:00:00">Nov 26, 2013</time>
+
+
+            <h4>Category</h4>
+            <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="http://tshepang.net/tags.html#debian-ref">Debian
+                    <span>47</span>
+</a></li>
+                <li><a href="http://tshepang.net/tags.html#gnome-ref">GNOME
+                    <span>25</span>
+</a></li>
+            </ul>
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-license"><a rel="license"
+href="http://creativecommons.org/licenses/by-sa/3.0/"><img
+alt="Creative Commons License" style="border-width:0"
+src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><br
+/>This work is licensed under a <a rel="license"
+href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons
+Attribution-ShareAlike 3.0 Unported License</a>.</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+<script type="text/javascript">
+    var disqus_shortname = 'tshepanglogs';
+
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+<script  language="javascript" type="text/javascript">
+function uncollapse() {
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
+    }
+}
+</script>
+<script type="text/javascript" language="JavaScript">
+    uncollapse();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+</script>
+    </body>
+</html>
