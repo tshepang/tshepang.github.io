@@ -116,7 +116,7 @@ Suffer (Original Mix) (<em>Rare and Unreleased</em> - 2001)</li>
         <div id="disqus_thread" class="accordion-body collapse">
             <div class="accordion-inner">
                 <div class="comments">
-<div id="disqus_thread"></div>
+                    <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'tshepanglogs';
         var disqus_identifier = 'http://tshepang.net/top-tracks-burning-spear';
@@ -129,22 +129,16 @@ Suffer (Original Mix) (<em>Rare and Unreleased</em> - 2001)</li>
      })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>                </div>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                </div>
             </div>
         </div>
     </div>
 </div>
 </section>
 
-            <aside>
             <hr/>
-            <nav>
-            <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/top-tracks-salif-keita" title="Previous: top tracks: Salif Keita">top tracks: Salif Keita</a></li>
-                <li class="next-article"><a href="http://tshepang.net/top-tracks-bob-marley" title="Next: top tracks: Bob Marley">top tracks: Bob Marley</a> »</li>
-            </ul>
-            </nav>
-            </aside>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
@@ -192,16 +186,16 @@ Attribution-ShareAlike 3.0 Unported License</a>.</li>
             }
         </script>
 
-    <script type="text/javascript">
-    var disqus_shortname = 'tshepanglogs';
-
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-    </script><script  language="javascript" type="text/javascript">
+            <script type="text/javascript">
+var disqus_shortname = 'tshepanglogs';
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+<script  language="javascript" type="text/javascript">
 function uncollapse() {
     if (window.location.hash.match(/^#comment-\d+$/)) {
         $('#disqus_thread').collapse('show');
@@ -209,11 +203,27 @@ function uncollapse() {
 }
 </script>
 <script type="text/javascript" language="JavaScript">
-    uncollapse();
-    window.onhashchange=function(){
-        if (window.location.hash.match(/^#comment-\d+$/))
-            window.location.reload(true);
-    }
+uncollapse();
+window.onhashchange=function(){
+    if (window.location.hash.match(/^#comment-\d+$/))
+        window.location.reload(true);
+}
 </script>
+<script>
+$('#disqus_thread').on('shown', function () {
+    var link = document.getElementsByClassName('accordion-toggle');
+    var old_innerHTML = link[0].innerHTML;
+    $(link[0]).fadeOut(500, function() {
+        $(this).text('Click here to hide comments').fadeIn(500);
+    });
+    $('#disqus_thread').on('hidden', function () {
+        $(link[0]).fadeOut(500, function() {
+            $(this).text(old_innerHTML).fadeIn(500);
+        });
+    })
+})
+</script>
+
+
     </body>
 </html>
