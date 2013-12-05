@@ -1,5 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-12-02T00:00:00+02:00</updated><entry><title>Still Grazing (2004)</title><link href="http://tshepang.net/still-grazing-2004" rel="alternate"></link><updated>2013-12-02T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-12-02:still-grazing-2004</id><summary type="html">&lt;p&gt;My favorites from this, the best album by Hugh Masekela:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-12-06T00:00:00+02:00</updated><entry><title>my current desktop setup</title><link href="http://tshepang.net/my-current-desktop-setup" rel="alternate"></link><updated>2013-12-06T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-12-06:my-current-desktop-setup</id><summary type="html">&lt;p&gt;With recent Debian GNOME updates, something got broken enough that I
+could not login to my account. I saw this as a good
+opportunity to finally try something other than GNOME as my primary
+environment on my home machine. I have before tinkered with other GUI
+environments (XFCE, KDE 3, FluxBox, LXDE, and most recently, Window
+Maker) and kept going back, but I think this time I will actually
+abandon GNOME permanently. This is after being an adherent for nearly
+a decade.&lt;/p&gt;
+&lt;p&gt;I been playing with &lt;a class="reference external" href="http://dwm.suckless.org"&gt;dwm&lt;/a&gt; for the past few days, and the experience
+has convinced me to stay. I am attracted to the philosophy of
+minimalism, though I find they do take things a bit far in requiring
+users to tinker with C source code in order to configure it. Luckily
+it's not hard, and there's examples out there. It just takes a while
+since there isn't a comprehensive guide I could find.&lt;/p&gt;
+&lt;p&gt;For my login manager, I use &lt;a class="reference external" href="http://www.freedesktop.org/wiki/Software/LightDM"&gt;LightDM&lt;/a&gt;. I added this line to its
+configuration, in &lt;tt class="docutils literal"&gt;[SeatDefaults]&lt;/tt&gt; section:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+greeter-hide-users=false
+&lt;/pre&gt;
+&lt;p&gt;It removes the need to manually enter my username each time I want to
+login.&lt;/p&gt;
+&lt;p&gt;Reason I'm not using GDM? I wanted something light, which also
+wouldn't pull in dozens of packages that I won't use. For example:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ sudo apt-get install --no-install-recommends gdm3
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+  bluez dconf-cli evolution-data-server evolution-data-server-common
+  gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-gck-1 gir1.2-gcr-3
+  gir1.2-gdesktopenums-3.0 gir1.2-gdm3 gir1.2-gkbd-3.0 gir1.2-gmenu-3.0
+  gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0 gir1.2-ibus-1.0
+  gir1.2-mutter-3.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0 gir1.2-soup-2.4
+  gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2 gir1.2-xkl-1.0 gjs
+  gnome-bluetooth gnome-settings-daemon gnome-shell gnome-shell-common
+  gnome-themes-standard gnome-themes-standard-data libbluetooth3 libcamel-1.2-43
+  libcaribou-common libcaribou0 libebackend-1.2-6 libebook-1.2-14
+  libebook-contacts-1.2-0 libecal-1.2-15 libedata-book-1.2-17 libedata-cal-1.2-20
+  libedataserver-1.2-17 libgdata-common libgdata13 libgdm1 libgnome-menu-3-0
+  libgoa-1.0-0 libgoa-1.0-common libgweather-3-3 libgweather-common libibus-1.0-5
+  libical0 libmission-control-plugins0 libmutter0b liboauth0 libopenobex1
+  libpackagekit-glib2-16 libpulse-mainloop-glib0 librest-0.7-0 libsoup-gnome2.4-1
+  libtelepathy-glib0 libtelepathy-logger3 libwacom-common libwacom2 mutter-common
+  obex-data-server obexd-client telepathy-mission-control-5
+Suggested packages:
+  evolution evolution-data-server-dbg gnome-orca gnome-user-share telepathy-haze
+Recommended packages:
+  zenity gvfs-backends gnome-control-center pulseaudio gkbd-capplet gnome-contacts
+  gnome-user-guide gtk2-engines-pixbuf gnome-accessibility-themes packagekit
+The following NEW packages will be installed:
+  bluez dconf-cli evolution-data-server evolution-data-server-common gdm3
+  gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-gck-1 gir1.2-gcr-3
+  gir1.2-gdesktopenums-3.0 gir1.2-gdm3 gir1.2-gkbd-3.0 gir1.2-gmenu-3.0
+  gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0 gir1.2-ibus-1.0
+  gir1.2-mutter-3.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0 gir1.2-soup-2.4
+  gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2 gir1.2-xkl-1.0 gjs
+  gnome-bluetooth gnome-settings-daemon gnome-shell gnome-shell-common
+  gnome-themes-standard gnome-themes-standard-data libbluetooth3 libcamel-1.2-43
+  libcaribou-common libcaribou0 libebackend-1.2-6 libebook-1.2-14
+  libebook-contacts-1.2-0 libecal-1.2-15 libedata-book-1.2-17 libedata-cal-1.2-20
+  libedataserver-1.2-17 libgdata-common libgdata13 libgdm1 libgnome-menu-3-0
+  libgoa-1.0-0 libgoa-1.0-common libgweather-3-3 libgweather-common libibus-1.0-5
+  libical0 libmission-control-plugins0 libmutter0b liboauth0 libopenobex1
+  libpackagekit-glib2-16 libpulse-mainloop-glib0 librest-0.7-0 libsoup-gnome2.4-1
+  libtelepathy-glib0 libtelepathy-logger3 libwacom-common libwacom2 mutter-common
+  obex-data-server obexd-client telepathy-mission-control-5
+0 upgraded, 67 newly installed, 0 to remove and 45 not upgraded.
+Need to get 0 B/31.0 MB of archives.
+After this operation, 90.8 MB of additional disk space will be used.
+&lt;/pre&gt;
+&lt;p&gt;GNOME philosophy tends towards tight integration, leading to things
+being not as modular as I would like: how could a display manager end
+up depending on a Contacts tool, or the Bluetooth stack. It may very
+well be just how it was built in Debian, but that also means there
+were build options that allowed such tight coupling in the first
+place. GDM has served me well for years, but I'm not interested in all
+those tools it brings with.&lt;/p&gt;
+&lt;p&gt;Anyways, enough with that. Here's what I got to disable the annoying
+beep:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ cat ~/.xinputrc
+set bell-style none
+&lt;/pre&gt;
+&lt;p&gt;I also added a custom &lt;cite&gt;.desktop&lt;/cite&gt; file which will get selectable on
+LightDM UI:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ cat /usr/share/xsessions/custom.desktop
+[Desktop Entry]
+Name=Custom
+Exec=/etc/X11/Xsession
+Type=XSession
+&lt;/pre&gt;
+&lt;p&gt;On selecting the entry labeled &lt;tt class="docutils literal"&gt;Custom&lt;/tt&gt; that appears on LightDM,
+and logging in, the following will get executed:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ cat ~/.xsession
+gnome-terminal --hide-menubar \
+               --tab-with-profile=Default \
+               --tab-with-profile=Default \
+               --tab-with-profile=Default \
+               --tab-with-profile=Default &amp;amp;
+firefox &amp;amp;
+nautilus --no-desktop &amp;amp;
+nm-applet &amp;amp;
+trayer &amp;amp;
+quodlibet &amp;amp;
+
+xmodmap -e &amp;quot;clear Lock&amp;quot;
+xmodmap -e &amp;quot;keycode 66 = Super_L&amp;quot;
+
+synclient TapButton1=1
+synclient ClickFinger2=2
+syndaemon -dti 1
+
+while true; do
+   xsetroot -name &amp;quot;$( date +&amp;quot;%F %R&amp;quot; )&amp;quot;
+   sleep 1m
+done &amp;amp;
+
+exec dwm
+&lt;/pre&gt;
+&lt;p&gt;Finally, this is what my dwm config changes look like:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+diff -r f973438299b0 config.def.h
+--- a/config.def.h  Fri Dec 06 01:28:52 2013 +0200
++++ b/config.def.h  Fri Dec 06 01:39:40 2013 +0200
+&amp;#64;&amp;#64; -14,12 +14,17 &amp;#64;&amp;#64;
+ static const Bool topbar            = True;     /* False means bottom bar */
+
+ /* tagging */
+-static const char *tags[] = { &amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;, &amp;quot;9&amp;quot; };
++static const char *tags[] = { &amp;quot;web&amp;quot;, &amp;quot;files&amp;quot;, &amp;quot;terminal&amp;quot;, &amp;quot;misc&amp;quot;, &amp;quot;music&amp;quot; };
+
+ static const Rule rules[] = {
+-   /* class      instance    title       tags mask     isfloating   monitor */
+-   { &amp;quot;Gimp&amp;quot;,       NULL,       NULL,       0,            True,        -1 },
+-   { &amp;quot;Iceweasel&amp;quot;,  NULL,       NULL,       1 &amp;lt;&amp;lt; 8,       False,       -1 },
++  /* class             instance  title  tags mask  isfloating   monitor */
++  { &amp;quot;Firefox&amp;quot;,         NULL,     NULL,  1 &amp;lt;&amp;lt; 0,    False,       -1 },
++  { &amp;quot;Nautilus&amp;quot;,        NULL,     NULL,  1 &amp;lt;&amp;lt; 1,    False,       -1 },
++  { &amp;quot;Gnome-terminal&amp;quot;,  NULL,     NULL,  1 &amp;lt;&amp;lt; 2,    False,       -1 },
++  { &amp;quot;Liferea&amp;quot;,         NULL,     NULL,  1 &amp;lt;&amp;lt; 3,    False,       -1 },
++  { &amp;quot;Meld&amp;quot;,            NULL,     NULL,  1 &amp;lt;&amp;lt; 3,    False,       -1 },
++  { &amp;quot;trayer&amp;quot;,          NULL,     NULL,  1 &amp;lt;&amp;lt; 3,    False,       -1 },
++  { &amp;quot;Quodlibet&amp;quot;,       NULL,     NULL,  1 &amp;lt;&amp;lt; 4,    False,       -1 },
+ };
+
+ /* layout(s) */
+&amp;#64;&amp;#64; -35,7 +40,7 &amp;#64;&amp;#64;
+ };
+
+ /* key definitions */
+-#define MODKEY Mod1Mask
++#define MODKEY Mod4Mask
+ #define TAGKEYS(KEY,TAG) \
+        { MODKEY,                       KEY,      view,           {.ui = 1 &amp;lt;&amp;lt; TAG} }, \
+        { MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 &amp;lt;&amp;lt; TAG} }, \
+&amp;#64;&amp;#64; -47,7 +52,7 &amp;#64;&amp;#64;
+
+ /* commands */
+ static const char *dmenucmd[] = { &amp;quot;dmenu_run&amp;quot;, &amp;quot;-fn&amp;quot;, font, &amp;quot;-nb&amp;quot;, normbgcolor, &amp;quot;-nf&amp;quot;, normfgcolor, &amp;quot;-sb&amp;quot;, selbgcolor, &amp;quot;-sf&amp;quot;, selfgcolor, NULL };
+-static const char *termcmd[]  = { &amp;quot;x-terminal-emulator&amp;quot;, NULL };
++static const char *termcmd[]  = { &amp;quot;gnome-terminal&amp;quot;, &amp;quot;--hide-menubar&amp;quot; };
+
+ static Key keys[] = {
+        /* modifier                     key        function        argument */
+&lt;/pre&gt;
+&lt;p&gt;Note that this diff is against the Debian package (version &lt;strong&gt;6.0-6&lt;/strong&gt;). I
+could not change the modifer key with the upstream version of dwm.&lt;/p&gt;
+&lt;p&gt;You will notice that I'm still using some GNOME packages, specifically
+Nautilus and GNOME Terminal, both of which remain my favorites.&lt;/p&gt;
+</summary><category term="GNOME"></category><category term="Debian"></category></entry><entry><title>Still Grazing (2004)</title><link href="http://tshepang.net/still-grazing-2004" rel="alternate"></link><updated>2013-12-02T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-12-02:still-grazing-2004</id><summary type="html">&lt;p&gt;My favorites from this, the best album by Hugh Masekela:&lt;/p&gt;
 &lt;ol class="arabic"&gt;
 &lt;li&gt;&lt;p class="first"&gt;track 2 - &lt;strong&gt;Ha Lese Le Di Khanna&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;A remake of a track from Masekela's 1993 album, &lt;em&gt;Hope&lt;/em&gt;. It's far
@@ -117,177 +289,7 @@ don't remember&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="list"></category></entry><entry><title>my current desktop setup</title><link href="http://tshepang.net/my-current-desktop-setup" rel="alternate"></link><updated>2013-11-26T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-11-26:my-current-desktop-setup</id><summary type="html">&lt;p&gt;With recent Debian GNOME updates, something got broken enough that I
-could not login to my account. I saw this as a good
-opportunity to finally try something other than GNOME as my primary
-environment on my home machine. I have before tinkered with other GUI
-environments (XFCE, KDE 3, FluxBox, LXDE, and most recently, Window
-Maker) and kept going back, but I think this time I will actually
-abandon GNOME permanently. This is after being an adherent for nearly
-a decade.&lt;/p&gt;
-&lt;p&gt;I been playing with &lt;a class="reference external" href="http://dwm.suckless.org"&gt;dwm&lt;/a&gt; for the past few days, and the experience
-has convinced me to stay. I am attracted to the philosophy of
-minimalism, though I find they do take things a bit far in requiring
-users to tinker with C source code in order to configure it. Luckily
-it's not hard, and there's examples out there. It just takes a while
-since there isn't a comprehensive guide I could find.&lt;/p&gt;
-&lt;p&gt;For my login manager, I use &lt;a class="reference external" href="http://www.freedesktop.org/wiki/Software/LightDM"&gt;LightDM&lt;/a&gt;. I added this line to its
-configuration, in &lt;tt class="docutils literal"&gt;[SeatDefaults]&lt;/tt&gt; section:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-greeter-hide-users=false
-&lt;/pre&gt;
-&lt;p&gt;It removes the need to manually enter my username each time I want to
-login.&lt;/p&gt;
-&lt;p&gt;Reason I'm not using GDM? I wanted something light, which also
-wouldn't pull in dozens of packages that I won't use. For example:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-$ sudo apt-get install --no-install-recommends gdm3
-Reading package lists... Done
-Building dependency tree
-Reading state information... Done
-The following extra packages will be installed:
-  bluez dconf-cli evolution-data-server evolution-data-server-common
-  gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-gck-1 gir1.2-gcr-3
-  gir1.2-gdesktopenums-3.0 gir1.2-gdm3 gir1.2-gkbd-3.0 gir1.2-gmenu-3.0
-  gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0 gir1.2-ibus-1.0
-  gir1.2-mutter-3.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0 gir1.2-soup-2.4
-  gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2 gir1.2-xkl-1.0 gjs
-  gnome-bluetooth gnome-settings-daemon gnome-shell gnome-shell-common
-  gnome-themes-standard gnome-themes-standard-data libbluetooth3 libcamel-1.2-43
-  libcaribou-common libcaribou0 libebackend-1.2-6 libebook-1.2-14
-  libebook-contacts-1.2-0 libecal-1.2-15 libedata-book-1.2-17 libedata-cal-1.2-20
-  libedataserver-1.2-17 libgdata-common libgdata13 libgdm1 libgnome-menu-3-0
-  libgoa-1.0-0 libgoa-1.0-common libgweather-3-3 libgweather-common libibus-1.0-5
-  libical0 libmission-control-plugins0 libmutter0b liboauth0 libopenobex1
-  libpackagekit-glib2-16 libpulse-mainloop-glib0 librest-0.7-0 libsoup-gnome2.4-1
-  libtelepathy-glib0 libtelepathy-logger3 libwacom-common libwacom2 mutter-common
-  obex-data-server obexd-client telepathy-mission-control-5
-Suggested packages:
-  evolution evolution-data-server-dbg gnome-orca gnome-user-share telepathy-haze
-Recommended packages:
-  zenity gvfs-backends gnome-control-center pulseaudio gkbd-capplet gnome-contacts
-  gnome-user-guide gtk2-engines-pixbuf gnome-accessibility-themes packagekit
-The following NEW packages will be installed:
-  bluez dconf-cli evolution-data-server evolution-data-server-common gdm3
-  gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-gck-1 gir1.2-gcr-3
-  gir1.2-gdesktopenums-3.0 gir1.2-gdm3 gir1.2-gkbd-3.0 gir1.2-gmenu-3.0
-  gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0 gir1.2-ibus-1.0
-  gir1.2-mutter-3.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0 gir1.2-soup-2.4
-  gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2 gir1.2-xkl-1.0 gjs
-  gnome-bluetooth gnome-settings-daemon gnome-shell gnome-shell-common
-  gnome-themes-standard gnome-themes-standard-data libbluetooth3 libcamel-1.2-43
-  libcaribou-common libcaribou0 libebackend-1.2-6 libebook-1.2-14
-  libebook-contacts-1.2-0 libecal-1.2-15 libedata-book-1.2-17 libedata-cal-1.2-20
-  libedataserver-1.2-17 libgdata-common libgdata13 libgdm1 libgnome-menu-3-0
-  libgoa-1.0-0 libgoa-1.0-common libgweather-3-3 libgweather-common libibus-1.0-5
-  libical0 libmission-control-plugins0 libmutter0b liboauth0 libopenobex1
-  libpackagekit-glib2-16 libpulse-mainloop-glib0 librest-0.7-0 libsoup-gnome2.4-1
-  libtelepathy-glib0 libtelepathy-logger3 libwacom-common libwacom2 mutter-common
-  obex-data-server obexd-client telepathy-mission-control-5
-0 upgraded, 67 newly installed, 0 to remove and 45 not upgraded.
-Need to get 0 B/31.0 MB of archives.
-After this operation, 90.8 MB of additional disk space will be used.
-&lt;/pre&gt;
-&lt;p&gt;GNOME philosophy tends towards tight integration, leading to things
-being not as modular as I would like: how could a display manager end
-up depending on a Contacts tool, or the Bluetooth stack. It may very
-well be just how it was built in Debian, but that also means there
-were build options that allowed such tight coupling in the first
-place. GDM has served me well for years, but I'm not interested in all
-those tools it brings with.&lt;/p&gt;
-&lt;p&gt;Anyways, enough with that. Here's what I got to disable the annoying
-beep:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-$ cat ~/.xinputrc
-set bell-style none
-&lt;/pre&gt;
-&lt;p&gt;I also added a custom &lt;cite&gt;.desktop&lt;/cite&gt; file which will get selectable on
-LightDM UI:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-$ cat /usr/share/xsessions/custom.desktop
-[Desktop Entry]
-Name=Custom
-Exec=/etc/X11/Xsession
-Type=XSession
-&lt;/pre&gt;
-&lt;p&gt;On selecting the entry labeled &lt;tt class="docutils literal"&gt;Custom&lt;/tt&gt; that appears on LightDM,
-and logging in, the following will get executed:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-$ cat ~/.xsession
-gnome-terminal --hide-menubar \
-               --tab-with-profile=Default \
-               --tab-with-profile=Default \
-               --tab-with-profile=Default \
-               --tab-with-profile=Default &amp;amp;
-firefox &amp;amp;
-nautilus --no-desktop &amp;amp;
-nm-applet &amp;amp;
-trayer &amp;amp;
-
-xmodmap -e &amp;quot;clear Lock&amp;quot;
-xmodmap -e &amp;quot;keycode 66 = Super_L&amp;quot;
-
-synclient TapButton1=1
-synclient ClickFinger2=2
-syndaemon -dti 1
-
-while true; do
-   xsetroot -name &amp;quot;$( date +&amp;quot;%F %R&amp;quot; )&amp;quot;
-   sleep 1m
-done &amp;amp;
-
-exec dwm
-&lt;/pre&gt;
-&lt;p&gt;Finally, this is what my dwm config changes look like:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
---- a/config.def.h  Tue Nov 26 00:12:27 2013 +0200
-+++ b/config.def.h  Tue Nov 26 00:12:52 2013 +0200
-&amp;#64;&amp;#64; -14,12 +14,16 &amp;#64;&amp;#64;
- static const Bool topbar            = True;     /* False means bottom bar */
-
- /* tagging */
--static const char *tags[] = { &amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;, &amp;quot;9&amp;quot; };
-+static const char *tags[] = { &amp;quot;web&amp;quot;, &amp;quot;files&amp;quot;, &amp;quot;terminal&amp;quot;, &amp;quot;misc&amp;quot; };
-
- static const Rule rules[] = {
--   /* class      instance    title       tags mask     isfloating   monitor */
--   { &amp;quot;Gimp&amp;quot;,       NULL,       NULL,       0,            True,        -1 },
--   { &amp;quot;Iceweasel&amp;quot;,  NULL,       NULL,       1 &amp;lt;&amp;lt; 8,       False,       -1 },
-+  /* class             instance  title  tags mask  isfloating   monitor */
-+  { &amp;quot;Firefox&amp;quot;,         NULL,     NULL,  1 &amp;lt;&amp;lt; 0,    False,       -1 },
-+  { &amp;quot;Nautilus&amp;quot;,        NULL,     NULL,  1 &amp;lt;&amp;lt; 1,    False,       -1 },
-+  { &amp;quot;Gnome-terminal&amp;quot;,  NULL,     NULL,  1 &amp;lt;&amp;lt; 2,    False,       -1 },
-+  { &amp;quot;Liferea&amp;quot;,         NULL,     NULL,  1 &amp;lt;&amp;lt; 3,    False,       -1 },
-+  { &amp;quot;Meld&amp;quot;,            NULL,     NULL,  1 &amp;lt;&amp;lt; 3,    False,       -1 },
-+  { &amp;quot;trayer&amp;quot;,          NULL,     NULL,  1 &amp;lt;&amp;lt; 3,    False,       -1 },
- };
-
- /* layout(s) */
-&amp;#64;&amp;#64; -35,7 +39,7 &amp;#64;&amp;#64;
- };
-
- /* key definitions */
--#define MODKEY Mod1Mask
-+#define MODKEY Mod4Mask
- #define TAGKEYS(KEY,TAG) \
-        { MODKEY,                       KEY,      view,           {.ui = 1 &amp;lt;&amp;lt; TAG} }, \
-        { MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 &amp;lt;&amp;lt; TAG} }, \
-&amp;#64;&amp;#64; -47,7 +51,7 &amp;#64;&amp;#64;
-
- /* commands */
- static const char *dmenucmd[] = { &amp;quot;dmenu_run&amp;quot;, &amp;quot;-fn&amp;quot;, font, &amp;quot;-nb&amp;quot;, normbgcolor, &amp;quot;-nf&amp;quot;, normfgcolor, &amp;quot;-sb&amp;quot;, selbgcolor, &amp;quot;-sf&amp;quot;, selfgcolor, NULL };
--static const char *termcmd[]  = { &amp;quot;x-terminal-emulator&amp;quot;, NULL };
-+static const char *termcmd[]  = { &amp;quot;gnome-terminal&amp;quot;, &amp;quot;--hide-menubar&amp;quot; };
-
- static Key keys[] = {
-        /* modifier                     key        function        argument */
-&lt;/pre&gt;
-&lt;p&gt;Note that this diff is against the Debian package, versioned &lt;strong&gt;6.0-6&lt;/strong&gt;. I
-could not change the modifer key with the upstream version of dwm.&lt;/p&gt;
-&lt;p&gt;You will notice that I'm still using some GNOME packages, specifically
-Nautilus and GNOME Terminal, both of which remain my favorites.&lt;/p&gt;
-&lt;p&gt;I'm lazy to explain this all, but a web search should help.&lt;/p&gt;
-</summary><category term="GNOME"></category><category term="Debian"></category></entry><entry><title>pleasantly surprised by replace-string (Emacs)</title><link href="http://tshepang.net/pleasantly-surprised-by-replace-string-emacs" rel="alternate"></link><updated>2013-11-26T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-11-26:pleasantly-surprised-by-replace-string-emacs</id><summary type="html">&lt;p&gt;If you want to replace some string in Emacs, the primary function to
+</summary><category term="list"></category></entry><entry><title>pleasantly surprised by replace-string (Emacs)</title><link href="http://tshepang.net/pleasantly-surprised-by-replace-string-emacs" rel="alternate"></link><updated>2013-11-26T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-11-26:pleasantly-surprised-by-replace-string-emacs</id><summary type="html">&lt;p&gt;If you want to replace some string in Emacs, the primary function to
 use is &lt;strong&gt;replace-string&lt;/strong&gt; (I think). If the strings, 'old' and 'new'
 are provided, it will, by default, replace all occurrences, regardless
 of case, while also preserving case of whatever 'old' was. It's

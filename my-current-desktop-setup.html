@@ -175,6 +175,7 @@ firefox &amp;
 nautilus --no-desktop &amp;
 nm-applet &amp;
 trayer &amp;
+quodlibet &amp;
 
 xmodmap -e &quot;clear Lock&quot;
 xmodmap -e &quot;keycode 66 = Super_L&quot;
@@ -192,14 +193,15 @@ exec dwm
 </pre>
 <p>Finally, this is what my dwm config changes look like:</p>
 <pre class="literal-block">
---- a/config.def.h  Tue Nov 26 00:12:27 2013 +0200
-+++ b/config.def.h  Tue Nov 26 00:12:52 2013 +0200
-&#64;&#64; -14,12 +14,16 &#64;&#64;
+diff -r f973438299b0 config.def.h
+--- a/config.def.h  Fri Dec 06 01:28:52 2013 +0200
++++ b/config.def.h  Fri Dec 06 01:39:40 2013 +0200
+&#64;&#64; -14,12 +14,17 &#64;&#64;
  static const Bool topbar            = True;     /* False means bottom bar */
 
  /* tagging */
 -static const char *tags[] = { &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot; };
-+static const char *tags[] = { &quot;web&quot;, &quot;files&quot;, &quot;terminal&quot;, &quot;misc&quot; };
++static const char *tags[] = { &quot;web&quot;, &quot;files&quot;, &quot;terminal&quot;, &quot;misc&quot;, &quot;music&quot; };
 
  static const Rule rules[] = {
 -   /* class      instance    title       tags mask     isfloating   monitor */
@@ -212,10 +214,11 @@ exec dwm
 +  { &quot;Liferea&quot;,         NULL,     NULL,  1 &lt;&lt; 3,    False,       -1 },
 +  { &quot;Meld&quot;,            NULL,     NULL,  1 &lt;&lt; 3,    False,       -1 },
 +  { &quot;trayer&quot;,          NULL,     NULL,  1 &lt;&lt; 3,    False,       -1 },
++  { &quot;Quodlibet&quot;,       NULL,     NULL,  1 &lt;&lt; 4,    False,       -1 },
  };
 
  /* layout(s) */
-&#64;&#64; -35,7 +39,7 &#64;&#64;
+&#64;&#64; -35,7 +40,7 &#64;&#64;
  };
 
  /* key definitions */
@@ -224,7 +227,7 @@ exec dwm
  #define TAGKEYS(KEY,TAG) \
         { MODKEY,                       KEY,      view,           {.ui = 1 &lt;&lt; TAG} }, \
         { MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 &lt;&lt; TAG} }, \
-&#64;&#64; -47,7 +51,7 &#64;&#64;
+&#64;&#64; -47,7 +52,7 &#64;&#64;
 
  /* commands */
  static const char *dmenucmd[] = { &quot;dmenu_run&quot;, &quot;-fn&quot;, font, &quot;-nb&quot;, normbgcolor, &quot;-nf&quot;, normfgcolor, &quot;-sb&quot;, selbgcolor, &quot;-sf&quot;, selfgcolor, NULL };
@@ -234,11 +237,10 @@ exec dwm
  static Key keys[] = {
         /* modifier                     key        function        argument */
 </pre>
-<p>Note that this diff is against the Debian package, versioned <strong>6.0-6</strong>. I
+<p>Note that this diff is against the Debian package (version <strong>6.0-6</strong>). I
 could not change the modifer key with the upstream version of dwm.</p>
 <p>You will notice that I'm still using some GNOME packages, specifically
 Nautilus and GNOME Terminal, both of which remain my favorites.</p>
-<p>I'm lazy to explain this all, but a web search should help.</p>
 
             <section>
 <div class="accordion" id="accordion2">
@@ -278,8 +280,7 @@ Nautilus and GNOME Terminal, both of which remain my favorites.</p>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/pleasantly-surprised-by-replace-string-emacs" title="Previous: pleasantly surprised by replace-string (Emacs)">pleasantly surprised by replace-string (Emacs)</a></li>
-                <li class="next-article"><a href="http://tshepang.net/floss-i-use-a-lot" title="Next: FLOSS I use a-lot">FLOSS I use a-lot</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/still-grazing-2004" title="Previous: Still Grazing (2004)">Still Grazing (2004)</a></li>
             </ul>
             </nav>
             </aside>
@@ -287,7 +288,7 @@ Nautilus and GNOME Terminal, both of which remain my favorites.</p>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2013-11-26T00:00:00">Nov 26, 2013</time>
+            <time pubdate="pubdate" datetime="2013-12-06T00:00:00">Dec 6, 2013</time>
             <h4>Category</h4>
             <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
             <h4>Tags</h4>
