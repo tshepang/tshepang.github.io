@@ -163,9 +163,8 @@ Exec=/etc/X11/Xsession
 Type=XSession
 </pre>
 <p>On selecting the entry labeled <tt class="docutils literal">Custom</tt> that appears on LightDM,
-and logging in, the following will get executed:</p>
+and logging in, the following will get executed (<a class="reference external" href="https://bitbucket.org/tshepang/custom/src/tip/config.def.h">~/.xsession</a>):</p>
 <pre class="literal-block">
-$ cat ~/.xsession
 gnome-terminal --hide-menubar \
                --tab-with-profile=Default \
                --tab-with-profile=Default \
@@ -174,7 +173,7 @@ gnome-terminal --hide-menubar \
 firefox &amp;
 nautilus --no-desktop &amp;
 nm-applet &amp;
-trayer &amp;
+trayer --edge top --align right --widthtype request --distance 18 &amp;
 quodlibet &amp;
 
 xmodmap -e &quot;clear Lock&quot;
@@ -191,11 +190,11 @@ done &amp;
 
 exec dwm
 </pre>
-<p>Finally, this is what my dwm config changes look like:</p>
+<p>Finally, this is what my dwm config changes look like (<a class="reference external" href="https://bitbucket.org/tshepang/custom/src/tip/xsession">config.def.h</a>):</p>
 <pre class="literal-block">
-diff -r f973438299b0 config.def.h
---- a/config.def.h  Fri Dec 06 01:28:52 2013 +0200
-+++ b/config.def.h  Fri Dec 06 01:39:40 2013 +0200
+diff -r e0ab1aa61eab config.def.h
+--- a/config.def.h  Fri Dec 06 08:16:40 2013 +0200
++++ b/config.def.h  Fri Dec 06 08:18:26 2013 +0200
 &#64;&#64; -14,12 +14,17 &#64;&#64;
  static const Bool topbar            = True;     /* False means bottom bar */
 
@@ -209,11 +208,11 @@ diff -r f973438299b0 config.def.h
 -   { &quot;Iceweasel&quot;,  NULL,       NULL,       1 &lt;&lt; 8,       False,       -1 },
 +  /* class             instance  title  tags mask  isfloating   monitor */
 +  { &quot;Firefox&quot;,         NULL,     NULL,  1 &lt;&lt; 0,    False,       -1 },
++  { &quot;trayer&quot;,          NULL,     NULL,  1 &lt;&lt; 0,    False,       -1 },
 +  { &quot;Nautilus&quot;,        NULL,     NULL,  1 &lt;&lt; 1,    False,       -1 },
 +  { &quot;Gnome-terminal&quot;,  NULL,     NULL,  1 &lt;&lt; 2,    False,       -1 },
 +  { &quot;Liferea&quot;,         NULL,     NULL,  1 &lt;&lt; 3,    False,       -1 },
 +  { &quot;Meld&quot;,            NULL,     NULL,  1 &lt;&lt; 3,    False,       -1 },
-+  { &quot;trayer&quot;,          NULL,     NULL,  1 &lt;&lt; 3,    False,       -1 },
 +  { &quot;Quodlibet&quot;,       NULL,     NULL,  1 &lt;&lt; 4,    False,       -1 },
  };
 

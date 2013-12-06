@@ -93,9 +93,8 @@ Exec=/etc/X11/Xsession
 Type=XSession
 &lt;/pre&gt;
 &lt;p&gt;On selecting the entry labeled &lt;tt class="docutils literal"&gt;Custom&lt;/tt&gt; that appears on LightDM,
-and logging in, the following will get executed:&lt;/p&gt;
+and logging in, the following will get executed (&lt;a class="reference external" href="https://bitbucket.org/tshepang/custom/src/tip/config.def.h"&gt;~/.xsession&lt;/a&gt;):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-$ cat ~/.xsession
 gnome-terminal --hide-menubar \
                --tab-with-profile=Default \
                --tab-with-profile=Default \
@@ -104,7 +103,7 @@ gnome-terminal --hide-menubar \
 firefox &amp;amp;
 nautilus --no-desktop &amp;amp;
 nm-applet &amp;amp;
-trayer &amp;amp;
+trayer --edge top --align right --widthtype request --distance 18 &amp;amp;
 quodlibet &amp;amp;
 
 xmodmap -e &amp;quot;clear Lock&amp;quot;
@@ -121,11 +120,11 @@ done &amp;amp;
 
 exec dwm
 &lt;/pre&gt;
-&lt;p&gt;Finally, this is what my dwm config changes look like:&lt;/p&gt;
+&lt;p&gt;Finally, this is what my dwm config changes look like (&lt;a class="reference external" href="https://bitbucket.org/tshepang/custom/src/tip/xsession"&gt;config.def.h&lt;/a&gt;):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-diff -r f973438299b0 config.def.h
---- a/config.def.h  Fri Dec 06 01:28:52 2013 +0200
-+++ b/config.def.h  Fri Dec 06 01:39:40 2013 +0200
+diff -r e0ab1aa61eab config.def.h
+--- a/config.def.h  Fri Dec 06 08:16:40 2013 +0200
++++ b/config.def.h  Fri Dec 06 08:18:26 2013 +0200
 &amp;#64;&amp;#64; -14,12 +14,17 &amp;#64;&amp;#64;
  static const Bool topbar            = True;     /* False means bottom bar */
 
@@ -139,11 +138,11 @@ diff -r f973438299b0 config.def.h
 -   { &amp;quot;Iceweasel&amp;quot;,  NULL,       NULL,       1 &amp;lt;&amp;lt; 8,       False,       -1 },
 +  /* class             instance  title  tags mask  isfloating   monitor */
 +  { &amp;quot;Firefox&amp;quot;,         NULL,     NULL,  1 &amp;lt;&amp;lt; 0,    False,       -1 },
++  { &amp;quot;trayer&amp;quot;,          NULL,     NULL,  1 &amp;lt;&amp;lt; 0,    False,       -1 },
 +  { &amp;quot;Nautilus&amp;quot;,        NULL,     NULL,  1 &amp;lt;&amp;lt; 1,    False,       -1 },
 +  { &amp;quot;Gnome-terminal&amp;quot;,  NULL,     NULL,  1 &amp;lt;&amp;lt; 2,    False,       -1 },
 +  { &amp;quot;Liferea&amp;quot;,         NULL,     NULL,  1 &amp;lt;&amp;lt; 3,    False,       -1 },
 +  { &amp;quot;Meld&amp;quot;,            NULL,     NULL,  1 &amp;lt;&amp;lt; 3,    False,       -1 },
-+  { &amp;quot;trayer&amp;quot;,          NULL,     NULL,  1 &amp;lt;&amp;lt; 3,    False,       -1 },
 +  { &amp;quot;Quodlibet&amp;quot;,       NULL,     NULL,  1 &amp;lt;&amp;lt; 4,    False,       -1 },
  };
 
