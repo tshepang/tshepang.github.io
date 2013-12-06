@@ -93,7 +93,7 @@ Exec=/etc/X11/Xsession
 Type=XSession
 &lt;/pre&gt;
 &lt;p&gt;On selecting the entry labeled &lt;tt class="docutils literal"&gt;Custom&lt;/tt&gt; that appears on LightDM,
-and logging in, the following will get executed (&lt;a class="reference external" href="https://bitbucket.org/tshepang/custom/src/tip/config.def.h"&gt;~/.xsession&lt;/a&gt;):&lt;/p&gt;
+and logging in, the following will get executed (&lt;a class="reference external" href="https://bitbucket.org/tshepang/custom/src/tip/xsession"&gt;~/.xsession&lt;/a&gt;):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 gnome-terminal --hide-menubar \
                --tab-with-profile=Default \
@@ -120,7 +120,7 @@ done &amp;amp;
 
 exec dwm
 &lt;/pre&gt;
-&lt;p&gt;Finally, this is what my dwm config changes look like (&lt;a class="reference external" href="https://bitbucket.org/tshepang/custom/src/tip/xsession"&gt;config.def.h&lt;/a&gt;):&lt;/p&gt;
+&lt;p&gt;Finally, this is what my dwm config changes look like (&lt;a class="reference external" href="https://bitbucket.org/tshepang/custom/src/tip/config.def.h"&gt;config.def.h&lt;/a&gt;):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 diff -r e0ab1aa61eab config.def.h
 --- a/config.def.h  Fri Dec 06 08:16:40 2013 +0200
