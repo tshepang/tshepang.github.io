@@ -77,8 +77,8 @@ well be just how it was built in Debian, but that also means there
 were build options that allowed such tight coupling in the first
 place. GDM has served me well for years, but I'm not interested in all
 those tools it brings with.&lt;/p&gt;
-&lt;p&gt;Anyways, enough with that. I also added a custom &lt;cite&gt;.desktop&lt;/cite&gt; file
-which will get selectable on LightDM UI:&lt;/p&gt;
+&lt;p&gt;Anyways, enough with that. I added a custom &lt;cite&gt;.desktop&lt;/cite&gt; file which will
+become selectable on LightDM UI:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 $ cat /usr/share/xsessions/custom.desktop
 [Desktop Entry]
