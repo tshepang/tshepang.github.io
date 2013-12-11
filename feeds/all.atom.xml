@@ -87,45 +87,44 @@ Type=XSession
 &lt;/pre&gt;
 &lt;p&gt;On selecting the entry labeled &lt;tt class="docutils literal"&gt;Custom&lt;/tt&gt; that appears on LightDM,
 and logging in, the following will get executed (&lt;a class="reference external" href="https://bitbucket.org/tshepang/custom/src/tip/xsession"&gt;~/.xsession&lt;/a&gt;):&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-# apps
-gnome-terminal --hide-menubar \
-               --tab-with-profile=Default \
-               --tab-with-profile=Default \
-               --tab-with-profile=Default \
-               --tab-with-profile=Default &amp;amp;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# apps&lt;/span&gt;
+gnome-terminal --hide-menubar &lt;span class="se"&gt;\&lt;/span&gt;
+               --tab-with-profile&lt;span class="o"&gt;=&lt;/span&gt;Default &lt;span class="se"&gt;\&lt;/span&gt;
+               --tab-with-profile&lt;span class="o"&gt;=&lt;/span&gt;Default &lt;span class="se"&gt;\&lt;/span&gt;
+               --tab-with-profile&lt;span class="o"&gt;=&lt;/span&gt;Default &lt;span class="se"&gt;\&lt;/span&gt;
+               --tab-with-profile&lt;span class="o"&gt;=&lt;/span&gt;Default &amp;amp;
 firefox &amp;amp;
 nautilus --no-desktop &amp;amp;
 nm-applet &amp;amp;
 trayer --edge top --align right --widthtype request --distance 18 &amp;amp;
 quodlibet &amp;amp;
-if [ $HOSTNAME == 'twork' ]; then
-   icedove &amp;amp;
-fi
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$HOSTNAME&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;twork&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;; &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="k"&gt;   &lt;/span&gt;icedove &amp;amp;
+&lt;span class="k"&gt;fi&lt;/span&gt;
 
-# settings
+&lt;span class="c"&gt;# settings&lt;/span&gt;
 xset b off
-xmodmap -e &amp;quot;clear Lock&amp;quot;
-xmodmap -e &amp;quot;keycode 66 = Super_L&amp;quot;
+xmodmap -e &lt;span class="s2"&gt;&amp;quot;clear Lock&amp;quot;&lt;/span&gt;
+xmodmap -e &lt;span class="s2"&gt;&amp;quot;keycode 66 = Super_L&amp;quot;&lt;/span&gt;
 
-# host-specific settings
-if [ $HOSTNAME == 'twork' ]; then
-    xrandr --output DVI-0 --mode 1920x1080 --pos 1920x0 --rotate normal \
+&lt;span class="c"&gt;# host-specific settings&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$HOSTNAME&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;twork&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;; &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="k"&gt;    &lt;/span&gt;xrandr --output DVI-0 --mode 1920x1080 --pos 1920x0 --rotate normal &lt;span class="se"&gt;\&lt;/span&gt;
            --output VGA-0 --mode 1920x1080 --pos    0x0 --rotate normal
-else
-    synclient TapButton1=1
-    synclient ClickFinger2=2
+&lt;span class="k"&gt;else&lt;/span&gt;
+&lt;span class="k"&gt;    &lt;/span&gt;synclient &lt;span class="nv"&gt;TapButton1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1
+    synclient &lt;span class="nv"&gt;ClickFinger2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;2
     syndaemon -dti 1
-fi
+&lt;span class="k"&gt;fi&lt;/span&gt;
 
-# clock
-while true; do
-   xsetroot -name &amp;quot;$( date +&amp;quot;%F %R&amp;quot; )&amp;quot;
+&lt;span class="c"&gt;# clock&lt;/span&gt;
+&lt;span class="k"&gt;while &lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;; &lt;span class="k"&gt;do&lt;/span&gt;
+&lt;span class="k"&gt;   &lt;/span&gt;xsetroot -name &lt;span class="s2"&gt;&amp;quot;$( date +&amp;quot;&lt;/span&gt;%F %R&lt;span class="s2"&gt;&amp;quot; )&amp;quot;&lt;/span&gt;
    sleep 1m
-done &amp;amp;
+&lt;span class="k"&gt;done&lt;/span&gt; &amp;amp;
 
-exec dwm
-&lt;/pre&gt;
+&lt;span class="nb"&gt;exec &lt;/span&gt;dwm
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Finally, this is what my dwm config changes look like (&lt;a class="reference external" href="https://bitbucket.org/tshepang/custom/src/tip/config.def.h"&gt;config.def.h&lt;/a&gt;):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 diff -r e0ab1aa61eab config.def.h

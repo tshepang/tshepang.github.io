@@ -157,45 +157,44 @@ Type=XSession
 </pre>
 <p>On selecting the entry labeled <tt class="docutils literal">Custom</tt> that appears on LightDM,
 and logging in, the following will get executed (<a class="reference external" href="https://bitbucket.org/tshepang/custom/src/tip/xsession">~/.xsession</a>):</p>
-<pre class="literal-block">
-# apps
-gnome-terminal --hide-menubar \
-               --tab-with-profile=Default \
-               --tab-with-profile=Default \
-               --tab-with-profile=Default \
-               --tab-with-profile=Default &amp;
+<div class="highlight"><pre><span class="c"># apps</span>
+gnome-terminal --hide-menubar <span class="se">\</span>
+               --tab-with-profile<span class="o">=</span>Default <span class="se">\</span>
+               --tab-with-profile<span class="o">=</span>Default <span class="se">\</span>
+               --tab-with-profile<span class="o">=</span>Default <span class="se">\</span>
+               --tab-with-profile<span class="o">=</span>Default &amp;
 firefox &amp;
 nautilus --no-desktop &amp;
 nm-applet &amp;
 trayer --edge top --align right --widthtype request --distance 18 &amp;
 quodlibet &amp;
-if [ $HOSTNAME == 'twork' ]; then
-   icedove &amp;
-fi
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$HOSTNAME</span> <span class="o">==</span> <span class="s1">&#39;twork&#39;</span> <span class="o">]</span>; <span class="k">then</span>
+<span class="k">   </span>icedove &amp;
+<span class="k">fi</span>
 
-# settings
+<span class="c"># settings</span>
 xset b off
-xmodmap -e &quot;clear Lock&quot;
-xmodmap -e &quot;keycode 66 = Super_L&quot;
+xmodmap -e <span class="s2">&quot;clear Lock&quot;</span>
+xmodmap -e <span class="s2">&quot;keycode 66 = Super_L&quot;</span>
 
-# host-specific settings
-if [ $HOSTNAME == 'twork' ]; then
-    xrandr --output DVI-0 --mode 1920x1080 --pos 1920x0 --rotate normal \
+<span class="c"># host-specific settings</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$HOSTNAME</span> <span class="o">==</span> <span class="s1">&#39;twork&#39;</span> <span class="o">]</span>; <span class="k">then</span>
+<span class="k">    </span>xrandr --output DVI-0 --mode 1920x1080 --pos 1920x0 --rotate normal <span class="se">\</span>
            --output VGA-0 --mode 1920x1080 --pos    0x0 --rotate normal
-else
-    synclient TapButton1=1
-    synclient ClickFinger2=2
+<span class="k">else</span>
+<span class="k">    </span>synclient <span class="nv">TapButton1</span><span class="o">=</span>1
+    synclient <span class="nv">ClickFinger2</span><span class="o">=</span>2
     syndaemon -dti 1
-fi
+<span class="k">fi</span>
 
-# clock
-while true; do
-   xsetroot -name &quot;$( date +&quot;%F %R&quot; )&quot;
+<span class="c"># clock</span>
+<span class="k">while </span><span class="nb">true</span>; <span class="k">do</span>
+<span class="k">   </span>xsetroot -name <span class="s2">&quot;$( date +&quot;</span>%F %R<span class="s2">&quot; )&quot;</span>
    sleep 1m
-done &amp;
+<span class="k">done</span> &amp;
 
-exec dwm
-</pre>
+<span class="nb">exec </span>dwm
+</pre></div>
 <p>Finally, this is what my dwm config changes look like (<a class="reference external" href="https://bitbucket.org/tshepang/custom/src/tip/config.def.h">config.def.h</a>):</p>
 <pre class="literal-block">
 diff -r e0ab1aa61eab config.def.h
