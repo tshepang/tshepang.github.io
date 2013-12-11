@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-12-06T00:00:00+02:00</updated><entry><title>my current desktop setup</title><link href="http://tshepang.net/my-current-desktop-setup" rel="alternate"></link><updated>2013-12-06T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-12-06:my-current-desktop-setup</id><summary type="html">&lt;p&gt;With recent Debian GNOME updates, something got broken enough that I
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-12-11T00:00:00+02:00</updated><entry><title>my current desktop setup</title><link href="http://tshepang.net/my-current-desktop-setup" rel="alternate"></link><updated>2013-12-11T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-12-11:my-current-desktop-setup</id><summary type="html">&lt;p&gt;With recent Debian GNOME updates, something got broken enough that I
 could not login to my account. I saw this as a good
 opportunity to finally try something other than GNOME as my primary
 environment on my home machine. I have before tinkered with other GUI
@@ -77,14 +77,8 @@ well be just how it was built in Debian, but that also means there
 were build options that allowed such tight coupling in the first
 place. GDM has served me well for years, but I'm not interested in all
 those tools it brings with.&lt;/p&gt;
-&lt;p&gt;Anyways, enough with that. Here's what I got to disable the annoying
-beep:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-$ cat ~/.xinputrc
-set bell-style none
-&lt;/pre&gt;
-&lt;p&gt;I also added a custom &lt;cite&gt;.desktop&lt;/cite&gt; file which will get selectable on
-LightDM UI:&lt;/p&gt;
+&lt;p&gt;Anyways, enough with that. I also added a custom &lt;cite&gt;.desktop&lt;/cite&gt; file
+which will get selectable on LightDM UI:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 $ cat /usr/share/xsessions/custom.desktop
 [Desktop Entry]
@@ -95,6 +89,7 @@ Type=XSession
 &lt;p&gt;On selecting the entry labeled &lt;tt class="docutils literal"&gt;Custom&lt;/tt&gt; that appears on LightDM,
 and logging in, the following will get executed (&lt;a class="reference external" href="https://bitbucket.org/tshepang/custom/src/tip/xsession"&gt;~/.xsession&lt;/a&gt;):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
+# apps
 gnome-terminal --hide-menubar \
                --tab-with-profile=Default \
                --tab-with-profile=Default \
@@ -105,14 +100,26 @@ nautilus --no-desktop &amp;amp;
 nm-applet &amp;amp;
 trayer --edge top --align right --widthtype request --distance 18 &amp;amp;
 quodlibet &amp;amp;
+if [ $HOSTNAME == 'twork' ]; then
+   icedove &amp;amp;
+fi
 
+# settings
+xset b off
 xmodmap -e &amp;quot;clear Lock&amp;quot;
 xmodmap -e &amp;quot;keycode 66 = Super_L&amp;quot;
 
-synclient TapButton1=1
-synclient ClickFinger2=2
-syndaemon -dti 1
+# host-specific settings
+if [ $HOSTNAME == 'twork' ]; then
+    xrandr --output DVI-0 --mode 1920x1080 --pos 1920x0 --rotate normal \
+           --output VGA-0 --mode 1920x1080 --pos    0x0 --rotate normal
+else
+    synclient TapButton1=1
+    synclient ClickFinger2=2
+    syndaemon -dti 1
+fi
 
+# clock
 while true; do
    xsetroot -name &amp;quot;$( date +&amp;quot;%F %R&amp;quot; )&amp;quot;
    sleep 1m
