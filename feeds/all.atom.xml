@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2013-12-12T00:00:00+02:00</updated><entry><title>the one I revere most, after losing Madiba</title><link href="http://tshepang.net/the-one-i-revere-most-after-losing-madiba" rel="alternate"></link><updated>2013-12-12T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-12-12:the-one-i-revere-most-after-losing-madiba</id><summary type="html">&lt;p&gt;For a long time, there was not a single living individual I respected
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-01-13T00:00:00+02:00</updated><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2014-01-13T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-01-13:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
+I do celebrate each time I see a project use it. So, here I list the
+most notable projects I am aware of that do, which also gives me hope
+that it isn't being suffocated too much by Git:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://hg.mozilla.org/mozilla-central"&gt;Firefox&lt;/a&gt;, world number 3 desktop web browser (number of users)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://hg.python.org/cpython"&gt;CPython&lt;/a&gt;, top 10 of most popular programming languages&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://selenic.com/hg"&gt;Mercurial&lt;/a&gt;, 2nd only to Git in terms of DVCS popularity, though
+maybe lagging by 2 orders of magnitude :(&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://hg.openjdk.java.net"&gt;OpenJDK&lt;/a&gt;, the top open source implementation of the Java platform&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://bitbucket.org/birkenfeld/sphinx"&gt;Sphinx&lt;/a&gt;, documentation generator used in most Python projects&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://bitbucket.org/pypy/pypy"&gt;PyPy&lt;/a&gt;, the fastest implementation of Python&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;non-Floss&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook"&gt;Facebook&lt;/a&gt;, world number 2 website (number of visitors)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://stackoverflow.com"&gt;Stack Overflow&lt;/a&gt;, top web destination website for software
+developers&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="VCS"></category><category term="non-FLOSS"></category></entry><entry><title>the one I revere most, after losing Madiba</title><link href="http://tshepang.net/the-one-i-revere-most-after-losing-madiba" rel="alternate"></link><updated>2013-12-12T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-12-12:the-one-i-revere-most-after-losing-madiba</id><summary type="html">&lt;p&gt;For a long time, there was not a single living individual I respected
 more than I did Madiba. That would explain the fact of my weeping on
 the morning I heard of his death, which is something I never did for
 any single individual. For some time now, I actually asked myself
@@ -1510,23 +1529,7 @@ Whitacre, &lt;a class="reference external" href="http://tshepang.net/am-joining-
 &lt;li&gt;&lt;a class="reference external" href="https://people.gnome.org/~michael/blog/2013-06-13-under-the-hood.html"&gt;impressive Libreoffice clean-up work&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://medium.com/open-source-life/d44a1953749c"&gt;Money and Open Source&lt;/a&gt; - an insightful opinion piece&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="links"></category></entry><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2013-07-13T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-07-13:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
-I do celebrate each time I see a project use it. So, here I list the
-most notable projects I am aware of that do, which also gives me hope
-that it isn't being suffocated too much by Git:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://hg.mozilla.org/mozilla-central"&gt;Firefox&lt;/a&gt;, on top 3 of all desktop web browsers (number of users)&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://hg.python.org/cpython"&gt;CPython&lt;/a&gt;, on top 10 of all programming languages&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://selenic.com/hg"&gt;Mercurial&lt;/a&gt;, 2nd only to Git in terms of DVCS popularity, though
-maybe lagging by 2 orders of magnitude :(&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://hg.openjdk.java.net"&gt;OpenJDK&lt;/a&gt;, the top open source implementation of the Java platform&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://bitbucket.org/birkenfeld/sphinx"&gt;Sphinx&lt;/a&gt;, documentation generator used in most Python projects&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://bitbucket.org/pypy/pypy"&gt;PyPy&lt;/a&gt;, likely the most exciting development in the entire Python
-ecosystem&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://stackexchange.com"&gt;Stack Exchange&lt;/a&gt; (proprietary), a family of Q&amp;amp;A sites which are,
-in my opinion, the best yet&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="VCS"></category></entry><entry><title>links 2013-07-09</title><link href="http://tshepang.net/links-2013-07-09" rel="alternate"></link><updated>2013-07-09T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-07-09:links-2013-07-09</id><summary type="html">&lt;ul class="simple"&gt;
+</summary><category term="links"></category></entry><entry><title>links 2013-07-09</title><link href="http://tshepang.net/links-2013-07-09" rel="alternate"></link><updated>2013-07-09T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-07-09:links-2013-07-09</id><summary type="html">&lt;ul class="simple"&gt;
 &lt;li&gt;I was surprised to find that &lt;a class="reference external" href="http://skeptics.stackexchange.com/a/1172/167"&gt;most sex workers enjoy their trade&lt;/a&gt;;
 it's a refreshing perspective, but as made clear by the post itself,
 there isn't sufficient scientific research to confirm it.&lt;/li&gt;
