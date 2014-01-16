@@ -549,10 +549,11 @@ ul.list-articles-category {
     list-style: none outside none;
     margin: 0 0 0 5px;
 }
-ul.list-articles-category li span {
+ul.list-articles-category li time {
     color: #8F8F8F;
+    display: inline-block;
     font: .9em 'PT Sans', 'Helvetica Neue', Arial, Sans-Serif;
-    margin-right: 10px;
+    width: 7em;
 }
 a.category-link {
     color: #333;
@@ -642,6 +643,9 @@ div.recent-posts-time {
     }
     div.recent-posts-time {
         display: block;
+    }
+    ul.list-articles-category li time {
+        width: 100%;
     }
 }
 /* MailChimp */
