@@ -2752,29 +2752,28 @@ CPython, the reference implementation of my favorite programming
 language, you can have literally hundreds of messages on the mailing
 lists, and at times, many more in the issue tracking system, all
 discussing the change in mind. Such changes are most often accompanied
-with a &lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0001/"&gt;PEP&lt;/a&gt; (Python Enhancement Proposal), a formalised document which
-is basically a design spec for the change in mind. It also, helpfully,
-summarises the arguments against the change, and addresses them while at
-it, which can be of help to those not inclined to consume the
-oft-lengthy discussions.&lt;/p&gt;
+with a &lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0001/"&gt;PEP&lt;/a&gt; (Python Enhancement Proposal), a formalised document
+which is basically a design spec for such a change. It also,
+helpfully, summarises the arguments against the change, and addresses
+them while at it. This can be of help to those not inclined to consume
+the oft-lengthy discussions.&lt;/p&gt;
 &lt;p&gt;Given all that, it can be quite challenging for any one individual to
 champion such important changes, and an example of one such heroic
 individual is &lt;a class="reference external" href="http://www.haypocalc.com/wiki/Accueil"&gt;Victor Stinner&lt;/a&gt;, a core CPython developer. He is the
 most visible of the guys who helped ensure acceptance of &lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0418/"&gt;PEP 418&lt;/a&gt;,
 which proposes some time-related additions and improvements to the
-standard library's &lt;a class="reference external" href="http://doc.python.org/library/time"&gt;time module&lt;/a&gt;. There are many such additions, many a
-lot more important than this specific one, but what's most unique about
-this one is the sheer amount of discussion that went around this
+standard library's &lt;a class="reference external" href="http://doc.python.org/library/time"&gt;time module&lt;/a&gt;. There are many such additions, many
+a lot more important than this specific one, but what's most unique
+about this one is the sheer amount of discussion that went around this
 particular PEP. The mailing list discussions were practically endless,
 and so were the updates to the PEP, not to mention the amount of
-research involved, which was needed in order to have CPython expose the
-new functionality in a cross-platform manner. Now, that's some serious
-perseverance.&lt;/p&gt;
-&lt;hr class="docutils" /&gt;
-&lt;p&gt;Looking at his commits, the guy has done a heck of a lot of work in
+research involved, which was needed in order to have CPython expose
+the new functionality in a cross-platform manner. Now, that's some
+serious perseverance.&lt;/p&gt;
+&lt;p&gt;In addition to this work, the guy has done a heck of a lot of work in
 cleaning up, refactoring, and optimizing the string-handling code. I
-can't imagine that this stuff is easy, especially since a large portion
-of it is in C, that scary, no-hand-holding language.&lt;/p&gt;
+can't imagine that this stuff is easy, especially since a large
+portion of it is in C, that scary, no-hand-holding language.&lt;/p&gt;
 </summary><category term="developer-of-note"></category><category term="Python"></category></entry><entry><title>links 2012-05-17</title><link href="http://tshepang.net/links-2012-05-17" rel="alternate"></link><updated>2012-05-17T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2012-05-17:links-2012-05-17</id><summary type="html">&lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://go.linuxfoundation.org/who-writes-linux-2012"&gt;The rate of Linux kernel development is seriously impressive&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://mail.gnome.org/archives/gtk-devel-list/2007-November/msg00032.html"&gt;Why bundle stuff in one library instead of a few&lt;/a&gt;&lt;/li&gt;
