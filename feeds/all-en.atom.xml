@@ -20,8 +20,198 @@ into words just how much.&lt;/li&gt;
 short-sighted. It cost over R30k (~$3000), but was worth it: I hate
 the inconvenience of spectacles, and the doctor claims I have better
 than 20/20 vision.&lt;/p&gt;
-</summary><category term="untagged"></category></entry><entry><title>Sony Vaio Pro 13 (SVP13212SGBI)</title><link href="http://tshepang.net/sony-vaio-pro-13-svp13212sgbi" rel="alternate"></link><updated>2014-02-16T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-02-16:sony-vaio-pro-13-svp13212sgbi</id><summary type="html">&lt;p&gt;On &lt;strong&gt;2014-02-13&lt;/strong&gt; I went to collect &lt;a class="reference external" href="http://www.laptopdirect.co.za/Sony-VAIO-SVP-13212SGBI-lp-78188.php"&gt;the laptop&lt;/a&gt;, which I paid
-around R12500 for (~$1200). It's a 4GB RAM, 128GB SSD model, and I
+</summary><category term="untagged"></category></entry><entry><title>my current desktop setup</title><link href="http://tshepang.net/my-current-desktop-setup" rel="alternate"></link><updated>2014-02-16T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-02-16:my-current-desktop-setup</id><summary type="html">&lt;p&gt;With recent Debian GNOME updates (late 2013), something got broken
+enough that I could not login to my account. I saw this as a good
+opportunity to finally try something other than GNOME as my primary
+environment on my home and work machines. I have before tinkered with
+other GUI environments (XFCE, KDE 3, FluxBox, LXDE, and most recently,
+Window Maker), but none lasted very long. But I think this time I will
+actually abandon GNOME permanently, after nearly a decade of use.&lt;/p&gt;
+&lt;p&gt;I been playing with &lt;a class="reference external" href="http://dwm.suckless.org"&gt;dwm&lt;/a&gt; for the past few weeks, and the experience
+has convinced me to stay. I am attracted to the philosophy of
+minimalism, though I find they do take things a bit far in requiring
+users to tinker with C source code in order to configure it. Luckily
+it's not hard, and there's examples out there. It just takes a while
+since there isn't a comprehensive guide I could find.&lt;/p&gt;
+&lt;p&gt;For my login manager, I use &lt;a class="reference external" href="http://www.freedesktop.org/wiki/Software/LightDM"&gt;LightDM&lt;/a&gt;. I added this line to its
+configuration, in &lt;tt class="docutils literal"&gt;[SeatDefaults]&lt;/tt&gt; section:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+greeter-hide-users=false
+&lt;/pre&gt;
+&lt;p&gt;It removes the need to manually enter my username each time I want to
+login.&lt;/p&gt;
+&lt;p&gt;Reason I'm not using GDM? I wanted something light, which also
+wouldn't pull in dozens of packages that I won't use. For example:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ sudo apt-get install --no-install-recommends gdm3
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+  bluez dconf-cli evolution-data-server evolution-data-server-common
+  gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-gck-1 gir1.2-gcr-3
+  gir1.2-gdesktopenums-3.0 gir1.2-gdm3 gir1.2-gkbd-3.0 gir1.2-gmenu-3.0
+  gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0 gir1.2-ibus-1.0
+  gir1.2-mutter-3.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0 gir1.2-soup-2.4
+  gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2 gir1.2-xkl-1.0 gjs
+  gnome-bluetooth gnome-settings-daemon gnome-shell gnome-shell-common
+  gnome-themes-standard gnome-themes-standard-data libbluetooth3 libcamel-1.2-43
+  libcaribou-common libcaribou0 libebackend-1.2-6 libebook-1.2-14
+  libebook-contacts-1.2-0 libecal-1.2-15 libedata-book-1.2-17 libedata-cal-1.2-20
+  libedataserver-1.2-17 libgdata-common libgdata13 libgdm1 libgnome-menu-3-0
+  libgoa-1.0-0 libgoa-1.0-common libgweather-3-3 libgweather-common libibus-1.0-5
+  libical0 libmission-control-plugins0 libmutter0b liboauth0 libopenobex1
+  libpackagekit-glib2-16 libpulse-mainloop-glib0 librest-0.7-0 libsoup-gnome2.4-1
+  libtelepathy-glib0 libtelepathy-logger3 libwacom-common libwacom2 mutter-common
+  obex-data-server obexd-client telepathy-mission-control-5
+Suggested packages:
+  evolution evolution-data-server-dbg gnome-orca gnome-user-share telepathy-haze
+Recommended packages:
+  zenity gvfs-backends gnome-control-center pulseaudio gkbd-capplet gnome-contacts
+  gnome-user-guide gtk2-engines-pixbuf gnome-accessibility-themes packagekit
+The following NEW packages will be installed:
+  bluez dconf-cli evolution-data-server evolution-data-server-common gdm3
+  gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-gck-1 gir1.2-gcr-3
+  gir1.2-gdesktopenums-3.0 gir1.2-gdm3 gir1.2-gkbd-3.0 gir1.2-gmenu-3.0
+  gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0 gir1.2-ibus-1.0
+  gir1.2-mutter-3.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0 gir1.2-soup-2.4
+  gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2 gir1.2-xkl-1.0 gjs
+  gnome-bluetooth gnome-settings-daemon gnome-shell gnome-shell-common
+  gnome-themes-standard gnome-themes-standard-data libbluetooth3 libcamel-1.2-43
+  libcaribou-common libcaribou0 libebackend-1.2-6 libebook-1.2-14
+  libebook-contacts-1.2-0 libecal-1.2-15 libedata-book-1.2-17 libedata-cal-1.2-20
+  libedataserver-1.2-17 libgdata-common libgdata13 libgdm1 libgnome-menu-3-0
+  libgoa-1.0-0 libgoa-1.0-common libgweather-3-3 libgweather-common libibus-1.0-5
+  libical0 libmission-control-plugins0 libmutter0b liboauth0 libopenobex1
+  libpackagekit-glib2-16 libpulse-mainloop-glib0 librest-0.7-0 libsoup-gnome2.4-1
+  libtelepathy-glib0 libtelepathy-logger3 libwacom-common libwacom2 mutter-common
+  obex-data-server obexd-client telepathy-mission-control-5
+0 upgraded, 67 newly installed, 0 to remove and 45 not upgraded.
+Need to get 0 B/31.0 MB of archives.
+After this operation, 90.8 MB of additional disk space will be used.
+&lt;/pre&gt;
+&lt;p&gt;GNOME philosophy tends towards tight integration, leading to things
+being not as modular as I would like: how could a display manager end
+up depending on a Contacts tool, or the Bluetooth stack. It may
+be just how it was built in Debian, but that also means there
+were build options that allowed such tight coupling in the first
+place. GDM has served me well for years, but I'm not interested in all
+those tools it brings with.&lt;/p&gt;
+&lt;p&gt;Anyways, enough with that. I added a custom &lt;tt class="docutils literal"&gt;.desktop&lt;/tt&gt; file which will
+become selectable on LightDM UI:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ cat /usr/share/xsessions/custom.desktop
+[Desktop Entry]
+Name=Custom
+Exec=/etc/X11/Xsession
+Type=XSession
+&lt;/pre&gt;
+&lt;p&gt;On selecting the entry labeled &lt;strong&gt;Custom&lt;/strong&gt; that appears on LightDM,
+and logging in, the following will get executed (&lt;a class="reference external" href="https://bitbucket.org/tshepang/custom/src/tip/xsession"&gt;~/.xsession&lt;/a&gt;):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# apps&lt;/span&gt;
+xfce4-terminal --hide-menubar --tab --tab --tab &amp;amp;
+firefox &amp;amp;
+nautilus --no-desktop &amp;amp;
+nm-applet &amp;amp;
+trayer --edge top --align right --widthtype request --distance 15 &amp;amp;
+quodlibet &amp;amp;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$HOSTNAME&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;twork&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;; &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="k"&gt;   &lt;/span&gt;icedove &amp;amp;
+&lt;span class="k"&gt;fi&lt;/span&gt;
+
+&lt;span class="c"&gt;# settings&lt;/span&gt;
+xset b off
+xmodmap -e &lt;span class="s2"&gt;&amp;quot;clear Lock&amp;quot;&lt;/span&gt;
+xmodmap -e &lt;span class="s2"&gt;&amp;quot;keycode 66 = Super_L&amp;quot;&lt;/span&gt;
+
+&lt;span class="c"&gt;# host-specific settings&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$HOSTNAME&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;twork&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;; &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="k"&gt;    &lt;/span&gt;xrandr --output VGA-0 --output DVI-0 --right-of VGA-0
+&lt;span class="k"&gt;else&lt;/span&gt;
+&lt;span class="k"&gt;    &lt;/span&gt;synclient &lt;span class="nv"&gt;TapButton1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1
+    synclient &lt;span class="nv"&gt;ClickFinger2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;2
+    syndaemon -dti 1
+&lt;span class="k"&gt;fi&lt;/span&gt;
+
+&lt;span class="c"&gt;# clock&lt;/span&gt;
+&lt;span class="k"&gt;while &lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;; &lt;span class="k"&gt;do&lt;/span&gt;
+&lt;span class="k"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt; date +&lt;span class="s2"&gt;&amp;quot;%F %R&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;if &lt;/span&gt;acpi -a | grep off-line &amp;gt; /dev/null; &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="k"&gt;        &lt;/span&gt;&lt;span class="nv"&gt;battery&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt; python -c
+        &lt;span class="s2"&gt;&amp;quot;print(\&amp;quot;$(acpi)\&amp;quot;.split(&amp;#39;,&amp;#39;)[1].strip())&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;)&lt;/span&gt;
+        xsetroot -name &lt;span class="s2"&gt;&amp;quot;$battery&amp;quot;&amp;quot; | &amp;quot;&amp;quot;$datetime&amp;quot;&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;
+&lt;span class="k"&gt;        &lt;/span&gt;xsetroot -name &lt;span class="s2"&gt;&amp;quot;$datetime&amp;quot;&lt;/span&gt;
+    &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="k"&gt;    &lt;/span&gt;sleep 1m
+&lt;span class="k"&gt;done&lt;/span&gt; &amp;amp;
+
+&lt;span class="nb"&gt;exec &lt;/span&gt;dwm
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Finally, this is what my dwm config changes look like (&lt;a class="reference external" href="https://bitbucket.org/tshepang/custom/src/tip/config.def.h"&gt;config.def.h&lt;/a&gt;):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+diff --git a/config.def.h b/config.def.h
+index 77ff358..78af5d6 100644
+--- a/config.def.h
++++ b/config.def.h
+&amp;#64;&amp;#64; -14,12 +14,15 &amp;#64;&amp;#64; static const Bool showbar           = True;     /*
+False means no bar */
+ static const Bool topbar            = True;     /* False means bottom
+ bar */
+
+ /* tagging */
+-static const char *tags[] = { &amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;,
+&amp;quot;9&amp;quot; };
++static const char *tags[] = { &amp;quot;web&amp;quot;, &amp;quot;files&amp;quot;, &amp;quot;terminal&amp;quot;, &amp;quot;misc&amp;quot; };
+
+ static const Rule rules[] = {
+-       /* class      instance    title       tags mask     isfloating
+        monitor */
+-       { &amp;quot;Gimp&amp;quot;,     NULL,       NULL,       0,
+        True,        -1 },
+-       { &amp;quot;Firefox&amp;quot;,  NULL,       NULL,       1 &amp;lt;&amp;lt; 8,
+        False,       -1 },
++  /* class             instance  title  tags mask  isfloating
+   monitor */
++  { &amp;quot;Iceweasel&amp;quot;,       NULL,     NULL,  1 &amp;lt;&amp;lt; 0,    False,       -1 },
++  { &amp;quot;trayer&amp;quot;,          NULL,     NULL,  1 &amp;lt;&amp;lt; 0,    False,       -1 },
++  { &amp;quot;Nautilus&amp;quot;,        NULL,     NULL,  1 &amp;lt;&amp;lt; 1,    False,       -1 },
++  { &amp;quot;Xfce4-terminal&amp;quot;,  NULL,     NULL,  1 &amp;lt;&amp;lt; 2,    False,       -1 },
++  { &amp;quot;Quodlibet&amp;quot;,       NULL,     NULL,  1 &amp;lt;&amp;lt; 3,    False,       -1 },
+ };
+
+ /* layout(s) */
+&amp;#64;&amp;#64; -35,7 +38,7 &amp;#64;&amp;#64; static const Layout layouts[] = {
+ };
+
+ /* key definitions */
+-#define MODKEY Mod1Mask
++#define MODKEY Mod4Mask
+ #define TAGKEYS(KEY,TAG) \
+        { MODKEY,                       KEY,      view,           {.ui
+        = 1 &amp;lt;&amp;lt; TAG} }, \
+        { MODKEY|ControlMask,           KEY,      toggleview,     {.ui
+        = 1 &amp;lt;&amp;lt; TAG} }, \
+&amp;#64;&amp;#64; -47,7 +50,7 &amp;#64;&amp;#64; static const Layout layouts[] = {
+
+ /* commands */
+ static const char *dmenucmd[] = { &amp;quot;dmenu_run&amp;quot;, &amp;quot;-fn&amp;quot;, font, &amp;quot;-nb&amp;quot;,
+ normbgcolor, &amp;quot;-nf&amp;quot;, normfgcolor, &amp;quot;-sb&amp;quot;, selbgcolor, &amp;quot;-sf&amp;quot;,
+ selfgcolor, NULL };
+-static const char *termcmd[]  = { &amp;quot;uxterm&amp;quot;, NULL };
++static const char *termcmd[]  = { &amp;quot;xfce4-terminal&amp;quot;, &amp;quot;--hide-menubar&amp;quot;
+};
+
+ static Key keys[] = {
+        /* modifier                     key        function
+        argument */
+&lt;/pre&gt;
+&lt;p&gt;Note that this diff is against the Debian package (version &lt;strong&gt;6.0-6&lt;/strong&gt;). I
+could not change the modifier key with the upstream version of dwm.&lt;/p&gt;
+&lt;p&gt;You will notice that I'm still using one major GNOME package,
+Nautilus, the file browser. It remains my favorite.&lt;/p&gt;
+</summary><category term="GNOME"></category><category term="Debian"></category></entry><entry><title>Sony Vaio Pro 13 (SVP13212SGBI)</title><link href="http://tshepang.net/sony-vaio-pro-13-svp13212sgbi" rel="alternate"></link><updated>2014-02-16T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-02-16:sony-vaio-pro-13-svp13212sgbi</id><summary type="html">&lt;p&gt;On &lt;strong&gt;2014-02-13&lt;/strong&gt; I went to collect &lt;a class="reference external" href="http://www.laptopdirect.co.za/Sony-VAIO-SVP-13212SGBI-lp-78188.php"&gt;the laptop&lt;/a&gt;, which I paid
+around R12500 for (~$1200). It's a 4GB RAM, 128GB SSD, FHD model. I
 would have happily paid for more RAM and storage, but this seems the
 only model available in my home country. I am glad that it's also not
 a touch screen. I don't need that kind of reflection.&lt;/p&gt;
@@ -159,183 +349,7 @@ attractive of all political theories I've yet encountered.&lt;/p&gt;
 &lt;p&gt;So, with a disclaimer that I am largely ignorant of world events, Noam
 Chomsky takes the place of Nelson Mandela as &lt;strong&gt;the living individual I
 admire the most&lt;/strong&gt;.&lt;/p&gt;
-</summary><category term="Anarchism"></category></entry><entry><title>my current desktop setup</title><link href="http://tshepang.net/my-current-desktop-setup" rel="alternate"></link><updated>2013-12-11T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-12-11:my-current-desktop-setup</id><summary type="html">&lt;p&gt;With recent Debian GNOME updates, something got broken enough that I
-could not login to my account. I saw this as a good
-opportunity to finally try something other than GNOME as my primary
-environment on my home machine. I have before tinkered with other GUI
-environments (XFCE, KDE 3, FluxBox, LXDE, and most recently, Window
-Maker), but not for long. But I think this time I will actually
-abandon GNOME permanently, after nearly a decade of use.&lt;/p&gt;
-&lt;p&gt;I been playing with &lt;a class="reference external" href="http://dwm.suckless.org"&gt;dwm&lt;/a&gt; for the past few weeks, and the experience
-has convinced me to stay. I am attracted to the philosophy of
-minimalism, though I find they do take things a bit far in requiring
-users to tinker with C source code in order to configure it. Luckily
-it's not hard, and there's examples out there. It just takes a while
-since there isn't a comprehensive guide I could find.&lt;/p&gt;
-&lt;p&gt;For my login manager, I use &lt;a class="reference external" href="http://www.freedesktop.org/wiki/Software/LightDM"&gt;LightDM&lt;/a&gt;. I added this line to its
-configuration, in &lt;tt class="docutils literal"&gt;[SeatDefaults]&lt;/tt&gt; section:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-greeter-hide-users=false
-&lt;/pre&gt;
-&lt;p&gt;It removes the need to manually enter my username each time I want to
-login.&lt;/p&gt;
-&lt;p&gt;Reason I'm not using GDM? I wanted something light, which also
-wouldn't pull in dozens of packages that I won't use. For example:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-$ sudo apt-get install --no-install-recommends gdm3
-Reading package lists... Done
-Building dependency tree
-Reading state information... Done
-The following extra packages will be installed:
-  bluez dconf-cli evolution-data-server evolution-data-server-common
-  gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-gck-1 gir1.2-gcr-3
-  gir1.2-gdesktopenums-3.0 gir1.2-gdm3 gir1.2-gkbd-3.0 gir1.2-gmenu-3.0
-  gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0 gir1.2-ibus-1.0
-  gir1.2-mutter-3.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0 gir1.2-soup-2.4
-  gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2 gir1.2-xkl-1.0 gjs
-  gnome-bluetooth gnome-settings-daemon gnome-shell gnome-shell-common
-  gnome-themes-standard gnome-themes-standard-data libbluetooth3 libcamel-1.2-43
-  libcaribou-common libcaribou0 libebackend-1.2-6 libebook-1.2-14
-  libebook-contacts-1.2-0 libecal-1.2-15 libedata-book-1.2-17 libedata-cal-1.2-20
-  libedataserver-1.2-17 libgdata-common libgdata13 libgdm1 libgnome-menu-3-0
-  libgoa-1.0-0 libgoa-1.0-common libgweather-3-3 libgweather-common libibus-1.0-5
-  libical0 libmission-control-plugins0 libmutter0b liboauth0 libopenobex1
-  libpackagekit-glib2-16 libpulse-mainloop-glib0 librest-0.7-0 libsoup-gnome2.4-1
-  libtelepathy-glib0 libtelepathy-logger3 libwacom-common libwacom2 mutter-common
-  obex-data-server obexd-client telepathy-mission-control-5
-Suggested packages:
-  evolution evolution-data-server-dbg gnome-orca gnome-user-share telepathy-haze
-Recommended packages:
-  zenity gvfs-backends gnome-control-center pulseaudio gkbd-capplet gnome-contacts
-  gnome-user-guide gtk2-engines-pixbuf gnome-accessibility-themes packagekit
-The following NEW packages will be installed:
-  bluez dconf-cli evolution-data-server evolution-data-server-common gdm3
-  gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-gck-1 gir1.2-gcr-3
-  gir1.2-gdesktopenums-3.0 gir1.2-gdm3 gir1.2-gkbd-3.0 gir1.2-gmenu-3.0
-  gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0 gir1.2-ibus-1.0
-  gir1.2-mutter-3.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0 gir1.2-soup-2.4
-  gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2 gir1.2-xkl-1.0 gjs
-  gnome-bluetooth gnome-settings-daemon gnome-shell gnome-shell-common
-  gnome-themes-standard gnome-themes-standard-data libbluetooth3 libcamel-1.2-43
-  libcaribou-common libcaribou0 libebackend-1.2-6 libebook-1.2-14
-  libebook-contacts-1.2-0 libecal-1.2-15 libedata-book-1.2-17 libedata-cal-1.2-20
-  libedataserver-1.2-17 libgdata-common libgdata13 libgdm1 libgnome-menu-3-0
-  libgoa-1.0-0 libgoa-1.0-common libgweather-3-3 libgweather-common libibus-1.0-5
-  libical0 libmission-control-plugins0 libmutter0b liboauth0 libopenobex1
-  libpackagekit-glib2-16 libpulse-mainloop-glib0 librest-0.7-0 libsoup-gnome2.4-1
-  libtelepathy-glib0 libtelepathy-logger3 libwacom-common libwacom2 mutter-common
-  obex-data-server obexd-client telepathy-mission-control-5
-0 upgraded, 67 newly installed, 0 to remove and 45 not upgraded.
-Need to get 0 B/31.0 MB of archives.
-After this operation, 90.8 MB of additional disk space will be used.
-&lt;/pre&gt;
-&lt;p&gt;GNOME philosophy tends towards tight integration, leading to things
-being not as modular as I would like: how could a display manager end
-up depending on a Contacts tool, or the Bluetooth stack. It may
-be just how it was built in Debian, but that also means there
-were build options that allowed such tight coupling in the first
-place. GDM has served me well for years, but I'm not interested in all
-those tools it brings with.&lt;/p&gt;
-&lt;p&gt;Anyways, enough with that. I added a custom &lt;cite&gt;.desktop&lt;/cite&gt; file which will
-become selectable on LightDM UI:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-$ cat /usr/share/xsessions/custom.desktop
-[Desktop Entry]
-Name=Custom
-Exec=/etc/X11/Xsession
-Type=XSession
-&lt;/pre&gt;
-&lt;p&gt;On selecting the entry labeled &lt;tt class="docutils literal"&gt;Custom&lt;/tt&gt; that appears on LightDM,
-and logging in, the following will get executed (&lt;a class="reference external" href="https://bitbucket.org/tshepang/custom/src/tip/xsession"&gt;~/.xsession&lt;/a&gt;):&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# apps&lt;/span&gt;
-gnome-terminal --hide-menubar &lt;span class="se"&gt;\&lt;/span&gt;
-               --tab-with-profile&lt;span class="o"&gt;=&lt;/span&gt;Default &lt;span class="se"&gt;\&lt;/span&gt;
-               --tab-with-profile&lt;span class="o"&gt;=&lt;/span&gt;Default &lt;span class="se"&gt;\&lt;/span&gt;
-               --tab-with-profile&lt;span class="o"&gt;=&lt;/span&gt;Default &lt;span class="se"&gt;\&lt;/span&gt;
-               --tab-with-profile&lt;span class="o"&gt;=&lt;/span&gt;Default &amp;amp;
-firefox &amp;amp;
-nautilus --no-desktop &amp;amp;
-nm-applet &amp;amp;
-trayer --edge top --align right --widthtype request --distance 18 &amp;amp;
-quodlibet &amp;amp;
-&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$HOSTNAME&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;twork&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;; &lt;span class="k"&gt;then&lt;/span&gt;
-&lt;span class="k"&gt;   &lt;/span&gt;icedove &amp;amp;
-&lt;span class="k"&gt;fi&lt;/span&gt;
-
-&lt;span class="c"&gt;# settings&lt;/span&gt;
-xset b off
-xmodmap -e &lt;span class="s2"&gt;&amp;quot;clear Lock&amp;quot;&lt;/span&gt;
-xmodmap -e &lt;span class="s2"&gt;&amp;quot;keycode 66 = Super_L&amp;quot;&lt;/span&gt;
-
-&lt;span class="c"&gt;# host-specific settings&lt;/span&gt;
-&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$HOSTNAME&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;twork&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;; &lt;span class="k"&gt;then&lt;/span&gt;
-&lt;span class="k"&gt;    &lt;/span&gt;xrandr --output DVI-0 --mode 1920x1080 --pos 1920x0 --rotate normal &lt;span class="se"&gt;\&lt;/span&gt;
-           --output VGA-0 --mode 1920x1080 --pos    0x0 --rotate normal
-&lt;span class="k"&gt;else&lt;/span&gt;
-&lt;span class="k"&gt;    &lt;/span&gt;synclient &lt;span class="nv"&gt;TapButton1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1
-    synclient &lt;span class="nv"&gt;ClickFinger2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;2
-    syndaemon -dti 1
-&lt;span class="k"&gt;fi&lt;/span&gt;
-
-&lt;span class="c"&gt;# clock&lt;/span&gt;
-&lt;span class="k"&gt;while &lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;; &lt;span class="k"&gt;do&lt;/span&gt;
-&lt;span class="k"&gt;   &lt;/span&gt;xsetroot -name &lt;span class="s2"&gt;&amp;quot;$( date +&amp;quot;&lt;/span&gt;%F %R&lt;span class="s2"&gt;&amp;quot; )&amp;quot;&lt;/span&gt;
-   sleep 1m
-&lt;span class="k"&gt;done&lt;/span&gt; &amp;amp;
-
-&lt;span class="nb"&gt;exec &lt;/span&gt;dwm
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Finally, this is what my dwm config changes look like (&lt;a class="reference external" href="https://bitbucket.org/tshepang/custom/src/tip/config.def.h"&gt;config.def.h&lt;/a&gt;):&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-diff -r e0ab1aa61eab config.def.h
---- a/config.def.h  Fri Dec 06 08:16:40 2013 +0200
-+++ b/config.def.h  Fri Dec 06 08:18:26 2013 +0200
-&amp;#64;&amp;#64; -14,12 +14,17 &amp;#64;&amp;#64;
- static const Bool topbar            = True;     /* False means bottom bar */
-
- /* tagging */
--static const char *tags[] = { &amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;, &amp;quot;9&amp;quot; };
-+static const char *tags[] = { &amp;quot;web&amp;quot;, &amp;quot;files&amp;quot;, &amp;quot;terminal&amp;quot;, &amp;quot;misc&amp;quot;, &amp;quot;music&amp;quot; };
-
- static const Rule rules[] = {
--   /* class      instance    title       tags mask     isfloating   monitor */
--   { &amp;quot;Gimp&amp;quot;,       NULL,       NULL,       0,            True,        -1 },
--   { &amp;quot;Iceweasel&amp;quot;,  NULL,       NULL,       1 &amp;lt;&amp;lt; 8,       False,       -1 },
-+  /* class             instance  title  tags mask  isfloating   monitor */
-+  { &amp;quot;Firefox&amp;quot;,         NULL,     NULL,  1 &amp;lt;&amp;lt; 0,    False,       -1 },
-+  { &amp;quot;trayer&amp;quot;,          NULL,     NULL,  1 &amp;lt;&amp;lt; 0,    False,       -1 },
-+  { &amp;quot;Nautilus&amp;quot;,        NULL,     NULL,  1 &amp;lt;&amp;lt; 1,    False,       -1 },
-+  { &amp;quot;Gnome-terminal&amp;quot;,  NULL,     NULL,  1 &amp;lt;&amp;lt; 2,    False,       -1 },
-+  { &amp;quot;Liferea&amp;quot;,         NULL,     NULL,  1 &amp;lt;&amp;lt; 3,    False,       -1 },
-+  { &amp;quot;Meld&amp;quot;,            NULL,     NULL,  1 &amp;lt;&amp;lt; 3,    False,       -1 },
-+  { &amp;quot;Quodlibet&amp;quot;,       NULL,     NULL,  1 &amp;lt;&amp;lt; 4,    False,       -1 },
- };
-
- /* layout(s) */
-&amp;#64;&amp;#64; -35,7 +40,7 &amp;#64;&amp;#64;
- };
-
- /* key definitions */
--#define MODKEY Mod1Mask
-+#define MODKEY Mod4Mask
- #define TAGKEYS(KEY,TAG) \
-        { MODKEY,                       KEY,      view,           {.ui = 1 &amp;lt;&amp;lt; TAG} }, \
-        { MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 &amp;lt;&amp;lt; TAG} }, \
-&amp;#64;&amp;#64; -47,7 +52,7 &amp;#64;&amp;#64;
-
- /* commands */
- static const char *dmenucmd[] = { &amp;quot;dmenu_run&amp;quot;, &amp;quot;-fn&amp;quot;, font, &amp;quot;-nb&amp;quot;, normbgcolor, &amp;quot;-nf&amp;quot;, normfgcolor, &amp;quot;-sb&amp;quot;, selbgcolor, &amp;quot;-sf&amp;quot;, selfgcolor, NULL };
--static const char *termcmd[]  = { &amp;quot;x-terminal-emulator&amp;quot;, NULL };
-+static const char *termcmd[]  = { &amp;quot;gnome-terminal&amp;quot;, &amp;quot;--hide-menubar&amp;quot; };
-
- static Key keys[] = {
-        /* modifier                     key        function        argument */
-&lt;/pre&gt;
-&lt;p&gt;Note that this diff is against the Debian package (version &lt;strong&gt;6.0-6&lt;/strong&gt;). I
-could not change the modifer key with the upstream version of dwm.&lt;/p&gt;
-&lt;p&gt;You will notice that I'm still using some GNOME packages, specifically
-Nautilus and GNOME Terminal, both of which remain my favorites.&lt;/p&gt;
-</summary><category term="GNOME"></category><category term="Debian"></category></entry><entry><title>Still Grazing (2004)</title><link href="http://tshepang.net/still-grazing-2004" rel="alternate"></link><updated>2013-12-02T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-12-02:still-grazing-2004</id><summary type="html">&lt;p&gt;My favorites from this, the best album by Hugh Masekela:&lt;/p&gt;
+</summary><category term="Anarchism"></category></entry><entry><title>Still Grazing (2004)</title><link href="http://tshepang.net/still-grazing-2004" rel="alternate"></link><updated>2013-12-02T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-12-02:still-grazing-2004</id><summary type="html">&lt;p&gt;My favorites from this, the best album by Hugh Masekela:&lt;/p&gt;
 &lt;ol class="arabic"&gt;
 &lt;li&gt;&lt;p class="first"&gt;track 2 - &lt;strong&gt;Ha Lese Le Di Khanna&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;A remake of a track from Masekela's 1993 album, &lt;em&gt;Hope&lt;/em&gt;. It's far

@@ -16,45 +16,13 @@ triggers along the way.&lt;/li&gt;
 done some thing that I truly appreciate.  At times, I fail to put
 into words just how much.&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="developer-of-note"></category></entry><entry><title>Sony Vaio Pro 13 (SVP13212SGBI)</title><link href="http://tshepang.net/sony-vaio-pro-13-svp13212sgbi" rel="alternate"></link><updated>2014-02-16T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-02-16:sony-vaio-pro-13-svp13212sgbi</id><summary type="html">&lt;p&gt;On &lt;strong&gt;2014-02-13&lt;/strong&gt; I went to collect &lt;a class="reference external" href="http://www.laptopdirect.co.za/Sony-VAIO-SVP-13212SGBI-lp-78188.php"&gt;the laptop&lt;/a&gt;, which I paid
-around R12500 for (~$1200). It's a 4GB RAM, 128GB SSD model, and I
-would have happily paid for more RAM and storage, but this seems the
-only model available in my home country. I am glad that it's also not
-a touch screen. I don't need that kind of reflection.&lt;/p&gt;
-&lt;p&gt;Anyways, there was much pain involved trying to get it to work. I
-struggled to get Debian booting, and I don't know what I did wrong
-because after a few attempts of trying this and that, things
-worked. And man, that SSD is fast: it takes 6-7 seconds to GUI login
-screen. Package installation is also insane fast.&lt;/p&gt;
-&lt;p&gt;There was much pain trying to get audio to work. Luckily &lt;a class="reference external" href="https://wiki.archlinux.org/index.php/Sony_Vaio_Pro_SVP-1x21#Sound"&gt;I got some
-help&lt;/a&gt;, where I needed to change two lines in
-&lt;cite&gt;/usr/share/alsa/alsa.conf&lt;/cite&gt;. VLC video didn't work well either, but I
-needed only change Video Output to &lt;strong&gt;OpenGL GLX video output (XCB)&lt;/strong&gt;,
-and all was well.&lt;/p&gt;
-</summary><category term="hardware"></category></entry><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2014-01-17T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-01-17:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
-I do celebrate each time I see a project use it. So, here I list the
-most notable projects I am aware of that do, which also gives me hope
-that it isn't being suffocated too much by Git:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://hg.mozilla.org/mozilla-central"&gt;Firefox&lt;/a&gt;, world number 3 desktop web browser (number of users)&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://hg.python.org/cpython"&gt;CPython&lt;/a&gt; and &lt;a class="reference external" href="https://bitbucket.org/pypy/pypy"&gt;PyPy&lt;/a&gt;, the most important implementations of a top 10
-popular programming language&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://hg.openjdk.java.net"&gt;OpenJDK&lt;/a&gt;, the top open source implementation of the Java platform&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://bitbucket.org/birkenfeld/sphinx"&gt;Sphinx&lt;/a&gt;, documentation generator used in most Python projects&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;And those which are not FLOSS (i.e. proprietary):&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook"&gt;Facebook&lt;/a&gt;, world number 2 website in terms of visitor numbers&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://stackoverflow.com"&gt;Stack Overflow&lt;/a&gt;, top web destination website for software
-developers&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="VCS"></category><category term="non-FLOSS"></category><category term="list"></category></entry><entry><title>my current desktop setup</title><link href="http://tshepang.net/my-current-desktop-setup" rel="alternate"></link><updated>2013-12-11T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-12-11:my-current-desktop-setup</id><summary type="html">&lt;p&gt;With recent Debian GNOME updates, something got broken enough that I
-could not login to my account. I saw this as a good
+</summary><category term="developer-of-note"></category></entry><entry><title>my current desktop setup</title><link href="http://tshepang.net/my-current-desktop-setup" rel="alternate"></link><updated>2014-02-16T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-02-16:my-current-desktop-setup</id><summary type="html">&lt;p&gt;With recent Debian GNOME updates (late 2013), something got broken
+enough that I could not login to my account. I saw this as a good
 opportunity to finally try something other than GNOME as my primary
-environment on my home machine. I have before tinkered with other GUI
-environments (XFCE, KDE 3, FluxBox, LXDE, and most recently, Window
-Maker), but not for long. But I think this time I will actually
-abandon GNOME permanently, after nearly a decade of use.&lt;/p&gt;
+environment on my home and work machines. I have before tinkered with
+other GUI environments (XFCE, KDE 3, FluxBox, LXDE, and most recently,
+Window Maker), but none lasted very long. But I think this time I will
+actually abandon GNOME permanently, after nearly a decade of use.&lt;/p&gt;
 &lt;p&gt;I been playing with &lt;a class="reference external" href="http://dwm.suckless.org"&gt;dwm&lt;/a&gt; for the past few weeks, and the experience
 has convinced me to stay. I am attracted to the philosophy of
 minimalism, though I find they do take things a bit far in requiring
@@ -125,7 +93,7 @@ be just how it was built in Debian, but that also means there
 were build options that allowed such tight coupling in the first
 place. GDM has served me well for years, but I'm not interested in all
 those tools it brings with.&lt;/p&gt;
-&lt;p&gt;Anyways, enough with that. I added a custom &lt;cite&gt;.desktop&lt;/cite&gt; file which will
+&lt;p&gt;Anyways, enough with that. I added a custom &lt;tt class="docutils literal"&gt;.desktop&lt;/tt&gt; file which will
 become selectable on LightDM UI:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 $ cat /usr/share/xsessions/custom.desktop
@@ -134,18 +102,14 @@ Name=Custom
 Exec=/etc/X11/Xsession
 Type=XSession
 &lt;/pre&gt;
-&lt;p&gt;On selecting the entry labeled &lt;tt class="docutils literal"&gt;Custom&lt;/tt&gt; that appears on LightDM,
+&lt;p&gt;On selecting the entry labeled &lt;strong&gt;Custom&lt;/strong&gt; that appears on LightDM,
 and logging in, the following will get executed (&lt;a class="reference external" href="https://bitbucket.org/tshepang/custom/src/tip/xsession"&gt;~/.xsession&lt;/a&gt;):&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# apps&lt;/span&gt;
-gnome-terminal --hide-menubar &lt;span class="se"&gt;\&lt;/span&gt;
-               --tab-with-profile&lt;span class="o"&gt;=&lt;/span&gt;Default &lt;span class="se"&gt;\&lt;/span&gt;
-               --tab-with-profile&lt;span class="o"&gt;=&lt;/span&gt;Default &lt;span class="se"&gt;\&lt;/span&gt;
-               --tab-with-profile&lt;span class="o"&gt;=&lt;/span&gt;Default &lt;span class="se"&gt;\&lt;/span&gt;
-               --tab-with-profile&lt;span class="o"&gt;=&lt;/span&gt;Default &amp;amp;
+xfce4-terminal --hide-menubar --tab --tab --tab &amp;amp;
 firefox &amp;amp;
 nautilus --no-desktop &amp;amp;
 nm-applet &amp;amp;
-trayer --edge top --align right --widthtype request --distance 18 &amp;amp;
+trayer --edge top --align right --widthtype request --distance 15 &amp;amp;
 quodlibet &amp;amp;
 &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$HOSTNAME&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;twork&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;; &lt;span class="k"&gt;then&lt;/span&gt;
 &lt;span class="k"&gt;   &lt;/span&gt;icedove &amp;amp;
@@ -158,8 +122,7 @@ xmodmap -e &lt;span class="s2"&gt;&amp;quot;keycode 66 = Super_L&amp;quot;&lt;/s
 
 &lt;span class="c"&gt;# host-specific settings&lt;/span&gt;
 &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$HOSTNAME&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;twork&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;; &lt;span class="k"&gt;then&lt;/span&gt;
-&lt;span class="k"&gt;    &lt;/span&gt;xrandr --output DVI-0 --mode 1920x1080 --pos 1920x0 --rotate normal &lt;span class="se"&gt;\&lt;/span&gt;
-           --output VGA-0 --mode 1920x1080 --pos    0x0 --rotate normal
+&lt;span class="k"&gt;    &lt;/span&gt;xrandr --output VGA-0 --output DVI-0 --right-of VGA-0
 &lt;span class="k"&gt;else&lt;/span&gt;
 &lt;span class="k"&gt;    &lt;/span&gt;synclient &lt;span class="nv"&gt;TapButton1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1
     synclient &lt;span class="nv"&gt;ClickFinger2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;2
@@ -168,63 +131,114 @@ xmodmap -e &lt;span class="s2"&gt;&amp;quot;keycode 66 = Super_L&amp;quot;&lt;/s
 
 &lt;span class="c"&gt;# clock&lt;/span&gt;
 &lt;span class="k"&gt;while &lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;; &lt;span class="k"&gt;do&lt;/span&gt;
-&lt;span class="k"&gt;   &lt;/span&gt;xsetroot -name &lt;span class="s2"&gt;&amp;quot;$( date +&amp;quot;&lt;/span&gt;%F %R&lt;span class="s2"&gt;&amp;quot; )&amp;quot;&lt;/span&gt;
-   sleep 1m
+&lt;span class="k"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt; date +&lt;span class="s2"&gt;&amp;quot;%F %R&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;if &lt;/span&gt;acpi -a | grep off-line &amp;gt; /dev/null; &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="k"&gt;        &lt;/span&gt;&lt;span class="nv"&gt;battery&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt; python -c
+        &lt;span class="s2"&gt;&amp;quot;print(\&amp;quot;$(acpi)\&amp;quot;.split(&amp;#39;,&amp;#39;)[1].strip())&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;)&lt;/span&gt;
+        xsetroot -name &lt;span class="s2"&gt;&amp;quot;$battery&amp;quot;&amp;quot; | &amp;quot;&amp;quot;$datetime&amp;quot;&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;
+&lt;span class="k"&gt;        &lt;/span&gt;xsetroot -name &lt;span class="s2"&gt;&amp;quot;$datetime&amp;quot;&lt;/span&gt;
+    &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="k"&gt;    &lt;/span&gt;sleep 1m
 &lt;span class="k"&gt;done&lt;/span&gt; &amp;amp;
 
 &lt;span class="nb"&gt;exec &lt;/span&gt;dwm
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Finally, this is what my dwm config changes look like (&lt;a class="reference external" href="https://bitbucket.org/tshepang/custom/src/tip/config.def.h"&gt;config.def.h&lt;/a&gt;):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-diff -r e0ab1aa61eab config.def.h
---- a/config.def.h  Fri Dec 06 08:16:40 2013 +0200
-+++ b/config.def.h  Fri Dec 06 08:18:26 2013 +0200
-&amp;#64;&amp;#64; -14,12 +14,17 &amp;#64;&amp;#64;
- static const Bool topbar            = True;     /* False means bottom bar */
+diff --git a/config.def.h b/config.def.h
+index 77ff358..78af5d6 100644
+--- a/config.def.h
++++ b/config.def.h
+&amp;#64;&amp;#64; -14,12 +14,15 &amp;#64;&amp;#64; static const Bool showbar           = True;     /*
+False means no bar */
+ static const Bool topbar            = True;     /* False means bottom
+ bar */
 
  /* tagging */
--static const char *tags[] = { &amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;, &amp;quot;9&amp;quot; };
-+static const char *tags[] = { &amp;quot;web&amp;quot;, &amp;quot;files&amp;quot;, &amp;quot;terminal&amp;quot;, &amp;quot;misc&amp;quot;, &amp;quot;music&amp;quot; };
+-static const char *tags[] = { &amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;,
+&amp;quot;9&amp;quot; };
++static const char *tags[] = { &amp;quot;web&amp;quot;, &amp;quot;files&amp;quot;, &amp;quot;terminal&amp;quot;, &amp;quot;misc&amp;quot; };
 
  static const Rule rules[] = {
--   /* class      instance    title       tags mask     isfloating   monitor */
--   { &amp;quot;Gimp&amp;quot;,       NULL,       NULL,       0,            True,        -1 },
--   { &amp;quot;Iceweasel&amp;quot;,  NULL,       NULL,       1 &amp;lt;&amp;lt; 8,       False,       -1 },
-+  /* class             instance  title  tags mask  isfloating   monitor */
-+  { &amp;quot;Firefox&amp;quot;,         NULL,     NULL,  1 &amp;lt;&amp;lt; 0,    False,       -1 },
+-       /* class      instance    title       tags mask     isfloating
+        monitor */
+-       { &amp;quot;Gimp&amp;quot;,     NULL,       NULL,       0,
+        True,        -1 },
+-       { &amp;quot;Firefox&amp;quot;,  NULL,       NULL,       1 &amp;lt;&amp;lt; 8,
+        False,       -1 },
++  /* class             instance  title  tags mask  isfloating
+   monitor */
++  { &amp;quot;Iceweasel&amp;quot;,       NULL,     NULL,  1 &amp;lt;&amp;lt; 0,    False,       -1 },
 +  { &amp;quot;trayer&amp;quot;,          NULL,     NULL,  1 &amp;lt;&amp;lt; 0,    False,       -1 },
 +  { &amp;quot;Nautilus&amp;quot;,        NULL,     NULL,  1 &amp;lt;&amp;lt; 1,    False,       -1 },
-+  { &amp;quot;Gnome-terminal&amp;quot;,  NULL,     NULL,  1 &amp;lt;&amp;lt; 2,    False,       -1 },
-+  { &amp;quot;Liferea&amp;quot;,         NULL,     NULL,  1 &amp;lt;&amp;lt; 3,    False,       -1 },
-+  { &amp;quot;Meld&amp;quot;,            NULL,     NULL,  1 &amp;lt;&amp;lt; 3,    False,       -1 },
-+  { &amp;quot;Quodlibet&amp;quot;,       NULL,     NULL,  1 &amp;lt;&amp;lt; 4,    False,       -1 },
++  { &amp;quot;Xfce4-terminal&amp;quot;,  NULL,     NULL,  1 &amp;lt;&amp;lt; 2,    False,       -1 },
++  { &amp;quot;Quodlibet&amp;quot;,       NULL,     NULL,  1 &amp;lt;&amp;lt; 3,    False,       -1 },
  };
 
  /* layout(s) */
-&amp;#64;&amp;#64; -35,7 +40,7 &amp;#64;&amp;#64;
+&amp;#64;&amp;#64; -35,7 +38,7 &amp;#64;&amp;#64; static const Layout layouts[] = {
  };
 
  /* key definitions */
 -#define MODKEY Mod1Mask
 +#define MODKEY Mod4Mask
  #define TAGKEYS(KEY,TAG) \
-        { MODKEY,                       KEY,      view,           {.ui = 1 &amp;lt;&amp;lt; TAG} }, \
-        { MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 &amp;lt;&amp;lt; TAG} }, \
-&amp;#64;&amp;#64; -47,7 +52,7 &amp;#64;&amp;#64;
+        { MODKEY,                       KEY,      view,           {.ui
+        = 1 &amp;lt;&amp;lt; TAG} }, \
+        { MODKEY|ControlMask,           KEY,      toggleview,     {.ui
+        = 1 &amp;lt;&amp;lt; TAG} }, \
+&amp;#64;&amp;#64; -47,7 +50,7 &amp;#64;&amp;#64; static const Layout layouts[] = {
 
  /* commands */
- static const char *dmenucmd[] = { &amp;quot;dmenu_run&amp;quot;, &amp;quot;-fn&amp;quot;, font, &amp;quot;-nb&amp;quot;, normbgcolor, &amp;quot;-nf&amp;quot;, normfgcolor, &amp;quot;-sb&amp;quot;, selbgcolor, &amp;quot;-sf&amp;quot;, selfgcolor, NULL };
--static const char *termcmd[]  = { &amp;quot;x-terminal-emulator&amp;quot;, NULL };
-+static const char *termcmd[]  = { &amp;quot;gnome-terminal&amp;quot;, &amp;quot;--hide-menubar&amp;quot; };
+ static const char *dmenucmd[] = { &amp;quot;dmenu_run&amp;quot;, &amp;quot;-fn&amp;quot;, font, &amp;quot;-nb&amp;quot;,
+ normbgcolor, &amp;quot;-nf&amp;quot;, normfgcolor, &amp;quot;-sb&amp;quot;, selbgcolor, &amp;quot;-sf&amp;quot;,
+ selfgcolor, NULL };
+-static const char *termcmd[]  = { &amp;quot;uxterm&amp;quot;, NULL };
++static const char *termcmd[]  = { &amp;quot;xfce4-terminal&amp;quot;, &amp;quot;--hide-menubar&amp;quot;
+};
 
  static Key keys[] = {
-        /* modifier                     key        function        argument */
+        /* modifier                     key        function
+        argument */
 &lt;/pre&gt;
 &lt;p&gt;Note that this diff is against the Debian package (version &lt;strong&gt;6.0-6&lt;/strong&gt;). I
-could not change the modifer key with the upstream version of dwm.&lt;/p&gt;
-&lt;p&gt;You will notice that I'm still using some GNOME packages, specifically
-Nautilus and GNOME Terminal, both of which remain my favorites.&lt;/p&gt;
-</summary><category term="GNOME"></category><category term="Debian"></category></entry><entry><title>FLOSS pipe dreams</title><link href="http://tshepang.net/floss-pipe-dreams" rel="alternate"></link><updated>2013-11-30T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-11-30:floss-pipe-dreams</id><summary type="html">&lt;p&gt;In which I am hoping that &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; would supplant proprietary
+could not change the modifier key with the upstream version of dwm.&lt;/p&gt;
+&lt;p&gt;You will notice that I'm still using one major GNOME package,
+Nautilus, the file browser. It remains my favorite.&lt;/p&gt;
+</summary><category term="GNOME"></category><category term="Debian"></category></entry><entry><title>Sony Vaio Pro 13 (SVP13212SGBI)</title><link href="http://tshepang.net/sony-vaio-pro-13-svp13212sgbi" rel="alternate"></link><updated>2014-02-16T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-02-16:sony-vaio-pro-13-svp13212sgbi</id><summary type="html">&lt;p&gt;On &lt;strong&gt;2014-02-13&lt;/strong&gt; I went to collect &lt;a class="reference external" href="http://www.laptopdirect.co.za/Sony-VAIO-SVP-13212SGBI-lp-78188.php"&gt;the laptop&lt;/a&gt;, which I paid
+around R12500 for (~$1200). It's a 4GB RAM, 128GB SSD, FHD model. I
+would have happily paid for more RAM and storage, but this seems the
+only model available in my home country. I am glad that it's also not
+a touch screen. I don't need that kind of reflection.&lt;/p&gt;
+&lt;p&gt;Anyways, there was much pain involved trying to get it to work. I
+struggled to get Debian booting, and I don't know what I did wrong
+because after a few attempts of trying this and that, things
+worked. And man, that SSD is fast: it takes 6-7 seconds to GUI login
+screen. Package installation is also insane fast.&lt;/p&gt;
+&lt;p&gt;There was much pain trying to get audio to work. Luckily &lt;a class="reference external" href="https://wiki.archlinux.org/index.php/Sony_Vaio_Pro_SVP-1x21#Sound"&gt;I got some
+help&lt;/a&gt;, where I needed to change two lines in
+&lt;cite&gt;/usr/share/alsa/alsa.conf&lt;/cite&gt;. VLC video didn't work well either, but I
+needed only change Video Output to &lt;strong&gt;OpenGL GLX video output (XCB)&lt;/strong&gt;,
+and all was well.&lt;/p&gt;
+</summary><category term="hardware"></category></entry><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2014-01-17T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-01-17:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
+I do celebrate each time I see a project use it. So, here I list the
+most notable projects I am aware of that do, which also gives me hope
+that it isn't being suffocated too much by Git:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://hg.mozilla.org/mozilla-central"&gt;Firefox&lt;/a&gt;, world number 3 desktop web browser (number of users)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://hg.python.org/cpython"&gt;CPython&lt;/a&gt; and &lt;a class="reference external" href="https://bitbucket.org/pypy/pypy"&gt;PyPy&lt;/a&gt;, the most important implementations of a top 10
+popular programming language&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://hg.openjdk.java.net"&gt;OpenJDK&lt;/a&gt;, the top open source implementation of the Java platform&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://bitbucket.org/birkenfeld/sphinx"&gt;Sphinx&lt;/a&gt;, documentation generator used in most Python projects&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And those which are not FLOSS (i.e. proprietary):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook"&gt;Facebook&lt;/a&gt;, world number 2 website in terms of visitor numbers&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://stackoverflow.com"&gt;Stack Overflow&lt;/a&gt;, top web destination website for software
+developers&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="VCS"></category><category term="non-FLOSS"></category><category term="list"></category></entry><entry><title>FLOSS pipe dreams</title><link href="http://tshepang.net/floss-pipe-dreams" rel="alternate"></link><updated>2013-11-30T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-11-30:floss-pipe-dreams</id><summary type="html">&lt;p&gt;In which I am hoping that &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; would supplant proprietary
 alternatives:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;3D content creation&lt;/strong&gt;:
 &lt;a class="reference external" href="http://blender.org"&gt;Blender&lt;/a&gt; should be mainstream... used in blockbusters&lt;/p&gt;
