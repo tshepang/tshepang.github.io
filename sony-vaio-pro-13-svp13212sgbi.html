@@ -16,7 +16,7 @@
 <meta property="og:description" content="On 2014-02-13 I went to collect the laptop from these guys, which I paid around R12500 for (~$1200). It's a 4GB RAM, 128GB SSD, FHD model. I would have happily paid for more RAM and storage, but this seems the only model available in my home country. I am ..." />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
-<meta property="og:article:published_time" content="2014-02-16T00:00:00" />
+<meta property="og:article:published_time" content="2014-02-18T00:00:00" />
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@tshepang_dev">
 <meta name="twitter:title" content="Sony Vaio Pro 13 (SVP13212SGBI) ">
@@ -100,6 +100,44 @@ help</a>, where I needed to change two lines in
 <cite>/usr/share/alsa/alsa.conf</cite>. VLC video didn't work well either, but I
 needed only change Video Output to <strong>OpenGL GLX video output (XCB)</strong>,
 and all was well.</p>
+<div class="section" id="perfornance">
+<h2>Perfornance</h2>
+<p>I am now going to check how this machine compares <a class="reference external" href="http://tshepang.net/a-bit-of-benchmarking">to these others</a>.</p>
+<p>Specs:</p>
+<pre class="literal-block">
+$ uname --all
+Linux thome 3.12-1-amd64 #1 SMP Debian 3.12.9-1 (2014-02-01) x86_64 GNU/Linux
+$ cat /proc/cpuinfo | sed --quiet '5p'
+model name      : Intel(R) Core(TM) i5-4200U CPU &#64; 1.60GHz
+</pre>
+<p>CPython build (changeset <tt class="docutils literal">b6a1a78818fe</tt>):</p>
+<pre class="literal-block">
+$ make distclean; time (./configure &amp;&amp; make --silent --jobs=4)
+[...]
+real    2m2.373s
+user    3m52.848s
+sys     0m6.848s
+</pre>
+<p>CPython test suite:</p>
+<pre class="literal-block">
+$ time ./python -m test --multiprocess=0
+[...]
+real    2m14.553s
+user    5m5.164s
+sys     0m19.568s
+</pre>
+<p>Linux kernel build (commit <tt class="docutils literal">6e4664525b1d</tt>):</p>
+<pre class="literal-block">
+$ make distclean &amp;&amp; make defconfig &amp;&amp; time make
+[...]
+real    10m36.701s
+user    9m51.752s
+sys     0m32.128s
+</pre>
+<p>So the machine still doesn't compare with my work machine, which is a
+desktop. I also expected it to be superior to my old laptop, but not
+really. For anything more conclusive, I need better benchmarks.</p>
+</div>
 
             
             <section>
@@ -140,8 +178,7 @@ and all was well.</p>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/top-music-videos" title="Previous: top music videos">top music videos</a></li>
-                <li class="next-article"><a href="http://tshepang.net/my-current-desktop-setup" title="Next: my current desktop setup">my current desktop setup</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/about-developer-of-note-series" title="Previous: about 'developer of note' series">about 'developer of note' series</a></li>
             </ul>
             </nav>
             </aside>
@@ -149,7 +186,7 @@ and all was well.</p>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2014-02-16T00:00:00">Feb 16, 2014</time>
+            <time pubdate="pubdate" datetime="2014-02-18T00:00:00">Feb 18, 2014</time>
             <h4>Category</h4>
             <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
             <h4>Tags</h4>
