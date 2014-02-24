@@ -8,21 +8,21 @@
         <meta name="copyright" content="Tshepang Lekhonkhobe" />
 
 
-<meta name="keywords" content="Python, VCS, computing, " />
+<meta name="keywords" content="developer-of-note, Python, computing, " />
 
-<meta property="og:title" content="me likes subprocess.DEVNULL "/>
+<meta property="og:title" content="developer of note: Brett Cannon "/>
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tshepang.net/me-likes-subprocessdevnull" />
-<meta property="og:description" content="If you want to run an external process from within Python, and are not interested in the error that process may emit, there are a few ways, and I will demonstrate this by opening a Python shell in a directory that isn't version-controlled by Mercurial: So, we don't ..." />
+<meta property="og:url" content="http://tshepang.net/developer-of-note-brett-cannon" />
+<meta property="og:description" content="A core CPython developer, Dr. Brett Cannon is among the key people pushing Python 3 forward, examples being: He once developed a site that displayed progress of support by major Python projects. He repeatedly gives talks on the topic. Most recently, he has developed a tool that checks which dependencies ..." />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
-<meta property="og:article:published_time" content="2013-04-11T00:00:00" />
+<meta property="og:article:published_time" content="2014-02-24T00:00:00" />
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@tshepang_dev">
-<meta name="twitter:title" content="me likes subprocess.DEVNULL ">
-<meta name="twitter:description" content="If you want to run an external process from within Python, and are not interested in the error that process may emit, there are a few ways, and I will demonstrate this by opening a Python shell in a directory that isn't version-controlled by Mercurial: So, we don't ...">
+<meta name="twitter:title" content="developer of note: Brett Cannon ">
+<meta name="twitter:description" content="A core CPython developer, Dr. Brett Cannon is among the key people pushing Python 3 forward, examples being: He once developed a site that displayed progress of support by major Python projects. He repeatedly gives talks on the topic. Most recently, he has developed a tool that checks which dependencies ...">
 
-        <title>me likes subprocess.DEVNULL  · Tshepang logs
+        <title>developer of note: Brett Cannon  · Tshepang logs
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -77,7 +77,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://tshepang.net/me-likes-subprocessdevnull"> me likes subprocess.DEVNULL  </a></h1>
+    <h1><a href="http://tshepang.net/developer-of-note-brett-cannon"> developer of note: Brett Cannon  </a></h1>
     </header>
 </div>
 
@@ -85,61 +85,34 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>If you want to run an external process from within Python, and are not
-interested in the error that process may emit, there are a few ways,
-and I will demonstrate this by opening a Python shell in a directory
-that isn't version-controlled by <a class="reference external" href="http://mercurial.selenic.com">Mercurial</a>:</p>
-<ol class="arabic">
-<li><p class="first">So, we don't want to see this ugliness:</p>
-<pre class="doctest-block">
-&gt;&gt;&gt; from subprocess import call
-&gt;&gt;&gt; call('hg status'.split())
-abort: no repository found in '/home/tshepang/projects/pyramid' (.hg not found)!
-255
-</pre>
-</li>
-<li><p class="first">So, here's the simplest solution:</p>
-<pre class="doctest-block">
-&gt;&gt;&gt; import os
-&gt;&gt;&gt; from subprocess import call
-&gt;&gt;&gt; call('hg status'.split(), stderr=open(os.devnull))
-255
-</pre>
-<p>Problem: it leaves the file descriptor open... not good.</p>
-</li>
-<li><p class="first">We fix:</p>
-<pre class="doctest-block">
-&gt;&gt;&gt; import os
-&gt;&gt;&gt; from subprocess import call
-&gt;&gt;&gt; DEVNULL = open(os.devnull)
-&gt;&gt;&gt; call('hg status'.split(), stderr=DEVNULL)
-255
-&gt;&gt;&gt; DEVNULL.close()
-</pre>
-<p>Much better, much uglier. (<a class="reference external" href="https://bitbucket.org/tshepang/scripts/src/tip/vcs.py">example usage</a>)</p>
-</li>
-<li><p class="first">Something better:</p>
-<pre class="doctest-block">
-&gt;&gt;&gt; import os
-&gt;&gt;&gt; from subprocess import call
-&gt;&gt;&gt; with open(os.devnull) as DEVNULL:
-...     call('hg status'.split(), stderr=DEVNULL)
-255
-</pre>
-<p>Looks much nicer, and is more convenient,
-unless we wanted to do something similar multiple times,
-in which case the previous example would be preferable.</p>
-</li>
-<li><p class="first">Best solution:</p>
-<pre class="doctest-block">
-&gt;&gt;&gt; import os
-&gt;&gt;&gt; from subprocess import call, DEVNULL
-&gt;&gt;&gt; call('hg status'.split(), stderr=DEVNULL)
-255
-</pre>
-</li>
-</ol>
-<p>This <a class="reference external" href="http://hg.python.org/cpython/rev/eaf93e156dff">small and wonderful feature</a> is <a class="reference external" href="http://docs.python.org/3/whatsnew/3.3.html#subprocess">new as of Python 3.3</a>.</p>
+            <p><a class="reference external" href="http://sayspy.blogspot.ca/2013/04/a-decade-of-commits.html">A core CPython developer</a>, Dr. Brett Cannon is among the key people
+pushing Python 3 forward, examples being:</p>
+<ul class="simple">
+<li>He once developed <a class="reference external" href="http://py3ksupport.appspot.com">a site</a> that displayed progress of support by major
+Python projects.</li>
+<li>He repeatedly gives talks on the topic.</li>
+<li>Most recently, he has developed <a class="reference external" href="https://github.com/brettcannon/caniusepython3">a tool that checks which
+dependencies of a project lack Python 3 support</a>. It's weird that
+a tool like this is only available now, over 5 years since Python
+3.0 was released.</li>
+</ul>
+<p>In addition to that:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://sayspy.blogspot.ca/2012/02/how-i-bootstrapped-importlib.html">He keeps improving the Python import system</a>, which is reportedly a
+complex beast.</li>
+<li>I am grateful that <a class="reference external" href="http://sayspy.blogspot.ca/2009/03/why-python-is-switching-to-mercurial.html">he championed the move from Subversion to
+Mercurial for CPython development</a>. I held back participating in
+CPython development until this move was complete... I Subversion is
+that painful to use.</li>
+<li>He created <a class="reference external" href="http://docs.python.org/devguide">Python Developer’s Guide</a>, a great guide for those
+wishing to help out with core CPython development.</li>
+<li>Personally, <a class="reference external" href="http://sayspy.blogspot.ca/2013/04/why-im-signing-up-for-gittip.html">he inspired me to take a serious look at Gittip</a>,</li>
+</ul>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/home/tshepang/projects/blog/content/computing/developer of note: Brett Cannon.rst</tt>, line 31)</p>
+Bullet list ends without a blank line; unexpected unindent.</div>
+<p>resulting in my participation.</p>
+<p>There's a lot more stuff he been doing for Python. Busy, busy guy.</p>
 
             
             <section>
@@ -147,7 +120,7 @@ in which case the previous example would be preferable.</p>
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://tshepang.net/me-likes-subprocessdevnull#disqus_thread">
+                href="http://tshepang.net/developer-of-note-brett-cannon#disqus_thread">
                 Comments
             </a>
         </div>
@@ -157,8 +130,8 @@ in which case the previous example would be preferable.</p>
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'tshepanglogs';
-        var disqus_identifier = 'http://tshepang.net/me-likes-subprocessdevnull';
-    var disqus_url = 'http://tshepang.net/me-likes-subprocessdevnull';
+        var disqus_identifier = 'http://tshepang.net/developer-of-note-brett-cannon';
+    var disqus_url = 'http://tshepang.net/developer-of-note-brett-cannon';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -180,8 +153,7 @@ in which case the previous example would be preferable.</p>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/a-bit-of-poetry" title="Previous: a bit of poetry">a bit of poetry</a></li>
-                <li class="next-article"><a href="http://tshepang.net/links-2013-04-12" title="Next: links 2013-04-12">links 2013-04-12</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/the-two-versions-of-water-no-get-enemy" title="Previous: the two versions of 'Water No Get Enemy'">the two versions of 'Water No Get Enemy'</a></li>
             </ul>
             </nav>
             </aside>
@@ -189,16 +161,16 @@ in which case the previous example would be preferable.</p>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2013-04-11T00:00:00">Apr 11, 2013</time>
+            <time pubdate="pubdate" datetime="2014-02-24T00:00:00">Feb 24, 2014</time>
             <h4>Category</h4>
             <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
+                <li><a href="http://tshepang.net/tags.html#developer-of-note-ref">developer-of-note
+                    <span>25</span>
+</a></li>
                 <li><a href="http://tshepang.net/tags.html#python-ref">Python
                     <span>59</span>
-</a></li>
-                <li><a href="http://tshepang.net/tags.html#vcs-ref">VCS
-                    <span>8</span>
 </a></li>
             </ul>
 <h4>Stay in Touch</h4>
