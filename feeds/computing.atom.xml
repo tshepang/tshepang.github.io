@@ -1,5 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-02-24T00:00:00+02:00</updated><entry><title>developer of note: Brett Cannon</title><link href="http://tshepang.net/developer-of-note-brett-cannon" rel="alternate"></link><updated>2014-02-24T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-02-24:developer-of-note-brett-cannon</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://sayspy.blogspot.ca/2013/04/a-decade-of-commits.html"&gt;A core CPython developer&lt;/a&gt;, Dr. Brett Cannon is among the key people
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-02-25T00:00:00+02:00</updated><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2014-02-25T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-02-25:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
+For those I like a lot, see &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;this list&lt;/a&gt;.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;wajig&lt;/strong&gt;: &lt;a class="reference external" href="http://tshepang.net/tags#wajig-ref"&gt;I also develop and maintain it&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;APT&lt;/strong&gt;: a collection of Debian package management tools&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Aptitude&lt;/strong&gt;: I mainly use its &lt;tt class="docutils literal"&gt;search&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;show&lt;/tt&gt; subcommands;
+the equivalent functionality in APT is lesser&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;editors&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Emacs&lt;/strong&gt;: my favorite&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vim&lt;/strong&gt;: it happens to be installed on a lot of systems at work,
+and I do like it somewhat&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;software development&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;git-cola&lt;/strong&gt;: &lt;a class="reference external" href="http://tshepang.net/project-of-note-git-cola"&gt;why me loves it&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GNU toolchain&lt;/strong&gt; (GCC, make, GLibC, ...)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Git&lt;/strong&gt;: as if I had a choice... work and open source&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mercurial&lt;/strong&gt;: my favorite&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://meldmerge.org"&gt;Meld&lt;/a&gt;: the most excellent diff tool I've used yet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;entertainment&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Quod Libet&lt;/strong&gt;: audio player&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VLC&lt;/strong&gt;: ugly interface, solid application&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;misc&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://dwm.suckless.org"&gt;dwm&lt;/a&gt;: replaced GNOME as my desktop environment&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Evince&lt;/strong&gt;: I would love to get a PDF reader with better navigation&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Google Chrome&lt;/strong&gt; and &lt;strong&gt;Firefox&lt;/strong&gt;: I switch between these
+equally-good web browsers, but am gravitating towards Firefox&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gnumeric&lt;/strong&gt;: it's faster than LibreOffice spreadsheet, and has
+superior search interface&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://lzone.de/liferea"&gt;Liferea&lt;/a&gt;: would not be using this had it not been for Google Reader
+shutdown, but am glad they did cuz I like the tool, ugly and unkool
+as it is&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OpenSSH&lt;/strong&gt;: duh!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Thunderbird&lt;/strong&gt;: I prefer Evolution, but it gave me some issues I
+don't remember&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://tmux.sourceforge.net"&gt;tmux&lt;/a&gt;: amazingly powerul!&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.transmissionbt.com"&gt;Transmission&lt;/a&gt;: the only torrent client I ever used&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.greenwoodsoftware.com/less"&gt;less&lt;/a&gt;: indispensable!&lt;/li&gt;
+&lt;li&gt;Nautilus: favorite GUI file manager&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://fileroller.sourceforge.net"&gt;File Roller&lt;/a&gt;: nice and simple GUI archive manager&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="list"></category></entry><entry><title>developer of note: Brett Cannon</title><link href="http://tshepang.net/developer-of-note-brett-cannon" rel="alternate"></link><updated>2014-02-24T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-02-24:developer-of-note-brett-cannon</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://sayspy.blogspot.ca/2013/04/a-decade-of-commits.html"&gt;A core CPython developer&lt;/a&gt;, Dr. Brett Cannon is among the key people
 pushing Python 3 forward, examples being:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;He once developed &lt;a class="reference external" href="http://py3ksupport.appspot.com"&gt;a site&lt;/a&gt; that displayed progress of support by major
@@ -340,59 +394,6 @@ OpenSSH, &lt;a class="reference external" href="http://humdi.net/vnstat"&gt;vnst
 &lt;p&gt;&lt;strong&gt;version control system&lt;/strong&gt;: &lt;a class="reference external" href="http://mercurial.selenic.com"&gt;Mercurial&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;web browser&lt;/strong&gt;: Chrome/Chromium&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;non-FLOSS:&lt;/strong&gt; &lt;a class="reference external" href="http://disqus.com"&gt;Disqus&lt;/a&gt;, &lt;a class="reference external" href="http://mail.google.com/mail"&gt;Gmail&lt;/a&gt;, &lt;a class="reference external" href="http://stackexchange.com"&gt;Stack Exchange&lt;/a&gt;, &lt;a class="reference external" href="http://bitbucket.org"&gt;Bitbucket&lt;/a&gt;&lt;/p&gt;
-</summary><category term="list"></category></entry><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2013-11-26T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-11-26:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
-For those I like a lot, see &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;this list&lt;/a&gt;.&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;wajig&lt;/strong&gt;: &lt;a class="reference external" href="http://tshepang.net/tags#wajig-ref"&gt;I also develop and maintain it&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;APT&lt;/strong&gt;: a collection of Debian package management tools&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Aptitude&lt;/strong&gt;: I mainly use its &lt;tt class="docutils literal"&gt;search&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;show&lt;/tt&gt; subcommands;
-the equivalent functionality in APT is lesser&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;editors&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Emacs&lt;/strong&gt;: my favorite&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Vim&lt;/strong&gt;: it happens to be installed on a lot of systems at work,
-and I do like it somewhat&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;software development&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;git-cola&lt;/strong&gt;: &lt;a class="reference external" href="http://tshepang.net/project-of-note-git-cola"&gt;why me loves it&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GNU toolchain&lt;/strong&gt; (GCC, make, GLibC, ...)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Git&lt;/strong&gt;: as if I had a choice... work and open source&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Mercurial&lt;/strong&gt;: my favorite&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://meldmerge.org"&gt;Meld&lt;/a&gt;: the most excellent diff tool I've used yet&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;entertainment&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Quod Libet&lt;/strong&gt;: audio player&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;VLC&lt;/strong&gt;: ugly interface, solid application&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;misc&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Evince&lt;/strong&gt;: I would love to get a PDF reader with better navigation&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Google Chrome&lt;/strong&gt; and &lt;strong&gt;Firefox&lt;/strong&gt;: I switch between these
-equally-good web browsers, but am gravitating towards Firefox&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Gnumeric&lt;/strong&gt;: it's faster than LibreOffice spreadsheet, and has
-superior search interface&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://lzone.de/liferea"&gt;Liferea&lt;/a&gt;: would not be using this had it not been for Google Reader
-shutdown, but am glad they did cuz I like the tool, ugly and unkool
-as it is&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;OpenSSH&lt;/strong&gt;: duh!&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Thunderbird&lt;/strong&gt;: I prefer Evolution, but it gave me some issues I
-don't remember&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://tmux.sourceforge.net"&gt;tmux&lt;/a&gt;: amazingly powerul!&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.transmissionbt.com"&gt;Transmission&lt;/a&gt;: the only torrent client I ever used&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.greenwoodsoftware.com/less"&gt;less&lt;/a&gt;: indispensable!&lt;/li&gt;
-&lt;li&gt;Nautilus: favorite GUI file manager&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://fileroller.sourceforge.net"&gt;File Roller&lt;/a&gt;: nice and simple GUI archive manager&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 </summary><category term="list"></category></entry><entry><title>pleasantly surprised by replace-string (Emacs)</title><link href="http://tshepang.net/pleasantly-surprised-by-replace-string-emacs" rel="alternate"></link><updated>2013-11-26T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-11-26:pleasantly-surprised-by-replace-string-emacs</id><summary type="html">&lt;p&gt;If you want to replace some string in Emacs, the primary function to
 use is &lt;strong&gt;replace-string&lt;/strong&gt; (I think). If the strings, 'old' and 'new'
 are provided, it will, by default, replace all occurrences, regardless
