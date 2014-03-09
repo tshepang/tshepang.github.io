@@ -102,7 +102,12 @@ worked. And man, that SSD is fast: it takes 6-7 seconds to GUI login
 screen. Package installation is also insane fast.&lt;/p&gt;
 &lt;p&gt;There was much pain trying to get audio to work. Luckily &lt;a class="reference external" href="https://wiki.archlinux.org/index.php/Sony_Vaio_Pro_SVP-1x21#Sound"&gt;I got some
 help&lt;/a&gt;, where I needed to change two lines in
-&lt;cite&gt;/usr/share/alsa/alsa.conf&lt;/cite&gt;. VLC video didn't work well either, but I
+&lt;cite&gt;/usr/share/alsa/alsa.conf&lt;/cite&gt;:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+defaults.ctl.card 1
+defaults.pcm.card 1
+&lt;/pre&gt;
+&lt;p&gt;VLC video didn't work well either, but I
 needed only change Video Output to &lt;strong&gt;OpenGL GLX video output (XCB)&lt;/strong&gt;,
 and all was well.&lt;/p&gt;
 &lt;div class="section" id="performance"&gt;
