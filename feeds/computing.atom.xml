@@ -3262,9 +3262,9 @@ review process&lt;/a&gt;, a good indicator that this isn't a toy.&lt;/p&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://www.pixelbeat.org/misc/google_stars.html"&gt;high profile FLOSS developers employed by Google&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;I have never seen such &lt;a class="reference external" href="http://me.veekun.com/blog/2012/04/09/php-a-fractal-of-bad-design/"&gt;detailed criticism&lt;/a&gt; of a programming language.&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="links"></category><category term="Emacs"></category></entry><entry><title>accessing Oracle DB using Python, in Debian</title><link href="http://tshepang.net/accessing-oracle-db-using-python-in-debian" rel="alternate"></link><updated>2011-01-15T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2011-01-15:accessing-oracle-db-using-python-in-debian</id><summary type="html">&lt;p&gt;The following instructions assume that you are using &lt;a class="reference external" href="http://www.debian.org/releases/squeeze/"&gt;Debian Squeeze&lt;/a&gt;,
-the current 'stable' release. The instructions hereare very specific, so
-look elsewhere for &lt;a class="reference external" href="http://agiletesting.blogspot.com/2005/05/installing-and-using-cxoracle-on-unix.html"&gt;something more generic&lt;/a&gt;.&lt;/p&gt;
+</summary><category term="links"></category><category term="Emacs"></category></entry><entry><title>accessing Oracle DB using Python, in Debian</title><link href="http://tshepang.net/accessing-oracle-db-using-python-in-debian" rel="alternate"></link><updated>2011-01-15T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2011-01-15:accessing-oracle-db-using-python-in-debian</id><summary type="html">&lt;p&gt;The following instructions assume that you are using &lt;a class="reference external" href="http://www.debian.org/releases/squeeze/"&gt;Debian
+Squeeze&lt;/a&gt;, the current 'stable' release. The instructions here are
+very specific, so look elsewhere for &lt;a class="reference external" href="http://agiletesting.blogspot.com/2005/05/installing-and-using-cxoracle-on-unix.html"&gt;something more generic&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;downloads&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;Get registered on Oracle website, and download
@@ -3282,8 +3282,8 @@ sudo ln -s /usr/lib/oracle/11.2/client/lib/libclntsh.so.11.1 /usr/lib
 &lt;span class="nb"&gt;source&lt;/span&gt; ~/.bashrc
 python3 -c &lt;span class="s1"&gt;&amp;#39;import cx_Oracle&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;If that last line executes without printing a message to the screen, the
-install is most likely successful.&lt;/p&gt;
+&lt;p&gt;If that last line executes without printing a message to the screen,
+the install is most likely successful.&lt;/p&gt;
 &lt;p&gt;For basic usage, see &lt;a class="reference external" href="http://tshepang.net/basic-usage-of-python-with-oracle-db-in-debian"&gt;this tiny tutorial&lt;/a&gt;.&lt;/p&gt;
 </summary><category term="Debian"></category><category term="Python"></category><category term="non-FLOSS"></category></entry><entry><title>poll results of debian-user's favorite FLOSS</title><link href="http://tshepang.net/poll-results-of-debian-users-favorite-floss" rel="alternate"></link><updated>2011-01-15T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2011-01-15:poll-results-of-debian-users-favorite-floss</id><summary type="html">&lt;p&gt;Here's an index of the poll results where I asked on debian-user mailing
 list what their favorite FLOSS is. It's a yearly poll which has been
