@@ -197,8 +197,7 @@ xmodmap -e <span class="s2">&quot;keycode 66 = Super_L&quot;</span>
 <span class="k">if</span> <span class="o">[</span> <span class="nv">$HOSTNAME</span> <span class="o">==</span> <span class="s1">&#39;twork&#39;</span> <span class="o">]</span>; <span class="k">then</span>
 <span class="k">    </span>xrandr --output VGA-0 --output DVI-0 --right-of VGA-0
 <span class="k">else</span>
-<span class="k">    </span>synclient <span class="nv">TapButton1</span><span class="o">=</span>1
-    synclient <span class="nv">ClickFinger2</span><span class="o">=</span>2
+<span class="k">    </span>synclient <span class="nv">TapButton1</span><span class="o">=</span>1 <span class="nv">TapButton2</span><span class="o">=</span>3 <span class="nv">TapButton3</span><span class="o">=</span>2 <span class="nv">MaxDoubleTapTime</span><span class="o">=</span>100
     syndaemon -dti 1
 <span class="k">fi</span>
 
@@ -206,8 +205,7 @@ xmodmap -e <span class="s2">&quot;keycode 66 = Super_L&quot;</span>
 <span class="k">while </span><span class="nb">true</span>; <span class="k">do</span>
 <span class="k">    </span><span class="nv">datetime</span><span class="o">=</span><span class="k">$(</span> date +<span class="s2">&quot;%F %R&quot;</span> <span class="k">)</span>
     <span class="k">if </span>acpi -a | grep off-line &gt; /dev/null; <span class="k">then</span>
-<span class="k">        </span><span class="nv">battery</span><span class="o">=</span><span class="k">$(</span> python -c
-        <span class="s2">&quot;print(\&quot;$(acpi)\&quot;.split(&#39;,&#39;)[1].strip())&quot;</span> <span class="k">)</span>
+<span class="k">        </span><span class="nv">battery</span><span class="o">=</span><span class="k">$(</span> python -c <span class="s2">&quot;print(\&quot;$(acpi)\&quot;.split(&#39;,&#39;)[1].strip())&quot;</span> <span class="k">)</span>
         xsetroot -name <span class="s2">&quot;$battery&quot;&quot; | &quot;&quot;$datetime&quot;</span>
     <span class="k">else</span>
 <span class="k">        </span>xsetroot -name <span class="s2">&quot;$datetime&quot;</span>
