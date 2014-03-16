@@ -428,7 +428,7 @@ probably the most respected of Debian Developers&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://bugs.debian.org/cgi-bin/bugreport.cgi?msg=66;att=0;bug=718323"&gt;a nice explanation&lt;/a&gt; of why a specific Creative Commons license
 isn't suitable for Debian (&lt;a class="reference external" href="http://bugs.debian.org/718323"&gt;source&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;since &lt;a class="reference external" href="http://www.etla.fi/en/columns/worth-brand"&gt;it's hard to trust any one of the major brand valuators&lt;/a&gt;, I
-will have to reply on &lt;a class="reference external" href="http://www.rankingthebrands.com"&gt;an aggregator&lt;/a&gt;&lt;/li&gt;
+will have to rely on &lt;a class="reference external" href="http://www.rankingthebrands.com"&gt;an aggregator&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://rhodesmill.org/brandon/2012/reading-planet-python"&gt;on the limitations of Planet Python&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://jessenoller.com/blog/2009/02/05/ssh-programming-with-paramiko-completely-different"&gt;nice paramiko tutorial&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -699,9 +699,9 @@ which isn't as pleasant.&lt;/p&gt;
 </summary><category term="project-of-note"></category><category term="VCS"></category></entry><entry><title>easing switching between Git and Mercurial</title><link href="http://tshepang.net/easing-switching-between-git-and-mercurial" rel="alternate"></link><updated>2013-10-16T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-16:easing-switching-between-git-and-mercurial</id><summary type="html">&lt;p&gt;Each chance I get, I use Mercurial (e.g. personal stuff), and use Git
 when I don't have much of a choice (e.g. FLOSS and work). That is, I
 use both quite a lot, and too often I find myself running commands for
-one while on another's repository... error.&lt;/p&gt;
-&lt;p&gt;I then decided to ease the pain my creating &lt;a class="reference external" href="https://bitbucket.org/tshepang/scripts/src/tip/vcs.py"&gt;a script&lt;/a&gt; which checks which
-VCS system I'm on, and displays the relevant command.&lt;/p&gt;
+one while on another's repository... error. I therefore decided to
+ease the pain my creating &lt;a class="reference external" href="https://bitbucket.org/tshepang/scripts/src/tip/vcs.py"&gt;a script&lt;/a&gt; which checks which VCS system
+I'm on, and displays the relevant command.&lt;/p&gt;
 &lt;p&gt;Some examples of usage:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; &amp;lt;hg repo&amp;gt;
 &lt;span class="nv"&gt;$ &lt;/span&gt;./vcs.py --log
@@ -732,7 +732,7 @@ pager (tested with &lt;a class="reference external" href="http://www.greenwoodso
 (^changeset)|(^commit)
 &lt;/pre&gt;
 </summary><category term="Python"></category><category term="VCS"></category></entry><entry><title>developer of note: Armin Rigo</title><link href="http://tshepang.net/developer-of-note-armin-rigo" rel="alternate"></link><updated>2013-10-13T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-13:developer-of-note-armin-rigo</id><summary type="html">&lt;p&gt;Co-founder and lead developer of arguably the most exciting project in
-the entire Python ecosystem, &lt;a class="reference external" href="http://pypy.org"&gt;PyPy&lt;/a&gt;.  He is also credited with doing
+the Python ecosystem, &lt;a class="reference external" href="http://pypy.org"&gt;PyPy&lt;/a&gt;.  He is also credited with doing
 the bulk of the work in building its &lt;a class="reference external" href="http://tshepang.net/great-praise-for-the-rpython-translation-toolchain"&gt;legendary RPython translation
 framework&lt;/a&gt;.&lt;/p&gt;
 &lt;hr class="docutils" /&gt;
@@ -770,17 +770,12 @@ Successfully uploaded packages.
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;And, yeah, that means &lt;a class="reference external" href="http://bugs.debian.org/cgi-bin/bugreport.cgi?msg=12;bug=723802"&gt;I am now Debian Maintainer&lt;/a&gt;. Other than
 giving me more freedom, this helps reduce the workload on &lt;a class="reference external" href="http://dirk.eddelbuettel.com"&gt;Dirk
-Eddelbuettel&lt;/a&gt;, who has been uploading wajig for several years now. He
-even &lt;a class="reference external" href="http://lists.debian.org/debian-newmaint/2013/09/msg00029.html"&gt;became an Advocate&lt;/a&gt; for &lt;a class="reference external" href="http://lists.debian.org/debian-newmaint/2013/09/msg00028.html"&gt;my application&lt;/a&gt;.  This process
-started several weeks ago when a Debian Developer named &lt;a class="reference external" href="http://mithrandi.net/blog"&gt;Tristan
-Seligmann&lt;/a&gt; signed my key &lt;a class="footnote-reference" href="#id9" id="id1"&gt;[1]&lt;/a&gt;.&lt;/p&gt;
-&lt;table class="docutils footnote" frame="void" id="id9" rules="none"&gt;
-&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
-&lt;tbody valign="top"&gt;
-&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;before applying to be a Maintainer, a Debian Developer needs to
-sign your key as a way of verifying your identity&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+Eddelbuettel&lt;/a&gt;, who has been uploading wajig for several years
+now. He even &lt;a class="reference external" href="http://lists.debian.org/debian-newmaint/2013/09/msg00029.html"&gt;became an Advocate&lt;/a&gt; for &lt;a class="reference external" href="http://lists.debian.org/debian-newmaint/2013/09/msg00028.html"&gt;my application&lt;/a&gt;.  This
+process started several weeks ago when a Debian Developer named
+&lt;a class="reference external" href="http://mithrandi.net/blog"&gt;Tristan Seligmann&lt;/a&gt; signed my key (before applying to be a
+Maintainer, a Debian Developer needs to sign your key as a way of
+verifying your identity).&lt;/p&gt;
 </summary><category term="Debian"></category><category term="wajig"></category></entry><entry><title>my first server</title><link href="http://tshepang.net/my-first-server" rel="alternate"></link><updated>2013-10-10T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-10-10:my-first-server</id><summary type="html">&lt;p&gt;The closest I ever came to needing own server is for hosting &lt;a class="reference external" href="http://tshepang.net/tags.html#blogging-ref"&gt;my
 blog&lt;/a&gt;, but I've had plenty of gratis services available to me, latest
 being &lt;a class="reference external" href="http://pages.github.com"&gt;GitHub Pages&lt;/a&gt;. When &lt;a class="reference external" href="https://www.digitalocean.com/?refcode=25b4887810cc"&gt;DigitalOcean&lt;/a&gt; &lt;a class="reference external" href="http://thechangelog.com/107"&gt;offered a $10 credit&lt;/a&gt;
