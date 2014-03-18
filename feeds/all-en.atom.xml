@@ -1760,7 +1760,7 @@ needs lots of rails.&lt;/p&gt;
 include code snippets directly from files, instead of doing the
 copy-paste dance, avoiding duplication and rot. This feature is known as
 &lt;a class="reference external" href="http://sphinx-doc.org/markup/code.html#directive-literalinclude"&gt;literalinclude&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Another feature I recently worked with in the recent past with is
+&lt;p&gt;Another feature I recently worked with in the recent past is
 &lt;a class="reference external" href="http://sphinx-doc.org/ext/intersphinx.html#confval-intersphinx_mapping"&gt;intersphinx_mapping&lt;/a&gt;. What it does it allow one to generate
 references in reST as if those reference were local. For example, if
 you wanted to generate a link to the CPython &lt;tt class="docutils literal"&gt;open()&lt;/tt&gt; built-in
