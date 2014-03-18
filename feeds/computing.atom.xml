@@ -1106,7 +1106,7 @@ some rough estimates:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;strong&gt;hour 1&lt;/strong&gt;: Find documentation on the subject; I got a few after a
 quick search, which include the following:&lt;ul&gt;
-&lt;li&gt;&lt;a href="#id8"&gt;&lt;span class="problematic" id="id9"&gt;`Ubuntu Packaging Guide`__&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://developer.ubuntu.com/packaging/html"&gt;Ubuntu Packaging Guide&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Debian Packaging Tutorial (from Debian package,
 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;packaging-tutorial&lt;/span&gt;&lt;/tt&gt;)&lt;/li&gt;
 &lt;/ul&gt;
@@ -1117,30 +1117,23 @@ reading &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;dpkg-source&l
 &lt;li&gt;&lt;strong&gt;hour 4-6&lt;/strong&gt;: Struggling to kill the lintian complaint,
 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;binary-without-manpage&lt;/span&gt;&lt;/tt&gt;. I went as far as reading the source code
 (Perl) that performs the check, but that didn't help much. I could
-have saved hours by looking at the &lt;a href="#id8"&gt;&lt;span class="problematic" id="id10"&gt;`Debian New Maintainers' Guide`__&lt;/span&gt;&lt;/a&gt;
+have saved hours by looking at the &lt;a class="reference external" href="http://www.debian.org/doc/manuals/maint-guide"&gt;Debian New Maintainers' Guide&lt;/a&gt;
 earlier. I also added &lt;tt class="docutils literal"&gt;export &lt;span class="pre"&gt;LDFLAGS=-Wl,-z,relro&lt;/span&gt;&lt;/tt&gt; to
 &lt;tt class="docutils literal"&gt;debian/rules&lt;/tt&gt; file to kill &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;hardening-no-relro&lt;/span&gt;&lt;/tt&gt; lintian
 warning.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;hour 7-8&lt;/strong&gt;: Determine what dependencies would be needed by building from
 a clean chroot (pbuilder). This was with the help of Debian New
 Maintainers' Guide, again.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;hour 9-10&lt;/strong&gt;: Reading &lt;a href="#id8"&gt;&lt;span class="problematic" id="id11"&gt;`Debian wiki page on Hardening`__&lt;/span&gt;&lt;/a&gt; let me
+&lt;li&gt;&lt;strong&gt;hour 9-10&lt;/strong&gt;: Reading &lt;a class="reference external" href="https://wiki.debian.org/Hardening"&gt;Debian wiki page on Hardening&lt;/a&gt; let me
 simplify my packaging further... removing the need to specify
-hardening flags explicitly (&lt;a href="#id8"&gt;&lt;span class="problematic" id="id12"&gt;commit__&lt;/span&gt;&lt;/a&gt;). I also uploaded the package
+hardening flags explicitly (&lt;a class="reference external" href="https://bitbucket.org/tshepang/ksig/commits/f4c7b60157b79847f918e3d8b24a74e6c5bec929"&gt;commit&lt;/a&gt;). I also uploaded the package
 to &lt;a class="reference external" href="http://mentors.debian.net"&gt;http://mentors.debian.net&lt;/a&gt;, with the help of
-&lt;a href="#id8"&gt;&lt;span class="problematic" id="id13"&gt;DebianMentorsFaq__&lt;/span&gt;&lt;/a&gt;. (&lt;strong&gt;2014.03 update&lt;/strong&gt;: it has since been removed
+&lt;a class="reference external" href="https://wiki.debian.org/DebianMentorsFaq"&gt;DebianMentorsFaq&lt;/a&gt;. (&lt;strong&gt;2014.03 update&lt;/strong&gt;: it has since been removed
 due to lack of activity)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The resulting package now lives at
 &lt;a class="reference external" href="https://bitbucket.org/tshepang/ksig/src"&gt;https://bitbucket.org/tshepang/ksig/src&lt;/a&gt;. The changes I made, the
-actual packaging work, are in &lt;a href="#id8"&gt;&lt;span class="problematic" id="id14"&gt;`this directory`__&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;div class="system-messages section"&gt;
-&lt;h2&gt;Docutils System Messages&lt;/h2&gt;
-&lt;div class="system-message" id="id8"&gt;
-&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;/home/tshepang/projects/blog/content/computing/packaging my first Qt app.rst&lt;/tt&gt;); &lt;em&gt;backlinks: &lt;a href="#id9"&gt;1&lt;/a&gt;, &lt;a href="#id10"&gt;2&lt;/a&gt;, &lt;a href="#id11"&gt;3&lt;/a&gt;, &lt;a href="#id12"&gt;4&lt;/a&gt;, &lt;a href="#id13"&gt;5&lt;/a&gt;, &lt;a href="#id14"&gt;6&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-Anonymous hyperlink mismatch: 6 references but 7 targets.
-See &amp;quot;backrefs&amp;quot; attribute for IDs.&lt;/div&gt;
-&lt;/div&gt;
+actual packaging work, are in &lt;a class="reference external" href="https://bitbucket.org/tshepang/ksig/src/f4c7b60157b79847f918e3d8b24a74e6c5bec929/debian"&gt;this directory&lt;/a&gt;.&lt;/p&gt;
 </summary><category term="Debian"></category><category term="non-Python"></category></entry><entry><title>links 2013-08-09</title><link href="http://tshepang.net/links-2013-08-09" rel="alternate"></link><updated>2013-08-09T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-08-09:links-2013-08-09</id><summary type="html">&lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://github.com/jashkenas/coffee-script/issues/2864#issuecomment-15159370"&gt;some of the challenges of maintaining a popular FLOSS project&lt;/a&gt; (&lt;a class="reference external" href="http://www.binpress.com/blog/2013/04/14/open-source-cannot-live-on-donations-alone"&gt;via&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://medium.com/building-gittip/bb770ab13101"&gt;great summary of current status of Gittip&lt;/a&gt;&lt;/li&gt;
@@ -1165,7 +1158,7 @@ include code snippets directly from files, instead of doing the
 copy-paste dance, avoiding duplication and rot. This feature is known as
 &lt;a class="reference external" href="http://sphinx-doc.org/markup/code.html#directive-literalinclude"&gt;literalinclude&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Another feature I recently worked with in the recent past is
-&lt;a class="reference external" href="http://sphinx-doc.org/ext/intersphinx.html#confval-intersphinx_mapping"&gt;intersphinx_mapping&lt;/a&gt;. What it does it allow one to generate
+&lt;a class="reference external" href="http://sphinx-doc.org/ext/intersphinx.html#confval-intersphinx_mapping"&gt;intersphinx_mapping&lt;/a&gt;. It allow one to generate
 references in reST as if those reference were local. For example, if
 you wanted to generate a link to the CPython &lt;tt class="docutils literal"&gt;open()&lt;/tt&gt; built-in
 function, you would need only specify it as &lt;tt class="docutils literal"&gt;:func:open&lt;/tt&gt;.  This is
