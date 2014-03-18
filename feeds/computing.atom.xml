@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-03-16T11:45:04+02:00</updated><entry><title>superstar projects, and associated implementation languages</title><link href="http://tshepang.net/superstar-projects-and-associated-implementation-languages" rel="alternate"></link><updated>2014-03-16T11:45:04+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-03-16:superstar-projects-and-associated-implementation-languages</id><summary type="html">&lt;div class="section" id="c"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-03-18T00:00:00+02:00</updated><entry><title>koolest projekts</title><link href="http://tshepang.net/koolest-projekts" rel="alternate"></link><updated>2014-03-18T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-03-18:koolest-projekts</id><summary type="html">&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org"&gt;PyPy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It's been alive for over 10 years, but it's still generally
+considered among the most exciting of all Python projects.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://freedesktop.org/wiki/Software/systemd"&gt;systemd&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This one has since been &lt;a class="reference external" href="http://0pointer.de/blog/projects/systemd"&gt;announced in April 2010&lt;/a&gt;, but I still do
+find it kool. It is sad that it still receives so much unlove from
+so many people, much of which isn't constructive. I am hoping it
+displaces both it's main competitors, sysvinit and upstart, at some
+point.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="Python"></category><category term="non-Python"></category></entry><entry><title>superstar projects, and associated implementation languages</title><link href="http://tshepang.net/superstar-projects-and-associated-implementation-languages" rel="alternate"></link><updated>2014-03-16T11:45:04+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-03-16:superstar-projects-and-associated-implementation-languages</id><summary type="html">&lt;div class="section" id="c"&gt;
 &lt;h2&gt;C&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;GNOME&lt;/li&gt;
@@ -1268,7 +1282,7 @@ inflexible. &lt;a class="reference external" href="http://docs.python.org/3/libr
 name in user's PATH and is more thorough, since it also checks if the
 executable name points to something that is actually executable.  So,
 making use of this new function resulted in code that is both more
-robust code and &lt;a class="reference external" href="https://code.google.com/p/wajig/source/detail?r=e419e439e47f880ab17f6394e3faaa8ce3b15fe1"&gt;a lot cleaner&lt;/a&gt;.&lt;/p&gt;
+robust and &lt;a class="reference external" href="https://code.google.com/p/wajig/source/detail?r=e419e439e47f880ab17f6394e3faaa8ce3b15fe1"&gt;cleaner&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;As a sidenote, this functionality &lt;a class="reference external" href="http://bugs.python.org/issue444582"&gt;was first proposed in 2001&lt;/a&gt;!&lt;/p&gt;
 </summary><category term="Python"></category><category term="wajig"></category></entry><entry><title>job of QA</title><link href="http://tshepang.net/job-of-qa" rel="alternate"></link><updated>2013-05-18T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-05-18:job-of-qa</id><summary type="html">&lt;!--  --&gt;
 &lt;blockquote&gt;
@@ -1284,23 +1298,7 @@ everyone to have a voice in everything. It is not possible to
 subject every decision to some kind of public review process. It
 is a statistical certainty that things you disagree with are going
 to happen. This is something you need to reconcile yourself to.&lt;/blockquote&gt;
-</summary><category term="quote"></category><category term="non-Debian"></category></entry><entry><title>koolest projekts</title><link href="http://tshepang.net/koolest-projekts" rel="alternate"></link><updated>2013-05-15T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-05-15:koolest-projekts</id><summary type="html">&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org"&gt;PyPy&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;It's been alive for over 10 years, but it's still generally
-considered among the most exciting of all Python projects.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.discourse.org"&gt;Discourse&lt;/a&gt; (&lt;a class="reference external" href="http://tshepang.net/project-of-note-discourse"&gt;project_of_note&lt;/a&gt;)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://freedesktop.org/wiki/Software/systemd"&gt;systemd&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;This one has since been &lt;a class="reference external" href="http://0pointer.de/blog/projects/systemd"&gt;announced in April 2010&lt;/a&gt;, but I still do
-find it kool. It is sad that it still receives so much unlove from
-so many people, much of which isn't constructive. I am hoping it
-displaces both it's main competitors, sysvinit and upstart, at some
-point.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="Python"></category><category term="non-Python"></category></entry><entry><title>links 2013-05-11</title><link href="http://tshepang.net/links-2013-05-11" rel="alternate"></link><updated>2013-05-11T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-05-11:links-2013-05-11</id><summary type="html">&lt;ul class="simple"&gt;
+</summary><category term="quote"></category><category term="non-Debian"></category></entry><entry><title>links 2013-05-11</title><link href="http://tshepang.net/links-2013-05-11" rel="alternate"></link><updated>2013-05-11T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-05-11:links-2013-05-11</id><summary type="html">&lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://hg.python.org/cpython/rev/d5ef330bac50"&gt;Python interpreter finally gets tab completion by default&lt;/a&gt;;
 to see wide use, this will have to wait for 3.4 release,
 &lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0429"&gt;which will only arrive early 2014&lt;/a&gt;.&lt;/li&gt;
