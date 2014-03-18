@@ -91,11 +91,11 @@ executable is installed. This functionality was added in Python 3.3,
 and though simple, I was looking forward to its availability in
 Debian, just so I could replace wajig's own equivalent functionality,
 which only checked for file presence, and was hard-coded and therefore
-inflexible. <a class="reference external" href="http://docs.python.org/3/library/shutil#shutil.which">shutil.which()</a>, OTOH, looks for the given executable name
-in user's PATH and is more thorough, since it also checks if the
+inflexible. <a class="reference external" href="http://docs.python.org/3/library/shutil#shutil.which">shutil.which()</a>, OTOH, looks for the given executable
+name in user's PATH and is more thorough, since it also checks if the
 executable name points to something that is actually executable.  So,
-making use of this new function resulted in more robust code, as well
-as <a class="reference external" href="https://code.google.com/p/wajig/source/detail?r=e419e439e47f880ab17f6394e3faaa8ce3b15fe1">a lot cleaner</a>.</p>
+making use of this new function resulted in code that is both more
+robust code and <a class="reference external" href="https://code.google.com/p/wajig/source/detail?r=e419e439e47f880ab17f6394e3faaa8ce3b15fe1">a lot cleaner</a>.</p>
 <p>As a sidenote, this functionality <a class="reference external" href="http://bugs.python.org/issue444582">was first proposed in 2001</a>!</p>
 
             

@@ -1998,11 +1998,11 @@ executable is installed. This functionality was added in Python 3.3,
 and though simple, I was looking forward to its availability in
 Debian, just so I could replace wajig's own equivalent functionality,
 which only checked for file presence, and was hard-coded and therefore
-inflexible. &lt;a class="reference external" href="http://docs.python.org/3/library/shutil#shutil.which"&gt;shutil.which()&lt;/a&gt;, OTOH, looks for the given executable name
-in user's PATH and is more thorough, since it also checks if the
+inflexible. &lt;a class="reference external" href="http://docs.python.org/3/library/shutil#shutil.which"&gt;shutil.which()&lt;/a&gt;, OTOH, looks for the given executable
+name in user's PATH and is more thorough, since it also checks if the
 executable name points to something that is actually executable.  So,
-making use of this new function resulted in more robust code, as well
-as &lt;a class="reference external" href="https://code.google.com/p/wajig/source/detail?r=e419e439e47f880ab17f6394e3faaa8ce3b15fe1"&gt;a lot cleaner&lt;/a&gt;.&lt;/p&gt;
+making use of this new function resulted in code that is both more
+robust code and &lt;a class="reference external" href="https://code.google.com/p/wajig/source/detail?r=e419e439e47f880ab17f6394e3faaa8ce3b15fe1"&gt;a lot cleaner&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;As a sidenote, this functionality &lt;a class="reference external" href="http://bugs.python.org/issue444582"&gt;was first proposed in 2001&lt;/a&gt;!&lt;/p&gt;
 </summary><category term="Python"></category><category term="wajig"></category></entry><entry><title>Enter the Wu-Tang (36 Chambers)</title><link href="http://tshepang.net/enter-the-wu-tang-36-chambers" rel="alternate"></link><updated>2013-05-23T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-05-23:enter-the-wu-tang-36-chambers</id><summary type="html">&lt;p&gt;I very much enjoyed listening to this album, which also happens to be
 the first by the group, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Wu-Tang_Clan"&gt;Wu-Tang Clan&lt;/a&gt;. My favorite tracks:&lt;/p&gt;
