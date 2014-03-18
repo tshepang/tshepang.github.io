@@ -1220,7 +1220,7 @@ approach in PEP 413 as well.&lt;/p&gt;
 &lt;p&gt;Another PEP he is working on is &lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0432"&gt;PEP 432&lt;/a&gt;. Titled &lt;em&gt;Simplifying the
 CPython startup sequence&lt;/em&gt;, it's a highly detailed proposal to
 re-organise some of CPython code to ease maintenance. His deep
-knowledge on the project's internals is also exposed.&lt;/p&gt;
+knowledge on the project's internals is also on display.&lt;/p&gt;
 &lt;p&gt;Nick also builds and maintains a collection of notes known simply as
 &lt;a class="reference external" href="http://python-notes.boredomandlaziness.org/en/latest/index.html"&gt;Nick Coghlan's Python Notes&lt;/a&gt;. There is much wisdom there (complete
 with high quality clear writing), favorite of which is the just-updated
@@ -1241,13 +1241,13 @@ project&lt;/a&gt;), but was never quite confident. It's very likely that I
 won't work on this... too much work.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;But ultimately, I would love for the standard Debian packaging tools
-to get the the point where they make wajig irrelvant. After all, wajig
+to get the the point where they make wajig irrelevant. After all, wajig
 was created to be a wrapper that helps ease the mess.&lt;/p&gt;
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;Here's the work I did in the past working on wajig, have a look at
 &lt;a class="reference external" href="http://tshepang.net/tags#wajig-ref"&gt;its tag&lt;/a&gt;. Off the top of my head:&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;improved, simplied packaging&lt;/li&gt;
+&lt;li&gt;improved, simplified packaging&lt;/li&gt;
 &lt;li&gt;port to Python 3&lt;/li&gt;
 &lt;li&gt;port to argparse (from getopt), which also meant proper handling of
 subcommands&lt;/li&gt;
