@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-03-18T00:00:00+02:00</updated><entry><title>koolest projekts</title><link href="http://tshepang.net/koolest-projekts" rel="alternate"></link><updated>2014-03-18T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-03-18:koolest-projekts</id><summary type="html">&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-03-20T00:00:00+02:00</updated><entry><title>project of note: Debian Installer</title><link href="http://tshepang.net/project-of-note-debian-installer" rel="alternate"></link><updated>2014-03-20T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-03-20:project-of-note-debian-installer</id><summary type="html">&lt;p&gt;I've looked at pretty installers like that of Ubuntu and Fedora, and
+they are all so easy to use that nobody would dare say &amp;quot;I can't
+install Linux!&amp;quot;. And then whenever I install Debian, I don't really
+see how much harder it is to use. It is far uglier though, so I guess
+that also makes it intimidating.&lt;/p&gt;
+&lt;p&gt;Anyways, what triggered this post is the following tit-bit:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;d-i [Debian Installer] is the very first thing many of our users
+see, and has a huge range of uses, from simple desktop installs to
+massive corporate deployments; it's unspeakably important that it
+works well, and it's a testament to its design that it's been able
+to trundle along without actually very much serious refactoring for
+the best part of five years now.&lt;/p&gt;
+&lt;p class="attribution"&gt;&amp;mdash;&lt;a class="reference external" href="http://raphaelhertzog.com/2010/11/25/people-behind-debian-colin-watson/"&gt;an interview of Colin Watson&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In addition, this tool (or rather, a set of tools) also happens to be
+rock-solid, and its great reliability and ease-of-use gets admiration
+from me on each install... I've done dozens, with not one instance of
+data loss.&lt;/p&gt;
+</summary><category term="Debian"></category><category term="non-Debian"></category><category term="project-of-note"></category><category term="quote"></category></entry><entry><title>koolest projekts</title><link href="http://tshepang.net/koolest-projekts" rel="alternate"></link><updated>2014-03-18T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-03-18:koolest-projekts</id><summary type="html">&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org"&gt;PyPy&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;It's been alive for over 10 years, but it's still generally
@@ -2102,26 +2121,7 @@ it also does a good job of making Python code less readable&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://blog.delaguardia.com.mx/pyramid-view-configuration-let-me-count-the-ways.html"&gt;nice and detailed post about Pyramid's powerful View configuration&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://meta.stackoverflow.com/a/145813/147166"&gt;how to evaluate competing technologies for use&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="hardware"></category><category term="links"></category></entry><entry><title>project of note: Debian Installer</title><link href="http://tshepang.net/project-of-note-debian-installer" rel="alternate"></link><updated>2013-04-24T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-04-24:project-of-note-debian-installer</id><summary type="html">&lt;p&gt;I've recently looked at Ubuntu's 10.04 and 10.10 installers, and they
-are quite nifty tools, so fresh and gorgeous, and so easy to use that
-nobody would dare say &amp;quot;I can't install Linux!&amp;quot;. And then I recently
-re-installed my Debian system and I don't really see how much harder it
-is to use than Ubuntu's (except that it's far uglier, so I guess that
-also makes it intimidating).&lt;/p&gt;
-&lt;p&gt;What triggered this post is the following titbit:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;d-i [Debian Installer] is the very first thing many of our users
-see, and has a huge range of uses, from simple desktop installs to
-massive corporate deployments; it's unspeakably important that it
-works well, and it's a testament to its design that it's been able
-to trundle along without actually very much serious refactoring for
-the best part of five years now.&lt;/p&gt;
-&lt;p class="attribution"&gt;&amp;mdash;&lt;a class="reference external" href="http://raphaelhertzog.com/2010/11/25/people-behind-debian-colin-watson/"&gt;an interview of Colin Watson&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;In addition, this tool (or rather, a set of tools) also happens to be
-rock-solid tool, and its great reliability gets admiration from me on
-each install (and I've done dozens, with not one instance of data loss).&lt;/p&gt;
-</summary><category term="Debian"></category><category term="project-of-note"></category><category term="quote"></category></entry><entry><title>the not grateful</title><link href="http://tshepang.net/the-not-grateful" rel="alternate"></link><updated>2013-04-24T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-04-24:the-not-grateful</id><summary type="html">&lt;!--  --&gt;
+</summary><category term="hardware"></category><category term="links"></category></entry><entry><title>the not grateful</title><link href="http://tshepang.net/the-not-grateful" rel="alternate"></link><updated>2013-04-24T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-04-24:the-not-grateful</id><summary type="html">&lt;!--  --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Unfortunately, my experience has been that most people gloss over the
 philosophical arguments in favour of open source,
