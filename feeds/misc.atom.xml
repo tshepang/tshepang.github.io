@@ -151,7 +151,7 @@ it converts marked-up text files to html
 (Pelican supports &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Markdown"&gt;Markdown&lt;/a&gt; and &lt;a class="reference external" href="http://en.wikipedia.org/wiki/ReStructuredText"&gt;reStructuredText&lt;/a&gt;).
 The resulting site is complete with an index (Archives view),
 Tags, Categories, and Pages (for non-bloggy stuff like a CV or About Me file).&lt;/p&gt;
-&lt;p&gt;As for my blog, its tree structure looks like this (&lt;a class="reference external" href="https://bitbucket.org/tshepang/blog"&gt;repo&lt;/a&gt;):&lt;/p&gt;
+&lt;p&gt;As for my blog, its tree structure looks like this (&lt;a class="reference external" href="https://bitbucket.org/tshepang/blog/src"&gt;repo&lt;/a&gt;):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 build/...
 pages/about-me.rst
