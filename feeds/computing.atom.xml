@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-03-20T00:00:00+02:00</updated><entry><title>project of note: Debian Installer</title><link href="http://tshepang.net/project-of-note-debian-installer" rel="alternate"></link><updated>2014-03-20T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-03-20:project-of-note-debian-installer</id><summary type="html">&lt;p&gt;I've looked at pretty installers like that of Ubuntu and Fedora, and
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-03-20T21:32:11+02:00</updated><entry><title>companies I deeply appreciate</title><link href="http://tshepang.net/companies-i-deeply-appreciate" rel="alternate"></link><updated>2014-03-20T21:32:11+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-03-20:companies-i-deeply-appreciate</id><summary type="html">&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://en.wikipedia.org/wiki/Red_Hat"&gt;Red Hat&lt;/a&gt; contributes more to &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open_source_software"&gt;FLOSS&lt;/a&gt; than any other company,
+employing hundreds of developers to work full-time on it.&lt;/li&gt;
+&lt;li&gt;Google&lt;ul&gt;
+&lt;li&gt;Runs &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Google_Summer_of_Code"&gt;the Summer of Code program&lt;/a&gt;, which pays hundreds of
+students to work full-time for a few months on FLOSS projects of
+their choosing.&lt;/li&gt;
+&lt;li&gt;Provides Gmail for gratis, which I use as my primary web address.&lt;/li&gt;
+&lt;li&gt;Funds the development of Chromium,
+a very credible alternative to the world's major web browsers,
+which also happens to be FLOSS.&lt;/li&gt;
+&lt;li&gt;Funds most of the development of Android, which is quickly
+becoming the dominant platform for high-end phones, and also
+happens to be mostly FLOSS (though I hate the closed development).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The &lt;a class="reference external" href="http://stackexchange.com"&gt;Stack Exchange&lt;/a&gt; family of sites attempt to provide the best Q&amp;amp;A
+for a wide array of topics. They have succeeded specifically in one
+topic, programming, in a form of &lt;a class="reference external" href="http://stackoverflow.com"&gt;Stack Overflow&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.atlassian.com"&gt;Atlassian&lt;/a&gt; offers &lt;a class="reference external" href="https://bitbucket.org"&gt;Bitbucket&lt;/a&gt;,
+a gratis hosting service for public software projects;
+this is a great thing, but not special since there are others offering
+the same, most notably &lt;a class="reference external" href="https://github.com"&gt;GitHub&lt;/a&gt;.
+What makes it special is that it also offers gratis hosting
+for unlimited private repositories.
+I have over a dozen such repositories and each time I create one,
+I feel like the world is a wonderful place... I am grateful.&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="list"></category></entry><entry><title>project of note: Debian Installer</title><link href="http://tshepang.net/project-of-note-debian-installer" rel="alternate"></link><updated>2014-03-20T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-03-20:project-of-note-debian-installer</id><summary type="html">&lt;p&gt;I've looked at pretty installers like that of Ubuntu and Fedora, and
 they are all very easy and slick. But whenever I install Debian, I
 don't really see how much harder it is to use, though it's a lot
 uglier.&lt;/p&gt;
@@ -1416,8 +1444,8 @@ thing, after which &lt;a class="reference external" href="https://www.gittip.com
 stopped along the way for some reason (after a few months), so will
 see how long this one relationship lasts.&lt;/p&gt;
 </summary><category term="Python"></category></entry><entry><title>me likes subprocess.DEVNULL</title><link href="http://tshepang.net/me-likes-subprocessdevnull" rel="alternate"></link><updated>2013-04-11T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-04-11:me-likes-subprocessdevnull</id><summary type="html">&lt;p&gt;If you want to run an external process from within Python, and are not
-interested in the error that process may emit, there are a few ways,
-and I will demonstrate this by opening a Python shell in a directory
+interested in the error that process may emit, there are a few ways.
+I will demonstrate this by opening a Python shell in a directory
 that isn't version-controlled by &lt;a class="reference external" href="http://mercurial.selenic.com"&gt;Mercurial&lt;/a&gt;:&lt;/p&gt;
 &lt;ol class="arabic"&gt;
 &lt;li&gt;&lt;p class="first"&gt;So, we don't want to see this ugliness:&lt;/p&gt;
@@ -1470,35 +1498,7 @@ in which case the previous example would be preferable.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;This &lt;a class="reference external" href="http://hg.python.org/cpython/rev/eaf93e156dff"&gt;small and wonderful feature&lt;/a&gt; is &lt;a class="reference external" href="http://docs.python.org/3/whatsnew/3.3.html#subprocess"&gt;new as of Python 3.3&lt;/a&gt;.&lt;/p&gt;
-</summary><category term="Python"></category><category term="VCS"></category></entry><entry><title>companies I deeply appreciate</title><link href="http://tshepang.net/companies-i-deeply-appreciate" rel="alternate"></link><updated>2013-04-07T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-04-07:companies-i-deeply-appreciate</id><summary type="html">&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://en.wikipedia.org/wiki/Red_Hat"&gt;Red Hat&lt;/a&gt; contributes more to &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open_source_software"&gt;FLOSS&lt;/a&gt; than any other company,
-employing hundreds of developers to work full-time on it.&lt;/li&gt;
-&lt;li&gt;Google&lt;ul&gt;
-&lt;li&gt;Runs &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Google_Summer_of_Code"&gt;the Summer of Code program&lt;/a&gt;, which pays hundreds of
-students to work full-time for a few months on FLOSS projects of
-their choosing.&lt;/li&gt;
-&lt;li&gt;Provides Gmail for gratis, which I use as my primary web address.&lt;/li&gt;
-&lt;li&gt;Funds the development of Chromium,
-a very credible alternative to the world's major web browsers,
-and my personal favorite. It's also FLOSS.&lt;/li&gt;
-&lt;li&gt;Funds most of the development of Android, which is quickly
-becoming the dominant platform for high-end phones, and also
-happens to be mostly FLOSS (though I hate the closed development).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;The &lt;a class="reference external" href="http://stackexchange.com"&gt;Stack Exchange&lt;/a&gt; family of sites attempt to provide the best Q&amp;amp;A
-for a wide array of topics. They have succeeded specifically in one
-topic, programming, in a form of &lt;a class="reference external" href="http://stackoverflow.com"&gt;Stack Overflow&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.atlassian.com"&gt;Atlassian&lt;/a&gt; offers &lt;a class="reference external" href="https://bitbucket.org"&gt;Bitbucket&lt;/a&gt;,
-a gratis hosting service for public software projects;
-this is a great thing, but not special since there are others offering
-the same, most notably &lt;a class="reference external" href="https://github.com"&gt;GitHub&lt;/a&gt;.
-What makes it special is that it also offers gratis hosting
-for unlimited private repositories.
-I have over a dozen such repositories and each time I create one,
-I feel like the world is a wonderful place... I am grateful.&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="list"></category></entry><entry><title>links 2013-04-05</title><link href="http://tshepang.net/links-2013-04-05" rel="alternate"></link><updated>2013-04-05T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-04-05:links-2013-04-05</id><summary type="html">&lt;ul class="simple"&gt;
+</summary><category term="Python"></category><category term="VCS"></category></entry><entry><title>links 2013-04-05</title><link href="http://tshepang.net/links-2013-04-05" rel="alternate"></link><updated>2013-04-05T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-04-05:links-2013-04-05</id><summary type="html">&lt;ul class="simple"&gt;
 &lt;li&gt;I don't care much for C#, but &lt;a class="reference external" href="http://msmvps.com/blogs/jon_skeet/archive/2011/12/05/book-review-fluent-c-rebecca-riordan-sams.aspx"&gt;this 'negative' book review&lt;/a&gt;
 by &lt;a class="reference external" href="http://www.yoda.arachsys.com/csharp/"&gt;a luminary&lt;/a&gt; in the .NET community is worthy.&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://pycon.blip.tv/file/4880330/"&gt;a video&lt;/a&gt; on the awesome Disqus commenting system&lt;/li&gt;
