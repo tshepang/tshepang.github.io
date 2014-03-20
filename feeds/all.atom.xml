@@ -100,7 +100,16 @@ for unlimited private repositories.
 I have over a dozen such repositories and each time I create one,
 I feel like the world is a wonderful place... I am grateful.&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="list"></category></entry><entry><title>project of note: Debian Installer</title><link href="http://tshepang.net/project-of-note-debian-installer" rel="alternate"></link><updated>2014-03-20T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-03-20:project-of-note-debian-installer</id><summary type="html">&lt;p&gt;I've looked at pretty installers like that of Ubuntu and Fedora, and
+</summary><category term="list"></category></entry><entry><title>links 2014-03-20</title><link href="http://tshepang.net/links-2014-03-20" rel="alternate"></link><updated>2014-03-20T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-03-20:links-2014-03-20</id><summary type="html">&lt;ul class="simple"&gt;
+&lt;li&gt;developing for Debian can be ugly, and &lt;a class="reference external" href="http://blog.liw.fi/posts/debian-developing-it-wrong"&gt;here are some excellent
+suggestions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://lkml.org/lkml/2013/11/7/95"&gt;interesting idea on automated collection of Linux kernel
+(in)stability issues&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Btrfs is unfortunately still &lt;a class="reference external" href="http://changelog.complete.org/archives/9123-results-with-btrfs-and-zfs"&gt;not ready for production&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.lanedo.com/2013/filesystem-monitoring-linux-kernel"&gt;nice explanation of Linux kernel file monitoring technologies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://nickcraver.com/blog/2013/11/22/what-it-takes-to-run-stack-overflow"&gt;excellent post on Stack Overflow infrastructure&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="Debian"></category><category term="non-FLOSS"></category><category term="links"></category></entry><entry><title>project of note: Debian Installer</title><link href="http://tshepang.net/project-of-note-debian-installer" rel="alternate"></link><updated>2014-03-20T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-03-20:project-of-note-debian-installer</id><summary type="html">&lt;p&gt;I've looked at pretty installers like that of Ubuntu and Fedora, and
 they are all very easy and slick. But whenever I install Debian, I
 don't really see how much harder it is to use, though it's a lot
 uglier.&lt;/p&gt;
