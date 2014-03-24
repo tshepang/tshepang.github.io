@@ -1628,9 +1628,6 @@ world... &lt;a class="reference external" href="http://bitprophet.org/blog/2012/
 kernel and one included in Debian; would be nice to get more of this,
 and also on other major software included in Debian&lt;/li&gt;
 &lt;li&gt;The &lt;a class="reference external" href="http://superuser.com/a/236605/34953"&gt;highest-voted answer&lt;/a&gt; I ever gave on &lt;a class="reference external" href="http://stackexchange.com/"&gt;Stack Exchange&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://bbs.archlinux.org/viewtopic.php?pid=1149530#p1149530"&gt;benefits of systemd&lt;/a&gt; according to an Arch Linux developer; one
-thing I appreciate is that this was written by someone other than
-&lt;a class="reference external" href="http://tshepang.net/developer-of-note-lennart-poettering"&gt;systemd project leader&lt;/a&gt;, a controversial figure&lt;/li&gt;
 &lt;/ul&gt;
 </summary><category term="Python"></category><category term="non-Python"></category><category term="links"></category></entry><entry><title>errors resulting from setting named pipes to be non-blocking</title><link href="http://tshepang.net/errors-resulting-from-setting-named-pipes-to-be-non-blocking" rel="alternate"></link><updated>2012-11-18T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2012-11-18:errors-resulting-from-setting-named-pipes-to-be-non-blocking</id><summary type="html">&lt;p&gt;Using C, I have been writing to named pipes in a non-blocking
 way and have been getting a whole bunch of EAGAIN errors.
@@ -1729,28 +1726,7 @@ the above (e.g. &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;gnome
 &lt;/ul&gt;
 &lt;p&gt;The symbolic links is so that those I share a network with (LAN) can
 have easy web browser access to some stuff on my machine.&lt;/p&gt;
-</summary><category term="Debian"></category></entry><entry><title>developer of note: Lennart Poettering</title><link href="http://tshepang.net/developer-of-note-lennart-poettering" rel="alternate"></link><updated>2012-10-27T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2012-10-27:developer-of-note-lennart-poettering</id><summary type="html">&lt;p&gt;Lennart is among the most visible/vocal developers in the GNOME
-community, collecting admirers and detracters along the way since he
-does not appear afraid of voicing controversial thoughts, or even
-express arrogance.&lt;/p&gt;
-&lt;p&gt;&lt;a class="reference external" href="http://mail.gnome.org/archives/desktop-devel-list/2007-October/msg00136.html"&gt;I first heard of him&lt;/a&gt; through a project that was to revolutionise Unix
-audio, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/PulseAudio"&gt;PulseAudio&lt;/a&gt;. Using it was not really the best of experiences
-(it consumed too much CPU time, which wasn't a good trade-off given I
-didn't need any of its advanced features),
-but it may well have just been the way Debian configured it at the time.&lt;/p&gt;
-&lt;p&gt;Later on, he started work on an init system that was to replace
-exisiting ones on Linux-based systems, known as &lt;a class="reference external" href="http://www.freedesktop.org/wiki/Software/systemd"&gt;systemd&lt;/a&gt;. This is
-among the FLOSS projects that did genuinely excite me, and for years I
-was waiting for it to be Debian default. Sadly, too many issues were
-raised, including the refusal of Lennart to support non-Linux systems,
-as well as having 'too many features',
-way beyond being just a traditional init system, worrying many.&lt;/p&gt;
-&lt;p&gt;Regardless of the controversy, the fact that Lennart was able to shake
-up the FLOSS world with two major projects like this makes him among the
-great developers on the planet. He also really puts a lot of effort
-in his projects, portraying great talent while at it, as well managing to market
-his projects very well, at least in my eyes.&lt;/p&gt;
-</summary><category term="developer-of-note"></category><category term="GNOME"></category></entry><entry><title>links 2012-10-23</title><link href="http://tshepang.net/links-2012-10-23" rel="alternate"></link><updated>2012-10-23T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2012-10-23:links-2012-10-23</id><summary type="html">&lt;ul class="simple"&gt;
+</summary><category term="Debian"></category></entry><entry><title>links 2012-10-23</title><link href="http://tshepang.net/links-2012-10-23" rel="alternate"></link><updated>2012-10-23T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2012-10-23:links-2012-10-23</id><summary type="html">&lt;ul class="simple"&gt;
 &lt;li&gt;I did not expect &lt;a class="reference external" href="http://stackoverflow.com/q/11942654/321731"&gt;this question of mine&lt;/a&gt; to be loved so much. In
 fact, I thought it would see some resistance, due to so many
 Python-related threading/multiprocessing questions on Stack Overflow,
@@ -1766,7 +1742,6 @@ takes an interesting direction.&lt;/li&gt;
 &lt;/ul&gt;
 </summary><category term="links"></category></entry><entry><title>links 2012-09-28</title><link href="http://tshepang.net/links-2012-09-28" rel="alternate"></link><updated>2012-09-28T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2012-09-28:links-2012-09-28</id><summary type="html">&lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://stackoverflow.com/a/2116517/321731"&gt;A look at the high fragmentation of programming languages&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://insanecoding.blogspot.com/2009/11/they-actually-want-bad-code.html"&gt;a sad case&lt;/a&gt; where management is warry of quality code&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://unix.stackexchange.com/q/5117/688"&gt;What happens after loading the Linux kernel image into RAM&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://unix.stackexchange.com/q/5117/688"&gt;Development process for putting hardware support in Linux-based
 systems&lt;/a&gt;&lt;/li&gt;
