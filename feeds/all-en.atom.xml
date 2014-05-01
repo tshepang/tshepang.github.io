@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-04-25T03:15:04+02:00</updated><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2014-04-25T03:15:04+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-04-25:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-05-01T03:48:53+02:00</updated><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2014-05-01T03:48:53+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-05-01:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
+I do celebrate each time I see a project use it. So, here I list the
+most notable projects I am aware of that do, which also gives me hope
+that it isn't being suffocated too much by Git:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://hg.mozilla.org/mozilla-central"&gt;Firefox&lt;/a&gt;, world number 3 desktop web browser (number of users)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://hg.python.org/cpython"&gt;CPython&lt;/a&gt; and &lt;a class="reference external" href="https://bitbucket.org/pypy/pypy"&gt;PyPy&lt;/a&gt;, the most important implementations of a top 10
+popular programming language&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://hg.openjdk.java.net"&gt;OpenJDK&lt;/a&gt;, the top open source implementation of the Java platform&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://bitbucket.org/birkenfeld/sphinx"&gt;Sphinx&lt;/a&gt;, documentation generator used in most Python projects&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And those which are not FLOSS (i.e. proprietary):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook"&gt;Facebook&lt;/a&gt;, world number 2 website in terms of visitor numbers&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="VCS"></category><category term="non-FLOSS"></category><category term="list"></category></entry><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2014-04-25T03:15:04+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-04-25:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
 There is &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;a separate post&lt;/a&gt; for those.&lt;/p&gt;
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/p&gt;
@@ -811,24 +826,7 @@ music video I've seen. Jackson doesn't look comfortable though, with
 unnatural poses.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-</summary><category term="music"></category><category term="list"></category></entry><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2014-01-17T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-01-17:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
-I do celebrate each time I see a project use it. So, here I list the
-most notable projects I am aware of that do, which also gives me hope
-that it isn't being suffocated too much by Git:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://hg.mozilla.org/mozilla-central"&gt;Firefox&lt;/a&gt;, world number 3 desktop web browser (number of users)&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://hg.python.org/cpython"&gt;CPython&lt;/a&gt; and &lt;a class="reference external" href="https://bitbucket.org/pypy/pypy"&gt;PyPy&lt;/a&gt;, the most important implementations of a top 10
-popular programming language&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://hg.openjdk.java.net"&gt;OpenJDK&lt;/a&gt;, the top open source implementation of the Java platform&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://bitbucket.org/birkenfeld/sphinx"&gt;Sphinx&lt;/a&gt;, documentation generator used in most Python projects&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;And those which are not FLOSS (i.e. proprietary):&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook"&gt;Facebook&lt;/a&gt;, world number 2 website in terms of visitor numbers&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://stackoverflow.com"&gt;Stack Overflow&lt;/a&gt;, top web destination website for software
-developers&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="VCS"></category><category term="non-FLOSS"></category><category term="list"></category></entry><entry><title>the one I revere most, after losing Madiba</title><link href="http://tshepang.net/the-one-i-revere-most-after-losing-madiba" rel="alternate"></link><updated>2013-12-12T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-12-12:the-one-i-revere-most-after-losing-madiba</id><summary type="html">&lt;p&gt;As far as I can remember, there was not a single living individual I
+</summary><category term="music"></category><category term="list"></category></entry><entry><title>the one I revere most, after losing Madiba</title><link href="http://tshepang.net/the-one-i-revere-most-after-losing-madiba" rel="alternate"></link><updated>2013-12-12T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-12-12:the-one-i-revere-most-after-losing-madiba</id><summary type="html">&lt;p&gt;As far as I can remember, there was not a single living individual I
 respected more than I did Madiba. That would explain the fact of my
 weeping on the morning I heard of his death, which is something I
 never did for any single individual. For some time now, I actually

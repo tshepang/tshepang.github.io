@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-04-25T03:15:04+02:00</updated><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2014-04-25T03:15:04+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-04-25:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-05-01T03:48:53+02:00</updated><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2014-05-01T03:48:53+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-05-01:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
+I do celebrate each time I see a project use it. So, here I list the
+most notable projects I am aware of that do, which also gives me hope
+that it isn't being suffocated too much by Git:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://hg.mozilla.org/mozilla-central"&gt;Firefox&lt;/a&gt;, world number 3 desktop web browser (number of users)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://hg.python.org/cpython"&gt;CPython&lt;/a&gt; and &lt;a class="reference external" href="https://bitbucket.org/pypy/pypy"&gt;PyPy&lt;/a&gt;, the most important implementations of a top 10
+popular programming language&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://hg.openjdk.java.net"&gt;OpenJDK&lt;/a&gt;, the top open source implementation of the Java platform&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://bitbucket.org/birkenfeld/sphinx"&gt;Sphinx&lt;/a&gt;, documentation generator used in most Python projects&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And those which are not FLOSS (i.e. proprietary):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook"&gt;Facebook&lt;/a&gt;, world number 2 website in terms of visitor numbers&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="VCS"></category><category term="non-FLOSS"></category><category term="list"></category></entry><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2014-04-25T03:15:04+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-04-25:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
 There is &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;a separate post&lt;/a&gt; for those.&lt;/p&gt;
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/p&gt;
@@ -579,24 +594,7 @@ False means no bar */
 could not change the modifier key with the upstream version of dwm.&lt;/p&gt;
 &lt;p&gt;You will notice that I'm still using one major GNOME package,
 Nautilus, the file browser. It remains &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;my favorite&lt;/a&gt;.&lt;/p&gt;
-</summary><category term="GNOME"></category><category term="Debian"></category></entry><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2014-01-17T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-01-17:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
-I do celebrate each time I see a project use it. So, here I list the
-most notable projects I am aware of that do, which also gives me hope
-that it isn't being suffocated too much by Git:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://hg.mozilla.org/mozilla-central"&gt;Firefox&lt;/a&gt;, world number 3 desktop web browser (number of users)&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://hg.python.org/cpython"&gt;CPython&lt;/a&gt; and &lt;a class="reference external" href="https://bitbucket.org/pypy/pypy"&gt;PyPy&lt;/a&gt;, the most important implementations of a top 10
-popular programming language&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://hg.openjdk.java.net"&gt;OpenJDK&lt;/a&gt;, the top open source implementation of the Java platform&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://bitbucket.org/birkenfeld/sphinx"&gt;Sphinx&lt;/a&gt;, documentation generator used in most Python projects&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;And those which are not FLOSS (i.e. proprietary):&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook"&gt;Facebook&lt;/a&gt;, world number 2 website in terms of visitor numbers&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://stackoverflow.com"&gt;Stack Overflow&lt;/a&gt;, top web destination website for software
-developers&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="VCS"></category><category term="non-FLOSS"></category><category term="list"></category></entry><entry><title>FLOSS pipe dreams</title><link href="http://tshepang.net/floss-pipe-dreams" rel="alternate"></link><updated>2013-11-30T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-11-30:floss-pipe-dreams</id><summary type="html">&lt;p&gt;In which I am hoping that &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; would supplant proprietary
+</summary><category term="GNOME"></category><category term="Debian"></category></entry><entry><title>FLOSS pipe dreams</title><link href="http://tshepang.net/floss-pipe-dreams" rel="alternate"></link><updated>2013-11-30T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-11-30:floss-pipe-dreams</id><summary type="html">&lt;p&gt;In which I am hoping that &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; would supplant proprietary
 alternatives:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;strong&gt;3D content creation&lt;/strong&gt;:
