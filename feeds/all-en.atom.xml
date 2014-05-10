@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-05-10T00:00:00+02:00</updated><entry><title>a better Python</title><link href="http://tshepang.net/a-better-python" rel="alternate"></link><updated>2014-05-10T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-05-10:a-better-python</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://neverworkintheory.org/2014/01/29/stefik-siebert-syntax"&gt;This post&lt;/a&gt; led me to an interesting paper titled &lt;em&gt;An Empirical
 Investigation into Programming Language Syntax&lt;/em&gt;. Now, since I'm a
-Python sucker, here is what I would use change in order to follow
+Python sucker, here is what I would change in Python in order to follow
 advice from &lt;a class="reference external" href="http://dl.acm.org/authorize.cfm?key=6968137"&gt;that paper&lt;/a&gt;:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
   before       after
@@ -34,7 +34,8 @@ repeat while (count &amp;lt; 3)
     action()
 end
 &lt;/pre&gt;
-&lt;p&gt;To mimic that, any of the following two sound fine:&lt;/p&gt;
+&lt;p&gt;To mimic that in Python, any of the following two sound fine (I prefer
+&lt;em&gt;if&lt;/em&gt; to &lt;em&gt;while&lt;/em&gt;; less syntax is better):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 repeat if count &amp;lt; 3:
     action()
@@ -52,7 +53,7 @@ loop if True:
 loop:
     action()
 &lt;/pre&gt;
-&lt;p&gt;I wonder how cycling through items in a container would look like. In
+&lt;p&gt;I wonder what cycling through items in a container would look like. In
 Python, it looks like:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 for item in container:
@@ -106,7 +107,7 @@ and &lt;em&gt;for&lt;/em&gt;, both of which received low points in the
 study. Interesting.&lt;/p&gt;
 &lt;p&gt;If someone (me?) were to implement these changes to Python, the result
 would not be named a Python variant (they are just too drastic), but
-more a Python descendent... a better Python.&lt;/p&gt;
+more a Python descendent... &lt;strong&gt;a better Python&lt;/strong&gt;.&lt;/p&gt;
 </summary><category term="Python"></category><category term="non-Python"></category></entry><entry><title>South Africa 'will continue to function'</title><link href="http://tshepang.net/south-africa-will-continue-to-function" rel="alternate"></link><updated>2014-05-10T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-05-10:south-africa-will-continue-to-function</id><summary type="html">&lt;!--  --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Despite Zuma, the country will continue to function - because the ANC

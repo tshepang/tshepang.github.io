@@ -15,12 +15,12 @@
 
 <meta property="og:title" content="a better Python "/>
 <meta property="og:url" content="http://tshepang.net/a-better-python" />
-<meta property="og:description" content="This post led me to an interesting paper titled An Empirical Investigation into Programming Language Syntax. Now, since I&#39;m a Python sucker, here is what I would use change in order to follow advice from that paper: before after ------ ----- != not= % mod string text try-except check-error finally always raise alert ..." />
+<meta property="og:description" content="This post led me to an interesting paper titled An Empirical Investigation into Programming Language Syntax. Now, since I&#39;m a Python sucker, here is what I would change in Python in order to follow advice from that paper: before after ------ ----- != not= % mod string text try-except check-error finally always raise ..." />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2014-05-10T00:00:00" />
 <meta name="twitter:title" content="a better Python ">
-<meta name="twitter:description" content="This post led me to an interesting paper titled An Empirical Investigation into Programming Language Syntax. Now, since I&#39;m a Python sucker, here is what I would use change in order to follow advice from that paper: before after ------ ----- != not= % mod string text try-except check-error finally always raise alert ...">
+<meta name="twitter:description" content="This post led me to an interesting paper titled An Empirical Investigation into Programming Language Syntax. Now, since I&#39;m a Python sucker, here is what I would change in Python in order to follow advice from that paper: before after ------ ----- != not= % mod string text try-except check-error finally always raise ...">
 
         <title>a better Python  · Tshepang logs
 </title>
@@ -78,7 +78,7 @@
             
             <p><a class="reference external" href="http://neverworkintheory.org/2014/01/29/stefik-siebert-syntax">This post</a> led me to an interesting paper titled <em>An Empirical
 Investigation into Programming Language Syntax</em>. Now, since I'm a
-Python sucker, here is what I would use change in order to follow
+Python sucker, here is what I would change in Python in order to follow
 advice from <a class="reference external" href="http://dl.acm.org/authorize.cfm?key=6968137">that paper</a>:</p>
 <pre class="literal-block">
   before       after
@@ -111,7 +111,8 @@ repeat while (count &lt; 3)
     action()
 end
 </pre>
-<p>To mimic that, any of the following two sound fine:</p>
+<p>To mimic that in Python, any of the following two sound fine (I prefer
+<em>if</em> to <em>while</em>; less syntax is better):</p>
 <pre class="literal-block">
 repeat if count &lt; 3:
     action()
@@ -129,7 +130,7 @@ loop if True:
 loop:
     action()
 </pre>
-<p>I wonder how cycling through items in a container would look like. In
+<p>I wonder what cycling through items in a container would look like. In
 Python, it looks like:</p>
 <pre class="literal-block">
 for item in container:
@@ -183,7 +184,7 @@ and <em>for</em>, both of which received low points in the
 study. Interesting.</p>
 <p>If someone (me?) were to implement these changes to Python, the result
 would not be named a Python variant (they are just too drastic), but
-more a Python descendent... a better Python.</p>
+more a Python descendent... <strong>a better Python</strong>.</p>
 
             
             <section>
