@@ -1,5 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-05-10T00:00:00+02:00</updated><entry><title>South Africa 'will continue to function'</title><link href="http://tshepang.net/south-africa-will-continue-to-function" rel="alternate"></link><updated>2014-05-10T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-05-10:south-africa-will-continue-to-function</id><summary type="html">&lt;!--  --&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-05-10T00:00:00+02:00</updated><entry><title>a better Python</title><link href="http://tshepang.net/a-better-python" rel="alternate"></link><updated>2014-05-10T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-05-10:a-better-python</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://neverworkintheory.org/2014/01/29/stefik-siebert-syntax"&gt;This post&lt;/a&gt; led me to an interesting paper titled &lt;em&gt;An Empirical
+Investigation into Programming Language Syntax&lt;/em&gt;. Now, since I'm a
+Python sucker, here is what I would use change in order to follow
+advice from &lt;a class="reference external" href="http://dl.acm.org/authorize.cfm?key=6968137"&gt;that paper&lt;/a&gt;:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+  before       after
+  ------       -----
+   !=          not=
+    %          mod
+ string        text
+try-except  check-error
+ finally       always
+  raise        alert
+   def       procedure
+  print       output
+ import        use
+int/float     number
+&lt;/pre&gt;
+&lt;p&gt;The most surprising finding is that both programmers and
+non-programmers found &lt;em&gt;while&lt;/em&gt; and &lt;em&gt;for&lt;/em&gt; not intuitive for looping
+constructs. The preferred alternatives are &lt;em&gt;repeat&lt;/em&gt; and &lt;em&gt;loop&lt;/em&gt;. Of
+these, I prefer &lt;em&gt;loop&lt;/em&gt;, but it does not read as well as &lt;em&gt;while&lt;/em&gt;:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+while count &amp;lt; 3:
+    action()
+
+loop count &amp;lt; 3:
+    action()
+&lt;/pre&gt;
+&lt;p&gt;Quorum, the language by those responsible for this paper, went with:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+repeat while (count &amp;lt; 3)
+    action()
+end
+&lt;/pre&gt;
+&lt;p&gt;To mimic that, any of the following two sound fine:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+repeat if count &amp;lt; 3:
+    action()
+
+loop if count &amp;lt; 3:
+    action()
+&lt;/pre&gt;
+&lt;p&gt;That means an infinite loop would be:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+loop if True:
+    action()
+&lt;/pre&gt;
+&lt;p&gt;Or for that special case, a shortcut can just be this simple:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+loop:
+    action()
+&lt;/pre&gt;
+&lt;p&gt;I wonder how cycling through items in a container would look like. In
+Python, it looks like:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+for item in container:
+    action(item)
+&lt;/pre&gt;
+&lt;p&gt;This feels as natural as anything, but then again I been doing Python
+for a number of years, so the bias could be heavy. Following is an
+attempt:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+loop in range(3):
+    action()
+&lt;/pre&gt;
+&lt;p&gt;It mimics this Python syntax, which I actually don't like, since we
+don't always need the items of the container:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+for _ in range(3):
+    action()
+&lt;/pre&gt;
+&lt;p&gt;Quorum, the academic language mentioned above, does it like:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+repeat 3 times
+    action()
+end
+&lt;/pre&gt;
+&lt;p&gt;I don't like that either; feels contrived. The Python way strikes me
+as a good compromise, especially given how general it is. I will try
+again with the &lt;em&gt;loop&lt;/em&gt; syntax:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+loop item in container:
+    action(item)
+&lt;/pre&gt;
+&lt;p&gt;You have to admit it doesn't read as nice as:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+for item in container:
+    action(item)
+&lt;/pre&gt;
+&lt;p&gt;It should be flexible to accommodate more than just one value on each
+iteration, so should have an equivalent for this Python code:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+for index, item in enumerate(container):
+    action(index, item)
+&lt;/pre&gt;
+&lt;p&gt;Here goes:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+loop index, item in enumerate(container):
+    action(index, item)
+&lt;/pre&gt;
+&lt;p&gt;So, apart from being highly-rated for being intuitive, &lt;em&gt;loop&lt;/em&gt; also
+provides a consistent looping construct, whereas Python has 2, &lt;em&gt;while&lt;/em&gt;
+and &lt;em&gt;for&lt;/em&gt;, both of which received low points in the
+study. Interesting.&lt;/p&gt;
+&lt;p&gt;If someone (me?) were to implement these changes to Python, the result
+would not be named a Python variant (they are just too drastic), but
+more a Python descendent... a better Python.&lt;/p&gt;
+</summary><category term="Python"></category><category term="non-Python"></category></entry><entry><title>South Africa 'will continue to function'</title><link href="http://tshepang.net/south-africa-will-continue-to-function" rel="alternate"></link><updated>2014-05-10T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-05-10:south-africa-will-continue-to-function</id><summary type="html">&lt;!--  --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Despite Zuma, the country will continue to function - because the ANC
 does not do everything wrong, because South Africa has a strong,
