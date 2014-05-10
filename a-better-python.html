@@ -79,7 +79,7 @@
             <p><a class="reference external" href="http://neverworkintheory.org/2014/01/29/stefik-siebert-syntax">This post</a> led me to an interesting paper titled <em>An Empirical
 Investigation into Programming Language Syntax</em>. Now, since I'm a
 Python sucker, here is what I would change in Python in order to follow
-advice from <a class="reference external" href="http://dl.acm.org/authorize.cfm?key=6968137">that paper</a>:</p>
+advice from <a class="reference external" href="http://dl.acm.org/authorize?6968137">that paper</a>:</p>
 <pre class="literal-block">
   before       after
   ------       -----
@@ -177,6 +177,14 @@ for index, item in enumerate(container):
 <pre class="literal-block">
 loop index, item in enumerate(container):
     action(index, item)
+</pre>
+<p>Now, for the much-loved Python list comprehensions:</p>
+<pre class="literal-block">
+[procedure(item) for item in container]
+</pre>
+<p>We would instead have:</p>
+<pre class="literal-block">
+[procedure(item) loop item in container]
 </pre>
 <p>So, apart from being highly-rated for being intuitive, <em>loop</em> also
 provides a consistent looping construct, whereas Python has 2, <em>while</em>

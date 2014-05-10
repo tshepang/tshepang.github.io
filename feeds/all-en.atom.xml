@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-05-10T00:00:00+02:00</updated><entry><title>a better Python</title><link href="http://tshepang.net/a-better-python" rel="alternate"></link><updated>2014-05-10T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-05-10:a-better-python</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://neverworkintheory.org/2014/01/29/stefik-siebert-syntax"&gt;This post&lt;/a&gt; led me to an interesting paper titled &lt;em&gt;An Empirical
 Investigation into Programming Language Syntax&lt;/em&gt;. Now, since I'm a
 Python sucker, here is what I would change in Python in order to follow
-advice from &lt;a class="reference external" href="http://dl.acm.org/authorize.cfm?key=6968137"&gt;that paper&lt;/a&gt;:&lt;/p&gt;
+advice from &lt;a class="reference external" href="http://dl.acm.org/authorize?6968137"&gt;that paper&lt;/a&gt;:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
   before       after
   ------       -----
@@ -100,6 +100,14 @@ for index, item in enumerate(container):
 &lt;pre class="literal-block"&gt;
 loop index, item in enumerate(container):
     action(index, item)
+&lt;/pre&gt;
+&lt;p&gt;Now, for the much-loved Python list comprehensions:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+[procedure(item) for item in container]
+&lt;/pre&gt;
+&lt;p&gt;We would instead have:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+[procedure(item) loop item in container]
 &lt;/pre&gt;
 &lt;p&gt;So, apart from being highly-rated for being intuitive, &lt;em&gt;loop&lt;/em&gt; also
 provides a consistent looping construct, whereas Python has 2, &lt;em&gt;while&lt;/em&gt;
