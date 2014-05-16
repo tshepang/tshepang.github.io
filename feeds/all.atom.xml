@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-05-16T21:58:56+02:00</updated><entry><title>most exciting projects</title><link href="http://tshepang.net/most-exciting-projects" rel="alternate"></link><updated>2014-05-16T21:58:56+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-05-16:most-exciting-projects</id><summary type="html">&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-05-16T22:04:25+02:00</updated><entry><title>Python wishes</title><link href="http://tshepang.net/python-wishes" rel="alternate"></link><updated>2014-05-16T22:04:25+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-05-16:python-wishes</id><summary type="html">&lt;p&gt;None of these is likely to happen at all.
+It's even safe to use the word &lt;em&gt;never&lt;/em&gt; with a great amount of certainty;
+but I wanted to document them anyway, if for no other reason than rescue
+them from the exclusiveness of my mind:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;add a &lt;tt class="docutils literal"&gt;prepend&lt;/tt&gt; method to list objects, make it as efficient as
+&lt;tt class="docutils literal"&gt;collections.deque&lt;/tt&gt;, then remove the latter&lt;/li&gt;
+&lt;li&gt;remove &lt;tt class="docutils literal"&gt;f.readlines()&lt;/tt&gt;;
+&lt;tt class="docutils literal"&gt;list(f)&lt;/tt&gt; is a clearer and more general replacement (&lt;a class="reference external" href="http://bugs.python.org/issue13510#msg186940"&gt;source&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;rm &lt;tt class="docutils literal"&gt;os.system&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;os.popen*&lt;/tt&gt; and relatives;
+we already have the &lt;a class="reference external" href="http://docs.python.org/3/library/subprocess"&gt;subprocess module&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;rid of all forms of string formatting,
+other than &lt;a class="reference external" href="http://docs.python.org/3/library/string#string-formatting"&gt;Advanced String Formatting&lt;/a&gt;;
+do it everywhere, including the &lt;a class="reference external" href="http://docs.python.org/3/library/logging"&gt;logging module&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;change module names to be PEP-compliant, everywhere&lt;/li&gt;
+&lt;li&gt;remove &lt;tt class="docutils literal"&gt;lambda&lt;/tt&gt;; it's not Pythonic, and just feels like a wart;
+it also does a good job of making Python code less readable&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="Python"></category></entry><entry><title>most exciting projects</title><link href="http://tshepang.net/most-exciting-projects" rel="alternate"></link><updated>2014-05-16T21:58:56+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-05-16:most-exciting-projects</id><summary type="html">&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org"&gt;PyPy&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;It's been alive for over 10 years, but remains among the most
@@ -377,26 +395,7 @@ put the thing at the wrong angle... I mostly use my laptop in bed.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</summary><category term="hardware"></category></entry><entry><title>Python pipe dreams</title><link href="http://tshepang.net/python-pipe-dreams" rel="alternate"></link><updated>2014-04-20T00:08:15+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-04-20:python-pipe-dreams</id><summary type="html">&lt;p&gt;None of these is likely to happen at all.
-It's even safe to use the word &lt;em&gt;never&lt;/em&gt; with a great amount of certainty;
-but I wanted to document them anyway, if for no other reason than rescue
-them from the exclusiveness of my mind:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;add a &lt;tt class="docutils literal"&gt;prepend&lt;/tt&gt; method to list objects, make it as efficient as
-&lt;tt class="docutils literal"&gt;collections.deque&lt;/tt&gt;, then remove the latter&lt;/li&gt;
-&lt;li&gt;remove &lt;tt class="docutils literal"&gt;f.readlines()&lt;/tt&gt;;
-&lt;tt class="docutils literal"&gt;list(f)&lt;/tt&gt; is a clearer and more general replacement (&lt;a class="reference external" href="http://bugs.python.org/issue13510#msg186940"&gt;source&lt;/a&gt;).&lt;/li&gt;
-&lt;li&gt;rm &lt;tt class="docutils literal"&gt;os.system&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;os.popen*&lt;/tt&gt; and relatives;
-we already have the &lt;a class="reference external" href="http://docs.python.org/3/library/subprocess"&gt;subprocess module&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;rid of all forms of string formatting,
-other than &lt;a class="reference external" href="http://docs.python.org/3/library/string#string-formatting"&gt;Advanced String Formatting&lt;/a&gt;;
-do it everywhere, including the &lt;a class="reference external" href="http://docs.python.org/3/library/logging"&gt;logging module&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;change module names to be PEP-compliant, everywhere&lt;/li&gt;
-&lt;li&gt;remove &lt;tt class="docutils literal"&gt;lambda&lt;/tt&gt;; it's not Pythonic, and just feels like a wart;
-it also does a good job of making Python code less readable&lt;/li&gt;
-&lt;li&gt;change &lt;cite&gt;def&lt;/cite&gt; keyword to &lt;cite&gt;func&lt;/cite&gt;; it's more descriptive&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="Python"></category></entry><entry><title>pipe dream: Basic Income for South African adults</title><link href="http://tshepang.net/pipe-dream-basic-income-for-south-african-adults" rel="alternate"></link><updated>2014-04-02T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-04-02:pipe-dream-basic-income-for-south-african-adults</id><summary type="html">&lt;p&gt;There are too many people suffering from poverty in South Africa, and
+</summary><category term="hardware"></category></entry><entry><title>pipe dream: Basic Income for South African adults</title><link href="http://tshepang.net/pipe-dream-basic-income-for-south-african-adults" rel="alternate"></link><updated>2014-04-02T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-04-02:pipe-dream-basic-income-for-south-african-adults</id><summary type="html">&lt;p&gt;There are too many people suffering from poverty in South Africa, and
 the quickest way to eliminate it is to provide income for all adult
 citizens (18+). If each of these 30 million individuals earned
 R500/week ($1 is about R10), that would cost R780 billion. Compare
