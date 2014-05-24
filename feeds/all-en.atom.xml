@@ -78,25 +78,25 @@ constructs. The preferred alternatives are &lt;em&gt;repeat&lt;/em&gt; and &lt;e
 these, I prefer &lt;em&gt;loop&lt;/em&gt;, but it does not read as well as &lt;em&gt;while&lt;/em&gt;:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 while count &amp;lt; 3:
-    action()
+    count = action()
 
 loop count &amp;lt; 3:
-    action()
+    count = action()
 &lt;/pre&gt;
 &lt;p&gt;Quorum, the language by those responsible for this paper, went with:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 repeat while (count &amp;lt; 3)
-    action()
+    count = action()
 end
 &lt;/pre&gt;
 &lt;p&gt;To mimic that in Python, any of the following two sound fine (I prefer
 &lt;em&gt;if&lt;/em&gt; to &lt;em&gt;while&lt;/em&gt;; less syntax is better):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 repeat if count &amp;lt; 3:
-    action()
+    count = action()
 
 loop if count &amp;lt; 3:
-    action()
+    count = action()
 &lt;/pre&gt;
 &lt;p&gt;That means an infinite loop would be:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;

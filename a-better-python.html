@@ -100,25 +100,25 @@ constructs. The preferred alternatives are <em>repeat</em> and <em>loop</em>. Of
 these, I prefer <em>loop</em>, but it does not read as well as <em>while</em>:</p>
 <pre class="literal-block">
 while count &lt; 3:
-    action()
+    count = action()
 
 loop count &lt; 3:
-    action()
+    count = action()
 </pre>
 <p>Quorum, the language by those responsible for this paper, went with:</p>
 <pre class="literal-block">
 repeat while (count &lt; 3)
-    action()
+    count = action()
 end
 </pre>
 <p>To mimic that in Python, any of the following two sound fine (I prefer
 <em>if</em> to <em>while</em>; less syntax is better):</p>
 <pre class="literal-block">
 repeat if count &lt; 3:
-    action()
+    count = action()
 
 loop if count &lt; 3:
-    action()
+    count = action()
 </pre>
 <p>That means an infinite loop would be:</p>
 <pre class="literal-block">
