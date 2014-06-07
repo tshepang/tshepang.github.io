@@ -1,5 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-06-04T00:00:00+02:00</updated><entry><title>links 2014-06-04</title><link href="http://tshepang.net/links-2014-06-04" rel="alternate"></link><updated>2014-06-04T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-06-04:links-2014-06-04</id><summary type="html">&lt;ul class="simple"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-06-08T00:53:13+02:00</updated><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2014-06-08T00:53:13+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-06-08:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
+There is &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;a separate post&lt;/a&gt; for those.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;wajig&lt;/strong&gt;: &lt;a class="reference external" href="http://tshepang.net/tags#wajig-ref"&gt;I also develop and maintain it&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;APT&lt;/strong&gt;: a collection of Debian package management tools&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Aptitude&lt;/strong&gt;: I mainly use its &lt;tt class="docutils literal"&gt;search&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;show&lt;/tt&gt; subcommands;
+the equivalent functionality in APT is lesser&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;editors&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Emacs&lt;/strong&gt;: my favorite&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vim&lt;/strong&gt;: it happens to be installed on a lot of systems at work,
+and I do like it somewhat&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;software development&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;git-cola&lt;/strong&gt;: &lt;a class="reference external" href="http://tshepang.net/project-of-note-git-cola"&gt;why me loves it&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GNU toolchain&lt;/strong&gt; (GCC, make, GLibC, ...)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Git&lt;/strong&gt;: as if I had a choice... work and open source&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mercurial&lt;/strong&gt;: my favorite&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://meldmerge.org"&gt;Meld&lt;/a&gt;: the most excellent diff tool I've used yet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;entertainment&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Quod Libet&lt;/strong&gt;: audio player that comes with a very excellent tag
+editor, &lt;strong&gt;Ex Falso&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VLC&lt;/strong&gt;: ugly interface, solid application&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;applications&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;dwm&lt;/strong&gt;: &lt;a class="reference external" href="http://tshepang.net/my-current-desktop-setup"&gt;replaced GNOME as my primary desktop environment&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Evince&lt;/strong&gt;: I would love to get a PDF reader with better navigation&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Firefox&lt;/strong&gt;: I am not happy with its memory consumption, but have
+nevertheless settled on it&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gnumeric&lt;/strong&gt;: it's faster than LibreOffice spreadsheet, and has a
+superior search interface&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://lzone.de/liferea"&gt;Liferea&lt;/a&gt;: would not be using this had it not been for Google Reader
+shutdown, but am glad they did cuz I like the tool, ugly and unkool
+as it is&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Thunderbird&lt;/strong&gt;: I prefer Evolution, but it gave me some issues I
+don't remember&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.transmissionbt.com"&gt;Transmission&lt;/a&gt;: the only torrent client I have ever used&lt;/li&gt;
+&lt;li&gt;Nautilus: favorite GUI file manager&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FileZilla&lt;/strong&gt;: I should really find something nicer for my SFTP needs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;miscellaneous tools&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://tmux.sourceforge.net"&gt;tmux&lt;/a&gt;: amazingly powerful!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;tail&lt;/strong&gt;: part of GNU coreutils; indispensable!&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.greenwoodsoftware.com/less"&gt;less&lt;/a&gt;: indispensable!&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://fileroller.sourceforge.net"&gt;File Roller&lt;/a&gt;: nice and simple GUI archive manager&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Minicom&lt;/strong&gt;: use this for some ancient setups at work, for some clients&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OpenSSH&lt;/strong&gt;: duh!&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/joelthelion/autojump"&gt;autojump&lt;/a&gt;: makes navigating the filesystem a joy&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="list"></category></entry><entry><title>favorite FLOSS</title><link href="http://tshepang.net/favorite-floss" rel="alternate"></link><updated>2014-06-08T00:51:11+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-06-08:favorite-floss</id><summary type="html">&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
+it has to both be personally useful and I have to like it a lot:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;backup:&lt;/strong&gt; &lt;a class="reference external" href="http://tshepang.net/project-of-note-rdiff-backup"&gt;rdiff-backup&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;desktop&lt;/strong&gt;: &lt;a class="reference external" href="http://dwm.suckless.org"&gt;dwm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;development&lt;/strong&gt;: Python, Emacs, &lt;a class="reference external" href="http://tshepang.net/project-of-note-git-cola"&gt;git-cola&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;file manager&lt;/strong&gt;: Nautilus, Emacs (Dired mode)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;misc utilities:&lt;/strong&gt; grep, &lt;a class="reference external" href="http://tshepang.net/project-of-note-sudo"&gt;Sudo&lt;/a&gt;, &lt;a class="reference external" href="http://tshepang.net/project-of-note-reprepro"&gt;reprepro&lt;/a&gt;, Lsof, less, Meld,
+Uptimed, procps (top, watch), &lt;a class="reference external" href="http://projects.gnome.org/tracker"&gt;Tracker&lt;/a&gt;, Ex Falso, wajig, autojump,
+&lt;a class="reference external" href="http://tshepang.net/xfrun4-rocks"&gt;xfrun4&lt;/a&gt;, coreutils (wc, tail), &lt;a class="reference external" href="http://tshepang.net/project-of-note-linkchecker"&gt;LinkChecker&lt;/a&gt;, &lt;a class="reference external" href="http://guichaz.free.fr/iotop"&gt;Iotop&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Man_page"&gt;man&lt;/a&gt;,
+OpenSSH, &lt;a class="reference external" href="http://humdi.net/vnstat"&gt;vnstat&lt;/a&gt;, &lt;a class="reference external" href="http://tmux.sourceforge.net"&gt;tmux&lt;/a&gt;, File Roller, &lt;a class="reference external" href="http://fabfile.org"&gt;Fabric&lt;/a&gt;, youtube-dl&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;spreadsheet:&lt;/strong&gt; gnumeric&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;terminal emulator&lt;/strong&gt;: GNOME Terminal&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;virtualisation&lt;/strong&gt;: VirtualBox&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;version control system&lt;/strong&gt;: &lt;a class="reference external" href="http://mercurial.selenic.com"&gt;Mercurial&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;web browser&lt;/strong&gt;: Firefox&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;non-FLOSS:&lt;/strong&gt; &lt;a class="reference external" href="http://disqus.com"&gt;Disqus&lt;/a&gt;, &lt;a class="reference external" href="http://mail.google.com/mail"&gt;Gmail&lt;/a&gt;, &lt;a class="reference external" href="http://stackexchange.com"&gt;Stack Exchange&lt;/a&gt;, &lt;a class="reference external" href="http://bitbucket.org"&gt;Bitbucket&lt;/a&gt;&lt;/p&gt;
+</summary><category term="list"></category></entry><entry><title>links 2014-06-04</title><link href="http://tshepang.net/links-2014-06-04" rel="alternate"></link><updated>2014-06-04T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-06-04:links-2014-06-04</id><summary type="html">&lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://loupgaroublond.blogspot.com/2008/12/open-source-and-anarchism.html?showComment=1229842200000#c4468517513122259751"&gt;An excellent description on why Anarchy is the best possible
 society ever imagined&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://www.salon.com/2013/10/25/crowdsource_your_salary_an_economy_built_on_love"&gt;Great write-up on Gittip&lt;/a&gt;&lt;/li&gt;
@@ -218,79 +291,7 @@ popular programming language&lt;/li&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook"&gt;Facebook&lt;/a&gt;, world number 2 website in terms of visitor numbers&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="VCS"></category><category term="non-FLOSS"></category><category term="list"></category></entry><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2014-04-25T03:15:04+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-04-25:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
-There is &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;a separate post&lt;/a&gt; for those.&lt;/p&gt;
-&lt;hr class="docutils" /&gt;
-&lt;p&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;strong&gt;wajig&lt;/strong&gt;: &lt;a class="reference external" href="http://tshepang.net/tags#wajig-ref"&gt;I also develop and maintain it&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;APT&lt;/strong&gt;: a collection of Debian package management tools&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Aptitude&lt;/strong&gt;: I mainly use its &lt;tt class="docutils literal"&gt;search&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;show&lt;/tt&gt; subcommands;
-the equivalent functionality in APT is lesser&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;editors&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;strong&gt;Emacs&lt;/strong&gt;: my favorite&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Vim&lt;/strong&gt;: it happens to be installed on a lot of systems at work,
-and I do like it somewhat&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;software development&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;strong&gt;git-cola&lt;/strong&gt;: &lt;a class="reference external" href="http://tshepang.net/project-of-note-git-cola"&gt;why me loves it&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GNU toolchain&lt;/strong&gt; (GCC, make, GLibC, ...)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Git&lt;/strong&gt;: as if I had a choice... work and open source&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Mercurial&lt;/strong&gt;: my favorite&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://meldmerge.org"&gt;Meld&lt;/a&gt;: the most excellent diff tool I've used yet&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;entertainment&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;strong&gt;Quod Libet&lt;/strong&gt;: audio player that comes with a very excellent tag
-editor, &lt;strong&gt;Ex Falso&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;VLC&lt;/strong&gt;: ugly interface, solid application&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;applications&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;strong&gt;dwm&lt;/strong&gt;: &lt;a class="reference external" href="http://tshepang.net/my-current-desktop-setup"&gt;replaced GNOME as my primary desktop environment&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Evince&lt;/strong&gt;: I would love to get a PDF reader with better navigation&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Firefox&lt;/strong&gt;: I am not happy with its memory consumption, but have
-nevertheless settled on it&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Gnumeric&lt;/strong&gt;: it's faster than LibreOffice spreadsheet, and has a
-superior search interface&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://lzone.de/liferea"&gt;Liferea&lt;/a&gt;: would not be using this had it not been for Google Reader
-shutdown, but am glad they did cuz I like the tool, ugly and unkool
-as it is&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Thunderbird&lt;/strong&gt;: I prefer Evolution, but it gave me some issues I
-don't remember&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.transmissionbt.com"&gt;Transmission&lt;/a&gt;: the only torrent client I have ever used&lt;/li&gt;
-&lt;li&gt;Nautilus: favorite GUI file manager&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;FileZilla&lt;/strong&gt;: I should really find something nicer for my SFTP needs&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;miscellaneous tools&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://tmux.sourceforge.net"&gt;tmux&lt;/a&gt;: amazingly powerful!&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;tail&lt;/strong&gt;: part of GNU coreutils; indispensable!&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.greenwoodsoftware.com/less"&gt;less&lt;/a&gt;: indispensable!&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://fileroller.sourceforge.net"&gt;File Roller&lt;/a&gt;: nice and simple GUI archive manager&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Minicom&lt;/strong&gt;: use this for some ancient setups at work, for some clients&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;OpenSSH&lt;/strong&gt;: duh!&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="list"></category></entry><entry><title>favorite FLOSS</title><link href="http://tshepang.net/favorite-floss" rel="alternate"></link><updated>2014-04-25T03:08:19+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-04-25:favorite-floss</id><summary type="html">&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
-it has to both be personally useful and I have to like it a lot:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;backup:&lt;/strong&gt; &lt;a class="reference external" href="http://tshepang.net/project-of-note-rdiff-backup"&gt;rdiff-backup&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;desktop&lt;/strong&gt;: &lt;a class="reference external" href="http://dwm.suckless.org"&gt;dwm&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;development&lt;/strong&gt;: Python, Emacs, &lt;a class="reference external" href="http://tshepang.net/project-of-note-git-cola"&gt;git-cola&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;file manager&lt;/strong&gt;: Nautilus, Emacs (Dired mode)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;misc utilities:&lt;/strong&gt; grep, &lt;a class="reference external" href="http://tshepang.net/project-of-note-sudo"&gt;Sudo&lt;/a&gt;, &lt;a class="reference external" href="http://tshepang.net/project-of-note-reprepro"&gt;reprepro&lt;/a&gt;, Lsof, less, Meld,
-Uptimed, procps (top, watch), &lt;a class="reference external" href="http://projects.gnome.org/tracker"&gt;Tracker&lt;/a&gt;, Ex Falso, wajig,
-&lt;a class="reference external" href="http://tshepang.net/xfrun4-rocks"&gt;xfrun4&lt;/a&gt;, coreutils (wc, tail), &lt;a class="reference external" href="http://tshepang.net/project-of-note-linkchecker"&gt;LinkChecker&lt;/a&gt;, &lt;a class="reference external" href="http://guichaz.free.fr/iotop"&gt;Iotop&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Man_page"&gt;man&lt;/a&gt;,
-OpenSSH, &lt;a class="reference external" href="http://humdi.net/vnstat"&gt;vnstat&lt;/a&gt;, &lt;a class="reference external" href="http://tmux.sourceforge.net"&gt;tmux&lt;/a&gt;, File Roller, &lt;a class="reference external" href="http://fabfile.org"&gt;Fabric&lt;/a&gt;, youtube-dl&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;spreadsheet:&lt;/strong&gt; gnumeric&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;terminal emulator&lt;/strong&gt;: GNOME Terminal&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;virtualisation&lt;/strong&gt;: VirtualBox&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;version control system&lt;/strong&gt;: &lt;a class="reference external" href="http://mercurial.selenic.com"&gt;Mercurial&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;web browser&lt;/strong&gt;: Firefox&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;non-FLOSS:&lt;/strong&gt; &lt;a class="reference external" href="http://disqus.com"&gt;Disqus&lt;/a&gt;, &lt;a class="reference external" href="http://mail.google.com/mail"&gt;Gmail&lt;/a&gt;, &lt;a class="reference external" href="http://stackexchange.com"&gt;Stack Exchange&lt;/a&gt;, &lt;a class="reference external" href="http://bitbucket.org"&gt;Bitbucket&lt;/a&gt;&lt;/p&gt;
-</summary><category term="list"></category></entry><entry><title>Sony Vaio Pro 13 (SVP13212SGBI)</title><link href="http://tshepang.net/sony-vaio-pro-13-svp13212sgbi" rel="alternate"></link><updated>2014-04-24T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-04-24:sony-vaio-pro-13-svp13212sgbi</id><summary type="html">&lt;p&gt;On &lt;strong&gt;2014-02-13&lt;/strong&gt; I went to collect &lt;a class="reference external" href="http://www.youtube.com/watch?v=Xq-ZBke68tA"&gt;the laptop&lt;/a&gt; from &lt;a class="reference external" href="http://www.laptopdirect.co.za/Sony-VAIO-SVP-13212SGBI-lp-78188.php"&gt;these
+</summary><category term="VCS"></category><category term="non-FLOSS"></category><category term="list"></category></entry><entry><title>Sony Vaio Pro 13 (SVP13212SGBI)</title><link href="http://tshepang.net/sony-vaio-pro-13-svp13212sgbi" rel="alternate"></link><updated>2014-04-24T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-04-24:sony-vaio-pro-13-svp13212sgbi</id><summary type="html">&lt;p&gt;On &lt;strong&gt;2014-02-13&lt;/strong&gt; I went to collect &lt;a class="reference external" href="http://www.youtube.com/watch?v=Xq-ZBke68tA"&gt;the laptop&lt;/a&gt; from &lt;a class="reference external" href="http://www.laptopdirect.co.za/Sony-VAIO-SVP-13212SGBI-lp-78188.php"&gt;these
 guys&lt;/a&gt;, which I paid around R12500 (~$1200) for. It's a 4GB RAM,
 128GB SSD, FHD model. I would have happily paid for more RAM and
 storage, but this seems the only model available in my home country. I
