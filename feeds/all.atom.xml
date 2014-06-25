@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-06-08T00:53:13+02:00</updated><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2014-06-08T00:53:13+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-06-08:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-06-25T07:31:49+02:00</updated><entry><title>most exciting software projects</title><link href="http://tshepang.net/most-exciting-software-projects" rel="alternate"></link><updated>2014-06-25T07:31:49+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-06-25:most-exciting-software-projects</id><summary type="html">&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org"&gt;PyPy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It's been alive for over 10 years, but remains among the most
+exciting of all Python projects. I greatly anticipate the stable
+releases of its most visible sub-project:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org/tmdonate2.html"&gt;Transactional Memory&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;An approach that simplifies multi-threaded programming while also
+bypassing the GIL. There is still much to do (for one, it only
+works on 64-bit Linux) and there is no ETA, but there is a rough
+estimate... sometime in 2016 :(&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.rust-lang.org"&gt;Rust&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A new programming language meant to replace the likes of C/C++,
+while also claimed to be a technically superior competitor to Go. It
+does not look like there is a date for the first stable release.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="https://github.com/mozilla/servo"&gt;Servo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The future replacement of Gecko, the HTML rendering
+engine powering Firefox. It is written in Rust.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://cryptography.io"&gt;cryptography&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Finally, a solution to the ugly (and fragmented) world of Python
+cryptography libraries. It is still very incomplete at the moment.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="list"></category><category term="non-Python"></category><category term="Python"></category></entry><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2014-06-08T00:53:13+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-06-08:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
 There is &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;a separate post&lt;/a&gt; for those.&lt;/p&gt;
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/p&gt;
@@ -99,44 +130,7 @@ do it everywhere, including the &lt;a class="reference external" href="http://do
 &lt;li&gt;remove &lt;tt class="docutils literal"&gt;lambda&lt;/tt&gt;; it's not Pythonic, and just feels like a wart;
 it also does a good job of making Python code less readable&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="Python"></category></entry><entry><title>most exciting software projects</title><link href="http://tshepang.net/most-exciting-software-projects" rel="alternate"></link><updated>2014-05-18T00:16:55+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-05-18:most-exciting-software-projects</id><summary type="html">&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org"&gt;PyPy&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;It's been alive for over 10 years, but remains among the most
-exciting of all Python projects. I greatly anticipate the stable
-releases of its two most visible sub-projects:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org/tmdonate2.html"&gt;Transactional Memory&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;An approach the simplifies multi-threaded programming while also
-bypassing the GIL. There is still much to do (for one, it only
-works on 64-bit Linux) and there is no ETA, but there is a rough
-estimate... sometime in 2016 :(&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org/py3donate.html"&gt;Python 3 support&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;I can't wait for the completion of this one, the Python 3 port of
-PyPy. It's a better language, and I try to avoid Python 2 if I
-can. There is also no ETA, but I expect the work to be complete
-sometime in 2014.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.rust-lang.org"&gt;Rust&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A new programming language meant to replace the likes of C/C++,
-while also claimed to be a technically superior competitor to Go. It
-does not look like there is a date for the first stable release.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="https://github.com/mozilla/servo"&gt;Servo&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The future replacement of Gecko, the HTML rendering
-engine powering Firefox. It is written in Rust.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://cryptography.io"&gt;cryptography&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Finally, a solution to the ugly (and fragmented) world of Python
-cryptography libraries. It is still very incomplete at the moment.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="list"></category><category term="non-Python"></category><category term="Python"></category></entry><entry><title>a better Python</title><link href="http://tshepang.net/a-better-python" rel="alternate"></link><updated>2014-05-10T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-05-10:a-better-python</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://neverworkintheory.org/2014/01/29/stefik-siebert-syntax"&gt;This post&lt;/a&gt; led me to an interesting paper titled &lt;em&gt;An Empirical
+</summary><category term="Python"></category></entry><entry><title>a better Python</title><link href="http://tshepang.net/a-better-python" rel="alternate"></link><updated>2014-05-10T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-05-10:a-better-python</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://neverworkintheory.org/2014/01/29/stefik-siebert-syntax"&gt;This post&lt;/a&gt; led me to an interesting paper titled &lt;em&gt;An Empirical
 Investigation into Programming Language Syntax&lt;/em&gt;. Now, since I'm a
 Python sucker, here is what I would change in Python in order to follow
 advice from &lt;a class="reference external" href="http://dl.acm.org/authorize?6968137"&gt;that paper&lt;/a&gt;:&lt;/p&gt;
