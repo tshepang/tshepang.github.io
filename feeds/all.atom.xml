@@ -1,5 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-07-05T13:50:46+02:00</updated><entry><title>most exciting software projects</title><link href="http://tshepang.net/most-exciting-software-projects" rel="alternate"></link><updated>2014-07-05T13:50:46+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-07-05:most-exciting-software-projects</id><summary type="html">&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-07-08T00:00:00+02:00</updated><entry><title>discovering Python @decorators</title><link href="http://tshepang.net/discovering-python-decorators" rel="alternate"></link><updated>2014-07-08T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-07-08:discovering-python-decorators</id><summary type="html">&lt;p&gt;There is a project at work where I needed to do the same action on
+various functions. It's basically a checkpoint system where I'd write
+some state to a file, but only when all the functionality in the given
+functions executed successfully. It was a one-line change but I
+thought it was a good excuse to create decorators for the first time
+in my life.&lt;/p&gt;
+&lt;p&gt;Here is an example of a decorator function:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+def checkpoint(function):
+    wrapper(*args, **kwargs):
+        with open(PATH) as f:
+            for line in f:
+                if function.__name__ in line:
+                    return
+        value = function(*args, **kwargs)
+        with open(PATH, 'a+') as f:
+            f.write(function.__name__)
+        return value
+    return wrapper
+&lt;/pre&gt;
+&lt;p&gt;All it does is write some text to a file, and avoid running whatever
+function will be &lt;em&gt;decorated&lt;/em&gt; by it if there is a match in that
+file. This would be an indicator that the function had already been
+executed (in a previous run).&lt;/p&gt;
+&lt;p&gt;The following snippet sees the use of this decorator:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+&amp;#64;checkpoint
+def do_this(some_argument):
+    # exit(1) on error
+    ...
+
+&amp;#64;checkpoint
+def do_that(some_other_argument, some_optional_argument=None):
+    # exit(1) on error
+    ...
+
+if __name__ == '__main__':
+    do_this('some value')
+    do_that('some other value')
+&lt;/pre&gt;
+&lt;p&gt;Without the decorator syntax, the same functionality would be achieved
+with:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+def do_this(some_argument):
+    # exit(1) on error
+    ...
+do_this = checkpoint(do_this)
+
+def do_that(some_other_argument, some_optional_argument=None):
+    # exit(1) on error
+    ...
+do_that = checkpoint(do_that)
+
+if __name__ == '__main__':
+    do_this('some value')
+    do_that('some other value')
+&lt;/pre&gt;
+&lt;p&gt;The latter format, though it presents less of a cognitive burden,
+feels less of an obvious solution, and it's a bit uglier as
+well. &lt;cite&gt;PEP 380&lt;/cite&gt; is a detailed discussion written over 10 years ago
+when the syntax was first added to the language.&lt;/p&gt;
+&lt;div class="system-messages section"&gt;
+&lt;h2&gt;Docutils System Messages&lt;/h2&gt;
+&lt;div class="system-message" id="id2"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;/home/tshepang/projects/blog/content/computing/discovering Python &amp;#64;decorators.rst&lt;/tt&gt;)&lt;/p&gt;
+Anonymous hyperlink mismatch: 0 references but 1 targets.
+See &amp;quot;backrefs&amp;quot; attribute for IDs.&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="Python"></category></entry><entry><title>most exciting software projects</title><link href="http://tshepang.net/most-exciting-software-projects" rel="alternate"></link><updated>2014-07-05T13:50:46+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-07-05:most-exciting-software-projects</id><summary type="html">&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org"&gt;PyPy&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;It's been alive for over 10 years, but remains among the most
