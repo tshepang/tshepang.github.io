@@ -1,5 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-07-08T00:00:00+02:00</updated><entry><title>discovering Python @decorators</title><link href="http://tshepang.net/discovering-python-decorators" rel="alternate"></link><updated>2014-07-08T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-07-08:discovering-python-decorators</id><summary type="html">&lt;p&gt;There is a project at work where I needed to do the same action on
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-08-04T00:00:00+02:00</updated><entry><title>trying to understand stack memory</title><link href="http://tshepang.net/trying-to-understand-stack-memory" rel="alternate"></link><updated>2014-08-04T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-08-04:trying-to-understand-stack-memory</id><summary type="html">&lt;p&gt;Python is a language that is so high level that concepts like stack
+and heap memory are hidden from its users. Not so with lower-level
+languages like C. Following examples are implemented in Rust, an
+easier-to-use low-level language:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;fn&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+
+    &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="k"&gt;i8&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="k"&gt;i8&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="k"&gt;i8&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="n"&gt;println&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{:p}&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;println&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{:p}&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;println&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{:p}&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We build and run it like this:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ rustc main.rs &amp;amp;&amp;amp; ./main
+0x7fff0c8d16d7
+0x7fff0c8d16d6
+0x7fff0c8d16d5
+&lt;/pre&gt;
+&lt;p&gt;In our code, the three variables are each given 1 byte of memory
+(&lt;tt class="docutils literal"&gt;i8&lt;/tt&gt; means 8-bit integer). The addresses are given in reverse order
+for a reason I'm not sure of. One person explained that the reason was
+so that the heap can begin right where the stack started, only in the
+opposite direction. I suppose this would be for performance reasons.&lt;/p&gt;
+&lt;p&gt;If we use large types, we'll see each value taking more than just one
+address:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;fn&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+
+    &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="k"&gt;i16&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="k"&gt;i16&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="k"&gt;i16&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="n"&gt;println&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{:p}&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;println&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{:p}&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;println&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{:p}&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Output:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ rustc main.rs &amp;amp;&amp;amp; ./main
+0x7fff2462aed6
+0x7fff2462aed4
+0x7fff2462aed2
+&lt;/pre&gt;
+&lt;p&gt;In this case, each of the variables take 2 addresses (&lt;tt class="docutils literal"&gt;i16&lt;/tt&gt; means
+16-bit integer). Using &lt;tt class="docutils literal"&gt;i32&lt;/tt&gt; results in each taking 4 addresses:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ rustc main.rs &amp;amp;&amp;amp; ./main
+0x7ffff7706024
+0x7ffff7706020
+0x7ffff770601c
+&lt;/pre&gt;
+&lt;p&gt;And then, finally, &lt;tt class="docutils literal"&gt;i64&lt;/tt&gt; results in each variable taking 8 addresses
+(64 bits) of space:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ rustc main.rs &amp;amp;&amp;amp; ./main
+0x7fffd27383b0
+0x7fffd27383a8
+0x7fffd27383a0
+&lt;/pre&gt;
+</summary><category term="non-Python"></category></entry><entry><title>discovering Python @decorators</title><link href="http://tshepang.net/discovering-python-decorators" rel="alternate"></link><updated>2014-07-08T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-07-08:discovering-python-decorators</id><summary type="html">&lt;p&gt;There is a project at work where I needed to do the same action on
 various functions. It's basically a checkpoint system where I'd write
 some state to a file, but only when all the functionality in the given
 functions executed successfully. It was a one-line change but I
