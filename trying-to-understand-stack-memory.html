@@ -99,10 +99,11 @@ $ rustc main.rs &amp;&amp; ./main
 0x7fff0c8d16d5
 </pre>
 <p>In our code, the three variables are each given 1 byte of memory
-(<tt class="docutils literal">i8</tt> means 8-bit integer). The addresses are given in reverse order
-for a reason I'm not sure of. One person explained that the reason was
-so that the heap can begin right where the stack started, only in the
-opposite direction. I suppose this would be for performance reasons.</p>
+(<tt class="docutils literal">i8</tt> means 8-bit integer). The addresses are given in reverse
+order. An explanation I heard is so that the heap grows the opposite
+direction to the stack, which helps separate things nicely. I suppose
+this would be for performance reasons and/or simpler memory management
+code.</p>
 <p>If we use large types, we'll see each value taking more than just one
 address:</p>
 <div class="highlight"><pre><span class="k">fn</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
