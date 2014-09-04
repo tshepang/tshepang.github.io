@@ -1,5 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-08-04T00:00:00+02:00</updated><entry><title>trying to understand stack memory</title><link href="http://tshepang.net/trying-to-understand-stack-memory" rel="alternate"></link><updated>2014-08-04T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-08-04:trying-to-understand-stack-memory</id><summary type="html">&lt;p&gt;Python is a language that is so high level that concepts like stack
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-09-04T00:00:00+02:00</updated><entry><title>loving the SSH multi-hop feature of Emacs</title><link href="http://tshepang.net/loving-the-ssh-multi-hop-feature-of-emacs" rel="alternate"></link><updated>2014-09-04T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-09-04:loving-the-ssh-multi-hop-feature-of-emacs</id><summary type="html">&lt;p&gt;I'm at home and want to access some system at work. I cannot access
+this system directly, so will have to use a VPN or sshfs, but I don't
+know how to set VPN up and sshfs feels rather clunky (I first have to
+have some directory I'm going to mount the thing, and have to remember
+the command line syntax). With Emacs, I run the following command:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+C-x C-f /ssh:work|ssh:10.0.0.107|ssh:10.0.0.148:~/some/files/
+&lt;/pre&gt;
+&lt;p&gt;What happens there is I ask Emacs to run &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;find-file&lt;/span&gt;&lt;/tt&gt;, which opens its
+file manager, &lt;strong&gt;Dired&lt;/strong&gt;. It first accesses the server at work, then my
+work desktop (&lt;tt class="docutils literal"&gt;10.0.0.107&lt;/tt&gt;), and then some machine (&lt;tt class="docutils literal"&gt;10.0.0.148&lt;/tt&gt;)
+which I normally access via my work desktop (it got SSH
+keys). Finally, I'm then presented with the view of the files in
+&lt;tt class="docutils literal"&gt;~/some/files/&lt;/tt&gt; in that machine, which I can work on (view, edit,
+save) like any local file. I was surprised such a feature exists,
+thinking I'd have to do ugly things like port forwarding. I do use the
+single hop a lot (if that's even the right name):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+C-x C-f /ssh:work:~/some/files/
+&lt;/pre&gt;
+&lt;p&gt;Shortcut for that is:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+C-x C-f /work:~/some/files/
+&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;sidenotes&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;The shortcut doesn't work with multi-hop&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;I love the fact that Emacs accepts SSH settings, where for example,
+instead of specifying the whole &lt;a class="reference external" href="mailto:username&amp;#64;host"&gt;username&amp;#64;host&lt;/a&gt;, it accepts the
+aliases in &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;~/.ssh/config&lt;/span&gt;&lt;/tt&gt;, such that I only have to run:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+ssh work
+&lt;/pre&gt;
+&lt;p&gt;instead of:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+ssh tshepang&amp;#64;hostname
+&lt;/pre&gt;
+&lt;p&gt;But this doesn't work with multi-hop for some reason. Looks like a
+simple bug instead of a hard problem.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="Emacs"></category></entry><entry><title>trying to understand stack memory</title><link href="http://tshepang.net/trying-to-understand-stack-memory" rel="alternate"></link><updated>2014-08-04T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-08-04:trying-to-understand-stack-memory</id><summary type="html">&lt;p&gt;Python is a language that is so high level that concepts like stack
 and heap memory are hidden from its users. Not so with lower-level
 languages like C. Following examples are implemented in Rust, an
 easier-to-use low-level language:&lt;/p&gt;

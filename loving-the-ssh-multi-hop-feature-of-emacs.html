@@ -11,18 +11,18 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="Python, GNOME, links, Emacs, computing, " />
+<meta name="keywords" content="Emacs, computing, " />
 
-<meta property="og:title" content="links 2013-05-11 "/>
-<meta property="og:url" content="http://tshepang.net/links-2013-05-11" />
-<meta property="og:description" content="Python interpreter finally gets tab completion by default; to see wide use, this will have to wait for 3.4 release, which will only arrive early 2014. I submitted my first bug report for Emacs, perhaps my first ever to a pure GNU project; I say this because GNOME claims ..." />
+<meta property="og:title" content="loving the SSH multi-hop feature of Emacs "/>
+<meta property="og:url" content="http://tshepang.net/loving-the-ssh-multi-hop-feature-of-emacs" />
+<meta property="og:description" content="I&#39;m at home and want to access some system at work. I cannot access this system directly, so will have to use a VPN or sshfs, but I don&#39;t know how to set VPN up and sshfs feels rather clunky (I first have to have some directory I ..." />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
-<meta property="og:article:published_time" content="2013-05-11T00:00:00" />
-<meta name="twitter:title" content="links 2013-05-11 ">
-<meta name="twitter:description" content="Python interpreter finally gets tab completion by default; to see wide use, this will have to wait for 3.4 release, which will only arrive early 2014. I submitted my first bug report for Emacs, perhaps my first ever to a pure GNU project; I say this because GNOME claims ...">
+<meta property="og:article:published_time" content="2014-09-04T00:00:00" />
+<meta name="twitter:title" content="loving the SSH multi-hop feature of Emacs ">
+<meta name="twitter:description" content="I&#39;m at home and want to access some system at work. I cannot access this system directly, so will have to use a VPN or sshfs, but I don&#39;t know how to set VPN up and sshfs feels rather clunky (I first have to have some directory I ...">
 
-        <title>links 2013-05-11  · Tshepang logs
+        <title>loving the SSH multi-hop feature of Emacs  · Tshepang logs
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -69,7 +69,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://tshepang.net/links-2013-05-11"> links 2013-05-11  </a></h1>
+    <h1><a href="http://tshepang.net/loving-the-ssh-multi-hop-feature-of-emacs"> loving the SSH multi-hop feature of Emacs  </a></h1>
     </header>
 </div>
 
@@ -77,17 +77,47 @@
         <div class="span8 offset2 article-content">
 
             
-            <ul class="simple">
-<li><a class="reference external" href="http://hg.python.org/cpython/rev/d5ef330bac50">Python interpreter finally gets tab completion by default</a>;
-to see wide use, this will have to wait for 3.4 release,
-<a class="reference external" href="http://www.python.org/dev/peps/pep-0429">which will only arrive early 2014</a>.</li>
-<li>I submitted <a class="reference external" href="http://debbugs.gnu.org/cgi/bugreport.cgi?bug=14355">my first bug report for Emacs</a>,
-perhaps my first ever to a pure GNU project;
-I say this because GNOME claims to be one, but it's really only by name.</li>
-<li><a class="reference external" href="http://www.pypy.org/performance.html">Excellent guide on improving Python performance</a>;
-it's written with PyPy in mind, but has excellent generic advice.</li>
-<li>I enjoyed <a class="reference external" href="http://thechangelog.com/86">this podcast</a> where Jeff Atwood talks about his new
-project, <a class="reference external" href="http://www.discourse.org">Discourse</a>.</li>
+            <p>I'm at home and want to access some system at work. I cannot access
+this system directly, so will have to use a VPN or sshfs, but I don't
+know how to set VPN up and sshfs feels rather clunky (I first have to
+have some directory I'm going to mount the thing, and have to remember
+the command line syntax). With Emacs, I run the following command:</p>
+<pre class="literal-block">
+C-x C-f /ssh:work|ssh:10.0.0.107|ssh:10.0.0.148:~/some/files/
+</pre>
+<p>What happens there is I ask Emacs to run <tt class="docutils literal"><span class="pre">find-file</span></tt>, which opens its
+file manager, <strong>Dired</strong>. It first accesses the server at work, then my
+work desktop (<tt class="docutils literal">10.0.0.107</tt>), and then some machine (<tt class="docutils literal">10.0.0.148</tt>)
+which I normally access via my work desktop (it got SSH
+keys). Finally, I'm then presented with the view of the files in
+<tt class="docutils literal">~/some/files/</tt> in that machine, which I can work on (view, edit,
+save) like any local file. I was surprised such a feature exists,
+thinking I'd have to do ugly things like port forwarding. I do use the
+single hop a lot (if that's even the right name):</p>
+<pre class="literal-block">
+C-x C-f /ssh:work:~/some/files/
+</pre>
+<p>Shortcut for that is:</p>
+<pre class="literal-block">
+C-x C-f /work:~/some/files/
+</pre>
+<p><strong>sidenotes</strong>:</p>
+<ul>
+<li><p class="first">The shortcut doesn't work with multi-hop</p>
+</li>
+<li><p class="first">I love the fact that Emacs accepts SSH settings, where for example,
+instead of specifying the whole <a class="reference external" href="mailto:username&#64;host">username&#64;host</a>, it accepts the
+aliases in <tt class="docutils literal"><span class="pre">~/.ssh/config</span></tt>, such that I only have to run:</p>
+<pre class="literal-block">
+ssh work
+</pre>
+<p>instead of:</p>
+<pre class="literal-block">
+ssh tshepang&#64;hostname
+</pre>
+<p>But this doesn't work with multi-hop for some reason. Looks like a
+simple bug instead of a hard problem.</p>
+</li>
 </ul>
 
             
@@ -96,7 +126,7 @@ project, <a class="reference external" href="http://www.discourse.org">Discourse
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://tshepang.net/links-2013-05-11#disqus_thread">
+                href="http://tshepang.net/loving-the-ssh-multi-hop-feature-of-emacs#disqus_thread">
                 Comments
             </a>
         </div>
@@ -106,8 +136,8 @@ project, <a class="reference external" href="http://www.discourse.org">Discourse
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'tshepanglogs';
-        var disqus_identifier = 'http://tshepang.net/links-2013-05-11';
-    var disqus_url = 'http://tshepang.net/links-2013-05-11';
+        var disqus_identifier = 'http://tshepang.net/loving-the-ssh-multi-hop-feature-of-emacs';
+    var disqus_url = 'http://tshepang.net/loving-the-ssh-multi-hop-feature-of-emacs';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -129,8 +159,7 @@ project, <a class="reference external" href="http://www.discourse.org">Discourse
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/project-of-note-discourse" title="Previous: project of note: Discourse">project of note: Discourse</a></li>
-                <li class="next-article"><a href="http://tshepang.net/job-of-qa" title="Next: job of QA">job of QA</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/trying-to-understand-stack-memory" title="Previous: trying to understand stack memory">trying to understand stack memory</a></li>
             </ul>
             </nav>
             </aside>
@@ -138,22 +167,13 @@ project, <a class="reference external" href="http://www.discourse.org">Discourse
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2013-05-11T00:00:00">May 11, 2013</time>
+            <time pubdate="pubdate" datetime="2014-09-04T00:00:00">Sep 4, 2014</time>
             <h4>Category</h4>
             <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
                 <li><a href="http://tshepang.net/tags.html#emacs-ref">Emacs
                     <span>6</span>
-</a></li>
-                <li><a href="http://tshepang.net/tags.html#gnome-ref">GNOME
-                    <span>23</span>
-</a></li>
-                <li><a href="http://tshepang.net/tags.html#links-ref">links
-                    <span>33</span>
-</a></li>
-                <li><a href="http://tshepang.net/tags.html#python-ref">Python
-                    <span>64</span>
 </a></li>
             </ul>
 <h4>Stay in Touch</h4>
