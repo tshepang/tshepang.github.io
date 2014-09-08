@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 04 Sep 2014 00:00:00 +0200</lastBuildDate><item><title>loving the SSH multi-hop feature of Emacs</title><link>http://tshepang.net/loving-the-ssh-multi-hop-feature-of-emacs</link><description>&lt;p&gt;I'm at home and want to access some system at work. I cannot access
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 08 Sep 2014 00:00:00 +0200</lastBuildDate><item><title>more kudos for Pyramid</title><link>http://tshepang.net/more-kudos-for-pyramid</link><description>&lt;!--  --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Pyramid is a tremendous volunteer effort that exists only through
+the generosity of its contributors.&lt;/p&gt;
+&lt;p class="attribution"&gt;&amp;mdash;&lt;a class="reference external" href="https://groups.google.com/forum/#!msg/pylons-discuss/CnUcxdivj1o/awW6tBEBzP0J"&gt;Steven Piercy appreciating the flagship of the Pylons project&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;(&lt;a class="reference external" href="http://tshepang.net/kudos-for-pyramid"&gt;previous kudos&lt;/a&gt;)&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Mon, 08 Sep 2014 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2014-09-08:more-kudos-for-pyramid</guid><category>Python</category><category>quote</category></item><item><title>loving the SSH multi-hop feature of Emacs</title><link>http://tshepang.net/loving-the-ssh-multi-hop-feature-of-emacs</link><description>&lt;p&gt;I'm at home and want to access some system at work. I cannot access
 this system directly, so will have to use a VPN or sshfs, but I don't
 know how to set VPN up and sshfs feels rather clunky (I first have to
 have some directory I'm going to mount the thing, and have to remember

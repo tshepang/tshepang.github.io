@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-09-04T00:00:00+02:00</updated><entry><title>loving the SSH multi-hop feature of Emacs</title><link href="http://tshepang.net/loving-the-ssh-multi-hop-feature-of-emacs" rel="alternate"></link><updated>2014-09-04T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-09-04:loving-the-ssh-multi-hop-feature-of-emacs</id><summary type="html">&lt;p&gt;I'm at home and want to access some system at work. I cannot access
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-09-08T00:00:00+02:00</updated><entry><title>more kudos for Pyramid</title><link href="http://tshepang.net/more-kudos-for-pyramid" rel="alternate"></link><updated>2014-09-08T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-09-08:more-kudos-for-pyramid</id><summary type="html">&lt;!--  --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Pyramid is a tremendous volunteer effort that exists only through
+the generosity of its contributors.&lt;/p&gt;
+&lt;p class="attribution"&gt;&amp;mdash;&lt;a class="reference external" href="https://groups.google.com/forum/#!msg/pylons-discuss/CnUcxdivj1o/awW6tBEBzP0J"&gt;Steven Piercy appreciating the flagship of the Pylons project&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;(&lt;a class="reference external" href="http://tshepang.net/kudos-for-pyramid"&gt;previous kudos&lt;/a&gt;)&lt;/p&gt;
+</summary><category term="Python"></category><category term="quote"></category></entry><entry><title>loving the SSH multi-hop feature of Emacs</title><link href="http://tshepang.net/loving-the-ssh-multi-hop-feature-of-emacs" rel="alternate"></link><updated>2014-09-04T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-09-04:loving-the-ssh-multi-hop-feature-of-emacs</id><summary type="html">&lt;p&gt;I'm at home and want to access some system at work. I cannot access
 this system directly, so will have to use a VPN or sshfs, but I don't
 know how to set VPN up and sshfs feels rather clunky (I first have to
 have some directory I'm going to mount the thing, and have to remember
