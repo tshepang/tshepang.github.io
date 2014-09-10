@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 09 Sep 2014 00:00:00 +0200</lastBuildDate><item><title>fighting for work</title><link>http://tshepang.net/fighting-for-work</link><description>&lt;p&gt;Here's a story of two siblings, one a 10-year-old girl and the other a
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 10 Sep 2014 02:40:43 +0200</lastBuildDate><item><title>most exciting software projects</title><link>http://tshepang.net/most-exciting-software-projects</link><description>&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org"&gt;PyPI&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It's been alive for over 10 years, but remains among the most
+exciting of all Python projects. I greatly anticipate the stable
+release of its most visible sub-project, &lt;a class="reference external" href="http://pypy.org/tmdonate2.html"&gt;Transactional Memory&lt;/a&gt;.
+It's an approach that simplifies multi-threaded programming while
+also bypassing the GIL. There is no ETA, but a rough estimate is
+sometime in 2016 :(&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.rust-lang.org"&gt;Rust&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A new programming language meant to replace the likes of C/C++,
+while also claimed to be a technically superior competitor to Go.
+ETA for the first stable release (1.0) is end of 2014.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="https://github.com/servo/servo"&gt;Servo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The future replacement of Gecko, the HTML rendering
+engine powering Firefox. It is written in Rust.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Wed, 10 Sep 2014 02:40:43 +0200</pubDate><guid>tag:tshepang.net,2014-09-10:most-exciting-software-projects</guid><category>list</category><category>non-Python</category><category>Python</category></item><item><title>fighting for work</title><link>http://tshepang.net/fighting-for-work</link><description>&lt;p&gt;Here's a story of two siblings, one a 10-year-old girl and the other a
 6-year-old boy. They also happen to be my relatives (kids of my
 cousin), and are very fond of me.&lt;/p&gt;
 &lt;p&gt;The 10-year-old was just about to cut my hair, but being impatient, I
@@ -212,38 +232,7 @@ if __name__ == '__main__':
 feels less of an obvious solution, and it's a bit uglier as
 well. &lt;a class="reference external" href="http://legacy.python.org/dev/peps/pep-0318"&gt;PEP 380&lt;/a&gt; is a detailed discussion written over 10 years ago
 when the syntax was first added to the language.&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Tue, 08 Jul 2014 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2014-07-08:discovering-python-decorators</guid><category>Python</category></item><item><title>most exciting software projects</title><link>http://tshepang.net/most-exciting-software-projects</link><description>&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org"&gt;PyPy&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;It's been alive for over 10 years, but remains among the most
-exciting of all Python projects. I greatly anticipate the stable
-releases of its most visible sub-project:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org/tmdonate2.html"&gt;Transactional Memory&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;An approach that simplifies multi-threaded programming while also
-bypassing the GIL. There is still much to do (for one, it only
-works on 64-bit Linux) and there is no ETA, but there is a rough
-estimate... sometime in 2016 :(&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.rust-lang.org"&gt;Rust&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A new programming language meant to replace the likes of C/C++,
-while also claimed to be a technically superior competitor to Go.
-ETA for the first stable reelase (1.0) is end of 2014.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="https://github.com/mozilla/servo"&gt;Servo&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The future replacement of Gecko, the HTML rendering
-engine powering Firefox. It is written in Rust.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://cryptography.io"&gt;cryptography&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Finally, a solution to the ugly (and fragmented) world of Python
-cryptography libraries. It is still very incomplete at the moment.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sat, 05 Jul 2014 13:50:46 +0200</pubDate><guid>tag:tshepang.net,2014-07-05:most-exciting-software-projects</guid><category>list</category><category>non-Python</category><category>Python</category></item><item><title>I am a very jealous person</title><link>http://tshepang.net/i-am-a-very-jealous-person</link><description>&lt;p&gt;Following is some of the cases where competing software won this or
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Tue, 08 Jul 2014 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2014-07-08:discovering-python-decorators</guid><category>Python</category></item><item><title>I am a very jealous person</title><link>http://tshepang.net/i-am-a-very-jealous-person</link><description>&lt;p&gt;Following is some of the cases where competing software won this or
 that battle, and I am jealous since I want everyone to use what I
 like:&lt;/p&gt;
 &lt;ul class="simple"&gt;
