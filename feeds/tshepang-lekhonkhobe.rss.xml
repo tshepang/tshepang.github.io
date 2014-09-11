@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 12 Sep 2014 01:51:39 +0200</lastBuildDate><item><title>FLOSS I use a-lot</title><link>http://tshepang.net/floss-i-use-a-lot</link><description>&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 12 Sep 2014 01:57:15 +0200</lastBuildDate><item><title>FLOSS I use a-lot</title><link>http://tshepang.net/floss-i-use-a-lot</link><description>&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
 There is &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;a separate post&lt;/a&gt; for those.&lt;/p&gt;
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/p&gt;
@@ -9,14 +9,9 @@ There is &lt;a class="reference external" href="http://tshepang.net/favorite-flo
 &lt;li&gt;&lt;strong&gt;Aptitude&lt;/strong&gt;: I mainly use its &lt;tt class="docutils literal"&gt;search&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;show&lt;/tt&gt; subcommands;
 the equivalent functionality in APT is lesser&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;editors&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;strong&gt;Emacs&lt;/strong&gt;: my favorite&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Vim&lt;/strong&gt;: it happens to be installed on a lot of systems at work,
-and I do like it somewhat&lt;/li&gt;
-&lt;/ul&gt;
 &lt;p&gt;software development&lt;/p&gt;
 &lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Emacs&lt;/strong&gt;: I also use it as a general text editor&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;git-cola&lt;/strong&gt;: &lt;a class="reference external" href="http://tshepang.net/project-of-note-git-cola"&gt;why me loves it&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;GNU toolchain&lt;/strong&gt; (GCC, make, GLibC, ...)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Git&lt;/strong&gt;: as if I had a choice... work and open source&lt;/li&gt;
@@ -57,7 +52,7 @@ time I tried; I don't remember the details&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;OpenSSH&lt;/strong&gt;: duh!&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://github.com/joelthelion/autojump"&gt;autojump&lt;/a&gt;: makes navigating the filesystem a joy&lt;/li&gt;
 &lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Fri, 12 Sep 2014 01:51:39 +0200</pubDate><guid>tag:tshepang.net,2014-09-12:floss-i-use-a-lot</guid><category>list</category></item><item><title>favorite FLOSS</title><link>http://tshepang.net/favorite-floss</link><description>&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Fri, 12 Sep 2014 01:57:15 +0200</pubDate><guid>tag:tshepang.net,2014-09-12:floss-i-use-a-lot</guid><category>list</category></item><item><title>favorite FLOSS</title><link>http://tshepang.net/favorite-floss</link><description>&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
 it has to both be personally useful and I have to like it a lot:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;backup:&lt;/strong&gt; &lt;a class="reference external" href="http://tshepang.net/project-of-note-rdiff-backup"&gt;rdiff-backup&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;desktop&lt;/strong&gt;: &lt;a class="reference external" href="http://dwm.suckless.org"&gt;dwm&lt;/a&gt;&lt;/p&gt;
