@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-09-10T02:50:49+02:00</updated><entry><title>most exciting software projects</title><link href="http://tshepang.net/most-exciting-software-projects" rel="alternate"></link><updated>2014-09-10T02:50:49+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-09-10:most-exciting-software-projects</id><summary type="html">&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-09-11T00:00:00+02:00</updated><entry><title>project of note: Debian LTS</title><link href="http://tshepang.net/project-of-note-debian-lts" rel="alternate"></link><updated>2014-09-11T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-09-11:project-of-note-debian-lts</id><summary type="html">&lt;p&gt;One of the complaints about Debian stable releases is that they reach
+End Of Life too early (~3 years). This can result in some people
+choosing commercially-backed alternatives like Ubuntu and Red Hat, for
+they don't want to be bothered to have to upgrade that frequently (not
+everyone cares for the latest things, and it's not always practical to
+do OS upgrades). That's why the &lt;a class="reference external" href="https://wiki.debian.org/LTS"&gt;Debian LTS (Long Term Support)
+project&lt;/a&gt;, which extends the life of a stable to 5 years, excites me.&lt;/p&gt;
+&lt;p&gt;It's also super-nice that &lt;a class="reference external" href="http://www.freexian.com/services/debian-lts.html"&gt;contributing to it financially&lt;/a&gt; is made
+damn so easy, thanks to Freexian, a company run by a great Debian
+Developer, Raphaël Hertzog. The project is now a few months old, and
+has achieved moderate success (&lt;a class="reference external" href="http://raphaelhertzog.com/2014/09/10/freexians-first-report-about-debian-long-term-support"&gt;latest status report&lt;/a&gt;).&lt;/p&gt;
+</summary><category term="project-of-note"></category><category term="Debian"></category></entry><entry><title>most exciting software projects</title><link href="http://tshepang.net/most-exciting-software-projects" rel="alternate"></link><updated>2014-09-10T02:50:49+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-09-10:most-exciting-software-projects</id><summary type="html">&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org"&gt;PyPy&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;It's been alive for over 10 years, but remains among the most
