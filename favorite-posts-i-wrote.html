@@ -11,18 +11,18 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="Debian, non-Python, computing, " />
+<meta name="keywords" content="wajig, Debian, Python, computing, " />
 
-<meta property="og:title" content="attachment can lead to irrational behaviour "/>
-<meta property="og:url" content="http://tshepang.net/attachment-can-lead-to-irrational-behaviour" />
-<meta property="og:description" content="In my previous job, we used to use some Java framework, Mule ESB, for our clients. The project is distributed with a lot of jar files, supposedly for the convenience of users. When we work on a project, we just add all those jars to the classpath (we use Eclipse ..." />
+<meta property="og:title" content="favorite posts I wrote "/>
+<meta property="og:url" content="http://tshepang.net/favorite-posts-i-wrote" />
+<meta property="og:description" content="I like the quality of my writing sometimes. Following are my favorites: developer of note: Stefano Zacchiroli developer of note: Victor Stinner project of note: M cross environment me likes subprocess.DEVNULL wajig 2.1 released" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
-<meta property="og:article:published_time" content="2012-02-01T00:00:00" />
-<meta name="twitter:title" content="attachment can lead to irrational behaviour ">
-<meta name="twitter:description" content="In my previous job, we used to use some Java framework, Mule ESB, for our clients. The project is distributed with a lot of jar files, supposedly for the convenience of users. When we work on a project, we just add all those jars to the classpath (we use Eclipse ...">
+<meta property="og:article:published_time" content="2014-09-20T00:00:00" />
+<meta name="twitter:title" content="favorite posts I wrote ">
+<meta name="twitter:description" content="I like the quality of my writing sometimes. Following are my favorites: developer of note: Stefano Zacchiroli developer of note: Victor Stinner project of note: M cross environment me likes subprocess.DEVNULL wajig 2.1 released">
 
-        <title>attachment can lead to irrational behaviour  · Tshepang logs
+        <title>favorite posts I wrote  · Tshepang logs
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -69,7 +69,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://tshepang.net/attachment-can-lead-to-irrational-behaviour"> attachment can lead to irrational behaviour  </a></h1>
+    <h1><a href="http://tshepang.net/favorite-posts-i-wrote"> favorite posts I wrote  </a></h1>
     </header>
 </div>
 
@@ -77,39 +77,14 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>In <a class="reference external" href="http://tshepang.net/me-got-meself-a-coding-job">my previous job</a>, we used to use some Java framework, <a class="reference external" href="http://www.mulesoft.org/">Mule ESB</a>,
-for our clients. The project is distributed with a lot of jar files,
-supposedly for the convenience of users. When we work on a project, we
-just add all those jars to the classpath (we use Eclipse, an excessively
-powerful and ugly IDE). Now, me being a sucker for the Debian way of
-doing things, I'd install packages providing all those jars from a
-Debian repository, then remove those Mule-distributed files, then add
-symlinks in place of them pointing back to the actualy files. Imagine
-how much time it took! Either that, or even easier (but still
-time-consuming), skip the symlink thing entirely and just add those jars
-(found in <strong>/usr/share/java</strong> directory) directly.</p>
-<p>Beyond just wasting time, the are other potential problems with my
-approach:</p>
+            <p>I like the quality of my writing sometimes. Following are my favorites:</p>
 <ul class="simple">
-<li>Debian's jar versions did tend to be different to Mule-supplied
-versions. You can imagine what problems this can cause, especially
-because the versions included there are most likely the ones used for
-testing Mule.</li>
-<li>Even if the versions were the same, what if there are slight changes
-from Debian's side. Debian's strict <a class="reference external" href="http://www.debian.org/social_contract#guidelines">software guidelines</a> implies
-that they'll strip out some stuff that doesn't adhere. The good thing
-is that Debian appends <tt class="docutils literal">dfsg</tt> to the version number, but <a class="reference external" href="http://askubuntu.com/q/11592/2591">not
-everybody knows that</a>. And even if they did, they would then need to
-spend time checking exactly what changed.</li>
-<li>Debian doesn't merely re-distribute the jar files. They actually
-rebuild them, with Debian-supplied compilers. Maybe this isn't an
-issue for Java projects, but who knows.</li>
+<li><a class="reference external" href="http://tshepang.net/developer-of-note-stefano-zacchiroli">developer of note: Stefano Zacchiroli</a></li>
+<li><a class="reference external" href="http://tshepang.net/developer-of-note-victor-stinner">developer of note: Victor Stinner</a></li>
+<li><a class="reference external" href="http://tshepang.net/project-of-note-m-cross-environment">project of note: M cross environment</a></li>
+<li><a class="reference external" href="http://tshepang.net/me-likes-subprocessdevnull">me likes subprocess.DEVNULL</a></li>
+<li><a class="reference external" href="http://tshepang.net/wajig-21-released">wajig 2.1 released</a></li>
 </ul>
-<p>This is not to knock the Debian way of doing things. It's actually quite
-excellent (hence my love), but it can't fit all scenarios. See Matt
-Zimmerman's <a class="reference external" href="http://mdzlog.alcor.net/2010/07/06/weve-packaged-all-of-the-free-software-what-now/">excellent post</a>, where he touches on this issue.</p>
-<p>I did wise up a bit by simply doing things the way the makers of Mule
-intended.</p>
 
             
             <section>
@@ -117,7 +92,7 @@ intended.</p>
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://tshepang.net/attachment-can-lead-to-irrational-behaviour#disqus_thread">
+                href="http://tshepang.net/favorite-posts-i-wrote#disqus_thread">
                 Comments
             </a>
         </div>
@@ -127,8 +102,8 @@ intended.</p>
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'tshepanglogs';
-        var disqus_identifier = 'http://tshepang.net/attachment-can-lead-to-irrational-behaviour';
-    var disqus_url = 'http://tshepang.net/attachment-can-lead-to-irrational-behaviour';
+        var disqus_identifier = 'http://tshepang.net/favorite-posts-i-wrote';
+    var disqus_url = 'http://tshepang.net/favorite-posts-i-wrote';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -150,8 +125,8 @@ intended.</p>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/links-2012-02-01" title="Previous: links 2012-02-01">links 2012-02-01</a></li>
-                <li class="next-article"><a href="http://tshepang.net/on-voting" title="Next: on voting">on voting</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/floss-i-use-a-lot" title="Previous: FLOSS I use a-lot">FLOSS I use a-lot</a></li>
+                <li class="next-article"><a href="http://tshepang.net/i-am-a-very-jealous-person" title="Next: I am a very jealous person">I am a very jealous person</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -159,7 +134,7 @@ intended.</p>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2012-02-01T00:00:00">Feb 1, 2012</time>
+            <time pubdate="pubdate" datetime="2014-09-20T00:00:00">Sep 20, 2014</time>
             <h4>Category</h4>
             <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
             <h4>Tags</h4>
@@ -167,8 +142,11 @@ intended.</p>
                 <li><a href="http://tshepang.net/tags.html#debian-ref">Debian
                     <span>49</span>
 </a></li>
-                <li><a href="http://tshepang.net/tags.html#non-python-ref">non-Python
-                    <span>20</span>
+                <li><a href="http://tshepang.net/tags.html#python-ref">Python
+                    <span>66</span>
+</a></li>
+                <li><a href="http://tshepang.net/tags.html#wajig-ref">wajig
+                    <span>15</span>
 </a></li>
             </ul>
 <h4>Stay in Touch</h4>
