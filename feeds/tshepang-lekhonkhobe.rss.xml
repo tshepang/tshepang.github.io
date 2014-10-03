@@ -221,8 +221,8 @@ simple bug instead of a hard problem.&lt;/p&gt;
 &lt;/ul&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Thu, 04 Sep 2014 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2014-09-04:loving-the-ssh-multi-hop-feature-of-emacs</guid><category>Emacs</category></item><item><title>trying to understand stack memory</title><link>http://tshepang.net/trying-to-understand-stack-memory</link><description>&lt;p&gt;Python is a language that is so high level that concepts like stack
 and heap memory are hidden from its users. Not so with lower-level
-languages like C. Following examples are implemented in Rust, an
-easier-to-use low-level language:&lt;/p&gt;
+languages like C. Following examples are implemented in Rust, which is
+easier to use:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;fn&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="k"&gt;i8&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
     &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="k"&gt;i8&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
