@@ -2725,13 +2725,13 @@ all an attempt to make sense of it all:&lt;/p&gt;
 on Debian for users who will run it on Windows.
 I also wanted it be just one binary at the end so that deployment is just
 a matter of copying and running the one executable.
-This means I needed to statically-compile the app,
-and the sad news is that I first needed to build Qt itself statically.&lt;/p&gt;
+This means I needed to statically-link the app,
+and the sad news is that I first needed a statically-linked Qt.&lt;/p&gt;
 &lt;p&gt;If I had actually known of &lt;a class="reference external" href="http://mxe.cc"&gt;M cross environment&lt;/a&gt; (MXE), I would have
 shaved nearly all of those 'wasted' hours. I am very grateful to the
 developers, especially because building Qt was mainly a matter of
 installing &lt;a class="reference external" href="http://mxe.cc/#requirements-debian"&gt;a few build dependencies&lt;/a&gt; and running &lt;tt class="docutils literal"&gt;make qt&lt;/tt&gt;. An hour
-or two later, I had newly cross-compiled Qt waiting for my use. It was
+or two later, I had a newly cross-compiled Qt waiting for my use. It was
 also pleasant that the app, in a form of a &lt;tt class="docutils literal"&gt;.exe&lt;/tt&gt; file, just worked on
 Windows 7.&lt;/p&gt;
 &lt;p&gt;Having a look around, the build system actually looks elegant, and is a
