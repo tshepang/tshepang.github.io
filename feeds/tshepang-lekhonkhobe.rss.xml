@@ -2810,7 +2810,8 @@ much better (and more detailed) than &lt;a class="reference external" href="http
 most of all, I love the code/pre tag rendering.&lt;/li&gt;
 &lt;/ul&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Fri, 12 Apr 2013 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2013-04-12:links-2013-04-12</guid><category>blogging</category><category>links</category></item><item><title>me likes subprocess.DEVNULL</title><link>http://tshepang.net/me-likes-subprocessdevnull</link><description>&lt;p&gt;If you want to run an external process from within Python, and are not
-interested in the error that process may emit, there are a few ways.
+interested in any errors that process may emit, there are a few ways
+you can go about it.
 I will demonstrate this by opening a Python shell in a directory
 that isn't version-controlled by &lt;a class="reference external" href="http://mercurial.selenic.com"&gt;Mercurial&lt;/a&gt;:&lt;/p&gt;
 &lt;ol class="arabic"&gt;
@@ -4123,17 +4124,17 @@ job better, and I made use of them. These tools were probably not
 avaialable the time this feature was added to wajig.&lt;/li&gt;
 &lt;/ul&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Mon, 09 May 2011 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2011-05-09:wajig-22-released</guid><category>Debian</category><category>wajig</category></item><item><title>wajig 2.1 released</title><link>http://tshepang.net/wajig-21-released</link><description>&lt;p&gt;Today I released &lt;a class="reference external" href="http://packages.qa.debian.org/w/wajig/news/20110427T131707Z.html"&gt;a new version of wajig&lt;/a&gt;, first time in about half a
-year. It's not even like there's some groundbreaking stuff or anything,
+year. It's not even like there's some major stuff or anything;
 I just haven't put as much time. Regardless, it's quite a good release.&lt;/p&gt;
-&lt;p&gt;One the changes is getting rid of gjig, the GUI interface.&lt;/p&gt;
+&lt;p&gt;One of the changes is getting rid of gjig, the GUI interface.&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;I actually did like it, but it was never a production standard piece
 of code. It was actually quite nifty and useful, but the interface
 was not at all modern or usual. It also needed a lot of polish.&lt;/li&gt;
 &lt;li&gt;I learned a lot from trying to port it away from the deprecated
-libglade library to a more modern gtkbuilder (part of GTK+) but the
+libglade library to a more modern gtkbuilder (part of GTK+). But the
 porting documentation wasn't really good, so I was left with the
-option doing it from scratch. Not exactly a small task.&lt;/li&gt;
+option of doing it from scratch... not exactly a small task.&lt;/li&gt;
 &lt;li&gt;Worse still is the fact that there were more pro-looking GUI package
 managers out there.&lt;/li&gt;
 &lt;li&gt;It didn't keep up with the pace of development wajig. It was a
@@ -4141,13 +4142,10 @@ managers out there.&lt;/li&gt;
 &lt;li&gt;Oh, and I'm so afraid of GUI developement, or should I say GTK+. It
 was never an easy domain for me, and I still don't really get it. And
 yes, I've tried. Maybe other toolkits are easier, and I'm too lazy to
-check them out. I prefer backend stuff, where I don't have to deal
-with these GUI things.&lt;/li&gt;
+check them out.&lt;/li&gt;
 &lt;li&gt;I wanted to move wajig forward into Python 3 land, and given that
 GTK+ support for that Python version isn't exactly mature (at time of
-writing), I felt that I was being held back. And don't ask me why
-rush for Python 3, because you are not going to get anything stronger
-than &amp;quot;it's what the kool kids use&amp;quot;.&lt;/li&gt;
+writing), I felt that I was being held back.&lt;/li&gt;
 &lt;/ul&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Wed, 27 Apr 2011 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2011-04-27:wajig-21-released</guid><category>Debian</category><category>wajig</category></item><item><title>from Squeeze to Unstable, and back again</title><link>http://tshepang.net/from-squeeze-to-unstable-and-back-again</link><description>&lt;p&gt;With all the noise regarding GNOME 3, I decided to lose patience and go
 check it out. Thing is it's currently in Debian Experimental suite, so I
