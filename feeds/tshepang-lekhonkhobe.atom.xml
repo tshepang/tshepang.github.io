@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-10-07T00:00:00+02:00</updated><entry><title>links 2014-10-07</title><link href="http://tshepang.net/links-2014-10-07" rel="alternate"></link><updated>2014-10-07T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-10-07:links-2014-10-07</id><summary type="html">&lt;ul class="simple"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-10-14T23:52:22+02:00</updated><entry><title>favorite posts I wrote</title><link href="http://tshepang.net/favorite-posts-i-wrote" rel="alternate"></link><updated>2014-10-14T23:52:22+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-10-14:favorite-posts-i-wrote</id><summary type="html">&lt;p&gt;I like the quality of my writing sometimes. Following are my favorites:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/developer-of-note-victor-stinner"&gt;developer of note: Victor Stinner&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/project-of-note-m-cross-environment"&gt;project of note: M cross environment&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/me-likes-subprocessdevnull"&gt;me likes subprocess.DEVNULL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/wajig-21-released"&gt;wajig 2.1 released&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="wajig"></category><category term="Debian"></category><category term="Python"></category><category term="blogging"></category></entry><entry><title>links 2014-10-07</title><link href="http://tshepang.net/links-2014-10-07" rel="alternate"></link><updated>2014-10-07T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-10-07:links-2014-10-07</id><summary type="html">&lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://www.enricozini.org/2014/debian/on-responsibilities"&gt;A nice article&lt;/a&gt; on the need for people with different roles in a
 single project: manager and craftsman&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://grodola.blogspot.com/2014/01/psutil-20-porting.html"&gt;A nice article&lt;/a&gt; on revamping psutil API psutil; it's a Python
@@ -30,14 +37,7 @@ favorite, reStructuredText, which is far more advanced. It's
 particularly sad when it's not used where it's needed
 most... documenting large projects (&lt;a class="reference external" href="http://doc.rust-lang.org"&gt;example&lt;/a&gt;).&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="Python"></category><category term="non-Python"></category><category term="non-Debian"></category><category term="VCS"></category></entry><entry><title>favorite posts I wrote</title><link href="http://tshepang.net/favorite-posts-i-wrote" rel="alternate"></link><updated>2014-09-20T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-09-20:favorite-posts-i-wrote</id><summary type="html">&lt;p&gt;I like the quality of my writing sometimes. Following are my favorites:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/developer-of-note-victor-stinner"&gt;developer of note: Victor Stinner&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/project-of-note-m-cross-environment"&gt;project of note: M cross environment&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/me-likes-subprocessdevnull"&gt;me likes subprocess.DEVNULL&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/wajig-21-released"&gt;wajig 2.1 released&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="wajig"></category><category term="Debian"></category><category term="Python"></category><category term="blogging"></category></entry><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2014-09-13T00:29:32+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-09-13:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
+</summary><category term="Python"></category><category term="non-Python"></category><category term="non-Debian"></category><category term="VCS"></category></entry><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2014-09-13T00:29:32+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-09-13:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
 There is &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;a separate post&lt;/a&gt; for those.&lt;/p&gt;
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/p&gt;
