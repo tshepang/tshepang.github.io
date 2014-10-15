@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-10-15T07:12:09+02:00</updated><entry><title>favorite posts I wrote</title><link href="http://tshepang.net/favorite-posts-i-wrote" rel="alternate"></link><updated>2014-10-15T07:12:09+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-10-15:favorite-posts-i-wrote</id><summary type="html">&lt;p&gt;I like the quality of my writing sometimes. Following are my favorites:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-10-15T07:27:20+02:00</updated><entry><title>most exciting software projects</title><link href="http://tshepang.net/most-exciting-software-projects" rel="alternate"></link><updated>2014-10-15T07:27:20+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-10-15:most-exciting-software-projects</id><summary type="html">&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org"&gt;PyPy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It's been alive for over 10 years, but remains among the most
+exciting of all Python projects. I greatly anticipate the stable
+release of its most visible sub-project, &lt;a class="reference external" href="http://pypy.org/tmdonate2.html"&gt;Transactional Memory&lt;/a&gt;.
+It's an approach that simplifies multi-threaded programming while
+also bypassing the GIL. There is no ETA, but a rough estimate is
+sometime in 2016 :(&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.rust-lang.org"&gt;Rust&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A new programming language meant to replace the likes of C/C++,
+while also claimed to be a technically superior competitor to Go.
+ETA for the first stable release (1.0) is early 2015.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="https://github.com/servo/servo"&gt;Servo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A possible future replacement of Gecko, the HTML rendering
+engine powering Firefox. It is written in Rust.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="list"></category><category term="non-Python"></category><category term="Python"></category></entry><entry><title>favorite posts I wrote</title><link href="http://tshepang.net/favorite-posts-i-wrote" rel="alternate"></link><updated>2014-10-15T07:12:09+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-10-15:favorite-posts-i-wrote</id><summary type="html">&lt;p&gt;I like the quality of my writing sometimes. Following are my favorites:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/developer-of-note-victor-stinner"&gt;developer of note: Victor Stinner&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/me-likes-subprocessdevnull"&gt;me likes subprocess.DEVNULL&lt;/a&gt;&lt;/li&gt;
@@ -118,33 +138,13 @@ project&lt;/a&gt;, which extends the life of a stable release to 5 years, excite
 damn easy, thanks to Freexian, a company run by a great Debian
 Developer, &lt;a class="reference external" href="http://raphaelhertzog.com"&gt;Raphaël Hertzog&lt;/a&gt;. The project is now a few months old, and
 has achieved moderate success (&lt;a class="reference external" href="http://raphaelhertzog.com/2014/09/10/freexians-first-report-about-debian-long-term-support"&gt;latest status report&lt;/a&gt;).&lt;/p&gt;
-</summary><category term="project-of-note"></category><category term="Debian"></category></entry><entry><title>most exciting software projects</title><link href="http://tshepang.net/most-exciting-software-projects" rel="alternate"></link><updated>2014-09-10T02:50:49+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-09-10:most-exciting-software-projects</id><summary type="html">&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org"&gt;PyPy&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;It's been alive for over 10 years, but remains among the most
-exciting of all Python projects. I greatly anticipate the stable
-release of its most visible sub-project, &lt;a class="reference external" href="http://pypy.org/tmdonate2.html"&gt;Transactional Memory&lt;/a&gt;.
-It's an approach that simplifies multi-threaded programming while
-also bypassing the GIL. There is no ETA, but a rough estimate is
-sometime in 2016 :(&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.rust-lang.org"&gt;Rust&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A new programming language meant to replace the likes of C/C++,
-while also claimed to be a technically superior competitor to Go.
-ETA for the first stable release (1.0) is end of 2014.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="https://github.com/servo/servo"&gt;Servo&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The future replacement of Gecko, the HTML rendering
-engine powering Firefox. It is written in Rust.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="list"></category><category term="non-Python"></category><category term="Python"></category></entry><entry><title>more kudos for Pyramid</title><link href="http://tshepang.net/more-kudos-for-pyramid" rel="alternate"></link><updated>2014-09-08T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-09-08:more-kudos-for-pyramid</id><summary type="html">&lt;!--  --&gt;
+</summary><category term="project-of-note"></category><category term="Debian"></category></entry><entry><title>more kudos for Pyramid</title><link href="http://tshepang.net/more-kudos-for-pyramid" rel="alternate"></link><updated>2014-09-08T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-09-08:more-kudos-for-pyramid</id><summary type="html">&lt;!--  --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;... Pyramid is a tremendous volunteer effort that exists only through
 the generosity of its contributors.&lt;/p&gt;
-&lt;p class="attribution"&gt;&amp;mdash;&lt;a class="reference external" href="https://groups.google.com/d/msg/pylons-discuss/CnUcxdivj1o/khWoxer66osJ"&gt;Steven Piercy appreciating the flagship of Pylons Project&lt;/a&gt;&lt;/p&gt;
+&lt;p class="attribution"&gt;&amp;mdash;&lt;a class="reference external" href="https://groups.google.com/d/msg/pylons-discuss/CnUcxdivj1o/khWoxer66osJ"&gt;Steven Piercy appreciating the flagship of the Pylons Project&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;I'm not sure if there is any one Python web framwork as
+&lt;p&gt;I'm not sure if there is any one Python web framework as
 well-respected. The great Mike Beyers (SQLAlchemy) also &lt;a class="reference external" href="http://tshepang.net/kudos-for-pyramid"&gt;gave his
 respects&lt;/a&gt; some months ago.&lt;/p&gt;
 </summary><category term="Python"></category><category term="quote"></category></entry><entry><title>loving the SSH multi-hop feature of Emacs</title><link href="http://tshepang.net/loving-the-ssh-multi-hop-feature-of-emacs" rel="alternate"></link><updated>2014-09-04T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-09-04:loving-the-ssh-multi-hop-feature-of-emacs</id><summary type="html">&lt;p&gt;I'm at home and want to access some system at work. I cannot access
@@ -2664,25 +2664,15 @@ excellent (hence my love), but it can't fit all scenarios. See Matt
 Zimmerman's &lt;a class="reference external" href="http://mdzlog.alcor.net/2010/07/06/weve-packaged-all-of-the-free-software-what-now/"&gt;excellent post&lt;/a&gt;, where he touches on this issue.&lt;/p&gt;
 &lt;p&gt;I did wise up a bit by simply doing things the way the makers of Mule
 intended.&lt;/p&gt;
-</summary><category term="Debian"></category><category term="non-Python"></category></entry><entry><title>links 2012-02-01</title><link href="http://tshepang.net/links-2012-02-01" rel="alternate"></link><updated>2012-02-01T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2012-02-01:links-2012-02-01</id><summary type="html">&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://lukeplant.me.uk/blog/posts/a-prayer-to-the-programming-gods/"&gt;&amp;quot;A prayer to the programming gods&amp;quot;&lt;/a&gt; – decent humor&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;dl class="first docutils"&gt;
-&lt;dt&gt;&lt;a class="reference external" href="http://plope.com/Members/chrism/in_defense_of_zope_libraries"&gt;A bit of Zope history, how it rocked, and how it sucked&lt;/a&gt; – makes&lt;/dt&gt;
-&lt;dd&gt;&lt;p class="first last"&gt;me respect &lt;a class="reference external" href="http://docs.pylonsproject.org/en/latest/docs/pyramid.html"&gt;Pyramid&lt;/a&gt; even more.&lt;/p&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;dl class="first docutils"&gt;
-&lt;dt&gt;&lt;a class="reference external" href="http://jpos.org/blog/2010/06/technology-xy/"&gt;A scathing read regarding incompencies of developers&lt;/a&gt;; for the&lt;/dt&gt;
-&lt;dd&gt;&lt;p class="first last"&gt;sake of completeness, he should have mentioned that developers
+</summary><category term="Debian"></category><category term="non-Python"></category></entry><entry><title>links 2012-02-01</title><link href="http://tshepang.net/links-2012-02-01" rel="alternate"></link><updated>2012-02-01T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2012-02-01:links-2012-02-01</id><summary type="html">&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://lukeplant.me.uk/blog/posts/a-prayer-to-the-programming-gods/"&gt;&amp;quot;A prayer to the programming gods&amp;quot;&lt;/a&gt; - decent humor&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://plope.com/Members/chrism/in_defense_of_zope_libraries"&gt;A bit of Zope history, how it rocked, and how it sucked&lt;/a&gt; - makes
+me respect &lt;a class="reference external" href="http://docs.pylonsproject.org/en/latest/docs/pyramid.html"&gt;Pyramid&lt;/a&gt; even more.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://jpos.org/blog/2010/06/technology-xy/"&gt;A scathing read regarding incompencies of developers&lt;/a&gt; - for the
+sake of completeness, he should have mentioned that developers
 often don't have time to fully understand technologies they are
-often commanded (by employers) to work with.&lt;/p&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://lists.mplayerhq.hu/pipermail/mplayer-users/2005-November/056854.html"&gt;on the frustrations of waiting too long to get help&lt;/a&gt;; great humor&lt;/p&gt;
-&lt;/li&gt;
+often commanded (by employers) to work with.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://lists.mplayerhq.hu/pipermail/mplayer-users/2005-November/056854.html"&gt;on the frustrations of waiting too long to get help&lt;/a&gt; - great humor&lt;/li&gt;
 &lt;/ul&gt;
 </summary><category term="links"></category><category term="humor"></category></entry><entry><title>project of note: Requests</title><link href="http://tshepang.net/project-of-note-requests" rel="alternate"></link><updated>2011-12-31T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2011-12-31:project-of-note-requests</id><summary type="html">&lt;p&gt;Requests is a Python module that makes it real easy to deal with HTTP.
 As an example, something as scary as fetching a web page that needs
