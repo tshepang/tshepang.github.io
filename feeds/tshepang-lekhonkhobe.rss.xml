@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 15 Oct 2014 08:52:58 +0200</lastBuildDate><item><title>FLOSS I use a-lot</title><link>http://tshepang.net/floss-i-use-a-lot</link><description>&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 20 Oct 2014 02:32:32 +0200</lastBuildDate><item><title>ideal static blog generator</title><link>http://tshepang.net/ideal-static-blog-generator</link><description>&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
+missed:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt; support is mandatory, and so is being written in
+Python (I is a fanboy).&lt;/li&gt;
+&lt;li&gt;Landing Page View, ordered by preference:&lt;ul&gt;
+&lt;li&gt;The latest post should be displayed in its entirety, followed by
+an Archives View (just Post title and date). A subset of Archives
+(i.e. Recent Posts) is okay too.&lt;/li&gt;
+&lt;li&gt;It should be an Archives View (or a subset).&lt;/li&gt;
+&lt;li&gt;It should be an About Page.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Categories should be determined by directory into which a file (the
+raw material for a Post) is placed. Specifying this in the metadata
+section of the file should of course take precedence.&lt;/li&gt;
+&lt;li&gt;Publish date should never be placed at the bottom of a Post. It is
+too important a piece metadata to treat this way.&lt;/li&gt;
+&lt;li&gt;An option to have clean URLs (i.e. trailing &lt;tt class="docutils literal"&gt;.html&lt;/tt&gt; removed).&lt;/li&gt;
+&lt;li&gt;Date-based directory structure should not be mandatory (unlike with
+Tinkerer).&lt;/li&gt;
+&lt;li&gt;Inline literals and literal blocks (for code) should be
+distinguished by background colour; using a different font is just not
+good enough.&lt;/li&gt;
+&lt;li&gt;Tags (and maybe Categories) should be displayed on each post.&lt;/li&gt;
+&lt;li&gt;A feed icon that is visible from the main page (and maybe Category
+pages).&lt;/li&gt;
+&lt;li&gt;Blogofile has a strange requirement of having &lt;a class="reference external" href="http://docs.blogofile.com/en/latest/posts.html"&gt;post headers be YAML
+format&lt;/a&gt;. Maybe there's a good reason, but I want my generator to
+not require anything special in file contents.&lt;/li&gt;
+&lt;li&gt;Ability to determine Publish date from file mtime&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Mon, 20 Oct 2014 02:32:32 +0200</pubDate><guid>tag:tshepang.net,2014-10-20:ideal-static-blog-generator</guid><category>blogging</category></item><item><title>FLOSS I use a-lot</title><link>http://tshepang.net/floss-i-use-a-lot</link><description>&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
 There is &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;a separate post&lt;/a&gt; for those.&lt;/p&gt;
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/p&gt;
@@ -1539,39 +1571,7 @@ sys     1m17.844s
 specs, and much faster than my home machine, a laptop.&lt;/p&gt;
 &lt;p&gt;(&lt;a class="reference external" href="http://stackoverflow.com/a/556411/321731"&gt;detailed explanation of the output&lt;/a&gt;)&lt;/p&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sun, 27 Oct 2013 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2013-10-27:a-bit-of-benchmarking</guid><category>Python</category></item><item><title>ideal static blog generator</title><link>http://tshepang.net/ideal-static-blog-generator</link><description>&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
-missed:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt; support is mandatory, and so is being written in
-Python (I is a fanboy).&lt;/li&gt;
-&lt;li&gt;Ordered by preference:&lt;ul&gt;
-&lt;li&gt;The latest post should be displayed in its entirety, followed by
-an Archives View (just Post title and date) or a subset
-(i.e. Recent Posts).&lt;/li&gt;
-&lt;li&gt;It should be an Archives View (or a subset).&lt;/li&gt;
-&lt;li&gt;It should be an About Page.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Categories should be determined by directory into which a file (the
-raw material for a Post) is placed. Specifying this in the metadata
-section of the file should of course take precedence.&lt;/li&gt;
-&lt;li&gt;Publish date should never be placed at the bottom of a Post. It is
-too important a piece metadata to treat this way.&lt;/li&gt;
-&lt;li&gt;An option to have clean urls (i.e. trailing &lt;tt class="docutils literal"&gt;.html&lt;/tt&gt; removed).&lt;/li&gt;
-&lt;li&gt;Date-based directory structure should not be mandatory (unlike with
-Tinkerer).&lt;/li&gt;
-&lt;li&gt;Inline literals and literal blocks (for code) should be
-distinguished by background colour; using a different font is just not
-good enough.&lt;/li&gt;
-&lt;li&gt;Tags (and maybe Categories) should be displayed on each post.&lt;/li&gt;
-&lt;li&gt;A feed icon that is visible from the main page (and maybe Category
-pages).&lt;/li&gt;
-&lt;li&gt;Blogofile has a strange requirement of having &lt;a class="reference external" href="http://docs.blogofile.com/en/latest/posts.html"&gt;post headers be YAML
-format&lt;/a&gt;. Maybe there's a good reason, but I want my generator to
-not require anything special in file contents.&lt;/li&gt;
-&lt;li&gt;(minor) Ability to determine Publish date from file mtime&lt;/li&gt;
-&lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sat, 19 Oct 2013 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2013-10-19:ideal-static-blog-generator</guid><category>blogging</category></item><item><title>projects with excellent documentation</title><link>http://tshepang.net/projects-with-excellent-documentation</link><description>&lt;p&gt;Here is a list of projects whose documentation I found to be
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sun, 27 Oct 2013 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2013-10-27:a-bit-of-benchmarking</guid><category>Python</category></item><item><title>projects with excellent documentation</title><link>http://tshepang.net/projects-with-excellent-documentation</link><description>&lt;p&gt;Here is a list of projects whose documentation I found to be
 highly-detailed and well-written.&lt;/p&gt;
 &lt;div class="section" id="big"&gt;
 &lt;h2&gt;big&lt;/h2&gt;
