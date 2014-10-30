@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-10-20T02:32:32+02:00</updated><entry><title>ideal static blog generator</title><link href="http://tshepang.net/ideal-static-blog-generator" rel="alternate"></link><updated>2014-10-20T02:32:32+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-10-20:ideal-static-blog-generator</id><summary type="html">&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-10-30T00:00:00+02:00</updated><entry><title>impressed by the ease of creating Upstart jobs</title><link href="http://tshepang.net/impressed-by-the-ease-of-creating-upstart-jobs" rel="alternate"></link><updated>2014-10-30T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-10-30:impressed-by-the-ease-of-creating-upstart-jobs</id><summary type="html">&lt;p&gt;At work, we run our systems on Ubuntu, which so far means the init
+system is Upstart. I needed to have one binary to start when the
+system boots, and because I'm horrified by sysvinit scripts (which
+Upstart supports), I decided to give creating an Upstart job a try. I
+was surprised how easy it was:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+exec /usr/local/bin/executable
+start on startup
+respawn
+&lt;/pre&gt;
+&lt;p&gt;I placed a file with above contents in &lt;tt class="docutils literal"&gt;/etc/init/executable.conf&lt;/tt&gt;,
+and that's pretty much it. Impressive.&lt;/p&gt;
+&lt;p&gt;Here's what happens:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;exec&lt;/tt&gt; instructs Upstart what executable to run&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;start on&lt;/tt&gt; is an instruction on when to start the service&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;respawn&lt;/tt&gt; means the service should re-start if ever it dies for
+some reason&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;One convenient thing that's happening is that stdout output of the
+service gets re-directed to a log file, in this case
+&lt;tt class="docutils literal"&gt;/var/log/upstart/executable.log&lt;/tt&gt;. Cool stuff.&lt;/p&gt;
+&lt;p&gt;I found help from &lt;a class="reference external" href="http://upstart.ubuntu.com/getting-started.html"&gt;Getting Started&lt;/a&gt; and &lt;a class="reference external" href="http://upstart.ubuntu.com/cookbook"&gt;the Cookbook&lt;/a&gt;.&lt;/p&gt;
+</summary><category term="non-Debian"></category></entry><entry><title>ideal static blog generator</title><link href="http://tshepang.net/ideal-static-blog-generator" rel="alternate"></link><updated>2014-10-20T02:32:32+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-10-20:ideal-static-blog-generator</id><summary type="html">&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
 missed:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt; support is mandatory, and so is being written in
