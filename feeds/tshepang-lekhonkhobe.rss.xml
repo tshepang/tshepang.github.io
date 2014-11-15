@@ -1,28 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 30 Oct 2014 00:00:00 +0200</lastBuildDate><item><title>impressed by the ease of creating Upstart jobs</title><link>http://tshepang.net/impressed-by-the-ease-of-creating-upstart-jobs</link><description>&lt;p&gt;At work, we run our systems on Ubuntu, which so far means the init
-system is Upstart. I needed to have one binary to start when the
-system boots, and because I'm horrified by sysvinit scripts (which
-Upstart supports), I decided to give creating an Upstart job a try. I
-was surprised how easy it was:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-exec /usr/local/bin/executable
-start on startup
-respawn
-&lt;/pre&gt;
-&lt;p&gt;I placed a file with above contents in &lt;tt class="docutils literal"&gt;/etc/init/executable.conf&lt;/tt&gt;,
-and that's pretty much it. Impressive.&lt;/p&gt;
-&lt;p&gt;Here's what happens:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;exec&lt;/tt&gt; instructs Upstart what executable to run&lt;/li&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;start on&lt;/tt&gt; is an instruction on when to start the service&lt;/li&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;respawn&lt;/tt&gt; means the service should re-start if ever it dies for
-some reason&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;One convenient thing that's happening is that stdout output of the
-service gets re-directed to a log file, in this case
-&lt;tt class="docutils literal"&gt;/var/log/upstart/executable.log&lt;/tt&gt;. Cool stuff.&lt;/p&gt;
-&lt;p&gt;I found help from &lt;a class="reference external" href="http://upstart.ubuntu.com/getting-started.html"&gt;Getting Started&lt;/a&gt; and &lt;a class="reference external" href="http://upstart.ubuntu.com/cookbook"&gt;the Cookbook&lt;/a&gt;.&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Thu, 30 Oct 2014 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2014-10-30:impressed-by-the-ease-of-creating-upstart-jobs</guid><category>non-Debian</category></item><item><title>ideal static blog generator</title><link>http://tshepang.net/ideal-static-blog-generator</link><description>&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 15 Nov 2014 23:10:03 +0200</lastBuildDate><item><title>ideal static blog generator</title><link>http://tshepang.net/ideal-static-blog-generator</link><description>&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
 missed:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt; support is mandatory, and so is being written in
@@ -54,7 +31,38 @@ format&lt;/a&gt;. Maybe there's a good reason, but I want my generator to
 not require anything special in file contents.&lt;/li&gt;
 &lt;li&gt;Ability to determine Publish date from file mtime&lt;/li&gt;
 &lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Mon, 20 Oct 2014 02:32:32 +0200</pubDate><guid>tag:tshepang.net,2014-10-20:ideal-static-blog-generator</guid><category>blogging</category></item><item><title>FLOSS I use a-lot</title><link>http://tshepang.net/floss-i-use-a-lot</link><description>&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
+&lt;p&gt;&lt;strong&gt;nice-to-have&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Ability to combine multiple tags. My use case is something like
+&amp;quot;masterpices I saw first time in 2014&amp;quot;, for which I'd use
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;[2014-movies][masterpiece]&lt;/span&gt;&lt;/tt&gt;.&lt;/li&gt;
+&lt;li&gt;Ability to show posts linking to current one. I'm not sure how
+useful this would be though.&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sat, 15 Nov 2014 23:10:03 +0200</pubDate><guid>tag:tshepang.net,2014-11-15:ideal-static-blog-generator</guid><category>blogging</category></item><item><title>impressed by the ease of creating Upstart jobs</title><link>http://tshepang.net/impressed-by-the-ease-of-creating-upstart-jobs</link><description>&lt;p&gt;At work, we run our systems on Ubuntu, which so far means the init
+system is Upstart. I needed to have one binary to start when the
+system boots, and because I'm horrified by sysvinit scripts (which
+Upstart supports), I decided to give creating an Upstart job a try. I
+was surprised how easy it was:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+exec /usr/local/bin/executable
+start on startup
+respawn
+&lt;/pre&gt;
+&lt;p&gt;I placed a file with above contents in &lt;tt class="docutils literal"&gt;/etc/init/executable.conf&lt;/tt&gt;,
+and that's pretty much it. Impressive.&lt;/p&gt;
+&lt;p&gt;Here's what happens:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;exec&lt;/tt&gt; instructs Upstart what executable to run&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;start on&lt;/tt&gt; is an instruction on when to start the service&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;respawn&lt;/tt&gt; means the service should re-start if ever it dies for
+some reason&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;One convenient thing that's happening is that stdout output of the
+service gets re-directed to a log file, in this case
+&lt;tt class="docutils literal"&gt;/var/log/upstart/executable.log&lt;/tt&gt;. Cool stuff.&lt;/p&gt;
+&lt;p&gt;I found help from &lt;a class="reference external" href="http://upstart.ubuntu.com/getting-started.html"&gt;Getting Started&lt;/a&gt; and &lt;a class="reference external" href="http://upstart.ubuntu.com/cookbook"&gt;the Cookbook&lt;/a&gt;.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Thu, 30 Oct 2014 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2014-10-30:impressed-by-the-ease-of-creating-upstart-jobs</guid><category>non-Debian</category></item><item><title>FLOSS I use a-lot</title><link>http://tshepang.net/floss-i-use-a-lot</link><description>&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
 There is &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;a separate post&lt;/a&gt; for those.&lt;/p&gt;
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/p&gt;
