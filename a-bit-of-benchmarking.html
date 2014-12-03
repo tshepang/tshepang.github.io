@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Tshepang Lekhonkhobe" />
+        <meta name="copyright" content="Tshepang Lekhonkhobe" />
+
+        <meta name="twitter:creator" content="@tshepang_dev">
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="Python, computing, " />
+
+<meta property="og:title" content="a bit of benchmarking "/>
+<meta property="og:url" content="http://tshepang.net/a-bit-of-benchmarking" />
+<meta property="og:description" content="comparing performance of my laptop and my work machine" />
+<meta property="og:site_name" content="Tshepang logs" />
+<meta property="og:article:author" content="Tshepang Lekhonkhobe" />
+<meta property="og:article:published_time" content="2013-10-27T00:00:00+02:00" />
+<meta name="twitter:title" content="a bit of benchmarking ">
+<meta name="twitter:description" content="comparing performance of my laptop and my work machine">
+
+        <title>a bit of benchmarking  · Tshepang logs
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="http://tshepang.net/theme/css/pygments.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://tshepang.net/theme/tipuesearch/tipuesearch.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://tshepang.net/theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://tshepang.net/theme/css/custom.css" media="screen">
+        <link href="http://tshepang.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tshepang logs - Full Atom Feed" />
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-16685250-3', 'auto');
+    ga('send', 'pageview');
+</script>
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="http://tshepang.net/"><span class=site-name>Tshepang logs</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="http://tshepang.net">Home</a></li>
+                            <li ><a href="http://tshepang.net/about-me.html">about me</a></li>
+                            <li ><a href="http://tshepang.net/categories.html">Categories</a></li>
+                            <li ><a href="http://tshepang.net/tags.html">Tags</a></li>
+                            <li ><a href="http://tshepang.net/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="http://tshepang.net/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+    <h1><a href="http://tshepang.net/a-bit-of-benchmarking"> a bit of benchmarking  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            
+            <p>I was curious how my home machine performs compared to my work
+machine. Each of these have 4 logical processors (and 8GB of RAM), so
+are sort of comparable. I also added the <a class="reference external" href="https://www.digitalocean.com/?refcode=25b4887810cc">DigitalOcean</a> VPS with
+those specs (<a class="reference external" href="https://www.digitalocean.com/pricing">currently $80 per month</a>) because... why not.</p>
+<div class="section" id="machine-specs">
+<h2>Machine Specs</h2>
+<p>Each machine runs Debian testing (codename &quot;jessie&quot;). Following is the
+output of these commands for each machine:</p>
+<pre class="literal-block">
+uname --all
+cat /proc/cpuinfo | sed --quiet '5p'
+</pre>
+<p>Home machine:</p>
+<pre class="literal-block">
+Linux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU/Linux
+model name      : Intel(R) Core(TM) i5-2410M CPU &#64; 2.30GHz
+</pre>
+<p>Work machine:</p>
+<pre class="literal-block">
+Linux twork 3.10-3-amd64 #1 SMP Debian 3.10.11-1 (2013-09-10) x86_64 GNU/Linux
+model name      : AMD Phenom(tm) II X4 970 Processor
+</pre>
+<p>DigitalOcean VPS:</p>
+<pre class="literal-block">
+Linux tcloud 3.11-1-amd64 #1 SMP Debian 3.11.5-1 (2013-10-17) x86_64 GNU/Linux
+model name      : QEMU Virtual CPU version 1.0
+</pre>
+</div>
+<div class="section" id="cpython-benchmarks">
+<h2>CPython benchmarks</h2>
+<p>I ran two benchmarks, both from the latest VCS version of CPython,
+development branch:</p>
+<pre class="literal-block">
+$ hg identify --id --branch
+b6a1a78818fe default
+</pre>
+<div class="section" id="build">
+<h3>Build</h3>
+<p>Here's the command I used:</p>
+<pre class="literal-block">
+make distclean; time (./configure &amp;&amp; make --silent --jobs=4)
+</pre>
+<div class="section" id="results">
+<h4>Results</h4>
+<p>Home machine:</p>
+<pre class="literal-block">
+real    2m11.687s
+user    3m18.104s
+sys     0m9.964s
+</pre>
+<p>Work machine:</p>
+<pre class="literal-block">
+real    2m2.707s
+user    2m24.200s
+sys     0m12.280s
+</pre>
+<p>VPS:</p>
+<pre class="literal-block">
+real    2m30.931s
+user    3m7.272s
+sys     0m16.592s
+</pre>
+</div>
+</div>
+<div class="section" id="test-suite">
+<h3>Test suite</h3>
+<p>Here's the command I used:</p>
+<pre class="literal-block">
+time ./python -m test --multiprocess=0
+</pre>
+<p><strong>--multiprocess=0</strong> means that there will be 6 tests run in parallel;
+that is the number logical cores (4 in my case) + 2 (to avoid waiting
+too long for tests which are largely idle)</p>
+<div class="section" id="id1">
+<h4>Results</h4>
+<p>Home machine:</p>
+<pre class="literal-block">
+real    3m42.571s
+user    7m13.124s
+sys     0m33.320s
+</pre>
+<p>Work machine:</p>
+<pre class="literal-block">
+real    2m29.957s
+user    4m9.052s
+sys     0m27.364s
+</pre>
+<p>VPS:</p>
+<pre class="literal-block">
+real    2m19.174s
+user    5m5.444s
+sys     0m40.008s
+</pre>
+</div>
+</div>
+</div>
+<div class="section" id="linux-kernel-build">
+<h2>Linux kernel build</h2>
+<p>Just for kicks, I decided to check how long building Linux would take;
+for this, I used latest 'final' release from Linus' git tree:</p>
+<pre class="literal-block">
+$ git log -1
+commit 6e4664525b1db28f8c4e1130957f70a94c19213e
+Author: Linus Torvalds &lt;torvalds&#64;linux-foundation.org&gt;
+Date:   Mon Sep 2 13:46:10 2013 -0700
+
+Linux 3.11
+</pre>
+<p>Here's the commands I used:</p>
+<pre class="literal-block">
+make distclean &amp;&amp; make defconfig &amp;&amp; time make
+</pre>
+<div class="section" id="id2">
+<h3>Results</h3>
+<p>Home machine:</p>
+<pre class="literal-block">
+real    6m11.622s
+user    21m2.664s
+sys     1m15.324s
+</pre>
+<p>Work machine:</p>
+<pre class="literal-block">
+real    2m40.275s
+user    8m55.624s
+sys     0m42.860s
+</pre>
+<p>VPS:</p>
+<pre class="literal-block">
+real    3m41.240s
+user    12m21.120s
+sys     1m17.844s
+</pre>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion</h2>
+<p>My work machine is faster than the DigitalOcean offering of comparable
+specs, and much faster than my home machine, a laptop.</p>
+<p>(<a class="reference external" href="http://stackoverflow.com/a/556411/321731">detailed explanation of the output</a>)</p>
+</div>
+
+            
+            <section>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
+                href="http://tshepang.net/a-bit-of-benchmarking#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'tshepanglogs';
+        var disqus_identifier = 'http://tshepang.net/a-bit-of-benchmarking';
+    var disqus_url = 'http://tshepang.net/a-bit-of-benchmarking';
+
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+            <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="http://tshepang.net/ideal-static-blog-generator" title="Previous: ideal static blog generator">ideal static blog generator</a></li>
+                <li class="next-article"><a href="http://tshepang.net/introducing-hedzoleh-soundz-1973" title="Next: Introducing Hedzoleh Soundz (1973)">Introducing Hedzoleh Soundz (1973)</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2013-10-27T00:00:00+02:00">Oct 27, 2013</time>
+            <h4>Category</h4>
+            <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="http://tshepang.net/tags.html#python-ref">Python
+                    <span>66</span>
+</a></li>
+            </ul>
+<h4>Stay in Touch</h4>
+    <a href="https://bitbucket.org/tshepang" title="My bitbucket Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-bitbucket sidebar-social-links"></i></a>
+    <a href="https://github.com/tshepang" title="My github Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-github sidebar-social-links"></i></a>
+    <a href="https://twitter.com/tshepang_dev" title="My twitter Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+    <a href="https://gittip.com/tshepang" title="My gittip Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-gittip sidebar-social-links"></i></a>
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+        <div id="push"></div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-license"><a rel="license"
+href="http://creativecommons.org/licenses/by-sa/3.0/"><img
+alt="Creative Commons License" style="border-width:0"
+src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><br
+/>This work is licensed under a <a rel="license"
+href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons
+Attribution-ShareAlike 3.0 Unported License</a>.</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+            <script type="text/javascript">
+var disqus_shortname = 'tshepanglogs';
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+<script  language="javascript" type="text/javascript">
+function uncollapse() {
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
+    }
+}
+</script>
+<script type="text/javascript" language="JavaScript">
+uncollapse();
+window.onhashchange=function(){
+    if (window.location.hash.match(/^#comment-\d+$/))
+        window.location.reload(true);
+}
+</script>
+<script>
+$('#disqus_thread').on('shown', function () {
+    var link = document.getElementsByClassName('accordion-toggle');
+    var old_innerHTML = link[0].innerHTML;
+    $(link[0]).fadeOut(500, function() {
+        $(this).text('Click here to hide comments').fadeIn(500);
+    });
+    $('#disqus_thread').on('hidden', function () {
+        $(link[0]).fadeOut(500, function() {
+            $(this).text(old_innerHTML).fadeIn(500);
+        });
+    })
+})
+</script>
+
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+    License : http://oncrashreboot.com/pelican-elegant -->
+</html>

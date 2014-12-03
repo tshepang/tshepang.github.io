@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Tshepang Lekhonkhobe" />
+        <meta name="copyright" content="Tshepang Lekhonkhobe" />
+
+        <meta name="twitter:creator" content="@tshepang_dev">
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="Debian, computing, " />
+
+<meta property="og:title" content="what I do after Debian installation "/>
+<meta property="og:url" content="http://tshepang.net/what-i-do-after-debian-installation" />
+<meta property="og:description" content="I think anyone who has never done any OS install before can install Debian without any issue at all, provided they will not be doing any partitioning. It is that easy. As for me, I do a lot more installations than the average person, so I semi-automate the setup process ..." />
+<meta property="og:site_name" content="Tshepang logs" />
+<meta property="og:article:author" content="Tshepang Lekhonkhobe" />
+<meta property="og:article:published_time" content="2012-11-10T00:00:00+02:00" />
+<meta name="twitter:title" content="what I do after Debian installation ">
+<meta name="twitter:description" content="I think anyone who has never done any OS install before can install Debian without any issue at all, provided they will not be doing any partitioning. It is that easy. As for me, I do a lot more installations than the average person, so I semi-automate the setup process ...">
+
+        <title>what I do after Debian installation  · Tshepang logs
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="http://tshepang.net/theme/css/pygments.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://tshepang.net/theme/tipuesearch/tipuesearch.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://tshepang.net/theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://tshepang.net/theme/css/custom.css" media="screen">
+        <link href="http://tshepang.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tshepang logs - Full Atom Feed" />
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-16685250-3', 'auto');
+    ga('send', 'pageview');
+</script>
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="http://tshepang.net/"><span class=site-name>Tshepang logs</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="http://tshepang.net">Home</a></li>
+                            <li ><a href="http://tshepang.net/about-me.html">about me</a></li>
+                            <li ><a href="http://tshepang.net/categories.html">Categories</a></li>
+                            <li ><a href="http://tshepang.net/tags.html">Tags</a></li>
+                            <li ><a href="http://tshepang.net/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="http://tshepang.net/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+    <h1><a href="http://tshepang.net/what-i-do-after-debian-installation"> what I do after Debian installation  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            
+            <p>I think anyone who has never done any OS install before can install
+Debian without any issue at all, provided they will not be doing any
+partitioning. It is that easy.</p>
+<p>As for me, I do a lot more installations than the average person, so I
+semi-automate the setup process with the help of this script:</p>
+<div class="highlight"><pre><span class="c">#!/bin/bash</span>
+
+<span class="c"># some convenience</span>
+<span class="nb">shopt</span> -s expand_aliases
+<span class="nb">source</span> ~/nna/conf/bash_aliases
+
+<span class="c"># config files</span>
+sudo cp ~/nna/conf/sources.list /etc/apt
+sudo cp ~/nna/conf/sudoers /etc
+
+<span class="c"># APT</span>
+sudo apt-get update
+sudo apt-get --allow-unauthenticated upgrade
+sudo apt-get --allow-unauthenticated dist-upgrade
+sudo apt-get --allow-unauthenticated install devscripts debhelper build-essential python3-apt gpm
+
+<span class="c"># wajig</span>
+<span class="o">(</span><span class="nb">cd</span> ~/src/wajig <span class="o">&amp;&amp;</span> iiwajig<span class="o">)</span>
+ibase <span class="o">&amp;&amp;</span> inondebian <span class="o">&amp;&amp;</span> itracker <span class="o">&amp;&amp;</span> icpython <span class="o">&amp;&amp;</span> ipurge
+
+<span class="c"># for Tracker</span>
+sudo sh -c <span class="s2">&quot;echo &#39;fs.inotify.max_user_watches=100000&#39; &gt;&gt; /etc/sysctl.conf&quot;</span>
+
+<span class="c"># so I can share via a webserver, or easily access from browser</span>
+sudo ln -s ~/.custom_repo /var/www/custom_repo
+</pre></div>
+<p>Contents of Debian repository list file:</p>
+<div class="highlight"><pre><span class="nv">$ </span>cat /etc/apt/sources.list
+deb file:/home/wena/.custom_repo tshepang main
+deb http://debian.mirror.ac.za/debian wheezy main contrib non-free
+</pre></div>
+<p>The <tt class="docutils literal">tshepang</tt> codename refers to my custom repository, the one
+managed by <a class="reference external" href="http://tshepang.net/project-of-note-reprepro">reprepro</a>.</p>
+<p>Contents of <strong>sudo</strong> setup file:</p>
+<div class="highlight"><pre><span class="nv">$ </span>sudo cat /etc/sudoers
+Defaults env_reset
+Defaults mail_badpass
+Defaults <span class="nv">secure_path</span><span class="o">=</span><span class="s2">&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;</span>
+root     <span class="nv">ALL</span><span class="o">=(</span>ALL<span class="o">)</span> ALL
+%sudo    <span class="nv">ALL</span><span class="o">=(</span>ALL<span class="o">)</span> ALL
+Defaults !tty_tickets
+Defaults <span class="nv">timestamp_timeout</span><span class="o">=</span>100
+</pre></div>
+<p>The one change from default <strong>sudo</strong> setup is so that each bash session
+can inherit sudo powers from another. It's one case where I trade
+<a class="reference external" href="http://ask.debian.net/questions/how-to-have-sudo-powers-shared-between-different-bash-sessions">security</a> for convenience. Another such case is increasing the
+ask-for-password timeout to 100 minutes, instead of the default 15
+minutes.</p>
+<p>And then these aliases, which point to scripts that install some
+packages:</p>
+<ul class="simple">
+<li><tt class="docutils literal">ibase</tt>: basic stuff I got to have, stuff like the components I use
+for my desktop apps, some CLI tools, and some documentation</li>
+<li><tt class="docutils literal">inondebian</tt>: packages that aren't part of Debian, e.g. stuff from
+external repositories, or nonm-free stuff from Debian repos</li>
+<li><tt class="docutils literal">itracker</tt>: I always run the git version of <a class="reference external" href="http://projects.gnome.org/tracker/">Tracker</a>, so these
+tools help me build it</li>
+<li><tt class="docutils literal">ipurge</tt>: stuff that was installed as Recommends dependencies of
+the above (e.g. <tt class="docutils literal"><span class="pre">gnome-bluetooth</span></tt>) or during Debian installation
+(e.g. <tt class="docutils literal">vim</tt>), but that I won't use</li>
+</ul>
+<p>The symbolic links is so that those I share a network with (LAN) can
+have easy web browser access to some stuff on my machine.</p>
+
+            
+            <section>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
+                href="http://tshepang.net/what-i-do-after-debian-installation#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'tshepanglogs';
+        var disqus_identifier = 'http://tshepang.net/what-i-do-after-debian-installation';
+    var disqus_url = 'http://tshepang.net/what-i-do-after-debian-installation';
+
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+            <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="http://tshepang.net/links-2012-10-23" title="Previous: links 2012-10-23">links 2012-10-23</a></li>
+                <li class="next-article"><a href="http://tshepang.net/links-2012-11-18" title="Next: links 2012-11-18">links 2012-11-18</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2012-11-10T00:00:00+02:00">Nov 10, 2012</time>
+            <h4>Category</h4>
+            <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="http://tshepang.net/tags.html#debian-ref">Debian
+                    <span>49</span>
+</a></li>
+            </ul>
+<h4>Stay in Touch</h4>
+    <a href="https://bitbucket.org/tshepang" title="My bitbucket Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-bitbucket sidebar-social-links"></i></a>
+    <a href="https://github.com/tshepang" title="My github Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-github sidebar-social-links"></i></a>
+    <a href="https://twitter.com/tshepang_dev" title="My twitter Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+    <a href="https://gittip.com/tshepang" title="My gittip Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-gittip sidebar-social-links"></i></a>
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+        <div id="push"></div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-license"><a rel="license"
+href="http://creativecommons.org/licenses/by-sa/3.0/"><img
+alt="Creative Commons License" style="border-width:0"
+src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><br
+/>This work is licensed under a <a rel="license"
+href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons
+Attribution-ShareAlike 3.0 Unported License</a>.</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+            <script type="text/javascript">
+var disqus_shortname = 'tshepanglogs';
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+<script  language="javascript" type="text/javascript">
+function uncollapse() {
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
+    }
+}
+</script>
+<script type="text/javascript" language="JavaScript">
+uncollapse();
+window.onhashchange=function(){
+    if (window.location.hash.match(/^#comment-\d+$/))
+        window.location.reload(true);
+}
+</script>
+<script>
+$('#disqus_thread').on('shown', function () {
+    var link = document.getElementsByClassName('accordion-toggle');
+    var old_innerHTML = link[0].innerHTML;
+    $(link[0]).fadeOut(500, function() {
+        $(this).text('Click here to hide comments').fadeIn(500);
+    });
+    $('#disqus_thread').on('hidden', function () {
+        $(link[0]).fadeOut(500, function() {
+            $(this).text(old_innerHTML).fadeIn(500);
+        });
+    })
+})
+</script>
+
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+    License : http://oncrashreboot.com/pelican-elegant -->
+</html>
