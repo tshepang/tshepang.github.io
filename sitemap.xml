@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://tshepang.net/index.html</loc>
-<lastmod>2014-12-03T23:01:32-00:00</lastmod>
+<lastmod>2014-12-03T23:05:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://tshepang.net/archives.html</loc>
-<lastmod>2014-12-03T23:01:32-00:00</lastmod>
+<lastmod>2014-12-03T23:05:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://tshepang.net/tags.html</loc>
-<lastmod>2014-12-03T23:01:32-00:00</lastmod>
+<lastmod>2014-12-03T23:05:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://tshepang.net/categories.html</loc>
-<lastmod>2014-12-03T23:01:32-00:00</lastmod>
+<lastmod>2014-12-03T23:05:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -34,6 +34,34 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://tshepang.net/about-me.html</loc>
 <lastmod>2014-12-03T19:39:30+02:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://tshepang.net/most-exciting-software-projects</loc>
+<lastmod>2014-12-03T23:02:12+02:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://tshepang.net/favorite-posts-i-wrote</loc>
+<lastmod>2014-12-03T23:02:12+02:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://tshepang.net/floss-i-use-a-lot</loc>
+<lastmod>2014-12-03T23:02:12+02:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://tshepang.net/ideal-static-blog-generator</loc>
+<lastmod>2014-12-03T23:02:12+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -60,13 +88,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://tshepang.net/floss-i-use-a-lot</loc>
-<lastmod>2014-12-03T19:39:30+02:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>http://tshepang.net/i-am-a-very-jealous-person</loc>
 <lastmod>2014-12-03T19:39:30+02:00</lastmod>
 <changefreq>monthly</changefreq>
@@ -81,13 +102,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://tshepang.net/most-exciting-software-projects</loc>
-<lastmod>2014-12-03T19:39:30+02:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>http://tshepang.net/python-wishes</loc>
 <lastmod>2014-12-03T19:39:30+02:00</lastmod>
 <changefreq>monthly</changefreq>
@@ -95,15 +109,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://tshepang.net/superstar-projects-and-associated-implementation-languages</loc>
-<lastmod>2014-12-03T19:39:30+02:00</lastmod>
+<loc>http://tshepang.net/impressed-by-the-ease-of-creating-upstart-jobs</loc>
+<lastmod>2014-10-30T00:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://tshepang.net/favorite-posts-i-wrote</loc>
-<lastmod>2014-09-20T00:00:00+02:00</lastmod>
+<loc>http://tshepang.net/links-2014-10-07</loc>
+<lastmod>2014-10-07T00:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -328,13 +342,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://tshepang.net/a-bit-of-benchmarking</loc>
 <lastmod>2013-10-27T00:00:00+02:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://tshepang.net/ideal-static-blog-generator</loc>
-<lastmod>2013-10-19T00:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>

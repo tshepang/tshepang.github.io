@@ -11,18 +11,18 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="non-Debian, quote, computing, " />
+<meta name="keywords" content="non-Debian, computing, " />
 
-<meta property="og:title" content="unfair criticism of Ubuntu "/>
-<meta property="og:url" content="http://tshepang.net/unfair-criticism-of-ubuntu" />
-<meta property="og:description" content="The developers who castigate Ubuntu are uniformly silent about the number of kernel patches coming from the Mandriva camp. They have nothing to say about how much Xandros gives back to Debian. Nobody totals up contributions from Gentoo. There are no complaints about Slackware&#39;s presence in the community. Arch ..." />
+<meta property="og:title" content="impressed by the ease of creating Upstart jobs "/>
+<meta property="og:url" content="http://tshepang.net/impressed-by-the-ease-of-creating-upstart-jobs" />
+<meta property="og:description" content="At work, we run our systems on Ubuntu, which so far means the init system is Upstart. I needed to have one binary to start when the system boots, and because I&#39;m horrified by sysvinit scripts (which Upstart supports), I decided to give creating an Upstart job a try ..." />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
-<meta property="og:article:published_time" content="2011-05-26T00:00:00+02:00" />
-<meta name="twitter:title" content="unfair criticism of Ubuntu ">
-<meta name="twitter:description" content="The developers who castigate Ubuntu are uniformly silent about the number of kernel patches coming from the Mandriva camp. They have nothing to say about how much Xandros gives back to Debian. Nobody totals up contributions from Gentoo. There are no complaints about Slackware&#39;s presence in the community. Arch ...">
+<meta property="og:article:published_time" content="2014-10-30T00:00:00+02:00" />
+<meta name="twitter:title" content="impressed by the ease of creating Upstart jobs ">
+<meta name="twitter:description" content="At work, we run our systems on Ubuntu, which so far means the init system is Upstart. I needed to have one binary to start when the system boots, and because I&#39;m horrified by sysvinit scripts (which Upstart supports), I decided to give creating an Upstart job a try ...">
 
-        <title>unfair criticism of Ubuntu  · Tshepang logs
+        <title>impressed by the ease of creating Upstart jobs  · Tshepang logs
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -71,7 +71,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://tshepang.net/unfair-criticism-of-ubuntu"> unfair criticism of Ubuntu  </a></h1>
+    <h1><a href="http://tshepang.net/impressed-by-the-ease-of-creating-upstart-jobs"> impressed by the ease of creating Upstart jobs  </a></h1>
     </header>
 </div>
 
@@ -79,18 +79,29 @@
         <div class="span8 offset2 article-content">
 
             
-            <!--  -->
-<blockquote>
-<p>The developers who castigate Ubuntu are uniformly silent about the
-number of kernel patches coming from the Mandriva camp. They have
-nothing to say about how much Xandros gives back to Debian. Nobody
-totals up contributions from Gentoo. There are no complaints about
-Slackware's presence in the community. Arch Linux developers do not
-hear that they are not doing enough. There are no high-profile
-articles on how rPath is taking advantage of free software
-developers.</p>
-<p class="attribution">&mdash;<a class="reference external" href="http://lwn.net/Articles/294542/">In defence of Ubuntu</a></p>
-</blockquote>
+            <p>At work, we run our systems on Ubuntu, which so far means the init
+system is Upstart. I needed to have one binary to start when the
+system boots, and because I'm horrified by sysvinit scripts (which
+Upstart supports), I decided to give creating an Upstart job a try. I
+was surprised how easy it was:</p>
+<pre class="literal-block">
+exec /usr/local/bin/executable
+start on startup
+respawn
+</pre>
+<p>I placed a file with above contents in <tt class="docutils literal">/etc/init/executable.conf</tt>,
+and that's pretty much it. Impressive.</p>
+<p>Here's what happens:</p>
+<ul class="simple">
+<li><tt class="docutils literal">exec</tt> instructs Upstart what executable to run</li>
+<li><tt class="docutils literal">start on</tt> is an instruction on when to start the service</li>
+<li><tt class="docutils literal">respawn</tt> means the service should re-start if ever it dies for
+some reason</li>
+</ul>
+<p>One convenient thing that's happening is that stdout output of the
+service gets re-directed to a log file, in this case
+<tt class="docutils literal">/var/log/upstart/executable.log</tt>. Cool stuff.</p>
+<p>I found help from <a class="reference external" href="http://upstart.ubuntu.com/getting-started.html">Getting Started</a> and <a class="reference external" href="http://upstart.ubuntu.com/cookbook">the Cookbook</a>.</p>
 
             
             <section>
@@ -98,7 +109,7 @@ developers.</p>
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://tshepang.net/unfair-criticism-of-ubuntu#disqus_thread">
+                href="http://tshepang.net/impressed-by-the-ease-of-creating-upstart-jobs#disqus_thread">
                 Comments
             </a>
         </div>
@@ -108,8 +119,8 @@ developers.</p>
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'tshepanglogs';
-        var disqus_identifier = 'http://tshepang.net/unfair-criticism-of-ubuntu';
-    var disqus_url = 'http://tshepang.net/unfair-criticism-of-ubuntu';
+        var disqus_identifier = 'http://tshepang.net/impressed-by-the-ease-of-creating-upstart-jobs';
+    var disqus_url = 'http://tshepang.net/impressed-by-the-ease-of-creating-upstart-jobs';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -131,8 +142,8 @@ developers.</p>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/wajig-22-released" title="Previous: wajig 2.2 released">wajig 2.2 released</a></li>
-                <li class="next-article"><a href="http://tshepang.net/my-first-code-contribution-to-the-cpython-project" title="Next: my first code contribution to the CPython project">my first code contribution to the CPython project</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/links-2014-10-07" title="Previous: links 2014-10-07">links 2014-10-07</a></li>
+                <li class="next-article"><a href="http://tshepang.net/python-wishes" title="Next: Python wishes">Python wishes</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -140,16 +151,13 @@ developers.</p>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2011-05-26T00:00:00+02:00">May 26, 2011</time>
+            <time pubdate="pubdate" datetime="2014-10-30T00:00:00+02:00">Oct 30, 2014</time>
             <h4>Category</h4>
             <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
                 <li><a href="http://tshepang.net/tags.html#non-debian-ref">non-Debian
                     <span>14</span>
-</a></li>
-                <li><a href="http://tshepang.net/tags.html#quote-ref">quote
-                    <span>30</span>
 </a></li>
             </ul>
 <h4>Stay in Touch</h4>
