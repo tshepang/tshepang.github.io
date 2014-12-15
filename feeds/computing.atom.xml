@@ -1,5 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-12-03T23:02:12+02:00</updated><entry><title>most exciting software projects</title><link href="http://tshepang.net/most-exciting-software-projects" rel="alternate"></link><updated>2014-12-03T23:02:12+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-03:most-exciting-software-projects</id><summary type="html">&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-12-15T19:07:29+02:00</updated><entry><title>ideal static blog generator</title><link href="http://tshepang.net/ideal-static-blog-generator" rel="alternate"></link><updated>2014-12-15T19:07:29+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-15:ideal-static-blog-generator</id><summary type="html">&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
+missed:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt; support is mandatory, and so is being written in
+Python (I is a fanboy).&lt;/li&gt;
+&lt;li&gt;Landing Page View, ordered by preference:&lt;ul&gt;
+&lt;li&gt;The latest post should be displayed in its entirety, followed by
+an Archives View (just Post title and date). A subset of Archives
+(i.e. Recent Posts) is okay too.&lt;/li&gt;
+&lt;li&gt;It should be an Archives View (or a subset).&lt;/li&gt;
+&lt;li&gt;It should be an About Page.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Categories should be determined by directory into which a file (the
+raw material for a Post) is placed. Specifying this in the metadata
+section of the file should of course take precedence.&lt;/li&gt;
+&lt;li&gt;Publish date should never be placed at the bottom of a Post. It is
+too important a piece metadata to treat this way.&lt;/li&gt;
+&lt;li&gt;An option to have clean URLs (i.e. trailing &lt;tt class="docutils literal"&gt;.html&lt;/tt&gt; removed).&lt;/li&gt;
+&lt;li&gt;Date-based directory structure should not be mandatory (unlike with
+Tinkerer).&lt;/li&gt;
+&lt;li&gt;Inline literals and literal blocks (for code) should be
+distinguished by background colour; using a different font is just not
+good enough.&lt;/li&gt;
+&lt;li&gt;Tags (and maybe Categories) should be displayed on each post.&lt;/li&gt;
+&lt;li&gt;A feed icon that is visible from the main page (and maybe Category
+pages).&lt;/li&gt;
+&lt;li&gt;Blogofile has a strange requirement of having &lt;a class="reference external" href="http://docs.blogofile.com/en/latest/posts.html"&gt;post headers be YAML
+format&lt;/a&gt;. Maybe there's a good reason, but I want my generator to
+not require anything special in file contents.&lt;/li&gt;
+&lt;li&gt;Ability to determine Publish date from file mtime&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;nice-to-have&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Ability to combine multiple tags. My use case is something like
+&amp;quot;masterpices I saw first time in 2014&amp;quot;, for which I'd use
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;[2014-movies][masterpiece]&lt;/span&gt;&lt;/tt&gt;.&lt;/li&gt;
+&lt;li&gt;Ability to show posts linking to current one. I'm not sure how
+useful this would be though.&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="blogging"></category></entry><entry><title>most exciting software projects</title><link href="http://tshepang.net/most-exciting-software-projects" rel="alternate"></link><updated>2014-12-15T19:07:29+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-15:most-exciting-software-projects</id><summary type="html">&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org"&gt;PyPy&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;It's been alive for over 10 years, but remains among the most
@@ -19,13 +59,13 @@ ETA for the first stable release (1.0) is early 2015.&lt;/p&gt;
 engine powering Firefox. It is written in Rust.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="list"></category><category term="non-Python"></category><category term="Python"></category></entry><entry><title>favorite posts I wrote</title><link href="http://tshepang.net/favorite-posts-i-wrote" rel="alternate"></link><updated>2014-12-03T23:02:12+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-03:favorite-posts-i-wrote</id><summary type="html">&lt;p&gt;I like the quality of my writing sometimes. Following are my favorites:&lt;/p&gt;
+</summary><category term="list"></category><category term="non-Python"></category><category term="Python"></category></entry><entry><title>favorite posts I wrote</title><link href="http://tshepang.net/favorite-posts-i-wrote" rel="alternate"></link><updated>2014-12-15T19:07:29+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-15:favorite-posts-i-wrote</id><summary type="html">&lt;p&gt;I like the quality of my writing sometimes. Following are my favorites:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/developer-of-note-victor-stinner"&gt;developer of note: Victor Stinner&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/me-likes-subprocessdevnull"&gt;me likes subprocess.DEVNULL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/wajig-21-released"&gt;wajig 2.1 released&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="wajig"></category><category term="Debian"></category><category term="Python"></category><category term="blogging"></category><category term="list"></category></entry><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2014-12-03T23:02:12+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-03:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
+</summary><category term="wajig"></category><category term="Debian"></category><category term="Python"></category><category term="blogging"></category><category term="list"></category></entry><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2014-12-15T19:07:29+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-15:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
 There is &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;a separate post&lt;/a&gt; for those.&lt;/p&gt;
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/p&gt;
@@ -82,47 +122,38 @@ time I tried; I don't remember the details&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;OpenSSH&lt;/strong&gt;: duh!&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://github.com/joelthelion/autojump"&gt;autojump&lt;/a&gt;: makes navigating the filesystem a joy&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="list"></category></entry><entry><title>ideal static blog generator</title><link href="http://tshepang.net/ideal-static-blog-generator" rel="alternate"></link><updated>2014-12-03T23:02:12+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-03:ideal-static-blog-generator</id><summary type="html">&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
-missed:&lt;/p&gt;
+</summary><category term="list"></category></entry><entry><title>favorite FLOSS</title><link href="http://tshepang.net/favorite-floss" rel="alternate"></link><updated>2014-12-15T18:52:13+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-15:favorite-floss</id><summary type="html">&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
+it has to both be personally useful and I have to like it a lot:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;backup:&lt;/strong&gt; &lt;a class="reference external" href="http://tshepang.net/project-of-note-rdiff-backup"&gt;rdiff-backup&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;desktop&lt;/strong&gt;: &lt;a class="reference external" href="http://dwm.suckless.org"&gt;dwm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;development&lt;/strong&gt;: Python, Emacs, &lt;a class="reference external" href="http://tshepang.net/project-of-note-git-cola"&gt;git-cola&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;file manager&lt;/strong&gt;: Bash, Emacs (Dired mode)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;misc utilities:&lt;/strong&gt; grep, &lt;a class="reference external" href="http://tshepang.net/project-of-note-sudo"&gt;Sudo&lt;/a&gt;, &lt;a class="reference external" href="http://tshepang.net/project-of-note-reprepro"&gt;reprepro&lt;/a&gt;, Lsof, less, Meld,
+Uptimed, procps (top, watch), &lt;a class="reference external" href="http://projects.gnome.org/tracker"&gt;Tracker&lt;/a&gt;, Ex Falso, wajig, autojump,
+&lt;a class="reference external" href="http://tshepang.net/xfrun4-rocks"&gt;xfrun4&lt;/a&gt;, coreutils (wc, tail), &lt;a class="reference external" href="http://tshepang.net/project-of-note-linkchecker"&gt;LinkChecker&lt;/a&gt;, &lt;a class="reference external" href="http://guichaz.free.fr/iotop"&gt;Iotop&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Man_page"&gt;man&lt;/a&gt;,
+OpenSSH, &lt;a class="reference external" href="http://humdi.net/vnstat"&gt;vnstat&lt;/a&gt;, &lt;a class="reference external" href="http://tmux.sourceforge.net"&gt;tmux&lt;/a&gt;, File Roller, &lt;a class="reference external" href="http://fabfile.org"&gt;Fabric&lt;/a&gt;, youtube-dl&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;spreadsheet:&lt;/strong&gt; gnumeric&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;terminal emulator&lt;/strong&gt;: Xfce Terminal&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;virtualisation&lt;/strong&gt;: VirtualBox&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;version control system&lt;/strong&gt;: &lt;a class="reference external" href="http://mercurial.selenic.com"&gt;Mercurial&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;web browser&lt;/strong&gt;: Firefox&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;non-FLOSS:&lt;/strong&gt; &lt;a class="reference external" href="http://disqus.com"&gt;Disqus&lt;/a&gt;, &lt;a class="reference external" href="http://mail.google.com/mail"&gt;Gmail&lt;/a&gt;, &lt;a class="reference external" href="http://stackexchange.com"&gt;Stack Exchange&lt;/a&gt;, &lt;a class="reference external" href="http://bitbucket.org"&gt;Bitbucket&lt;/a&gt;&lt;/p&gt;
+</summary><category term="list"></category></entry><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2014-12-15T18:52:13+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-15:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
+I do celebrate each time I see a project use it. So, here I list the
+most notable projects I am aware of that do, which also gives me hope
+that it isn't being suffocated too much by Git:&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt; support is mandatory, and so is being written in
-Python (I is a fanboy).&lt;/li&gt;
-&lt;li&gt;Landing Page View, ordered by preference:&lt;ul&gt;
-&lt;li&gt;The latest post should be displayed in its entirety, followed by
-an Archives View (just Post title and date). A subset of Archives
-(i.e. Recent Posts) is okay too.&lt;/li&gt;
-&lt;li&gt;It should be an Archives View (or a subset).&lt;/li&gt;
-&lt;li&gt;It should be an About Page.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://hg.mozilla.org/mozilla-central"&gt;Firefox&lt;/a&gt;, world number 3 desktop web browser (number of users)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://hg.python.org/cpython"&gt;CPython&lt;/a&gt; and &lt;a class="reference external" href="https://bitbucket.org/pypy/pypy"&gt;PyPy&lt;/a&gt;, the most important implementations of a top 10
+popular programming language&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://hg.openjdk.java.net"&gt;OpenJDK&lt;/a&gt;, the top open source implementation of the Java platform&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://bitbucket.org/birkenfeld/sphinx"&gt;Sphinx&lt;/a&gt;, documentation generator used in most Python projects&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Categories should be determined by directory into which a file (the
-raw material for a Post) is placed. Specifying this in the metadata
-section of the file should of course take precedence.&lt;/li&gt;
-&lt;li&gt;Publish date should never be placed at the bottom of a Post. It is
-too important a piece metadata to treat this way.&lt;/li&gt;
-&lt;li&gt;An option to have clean URLs (i.e. trailing &lt;tt class="docutils literal"&gt;.html&lt;/tt&gt; removed).&lt;/li&gt;
-&lt;li&gt;Date-based directory structure should not be mandatory (unlike with
-Tinkerer).&lt;/li&gt;
-&lt;li&gt;Inline literals and literal blocks (for code) should be
-distinguished by background colour; using a different font is just not
-good enough.&lt;/li&gt;
-&lt;li&gt;Tags (and maybe Categories) should be displayed on each post.&lt;/li&gt;
-&lt;li&gt;A feed icon that is visible from the main page (and maybe Category
-pages).&lt;/li&gt;
-&lt;li&gt;Blogofile has a strange requirement of having &lt;a class="reference external" href="http://docs.blogofile.com/en/latest/posts.html"&gt;post headers be YAML
-format&lt;/a&gt;. Maybe there's a good reason, but I want my generator to
-not require anything special in file contents.&lt;/li&gt;
-&lt;li&gt;Ability to determine Publish date from file mtime&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;nice-to-have&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;And here is one which is not FLOSS (i.e. proprietary):&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;Ability to combine multiple tags. My use case is something like
-&amp;quot;masterpices I saw first time in 2014&amp;quot;, for which I'd use
-&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;[2014-movies][masterpiece]&lt;/span&gt;&lt;/tt&gt;.&lt;/li&gt;
-&lt;li&gt;Ability to show posts linking to current one. I'm not sure how
-useful this would be though.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook"&gt;Facebook&lt;/a&gt;, world number 2 website in terms of visitor numbers&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="blogging"></category></entry><entry><title>about 'developer of note' series</title><link href="http://tshepang.net/about-developer-of-note-series" rel="alternate"></link><updated>2014-12-03T19:39:30+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-03:about-developer-of-note-series</id><summary type="html">&lt;p&gt;I respect a lot of software developers, but many of those are not
+</summary><category term="VCS"></category><category term="non-FLOSS"></category><category term="list"></category></entry><entry><title>about 'developer of note' series</title><link href="http://tshepang.net/about-developer-of-note-series" rel="alternate"></link><updated>2014-12-15T18:52:13+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-15:about-developer-of-note-series</id><summary type="html">&lt;p&gt;I respect a lot of software developers, but many of those are not
 going to have an entry in this series, and not because they are lesser
 in my eyes... this is what needs to happen for someone to be in &lt;a class="reference external" href="http://tshepang.net/tags#developer-of-note-ref"&gt;this
 series&lt;/a&gt;:&lt;/p&gt;
@@ -139,7 +170,25 @@ triggers along the way.&lt;/li&gt;
 done some thing that I truly appreciate.  At times, I fail to put
 into words just how much.&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="developer-of-note"></category></entry><entry><title>companies I deeply appreciate</title><link href="http://tshepang.net/companies-i-deeply-appreciate" rel="alternate"></link><updated>2014-12-03T19:39:30+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-03:companies-i-deeply-appreciate</id><summary type="html">&lt;ul class="simple"&gt;
+</summary><category term="developer-of-note"></category></entry><entry><title>Python wishes</title><link href="http://tshepang.net/python-wishes" rel="alternate"></link><updated>2014-12-15T18:52:13+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-15:python-wishes</id><summary type="html">&lt;p&gt;None of these is likely to happen at all.
+It's even safe to use the word &lt;em&gt;never&lt;/em&gt; with a great amount of certainty;
+but I wanted to document them anyway, if for no other reason than rescue
+them from the exclusiveness of my mind:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;add a &lt;tt class="docutils literal"&gt;prepend&lt;/tt&gt; method to list objects, make it as efficient as
+&lt;tt class="docutils literal"&gt;collections.deque&lt;/tt&gt;, then remove the latter&lt;/li&gt;
+&lt;li&gt;remove &lt;tt class="docutils literal"&gt;f.readlines()&lt;/tt&gt;;
+&lt;tt class="docutils literal"&gt;list(f)&lt;/tt&gt; is a clearer and more general replacement (&lt;a class="reference external" href="http://bugs.python.org/issue13510#msg186940"&gt;source&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;rm &lt;tt class="docutils literal"&gt;os.system&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;os.popen*&lt;/tt&gt; and relatives;
+we already have the &lt;a class="reference external" href="http://docs.python.org/3/library/subprocess"&gt;subprocess module&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;rid of all forms of string formatting,
+other than &lt;a class="reference external" href="http://docs.python.org/3/library/string#string-formatting"&gt;Advanced String Formatting&lt;/a&gt;;
+do it everywhere, including the &lt;a class="reference external" href="http://docs.python.org/3/library/logging"&gt;logging module&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;change module names to be PEP-compliant, everywhere&lt;/li&gt;
+&lt;li&gt;remove &lt;tt class="docutils literal"&gt;lambda&lt;/tt&gt;; it's not Pythonic, and just feels like a wart;
+it also does a good job of making Python code less readable&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="Python"></category></entry><entry><title>companies I deeply appreciate</title><link href="http://tshepang.net/companies-i-deeply-appreciate" rel="alternate"></link><updated>2014-12-15T18:52:13+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-15:companies-i-deeply-appreciate</id><summary type="html">&lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://en.wikipedia.org/wiki/Red_Hat"&gt;Red Hat&lt;/a&gt; contributes more to &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open_source_software"&gt;FLOSS&lt;/a&gt; than any other company,
 employing hundreds of developers to work full-time on it.&lt;/li&gt;
 &lt;li&gt;Google&lt;ul&gt;
@@ -167,23 +216,7 @@ for unlimited private repositories.
 I have over a dozen such repositories and each time I create one,
 I feel like the world is a wonderful place... I am grateful.&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="list"></category></entry><entry><title>favorite FLOSS</title><link href="http://tshepang.net/favorite-floss" rel="alternate"></link><updated>2014-12-03T19:39:30+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-03:favorite-floss</id><summary type="html">&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
-it has to both be personally useful and I have to like it a lot:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;backup:&lt;/strong&gt; &lt;a class="reference external" href="http://tshepang.net/project-of-note-rdiff-backup"&gt;rdiff-backup&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;desktop&lt;/strong&gt;: &lt;a class="reference external" href="http://dwm.suckless.org"&gt;dwm&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;development&lt;/strong&gt;: Python, Emacs, &lt;a class="reference external" href="http://tshepang.net/project-of-note-git-cola"&gt;git-cola&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;file manager&lt;/strong&gt;: Bash, Emacs (Dired mode)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;misc utilities:&lt;/strong&gt; grep, &lt;a class="reference external" href="http://tshepang.net/project-of-note-sudo"&gt;Sudo&lt;/a&gt;, &lt;a class="reference external" href="http://tshepang.net/project-of-note-reprepro"&gt;reprepro&lt;/a&gt;, Lsof, less, Meld,
-Uptimed, procps (top, watch), &lt;a class="reference external" href="http://projects.gnome.org/tracker"&gt;Tracker&lt;/a&gt;, Ex Falso, wajig, autojump,
-&lt;a class="reference external" href="http://tshepang.net/xfrun4-rocks"&gt;xfrun4&lt;/a&gt;, coreutils (wc, tail), &lt;a class="reference external" href="http://tshepang.net/project-of-note-linkchecker"&gt;LinkChecker&lt;/a&gt;, &lt;a class="reference external" href="http://guichaz.free.fr/iotop"&gt;Iotop&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Man_page"&gt;man&lt;/a&gt;,
-OpenSSH, &lt;a class="reference external" href="http://humdi.net/vnstat"&gt;vnstat&lt;/a&gt;, &lt;a class="reference external" href="http://tmux.sourceforge.net"&gt;tmux&lt;/a&gt;, File Roller, &lt;a class="reference external" href="http://fabfile.org"&gt;Fabric&lt;/a&gt;, youtube-dl&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;spreadsheet:&lt;/strong&gt; gnumeric&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;terminal emulator&lt;/strong&gt;: Xfce Terminal&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;virtualisation&lt;/strong&gt;: VirtualBox&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;version control system&lt;/strong&gt;: &lt;a class="reference external" href="http://mercurial.selenic.com"&gt;Mercurial&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;web browser&lt;/strong&gt;: Firefox&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;non-FLOSS:&lt;/strong&gt; &lt;a class="reference external" href="http://disqus.com"&gt;Disqus&lt;/a&gt;, &lt;a class="reference external" href="http://mail.google.com/mail"&gt;Gmail&lt;/a&gt;, &lt;a class="reference external" href="http://stackexchange.com"&gt;Stack Exchange&lt;/a&gt;, &lt;a class="reference external" href="http://bitbucket.org"&gt;Bitbucket&lt;/a&gt;&lt;/p&gt;
-</summary><category term="list"></category></entry><entry><title>I am a very jealous person</title><link href="http://tshepang.net/i-am-a-very-jealous-person" rel="alternate"></link><updated>2014-12-03T19:39:30+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-03:i-am-a-very-jealous-person</id><summary type="html">&lt;p&gt;Following is some of the cases where competing software won this or
+</summary><category term="list"></category></entry><entry><title>I am a very jealous person</title><link href="http://tshepang.net/i-am-a-very-jealous-person" rel="alternate"></link><updated>2014-12-15T18:52:13+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-15:i-am-a-very-jealous-person</id><summary type="html">&lt;p&gt;Following is some of the cases where competing software won this or
 that battle, and I am jealous since I want everyone to use what I
 like:&lt;/p&gt;
 &lt;ul class="simple"&gt;
@@ -203,40 +236,7 @@ favorite, reStructuredText, which is far more advanced. It's
 particularly sad when it's not used where it's needed
 most... documenting large projects (&lt;a class="reference external" href="http://doc.rust-lang.org"&gt;example&lt;/a&gt;).&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="Python"></category><category term="non-Python"></category><category term="non-Debian"></category><category term="VCS"></category></entry><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2014-12-03T19:39:30+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-03:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
-I do celebrate each time I see a project use it. So, here I list the
-most notable projects I am aware of that do, which also gives me hope
-that it isn't being suffocated too much by Git:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://hg.mozilla.org/mozilla-central"&gt;Firefox&lt;/a&gt;, world number 3 desktop web browser (number of users)&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://hg.python.org/cpython"&gt;CPython&lt;/a&gt; and &lt;a class="reference external" href="https://bitbucket.org/pypy/pypy"&gt;PyPy&lt;/a&gt;, the most important implementations of a top 10
-popular programming language&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://hg.openjdk.java.net"&gt;OpenJDK&lt;/a&gt;, the top open source implementation of the Java platform&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://bitbucket.org/birkenfeld/sphinx"&gt;Sphinx&lt;/a&gt;, documentation generator used in most Python projects&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;And here is one which is not FLOSS (i.e. proprietary):&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook"&gt;Facebook&lt;/a&gt;, world number 2 website in terms of visitor numbers&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="VCS"></category><category term="non-FLOSS"></category><category term="list"></category></entry><entry><title>Python wishes</title><link href="http://tshepang.net/python-wishes" rel="alternate"></link><updated>2014-12-03T19:39:30+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-03:python-wishes</id><summary type="html">&lt;p&gt;None of these is likely to happen at all.
-It's even safe to use the word &lt;em&gt;never&lt;/em&gt; with a great amount of certainty;
-but I wanted to document them anyway, if for no other reason than rescue
-them from the exclusiveness of my mind:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;add a &lt;tt class="docutils literal"&gt;prepend&lt;/tt&gt; method to list objects, make it as efficient as
-&lt;tt class="docutils literal"&gt;collections.deque&lt;/tt&gt;, then remove the latter&lt;/li&gt;
-&lt;li&gt;remove &lt;tt class="docutils literal"&gt;f.readlines()&lt;/tt&gt;;
-&lt;tt class="docutils literal"&gt;list(f)&lt;/tt&gt; is a clearer and more general replacement (&lt;a class="reference external" href="http://bugs.python.org/issue13510#msg186940"&gt;source&lt;/a&gt;).&lt;/li&gt;
-&lt;li&gt;rm &lt;tt class="docutils literal"&gt;os.system&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;os.popen*&lt;/tt&gt; and relatives;
-we already have the &lt;a class="reference external" href="http://docs.python.org/3/library/subprocess"&gt;subprocess module&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;rid of all forms of string formatting,
-other than &lt;a class="reference external" href="http://docs.python.org/3/library/string#string-formatting"&gt;Advanced String Formatting&lt;/a&gt;;
-do it everywhere, including the &lt;a class="reference external" href="http://docs.python.org/3/library/logging"&gt;logging module&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;change module names to be PEP-compliant, everywhere&lt;/li&gt;
-&lt;li&gt;remove &lt;tt class="docutils literal"&gt;lambda&lt;/tt&gt;; it's not Pythonic, and just feels like a wart;
-it also does a good job of making Python code less readable&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="Python"></category></entry><entry><title>impressed by the ease of creating Upstart jobs</title><link href="http://tshepang.net/impressed-by-the-ease-of-creating-upstart-jobs" rel="alternate"></link><updated>2014-10-30T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-10-30:impressed-by-the-ease-of-creating-upstart-jobs</id><summary type="html">&lt;p&gt;At work, we run our systems on Ubuntu, which so far means the init
+</summary><category term="Python"></category><category term="non-Python"></category><category term="non-Debian"></category><category term="VCS"></category></entry><entry><title>impressed by the ease of creating Upstart jobs</title><link href="http://tshepang.net/impressed-by-the-ease-of-creating-upstart-jobs" rel="alternate"></link><updated>2014-10-30T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-10-30:impressed-by-the-ease-of-creating-upstart-jobs</id><summary type="html">&lt;p&gt;At work, we run our systems on Ubuntu, which so far means the init
 system is Upstart. I needed to have one binary to start when the
 system boots, and because I'm horrified by sysvinit scripts (which
 Upstart supports), I decided to give creating an Upstart job a try. I
