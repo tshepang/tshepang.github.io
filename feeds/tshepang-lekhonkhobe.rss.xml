@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 15 Dec 2014 20:07:10 +0200</lastBuildDate><item><title>about 'developer of note' series</title><link>http://tshepang.net/about-developer-of-note-series</link><description>&lt;p&gt;I respect a lot of software developers, but many of those are not
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 20 Dec 2014 09:08:16 +0200</lastBuildDate><item><title>most exciting software projects</title><link>http://tshepang.net/most-exciting-software-projects</link><description>&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org"&gt;Rust&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A new programming language meant to replace C++:
+easier concurrency and good memory safety, while having comparable speed.
+The most optimistic ETA for the first stable release (1.0) is &lt;a class="reference external" href="http://pypy.org/tmdonate2.html"&gt;March 2015&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.rust-lang.org"&gt;Servo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A possible future replacement of Gecko, the HTML rendering
+engine powering Firefox. It is written in Rust.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://blog.rust-lang.org/2014/12/12/1.0-Timeline.html"&gt;PyPy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It's been alive for over 10 years, but remains among the most
+exciting of all Python projects. I greatly anticipate the stable
+release of its most visible sub-project, &lt;a class="reference external" href="https://github.com/servo/servo"&gt;Transactional Memory&lt;/a&gt;.
+It's an approach that simplifies multi-threaded programming while
+also bypassing the GIL. There is no ETA, but a rough estimate is
+sometime in 2016 :(&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sat, 20 Dec 2014 09:08:16 +0200</pubDate><guid>tag:tshepang.net,2014-12-20:most-exciting-software-projects</guid><category>list</category><category>non-Python</category><category>Python</category></item><item><title>about 'developer of note' series</title><link>http://tshepang.net/about-developer-of-note-series</link><description>&lt;p&gt;I respect a lot of software developers, but many of those are not
 going to have an entry in this series, and not because they are lesser
 in my eyes... this is what needs to happen for someone to be in &lt;a class="reference external" href="http://tshepang.net/tags#developer-of-note-ref"&gt;this
 series&lt;/a&gt;:&lt;/p&gt;
@@ -198,27 +218,7 @@ popular programming language&lt;/li&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook"&gt;Facebook&lt;/a&gt;, world number 2 website in terms of visitor numbers&lt;/li&gt;
 &lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Mon, 15 Dec 2014 20:07:10 +0200</pubDate><guid>tag:tshepang.net,2014-12-15:major-projects-using-mercurial</guid><category>VCS</category><category>non-FLOSS</category><category>list</category></item><item><title>most exciting software projects</title><link>http://tshepang.net/most-exciting-software-projects</link><description>&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org"&gt;PyPy&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;It's been alive for over 10 years, but remains among the most
-exciting of all Python projects. I greatly anticipate the stable
-release of its most visible sub-project, &lt;a class="reference external" href="http://pypy.org/tmdonate2.html"&gt;Transactional Memory&lt;/a&gt;.
-It's an approach that simplifies multi-threaded programming while
-also bypassing the GIL. There is no ETA, but a rough estimate is
-sometime in 2016 :(&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.rust-lang.org"&gt;Rust&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A new programming language meant to replace the likes of C/C++,
-while also claimed to be a technically superior competitor to Go.
-ETA for the first stable release (1.0) is early 2015.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="https://github.com/servo/servo"&gt;Servo&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A possible future replacement of Gecko, the HTML rendering
-engine powering Firefox. It is written in Rust.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Mon, 15 Dec 2014 20:07:10 +0200</pubDate><guid>tag:tshepang.net,2014-12-15:most-exciting-software-projects</guid><category>list</category><category>non-Python</category><category>Python</category></item><item><title>Python wishes</title><link>http://tshepang.net/python-wishes</link><description>&lt;p&gt;None of these is likely to happen at all.
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Mon, 15 Dec 2014 20:07:10 +0200</pubDate><guid>tag:tshepang.net,2014-12-15:major-projects-using-mercurial</guid><category>VCS</category><category>non-FLOSS</category><category>list</category></item><item><title>Python wishes</title><link>http://tshepang.net/python-wishes</link><description>&lt;p&gt;None of these is likely to happen at all.
 It's even safe to use the word &lt;em&gt;never&lt;/em&gt; with a great amount of certainty;
 but I wanted to document them anyway, if for no other reason than rescue
 them from the exclusiveness of my mind:&lt;/p&gt;
