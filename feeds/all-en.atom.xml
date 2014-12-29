@@ -56,7 +56,7 @@ on.&lt;/p&gt;
 looks for available slot, running each thread on a best-effort
 basis. My guess is that a more real-time kernel would be more
 predictable.&lt;/p&gt;
-</summary><category term="non-Python"></category></entry><entry><title>various Rust ways of displaying stuff to the screen</title><link href="http://tshepang.net/various-rust-ways-of-displaying-stuff-to-the-screen" rel="alternate"></link><updated>2014-12-29T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-29:various-rust-ways-of-displaying-stuff-to-the-screen</id><summary type="html">&lt;p&gt;Here is a simple way of doing it:&lt;/p&gt;
+</summary><category term="Rust"></category></entry><entry><title>various Rust ways of displaying stuff to the screen</title><link href="http://tshepang.net/various-rust-ways-of-displaying-stuff-to-the-screen" rel="alternate"></link><updated>2014-12-29T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-29:various-rust-ways-of-displaying-stuff-to-the-screen</id><summary type="html">&lt;p&gt;Here is a simple way of doing it:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 use std::io;
 
@@ -149,7 +149,7 @@ fn main() {
 $ ./main &amp;gt; /dev/null
 some output
 &lt;/pre&gt;
-</summary><category term="non-Python"></category></entry><entry><title>Python wishes</title><link href="http://tshepang.net/python-wishes" rel="alternate"></link><updated>2014-12-22T05:42:15+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-22:python-wishes</id><summary type="html">&lt;p&gt;None of these is likely to happen at all.
+</summary><category term="Rust"></category></entry><entry><title>Python wishes</title><link href="http://tshepang.net/python-wishes" rel="alternate"></link><updated>2014-12-22T05:42:15+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-22:python-wishes</id><summary type="html">&lt;p&gt;None of these is likely to happen at all.
 It's even safe to use the word &lt;em&gt;never&lt;/em&gt; with a great amount of certainty;
 but I wanted to document them anyway, if for no other reason than rescue
 them from the exclusiveness of my mind:&lt;/p&gt;
@@ -584,7 +584,7 @@ $ rustc main.rs &amp;amp;&amp;amp; ./main
 0x7fffd27383a8
 0x7fffd27383a0
 &lt;/pre&gt;
-</summary><category term="non-Python"></category></entry><entry><title>discovering Python @decorators</title><link href="http://tshepang.net/discovering-python-decorators" rel="alternate"></link><updated>2014-07-08T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-07-08:discovering-python-decorators</id><summary type="html">&lt;p&gt;There is a project at work where I needed to do the same action on
+</summary><category term="Rust"></category></entry><entry><title>discovering Python @decorators</title><link href="http://tshepang.net/discovering-python-decorators" rel="alternate"></link><updated>2014-07-08T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-07-08:discovering-python-decorators</id><summary type="html">&lt;p&gt;There is a project at work where I needed to do the same action on
 various functions. It's basically a checkpoint system where I'd write
 some state to a file, but only when all the functionality in the given
 functions executed successfully. It was a one-line change but I

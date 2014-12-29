@@ -56,7 +56,7 @@ on.&lt;/p&gt;
 looks for available slot, running each thread on a best-effort
 basis. My guess is that a more real-time kernel would be more
 predictable.&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Mon, 29 Dec 2014 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2014-12-29:linux-threads-are-not-deterministic</guid><category>non-Python</category></item><item><title>various Rust ways of displaying stuff to the screen</title><link>http://tshepang.net/various-rust-ways-of-displaying-stuff-to-the-screen</link><description>&lt;p&gt;Here is a simple way of doing it:&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Mon, 29 Dec 2014 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2014-12-29:linux-threads-are-not-deterministic</guid><category>Rust</category></item><item><title>various Rust ways of displaying stuff to the screen</title><link>http://tshepang.net/various-rust-ways-of-displaying-stuff-to-the-screen</link><description>&lt;p&gt;Here is a simple way of doing it:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 use std::io;
 
@@ -149,7 +149,7 @@ fn main() {
 $ ./main &amp;gt; /dev/null
 some output
 &lt;/pre&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Mon, 29 Dec 2014 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2014-12-29:various-rust-ways-of-displaying-stuff-to-the-screen</guid><category>non-Python</category></item><item><title>Python wishes</title><link>http://tshepang.net/python-wishes</link><description>&lt;p&gt;None of these is likely to happen at all.
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Mon, 29 Dec 2014 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2014-12-29:various-rust-ways-of-displaying-stuff-to-the-screen</guid><category>Rust</category></item><item><title>Python wishes</title><link>http://tshepang.net/python-wishes</link><description>&lt;p&gt;None of these is likely to happen at all.
 It's even safe to use the word &lt;em&gt;never&lt;/em&gt; with a great amount of certainty;
 but I wanted to document them anyway, if for no other reason than rescue
 them from the exclusiveness of my mind:&lt;/p&gt;
@@ -584,7 +584,7 @@ $ rustc main.rs &amp;amp;&amp;amp; ./main
 0x7fffd27383a8
 0x7fffd27383a0
 &lt;/pre&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Mon, 04 Aug 2014 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2014-08-04:trying-to-understand-stack-memory</guid><category>non-Python</category></item><item><title>discovering Python @decorators</title><link>http://tshepang.net/discovering-python-decorators</link><description>&lt;p&gt;There is a project at work where I needed to do the same action on
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Mon, 04 Aug 2014 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2014-08-04:trying-to-understand-stack-memory</guid><category>Rust</category></item><item><title>discovering Python @decorators</title><link>http://tshepang.net/discovering-python-decorators</link><description>&lt;p&gt;There is a project at work where I needed to do the same action on
 various functions. It's basically a checkpoint system where I'd write
 some state to a file, but only when all the functionality in the given
 functions executed successfully. It was a one-line change but I
