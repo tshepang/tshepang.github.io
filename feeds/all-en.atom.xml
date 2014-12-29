@@ -49,8 +49,8 @@ t3 tx
 rx from t3
 rx from t0
 &lt;/pre&gt;
-&lt;p&gt;If it was all deterministic (i.e. predictable), &lt;cite&gt;t0 tx&lt;/cite&gt; would always
-come before &lt;cite&gt;t1 tx&lt;/cite&gt;, and &lt;cite&gt;rx from t0&lt;/cite&gt; before &lt;cite&gt;rx from t1&lt;/cite&gt;, and so
+&lt;p&gt;If it was all deterministic (i.e. predictable), &lt;tt class="docutils literal"&gt;t0 tx&lt;/tt&gt; would always
+come before &lt;tt class="docutils literal"&gt;t1 tx&lt;/tt&gt;, and &lt;tt class="docutils literal"&gt;rx from t0&lt;/tt&gt; before &lt;tt class="docutils literal"&gt;rx from t1&lt;/tt&gt;, and so
 on.&lt;/p&gt;
 &lt;p&gt;I think this is done for performance reasons, where the kernel just
 looks for available slot, running each thread on a best-effort

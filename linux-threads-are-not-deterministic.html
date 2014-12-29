@@ -129,8 +129,8 @@ t3 tx
 rx from t3
 rx from t0
 </pre>
-<p>If it was all deterministic (i.e. predictable), <cite>t0 tx</cite> would always
-come before <cite>t1 tx</cite>, and <cite>rx from t0</cite> before <cite>rx from t1</cite>, and so
+<p>If it was all deterministic (i.e. predictable), <tt class="docutils literal">t0 tx</tt> would always
+come before <tt class="docutils literal">t1 tx</tt>, and <tt class="docutils literal">rx from t0</tt> before <tt class="docutils literal">rx from t1</tt>, and so
 on.</p>
 <p>I think this is done for performance reasons, where the kernel just
 looks for available slot, running each thread on a best-effort
