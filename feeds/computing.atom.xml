@@ -56,6 +56,99 @@ on.&lt;/p&gt;
 looks for available slot, running each thread on a best-effort
 basis. My guess is that a more real-time kernel would be more
 predictable.&lt;/p&gt;
+</summary><category term="non-Python"></category></entry><entry><title>various Rust ways of displaying stuff to the screen</title><link href="http://tshepang.net/various-rust-ways-of-displaying-stuff-to-the-screen" rel="alternate"></link><updated>2014-12-29T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-29:various-rust-ways-of-displaying-stuff-to-the-screen</id><summary type="html">&lt;p&gt;Here is a simple way of doing it:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+use std::io;
+
+fn main() {
+    io::stdout().write_line(&amp;quot;some output&amp;quot;);
+}
+&lt;/pre&gt;
+&lt;p&gt;I do however get this warning when I build it:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ rustc main.rs
+main.rs:4:5: 4:42 warning: unused result which must be used, #[warn(unused_must_use)] on by default
+main.rs:4     io::stdout().write_ln(b&amp;quot;some output&amp;quot;);
+              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+&lt;/pre&gt;
+&lt;p&gt;Let's kill it:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+use std::io;
+
+fn main() {
+    io::stdout().write_line(&amp;quot;some output&amp;quot;).unwrap();
+}
+&lt;/pre&gt;
+&lt;p&gt;What I did is is call &lt;tt class="docutils literal"&gt;unwrap&lt;/tt&gt; which basically asks our operation
+to &lt;tt class="docutils literal"&gt;panic!&lt;/tt&gt; in case of some error. Think of it as a shortcut of:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+use std::io;
+
+fn main() {
+    match io::stdout().write_line(&amp;quot;some output&amp;quot;) {
+        Ok(_) =&amp;gt; (),
+        Err(_) =&amp;gt; panic!(),
+    }
+}
+&lt;/pre&gt;
+&lt;p&gt;Some docs:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://doc.rust-lang.org/std/io/trait.Writer.html#tymethod.write_line"&gt;std::io::Writer::write_line&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://doc.rust-lang.org/core/result/enum.Result.html#method.unwrap"&gt;core::result::Result::unwrap&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://doc.rust-lang.org/std/macro.panic!.html"&gt;std::panic!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;What if we wanted to do some string formatting:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+use std::io;
+
+fn main() {
+    let second_word = &amp;quot;output&amp;quot;;
+    let text = format!(&amp;quot;some {}&amp;quot;, second_word);
+    io::stdout().write_line(text.as_slice()).unwrap();
+}
+&lt;/pre&gt;
+&lt;p&gt;But there is a shortcut for the code above:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+use std::io;
+
+fn main() {
+    let second_word = &amp;quot;output&amp;quot;;
+    writeln!(&amp;amp;mut io::stdout(), &amp;quot;some {}&amp;quot;, second_word).unwrap();
+}
+&lt;/pre&gt;
+&lt;p&gt;There is an even shorter shortcut:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+fn main() {
+    let second_word = &amp;quot;output&amp;quot;;
+    println!(&amp;quot;some {}&amp;quot;, second_word);
+}
+&lt;/pre&gt;
+&lt;p&gt;Question to self: do we get a &lt;tt class="docutils literal"&gt;panic!&lt;/tt&gt; if &lt;tt class="docutils literal"&gt;println&lt;/tt&gt; gets an I/O error?&lt;/p&gt;
+&lt;p&gt;Some docs:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://doc.rust-lang.org/std/macro.format!.html"&gt;std::format!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://doc.rust-lang.org/std/macro.writeln!.html"&gt;std::writeln!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://doc.rust-lang.org/std/macro.println!.html"&gt;std::println!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;So, why bother with all these many ways when there's a simple
+&lt;tt class="docutils literal"&gt;println!&lt;/tt&gt;? Flexibility. One example I can think of is writing to
+stderr. There is no simple macro for that (&lt;tt class="docutils literal"&gt;println!&lt;/tt&gt; is for
+stdout). Short of implementing &lt;a class="reference external" href="http://stackoverflow.com/a/27590832/321731"&gt;our own macro&lt;/a&gt;, We'd have to do
+something like the following:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+use std::io;
+
+fn main() {
+    writeln!(&amp;amp;mut io::stderr(), &amp;quot;some output&amp;quot;);
+}
+&lt;/pre&gt;
+&lt;p&gt;You can test that it really goes to stderr by running it like:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ ./main &amp;gt; /dev/null
+some output
+&lt;/pre&gt;
 </summary><category term="non-Python"></category></entry><entry><title>Python wishes</title><link href="http://tshepang.net/python-wishes" rel="alternate"></link><updated>2014-12-22T05:42:15+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-22:python-wishes</id><summary type="html">&lt;p&gt;None of these is likely to happen at all.
 It's even safe to use the word &lt;em&gt;never&lt;/em&gt; with a great amount of certainty;
 but I wanted to document them anyway, if for no other reason than rescue
