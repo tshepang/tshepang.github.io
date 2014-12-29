@@ -49,17 +49,13 @@ t3 tx
 rx from t3
 rx from t0
 &lt;/pre&gt;
-&lt;p&gt;If it was all deterministic (i.e. predictable), it would be:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-t0 tx
-t1 tx
-t2 tx
-t3 tx
-rx from t0
-rx from t1
-rx from t2
-rx from t3
-&lt;/pre&gt;
+&lt;p&gt;If it was all deterministic (i.e. predictable), &lt;cite&gt;t0 tx&lt;/cite&gt; would always
+come before &lt;cite&gt;t1 tx&lt;/cite&gt;, and &lt;cite&gt;rx from t0&lt;/cite&gt; before &lt;cite&gt;rx from t1&lt;/cite&gt;, and so
+on.&lt;/p&gt;
+&lt;p&gt;I think this is done for performance reasons, where the kernel just
+looks for available slot, running each thread on a best-effort
+basis. My guess is that a more real-time kernel would be more
+predictable.&lt;/p&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Mon, 29 Dec 2014 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2014-12-29:linux-threads-are-not-deterministic</guid><category>non-Python</category></item><item><title>Python wishes</title><link>http://tshepang.net/python-wishes</link><description>&lt;p&gt;None of these is likely to happen at all.
 It's even safe to use the word &lt;em&gt;never&lt;/em&gt; with a great amount of certainty;
 but I wanted to document them anyway, if for no other reason than rescue
