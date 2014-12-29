@@ -1,5 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-12-22T05:42:15+02:00</updated><entry><title>Python wishes</title><link href="http://tshepang.net/python-wishes" rel="alternate"></link><updated>2014-12-22T05:42:15+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-22:python-wishes</id><summary type="html">&lt;p&gt;None of these is likely to happen at all.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-12-29T00:00:00+02:00</updated><entry><title>Linux threads are not deterministic</title><link href="http://tshepang.net/linux-threads-are-not-deterministic" rel="alternate"></link><updated>2014-12-29T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-29:linux-threads-are-not-deterministic</id><summary type="html">&lt;p&gt;By deterministic, I am referring to their scheduling. Here's an
+example in Rust:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+use std::thread::Thread;
+
+fn main() {
+    let thread_count = 4u;
+    let (tx, rx) = channel();
+
+    for x in range(0, thread_count) {
+        let tx = tx.clone();
+        Thread::spawn(move || {
+            println!(&amp;quot;t{} tx&amp;quot;, x);
+            tx.send(x);
+        }).detach();
+    }
+
+    for _ in range(0, thread_count) {
+        println!(&amp;quot;rx from t{}&amp;quot;, rx.recv());
+    }
+}
+&lt;/pre&gt;
+&lt;p&gt;What I'm doing there is create 4 child threads, from which I send messages
+that are to be captured by the main thread.&lt;/p&gt;
+&lt;p&gt;I built it and ran it with:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+rustc --opt-level 0 main.rs &amp;amp;&amp;amp; ./main
+&lt;/pre&gt;
+&lt;p&gt;Following is output from one sample run:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+t1 tx
+t0 tx
+t2 tx
+t3 tx
+rx from t1
+rx from t0
+rx from t3
+rx from t2
+&lt;/pre&gt;
+&lt;p&gt;Following is what I get with another run:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+t0 tx
+t1 tx
+rx from t1
+t2 tx
+rx from t2
+t3 tx
+rx from t3
+rx from t0
+&lt;/pre&gt;
+&lt;p&gt;If it was all deterministic (i.e. predictable), it would be:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+t0 tx
+t1 tx
+t2 tx
+t3 tx
+rx from t0
+rx from t1
+rx from t2
+rx from t3
+&lt;/pre&gt;
+</summary><category term="non-Python"></category></entry><entry><title>Python wishes</title><link href="http://tshepang.net/python-wishes" rel="alternate"></link><updated>2014-12-22T05:42:15+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-22:python-wishes</id><summary type="html">&lt;p&gt;None of these is likely to happen at all.
 It's even safe to use the word &lt;em&gt;never&lt;/em&gt; with a great amount of certainty;
 but I wanted to document them anyway, if for no other reason than rescue
 them from the exclusiveness of my mind:&lt;/p&gt;

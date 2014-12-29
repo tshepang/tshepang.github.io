@@ -11,18 +11,18 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="non-Python, Python, computing, " />
+<meta name="keywords" content="non-Python, computing, " />
 
-<meta property="og:title" content="Java gripes "/>
-<meta property="og:url" content="http://tshepang.net/java-gripes" />
-<meta property="og:description" content="Okay, so Java sucks &#39;a bit&#39;, but the following surprised me: I struggled to find a way to count the number of elements in an array. In a string it&#39;s done thus: &#34;four&#34;.length(). Given that, I expected that {&#39;f&#39;, &#39;o&#39;, &#39;u&#39;, &#39;r&#39;}.length() would gimme the same result ..." />
+<meta property="og:title" content="Linux threads are not deterministic "/>
+<meta property="og:url" content="http://tshepang.net/linux-threads-are-not-deterministic" />
+<meta property="og:description" content="By deterministic, I am referring to their scheduling. Here&#39;s an example in Rust: use std::thread::Thread; fn main() { let thread_count = 4u; let (tx, rx) = channel(); for x in range(0, thread_count) { let tx = tx.clone(); Thread::spawn(move || { println!(&#34;t{} tx&#34;, x); tx.send(x); }).detach(); } for _ ..." />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
-<meta property="og:article:published_time" content="2011-11-02T00:00:00+02:00" />
-<meta name="twitter:title" content="Java gripes ">
-<meta name="twitter:description" content="Okay, so Java sucks &#39;a bit&#39;, but the following surprised me: I struggled to find a way to count the number of elements in an array. In a string it&#39;s done thus: &#34;four&#34;.length(). Given that, I expected that {&#39;f&#39;, &#39;o&#39;, &#39;u&#39;, &#39;r&#39;}.length() would gimme the same result ...">
+<meta property="og:article:published_time" content="2014-12-29T00:00:00+02:00" />
+<meta name="twitter:title" content="Linux threads are not deterministic ">
+<meta name="twitter:description" content="By deterministic, I am referring to their scheduling. Here&#39;s an example in Rust: use std::thread::Thread; fn main() { let thread_count = 4u; let (tx, rx) = channel(); for x in range(0, thread_count) { let tx = tx.clone(); Thread::spawn(move || { println!(&#34;t{} tx&#34;, x); tx.send(x); }).detach(); } for _ ...">
 
-        <title>Java gripes  · Tshepang logs
+        <title>Linux threads are not deterministic  · Tshepang logs
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -71,7 +71,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://tshepang.net/java-gripes"> Java gripes  </a></h1>
+    <h1><a href="http://tshepang.net/linux-threads-are-not-deterministic"> Linux threads are not deterministic  </a></h1>
     </header>
 </div>
 
@@ -79,26 +79,67 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>Okay, so Java sucks 'a bit', but the following surprised me:</p>
-<ul class="simple">
-<li>I struggled to find a way to count the number of elements in an
-array. In a string it's done thus: <tt class="docutils literal"><span class="pre">&quot;four&quot;.length()</span></tt>. Given that, I
-expected that <tt class="docutils literal">{'f', 'o', 'u', <span class="pre">'r'}.length()</span></tt> would gimme the same
-result. Nah! I found that I had to do
-<tt class="docutils literal">new char [] {'f', 'o', 'u', <span class="pre">'r'}.length</span></tt>, and yes, without the
-brackets after length. WTF! There might be a good reason for such
-(seeming) inconsistency of course, but I've been spoilt by Python's
-elegant equivalents: <tt class="docutils literal"><span class="pre">len(&quot;four&quot;)</span></tt> and <tt class="docutils literal"><span class="pre">len(['f','o',</span> 'u', <span class="pre">'r'])</span></tt>
-which all give the same result. (sidenote: <tt class="docutils literal">len()</tt> is a Python
-built-in function, which explains why there's no dot notation there).</li>
-<li>The standard library doesn't have CSV handling! I had to find an
-external library for that!</li>
-<li>Given 2 strings, I can't do <tt class="docutils literal"><span class="pre">str1==str2</span></tt> for comparison, but am
-forced to use the string method, equals: <tt class="docutils literal">str1.equals(str2)</tt>. This
-bit me a few times, and am sure am not the only one.</li>
-<li>The standard library doesn't have <tt class="docutils literal">.INI</tt> file handling (<a class="reference external" href="http://stackoverflow.com/questions/3728823">Someone
-pointed to a 3rd party library</a>).</li>
-</ul>
+            <p>By deterministic, I am referring to their scheduling. Here's an
+example in Rust:</p>
+<pre class="literal-block">
+use std::thread::Thread;
+
+fn main() {
+    let thread_count = 4u;
+    let (tx, rx) = channel();
+
+    for x in range(0, thread_count) {
+        let tx = tx.clone();
+        Thread::spawn(move || {
+            println!(&quot;t{} tx&quot;, x);
+            tx.send(x);
+        }).detach();
+    }
+
+    for _ in range(0, thread_count) {
+        println!(&quot;rx from t{}&quot;, rx.recv());
+    }
+}
+</pre>
+<p>What I'm doing there is create 4 child threads, from which I send messages
+that are to be captured by the main thread.</p>
+<p>I built it and ran it with:</p>
+<pre class="literal-block">
+rustc --opt-level 0 main.rs &amp;&amp; ./main
+</pre>
+<p>Following is output from one sample run:</p>
+<pre class="literal-block">
+t1 tx
+t0 tx
+t2 tx
+t3 tx
+rx from t1
+rx from t0
+rx from t3
+rx from t2
+</pre>
+<p>Following is what I get with another run:</p>
+<pre class="literal-block">
+t0 tx
+t1 tx
+rx from t1
+t2 tx
+rx from t2
+t3 tx
+rx from t3
+rx from t0
+</pre>
+<p>If it was all deterministic (i.e. predictable), it would be:</p>
+<pre class="literal-block">
+t0 tx
+t1 tx
+t2 tx
+t3 tx
+rx from t0
+rx from t1
+rx from t2
+rx from t3
+</pre>
 
             
             <section>
@@ -106,7 +147,7 @@ pointed to a 3rd party library</a>).</li>
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://tshepang.net/java-gripes#disqus_thread">
+                href="http://tshepang.net/linux-threads-are-not-deterministic#disqus_thread">
                 Comments
             </a>
         </div>
@@ -116,8 +157,8 @@ pointed to a 3rd party library</a>).</li>
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'tshepanglogs';
-        var disqus_identifier = 'http://tshepang.net/java-gripes';
-    var disqus_url = 'http://tshepang.net/java-gripes';
+        var disqus_identifier = 'http://tshepang.net/linux-threads-are-not-deterministic';
+    var disqus_url = 'http://tshepang.net/linux-threads-are-not-deterministic';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -139,8 +180,7 @@ pointed to a 3rd party library</a>).</li>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/top-tracks-bob-marley" title="Previous: top tracks: Bob Marley">top tracks: Bob Marley</a></li>
-                <li class="next-article"><a href="http://tshepang.net/battlestar-galactica-season-3-episode-20" title="Next: Battlestar Galactica - Season 3 Episode 20">Battlestar Galactica - Season 3 Episode 20</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/python-wishes" title="Previous: Python wishes">Python wishes</a></li>
             </ul>
             </nav>
             </aside>
@@ -148,16 +188,13 @@ pointed to a 3rd party library</a>).</li>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2011-11-02T00:00:00+02:00">Nov 2, 2011</time>
+            <time pubdate="pubdate" datetime="2014-12-29T00:00:00+02:00">Dec 29, 2014</time>
             <h4>Category</h4>
             <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
                 <li><a href="http://tshepang.net/tags.html#non-python-ref">non-Python
                     <span>21</span>
-</a></li>
-                <li><a href="http://tshepang.net/tags.html#python-ref">Python
-                    <span>66</span>
 </a></li>
             </ul>
 <h4>Stay in Touch</h4>
