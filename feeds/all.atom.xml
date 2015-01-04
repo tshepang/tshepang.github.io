@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2014-12-29T00:00:00+02:00</updated><entry><title>Linux threads are not deterministic</title><link href="http://tshepang.net/linux-threads-are-not-deterministic" rel="alternate"></link><updated>2014-12-29T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-29:linux-threads-are-not-deterministic</id><summary type="html">&lt;p&gt;By deterministic, I am referring to their scheduling. Here's an
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-01-04T00:00:00+02:00</updated><entry><title>Linux threads are not deterministic</title><link href="http://tshepang.net/linux-threads-are-not-deterministic" rel="alternate"></link><updated>2015-01-04T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-04:linux-threads-are-not-deterministic</id><summary type="html">&lt;p&gt;By deterministic, I am referring to their scheduling. Here's an
 example in Rust:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 use std::thread::Thread;
+use std::sync::mpsc::channel;
 
 fn main() {
     let thread_count = 4u;
@@ -12,12 +13,12 @@ fn main() {
         let tx = tx.clone();
         Thread::spawn(move || {
             println!(&amp;quot;t{} tx&amp;quot;, x);
-            tx.send(x);
+            tx.send(x).unwrap();
         }).detach();
     }
 
     for _ in range(0, thread_count) {
-        println!(&amp;quot;rx from t{}&amp;quot;, rx.recv());
+        println!(&amp;quot;rx from t{}&amp;quot;, rx.recv().unwrap());
     }
 }
 &lt;/pre&gt;

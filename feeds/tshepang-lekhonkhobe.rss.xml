@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 29 Dec 2014 00:00:00 +0200</lastBuildDate><item><title>Linux threads are not deterministic</title><link>http://tshepang.net/linux-threads-are-not-deterministic</link><description>&lt;p&gt;By deterministic, I am referring to their scheduling. Here's an
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 04 Jan 2015 00:00:00 +0200</lastBuildDate><item><title>Linux threads are not deterministic</title><link>http://tshepang.net/linux-threads-are-not-deterministic</link><description>&lt;p&gt;By deterministic, I am referring to their scheduling. Here's an
 example in Rust:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 use std::thread::Thread;
+use std::sync::mpsc::channel;
 
 fn main() {
     let thread_count = 4u;
@@ -12,12 +13,12 @@ fn main() {
         let tx = tx.clone();
         Thread::spawn(move || {
             println!(&amp;quot;t{} tx&amp;quot;, x);
-            tx.send(x);
+            tx.send(x).unwrap();
         }).detach();
     }
 
     for _ in range(0, thread_count) {
-        println!(&amp;quot;rx from t{}&amp;quot;, rx.recv());
+        println!(&amp;quot;rx from t{}&amp;quot;, rx.recv().unwrap());
     }
 }
 &lt;/pre&gt;
@@ -56,7 +57,7 @@ on.&lt;/p&gt;
 looks for available slot, running each thread on a best-effort
 basis. My guess is that a more real-time kernel would be more
 predictable.&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Mon, 29 Dec 2014 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2014-12-29:linux-threads-are-not-deterministic</guid><category>Rust</category></item><item><title>various Rust ways of displaying stuff to the screen</title><link>http://tshepang.net/various-rust-ways-of-displaying-stuff-to-the-screen</link><description>&lt;p&gt;Here is a simple way of doing it:&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sun, 04 Jan 2015 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2015-01-04:linux-threads-are-not-deterministic</guid><category>Rust</category></item><item><title>various Rust ways of displaying stuff to the screen</title><link>http://tshepang.net/various-rust-ways-of-displaying-stuff-to-the-screen</link><description>&lt;p&gt;Here is a simple way of doing it:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 use std::io;
 
