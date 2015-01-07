@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-01-04T00:00:00+02:00</updated><entry><title>Linux threads are not deterministic</title><link href="http://tshepang.net/linux-threads-are-not-deterministic" rel="alternate"></link><updated>2015-01-04T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-04:linux-threads-are-not-deterministic</id><summary type="html">&lt;p&gt;By deterministic, I am referring to their scheduling. Here's an
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-01-07T00:00:00+02:00</updated><entry><title>Linux threads are not deterministic</title><link href="http://tshepang.net/linux-threads-are-not-deterministic" rel="alternate"></link><updated>2015-01-07T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-07:linux-threads-are-not-deterministic</id><summary type="html">&lt;p&gt;By deterministic, I am referring to their scheduling. Here's an
 example in Rust:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 use std::thread::Thread;
@@ -14,7 +14,7 @@ fn main() {
         Thread::spawn(move || {
             println!(&amp;quot;t{} tx&amp;quot;, x);
             tx.send(x).unwrap();
-        }).detach();
+        });
     }
 
     for _ in range(0, thread_count) {
@@ -54,7 +54,7 @@ rx from t0
 come before &lt;tt class="docutils literal"&gt;t1 tx&lt;/tt&gt;, and &lt;tt class="docutils literal"&gt;rx from t0&lt;/tt&gt; before &lt;tt class="docutils literal"&gt;rx from t1&lt;/tt&gt;, and so
 on.&lt;/p&gt;
 &lt;p&gt;I think this is done for performance reasons, where the kernel just
-looks for available slot, running each thread on a best-effort
+looks for an available slot, running each thread on a best-effort
 basis. My guess is that a more real-time kernel would be more
 predictable.&lt;/p&gt;
 </summary><category term="Rust"></category></entry><entry><title>various Rust ways of displaying stuff to the screen</title><link href="http://tshepang.net/various-rust-ways-of-displaying-stuff-to-the-screen" rel="alternate"></link><updated>2014-12-29T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-29:various-rust-ways-of-displaying-stuff-to-the-screen</id><summary type="html">&lt;p&gt;Here is a simple way of doing it:&lt;/p&gt;
