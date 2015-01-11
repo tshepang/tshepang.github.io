@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-01-11T11:25:35+02:00</updated><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2015-01-11T11:25:35+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-11:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-01-11T14:46:17+02:00</updated><entry><title>most exciting software projects</title><link href="http://tshepang.net/most-exciting-software-projects" rel="alternate"></link><updated>2015-01-11T14:46:17+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-11:most-exciting-software-projects</id><summary type="html">&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.rust-lang.org"&gt;Rust&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A new programming language meant to replace C++:
+memory safety and easier concurrency, while having comparable speed.
+The most optimistic ETA for the first stable release (1.0) is &lt;a class="reference external" href="http://blog.rust-lang.org/2014/12/12/1.0-Timeline.html"&gt;March 2015&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="https://github.com/servo/servo"&gt;Servo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A possible future replacement of Gecko, the HTML rendering
+engine powering Firefox. It is written in Rust.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org"&gt;PyPy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It's been alive for over 10 years, but remains among the most
+exciting of all Python projects. I greatly anticipate the stable
+release of its most visible sub-project, &lt;a class="reference external" href="http://pypy.org/tmdonate2.html"&gt;Transactional Memory&lt;/a&gt;.
+It's an approach that simplifies multi-threaded programming while
+also bypassing the GIL. A very rough ETA is sometime in 2016.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="list"></category><category term="non-Python"></category><category term="Python"></category></entry><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2015-01-11T11:25:35+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-11:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
 I do celebrate each time I see a project use it. So, here I list the
 most notable projects I am aware of that do, which also gives me hope
 that it isn't being suffocated too much by Git:&lt;/p&gt;
@@ -324,26 +343,7 @@ it also does a good job of making Python code less readable&lt;/li&gt;
 &lt;li&gt;make &lt;tt class="docutils literal"&gt;item&lt;/tt&gt; go out of scope when outside for-loops like &lt;tt class="docutils literal"&gt;for item
 in range(count)&lt;/tt&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="Python"></category></entry><entry><title>most exciting software projects</title><link href="http://tshepang.net/most-exciting-software-projects" rel="alternate"></link><updated>2014-12-20T11:09:32+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-20:most-exciting-software-projects</id><summary type="html">&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org"&gt;Rust&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A new programming language meant to replace C++:
-memory safety and easier concurrency, while having comparable speed.
-The most optimistic ETA for the first stable release (1.0) is &lt;a class="reference external" href="http://pypy.org/tmdonate2.html"&gt;March 2015&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.rust-lang.org"&gt;Servo&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A possible future replacement of Gecko, the HTML rendering
-engine powering Firefox. It is written in Rust.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://blog.rust-lang.org/2014/12/12/1.0-Timeline.html"&gt;PyPy&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;It's been alive for over 10 years, but remains among the most
-exciting of all Python projects. I greatly anticipate the stable
-release of its most visible sub-project, &lt;a class="reference external" href="https://github.com/servo/servo"&gt;Transactional Memory&lt;/a&gt;.
-It's an approach that simplifies multi-threaded programming while
-also bypassing the GIL. A very rough ETA is sometime in 2016.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="list"></category><category term="non-Python"></category><category term="Python"></category></entry><entry><title>impressed by the ease of creating Upstart jobs</title><link href="http://tshepang.net/impressed-by-the-ease-of-creating-upstart-jobs" rel="alternate"></link><updated>2014-10-30T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-10-30:impressed-by-the-ease-of-creating-upstart-jobs</id><summary type="html">&lt;p&gt;At work, we run our systems on Ubuntu, which so far means the init
+</summary><category term="Python"></category></entry><entry><title>impressed by the ease of creating Upstart jobs</title><link href="http://tshepang.net/impressed-by-the-ease-of-creating-upstart-jobs" rel="alternate"></link><updated>2014-10-30T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-10-30:impressed-by-the-ease-of-creating-upstart-jobs</id><summary type="html">&lt;p&gt;At work, we run our systems on Ubuntu, which so far means the init
 system is Upstart. I needed to have one binary to start when the
 system boots, and because I'm horrified by sysvinit scripts (which
 Upstart supports), I decided to give creating an Upstart job a try. I
