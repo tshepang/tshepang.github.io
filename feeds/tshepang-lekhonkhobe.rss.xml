@@ -293,27 +293,7 @@ It's an approach that simplifies multi-threaded programming while
 also bypassing the GIL. A very rough ETA is sometime in 2016.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sat, 20 Dec 2014 11:09:32 +0200</pubDate><guid>tag:tshepang.net,2014-12-20:most-exciting-software-projects</guid><category>list</category><category>non-Python</category><category>Python</category></item><item><title>I am a very jealous person</title><link>http://tshepang.net/i-am-a-very-jealous-person</link><description>&lt;p&gt;Following is some of the cases where competing software won this or
-that battle, and I am jealous since I want everyone to use what I
-like:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/project-of-note-discourse"&gt;I am jealous&lt;/a&gt; that Discourse is written in Ruby, and not Python.
-I am also jealous that the official service runs on Ubuntu, and not
-Debian.&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://www.digitalocean.com/blog_posts/try-ghost-a-simple-blogging-platform-for-free"&gt;The pre-built DigitalOcean image that runs the
-(impressive-sounding) Ghost blogging system is built on Ubuntu&lt;/a&gt;,
-and not Debian.&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://caremad.io/blog/a-look-at-pypi-downloads"&gt;Python 3 adoption still disappointing&lt;/a&gt; - a mere blip compared to
-Python 2 as regards PyPI downloads&lt;/li&gt;
-&lt;li&gt;Git (and GitHub) is so much more successful than Mercurial (and
-Bitbucket), my preferred VCS. Damn, even &lt;a class="reference external" href="http://tshepang.net/me-loves-new-git-site-design"&gt;the website looks
-better&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Markdown is a far more popular light-weight markup language than my
-favorite, reStructuredText, which is far more advanced. It's
-particularly sad when it's not used where it's needed
-most... documenting large projects (&lt;a class="reference external" href="http://doc.rust-lang.org"&gt;example&lt;/a&gt;).&lt;/li&gt;
-&lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Mon, 15 Dec 2014 20:07:10 +0200</pubDate><guid>tag:tshepang.net,2014-12-15:i-am-a-very-jealous-person</guid><category>Python</category><category>non-Python</category><category>non-Debian</category><category>VCS</category></item><item><title>ideal static blog generator</title><link>http://tshepang.net/ideal-static-blog-generator</link><description>&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sat, 20 Dec 2014 11:09:32 +0200</pubDate><guid>tag:tshepang.net,2014-12-20:most-exciting-software-projects</guid><category>list</category><category>non-Python</category><category>Python</category></item><item><title>ideal static blog generator</title><link>http://tshepang.net/ideal-static-blog-generator</link><description>&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
 missed:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt; support is mandatory, and so is being written in
@@ -402,7 +382,27 @@ Python... perhaps the best I've read&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://lists.debian.org/debian-devel-announce/2014/01/msg00006.html"&gt;Debian Developers and Maintainers&lt;/a&gt; are given gratis access to
 play Valve games; another Debian win&lt;/li&gt;
 &lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Tue, 07 Oct 2014 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2014-10-07:links-2014-10-07</guid><category>Debian</category><category>Python</category><category>non-Python</category><category>non-FLOSS</category><category>links</category></item><item><title>project of note: Debian LTS</title><link>http://tshepang.net/project-of-note-debian-lts</link><description>&lt;p&gt;One of the complaints about Debian stable releases is that they reach
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Tue, 07 Oct 2014 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2014-10-07:links-2014-10-07</guid><category>Debian</category><category>Python</category><category>non-Python</category><category>non-FLOSS</category><category>links</category></item><item><title>I am a very jealous person</title><link>http://tshepang.net/i-am-a-very-jealous-person</link><description>&lt;p&gt;Following is some of the cases where competing software won this or
+that battle, and I am jealous since I want everyone to use what I
+like:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/project-of-note-discourse"&gt;I am jealous&lt;/a&gt; that Discourse is written in Ruby, and not Python.
+I am also jealous that the official service runs on Ubuntu, and not
+Debian.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.digitalocean.com/blog_posts/try-ghost-a-simple-blogging-platform-for-free"&gt;The pre-built DigitalOcean image that runs the
+(impressive-sounding) Ghost blogging system is built on Ubuntu&lt;/a&gt;,
+and not Debian.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://caremad.io/blog/a-look-at-pypi-downloads"&gt;Python 3 adoption still disappointing&lt;/a&gt; - a mere blip compared to
+Python 2 as regards PyPI downloads&lt;/li&gt;
+&lt;li&gt;Git (and GitHub) is so much more successful than Mercurial (and
+Bitbucket), my preferred VCS. Damn, even &lt;a class="reference external" href="http://tshepang.net/me-loves-new-git-site-design"&gt;the website looks
+better&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Markdown is a far more popular light-weight markup language than
+the far more advanced reStructuredText.
+It's particularly sad when it's not used where it's needed
+most... documenting large projects (&lt;a class="reference external" href="http://doc.rust-lang.org"&gt;example&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sat, 20 Sep 2014 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2014-09-20:i-am-a-very-jealous-person</guid><category>Python</category><category>non-Python</category><category>non-Debian</category><category>VCS</category></item><item><title>project of note: Debian LTS</title><link>http://tshepang.net/project-of-note-debian-lts</link><description>&lt;p&gt;One of the complaints about Debian stable releases is that they reach
 End Of Life too early (~3 years). This can result in some people
 choosing commercially-backed alternatives like Ubuntu and Red Hat, for
 they don't want to be bothered to have to upgrade that frequently (not
