@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-01-11T14:46:17+02:00</updated><entry><title>most exciting software projects</title><link href="http://tshepang.net/most-exciting-software-projects" rel="alternate"></link><updated>2015-01-11T14:46:17+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-11:most-exciting-software-projects</id><summary type="html">&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-01-11T19:46:13+02:00</updated><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2015-01-11T19:46:13+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-11:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
+I do celebrate each time I see a project use it. So, here I list the
+most notable projects I am aware of that do, which also gives me hope
+that it isn't being suffocated too much by Git:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://hg.mozilla.org/mozilla-central"&gt;Firefox&lt;/a&gt;, world number 3 desktop web browser (number of users)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://hg.python.org/cpython"&gt;CPython&lt;/a&gt; and &lt;a class="reference external" href="https://bitbucket.org/pypy/pypy"&gt;PyPy&lt;/a&gt;, the most important implementations of a top 10
+popular programming language&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://hg.openjdk.java.net"&gt;OpenJDK&lt;/a&gt;, the top open source implementation of the Java platform&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.vim.org/mercurial.php"&gt;VIM&lt;/a&gt; and &lt;a class="reference external" href="http://wiki.netbeans.org/WorkingWithNetBeansSources#Mercurial_access"&gt;Netbeans&lt;/a&gt;, two of the most popular text editors for programmers&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://bitbucket.org/birkenfeld/sphinx"&gt;Sphinx&lt;/a&gt;, documentation generator used in most Python projects&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And here is one which is not FLOSS (i.e. proprietary):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook"&gt;Facebook&lt;/a&gt;, world number 2 website in terms of visitor numbers&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="VCS"></category><category term="non-FLOSS"></category><category term="list"></category></entry><entry><title>most exciting software projects</title><link href="http://tshepang.net/most-exciting-software-projects" rel="alternate"></link><updated>2015-01-11T14:46:17+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-11:most-exciting-software-projects</id><summary type="html">&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.rust-lang.org"&gt;Rust&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;A new programming language meant to replace C++:
@@ -18,23 +34,7 @@ It's an approach that simplifies multi-threaded programming while
 also bypassing the GIL. A very rough ETA is sometime in 2016.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="list"></category><category term="non-Python"></category><category term="Python"></category></entry><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2015-01-11T11:25:35+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-11:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
-I do celebrate each time I see a project use it. So, here I list the
-most notable projects I am aware of that do, which also gives me hope
-that it isn't being suffocated too much by Git:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://hg.mozilla.org/mozilla-central"&gt;Firefox&lt;/a&gt;, world number 3 desktop web browser (number of users)&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://hg.python.org/cpython"&gt;CPython&lt;/a&gt; and &lt;a class="reference external" href="https://bitbucket.org/pypy/pypy"&gt;PyPy&lt;/a&gt;, the most important implementations of a top 10
-popular programming language&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://hg.openjdk.java.net"&gt;OpenJDK&lt;/a&gt;, the top open source implementation of the Java platform&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.vim.org/mercurial.php"&gt;VIM&lt;/a&gt; and &lt;a class="reference external" href="http://wiki.netbeans.org/WorkingWithNetBeansSources#Mercurial_access"&gt;Netbeans&lt;/a&gt;, two of the most popular text editors first programmers&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://bitbucket.org/birkenfeld/sphinx"&gt;Sphinx&lt;/a&gt;, documentation generator used in most Python projects&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;And here is one which is not FLOSS (i.e. proprietary):&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook"&gt;Facebook&lt;/a&gt;, world number 2 website in terms of visitor numbers&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="VCS"></category><category term="non-FLOSS"></category><category term="list"></category></entry><entry><title>ideal static blog generator</title><link href="http://tshepang.net/ideal-static-blog-generator" rel="alternate"></link><updated>2015-01-11T10:40:25+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-11:ideal-static-blog-generator</id><summary type="html">&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
+</summary><category term="list"></category><category term="non-Python"></category><category term="Python"></category></entry><entry><title>ideal static blog generator</title><link href="http://tshepang.net/ideal-static-blog-generator" rel="alternate"></link><updated>2015-01-11T10:40:25+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-11:ideal-static-blog-generator</id><summary type="html">&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
 missed:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt; support is mandatory.
