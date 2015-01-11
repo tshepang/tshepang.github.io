@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-01-10T12:10:41+02:00</updated><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2015-01-10T12:10:41+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-10:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-01-11T10:40:25+02:00</updated><entry><title>ideal static blog generator</title><link href="http://tshepang.net/ideal-static-blog-generator" rel="alternate"></link><updated>2015-01-11T10:40:25+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-11:ideal-static-blog-generator</id><summary type="html">&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
+missed:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt; support is mandatory.
+It's the only markup language I like.&lt;/li&gt;
+&lt;li&gt;Landing Page should be an Archives View (Post title and date) or a
+subset (i.e. Recent Posts).  I would not mind if the latest Post or
+the About Page were displayed, so long as they are followed by this
+Archives View.&lt;/li&gt;
+&lt;li&gt;Categories should be determined by directory into which a file (the
+raw material for a Post) is placed. Specifying this in the metadata
+section of the file should of course take precedence.&lt;/li&gt;
+&lt;li&gt;Publish date should never be placed at the bottom of a Post. It is
+too important a piece metadata to treat this way.&lt;/li&gt;
+&lt;li&gt;An option to have clean URLs (i.e. trailing &lt;tt class="docutils literal"&gt;.html&lt;/tt&gt; removed).&lt;/li&gt;
+&lt;li&gt;Date-based directory structure should not be mandatory (unlike with
+Tinkerer).&lt;/li&gt;
+&lt;li&gt;Inline literals and literal blocks (for code) should be
+distinguished by background colour; using a different font is just not
+good enough.&lt;/li&gt;
+&lt;li&gt;Tags (and maybe Categories) should be displayed on each post.&lt;/li&gt;
+&lt;li&gt;Blogofile has a strange requirement of having &lt;a class="reference external" href="http://docs.blogofile.com/en/latest/posts.html"&gt;post headers be YAML
+format&lt;/a&gt;. Maybe there's a good reason, but I want my generator to
+not require anything special in file contents.&lt;/li&gt;
+&lt;li&gt;Ability to determine Publish date from file mtime.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;nice-to-have&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Ability to combine multiple tags.&lt;/li&gt;
+&lt;li&gt;Ability to show posts linking to current one, but I'm not sure how
+useful this would be though.&lt;/li&gt;
+&lt;li&gt;A feed icon that is visible from the main page (and maybe Category
+pages).&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="blogging"></category></entry><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2015-01-10T12:10:41+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-10:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
 There is &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;a separate post&lt;/a&gt; for those.&lt;/p&gt;
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/p&gt;
@@ -293,47 +327,7 @@ It's an approach that simplifies multi-threaded programming while
 also bypassing the GIL. A very rough ETA is sometime in 2016.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="list"></category><category term="non-Python"></category><category term="Python"></category></entry><entry><title>ideal static blog generator</title><link href="http://tshepang.net/ideal-static-blog-generator" rel="alternate"></link><updated>2014-12-15T20:07:10+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-15:ideal-static-blog-generator</id><summary type="html">&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
-missed:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt; support is mandatory, and so is being written in
-Python (I is a fanboy).&lt;/li&gt;
-&lt;li&gt;Landing Page View, ordered by preference:&lt;ul&gt;
-&lt;li&gt;The latest post should be displayed in its entirety, followed by
-an Archives View (just Post title and date). A subset of Archives
-(i.e. Recent Posts) is okay too.&lt;/li&gt;
-&lt;li&gt;It should be an Archives View (or a subset).&lt;/li&gt;
-&lt;li&gt;It should be an About Page.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Categories should be determined by directory into which a file (the
-raw material for a Post) is placed. Specifying this in the metadata
-section of the file should of course take precedence.&lt;/li&gt;
-&lt;li&gt;Publish date should never be placed at the bottom of a Post. It is
-too important a piece metadata to treat this way.&lt;/li&gt;
-&lt;li&gt;An option to have clean URLs (i.e. trailing &lt;tt class="docutils literal"&gt;.html&lt;/tt&gt; removed).&lt;/li&gt;
-&lt;li&gt;Date-based directory structure should not be mandatory (unlike with
-Tinkerer).&lt;/li&gt;
-&lt;li&gt;Inline literals and literal blocks (for code) should be
-distinguished by background colour; using a different font is just not
-good enough.&lt;/li&gt;
-&lt;li&gt;Tags (and maybe Categories) should be displayed on each post.&lt;/li&gt;
-&lt;li&gt;A feed icon that is visible from the main page (and maybe Category
-pages).&lt;/li&gt;
-&lt;li&gt;Blogofile has a strange requirement of having &lt;a class="reference external" href="http://docs.blogofile.com/en/latest/posts.html"&gt;post headers be YAML
-format&lt;/a&gt;. Maybe there's a good reason, but I want my generator to
-not require anything special in file contents.&lt;/li&gt;
-&lt;li&gt;Ability to determine Publish date from file mtime&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;nice-to-have&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Ability to combine multiple tags. My use case is something like
-&amp;quot;masterpices I saw first time in 2014&amp;quot;, for which I'd use
-&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;[2014-movies][masterpiece]&lt;/span&gt;&lt;/tt&gt;.&lt;/li&gt;
-&lt;li&gt;Ability to show posts linking to current one. I'm not sure how
-useful this would be though.&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="blogging"></category></entry><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2014-12-15T20:07:10+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-15:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
+</summary><category term="list"></category><category term="non-Python"></category><category term="Python"></category></entry><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2014-12-15T20:07:10+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-15:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
 I do celebrate each time I see a project use it. So, here I list the
 most notable projects I am aware of that do, which also gives me hope
 that it isn't being suffocated too much by Git:&lt;/p&gt;
@@ -398,7 +392,7 @@ Python 2 as regards PyPI downloads&lt;/li&gt;
 Bitbucket), my preferred VCS. Damn, even &lt;a class="reference external" href="http://tshepang.net/me-loves-new-git-site-design"&gt;the website looks
 better&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Markdown is a far more popular light-weight markup language than
-the far more advanced reStructuredText.
+the far more advanced &lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt;.
 It's particularly sad when it's not used where it's needed
 most... documenting large projects (&lt;a class="reference external" href="http://doc.rust-lang.org"&gt;example&lt;/a&gt;).&lt;/li&gt;
 &lt;/ul&gt;
