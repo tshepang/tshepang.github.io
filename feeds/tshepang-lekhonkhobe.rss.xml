@@ -293,13 +293,7 @@ It's an approach that simplifies multi-threaded programming while
 also bypassing the GIL. A very rough ETA is sometime in 2016.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sat, 20 Dec 2014 11:09:32 +0200</pubDate><guid>tag:tshepang.net,2014-12-20:most-exciting-software-projects</guid><category>list</category><category>non-Python</category><category>Python</category></item><item><title>favorite posts I wrote</title><link>http://tshepang.net/favorite-posts-i-wrote</link><description>&lt;p&gt;I like the quality of my writing sometimes. Following are my favorites:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/developer-of-note-victor-stinner"&gt;developer of note: Victor Stinner&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/me-likes-subprocessdevnull"&gt;me likes subprocess.DEVNULL&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/wajig-21-released"&gt;wajig 2.1 released&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Mon, 15 Dec 2014 20:07:10 +0200</pubDate><guid>tag:tshepang.net,2014-12-15:favorite-posts-i-wrote</guid><category>wajig</category><category>Debian</category><category>Python</category><category>blogging</category><category>list</category></item><item><title>I am a very jealous person</title><link>http://tshepang.net/i-am-a-very-jealous-person</link><description>&lt;p&gt;Following is some of the cases where competing software won this or
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sat, 20 Dec 2014 11:09:32 +0200</pubDate><guid>tag:tshepang.net,2014-12-20:most-exciting-software-projects</guid><category>list</category><category>non-Python</category><category>Python</category></item><item><title>I am a very jealous person</title><link>http://tshepang.net/i-am-a-very-jealous-person</link><description>&lt;p&gt;Following is some of the cases where competing software won this or
 that battle, and I am jealous since I want everyone to use what I
 like:&lt;/p&gt;
 &lt;ul class="simple"&gt;
@@ -3506,34 +3500,34 @@ considering studying towards molecular nanotech, and that quote is most
 relevant to me, since I'm doing software and all.&lt;/p&gt;
 &lt;p&gt;The end-notes, where he encourages supreme rigour and discipline, would
 scare most away. This appears to be a demanding career.&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sun, 10 Jun 2012 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2012-06-10:advice-to-aspiring-nanotechnologists-by-eric-drexler</guid><category>future-tech</category></item><item><title>developer of note: Victor Stinner</title><link>http://tshepang.net/developer-of-note-victor-stinner</link><description>&lt;p&gt;Depending on the impact of the change, contributing to open source
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sun, 10 Jun 2012 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2012-06-10:advice-to-aspiring-nanotechnologists-by-eric-drexler</guid><category>future-tech</category></item><item><title>developer of note: Victor Stinner</title><link>http://tshepang.net/developer-of-note-victor-stinner</link><description>&lt;p&gt;Depending on the change, contributing to open source
 software can be intensely challenging. Referring specifically to
 CPython, the reference implementation of my favorite programming
-language, you can have literally hundreds of messages on the mailing
+language, you can have hundreds of messages on the mailing
 lists, and at times, many more in the issue tracking system, all
 discussing the change in mind. Such changes are most often accompanied
-with a &lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0001/"&gt;PEP&lt;/a&gt; (Python Enhancement Proposal), a formalised document
+with a &lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0001/"&gt;PEP&lt;/a&gt; (Python Enhancement Proposal), a document
 which is basically a design spec for such a change. It also,
 helpfully, summarises the arguments against the change, and addresses
-them while at it. This can be of help to those not inclined to consume
-the oft-lengthy discussions.&lt;/p&gt;
+them while at it.&lt;/p&gt;
 &lt;p&gt;Given all that, it can be quite challenging for any one individual to
 champion such important changes, and an example of one such heroic
 individual is &lt;a class="reference external" href="http://www.haypocalc.com/wiki/Accueil"&gt;Victor Stinner&lt;/a&gt;, a core CPython developer. He is the
 most visible of the guys who helped ensure acceptance of &lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0418/"&gt;PEP 418&lt;/a&gt;,
 which proposes some time-related additions and improvements to the
-standard library's &lt;a class="reference external" href="http://doc.python.org/library/time"&gt;time module&lt;/a&gt;. There are many such additions, many
-a lot more important than this specific one, but what's most unique
-about this one is the sheer amount of discussion that went around this
-particular PEP. The mailing list discussions were practically endless,
+standard library's &lt;a class="reference external" href="http://doc.python.org/library/time"&gt;time module&lt;/a&gt;.
+The sheer amount of discussion that went around this
+particular PEP was ridiculous.
+The mailing list discussions were practically endless,
 and so were the updates to the PEP, not to mention the amount of
 research involved, which was needed in order to have CPython expose
-the new functionality in a cross-platform manner. Now, that's some
+this functionality in a cross-platform manner. Now, that's some
 serious perseverance.&lt;/p&gt;
 &lt;p&gt;In addition to this work, the guy has done a heck of a lot of work in
 cleaning up, re-factoring, and optimizing the string-handling code. I
 can't imagine that this stuff is easy, especially since a large
-portion of it is in C!&lt;/p&gt;
+portion of it is in C! There's a whole lot more work he has done...
+he's among the most prolific of all core CPython developers.&lt;/p&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sat, 09 Jun 2012 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2012-06-09:developer-of-note-victor-stinner</guid><category>developer-of-note</category><category>Python</category></item><item><title>links 2012-05-17</title><link>http://tshepang.net/links-2012-05-17</link><description>&lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://go.linuxfoundation.org/who-writes-linux-2012"&gt;The rate of Linux kernel development is seriously impressive&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://mail.gnome.org/archives/gtk-devel-list/2007-November/msg00032.html"&gt;Why bundle stuff in one library instead of a few&lt;/a&gt;&lt;/li&gt;
