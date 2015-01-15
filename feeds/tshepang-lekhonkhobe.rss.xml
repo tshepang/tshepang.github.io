@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 11 Jan 2015 19:46:13 +0200</lastBuildDate><item><title>major projects using Mercurial</title><link>http://tshepang.net/major-projects-using-mercurial</link><description>&lt;p&gt;Mercurial is the only version control system that I actually like, and
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 15 Jan 2015 00:00:00 +0200</lastBuildDate><item><title>zerofree rocks!</title><link>http://tshepang.net/zerofree-rocks</link><description>&lt;p&gt;At work, we tend to use the same base image for multiple
+installations.  I would often copy a whole-disk image of a system as a
+matter of convenience, because that way I only need to &lt;tt class="docutils literal"&gt;dd&lt;/tt&gt; to the
+target, without any additional steps. The problem with this approach
+is that it is slower than taking a tarball of the files (from the
+source) and extracting them onto the target. That's because it works
+with a lot more data than it needs. For example, say you have a 4GB
+disk which is only filled with 1GB data. The first method would mean
+that processing a useless 3GB of one and zeroes, but my main concern
+is that the whole-disk doesn't compress well. So here's what I tried
+after creating a tarball:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Simple file removal and extraction (&lt;tt class="docutils literal"&gt;cd /target &amp;amp;&amp;amp; rm &lt;span class="pre"&gt;-r&lt;/span&gt; * &amp;amp;&amp;amp;
+tar xf ~/rootfs.tar&lt;/tt&gt;) didn't work&lt;/li&gt;
+&lt;li&gt;Re-formatting the drive (&lt;tt class="docutils literal"&gt;mkfs.ext4 /dev/mmcblkp1&lt;/tt&gt;) and then
+extraction didn't work either&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The issue is that with the 2 steps above, there still remains much
+data on the partition from previous use. That is, file removal and
+creating a filesystem doesn't remove the actual data, but rather just
+makes the data inaccessible by conventional means. To the data
+compressor (&lt;tt class="docutils literal"&gt;xz&lt;/tt&gt; in this case), that is all valid data. What needs
+to happen is for the data that is not allocated to be over-written
+with zeroes... enter &lt;a class="reference external" href="https://packages.debian.org/sid/zerofree"&gt;zerofree&lt;/a&gt; which does just that. After it was
+done, my compressed image shrinked from ~400MB to ~80MB. The original
+was about 2GB.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Thu, 15 Jan 2015 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2015-01-15:zerofree-rocks</guid><category>untagged</category></item><item><title>major projects using Mercurial</title><link>http://tshepang.net/major-projects-using-mercurial</link><description>&lt;p&gt;Mercurial is the only version control system that I actually like, and
 I do celebrate each time I see a project use it. So, here I list the
 most notable projects I am aware of that do, which also gives me hope
 that it isn't being suffocated too much by Git:&lt;/p&gt;
