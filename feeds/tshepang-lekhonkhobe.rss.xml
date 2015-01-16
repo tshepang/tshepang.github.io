@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 15 Jan 2015 00:00:00 +0200</lastBuildDate><item><title>zerofree rocks!</title><link>http://tshepang.net/zerofree-rocks</link><description>&lt;p&gt;At work, we tend to use the same base image for multiple
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 16 Jan 2015 00:00:00 +0200</lastBuildDate><item><title>links 2015-01-16</title><link>http://tshepang.net/links-2015-01-16</link><description>&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://glenmoyes.com/articles/to_those_learning_3d"&gt;A well-written article&lt;/a&gt; offering tips on being a good 3D artist&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://people.debian.org/~stapelberg//2014/12/23/code-search-taming-the-latency-tail"&gt;an epic battle in improving performance of Debian Code Search&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://siciarz.net/tag/24daysofrust"&gt;24 days of Rust&lt;/a&gt; is a nice series of 24 posts related to Rust,
+each short and concise, which is the way I like it&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://chrismorgan.info/blog/rust-fizzbuzz.html"&gt;Why your first FizzBuzz implementation may not work&lt;/a&gt;
+- a very nice Rust mini-tutorial&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://mainisusuallyafunction.blogspot.com/2015/01/151-byte-static-linux-binary-in-rust.html"&gt;151-byte static Linux binary in Rust&lt;/a&gt; - interesting experiment&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Fri, 16 Jan 2015 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2015-01-16:links-2015-01-16</guid><category>Debian</category><category>Rust</category><category>links</category></item><item><title>zerofree rocks!</title><link>http://tshepang.net/zerofree-rocks</link><description>&lt;p&gt;At work, we tend to use the same base image for multiple
 installations.  I would often copy a whole-disk image of a system as a
 matter of convenience, because that way I only need to &lt;tt class="docutils literal"&gt;dd&lt;/tt&gt; to the
 target, without any additional steps. The problem with this approach
