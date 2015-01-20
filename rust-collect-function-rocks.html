@@ -13,16 +13,16 @@
 
 <meta name="keywords" content="Rust, computing, " />
 
-<meta property="og:title" content="Linux threads are not deterministic "/>
-<meta property="og:url" content="http://tshepang.net/linux-threads-are-not-deterministic" />
-<meta property="og:description" content="By deterministic, I am referring to their scheduling. Here&#39;s an example in Rust: use std::thread::Thread; use std::sync::mpsc::channel; fn main() { let thread_count = 4u; let (tx, rx) = channel(); for x in range(0, thread_count) { let tx = tx.clone(); Thread::spawn(move || { println!(&#34;t{} tx&#34;, x); tx ..." />
+<meta property="og:title" content="Rust &#39;collect&#39; function rocks! "/>
+<meta property="og:url" content="http://tshepang.net/rust-collect-function-rocks" />
+<meta property="og:description" content="So, I wanted to populate a Vec with some data, so I did it the following way: let mut vector = Vec::new(); for n in (0 ..COUNT) { vector.push(n); }; I then later found out I can simply do this: let vector = (0 ..COUNT).collect::&lt;Vec&lt;i32&gt;&gt;() The function is ..." />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
-<meta property="og:article:published_time" content="2015-01-07T00:00:00+02:00" />
-<meta name="twitter:title" content="Linux threads are not deterministic ">
-<meta name="twitter:description" content="By deterministic, I am referring to their scheduling. Here&#39;s an example in Rust: use std::thread::Thread; use std::sync::mpsc::channel; fn main() { let thread_count = 4u; let (tx, rx) = channel(); for x in range(0, thread_count) { let tx = tx.clone(); Thread::spawn(move || { println!(&#34;t{} tx&#34;, x); tx ...">
+<meta property="og:article:published_time" content="2015-01-17T00:00:00+02:00" />
+<meta name="twitter:title" content="Rust &#39;collect&#39; function rocks! ">
+<meta name="twitter:description" content="So, I wanted to populate a Vec with some data, so I did it the following way: let mut vector = Vec::new(); for n in (0 ..COUNT) { vector.push(n); }; I then later found out I can simply do this: let vector = (0 ..COUNT).collect::&lt;Vec&lt;i32&gt;&gt;() The function is ...">
 
-        <title>Linux threads are not deterministic  · Tshepang logs
+        <title>Rust &#39;collect&#39; function rocks!  · Tshepang logs
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -71,7 +71,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://tshepang.net/linux-threads-are-not-deterministic"> Linux threads are not deterministic  </a></h1>
+    <h1><a href="http://tshepang.net/rust-collect-function-rocks"> Rust 'collect' function rocks!  </a></h1>
     </header>
 </div>
 
@@ -79,64 +79,51 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>By deterministic, I am referring to their scheduling. Here's an
-example in Rust:</p>
+            <p>So, I wanted to populate a Vec with some data, so I did it the
+following way:</p>
 <pre class="literal-block">
-use std::thread::Thread;
-use std::sync::mpsc::channel;
+let mut vector = Vec::new();
+for n in (0 ..COUNT) {
+    vector.push(n);
+};
+</pre>
+<p>I then later found out I can simply do this:</p>
+<pre class="literal-block">
+let vector = (0 ..COUNT).collect::&lt;Vec&lt;i32&gt;&gt;()
+</pre>
+<p>The function is also about twice as fast, according to the following
+benchmark:</p>
+<pre class="literal-block">
+extern crate test;
 
-fn main() {
-    let thread_count = 4u;
-    let (tx, rx) = channel();
+static COUNT: i32 = 100;
 
-    for x in range(0, thread_count) {
-        let tx = tx.clone();
-        Thread::spawn(move || {
-            println!(&quot;t{} tx&quot;, x);
-            tx.send(x).unwrap();
-        });
-    }
+#[bench]
+fn collect(b: &amp;mut test::Bencher) {
+    b.iter(|| {
+        (0 ..COUNT).collect::&lt;Vec&lt;i32&gt;&gt;()
+    });
+}
 
-    for _ in range(0, thread_count) {
-        println!(&quot;rx from t{}&quot;, rx.recv().unwrap());
-    }
+#[bench]
+fn no_collect(b: &amp;mut test::Bencher) {
+    b.iter(|| {
+        let mut vector = Vec::new();
+        for n in (0 ..COUNT) {
+            vector.push(n);
+        };
+        vector
+    });
 }
 </pre>
-<p>What I'm doing there is create 4 child threads, from which I send messages
-that are to be captured by the main thread.</p>
-<p>I built and ran it with:</p>
+<p>Here is the output of <tt class="docutils literal">cargo bench</tt>:</p>
 <pre class="literal-block">
-rustc --opt-level 0 main.rs &amp;&amp; ./main
+running 2 tests
+test collect    ... bench:       190 ns/iter (+/- 2)
+test no_collect ... bench:       364 ns/iter (+/- 8)
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 2 measured
 </pre>
-<p>Following is output from one sample run:</p>
-<pre class="literal-block">
-t1 tx
-t0 tx
-t2 tx
-t3 tx
-rx from t1
-rx from t0
-rx from t3
-rx from t2
-</pre>
-<p>Following is what I get with another run:</p>
-<pre class="literal-block">
-t0 tx
-t1 tx
-rx from t1
-t2 tx
-rx from t2
-t3 tx
-rx from t3
-rx from t0
-</pre>
-<p>If it was all deterministic (i.e. predictable), <tt class="docutils literal">t0 tx</tt> would always
-come before <tt class="docutils literal">t1 tx</tt>, and <tt class="docutils literal">rx from t0</tt> before <tt class="docutils literal">rx from t1</tt>, and so
-on.</p>
-<p>I think this is done for performance reasons, where the kernel just
-looks for an available slot, running each thread on a best-effort
-basis. My guess is that a more real-time kernel would be more
-predictable.</p>
 
             
             <section>
@@ -144,7 +131,7 @@ predictable.</p>
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://tshepang.net/linux-threads-are-not-deterministic#disqus_thread">
+                href="http://tshepang.net/rust-collect-function-rocks#disqus_thread">
                 Comments
             </a>
         </div>
@@ -154,8 +141,8 @@ predictable.</p>
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'tshepanglogs';
-        var disqus_identifier = 'http://tshepang.net/linux-threads-are-not-deterministic';
-    var disqus_url = 'http://tshepang.net/linux-threads-are-not-deterministic';
+        var disqus_identifier = 'http://tshepang.net/rust-collect-function-rocks';
+    var disqus_url = 'http://tshepang.net/rust-collect-function-rocks';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -177,8 +164,7 @@ predictable.</p>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/various-rust-ways-of-displaying-stuff-to-the-screen" title="Previous: various Rust ways of displaying stuff to the screen">various Rust ways of displaying stuff to the screen</a></li>
-                <li class="next-article"><a href="http://tshepang.net/about-developer-of-note-series" title="Next: about &#39;developer of note&#39; series">about 'developer of note' series</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/links-2015-01-16" title="Previous: links 2015-01-16">links 2015-01-16</a></li>
             </ul>
             </nav>
             </aside>
@@ -186,7 +172,7 @@ predictable.</p>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2015-01-07T00:00:00+02:00">Jan 7, 2015</time>
+            <time pubdate="pubdate" datetime="2015-01-17T00:00:00+02:00">Jan 17, 2015</time>
             <h4>Category</h4>
             <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
             <h4>Tags</h4>

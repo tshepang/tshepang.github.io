@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-01-16T00:00:00+02:00</updated><entry><title>links 2015-01-16</title><link href="http://tshepang.net/links-2015-01-16" rel="alternate"></link><updated>2015-01-16T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-16:links-2015-01-16</id><summary type="html">&lt;ul class="simple"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-01-17T00:00:00+02:00</updated><entry><title>Rust 'collect' function rocks!</title><link href="http://tshepang.net/rust-collect-function-rocks" rel="alternate"></link><updated>2015-01-17T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-17:rust-collect-function-rocks</id><summary type="html">&lt;p&gt;So, I wanted to populate a Vec with some data, so I did it the
+following way:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+let mut vector = Vec::new();
+for n in (0 ..COUNT) {
+    vector.push(n);
+};
+&lt;/pre&gt;
+&lt;p&gt;I then later found out I can simply do this:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+let vector = (0 ..COUNT).collect::&amp;lt;Vec&amp;lt;i32&amp;gt;&amp;gt;()
+&lt;/pre&gt;
+&lt;p&gt;The function is also about twice as fast, according to the following
+benchmark:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+extern crate test;
+
+static COUNT: i32 = 100;
+
+#[bench]
+fn collect(b: &amp;amp;mut test::Bencher) {
+    b.iter(|| {
+        (0 ..COUNT).collect::&amp;lt;Vec&amp;lt;i32&amp;gt;&amp;gt;()
+    });
+}
+
+#[bench]
+fn no_collect(b: &amp;amp;mut test::Bencher) {
+    b.iter(|| {
+        let mut vector = Vec::new();
+        for n in (0 ..COUNT) {
+            vector.push(n);
+        };
+        vector
+    });
+}
+&lt;/pre&gt;
+&lt;p&gt;Here is the output of &lt;tt class="docutils literal"&gt;cargo bench&lt;/tt&gt;:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+running 2 tests
+test collect    ... bench:       190 ns/iter (+/- 2)
+test no_collect ... bench:       364 ns/iter (+/- 8)
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 2 measured
+&lt;/pre&gt;
+</summary><category term="Rust"></category></entry><entry><title>links 2015-01-16</title><link href="http://tshepang.net/links-2015-01-16" rel="alternate"></link><updated>2015-01-16T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-16:links-2015-01-16</id><summary type="html">&lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://glenmoyes.com/articles/to_those_learning_3d"&gt;A well-written article&lt;/a&gt; offering tips on being a good 3D artist&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://people.debian.org/~stapelberg//2014/12/23/code-search-taming-the-latency-tail"&gt;an epic battle in improving performance of Debian Code Search&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://siciarz.net/tag/24daysofrust"&gt;24 days of Rust&lt;/a&gt; is a nice series of 24 posts related to Rust,
