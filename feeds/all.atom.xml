@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-01-17T00:00:00+02:00</updated><entry><title>Rust 'collect' function rocks!</title><link href="http://tshepang.net/rust-collect-function-rocks" rel="alternate"></link><updated>2015-01-17T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-17:rust-collect-function-rocks</id><summary type="html">&lt;p&gt;I wanted to populate a Vec with some data, so I did it the
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-01-24T00:00:00+02:00</updated><entry><title>what makes Rust unique</title><link href="http://tshepang.net/what-makes-rust-unique" rel="alternate"></link><updated>2015-01-24T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-24:what-makes-rust-unique</id><summary type="html">&lt;!--  --&gt;
+&lt;blockquote&gt;
+It's easy to write (a) an unsafe language that has no GC, or (b) a
+safe language that relies on GC for safety. It's also easy to write a
+language that is in category (b) but lets you drop down to
+category (a) in an unsafe dialect. It's a very difficult problem to
+write a safe language that does not rely on GC, and I know of no other
+industry language that has done it.&lt;/blockquote&gt;
+&lt;p&gt;Part of &lt;a class="reference external" href="https://news.ycombinator.com/item?id=8936061"&gt;a response&lt;/a&gt; by a member of Rust core team.&lt;/p&gt;
+</summary><category term="quote"></category><category term="Rust"></category></entry><entry><title>Rust 'collect' function rocks!</title><link href="http://tshepang.net/rust-collect-function-rocks" rel="alternate"></link><updated>2015-01-17T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-17:rust-collect-function-rocks</id><summary type="html">&lt;p&gt;I wanted to populate a Vec with some data, so I did it the
 following way:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 let mut vector = Vec::new();

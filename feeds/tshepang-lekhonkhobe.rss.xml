@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 17 Jan 2015 00:00:00 +0200</lastBuildDate><item><title>Rust 'collect' function rocks!</title><link>http://tshepang.net/rust-collect-function-rocks</link><description>&lt;p&gt;I wanted to populate a Vec with some data, so I did it the
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 24 Jan 2015 00:00:00 +0200</lastBuildDate><item><title>what makes Rust unique</title><link>http://tshepang.net/what-makes-rust-unique</link><description>&lt;!--  --&gt;
+&lt;blockquote&gt;
+It's easy to write (a) an unsafe language that has no GC, or (b) a
+safe language that relies on GC for safety. It's also easy to write a
+language that is in category (b) but lets you drop down to
+category (a) in an unsafe dialect. It's a very difficult problem to
+write a safe language that does not rely on GC, and I know of no other
+industry language that has done it.&lt;/blockquote&gt;
+&lt;p&gt;Part of &lt;a class="reference external" href="https://news.ycombinator.com/item?id=8936061"&gt;a response&lt;/a&gt; by a member of Rust core team.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sat, 24 Jan 2015 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2015-01-24:what-makes-rust-unique</guid><category>quote</category><category>Rust</category></item><item><title>Rust 'collect' function rocks!</title><link>http://tshepang.net/rust-collect-function-rocks</link><description>&lt;p&gt;I wanted to populate a Vec with some data, so I did it the
 following way:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 let mut vector = Vec::new();
