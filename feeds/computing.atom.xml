@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-01-24T00:00:00+02:00</updated><entry><title>what makes Rust unique</title><link href="http://tshepang.net/what-makes-rust-unique" rel="alternate"></link><updated>2015-01-24T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-24:what-makes-rust-unique</id><summary type="html">&lt;!--  --&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-01-25T12:20:29+02:00</updated><entry><title>most exciting software projects</title><link href="http://tshepang.net/most-exciting-software-projects" rel="alternate"></link><updated>2015-01-25T12:20:29+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-25:most-exciting-software-projects</id><summary type="html">&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.rust-lang.org"&gt;Rust&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A programming language meant to replace C++:
+it has better memory safety, but maintains comparable speed.
+The most optimistic ETA for the first stable release (1.0)
+is &lt;a class="reference external" href="http://blog.rust-lang.org/2014/12/12/1.0-Timeline.html"&gt;March/April in 2015&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="https://github.com/servo/servo"&gt;Servo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A browser engine written in Rust.
+It is far more aggressive than the leading web engines of today
+(WebKit and Gecko) in terms of making its operations parallel,
+and should therefore be more responsive.
+An ETA for an Alpha release is sometime in 2015,
+but there is a plan to incorporate one of its components into Gecko
+that same year.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org"&gt;PyPy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It's been alive for over 10 years, but remains among the most
+exciting of all Python projects.&lt;/p&gt;
+&lt;p&gt;I greatly anticipate the stable release of its most visible
+sub-project, &lt;a class="reference external" href="http://pypy.org/tmdonate2.html"&gt;Transactional Memory&lt;/a&gt;.  It's an approach that
+simplifies multi-threaded programming while also bypassing the GIL.
+A very rough ETA for a stable release of this sub-project is
+sometime in 2016.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="list"></category><category term="non-Python"></category><category term="Python"></category></entry><entry><title>what makes Rust unique</title><link href="http://tshepang.net/what-makes-rust-unique" rel="alternate"></link><updated>2015-01-24T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-24:what-makes-rust-unique</id><summary type="html">&lt;!--  --&gt;
 &lt;blockquote&gt;
 It's easy to write (a) an unsafe language that has no GC, or (b) a
 safe language that relies on GC for safety. It's also easy to write a
@@ -104,26 +131,7 @@ popular programming language&lt;/li&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook"&gt;Facebook&lt;/a&gt;, world number 2 website in terms of visitor numbers&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="VCS"></category><category term="non-FLOSS"></category><category term="list"></category></entry><entry><title>most exciting software projects</title><link href="http://tshepang.net/most-exciting-software-projects" rel="alternate"></link><updated>2015-01-11T14:46:17+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-11:most-exciting-software-projects</id><summary type="html">&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.rust-lang.org"&gt;Rust&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A new programming language meant to replace C++:
-memory safety and easier concurrency, while having comparable speed.
-The most optimistic ETA for the first stable release (1.0) is &lt;a class="reference external" href="http://blog.rust-lang.org/2014/12/12/1.0-Timeline.html"&gt;March 2015&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="https://github.com/servo/servo"&gt;Servo&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A possible future replacement of Gecko, the HTML rendering
-engine powering Firefox. It is written in Rust.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org"&gt;PyPy&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;It's been alive for over 10 years, but remains among the most
-exciting of all Python projects. I greatly anticipate the stable
-release of its most visible sub-project, &lt;a class="reference external" href="http://pypy.org/tmdonate2.html"&gt;Transactional Memory&lt;/a&gt;.
-It's an approach that simplifies multi-threaded programming while
-also bypassing the GIL. A very rough ETA is sometime in 2016.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="list"></category><category term="non-Python"></category><category term="Python"></category></entry><entry><title>ideal static blog generator</title><link href="http://tshepang.net/ideal-static-blog-generator" rel="alternate"></link><updated>2015-01-11T10:40:25+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-11:ideal-static-blog-generator</id><summary type="html">&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
+</summary><category term="VCS"></category><category term="non-FLOSS"></category><category term="list"></category></entry><entry><title>ideal static blog generator</title><link href="http://tshepang.net/ideal-static-blog-generator" rel="alternate"></link><updated>2015-01-11T10:40:25+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-11:ideal-static-blog-generator</id><summary type="html">&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
 missed:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt; support is mandatory.
