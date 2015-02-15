@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-02-06T00:00:00+02:00</updated><entry><title>a visit to Mozambique</title><link href="http://tshepang.net/a-visit-to-mozambique" rel="alternate"></link><updated>2015-02-06T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-02-06:a-visit-to-mozambique</id><summary type="html">&lt;p&gt;Outside my country, South Africa, I have only been to Botswana,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-02-15T04:32:54+02:00</updated><entry><title>most exciting software projects</title><link href="http://tshepang.net/most-exciting-software-projects" rel="alternate"></link><updated>2015-02-15T04:32:54+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-02-15:most-exciting-software-projects</id><summary type="html">&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.rust-lang.org"&gt;Rust&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A programming language meant to replace C++:
+it has better memory safety, but maintains comparable speed.
+ETA for the first stable release is &lt;a class="reference external" href="http://blog.rust-lang.org/2015/02/13/Final-1.0-timeline.html"&gt;2015-05-15&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="https://github.com/servo/servo"&gt;Servo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A browser engine written in Rust.
+It is far more aggressive than the leading web engines of today
+(WebKit and Gecko) in terms of making its operations parallel,
+and should therefore be more responsive.
+An ETA for an Alpha release is sometime in 2015,
+but there is a plan to incorporate one of its components into Gecko
+that same year.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org"&gt;PyPy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It's been alive for over 10 years, but remains among the most
+exciting of all Python projects.&lt;/p&gt;
+&lt;p&gt;I greatly anticipate the stable release of its most visible
+sub-project, &lt;a class="reference external" href="http://pypy.org/tmdonate2.html"&gt;Transactional Memory&lt;/a&gt;.  It's an approach that
+simplifies multi-threaded programming while also bypassing the GIL.
+A very rough ETA for a stable release of this sub-project is
+sometime in 2016.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="list"></category><category term="non-Python"></category><category term="Python"></category></entry><entry><title>a visit to Mozambique</title><link href="http://tshepang.net/a-visit-to-mozambique" rel="alternate"></link><updated>2015-02-06T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-02-06:a-visit-to-mozambique</id><summary type="html">&lt;p&gt;Outside my country, South Africa, I have only been to Botswana,
 Swaziland, and Lesotho. I recently visited Mozambique, and it feels
 far more different compared. The most notable thing is that Portuguese
 dominates far more than English. It was quite hard to find people we
@@ -71,7 +97,7 @@ match, all but the third (and last) of the third Season. The highlight
 here is the villain, who ranks as the best in the series (Moriarty is
 rather overdone). He represents great character development and is
 given a flawless performance.&lt;/p&gt;
-&lt;p&gt;---&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
 &lt;p&gt;As a sidenote, of the series regulars, none of the characters was as
 interesting as that of Sherlock's big brother. It's a superb
 performance too, the character is such a joy (mature, wise,
@@ -148,34 +174,7 @@ poverty for the whole 100km drive. It was interesting to see that the
 traffic cops didn't have cars around. Serious cost-saving there.&lt;/p&gt;
 &lt;p&gt;One last thing, the Lesotho side of the border stamped our passports
 when leaving, but didn't when we entered. Interesting.&lt;/p&gt;
-</summary><category term="travel"></category></entry><entry><title>most exciting software projects</title><link href="http://tshepang.net/most-exciting-software-projects" rel="alternate"></link><updated>2015-01-25T12:20:29+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-25:most-exciting-software-projects</id><summary type="html">&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.rust-lang.org"&gt;Rust&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A programming language meant to replace C++:
-it has better memory safety, but maintains comparable speed.
-The most optimistic ETA for the first stable release (1.0)
-is &lt;a class="reference external" href="http://blog.rust-lang.org/2014/12/12/1.0-Timeline.html"&gt;March/April in 2015&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="https://github.com/servo/servo"&gt;Servo&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A browser engine written in Rust.
-It is far more aggressive than the leading web engines of today
-(WebKit and Gecko) in terms of making its operations parallel,
-and should therefore be more responsive.
-An ETA for an Alpha release is sometime in 2015,
-but there is a plan to incorporate one of its components into Gecko
-that same year.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org"&gt;PyPy&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;It's been alive for over 10 years, but remains among the most
-exciting of all Python projects.&lt;/p&gt;
-&lt;p&gt;I greatly anticipate the stable release of its most visible
-sub-project, &lt;a class="reference external" href="http://pypy.org/tmdonate2.html"&gt;Transactional Memory&lt;/a&gt;.  It's an approach that
-simplifies multi-threaded programming while also bypassing the GIL.
-A very rough ETA for a stable release of this sub-project is
-sometime in 2016.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="list"></category><category term="non-Python"></category><category term="Python"></category></entry><entry><title>what makes Rust unique</title><link href="http://tshepang.net/what-makes-rust-unique" rel="alternate"></link><updated>2015-01-24T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-24:what-makes-rust-unique</id><summary type="html">&lt;!--  --&gt;
+</summary><category term="travel"></category></entry><entry><title>what makes Rust unique</title><link href="http://tshepang.net/what-makes-rust-unique" rel="alternate"></link><updated>2015-01-24T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-24:what-makes-rust-unique</id><summary type="html">&lt;!--  --&gt;
 &lt;blockquote&gt;
 It's easy to write (a) an unsafe language that has no GC, or (b) a
 safe language that relies on GC for safety. It's also easy to write a
