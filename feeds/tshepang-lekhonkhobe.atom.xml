@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-03-20T00:00:00+02:00</updated><entry><title>Rust 'collect' function rocks!</title><link href="http://tshepang.net/rust-collect-function-rocks" rel="alternate"></link><updated>2015-03-20T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-03-20:rust-collect-function-rocks</id><summary type="html">&lt;p&gt;Here is one way to populate a Vec with some data:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-04-01T00:46:56+02:00</updated><entry><title>what I like about Rust</title><link href="http://tshepang.net/what-i-like-about-rust" rel="alternate"></link><updated>2015-04-01T00:46:56+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-04-01:what-i-like-about-rust</id><summary type="html">&lt;ul class="simple"&gt;
+&lt;li&gt;Ambitious: the aim of being memory safe without the use of a garbage
+collector, allowing it to maintain C++ execution speeds.&lt;/li&gt;
+&lt;li&gt;Naming conventions: &lt;tt class="docutils literal"&gt;name_with_underscores&lt;/tt&gt; for variable and
+function names, as well as``HttpRequest`` instead of &lt;tt class="docutils literal"&gt;HTTPRequest&lt;/tt&gt;
+for type names.&lt;/li&gt;
+&lt;li&gt;Error reporting: compile errors are the best I've seen (though I've
+only really seen those of C and C++); they are even color-coded!&lt;/li&gt;
+&lt;li&gt;Using &lt;tt class="docutils literal"&gt;fn&lt;/tt&gt; for a function declaration saves typing, and is not
+even ambiguous.&lt;/li&gt;
+&lt;li&gt;The semicolon rule: I initially found it surprising that omitting a
+semicolon after a value is shorthand for returning. I appreciate it
+now... it's quite nifty, and I in fact now find &lt;tt class="docutils literal"&gt;return&lt;/tt&gt;
+statements ugly.&lt;/li&gt;
+&lt;li&gt;The &lt;tt class="docutils literal"&gt;match&lt;/tt&gt; statement is kool (exhaustiveness check, no
+fall-through, and nice syntax), and makes &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;if..else&lt;/span&gt;&lt;/tt&gt; chains look
+ugly.&lt;/li&gt;
+&lt;li&gt;Allowing a trailing comma after a list of items, which is really
+great for copy-pasting and diffs. I miss this when working with Java
+and C/C++.&lt;/li&gt;
+&lt;li&gt;Packaging conventions: the build tool, Cargo, enforces that all
+build sources (which may include documentation) are placed in &lt;cite&gt;src/&lt;/cite&gt;
+in the root of a source distribution.&lt;/li&gt;
+&lt;li&gt;A fast-paced and time-based release cycle: a stable release will be
+made every 6 weeks, which is truly ambitious for a programming
+language.&lt;/li&gt;
+&lt;li&gt;Development process:&lt;ul&gt;
+&lt;li&gt;No one, including the Core Team, push to the Rust tree. Each
+person gets their changes reviewed first, and they mostly get
+approve by someone else.&lt;/li&gt;
+&lt;li&gt;Merging the changes to the is nearly always done via a continuous
+integration system which first ensures that change passes all
+automated tests.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The willingness to do &lt;em&gt;breaking changes&lt;/em&gt;: I have been watching Rust
+development for about a year before its first stable release, and
+the massive upheavals it saw leading to that point is nothing short
+of overwhelming. It was quite a unique (and exciting) experience,
+probably unlike anything in history of public software
+development. This was not easy for a bunch of projects, and even
+worse for non-trivial ones like &lt;a class="reference external" href="https://github.com/servo"&gt;Servo&lt;/a&gt; (which has its own
+sub-ecosystem). I am, however, very glad that it was done... the
+pain was worth having a better language.&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust 'collect' function rocks!</title><link href="http://tshepang.net/rust-collect-function-rocks" rel="alternate"></link><updated>2015-03-20T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-03-20:rust-collect-function-rocks</id><summary type="html">&lt;p&gt;Here is one way to populate a Vec with some data:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 let mut vector = Vec::new();
 for n in 0..COUNT {
