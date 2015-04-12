@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-04-12T13:34:40+02:00</updated><entry><title>what I like about Rust</title><link href="http://tshepang.net/what-i-like-about-rust" rel="alternate"></link><updated>2015-04-12T13:34:40+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-04-12:what-i-like-about-rust</id><summary type="html">&lt;ul&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-04-12T14:23:01+02:00</updated><entry><title>what I like about Rust</title><link href="http://tshepang.net/what-i-like-about-rust" rel="alternate"></link><updated>2015-04-12T14:23:01+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-04-12:what-i-like-about-rust</id><summary type="html">&lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;Ambitious: the aim of being memory safe without the use of a garbage
 collector, allowing it to maintain C++ execution speeds.&lt;/p&gt;
 &lt;/li&gt;
@@ -47,8 +47,10 @@ automated tests.&lt;/li&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p class="first"&gt;Allows one to redefine variables, even with different types:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-let foo = 10;
-let foo = &amp;quot;ten&amp;quot;;
+fn main() {
+    let foo = 10;
+    let foo = &amp;quot;ten&amp;quot;;
+}
 &lt;/pre&gt;
 &lt;p&gt;This is convenient.&lt;/p&gt;
 &lt;/li&gt;
