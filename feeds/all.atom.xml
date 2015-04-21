@@ -1,5 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-04-19T09:00:40+02:00</updated><entry><title>what I like about Rust</title><link href="http://tshepang.net/what-i-like-about-rust" rel="alternate"></link><updated>2015-04-19T09:00:40+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-04-19:what-i-like-about-rust</id><summary type="html">&lt;ul&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-04-21T03:04:28+02:00</updated><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2015-04-21T03:04:28+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-04-21:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
+There is &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;a separate post&lt;/a&gt; for those.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;wajig&lt;/strong&gt;: &lt;a class="reference external" href="http://tshepang.net/tags#wajig-ref"&gt;I also develop and maintain it&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;APT&lt;/strong&gt;: a collection of Debian package management tools&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;software development&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Emacs&lt;/strong&gt;: I also use it as a general purpose text editor&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git-cola&lt;/strong&gt;: &lt;a class="reference external" href="http://tshepang.net/project-of-note-git-cola"&gt;why me loves it&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GNU toolchain&lt;/strong&gt; (GCC, make, GLibC, ...)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Git&lt;/strong&gt;: as if I had a choice... work and open source&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mercurial&lt;/strong&gt;: my favorite&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://meldmerge.org"&gt;Meld&lt;/a&gt;: the most excellent diff tool I've used yet&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CPython&lt;/strong&gt;: I spend more time with Python as compared to any other
+programming language&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;entertainment&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Quod Libet&lt;/strong&gt;: audio player that comes with a very excellent tag
+editor, &lt;strong&gt;Ex Falso&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VLC&lt;/strong&gt;: user interface could be a lot better&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;GUI applications&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Xfce Terminal&lt;/strong&gt;: nicer than my previous favorite, GNOME Terminal&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Evince&lt;/strong&gt;: I would love to get a PDF reader with better navigation&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Firefox&lt;/strong&gt;: not as pretty as my previous favorite, Chrome; but that
+it has a more trustworthy steward (Mozilla vs. Google), and
+it being less restrictive (Chrome makes it painful to install third
+party add-ons) makes it a winner&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gnumeric&lt;/strong&gt;: it's faster than LibreOffice spreadsheet, and has a
+superior search interface&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://lzone.de/liferea"&gt;Liferea&lt;/a&gt;: would not be using this had it not been for Google Reader
+shutdown, but am glad they did because I like this tool, ugly and unkool
+as it is&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Thunderbird&lt;/strong&gt;: I prefer Evolution, but it gave me some issues last
+time I tried; I don't remember the details&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.transmissionbt.com"&gt;Transmission&lt;/a&gt;: the only torrent client I have ever used&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Nautilus&lt;/strong&gt;: decent GUI file manager&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FileZilla&lt;/strong&gt;: I should really find something nicer for my SFTP needs&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://fileroller.sourceforge.net"&gt;File Roller&lt;/a&gt;: nice and simple GUI archive manager&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;miscellaneous tools&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;dwm&lt;/strong&gt;: &lt;a class="reference external" href="http://tshepang.net/my-current-desktop-setup"&gt;replaced GNOME as my primary desktop environment&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://tmux.sourceforge.net"&gt;tmux&lt;/a&gt;: amazingly powerful, but I wish it had less rendering bugs&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;head&lt;/strong&gt; and &lt;strong&gt;tail&lt;/strong&gt;: included in GNU coreutils suite of tools&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.greenwoodsoftware.com/less"&gt;less&lt;/a&gt;: indispensable!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Minicom&lt;/strong&gt;: use this for some ancient setups at work, for some clients&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OpenSSH&lt;/strong&gt;: duh!&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/joelthelion/autojump"&gt;autojump&lt;/a&gt;: makes navigating the filesystem a joy&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://fabfile.org"&gt;Fabric&lt;/a&gt;: I use it to build and deploy my blogs... it's some sort of
+replacement for shell scripting&lt;/li&gt;
+&lt;li&gt;VirtualBox: pretty much the only virtualisation tool I use;
+My use is extensive... I often leave a virtual machine running for days&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://rg3.github.io/youtube-dl"&gt;youtube-dl&lt;/a&gt;: I prefer watching videos with VLC&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="list"></category></entry><entry><title>what I like about Rust</title><link href="http://tshepang.net/what-i-like-about-rust" rel="alternate"></link><updated>2015-04-19T09:00:40+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-04-19:what-i-like-about-rust</id><summary type="html">&lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;Ambitious: the aim of being memory safe without the use of a garbage
 collector, allowing it to maintain C++ execution speeds.&lt;/p&gt;
 &lt;/li&gt;
@@ -68,66 +128,7 @@ sub-ecosystem). I am, however, very glad that it was done... the
 pain was worth having a better language.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="Rust"></category></entry><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2015-04-18T15:20:25+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-04-18:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
-There is &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;a separate post&lt;/a&gt; for those.&lt;/p&gt;
-&lt;hr class="docutils" /&gt;
-&lt;p&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;strong&gt;wajig&lt;/strong&gt;: &lt;a class="reference external" href="http://tshepang.net/tags#wajig-ref"&gt;I also develop and maintain it&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;APT&lt;/strong&gt;: a collection of Debian package management tools&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;software development&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;strong&gt;Emacs&lt;/strong&gt;: I also use it as a general purpose text editor&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;git-cola&lt;/strong&gt;: &lt;a class="reference external" href="http://tshepang.net/project-of-note-git-cola"&gt;why me loves it&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GNU toolchain&lt;/strong&gt; (GCC, make, GLibC, ...)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Git&lt;/strong&gt;: as if I had a choice... work and open source&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Mercurial&lt;/strong&gt;: my favorite&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://meldmerge.org"&gt;Meld&lt;/a&gt;: the most excellent diff tool I've used yet&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;CPython&lt;/strong&gt;: I spend more time with Python as compared to any other
-programming language&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;entertainment&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;strong&gt;Quod Libet&lt;/strong&gt;: audio player that comes with a very excellent tag
-editor, &lt;strong&gt;Ex Falso&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;VLC&lt;/strong&gt;: user interface could be a lot better&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;GUI applications&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;strong&gt;Xfce Terminal&lt;/strong&gt;: nicer than my previous favorite, GNOME Terminal&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Evince&lt;/strong&gt;: I would love to get a PDF reader with better navigation&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Firefox&lt;/strong&gt;: not as pretty as my previous favorite, Chrome; but that
-it has a more trustworthy steward (Mozilla vs. Google), and
-it being less restrictive (Chrome makes it painful to install third
-party add-ons) makes it a winner&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Gnumeric&lt;/strong&gt;: it's faster than LibreOffice spreadsheet, and has a
-superior search interface&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://lzone.de/liferea"&gt;Liferea&lt;/a&gt;: would not be using this had it not been for Google Reader
-shutdown, but am glad they did because I like this tool, ugly and unkool
-as it is&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Thunderbird&lt;/strong&gt;: I prefer Evolution, but it gave me some issues last
-time I tried; I don't remember the details&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.transmissionbt.com"&gt;Transmission&lt;/a&gt;: the only torrent client I have ever used&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Nautilus&lt;/strong&gt;: decent GUI file manager&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;FileZilla&lt;/strong&gt;: I should really find something nicer for my SFTP needs&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://fileroller.sourceforge.net"&gt;File Roller&lt;/a&gt;: nice and simple GUI archive manager&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;miscellaneous tools&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;strong&gt;dwm&lt;/strong&gt;: &lt;a class="reference external" href="http://tshepang.net/my-current-desktop-setup"&gt;replaced GNOME as my primary desktop environment&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://tmux.sourceforge.net"&gt;tmux&lt;/a&gt;: amazingly powerful, but I wish it had less rendering bugs&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;head&lt;/strong&gt; and &lt;strong&gt;tail&lt;/strong&gt;: included in GNU coreutils suite of tools&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.greenwoodsoftware.com/less"&gt;less&lt;/a&gt;: indispensable!&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Minicom&lt;/strong&gt;: use this for some ancient setups at work, for some clients&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;OpenSSH&lt;/strong&gt;: duh!&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://github.com/joelthelion/autojump"&gt;autojump&lt;/a&gt;: makes navigating the filesystem a joy&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://fabfile.org"&gt;Fabric&lt;/a&gt;: I use it to build and deploy my blogs... it's some sort of
-replacement for shell scripting&lt;/li&gt;
-&lt;li&gt;VirtualBox: pretty much the only virtualisation tool I use;
-My use is extensive... I often leave a virtual machine running for days&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="list"></category></entry><entry><title>Rust 'collect' function rocks!</title><link href="http://tshepang.net/rust-collect-function-rocks" rel="alternate"></link><updated>2015-03-20T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-03-20:rust-collect-function-rocks</id><summary type="html">&lt;p&gt;Here is one way to populate a Vec with some data:&lt;/p&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust 'collect' function rocks!</title><link href="http://tshepang.net/rust-collect-function-rocks" rel="alternate"></link><updated>2015-03-20T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-03-20:rust-collect-function-rocks</id><summary type="html">&lt;p&gt;Here is one way to populate a Vec with some data:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 let mut vector = Vec::new();
 for n in 0..COUNT {
