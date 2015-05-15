@@ -1,5 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 21 Apr 2015 03:04:28 +0200</lastBuildDate><item><title>FLOSS I use a-lot</title><link>http://tshepang.net/floss-i-use-a-lot</link><description>&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 15 May 2015 19:53:56 +0200</lastBuildDate><item><title>what I like about Rust</title><link>http://tshepang.net/what-i-like-about-rust</link><description>&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Ambitious: the aim of being memory safe without the use of a garbage
+collector, allowing it to maintain C++ execution speeds.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Naming conventions:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;name_with_underscores&lt;/tt&gt; for variable and function names&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;HttpRequest&lt;/tt&gt; instead of &lt;tt class="docutils literal"&gt;HTTPRequest&lt;/tt&gt; for type names&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Error reporting: compile errors are the best I've seen (though I've
+only really seen those of C and C++); they are even color-coded!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;2 short keywords:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;fn&lt;/tt&gt; for function declarations&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;use&lt;/tt&gt;, instead of &lt;tt class="docutils literal"&gt;using&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;import&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;The semicolon rule: I initially found it surprising that omitting a
+semicolon after a value is shorthand for returning. I appreciate it
+now... it's quite nifty, and I in fact now find &lt;tt class="docutils literal"&gt;return&lt;/tt&gt;
+statements ugly.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;The &lt;tt class="docutils literal"&gt;match&lt;/tt&gt; statement is kool (exhaustiveness check, no
+fall-through, and nice syntax), and makes &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;if..else&lt;/span&gt;&lt;/tt&gt; chains look
+ugly.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Allowing a trailing comma after a list of items, which is really
+great for copy-pasting and diffs.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Packaging conventions: the build tool, Cargo, enforces that all
+build sources (which may include documentation) are placed in &lt;cite&gt;src/&lt;/cite&gt;
+in the root of a source distribution.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;A fast-paced and time-based release cycle: a stable release will be
+made every 6 weeks, which is truly ambitious for a programming
+language.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Development process:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;No one, including the Core Team, pushed to the Rust tree. Each
+person gets their changes reviewed first, and they mostly get
+approved by someone else.&lt;/li&gt;
+&lt;li&gt;Merging the changes to the tree is nearly always done via a continuous
+integration system which first ensures that each change passes all
+automated tests.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Allows one to redefine variables, even with different types:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+fn main() {
+    let foo = 10;
+    let foo = &amp;quot;ten&amp;quot;;
+}
+&lt;/pre&gt;
+&lt;p&gt;This is convenient.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Fri, 15 May 2015 19:53:56 +0200</pubDate><guid>tag:tshepang.net,2015-05-15:what-i-like-about-rust</guid><category>Rust</category></item><item><title>FLOSS I use a-lot</title><link>http://tshepang.net/floss-i-use-a-lot</link><description>&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
 There is &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;a separate post&lt;/a&gt; for those.&lt;/p&gt;
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/p&gt;
@@ -59,76 +118,7 @@ replacement for shell scripting&lt;/li&gt;
 My use is extensive... I often leave a virtual machine running for days&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://rg3.github.io/youtube-dl"&gt;youtube-dl&lt;/a&gt;: I prefer watching videos with VLC&lt;/li&gt;
 &lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Tue, 21 Apr 2015 03:04:28 +0200</pubDate><guid>tag:tshepang.net,2015-04-21:floss-i-use-a-lot</guid><category>list</category></item><item><title>what I like about Rust</title><link>http://tshepang.net/what-i-like-about-rust</link><description>&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;Ambitious: the aim of being memory safe without the use of a garbage
-collector, allowing it to maintain C++ execution speeds.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Naming conventions:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;name_with_underscores&lt;/tt&gt; for variable and function names&lt;/li&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;HttpRequest&lt;/tt&gt; instead of &lt;tt class="docutils literal"&gt;HTTPRequest&lt;/tt&gt; for type names&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Error reporting: compile errors are the best I've seen (though I've
-only really seen those of C and C++); they are even color-coded!&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;2 short keywords:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;fn&lt;/tt&gt; for function declarations&lt;/li&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;use&lt;/tt&gt;, instead of &lt;tt class="docutils literal"&gt;using&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;import&lt;/tt&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;The semicolon rule: I initially found it surprising that omitting a
-semicolon after a value is shorthand for returning. I appreciate it
-now... it's quite nifty, and I in fact now find &lt;tt class="docutils literal"&gt;return&lt;/tt&gt;
-statements ugly.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;The &lt;tt class="docutils literal"&gt;match&lt;/tt&gt; statement is kool (exhaustiveness check, no
-fall-through, and nice syntax), and makes &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;if..else&lt;/span&gt;&lt;/tt&gt; chains look
-ugly.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Allowing a trailing comma after a list of items, which is really
-great for copy-pasting and diffs.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Packaging conventions: the build tool, Cargo, enforces that all
-build sources (which may include documentation) are placed in &lt;cite&gt;src/&lt;/cite&gt;
-in the root of a source distribution.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;A fast-paced and time-based release cycle: a stable release will be
-made every 6 weeks, which is truly ambitious for a programming
-language.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Development process:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;No one, including the Core Team, push to the Rust tree. Each
-person gets their changes reviewed first, and they mostly get
-approve by someone else.&lt;/li&gt;
-&lt;li&gt;Merging the changes to the is nearly always done via a continuous
-integration system which first ensures that change passes all
-automated tests.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Allows one to redefine variables, even with different types:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-fn main() {
-    let foo = 10;
-    let foo = &amp;quot;ten&amp;quot;;
-}
-&lt;/pre&gt;
-&lt;p&gt;This is convenient.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;The willingness to do &lt;em&gt;breaking changes&lt;/em&gt;: I have been watching Rust
-development for about a year before its first stable release, and
-the massive upheavals it saw leading to that point is nothing short
-of overwhelming. It was quite a unique (and exciting) experience,
-probably unlike anything in history of public software
-development. This was not easy for a bunch of projects, and even
-worse for non-trivial ones like &lt;a class="reference external" href="https://github.com/servo"&gt;Servo&lt;/a&gt; (which has its own
-sub-ecosystem). I am, however, very glad that it was done... the
-pain was worth having a better language.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sun, 19 Apr 2015 09:00:40 +0200</pubDate><guid>tag:tshepang.net,2015-04-19:what-i-like-about-rust</guid><category>Rust</category></item><item><title>Rust 'collect' function rocks!</title><link>http://tshepang.net/rust-collect-function-rocks</link><description>&lt;p&gt;Here is one way to populate a Vec with some data:&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Tue, 21 Apr 2015 03:04:28 +0200</pubDate><guid>tag:tshepang.net,2015-04-21:floss-i-use-a-lot</guid><category>list</category></item><item><title>Rust 'collect' function rocks!</title><link>http://tshepang.net/rust-collect-function-rocks</link><description>&lt;p&gt;Here is one way to populate a Vec with some data:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 let mut vector = Vec::new();
 for n in 0..COUNT {
