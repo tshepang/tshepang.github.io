@@ -1,5 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-05-15T19:53:56+02:00</updated><entry><title>what I like about Rust</title><link href="http://tshepang.net/what-i-like-about-rust" rel="alternate"></link><updated>2015-05-15T19:53:56+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-05-15:what-i-like-about-rust</id><summary type="html">&lt;ul&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-05-18T00:00:00+02:00</updated><entry><title>Simple code for a slot machine game</title><link href="http://tshepang.net/simple-code-for-a-slot-machine-game" rel="alternate"></link><updated>2015-05-18T00:00:00+02:00</updated><author><name>Anne Jones</name></author><id>tag:tshepang.net,2015-05-18:simple-code-for-a-slot-machine-game</id><summary type="html">&lt;p&gt;Basic knowledge in PHP is extremely useful for a computer
+programmer. PHP is easy to understand and widely used by computer
+programmers around the world. There are &lt;a class="reference external" href="http://www.homeandlearn.co.uk/php/php.html"&gt;plenty of tutorials on the
+web&lt;/a&gt; that you can check out in order to have basic knowledge of PHP
+and if you’re interested in creating a very simple game using this
+language, this article is for you.&lt;/p&gt;
+&lt;p&gt;Slot machines are one of the oldest and most popular games around the
+world. According to figures, slot machine revenue in Macau – the new
+mecca of gaming – reached &lt;a class="reference external" href="http://www.macauhub.com.mo/en/2014/01/16/macau%E2%80%99s-gaming-and-gambling-revenues-total-us45-233-billion-in-2013"&gt;more than $1.70 billion last year&lt;/a&gt;, and
+is predicted to become a $3 billion industry by the end of 2015.&lt;/p&gt;
+&lt;p&gt;Being in a lucrative business means cutthroat competition, which is
+why a lot of casino providers today upgrade their services in order to
+have the upper hand against competitors. Entertainment hub &lt;a class="reference external" href="https://www.spingenie.com"&gt;Spin
+Genie&lt;/a&gt;, along with the biggest gaming providers in the UK, are now
+using HTML5 in order to be able to easily port and publish games on
+many platforms. If you’re new to coding, use the code below as a
+stepping-stone in furthering your programming knowledge.&lt;/p&gt;
+&lt;div class="section" id="making-a-three-reeled-slot-machine-game-using-php"&gt;
+&lt;h2&gt;Making a three-reeled slot machine game using PHP&lt;/h2&gt;
+&lt;p&gt;The code we're going to use is from IBM's Developer Works page. If you
+want to learn how to make other games apart from slot machines, you
+can go on ahead and click &lt;a class="reference external" href="http://www.ibm.com/developerworks/library/os-php-gamescripts3"&gt;this link&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Let's begin. First, we must establish the user interface of the game:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$faces = array (&amp;#39;Figure1&amp;#39;, &amp;#39;Figure2&amp;#39;, &amp;#39;Figure3&amp;#39;, &amp;#39;Figure4&amp;#39;, &amp;#39;Figure5&amp;#39;, &amp;#39;Figure6&amp;#39;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can substitute any image you want for the figures: fruits, flags,
+your favorite cartoon hero, anything.  Then, you will have to declare
+the combinations of winning reels. In a traditional slot machine, 3
+images must match a payout line, so write the code like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$payouts = array (&lt;/span&gt;
+&lt;span class="x"&gt;    &amp;#39;Figure1|Figure1|Figure&amp;#39; =&amp;gt; &amp;#39;10&amp;#39;,&lt;/span&gt;
+&lt;span class="x"&gt;    &amp;#39;Figure2| Figure2|Figure2&amp;#39; =&amp;gt; &amp;#39;20&amp;#39;,&lt;/span&gt;
+&lt;span class="x"&gt;    &amp;#39;Figure3|Figure3|Figure3&amp;#39; =&amp;gt; &amp;#39;25&amp;#39;,&lt;/span&gt;
+&lt;span class="x"&gt;    &amp;#39;Figure4|Figure4|Figure4&amp;#39; =&amp;gt; &amp;#39;35&amp;#39;,&lt;/span&gt;
+&lt;span class="x"&gt;    &amp;#39;Figure5|Figure5|Figure5&amp;#39; =&amp;gt; &amp;#39;50&amp;#39;,&lt;/span&gt;
+&lt;span class="x"&gt;    &amp;#39;Figure6|Figure6|Figure6&amp;#39; =&amp;gt; &amp;#39;200&amp;#39;,&lt;/span&gt;
+&lt;span class="x"&gt;);&lt;/span&gt;
+
+&lt;span class="x"&gt;if (isset($payouts[$result1.&amp;#39;|&amp;#39;.$result2.&amp;#39;|&amp;#39;.$result3])) {&lt;/span&gt;
+&lt;span class="x"&gt;    // give the payout&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Let's make the reels spin like a real slot machine. Traditional slots
+usually have the first and third reels spin in one direction, while
+the second reel spins in the other.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$wheel1 = array();&lt;/span&gt;
+&lt;span class="x"&gt;foreach ($faces as $face) {&lt;/span&gt;
+&lt;span class="x"&gt;    $wheel1[] = $face;&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+&lt;span class="x"&gt;$wheel2 = array_reverse($wheel1);&lt;/span&gt;
+&lt;span class="x"&gt;$wheel3 = $wheel1;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Done! With this, you will be able to create a game that has all the
+elements (reel images, moving reels, and payout lines) of a classic
+Vegas slot machine.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;This is a guest post&lt;/p&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>what I like about Rust</title><link href="http://tshepang.net/what-i-like-about-rust" rel="alternate"></link><updated>2015-05-15T19:53:56+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-05-15:what-i-like-about-rust</id><summary type="html">&lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;Ambitious: the aim of being memory safe without the use of a garbage
 collector, allowing it to maintain C++ execution speeds.&lt;/p&gt;
 &lt;/li&gt;
