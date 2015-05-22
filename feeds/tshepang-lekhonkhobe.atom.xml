@@ -8,7 +8,7 @@ This is also a great excuse to write more regularly.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;I read a high quality post titled &lt;a class="reference external" href="http://chrismorgan.info/blog/rust-ownership-the-hard-way.html"&gt;Rust ownership, the hard way&lt;/a&gt;.
 I learned quite a bit going through it, like the meaning of
-&lt;cite&gt;#[derive(Clone, Copy)]&lt;/cite&gt;, which I see a lot but never knew what it
+&lt;tt class="docutils literal"&gt;#[derive(Clone, Copy)]&lt;/tt&gt;, which I see a lot but never knew what it
 meant.
 I also learned that there are 7 ways to introduce a variable
 binding (taking &lt;tt class="docutils literal"&gt;foo&lt;/tt&gt; as the name of that binding):&lt;/p&gt;
