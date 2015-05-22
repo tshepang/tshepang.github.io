@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-05-18T00:00:00+02:00</updated><entry><title>Simple code for a slot machine game</title><link href="http://tshepang.net/simple-code-for-a-slot-machine-game" rel="alternate"></link><updated>2015-05-18T00:00:00+02:00</updated><author><name>Anne Jones</name></author><id>tag:tshepang.net,2015-05-18:simple-code-for-a-slot-machine-game</id><summary type="html">&lt;p&gt;Basic knowledge in PHP is extremely useful for a computer
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-05-21T00:00:00+02:00</updated><entry><title>Rust week of 2015-05-15</title><link href="http://tshepang.net/rust-week-of-2015-05-15" rel="alternate"></link><updated>2015-05-21T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-05-21:rust-week-of-2015-05-15</id><summary type="html">&lt;p&gt;This is the first of what I intend to be a weekly series of posts
+related to my favorite programming language.  I here take Rust weeks
+to begin each Friday, since Stable releases of the Rust distribution
+(language and included libraries) are to be released on that week day.
+This is also a great excuse to write more regularly.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;I read a high quality post titled &lt;a class="reference external" href="http://chrismorgan.info/blog/rust-ownership-the-hard-way.html"&gt;Rust ownership, the hard way&lt;/a&gt;.
+I learned quite a bit going through it, like the meaning of
+&lt;cite&gt;#[derive(Clone, Copy)]&lt;/cite&gt;, which I see a lot but never knew what it
+meant.
+I also learned that there are 7 ways to introduce a variable
+binding (taking &lt;tt class="docutils literal"&gt;foo&lt;/tt&gt; as the name of that binding):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+let foo ...
+for foo in ... (for loop)
+foo =&amp;gt; ... (match block)
+if let foo = ... (if block)
+while let foo = ... (while loop)
+fn func(foo: ... (function argument)
+| foo | ... (closure argument)
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;I &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/25629"&gt;submitted&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/25656"&gt;some&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/25659"&gt;documentation&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/25666"&gt;improvements&lt;/a&gt;. The latter one
+was especially time-consuming, but it helped me explore the
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;std::path&lt;/span&gt;&lt;/tt&gt; module.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="Rust"></category></entry><entry><title>Simple code for a slot machine game</title><link href="http://tshepang.net/simple-code-for-a-slot-machine-game" rel="alternate"></link><updated>2015-05-18T00:00:00+02:00</updated><author><name>Anne Jones</name></author><id>tag:tshepang.net,2015-05-18:simple-code-for-a-slot-machine-game</id><summary type="html">&lt;p&gt;Basic knowledge in PHP is extremely useful for a computer
 programmer. PHP is easy to understand and widely used by computer
 programmers around the world. There are &lt;a class="reference external" href="http://www.homeandlearn.co.uk/php/php.html"&gt;plenty of tutorials on the
 web&lt;/a&gt; that you can check out in order to have basic knowledge of PHP
