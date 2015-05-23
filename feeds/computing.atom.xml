@@ -1601,15 +1601,15 @@ hg log --no-merges --patch --stat --verbose
 git log --no-merges --patch --stat
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Here are the relevant BASH aliases:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vb&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(~/projects/scripts/vcs.py --branch)&amp;#39;&lt;/span&gt;
-&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vd&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(~/projects/scripts/vcs.py --diff)&amp;#39;&lt;/span&gt;
-&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vl&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(~/projects/scripts/vcs.py --log)&amp;#39;&lt;/span&gt;
-&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vp&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(~/projects/scripts/vcs.py --push)&amp;#39;&lt;/span&gt;
-&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(~/projects/scripts/vcs.py --status)&amp;#39;&lt;/span&gt;
-&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vu&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(~/projects/scripts/vcs.py --pull)&amp;#39;&lt;/span&gt;
-&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vc&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(~/projects/scripts/vcs.py --commit)&amp;#39;&lt;/span&gt;
-&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vo&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(~/projects/scripts/vcs.py --checkout)&amp;#39;&lt;/span&gt;
-&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vr&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(~/projects/scripts/vcs.py --revert)&amp;#39;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vb&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(~/scripts/vcs.py --branch)&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vd&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(~/scripts/vcs.py --diff)&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vl&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(~/scripts/vcs.py --log)&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vp&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(~/scripts/vcs.py --push)&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(~/scripts/vcs.py --status)&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vu&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(~/scripts/vcs.py --pull)&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vc&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(~/scripts/vcs.py --commit)&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vo&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(~/scripts/vcs.py --checkout)&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;vr&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$(~/scripts/vcs.py --revert)&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This makes my life so much easier, since I no longer have to care
 which VCS I'm on, at least for the most common of commands. I am
