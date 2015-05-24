@@ -84,44 +84,40 @@
 well-written post, <a class="reference external" href="http://blog.rust-lang.org/2015/05/11/traits.html">Abstraction without overhead: traits in
 Rust</a>. For example, the can be used add methods, even to existing
 types. Here is a demonstration:</p>
-<pre class="literal-block">
-trait Invert {
-    fn invert(&amp;self) -&gt; f64;
-}
+<div class="highlight"><pre><span class="k">trait</span><span class="w"> </span><span class="n">Invert</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">fn</span><span class="w"> </span><span class="n">invert</span><span class="p">(</span><span class="o">&amp;</span><span class="bp">self</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">f64</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-impl Invert for i32 {
-    fn invert(&amp;self) -&gt; f64 {
-        1.0/(*self as f64)
-    }
-}
+<span class="k">impl</span><span class="w"> </span><span class="n">Invert</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">fn</span><span class="w"> </span><span class="n">invert</span><span class="p">(</span><span class="o">&amp;</span><span class="bp">self</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">f64</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="mf">1.0</span><span class="o">/</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="kt">f64</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-fn main() {
-    let foo = 10_i32;
-    assert_eq!(foo.invert(), 0.1);
-}
-</pre>
+<span class="k">fn</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10_</span><span class="k">i32</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">assert_eq</span><span class="o">!</span><span class="p">(</span><span class="n">foo</span><span class="p">.</span><span class="n">invert</span><span class="p">(),</span><span class="w"> </span><span class="mf">0.1</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
 <p>Another example is that one can limit the type of arguments accepted
 by a function, though it uses something of an ugly syntax:</p>
-<pre class="literal-block">
-fn print_inverse&lt;T: Invert&gt;(foo: T) {
-    println!(&quot;Inverse: {}&quot;, foo.invert());
-}
-</pre>
+<div class="highlight"><pre><span class="k">fn</span><span class="w"> </span><span class="n">print_inverse</span><span class="o">&lt;</span><span class="n">T</span><span class="o">:</span><span class="w"> </span><span class="n">Invert</span><span class="o">&gt;</span><span class="p">(</span><span class="n">foo</span><span class="o">:</span><span class="w"> </span><span class="n">T</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nb">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Inverse: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">foo</span><span class="p">.</span><span class="n">invert</span><span class="p">());</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
 <p>The <tt class="docutils literal">&lt;T: Invert&gt;</tt> means this function will only accept <tt class="docutils literal">foo</tt>
 that implements the <tt class="docutils literal">Invert</tt> trait.
 You can check by calling it with and <tt class="docutils literal">i32</tt>, in which it will
 succeed:</p>
-<pre class="literal-block">
-print_inverse(10_i32);
-</pre>
+<div class="highlight"><pre><span class="n">print_inverse</span><span class="p">(</span><span class="mi">10_</span><span class="k">i32</span><span class="p">);</span><span class="w"></span>
+</pre></div>
 <p>Output:</p>
 <pre class="literal-block">
 Inverse: 0.1
 </pre>
 <p>Any other type will fail:</p>
-<pre class="literal-block">
-print_inverse(10_f64);
-</pre>
+<div class="highlight"><pre><span class="n">print_inverse</span><span class="p">(</span><span class="mi">10_</span><span class="k">f64</span><span class="p">);</span><span class="w"></span>
+</pre></div>
 <p>Output:</p>
 <pre class="literal-block">
 the trait `Invert` is not implemented for the type `f64` [E0277]
@@ -129,13 +125,12 @@ the trait `Invert` is not implemented for the type `f64` [E0277]
 <p>This allows for a feature named generics, where one can use multiple
 types for the same function. For example, that error will disappear
 if you got this:</p>
-<pre class="literal-block">
-impl Invert for f64 {
-    fn invert(&amp;self) -&gt; f64 {
-        1.0/(*self)
-    }
-}
-</pre>
+<div class="highlight"><pre><span class="k">impl</span><span class="w"> </span><span class="n">Invert</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="kt">f64</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">fn</span><span class="w"> </span><span class="n">invert</span><span class="p">(</span><span class="o">&amp;</span><span class="bp">self</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">f64</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="mf">1.0</span><span class="o">/</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
 </li>
 <li><p class="first">I bumped onto <a class="reference external" href="http://stackoverflow.com/q/30413090/321731">an oddity regarding 'pow' method</a>... there is no fallback.</p>
 </li>
