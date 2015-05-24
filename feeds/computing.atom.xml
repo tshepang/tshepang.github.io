@@ -1,5 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-05-21T00:00:00+02:00</updated><entry><title>Rust week of 2015-05-15</title><link href="http://tshepang.net/rust-week-of-2015-05-15" rel="alternate"></link><updated>2015-05-21T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-05-21:rust-week-of-2015-05-15</id><summary type="html">&lt;p&gt;This is the first of what I intend to be a weekly series of posts
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-05-25T00:17:57+02:00</updated><entry><title>what I like about Rust</title><link href="http://tshepang.net/what-i-like-about-rust" rel="alternate"></link><updated>2015-05-25T00:17:57+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-05-25:what-i-like-about-rust</id><summary type="html">&lt;ul class="simple"&gt;
+&lt;li&gt;Ambitious: the aim of being memory safe without the use of a garbage
+collector, allowing it to maintain C++ execution speeds.&lt;/li&gt;
+&lt;li&gt;Naming conventions:&lt;ul&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;name_with_underscores&lt;/tt&gt; for variable and function names&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;HttpRequest&lt;/tt&gt; instead of &lt;tt class="docutils literal"&gt;HTTPRequest&lt;/tt&gt; for type names&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Error reporting: compile errors are the best I've seen (though I've
+only really seen those of C and C++); they are even color-coded!&lt;/li&gt;
+&lt;li&gt;2 short keywords:&lt;ul&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;fn&lt;/tt&gt; for function declarations&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;use&lt;/tt&gt;, instead of &lt;tt class="docutils literal"&gt;using&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;import&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The semicolon rule: I initially found it surprising that omitting a
+semicolon after a value is shorthand for returning. I appreciate it
+now... it's quite nifty, and I in fact now find &lt;tt class="docutils literal"&gt;return&lt;/tt&gt;
+statements ugly.&lt;/li&gt;
+&lt;li&gt;The &lt;tt class="docutils literal"&gt;match&lt;/tt&gt; statement is kool (exhaustiveness check, no
+fall-through, and nice syntax), and makes &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;if..else&lt;/span&gt;&lt;/tt&gt; chains look
+ugly.&lt;/li&gt;
+&lt;li&gt;Allowing a trailing comma after a list of items, which is really
+great for copy-pasting and diffs.&lt;/li&gt;
+&lt;li&gt;Packaging conventions: the build tool, Cargo, enforces that all
+build sources (which may include documentation) are placed in &lt;cite&gt;src/&lt;/cite&gt;
+in the root of a source distribution.&lt;/li&gt;
+&lt;li&gt;A fast-paced and time-based release cycle: a stable release will be
+made every 6 weeks, which is truly ambitious for a programming
+language.&lt;/li&gt;
+&lt;li&gt;Development process:&lt;ul&gt;
+&lt;li&gt;No one, including the Core Team, pushed to the Rust tree. Each
+person gets their changes reviewed first, and they mostly get
+approved by someone else.&lt;/li&gt;
+&lt;li&gt;Merging the changes to the tree is nearly always done via a continuous
+integration system which first ensures that each change passes all
+automated tests.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Allows one to redefine variables, even with different types:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;fn&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ten&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="n"&gt;This&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;is&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;convenient&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust week of 2015-05-22</title><link href="http://tshepang.net/rust-week-of-2015-05-22" rel="alternate"></link><updated>2015-05-24T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-05-24:rust-week-of-2015-05-22</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;I got some clarity on the concept of Traits by re-reading the
+well-written post, &lt;a class="reference external" href="http://blog.rust-lang.org/2015/05/11/traits.html"&gt;Abstraction without overhead: traits in
+Rust&lt;/a&gt;. For example, the can be used add methods, even to existing
+types. Here is a demonstration:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+trait Invert {
+    fn invert(&amp;amp;self) -&amp;gt; f64;
+}
+
+impl Invert for i32 {
+    fn invert(&amp;amp;self) -&amp;gt; f64 {
+        1.0/(*self as f64)
+    }
+}
+
+fn main() {
+    let foo = 10_i32;
+    assert_eq!(foo.invert(), 0.1);
+}
+&lt;/pre&gt;
+&lt;p&gt;Another example is that one can limit the type of arguments accepted
+by a function, though it uses something of an ugly syntax:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+fn print_inverse&amp;lt;T: Invert&amp;gt;(foo: T) {
+    println!(&amp;quot;Inverse: {}&amp;quot;, foo.invert());
+}
+&lt;/pre&gt;
+&lt;p&gt;The &lt;tt class="docutils literal"&gt;&amp;lt;T: Invert&amp;gt;&lt;/tt&gt; means this function will only accept &lt;tt class="docutils literal"&gt;foo&lt;/tt&gt;
+that implements the &lt;tt class="docutils literal"&gt;Invert&lt;/tt&gt; trait.
+You can check by calling it with and &lt;tt class="docutils literal"&gt;i32&lt;/tt&gt;, in which it will
+succeed:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+print_inverse(10_i32);
+&lt;/pre&gt;
+&lt;p&gt;Output:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Inverse: 0.1
+&lt;/pre&gt;
+&lt;p&gt;Any other type will fail:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+print_inverse(10_f64);
+&lt;/pre&gt;
+&lt;p&gt;Output:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+the trait `Invert` is not implemented for the type `f64` [E0277]
+&lt;/pre&gt;
+&lt;p&gt;This allows for a feature named generics, where one can use multiple
+types for the same function. For example, that error will disappear
+if you got this:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+impl Invert for f64 {
+    fn invert(&amp;amp;self) -&amp;gt; f64 {
+        1.0/(*self)
+    }
+}
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;I bumped onto &lt;a class="reference external" href="http://stackoverflow.com/q/30413090/321731"&gt;an oddity regarding 'pow' method&lt;/a&gt;... there is no fallback.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;I found that converting a char to a String (or &amp;amp;str) is &lt;a class="reference external" href="http://stackoverflow.com/a/28003842/321731"&gt;not as obvious as I hoped&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;I read some of &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;std::path&lt;/span&gt;&lt;/tt&gt; code which resulted in &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/25736"&gt;some small changes&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;I re-discovered the convenience function, &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;Iterator::cloned&lt;/span&gt;&lt;/tt&gt;, and
+submitted two related &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/25756"&gt;documentation&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/25758"&gt;improvements&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust week of 2015-05-15</title><link href="http://tshepang.net/rust-week-of-2015-05-15" rel="alternate"></link><updated>2015-05-23T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-05-23:rust-week-of-2015-05-15</id><summary type="html">&lt;p&gt;This is the first of what I intend to be a weekly series of posts
 related to my favorite programming language.  I here take Rust weeks
 to begin each Friday, since Stable releases of the Rust distribution
 (language and included libraries) are to be released on that week day.
@@ -24,7 +140,7 @@ fn func(foo: ... (function argument)
 &lt;/li&gt;
 &lt;li&gt;&lt;p class="first"&gt;I &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/25629"&gt;submitted&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/25656"&gt;some&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/25659"&gt;documentation&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/25666"&gt;improvements&lt;/a&gt;. The latter one
 was especially time-consuming, but it helped me explore the
-&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;std::path&lt;/span&gt;&lt;/tt&gt; module.&lt;/p&gt;
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;std::path&lt;/span&gt;&lt;/tt&gt; module. It even led me to bump onto &lt;a class="reference external" href="https://github.com/rust-lang/rust/issues/25673"&gt;a rustdoc bug&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 </summary><category term="Rust"></category></entry><entry><title>Simple code for a slot machine game</title><link href="http://tshepang.net/simple-code-for-a-slot-machine-game" rel="alternate"></link><updated>2015-05-18T00:00:00+02:00</updated><author><name>Anne Jones</name></author><id>tag:tshepang.net,2015-05-18:simple-code-for-a-slot-machine-game</id><summary type="html">&lt;p&gt;Basic knowledge in PHP is extremely useful for a computer
@@ -84,66 +200,7 @@ elements (reel images, moving reels, and payout lines) of a classic
 Vegas slot machine.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;This is a guest post by Anne Jones&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>what I like about Rust</title><link href="http://tshepang.net/what-i-like-about-rust" rel="alternate"></link><updated>2015-05-15T19:53:56+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-05-15:what-i-like-about-rust</id><summary type="html">&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;Ambitious: the aim of being memory safe without the use of a garbage
-collector, allowing it to maintain C++ execution speeds.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Naming conventions:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;name_with_underscores&lt;/tt&gt; for variable and function names&lt;/li&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;HttpRequest&lt;/tt&gt; instead of &lt;tt class="docutils literal"&gt;HTTPRequest&lt;/tt&gt; for type names&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Error reporting: compile errors are the best I've seen (though I've
-only really seen those of C and C++); they are even color-coded!&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;2 short keywords:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;fn&lt;/tt&gt; for function declarations&lt;/li&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;use&lt;/tt&gt;, instead of &lt;tt class="docutils literal"&gt;using&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;import&lt;/tt&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;The semicolon rule: I initially found it surprising that omitting a
-semicolon after a value is shorthand for returning. I appreciate it
-now... it's quite nifty, and I in fact now find &lt;tt class="docutils literal"&gt;return&lt;/tt&gt;
-statements ugly.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;The &lt;tt class="docutils literal"&gt;match&lt;/tt&gt; statement is kool (exhaustiveness check, no
-fall-through, and nice syntax), and makes &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;if..else&lt;/span&gt;&lt;/tt&gt; chains look
-ugly.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Allowing a trailing comma after a list of items, which is really
-great for copy-pasting and diffs.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Packaging conventions: the build tool, Cargo, enforces that all
-build sources (which may include documentation) are placed in &lt;cite&gt;src/&lt;/cite&gt;
-in the root of a source distribution.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;A fast-paced and time-based release cycle: a stable release will be
-made every 6 weeks, which is truly ambitious for a programming
-language.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Development process:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;No one, including the Core Team, pushed to the Rust tree. Each
-person gets their changes reviewed first, and they mostly get
-approved by someone else.&lt;/li&gt;
-&lt;li&gt;Merging the changes to the tree is nearly always done via a continuous
-integration system which first ensures that each change passes all
-automated tests.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Allows one to redefine variables, even with different types:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-fn main() {
-    let foo = 10;
-    let foo = &amp;quot;ten&amp;quot;;
-}
-&lt;/pre&gt;
-&lt;p&gt;This is convenient.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="Rust"></category></entry><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2015-04-21T03:04:28+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-04-21:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
+</summary></entry><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2015-04-21T03:04:28+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-04-21:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
 There is &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;a separate post&lt;/a&gt; for those.&lt;/p&gt;
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/p&gt;
@@ -204,43 +261,40 @@ My use is extensive... I often leave a virtual machine running for days&lt;/li&g
 &lt;li&gt;&lt;a class="reference external" href="http://rg3.github.io/youtube-dl"&gt;youtube-dl&lt;/a&gt;: I prefer watching videos with VLC&lt;/li&gt;
 &lt;/ul&gt;
 </summary><category term="list"></category></entry><entry><title>Rust 'collect' function rocks!</title><link href="http://tshepang.net/rust-collect-function-rocks" rel="alternate"></link><updated>2015-03-20T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-03-20:rust-collect-function-rocks</id><summary type="html">&lt;p&gt;Here is one way to populate a Vec with some data:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-let mut vector = Vec::new();
-for n in 0..COUNT {
-    vector.push(n);
-};
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;mut&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;vector&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Vec&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;0.&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;COUNT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;vector&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;push&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Alternatively, one can simply do this:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-let vector = (0..COUNT).collect::&amp;lt;Vec&amp;lt;_&amp;gt;&amp;gt;()
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;vector&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;COUNT&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;collect&lt;/span&gt;&lt;span class="o"&gt;::&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Vec&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;The function is also about twice as fast, according to the following
 benchmark:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-#![feature(test)]
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#![feature(test)]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-extern crate test;
+&lt;span class="k"&gt;extern&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;crate&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-static COUNT: i32 = 100;
+&lt;span class="k"&gt;static&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;COUNT&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;i32&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-#[bench]
-fn collect(b: &amp;amp;mut test::Bencher) {
-    b.iter(|| {
-        (0..COUNT).collect::&amp;lt;Vec&amp;lt;_&amp;gt;&amp;gt;()
-    });
-}
+&lt;span class="cp"&gt;#[bench]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="k"&gt;fn&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;collect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="k"&gt;mut&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;Bencher&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;iter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;||&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;COUNT&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;collect&lt;/span&gt;&lt;span class="o"&gt;::&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Vec&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;});&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-#[bench]
-fn no_collect(b: &amp;amp;mut test::Bencher) {
-    b.iter(|| {
-        let mut vector = Vec::new();
-        for n in (0..COUNT) {
-            vector.push(n);
-        };
-        vector
-    });
-}
-&lt;/pre&gt;
+&lt;span class="cp"&gt;#[bench]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="k"&gt;fn&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;no_collect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="k"&gt;mut&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;Bencher&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;iter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;||&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;mut&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;vector&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Vec&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;COUNT&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="n"&gt;vector&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;push&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="n"&gt;vector&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;});&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Here is the output of &lt;tt class="docutils literal"&gt;cargo bench&lt;/tt&gt;:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 test collect    ... bench:       164 ns/iter (+/- 7)
@@ -411,27 +465,26 @@ especially since a few of these honorable developers actually
 generated some new triggers along the way.&lt;/p&gt;
 </summary><category term="developer-of-note"></category></entry><entry><title>Linux threads are not deterministic</title><link href="http://tshepang.net/linux-threads-are-not-deterministic" rel="alternate"></link><updated>2015-01-07T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-01-07:linux-threads-are-not-deterministic</id><summary type="html">&lt;p&gt;By deterministic, I am referring to their scheduling. Here's an
 example in Rust:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-use std::thread::Thread;
-use std::sync::mpsc::channel;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;use&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;thread&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;Thread&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="kn"&gt;use&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;sync&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;mpsc&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;channel&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-fn main() {
-    let thread_count = 4u;
-    let (tx, rx) = channel();
+&lt;span class="k"&gt;fn&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;thread_count&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tx&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;rx&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;channel&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-    for x in range(0, thread_count) {
-        let tx = tx.clone();
-        Thread::spawn(move || {
-            println!(&amp;quot;t{} tx&amp;quot;, x);
-            tx.send(x).unwrap();
-        });
-    }
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;thread_count&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;tx&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;tx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;clone&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="n"&gt;Thread&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="nb"&gt;spawn&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;move&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;||&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="nb"&gt;println&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;t{} tx&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="n"&gt;tx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;send&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;unwrap&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;});&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-    for _ in range(0, thread_count) {
-        println!(&amp;quot;rx from t{}&amp;quot;, rx.recv().unwrap());
-    }
-}
-&lt;/pre&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;thread_count&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nb"&gt;println&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;rx from t{}&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;rx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;recv&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="n"&gt;unwrap&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;What I'm doing there is create 4 child threads, from which I send messages
 that are to be captured by the main thread.&lt;/p&gt;
 &lt;p&gt;I built and ran it with:&lt;/p&gt;
@@ -468,13 +521,12 @@ looks for an available slot, running each thread on a best-effort
 basis. My guess is that a more real-time kernel would be more
 predictable.&lt;/p&gt;
 </summary><category term="Rust"></category></entry><entry><title>various Rust ways of displaying stuff to the screen</title><link href="http://tshepang.net/various-rust-ways-of-displaying-stuff-to-the-screen" rel="alternate"></link><updated>2014-12-29T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-12-29:various-rust-ways-of-displaying-stuff-to-the-screen</id><summary type="html">&lt;p&gt;Here is a simple way of doing it:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-use std::io;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;use&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-fn main() {
-    io::stdout().write_line(&amp;quot;some output&amp;quot;);
-}
-&lt;/pre&gt;
+&lt;span class="k"&gt;fn&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="n"&gt;write_line&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;some output&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;I do however get this warning when I build it:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 $ rustc main.rs
@@ -483,25 +535,23 @@ main.rs:4     io::stdout().write_ln(b&amp;quot;some output&amp;quot;);
               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 &lt;/pre&gt;
 &lt;p&gt;Let's kill it:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-use std::io;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;use&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-fn main() {
-    io::stdout().write_line(&amp;quot;some output&amp;quot;).unwrap();
-}
-&lt;/pre&gt;
+&lt;span class="k"&gt;fn&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="n"&gt;write_line&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;some output&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;unwrap&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;What I did is is call &lt;tt class="docutils literal"&gt;unwrap&lt;/tt&gt; which basically asks our operation
 to &lt;tt class="docutils literal"&gt;panic!&lt;/tt&gt; in case of some error. Think of it as a shortcut of:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-use std::io;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;use&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-fn main() {
-    match io::stdout().write_line(&amp;quot;some output&amp;quot;) {
-        Ok(_) =&amp;gt; (),
-        Err(_) =&amp;gt; panic!(),
-    }
-}
-&lt;/pre&gt;
+&lt;span class="k"&gt;fn&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;match&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="n"&gt;write_line&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;some output&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nb"&gt;Ok&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nb"&gt;Err&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;panic&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Some docs:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://doc.rust-lang.org/std/io/trait.Writer.html#tymethod.write_line"&gt;std::io::Writer::write_line&lt;/a&gt;&lt;/li&gt;
@@ -510,31 +560,28 @@ fn main() {
 &lt;/ul&gt;
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;What if we wanted to do some string formatting:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-use std::io;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;use&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-fn main() {
-    let second_word = &amp;quot;output&amp;quot;;
-    let text = format!(&amp;quot;some {}&amp;quot;, second_word);
-    io::stdout().write_line(text.as_slice()).unwrap();
-}
-&lt;/pre&gt;
+&lt;span class="k"&gt;fn&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;second_word&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;output&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;some {}&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;second_word&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="n"&gt;write_line&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;as_slice&lt;/span&gt;&lt;span class="p"&gt;()).&lt;/span&gt;&lt;span class="n"&gt;unwrap&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;But there is a shortcut for the code above:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-use std::io;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;use&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-fn main() {
-    let second_word = &amp;quot;output&amp;quot;;
-    writeln!(&amp;amp;mut io::stdout(), &amp;quot;some {}&amp;quot;, second_word).unwrap();
-}
-&lt;/pre&gt;
+&lt;span class="k"&gt;fn&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;second_word&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;output&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;writeln&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="k"&gt;mut&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;some {}&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;second_word&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;unwrap&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;There is an even shorter shortcut:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-fn main() {
-    let second_word = &amp;quot;output&amp;quot;;
-    println!(&amp;quot;some {}&amp;quot;, second_word);
-}
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;fn&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;second_word&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;output&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;println&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;some {}&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;second_word&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Question to self: do we get a &lt;tt class="docutils literal"&gt;panic!&lt;/tt&gt; if &lt;tt class="docutils literal"&gt;println&lt;/tt&gt; gets an I/O error?&lt;/p&gt;
 &lt;p&gt;Some docs:&lt;/p&gt;
 &lt;ul class="simple"&gt;
@@ -548,13 +595,12 @@ fn main() {
 stderr. There is no simple macro for that (&lt;tt class="docutils literal"&gt;println!&lt;/tt&gt; is for
 stdout). Short of implementing &lt;a class="reference external" href="http://stackoverflow.com/a/27590832/321731"&gt;our own macro&lt;/a&gt;, We'd have to do
 something like the following:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-use std::io;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;use&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-fn main() {
-    writeln!(&amp;amp;mut io::stderr(), &amp;quot;some output&amp;quot;);
-}
-&lt;/pre&gt;
+&lt;span class="k"&gt;fn&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;writeln&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="k"&gt;mut&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;stderr&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;some output&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;You can test that it really goes to stderr by running it like:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 $ ./main &amp;gt; /dev/null

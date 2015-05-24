@@ -80,13 +80,12 @@
 
             
             <p>Here is a simple way of doing it:</p>
-<pre class="literal-block">
-use std::io;
+<div class="highlight"><pre><span class="kn">use</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">io</span><span class="p">;</span><span class="w"></span>
 
-fn main() {
-    io::stdout().write_line(&quot;some output&quot;);
-}
-</pre>
+<span class="k">fn</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">io</span><span class="o">::</span><span class="n">stdout</span><span class="p">().</span><span class="n">write_line</span><span class="p">(</span><span class="s">&quot;some output&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
 <p>I do however get this warning when I build it:</p>
 <pre class="literal-block">
 $ rustc main.rs
@@ -95,25 +94,23 @@ main.rs:4     io::stdout().write_ln(b&quot;some output&quot;);
               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 </pre>
 <p>Let's kill it:</p>
-<pre class="literal-block">
-use std::io;
+<div class="highlight"><pre><span class="kn">use</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">io</span><span class="p">;</span><span class="w"></span>
 
-fn main() {
-    io::stdout().write_line(&quot;some output&quot;).unwrap();
-}
-</pre>
+<span class="k">fn</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">io</span><span class="o">::</span><span class="n">stdout</span><span class="p">().</span><span class="n">write_line</span><span class="p">(</span><span class="s">&quot;some output&quot;</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
 <p>What I did is is call <tt class="docutils literal">unwrap</tt> which basically asks our operation
 to <tt class="docutils literal">panic!</tt> in case of some error. Think of it as a shortcut of:</p>
-<pre class="literal-block">
-use std::io;
+<div class="highlight"><pre><span class="kn">use</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">io</span><span class="p">;</span><span class="w"></span>
 
-fn main() {
-    match io::stdout().write_line(&quot;some output&quot;) {
-        Ok(_) =&gt; (),
-        Err(_) =&gt; panic!(),
-    }
-}
-</pre>
+<span class="k">fn</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">match</span><span class="w"> </span><span class="n">io</span><span class="o">::</span><span class="n">stdout</span><span class="p">().</span><span class="n">write_line</span><span class="p">(</span><span class="s">&quot;some output&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nb">Ok</span><span class="p">(</span><span class="n">_</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">(),</span><span class="w"></span>
+<span class="w">        </span><span class="nb">Err</span><span class="p">(</span><span class="n">_</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">panic</span><span class="o">!</span><span class="p">(),</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
 <p>Some docs:</p>
 <ul class="simple">
 <li><a class="reference external" href="http://doc.rust-lang.org/std/io/trait.Writer.html#tymethod.write_line">std::io::Writer::write_line</a></li>
@@ -122,31 +119,28 @@ fn main() {
 </ul>
 <hr class="docutils" />
 <p>What if we wanted to do some string formatting:</p>
-<pre class="literal-block">
-use std::io;
+<div class="highlight"><pre><span class="kn">use</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">io</span><span class="p">;</span><span class="w"></span>
 
-fn main() {
-    let second_word = &quot;output&quot;;
-    let text = format!(&quot;some {}&quot;, second_word);
-    io::stdout().write_line(text.as_slice()).unwrap();
-}
-</pre>
+<span class="k">fn</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">second_word</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;output&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">format</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;some {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">second_word</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">io</span><span class="o">::</span><span class="n">stdout</span><span class="p">().</span><span class="n">write_line</span><span class="p">(</span><span class="n">text</span><span class="p">.</span><span class="n">as_slice</span><span class="p">()).</span><span class="n">unwrap</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
 <p>But there is a shortcut for the code above:</p>
-<pre class="literal-block">
-use std::io;
+<div class="highlight"><pre><span class="kn">use</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">io</span><span class="p">;</span><span class="w"></span>
 
-fn main() {
-    let second_word = &quot;output&quot;;
-    writeln!(&amp;mut io::stdout(), &quot;some {}&quot;, second_word).unwrap();
-}
-</pre>
+<span class="k">fn</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">second_word</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;output&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">writeln</span><span class="o">!</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">io</span><span class="o">::</span><span class="n">stdout</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;some {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">second_word</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
 <p>There is an even shorter shortcut:</p>
-<pre class="literal-block">
-fn main() {
-    let second_word = &quot;output&quot;;
-    println!(&quot;some {}&quot;, second_word);
-}
-</pre>
+<div class="highlight"><pre><span class="k">fn</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">second_word</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;output&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nb">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;some {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">second_word</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
 <p>Question to self: do we get a <tt class="docutils literal">panic!</tt> if <tt class="docutils literal">println</tt> gets an I/O error?</p>
 <p>Some docs:</p>
 <ul class="simple">
@@ -160,13 +154,12 @@ fn main() {
 stderr. There is no simple macro for that (<tt class="docutils literal">println!</tt> is for
 stdout). Short of implementing <a class="reference external" href="http://stackoverflow.com/a/27590832/321731">our own macro</a>, We'd have to do
 something like the following:</p>
-<pre class="literal-block">
-use std::io;
+<div class="highlight"><pre><span class="kn">use</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">io</span><span class="p">;</span><span class="w"></span>
 
-fn main() {
-    writeln!(&amp;mut io::stderr(), &quot;some output&quot;);
-}
-</pre>
+<span class="k">fn</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">writeln</span><span class="o">!</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">io</span><span class="o">::</span><span class="n">stderr</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;some output&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
 <p>You can test that it really goes to stderr by running it like:</p>
 <pre class="literal-block">
 $ ./main &gt; /dev/null
@@ -227,7 +220,7 @@ some output
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
                 <li><a href="http://tshepang.net/tags.html#rust-ref">Rust
-                    <span>8</span>
+                    <span>9</span>
 </a></li>
             </ul>
 <h4>Stay in Touch</h4>
