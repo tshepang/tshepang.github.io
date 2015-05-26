@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-05-25T00:24:50+02:00</updated><entry><title>what I like about Rust</title><link href="http://tshepang.net/what-i-like-about-rust" rel="alternate"></link><updated>2015-05-25T00:24:50+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-05-25:what-i-like-about-rust</id><summary type="html">&lt;ul&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-05-27T00:11:16+02:00</updated><entry><title>what I like about Rust</title><link href="http://tshepang.net/what-i-like-about-rust" rel="alternate"></link><updated>2015-05-27T00:11:16+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-05-27:what-i-like-about-rust</id><summary type="html">&lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;Ambitious: the aim of being memory safe without the use of a garbage
 collector, allowing it to maintain C++ execution speeds.&lt;/p&gt;
 &lt;/li&gt;
@@ -55,6 +55,16 @@ automated tests.&lt;/li&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This is convenient.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;The amount of iterations its design went through during its pre-1.0
+development, which included numerous breaking changes,
+was... impressive. That's an indication that what resulted is a far
+better design than we could have had. The sheer amount of effort
+taken, which was such a unique experience for me, makes me feel
+grateful (I watched the activity for about year before 1.0 was
+released). I am also grateful for the resilient users who kept up
+with the pain of the frequent changes, for they helped keep the
+language relevant and exciting, while also providing feedback.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 </summary><category term="Rust"></category></entry><entry><title>Linux threads are not deterministic</title><link href="http://tshepang.net/linux-threads-are-not-deterministic" rel="alternate"></link><updated>2015-05-25T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-05-25:linux-threads-are-not-deterministic</id><summary type="html">&lt;p&gt;By deterministic, I am referring to their scheduling. Here's an
