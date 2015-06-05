@@ -1,5 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 27 May 2015 00:11:16 +0200</lastBuildDate><item><title>what I like about Rust</title><link>http://tshepang.net/what-i-like-about-rust</link><description>&lt;ul&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 01 Jun 2015 20:22:21 +0200</lastBuildDate><item><title>most exciting software projects</title><link>http://tshepang.net/most-exciting-software-projects</link><description>&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.rust-lang.org"&gt;Rust&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A programming language meant to replace C++:
+it has better memory safety, but maintains comparable speed.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="https://github.com/servo/servo"&gt;Servo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A browser engine written in Rust.
+It is far more aggressive than the leading web engines of today
+(WebKit and Gecko) in terms of making its operations parallel,
+and should therefore be more responsive.
+An ETA for an Alpha release is sometime in 2015,
+but there is a plan to incorporate one of its components into Gecko
+that same year.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org"&gt;PyPy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It's been alive for over 10 years, but remains among the most
+exciting of all Python projects.&lt;/p&gt;
+&lt;p&gt;I greatly anticipate the stable release of its most visible
+sub-project, &lt;a class="reference external" href="http://pypy.org/tmdonate2.html"&gt;Transactional Memory&lt;/a&gt;.  It's an approach that
+simplifies multi-threaded programming while also bypassing the GIL.
+A very rough ETA for a stable release of this sub-project is
+sometime in 2016.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Mon, 01 Jun 2015 20:22:21 +0200</pubDate><guid>tag:tshepang.net,2015-06-01:most-exciting-software-projects</guid><category>list</category><category>non-Python</category><category>Python</category></item><item><title>Rust week of 2015-05-31</title><link>http://tshepang.net/rust-week-of-2015-05-31</link><description>&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;I was surprised by the somewhat magical Rust type inference:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;fn&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;10&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;match&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nb"&gt;Ok&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nb"&gt;Err&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;assert_eq&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;A more explicit call &lt;tt class="docutils literal"&gt;parse&lt;/tt&gt; call would be
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;string.parse::&amp;lt;i32&amp;gt;()&lt;/span&gt;&lt;/tt&gt;, but the type to be parsed into is
+inferred by the &lt;tt class="docutils literal"&gt;0&lt;/tt&gt; that is returned in the &lt;tt class="docutils literal"&gt;Err(_)&lt;/tt&gt; arm of the
+match, which is an i32. This is some far-reaching shit!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;I submitted &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/25912"&gt;changes&lt;/a&gt; to improve some of &lt;tt class="docutils literal"&gt;str&lt;/tt&gt; documentaton.
+I also &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/25876"&gt;submitted&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/25907"&gt;a&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/25920"&gt;whole&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/25922"&gt;bunch&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/25923"&gt;of&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/25936"&gt;smaller&lt;/a&gt;  &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/25948"&gt;changes&lt;/a&gt;,&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sat, 30 May 2015 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2015-05-30:rust-week-of-2015-05-31</guid><category>Rust</category></item><item><title>what I like about Rust</title><link>http://tshepang.net/what-i-like-about-rust</link><description>&lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;Ambitious: the aim of being memory safe without the use of a garbage
 collector, allowing it to maintain C++ execution speeds.&lt;/p&gt;
 &lt;/li&gt;
@@ -404,33 +451,7 @@ benchmark:&lt;/p&gt;
 test collect    ... bench:       164 ns/iter (+/- 7)
 test no_collect ... bench:       346 ns/iter (+/- 8)
 &lt;/pre&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Fri, 20 Mar 2015 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2015-03-20:rust-collect-function-rocks</guid><category>Rust</category></item><item><title>most exciting software projects</title><link>http://tshepang.net/most-exciting-software-projects</link><description>&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.rust-lang.org"&gt;Rust&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A programming language meant to replace C++:
-it has better memory safety, but maintains comparable speed.
-The first stable release is &lt;a class="reference external" href="http://blog.rust-lang.org/2015/02/13/Final-1.0-timeline.html"&gt;scheduled for 2015-05-15&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="https://github.com/servo/servo"&gt;Servo&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A browser engine written in Rust.
-It is far more aggressive than the leading web engines of today
-(WebKit and Gecko) in terms of making its operations parallel,
-and should therefore be more responsive.
-An ETA for an Alpha release is sometime in 2015,
-but there is a plan to incorporate one of its components into Gecko
-that same year.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org"&gt;PyPy&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;It's been alive for over 10 years, but remains among the most
-exciting of all Python projects.&lt;/p&gt;
-&lt;p&gt;I greatly anticipate the stable release of its most visible
-sub-project, &lt;a class="reference external" href="http://pypy.org/tmdonate2.html"&gt;Transactional Memory&lt;/a&gt;.  It's an approach that
-simplifies multi-threaded programming while also bypassing the GIL.
-A very rough ETA for a stable release of this sub-project is
-sometime in 2016.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sun, 15 Feb 2015 10:00:07 +0200</pubDate><guid>tag:tshepang.net,2015-02-15:most-exciting-software-projects</guid><category>list</category><category>non-Python</category><category>Python</category></item><item><title>a visit to Mozambique</title><link>http://tshepang.net/a-visit-to-mozambique</link><description>&lt;p&gt;Outside my country, South Africa, I have only been to Botswana,
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Fri, 20 Mar 2015 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2015-03-20:rust-collect-function-rocks</guid><category>Rust</category></item><item><title>a visit to Mozambique</title><link>http://tshepang.net/a-visit-to-mozambique</link><description>&lt;p&gt;Outside my country, South Africa, I have only been to Botswana,
 Swaziland, and Lesotho. I recently visited Mozambique, and it feels
 far more different compared. The most notable thing is that Portuguese
 dominates far more than English. It was quite hard to find people we
