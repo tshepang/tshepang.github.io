@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-06-01T20:22:21+02:00</updated><entry><title>most exciting software projects</title><link href="http://tshepang.net/most-exciting-software-projects" rel="alternate"></link><updated>2015-06-01T20:22:21+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-06-01:most-exciting-software-projects</id><summary type="html">&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-06-11T00:00:00+02:00</updated><entry><title>Rust week of 2015-06-05</title><link href="http://tshepang.net/rust-week-of-2015-06-05" rel="alternate"></link><updated>2015-06-11T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-06-11:rust-week-of-2015-06-05</id><summary type="html">&lt;ul class="simple"&gt;
+&lt;li&gt;I submitted &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26105"&gt;a change&lt;/a&gt; to remove a sentence that is not clear in
+the chapter on Generics in Rust Book.&lt;/li&gt;
+&lt;li&gt;Reading the (excellent) &lt;a class="reference external" href="https://doc.rust-lang.org/reference.html#traits"&gt;Traits section of The Rust Reference&lt;/a&gt; led
+me to submit the following improvements:&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26111"&gt;One that removes jarring whitespace&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Two more for improving readability:&lt;ul&gt;
+&lt;li&gt;One by &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26112"&gt;making use of bullets&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Another by &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26113"&gt;avoiding needless abbreviations&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Yet another &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26116"&gt;that adds a link&lt;/a&gt; to the wonderful treatment of the
+trait concept. It was however not accepted, and replaced with &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26118"&gt;one
+that adds the definition inline&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;There was also &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26195"&gt;a typo fix&lt;/a&gt; :)&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="Rust"></category></entry><entry><title>most exciting software projects</title><link href="http://tshepang.net/most-exciting-software-projects" rel="alternate"></link><updated>2015-06-01T20:22:21+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-06-01:most-exciting-software-projects</id><summary type="html">&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.rust-lang.org"&gt;Rust&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;A programming language meant to replace C++:
@@ -186,7 +204,7 @@ were missing it. I also updated the code to run on modern Rust.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p class="first"&gt;I got some clarity on the concept of Traits by re-reading the
 well-written post, &lt;a class="reference external" href="http://blog.rust-lang.org/2015/05/11/traits.html"&gt;Abstraction without overhead: traits in
-Rust&lt;/a&gt;. For example, they can be used add methods, even to existing
+Rust&lt;/a&gt;. For example, they can be used to add methods, even to existing
 types. Here is a demonstration:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;trait&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Invert&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;fn&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;invert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;f64&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
