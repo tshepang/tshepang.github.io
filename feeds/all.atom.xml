@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-06-18T00:00:00+02:00</updated><entry><title>Rust week of 2015-06-12</title><link href="http://tshepang.net/rust-week-of-2015-06-12" rel="alternate"></link><updated>2015-06-18T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-06-18:rust-week-of-2015-06-12</id><summary type="html">&lt;p&gt;I'm the documentation guy, so:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-06-19T00:00:00+02:00</updated><entry><title>Places that Go can't go</title><link href="http://tshepang.net/places-that-go-cant-go" rel="alternate"></link><updated>2015-06-19T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-06-19:places-that-go-cant-go</id><summary type="html">&lt;!--  --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You know I think the things that Rust has to offer, particularly that
+there are places that it can go that Go can't, or at least today in Go
+you can't go easily... (interrupted with laughter)&lt;/p&gt;
+&lt;p class="attribution"&gt;&amp;mdash;&lt;a class="reference external" href="http://devchat.tv/js-jabber/161-jsj-rust-with-david-herman"&gt;A guest on some podcast&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</summary><category term="Rust"></category><category term="quote"></category></entry><entry><title>Rust week of 2015-06-12</title><link href="http://tshepang.net/rust-week-of-2015-06-12" rel="alternate"></link><updated>2015-06-18T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-06-18:rust-week-of-2015-06-12</id><summary type="html">&lt;p&gt;I'm the documentation guy, so:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;I &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26259"&gt;submitted&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26260"&gt;three&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26261"&gt;changes&lt;/a&gt; to the API documentation&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26373"&gt;Two&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26410"&gt;changes&lt;/a&gt; to the README (first time)&lt;/li&gt;
