@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 22 Jun 2015 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2015-06-19</title><link>http://tshepang.net/rust-week-of-2015-06-19</link><description>&lt;p&gt;Work done on the Documentation chapter of the official Rust book:&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 23 Jun 2015 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2015-06-19</title><link>http://tshepang.net/rust-week-of-2015-06-19</link><description>&lt;p&gt;Work done on the Documentation chapter of the official Rust book:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;I submitted a &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26506"&gt;number&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26508"&gt;of&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26509"&gt;changes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;I also found &lt;a class="reference external" href="https://github.com/rust-lang/rust/issues/26507"&gt;misuse of the word, *thing*&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;In addition, &lt;a class="reference external" href="https://internals.rust-lang.org/t/lets-have-a-documentation-policy/2279"&gt;I want Rust to have a documentation policy&lt;/a&gt;&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Mon, 22 Jun 2015 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2015-06-22:rust-week-of-2015-06-19</guid><category>Rust</category></item><item><title>Places that Go can't go</title><link>http://tshepang.net/places-that-go-cant-go</link><description>&lt;!--  --&gt;
+&lt;p&gt;Elsewhere:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;I submitted &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26514"&gt;some small fix&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;I also &lt;a class="reference external" href="https://internals.rust-lang.org/t/lets-have-a-documentation-policy/2279"&gt;want Rust to have a documentation policy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Tue, 23 Jun 2015 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2015-06-23:rust-week-of-2015-06-19</guid><category>Rust</category></item><item><title>Places that Go can't go</title><link>http://tshepang.net/places-that-go-cant-go</link><description>&lt;!--  --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You know I think the things that Rust has to offer, particularly that
 there are places that it can go that Go can't, or at least today in Go
