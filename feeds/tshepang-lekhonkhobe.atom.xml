@@ -6,7 +6,8 @@ I also added &lt;a class="reference external" href="https://github.com/rust-lang
 &lt;ul class="simple"&gt;
 &lt;li&gt;I &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26621"&gt;fixed&lt;/a&gt; one oversight where someone missed removing some obsolete
 doc and annotations while they were removing obsolete code&lt;/li&gt;
-&lt;li&gt;I also &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26622"&gt;fixed&lt;/a&gt; some bad code indents&lt;/li&gt;
+&lt;li&gt;I &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26622"&gt;fixed&lt;/a&gt; some bad code indents&lt;/li&gt;
+&lt;li&gt;I &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26627"&gt;added&lt;/a&gt; an example for reading from stdin&lt;/li&gt;
 &lt;/ul&gt;
 </summary><category term="Rust"></category></entry><entry><title>Rust week of 2015-06-19</title><link href="http://tshepang.net/rust-week-of-2015-06-19" rel="alternate"></link><updated>2015-06-23T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-06-23:rust-week-of-2015-06-19</id><summary type="html">&lt;p&gt;Work done on &lt;a class="reference external" href="https://doc.rust-lang.org/book/documentation.html"&gt;the Documentation chapter&lt;/a&gt; of the official Rust book:&lt;/p&gt;
 &lt;ul class="simple"&gt;
