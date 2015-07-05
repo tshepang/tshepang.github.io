@@ -1,5 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 01 Jul 2015 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2015-06-26</title><link>http://tshepang.net/rust-week-of-2015-06-26</link><description>&lt;p&gt;I &lt;a class="reference external" href="https://github.com/rust-lang/cargo/pull/1754"&gt;removed a sentence&lt;/a&gt; that is not needed from Cargo documentation.
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 05 Jul 2015 11:49:14 +0200</lastBuildDate><item><title>what I like about Rust</title><link>http://tshepang.net/what-i-like-about-rust</link><description>&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Ambitious: the aim of being memory safe without the use of a garbage
+collector, allowing it to maintain C++ execution speeds.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Naming conventions:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;name_with_underscores&lt;/tt&gt; for variable and function names&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;HttpRequest&lt;/tt&gt; instead of &lt;tt class="docutils literal"&gt;HTTPRequest&lt;/tt&gt; for type names&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Error reporting: compile errors are the best I've seen (though I've
+only really seen those of C and C++); they are even color-coded!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;2 short keywords:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;fn&lt;/tt&gt; for function declarations&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;use&lt;/tt&gt;, instead of &lt;tt class="docutils literal"&gt;using&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;import&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;The semicolon rule: I initially found it surprising that omitting a
+semicolon after a value is shorthand for returning. I appreciate it
+now... it's quite nifty, and I in fact now find &lt;tt class="docutils literal"&gt;return&lt;/tt&gt;
+statements ugly.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Traits: they are an elegant way of providing abstract interfaces,
+and are therefore used in generic programming. As an example, a
+function can be made to accept different data types, so long as
+those types implement the given trait (or traits). Gorgeous!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;The &lt;tt class="docutils literal"&gt;match&lt;/tt&gt; statement is kool (exhaustiveness check, no
+fall-through, and nice syntax).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Allowing a trailing comma after a list of items, which is really
+great for copy-pasting and diffs.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Packaging conventions: by default, the build tool, Cargo, ensures that all
+build sources (which may include documentation) are placed in &lt;cite&gt;src/&lt;/cite&gt;
+in the root of a source distribution.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;A fast-paced and time-based release cycle: a stable release will be
+made every 6 weeks, which is truly ambitious for a programming
+language.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Development process:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;No one, including the Core Team, pushes anything to the Rust tree. Each
+person gets their changes reviewed first, and they mostly get
+approved by someone else.&lt;/li&gt;
+&lt;li&gt;Merging the changes to the tree is nearly always done via a continuous
+integration system, which first ensures that each change passes all
+tests.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Allows one to redefine variables, even with different types:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;fn&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ten&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This is convenient.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;The amount of iterations its design went through during its pre-1.0
+development, which included numerous breaking changes,
+was... impressive. That's an indication that what resulted is a far
+better design than we could have had. The sheer amount of effort
+taken, which was such a unique experience for me, makes me feel
+grateful (I watched the activity for about year before 1.0 was
+released). I am also grateful for the resilient users who kept up
+with the pain of the frequent changes, for they helped keep the
+language relevant and exciting, while also providing feedback.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sun, 05 Jul 2015 11:49:14 +0200</pubDate><guid>tag:tshepang.net,2015-07-05:what-i-like-about-rust</guid><category>Rust</category></item><item><title>Rust week of 2015-06-26</title><link>http://tshepang.net/rust-week-of-2015-06-26</link><description>&lt;p&gt;I &lt;a class="reference external" href="https://github.com/rust-lang/cargo/pull/1754"&gt;removed a sentence&lt;/a&gt; that is not needed from Cargo documentation.
 I also added &lt;a class="reference external" href="https://github.com/rust-lang/cargo/pull/1755"&gt;ability to read from $EMAIL environment variable&lt;/a&gt; to the
 &lt;tt class="docutils literal"&gt;cargo new&lt;/tt&gt; command, and &lt;a class="reference external" href="https://github.com/rust-lang/cargo/pull/1756"&gt;fixed a small issue&lt;/a&gt; in the test suite..&lt;/p&gt;
 &lt;p&gt;In the Rust tree:&lt;/p&gt;
@@ -100,75 +172,7 @@ match, which is an i32. This is some far-reaching shit!&lt;/p&gt;
 I also &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/25876"&gt;submitted&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/25907"&gt;a&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/25920"&gt;whole&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/25922"&gt;bunch&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/25923"&gt;of&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/25936"&gt;smaller&lt;/a&gt;  &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/25948"&gt;changes&lt;/a&gt;,&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sat, 30 May 2015 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2015-05-30:rust-week-of-2015-05-31</guid><category>Rust</category></item><item><title>what I like about Rust</title><link>http://tshepang.net/what-i-like-about-rust</link><description>&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;Ambitious: the aim of being memory safe without the use of a garbage
-collector, allowing it to maintain C++ execution speeds.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Naming conventions:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;name_with_underscores&lt;/tt&gt; for variable and function names&lt;/li&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;HttpRequest&lt;/tt&gt; instead of &lt;tt class="docutils literal"&gt;HTTPRequest&lt;/tt&gt; for type names&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Error reporting: compile errors are the best I've seen (though I've
-only really seen those of C and C++); they are even color-coded!&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;2 short keywords:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;fn&lt;/tt&gt; for function declarations&lt;/li&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;use&lt;/tt&gt;, instead of &lt;tt class="docutils literal"&gt;using&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;import&lt;/tt&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;The semicolon rule: I initially found it surprising that omitting a
-semicolon after a value is shorthand for returning. I appreciate it
-now... it's quite nifty, and I in fact now find &lt;tt class="docutils literal"&gt;return&lt;/tt&gt;
-statements ugly.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;The &lt;tt class="docutils literal"&gt;match&lt;/tt&gt; statement is kool (exhaustiveness check, no
-fall-through, and nice syntax), and makes &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;if..else&lt;/span&gt;&lt;/tt&gt; chains look
-ugly.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Allowing a trailing comma after a list of items, which is really
-great for copy-pasting and diffs.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Packaging conventions: the build tool, Cargo, enforces that all
-build sources (which may include documentation) are placed in &lt;cite&gt;src/&lt;/cite&gt;
-in the root of a source distribution.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;A fast-paced and time-based release cycle: a stable release will be
-made every 6 weeks, which is truly ambitious for a programming
-language.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Development process:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;No one, including the Core Team, pushed to the Rust tree. Each
-person gets their changes reviewed first, and they mostly get
-approved by someone else.&lt;/li&gt;
-&lt;li&gt;Merging the changes to the tree is nearly always done via a continuous
-integration system which first ensures that each change passes all
-automated tests.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Allows one to redefine variables, even with different types:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;fn&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ten&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This is convenient.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;The amount of iterations its design went through during its pre-1.0
-development, which included numerous breaking changes,
-was... impressive. That's an indication that what resulted is a far
-better design than we could have had. The sheer amount of effort
-taken, which was such a unique experience for me, makes me feel
-grateful (I watched the activity for about year before 1.0 was
-released). I am also grateful for the resilient users who kept up
-with the pain of the frequent changes, for they helped keep the
-language relevant and exciting, while also providing feedback.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Wed, 27 May 2015 00:11:16 +0200</pubDate><guid>tag:tshepang.net,2015-05-27:what-i-like-about-rust</guid><category>Rust</category></item><item><title>Linux threads are not deterministic</title><link>http://tshepang.net/linux-threads-are-not-deterministic</link><description>&lt;p&gt;By deterministic, I am referring to their scheduling. Here's an
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sat, 30 May 2015 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2015-05-30:rust-week-of-2015-05-31</guid><category>Rust</category></item><item><title>Linux threads are not deterministic</title><link>http://tshepang.net/linux-threads-are-not-deterministic</link><description>&lt;p&gt;By deterministic, I am referring to their scheduling. Here's an
 example in Rust:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;use&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;thread&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;span class="kn"&gt;use&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;sync&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;mpsc&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;channel&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
@@ -238,7 +242,7 @@ submitted two related &lt;a class="reference external" href="https://github.com/
 &lt;li&gt;&lt;p class="first"&gt;I added syntax highlighting to the &lt;a class="reference external" href="http://tshepang.net/tags.html#rust-ref"&gt;Rust posts on my blog&lt;/a&gt; that
 were missing it. I also updated the code to run on modern Rust.&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;I got some clarity on the concept of Traits by re-reading the
+&lt;li&gt;&lt;p class="first"&gt;I got some clarity on the concept of traits by re-reading the
 well-written post, &lt;a class="reference external" href="http://blog.rust-lang.org/2015/05/11/traits.html"&gt;Abstraction without overhead: traits in
 Rust&lt;/a&gt;. For example, they can be used to add methods, even to existing
 types. Here is a demonstration:&lt;/p&gt;
@@ -265,7 +269,7 @@ by a function, though it uses something of an ugly syntax:&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;The &lt;tt class="docutils literal"&gt;&amp;lt;T: Invert&amp;gt;&lt;/tt&gt; means this function will only accept &lt;tt class="docutils literal"&gt;foo&lt;/tt&gt;
 that implements the &lt;tt class="docutils literal"&gt;Invert&lt;/tt&gt; trait.
-You can check by calling it with and &lt;tt class="docutils literal"&gt;i32&lt;/tt&gt;, in which it will
+You can check by calling it with an &lt;tt class="docutils literal"&gt;i32&lt;/tt&gt; value, in which it will
 succeed:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;print_inverse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10_&lt;/span&gt;&lt;span class="k"&gt;i32&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
