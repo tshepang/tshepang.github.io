@@ -77,6 +77,7 @@ language relevant and exciting, while also providing feedback.&lt;/p&gt;
 &lt;li&gt;I made &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26808"&gt;another change&lt;/a&gt;, whose preparation forced me to learn more
 closure stuff than I cared for:
 &lt;strong&gt;FnOnce&lt;/strong&gt;, &lt;strong&gt;FnMut&lt;/strong&gt;, and &lt;strong&gt;Fn&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;I added some &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26814"&gt;examples&lt;/a&gt; of array usage to API docs&lt;/li&gt;
 &lt;li&gt;I also made &lt;a class="reference external" href="https://github.com/rust-lang/rfcs/pull/1189"&gt;some improvements&lt;/a&gt; to the RFC on coercions&lt;/li&gt;
 &lt;/ul&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sun, 05 Jul 2015 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2015-07-05:rust-week-of-2015-07-03</guid><category>Rust</category></item><item><title>Rust week of 2015-06-26</title><link>http://tshepang.net/rust-week-of-2015-06-26</link><description>&lt;p&gt;I &lt;a class="reference external" href="https://github.com/rust-lang/cargo/pull/1754"&gt;removed a sentence&lt;/a&gt; that is not needed from Cargo documentation.
