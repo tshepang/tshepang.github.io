@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-07-05T11:49:14+02:00</updated><entry><title>what I like about Rust</title><link href="http://tshepang.net/what-i-like-about-rust" rel="alternate"></link><updated>2015-07-05T11:49:14+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-07-05:what-i-like-about-rust</id><summary type="html">&lt;ul&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-07-10T23:43:44+02:00</updated><entry><title>what I like about Rust</title><link href="http://tshepang.net/what-i-like-about-rust" rel="alternate"></link><updated>2015-07-10T23:43:44+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-07-10:what-i-like-about-rust</id><summary type="html">&lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;Ambitious: the aim of being memory safe without the use of a garbage
 collector, allowing it to maintain C++ execution speeds.&lt;/p&gt;
 &lt;/li&gt;
@@ -17,6 +17,9 @@ only really seen those of C and C++); they are even color-coded!&lt;/p&gt;
 &lt;li&gt;&lt;tt class="docutils literal"&gt;fn&lt;/tt&gt; for function declarations&lt;/li&gt;
 &lt;li&gt;&lt;tt class="docutils literal"&gt;use&lt;/tt&gt;, instead of &lt;tt class="docutils literal"&gt;using&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;import&lt;/tt&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;I love that I don't need to add (the tedious) parenthesis around the
+&lt;em&gt;condition expression&lt;/em&gt; in an &lt;em&gt;if&lt;/em&gt;, &lt;em&gt;while&lt;/em&gt;, and &lt;em&gt;match&lt;/em&gt; statements.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p class="first"&gt;The semicolon rule: I initially found it surprising that omitting a
 semicolon after a value is shorthand for returning. I appreciate it
@@ -71,7 +74,7 @@ with the pain of the frequent changes, for they helped keep the
 language relevant and exciting, while also providing feedback.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="Rust"></category></entry><entry><title>Rust week of 2015-07-03</title><link href="http://tshepang.net/rust-week-of-2015-07-03" rel="alternate"></link><updated>2015-07-05T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-07-05:rust-week-of-2015-07-03</id><summary type="html">&lt;ul class="simple"&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust week of 2015-07-03</title><link href="http://tshepang.net/rust-week-of-2015-07-03" rel="alternate"></link><updated>2015-07-06T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-07-06:rust-week-of-2015-07-03</id><summary type="html">&lt;ul class="simple"&gt;
 &lt;li&gt;I &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26785"&gt;made&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26786"&gt;a&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26787"&gt;bunch&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26788"&gt;of&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26789"&gt;some&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26791"&gt;rather&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26792"&gt;small&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26795"&gt;changes&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26796"&gt;to&lt;/a&gt;
 &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26800"&gt;the&lt;/a&gt; &lt;a class="reference external" href="http://doc.rust-lang.org/reference.html"&gt;Rust Reference&lt;/a&gt;, including &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26799"&gt;this bold one&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;I made &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26808"&gt;another change&lt;/a&gt;, whose preparation forced me to learn more
@@ -79,6 +82,7 @@ closure stuff than I cared for:
 &lt;strong&gt;FnOnce&lt;/strong&gt;, &lt;strong&gt;FnMut&lt;/strong&gt;, and &lt;strong&gt;Fn&lt;/strong&gt;.&lt;/li&gt;
 &lt;li&gt;I added some &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26814"&gt;examples&lt;/a&gt; of array usage to API docs&lt;/li&gt;
 &lt;li&gt;I also made &lt;a class="reference external" href="https://github.com/rust-lang/rfcs/pull/1189"&gt;some improvements&lt;/a&gt; to the RFC on coercions&lt;/li&gt;
+&lt;li&gt;Back to the Reference, I made two &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26834"&gt;additional&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/26835"&gt;improvements&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 </summary><category term="Rust"></category></entry><entry><title>Rust week of 2015-06-26</title><link href="http://tshepang.net/rust-week-of-2015-06-26" rel="alternate"></link><updated>2015-07-01T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-07-01:rust-week-of-2015-06-26</id><summary type="html">&lt;p&gt;I &lt;a class="reference external" href="https://github.com/rust-lang/cargo/pull/1754"&gt;removed a sentence&lt;/a&gt; that is not needed from Cargo documentation.
 I also added &lt;a class="reference external" href="https://github.com/rust-lang/cargo/pull/1755"&gt;ability to read from $EMAIL environment variable&lt;/a&gt; to the
