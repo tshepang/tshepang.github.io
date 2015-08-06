@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-08-01T00:00:00+02:00</updated><entry><title>Rust week of 2015-07-24</title><link href="http://tshepang.net/rust-week-of-2015-07-24" rel="alternate"></link><updated>2015-08-01T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-08-01:rust-week-of-2015-07-24</id><summary type="html">&lt;p&gt;I have been &lt;a class="reference external" href="https://internals.rust-lang.org/t/subteam-reports-2015-07-24/2397"&gt;given the honor&lt;/a&gt; of Friend of the Tree by a member of
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-08-06T00:00:00+02:00</updated><entry><title>Rust week of 2015-07-31</title><link href="http://tshepang.net/rust-week-of-2015-07-31" rel="alternate"></link><updated>2015-08-06T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-08-06:rust-week-of-2015-07-31</id><summary type="html">&lt;p&gt;I got to use &lt;a class="reference external" href="https://github.com/hannobraun/inotify-rs"&gt;inotify-rs&lt;/a&gt; for some task at work (first time I used
+Rust for work, yay!), and I found it surprisingly easy to use. It's
+not a very pretty API though, and I remember the Python API to be
+horrible too. Maybe the nature of inotify disallows beauty, who knows.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;I submitted these to the Rust tree:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/27495"&gt;Follow idiom&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/27549"&gt;Be more specific&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/27550"&gt;Add missing info&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust week of 2015-07-24</title><link href="http://tshepang.net/rust-week-of-2015-07-24" rel="alternate"></link><updated>2015-08-01T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-08-01:rust-week-of-2015-07-24</id><summary type="html">&lt;p&gt;I have been &lt;a class="reference external" href="https://internals.rust-lang.org/t/subteam-reports-2015-07-24/2397"&gt;given the honor&lt;/a&gt; of Friend of the Tree by a member of
 the Rust Library &lt;a class="reference external" href="http://www.rust-lang.org/team"&gt;team&lt;/a&gt;. I never expected to be considered, given the
 far greater work that previous recipients have done. Is kool stuff.&lt;/p&gt;
 &lt;p&gt;Regarding my weekly contributions, I &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/27273"&gt;submitted&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/27274"&gt;just&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/27276"&gt;four&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/27398"&gt;changes&lt;/a&gt;.&lt;/p&gt;
