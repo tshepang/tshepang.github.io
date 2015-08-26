@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 20 Aug 2015 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2015-08-14</title><link>http://tshepang.net/rust-week-of-2015-08-14</link><description>&lt;p&gt;As usual, I &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/27903"&gt;submitted&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/27904"&gt;these&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/27905"&gt;rather&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/27920"&gt;small&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/27921"&gt;doc&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/27922"&gt;improvements&lt;/a&gt;.
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 26 Aug 2015 00:00:00 +0200</lastBuildDate><item><title>top tv shows</title><link>http://tshepang.net/top-tv-shows</link><description>&lt;p&gt;I specify seasons only if the rest of series was not so excellent.
+The list is roughly in the chronological order of when the first time
+I watched them.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Yizo Yizo (seasons 1 and 2)&lt;/li&gt;
+&lt;li&gt;24&lt;/li&gt;
+&lt;li&gt;Game of Thrones&lt;/li&gt;
+&lt;li&gt;Homeland&lt;/li&gt;
+&lt;li&gt;Utopia&lt;/li&gt;
+&lt;li&gt;Girls (seasons 1 and 2)&lt;/li&gt;
+&lt;li&gt;House of Cards (seasons 1 and 2)&lt;/li&gt;
+&lt;li&gt;The Knick&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;honorable mentions&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;House&lt;/li&gt;
+&lt;li&gt;Death Note&lt;/li&gt;
+&lt;li&gt;Alphas&lt;/li&gt;
+&lt;li&gt;Breaking Bad&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Wed, 26 Aug 2015 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2015-08-26:top-tv-shows</guid><category>tv</category></item><item><title>Rust week of 2015-08-14</title><link>http://tshepang.net/rust-week-of-2015-08-14</link><description>&lt;p&gt;As usual, I &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/27903"&gt;submitted&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/27904"&gt;these&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/27905"&gt;rather&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/27920"&gt;small&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/27921"&gt;doc&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/27922"&gt;improvements&lt;/a&gt;.
 In addition, I also skimmed through some of &lt;a class="reference external" href="https://doc.rust-lang.org/nightly/nomicon"&gt;The Dark Arts of Advanced
 and Unsafe Rust Programming&lt;/a&gt;, a pleasant read that's infused with
 good humor all over the place.&lt;/p&gt;
