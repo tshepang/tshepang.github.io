@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 04 Nov 2015 08:01:02 +0200</lastBuildDate><item><title>top tv shows</title><link>http://tshepang.net/top-tv-shows</link><description>&lt;p&gt;I specify seasons only if the rest of series was not so excellent.
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 06 Nov 2015 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2015-10-30</title><link>http://tshepang.net/rust-week-of-2015-10-30</link><description>&lt;p&gt;Just &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/29651"&gt;one submission&lt;/a&gt; this time around. Yep! I did however spend
+time pondering the magical forward type inference that I first
+experienced &lt;a class="reference external" href="http://tshepang.net/rust-week-of-2015-05-29"&gt;back in May&lt;/a&gt;, this time sparked by &lt;a class="reference external" href="https://github.com/carllerche/mio/blob/getting-started/doc/getting-started.md#writing-the-echo-server"&gt;this example&lt;/a&gt;;
+see this line:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+let address = &amp;quot;0.0.0.0:6567&amp;quot;.parse().unwrap();
+&lt;/pre&gt;
+&lt;p&gt;You actually have to read further to figure the type that URL is going
+to be parsed as:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+let server = TcpListener::bind(&amp;amp;address).unwrap();
+&lt;/pre&gt;
+&lt;p&gt;It would be less surprising if we had the following instead:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+let address = SocketAddr::from_str(&amp;quot;0.0.0.0:6567&amp;quot;.unwrap();
+let server = TcpListener::bind(&amp;amp;address).unwrap();
+&lt;/pre&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Fri, 06 Nov 2015 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2015-11-06:rust-week-of-2015-10-30</guid><category>Rust</category></item><item><title>top tv shows</title><link>http://tshepang.net/top-tv-shows</link><description>&lt;p&gt;I specify seasons only if the rest of series was not so excellent.
 The list is roughly in the chronological order of the first time
 I watched them.&lt;/p&gt;
 &lt;ul class="simple"&gt;

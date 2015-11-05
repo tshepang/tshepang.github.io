@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-11-04T08:01:02+02:00</updated><entry><title>top tv shows</title><link href="http://tshepang.net/top-tv-shows" rel="alternate"></link><updated>2015-11-04T08:01:02+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-11-04:top-tv-shows</id><summary type="html">&lt;p&gt;I specify seasons only if the rest of series was not so excellent.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-11-06T00:00:00+02:00</updated><entry><title>Rust week of 2015-10-30</title><link href="http://tshepang.net/rust-week-of-2015-10-30" rel="alternate"></link><updated>2015-11-06T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-11-06:rust-week-of-2015-10-30</id><summary type="html">&lt;p&gt;Just &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/29651"&gt;one submission&lt;/a&gt; this time around. Yep! I did however spend
+time pondering the magical forward type inference that I first
+experienced &lt;a class="reference external" href="http://tshepang.net/rust-week-of-2015-05-29"&gt;back in May&lt;/a&gt;, this time sparked by &lt;a class="reference external" href="https://github.com/carllerche/mio/blob/getting-started/doc/getting-started.md#writing-the-echo-server"&gt;this example&lt;/a&gt;;
+see this line:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+let address = &amp;quot;0.0.0.0:6567&amp;quot;.parse().unwrap();
+&lt;/pre&gt;
+&lt;p&gt;You actually have to read further to figure the type that URL is going
+to be parsed as:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+let server = TcpListener::bind(&amp;amp;address).unwrap();
+&lt;/pre&gt;
+&lt;p&gt;It would be less surprising if we had the following instead:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+let address = SocketAddr::from_str(&amp;quot;0.0.0.0:6567&amp;quot;.unwrap();
+let server = TcpListener::bind(&amp;amp;address).unwrap();
+&lt;/pre&gt;
+</summary><category term="Rust"></category></entry><entry><title>top tv shows</title><link href="http://tshepang.net/top-tv-shows" rel="alternate"></link><updated>2015-11-04T08:01:02+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-11-04:top-tv-shows</id><summary type="html">&lt;p&gt;I specify seasons only if the rest of series was not so excellent.
 The list is roughly in the chronological order of the first time
 I watched them.&lt;/p&gt;
 &lt;ul class="simple"&gt;
