@@ -225,7 +225,7 @@ A very rough ETA for a stable release of this sub-project is
 sometime in 2016.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="list"></category><category term="non-Python"></category><category term="Python"></category></entry><entry><title>Rust week of 2015-05-31</title><link href="http://tshepang.net/rust-week-of-2015-05-31" rel="alternate"></link><updated>2015-05-30T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-05-30:rust-week-of-2015-05-31</id><summary type="html">&lt;ul&gt;
+</summary><category term="list"></category><category term="non-Python"></category><category term="Python"></category></entry><entry><title>Rust week of 2015-05-29</title><link href="http://tshepang.net/rust-week-of-2015-05-29" rel="alternate"></link><updated>2015-05-30T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-05-30:rust-week-of-2015-05-29</id><summary type="html">&lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;I was surprised by the somewhat magical Rust type inference:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;fn&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;10&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
@@ -238,7 +238,7 @@ sometime in 2016.&lt;/p&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;assert_eq&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;A more explicit call &lt;tt class="docutils literal"&gt;parse&lt;/tt&gt; call would be
+&lt;p&gt;A more explicit &lt;tt class="docutils literal"&gt;parse&lt;/tt&gt; call would be
 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;string.parse::&amp;lt;i32&amp;gt;()&lt;/span&gt;&lt;/tt&gt;, but the type to be parsed into is
 inferred by the &lt;tt class="docutils literal"&gt;0&lt;/tt&gt; that is returned in the &lt;tt class="docutils literal"&gt;Err(_)&lt;/tt&gt; arm of the
 match, which is an i32. This is some far-reaching shit!&lt;/p&gt;
