@@ -83,23 +83,22 @@
 I also learned a bit about <a class="reference external" href="https://github.com/lifthrasiir/rust-chrono">Chrono</a>, seemingly the most comprehensive
 date and time library for Rust. I used to determine what the next
 release date for Rust is, using the following code:</p>
-<pre class="literal-block">
-extern crate chrono;
+<div class="highlight"><pre><span class="k">extern</span><span class="w"> </span><span class="n">crate</span><span class="w"> </span><span class="n">chrono</span><span class="p">;</span><span class="w"></span>
 
-use chrono::{NaiveDate, Duration, Local};
+<span class="kn">use</span><span class="w"> </span><span class="n">chrono</span><span class="o">::</span><span class="p">{</span><span class="n">NaiveDate</span><span class="p">,</span><span class="w"> </span><span class="n">Duration</span><span class="p">,</span><span class="w"> </span><span class="n">Local</span><span class="p">};</span><span class="w"></span>
 
-fn main() {
-    for n in 0.. {
-        let initial = NaiveDate::from_ymd(2015, 5, 15);  # Rust 1.0 release
-        # 1.0 was released on a Friday, but nowadays they happen Thursdays
-        let release_date = intial.checked_add(Duration::weeks(6 * n)).unwrap() - Duration::days(1);
-        if release_date &gt; Local::today().naive_local() {
-            println!(&quot;{}&quot;, release_date);
-            break;
-        }
-    }
- }
-</pre>
+<span class="k">fn</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mf">0.</span><span class="p">.</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="n">initial</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NaiveDate</span><span class="o">::</span><span class="n">from_ymd</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">);</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">Rust</span><span class="w"> </span><span class="mf">1.0</span><span class="w"> </span><span class="n">release</span><span class="w"></span>
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="mf">1.0</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="n">released</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">Friday</span><span class="p">,</span><span class="w"> </span><span class="n">but</span><span class="w"> </span><span class="n">nowadays</span><span class="w"> </span><span class="n">they</span><span class="w"> </span><span class="n">happen</span><span class="w"> </span><span class="n">Thursdays</span><span class="w"></span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="n">release_date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">intial</span><span class="p">.</span><span class="n">checked_add</span><span class="p">(</span><span class="n">Duration</span><span class="o">::</span><span class="n">weeks</span><span class="p">(</span><span class="mi">6</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n</span><span class="p">)).</span><span class="n">unwrap</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Duration</span><span class="o">::</span><span class="n">days</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">release_date</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Local</span><span class="o">::</span><span class="n">today</span><span class="p">().</span><span class="n">naive_local</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nb">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">release_date</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w"> </span><span class="p">}</span><span class="w"></span>
+</pre></div>
 
             
             <section>
