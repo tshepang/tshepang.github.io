@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-12-17T00:00:00+02:00</updated><entry><title>Rust week of 2015-12-11</title><link href="http://tshepang.net/rust-week-of-2015-12-11" rel="alternate"></link><updated>2015-12-17T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-12-17:rust-week-of-2015-12-11</id><summary type="html">&lt;p&gt;I &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30437"&gt;submitted&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30441"&gt;five&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30442"&gt;tiny&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30443"&gt;doc&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30444"&gt;fixes&lt;/a&gt;.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-12-24T22:56:19+02:00</updated><entry><title>favorite FLOSS</title><link href="http://tshepang.net/favorite-floss" rel="alternate"></link><updated>2015-12-24T22:56:19+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-12-24:favorite-floss</id><summary type="html">&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
+it has to both be personally useful and I have to like it a lot:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;desktop&lt;/strong&gt;: &lt;a class="reference external" href="http://dwm.suckless.org"&gt;dwm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;web browser&lt;/strong&gt;: Firefox&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;development&lt;/strong&gt;: &lt;a class="reference external" href="http://rust-lang.org"&gt;Rust&lt;/a&gt;, Emacs, &lt;a class="reference external" href="http://tshepang.net/project-of-note-git-cola"&gt;git-cola&lt;/a&gt;, &lt;a class="reference external" href="http://mercurial.selenic.com"&gt;Mercurial&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;file manager&lt;/strong&gt;: Bash, Emacs (Dired mode)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;misc utilities:&lt;/strong&gt; grep, &lt;a class="reference external" href="http://tshepang.net/project-of-note-sudo"&gt;Sudo&lt;/a&gt;, &lt;a class="reference external" href="http://tshepang.net/project-of-note-reprepro"&gt;reprepro&lt;/a&gt;, Lsof, less, Meld,
+Uptimed, procps (top, watch), Ex Falso, autojump, gnumeric
+coreutils (cat, tail), &lt;a class="reference external" href="http://tshepang.net/project-of-note-linkchecker"&gt;LinkChecker&lt;/a&gt;, &lt;a class="reference external" href="http://guichaz.free.fr/iotop"&gt;Iotop&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Man_page"&gt;man&lt;/a&gt;, &lt;a class="reference external" href="http://tshepang.net/project-of-note-rdiff-backup"&gt;rdiff-backup&lt;/a&gt;
+OpenSSH, &lt;a class="reference external" href="http://humdi.net/vnstat"&gt;vnstat&lt;/a&gt;, &lt;a class="reference external" href="http://tmux.sourceforge.net"&gt;tmux&lt;/a&gt;, File Roller, youtube-dl, QEMU&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;non-FLOSS:&lt;/strong&gt; &lt;a class="reference external" href="https://mail.google.com/mail"&gt;Gmail&lt;/a&gt;, &lt;a class="reference external" href="http://stackexchange.com"&gt;Stack Exchange&lt;/a&gt;, &lt;a class="reference external" href="http://bitbucket.org"&gt;Bitbucket&lt;/a&gt;&lt;/p&gt;
+</summary><category term="list"></category></entry><entry><title>Rust week of 2015-12-18</title><link href="http://tshepang.net/rust-week-of-2015-12-18" rel="alternate"></link><updated>2015-12-24T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-12-24:rust-week-of-2015-12-18</id><summary type="html">&lt;p&gt;I submitted a &lt;a class="reference external" href="https://github.com/rust-lang/cargo/pull/2226"&gt;small change&lt;/a&gt; to Cargo.
+I also submitted two &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30537"&gt;documentation&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30546"&gt;changes&lt;/a&gt; for Rust.&lt;/p&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust week of 2015-12-11</title><link href="http://tshepang.net/rust-week-of-2015-12-11" rel="alternate"></link><updated>2015-12-17T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-12-17:rust-week-of-2015-12-11</id><summary type="html">&lt;p&gt;I &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30437"&gt;submitted&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30441"&gt;five&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30442"&gt;tiny&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30443"&gt;doc&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30444"&gt;fixes&lt;/a&gt;.&lt;/p&gt;
 </summary><category term="Rust"></category></entry><entry><title>what I like about Rust</title><link href="http://tshepang.net/what-i-like-about-rust" rel="alternate"></link><updated>2015-12-16T12:37:47+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-12-16:what-i-like-about-rust</id><summary type="html">&lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;Ambitious: the aim of being memory safe without the use of a garbage
 collector, allowing it to maintain C++ execution speeds.&lt;/p&gt;
@@ -75,32 +88,7 @@ with the pain of the frequent changes, for they helped keep the
 language relevant and exciting, while also providing feedback.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="Rust"></category></entry><entry><title>most exciting software projects</title><link href="http://tshepang.net/most-exciting-software-projects" rel="alternate"></link><updated>2015-12-16T12:37:47+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-12-16:most-exciting-software-projects</id><summary type="html">&lt;p&gt;These are what I find to be the most exciting projects, today:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://www.rust-lang.org"&gt;Rust&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A programming language meant to replace C++:
-it has better memory safety, but maintains comparable speed.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="https://github.com/servo/servo"&gt;Servo&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A browser engine written in Rust.
-It is far more aggressive than the leading web engines of today
-(WebKit and Gecko) in terms of making its operations parallel,
-and should therefore be more responsive.
-An ETA for an Alpha release is sometime in 2015,
-but there is a plan to incorporate one of its components into Gecko
-that same year.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;&lt;a class="reference external" href="http://pypy.org"&gt;PyPy&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;It's been alive for over 10 years, but remains among the most
-exciting of all Python projects.&lt;/p&gt;
-&lt;p&gt;I greatly anticipate the stable release of its most visible
-sub-project, &lt;a class="reference external" href="http://pypy.org/tmdonate2.html"&gt;Transactional Memory&lt;/a&gt;.  It's an approach that
-simplifies multi-threaded programming while also bypassing the GIL.
-A very rough ETA for a stable release of this sub-project is
-sometime in 2016.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="list"></category><category term="non-Python"></category><category term="Python"></category></entry><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2015-12-16T12:37:47+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-12-16:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
+</summary><category term="Rust"></category></entry><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2015-12-16T12:37:47+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-12-16:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
 I do celebrate each time I see a project use it. So, here I list the
 most notable projects I am aware of that do, which also gives me hope
 that it isn't being suffocated too much by Git:&lt;/p&gt;
@@ -116,23 +104,7 @@ popular programming language&lt;/li&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook"&gt;Facebook&lt;/a&gt;, world number 2 website in terms of visitor numbers&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="VCS"></category><category term="non-FLOSS"></category><category term="list"></category></entry><entry><title>favorite FLOSS</title><link href="http://tshepang.net/favorite-floss" rel="alternate"></link><updated>2015-12-16T12:37:47+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-12-16:favorite-floss</id><summary type="html">&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
-it has to both be personally useful and I have to like it a lot:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;backup:&lt;/strong&gt; &lt;a class="reference external" href="http://tshepang.net/project-of-note-rdiff-backup"&gt;rdiff-backup&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;desktop&lt;/strong&gt;: &lt;a class="reference external" href="http://dwm.suckless.org"&gt;dwm&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;development&lt;/strong&gt;: &lt;a class="reference external" href="http://rust-lang.org"&gt;Rust&lt;/a&gt;, Python, Emacs, &lt;a class="reference external" href="http://tshepang.net/project-of-note-git-cola"&gt;git-cola&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;file manager&lt;/strong&gt;: Bash, Emacs (Dired mode)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;misc utilities:&lt;/strong&gt; grep, &lt;a class="reference external" href="http://tshepang.net/project-of-note-sudo"&gt;Sudo&lt;/a&gt;, &lt;a class="reference external" href="http://tshepang.net/project-of-note-reprepro"&gt;reprepro&lt;/a&gt;, Lsof, less, Meld,
-Uptimed, procps (top, watch), Ex Falso, wajig, autojump,
-coreutils (wc, tail), &lt;a class="reference external" href="http://tshepang.net/project-of-note-linkchecker"&gt;LinkChecker&lt;/a&gt;, &lt;a class="reference external" href="http://guichaz.free.fr/iotop"&gt;Iotop&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Man_page"&gt;man&lt;/a&gt;,
-OpenSSH, &lt;a class="reference external" href="http://humdi.net/vnstat"&gt;vnstat&lt;/a&gt;, &lt;a class="reference external" href="http://tmux.sourceforge.net"&gt;tmux&lt;/a&gt;, File Roller, youtube-dl&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;spreadsheet&lt;/strong&gt;: gnumeric&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;terminal emulator&lt;/strong&gt;: Xfce Terminal&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;virtualisation&lt;/strong&gt;: VirtualBox&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;version control system&lt;/strong&gt;: &lt;a class="reference external" href="http://mercurial.selenic.com"&gt;Mercurial&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;web browser&lt;/strong&gt;: Firefox&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;non-FLOSS:&lt;/strong&gt; &lt;a class="reference external" href="http://disqus.com"&gt;Disqus&lt;/a&gt;, &lt;a class="reference external" href="http://mail.google.com/mail"&gt;Gmail&lt;/a&gt;, &lt;a class="reference external" href="http://stackexchange.com"&gt;Stack Exchange&lt;/a&gt;, &lt;a class="reference external" href="http://bitbucket.org"&gt;Bitbucket&lt;/a&gt;&lt;/p&gt;
-</summary><category term="list"></category></entry><entry><title>ideal static blog generator</title><link href="http://tshepang.net/ideal-static-blog-generator" rel="alternate"></link><updated>2015-12-16T12:37:47+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-12-16:ideal-static-blog-generator</id><summary type="html">&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
+</summary><category term="VCS"></category><category term="non-FLOSS"></category><category term="list"></category></entry><entry><title>ideal static blog generator</title><link href="http://tshepang.net/ideal-static-blog-generator" rel="alternate"></link><updated>2015-12-16T12:37:47+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-12-16:ideal-static-blog-generator</id><summary type="html">&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
 missed:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt; support is mandatory.
