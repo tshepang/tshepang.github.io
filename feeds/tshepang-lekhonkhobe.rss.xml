@@ -1,5 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 24 Dec 2015 22:56:19 +0200</lastBuildDate><item><title>favorite FLOSS</title><link>http://tshepang.net/favorite-floss</link><description>&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 30 Dec 2015 00:00:00 +0200</lastBuildDate><item><title>Asus Zenbook UX305F</title><link>http://tshepang.net/asus-zenbook-ux305f</link><description>&lt;p&gt;On 2015-12-14, I got me the UX305. It's the base level model in the
+range, with 4GB RAM, 128GB SSD, and an FHD screen, and Intel Core M
+CPU (M-5Y10c). It it great value at R10k ($600 in USA), so it didn't
+feel too much of an indulgence, given I still have the &lt;a class="reference external" href="http://tshepang.net/sony-vaio-pro-13-svp13212sgbi"&gt;Vaio Pro
+13&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Like the older laptop, I had to change 2 lines in /usr/share/alsa/alsa.conf:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+defaults.ctl.card 1
+defaults.pcm.card 1
+&lt;/pre&gt;
+&lt;p&gt;What makes the Vaio Pro 13 better:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;My setup could likely be better, because I use &lt;tt class="docutils literal"&gt;XVideo Output (XCB)&lt;/tt&gt;
+in VLC to play videos, and that eats around 50% CPU.&lt;/li&gt;
+&lt;li&gt;The charger does not have a USB charging port&lt;/li&gt;
+&lt;li&gt;The laptop is less pretty (so boring), and I'm not a fan of the
+purple look&lt;/li&gt;
+&lt;li&gt;The power button is not a button, but one of the keys on the
+keyboard, which makes it too easy to press by mistake... happened to
+me a few times&lt;/li&gt;
+&lt;li&gt;The &lt;tt class="docutils literal"&gt;Insert&lt;/tt&gt; key is accessible via the &lt;tt class="docutils literal"&gt;Fn&lt;/tt&gt; key, which is
+awkward since I use the Ctrl+Shift+Insert combo to (middle-)paste&lt;/li&gt;
+&lt;li&gt;The SD card slot is not full-depth, so you will see the SD card
+(adaptor) protrude from the side&lt;/li&gt;
+&lt;li&gt;I'm used to the charging port being on the left&lt;/li&gt;
+&lt;li&gt;No keyboard back-light&lt;/li&gt;
+&lt;li&gt;The SSD is not as fast (write speeds of 300 MB/s compared to 500
+MB/s). The CPU is also slower.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Given all above, this is overall a better laptop:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;No (noisy) fan&lt;/li&gt;
+&lt;li&gt;Gentle corners (though a bit too gentle, making this a less pretty
+laptop)&lt;/li&gt;
+&lt;li&gt;Power consumption is very, and I could easily get 8 hours of battery
+lifeon this thing with a moderate workload&lt;/li&gt;
+&lt;li&gt;I loves the touchpad: it's more smooth and large&lt;/li&gt;
+&lt;li&gt;The keyboard also feels a lot better; it's such pleasure to use!&lt;/li&gt;
+&lt;li&gt;The body is also a lot more rigid, so no annoying flexibility at the
+bottom of the touchpad. The rigidity also avoid keyboard marks on
+the screen.&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Wed, 30 Dec 2015 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2015-12-30:asus-zenbook-ux305f</guid><category>hardware</category></item><item><title>favorite FLOSS</title><link>http://tshepang.net/favorite-floss</link><description>&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
 it has to both be personally useful and I have to like it a lot:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;desktop&lt;/strong&gt;: &lt;a class="reference external" href="http://dwm.suckless.org"&gt;dwm&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;web browser&lt;/strong&gt;: Firefox&lt;/p&gt;
@@ -1691,7 +1733,7 @@ making it a little uncomfortable to handle.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p class="first"&gt;The power button is not so easy to press, and offers very little
 'feedback'... it has very shallow movement. Luckily there should not
-be a frequent need to use, but there are times when something is
+be a frequent need to use it, but there are times when something is
 buggy enough to cause OS hangs and other misbehaviour.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p class="first"&gt;The fan is too quick to kick in, and easily gets noisy. Running the
@@ -1723,12 +1765,14 @@ result. That would not be such a big problem, except that it takes
 such a long time to get there... more than 50 presses from the two
 extremes!&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;I still haven't got use to &lt;strong&gt;Pg Up/Dn&lt;/strong&gt; and &lt;strong&gt;Home/End&lt;/strong&gt; being
+&lt;li&gt;&lt;p class="first"&gt;I still haven't got used to &lt;strong&gt;Pg Up/Dn&lt;/strong&gt; and &lt;strong&gt;Home/End&lt;/strong&gt; being
 accessible only via the &lt;strong&gt;Fn&lt;/strong&gt; key. It's so awkward.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p class="first"&gt;The touchpad is a great pleasure to use, except when pressing and
 dragging. It's a hit-and-miss affair... you have to press quite
 hard, and that makes precise control challenging.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;The flexibility of the body results in keyboard marks on the screen.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p class="first"&gt;The worst problem, however, is the flexibility of at the bottom of
 the touchpad. Too often the touchpad fails to respond because I've
