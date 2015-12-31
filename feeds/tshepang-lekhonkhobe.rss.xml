@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 31 Dec 2015 13:16:46 +0200</lastBuildDate><item><title>what I like about Rust</title><link>http://tshepang.net/what-i-like-about-rust</link><description>&lt;ul&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 31 Dec 2015 13:18:11 +0200</lastBuildDate><item><title>major projects using Mercurial</title><link>http://tshepang.net/major-projects-using-mercurial</link><description>&lt;p&gt;Mercurial is the only version control system that I actually like, and
+I do celebrate each time I see a project use it. So, here I list the
+most notable projects I am aware of that do, which also gives me hope
+that it isn't being suffocated too much by Git:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://hg.mozilla.org/mozilla-central"&gt;Firefox&lt;/a&gt;, world number 3 desktop web browser (number of users)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://hg.python.org/cpython"&gt;CPython&lt;/a&gt; and &lt;a class="reference external" href="https://bitbucket.org/pypy/pypy"&gt;PyPy&lt;/a&gt;, the most important implementations of a top 10
+popular programming language&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://hg.openjdk.java.net"&gt;OpenJDK&lt;/a&gt;, the top open source implementation of the Java platform&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.vim.org/mercurial.php"&gt;VIM&lt;/a&gt; and &lt;a class="reference external" href="http://wiki.netbeans.org/WorkingWithNetBeansSources#Mercurial_access"&gt;Netbeans&lt;/a&gt;, two of the most popular text editors for programmers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And here is one which is not FLOSS (i.e. proprietary):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook"&gt;Facebook&lt;/a&gt;, world number 2 website in terms of visitor numbers&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Thu, 31 Dec 2015 13:18:11 +0200</pubDate><guid>tag:tshepang.net,2015-12-31:major-projects-using-mercurial</guid><category>VCS</category><category>non-FLOSS</category><category>list</category></item><item><title>what I like about Rust</title><link>http://tshepang.net/what-i-like-about-rust</link><description>&lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;Ambitious: the aim of being memory safe without the use of a garbage
 collector, allowing it to achieve C++ execution speeds.&lt;/p&gt;
 &lt;/li&gt;
@@ -133,23 +148,7 @@ OpenSSH, &lt;a class="reference external" href="http://humdi.net/vnstat"&gt;vnst
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Thu, 24 Dec 2015 22:56:19 +0200</pubDate><guid>tag:tshepang.net,2015-12-24:favorite-floss</guid><category>list</category></item><item><title>Rust week of 2015-12-18</title><link>http://tshepang.net/rust-week-of-2015-12-18</link><description>&lt;p&gt;I submitted a &lt;a class="reference external" href="https://github.com/rust-lang/cargo/pull/2226"&gt;small change&lt;/a&gt; to Cargo.
 I also submitted two &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30537"&gt;documentation&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30546"&gt;changes&lt;/a&gt; for Rust.&lt;/p&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Thu, 24 Dec 2015 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2015-12-24:rust-week-of-2015-12-18</guid><category>Rust</category></item><item><title>Rust week of 2015-12-11</title><link>http://tshepang.net/rust-week-of-2015-12-11</link><description>&lt;p&gt;I &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30437"&gt;submitted&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30441"&gt;five&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30442"&gt;tiny&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30443"&gt;doc&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30444"&gt;fixes&lt;/a&gt;.&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Thu, 17 Dec 2015 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2015-12-17:rust-week-of-2015-12-11</guid><category>Rust</category></item><item><title>major projects using Mercurial</title><link>http://tshepang.net/major-projects-using-mercurial</link><description>&lt;p&gt;Mercurial is the only version control system that I actually like, and
-I do celebrate each time I see a project use it. So, here I list the
-most notable projects I am aware of that do, which also gives me hope
-that it isn't being suffocated too much by Git:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://hg.mozilla.org/mozilla-central"&gt;Firefox&lt;/a&gt;, world number 3 desktop web browser (number of users)&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://hg.python.org/cpython"&gt;CPython&lt;/a&gt; and &lt;a class="reference external" href="https://bitbucket.org/pypy/pypy"&gt;PyPy&lt;/a&gt;, the most important implementations of a top 10
-popular programming language&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://hg.openjdk.java.net"&gt;OpenJDK&lt;/a&gt;, the top open source implementation of the Java platform&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.vim.org/mercurial.php"&gt;VIM&lt;/a&gt; and &lt;a class="reference external" href="http://wiki.netbeans.org/WorkingWithNetBeansSources#Mercurial_access"&gt;Netbeans&lt;/a&gt;, two of the most popular text editors for programmers&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://bitbucket.org/birkenfeld/sphinx"&gt;Sphinx&lt;/a&gt;, documentation generator used in most Python projects&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;And here is one which is not FLOSS (i.e. proprietary):&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook"&gt;Facebook&lt;/a&gt;, world number 2 website in terms of visitor numbers&lt;/li&gt;
-&lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Wed, 16 Dec 2015 12:37:47 +0200</pubDate><guid>tag:tshepang.net,2015-12-16:major-projects-using-mercurial</guid><category>VCS</category><category>non-FLOSS</category><category>list</category></item><item><title>ideal static blog generator</title><link>http://tshepang.net/ideal-static-blog-generator</link><description>&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Thu, 17 Dec 2015 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2015-12-17:rust-week-of-2015-12-11</guid><category>Rust</category></item><item><title>ideal static blog generator</title><link>http://tshepang.net/ideal-static-blog-generator</link><description>&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
 missed:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt; support is mandatory.
