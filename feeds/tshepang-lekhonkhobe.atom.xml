@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2016-01-14T00:00:00+02:00</updated><entry><title>Rust week of 2016-01-08</title><link href="http://tshepang.net/rust-week-of-2016-01-08" rel="alternate"></link><updated>2016-01-14T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2016-01-14:rust-week-of-2016-01-08</id><summary type="html">&lt;p&gt;As usual, I &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30909"&gt;submitted&lt;/a&gt; a &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30910"&gt;number&lt;/a&gt; of &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30911"&gt;small&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30912"&gt;doc&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30914"&gt;changes&lt;/a&gt;. I am
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2016-01-21T00:00:00+02:00</updated><entry><title>Asus Zenbook UX305F</title><link href="http://tshepang.net/asus-zenbook-ux305f" rel="alternate"></link><updated>2016-01-21T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2016-01-21:asus-zenbook-ux305f</id><summary type="html">&lt;p&gt;On 2015-12-14, I got me the UX305. It's the base level model in the
+range, with 4GB RAM, 128GB SSD, an FHD screen, and Intel Core M
+CPU (M-5Y10c). It it great value at R10k ($600 in USA), so it didn't
+feel too much of an indulgence, given I still have the &lt;a class="reference external" href="http://tshepang.net/sony-vaio-pro-13-svp13212sgbi"&gt;Vaio Pro
+13&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Like the older laptop, I had to change 2 lines in /usr/share/alsa/alsa.conf:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+defaults.ctl.card 1
+defaults.pcm.card 1
+&lt;/pre&gt;
+&lt;p&gt;What makes the Vaio Pro 13 better:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The charger does not have a USB charging port&lt;/li&gt;
+&lt;li&gt;The laptop is less pretty (so boring), and I'm not a fan of the
+purple look&lt;/li&gt;
+&lt;li&gt;The power button is not a button, but one of the keys on the
+keyboard, which makes it too easy to press by mistake... happened to
+me a few times&lt;/li&gt;
+&lt;li&gt;The &lt;tt class="docutils literal"&gt;Insert&lt;/tt&gt; key is hidden behind the &lt;tt class="docutils literal"&gt;Fn&lt;/tt&gt; key, which is
+awkward since I use the Ctrl+Shift+Insert combo to (middle-)paste&lt;/li&gt;
+&lt;li&gt;The SD card slot is not full-depth, so you will see the SD card
+(adaptor) protrude from the side&lt;/li&gt;
+&lt;li&gt;I'm used to the charging port being on the left&lt;/li&gt;
+&lt;li&gt;No keyboard back-light&lt;/li&gt;
+&lt;li&gt;The SSD is not as fast, and so is the CPU&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Given all above, this is overall a better laptop:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;No (noisy) fan&lt;/li&gt;
+&lt;li&gt;Gentle corners (though a bit too gentle, making this a less pretty
+laptop)&lt;/li&gt;
+&lt;li&gt;Power consumption is very low, and I could easily get 8 hours of battery
+lifeon this thing with a moderate workload&lt;/li&gt;
+&lt;li&gt;I loves the touchpad: it's more smooth and large&lt;/li&gt;
+&lt;li&gt;The keyboard also feels a lot better; it's such pleasure to use!&lt;/li&gt;
+&lt;li&gt;The body is also a lot more rigid, so no annoying flexibility at the
+bottom of the touchpad. The rigidity also ensures that there are no
+keyboard marks on the screen.&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="hardware"></category></entry><entry><title>Rust week of 2016-01-15</title><link href="http://tshepang.net/rust-week-of-2016-01-15" rel="alternate"></link><updated>2016-01-15T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2016-01-15:rust-week-of-2016-01-15</id><summary type="html">&lt;p&gt;I discovered that &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30920"&gt;a change&lt;/a&gt; I made last week didn't work, so
+&lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30940"&gt;submitted something that works&lt;/a&gt; this time around.&lt;/p&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust week of 2016-01-08</title><link href="http://tshepang.net/rust-week-of-2016-01-08" rel="alternate"></link><updated>2016-01-14T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2016-01-14:rust-week-of-2016-01-08</id><summary type="html">&lt;p&gt;As usual, I &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30909"&gt;submitted&lt;/a&gt; a &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30910"&gt;number&lt;/a&gt; of &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30911"&gt;small&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30912"&gt;doc&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30914"&gt;changes&lt;/a&gt;. I am
 particularly proud of the code &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30920"&gt;submission&lt;/a&gt; I made to rustdoc to strip
 away the annoying whitespace appended before the final closing brace.&lt;/p&gt;
 &lt;p&gt;In other news, Rust by Example has &lt;a class="reference external" href="http://rustbyexample.com/std/box.html"&gt;a very illustrative example&lt;/a&gt;
@@ -100,49 +141,7 @@ with the pain of the frequent changes, for they helped keep the
 language relevant and exciting, while also providing feedback.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="Rust"></category></entry><entry><title>Asus Zenbook UX305F</title><link href="http://tshepang.net/asus-zenbook-ux305f" rel="alternate"></link><updated>2015-12-30T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-12-30:asus-zenbook-ux305f</id><summary type="html">&lt;p&gt;On 2015-12-14, I got me the UX305. It's the base level model in the
-range, with 4GB RAM, 128GB SSD, and an FHD screen, and Intel Core M
-CPU (M-5Y10c). It it great value at R10k ($600 in USA), so it didn't
-feel too much of an indulgence, given I still have the &lt;a class="reference external" href="http://tshepang.net/sony-vaio-pro-13-svp13212sgbi"&gt;Vaio Pro
-13&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Like the older laptop, I had to change 2 lines in /usr/share/alsa/alsa.conf:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-defaults.ctl.card 1
-defaults.pcm.card 1
-&lt;/pre&gt;
-&lt;p&gt;What makes the Vaio Pro 13 better:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;My setup could likely be better, because I use &lt;tt class="docutils literal"&gt;XVideo Output (XCB)&lt;/tt&gt;
-in VLC to play videos, and that eats around 50% CPU.&lt;/li&gt;
-&lt;li&gt;The charger does not have a USB charging port&lt;/li&gt;
-&lt;li&gt;The laptop is less pretty (so boring), and I'm not a fan of the
-purple look&lt;/li&gt;
-&lt;li&gt;The power button is not a button, but one of the keys on the
-keyboard, which makes it too easy to press by mistake... happened to
-me a few times&lt;/li&gt;
-&lt;li&gt;The &lt;tt class="docutils literal"&gt;Insert&lt;/tt&gt; key is accessible via the &lt;tt class="docutils literal"&gt;Fn&lt;/tt&gt; key, which is
-awkward since I use the Ctrl+Shift+Insert combo to (middle-)paste&lt;/li&gt;
-&lt;li&gt;The SD card slot is not full-depth, so you will see the SD card
-(adaptor) protrude from the side&lt;/li&gt;
-&lt;li&gt;I'm used to the charging port being on the left&lt;/li&gt;
-&lt;li&gt;No keyboard back-light&lt;/li&gt;
-&lt;li&gt;The SSD is not as fast (write speeds of 300 MB/s compared to 500
-MB/s). The CPU is also slower.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Given all above, this is overall a better laptop:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;No (noisy) fan&lt;/li&gt;
-&lt;li&gt;Gentle corners (though a bit too gentle, making this a less pretty
-laptop)&lt;/li&gt;
-&lt;li&gt;Power consumption is very low, and I could easily get 8 hours of battery
-lifeon this thing with a moderate workload&lt;/li&gt;
-&lt;li&gt;I loves the touchpad: it's more smooth and large&lt;/li&gt;
-&lt;li&gt;The keyboard also feels a lot better; it's such pleasure to use!&lt;/li&gt;
-&lt;li&gt;The body is also a lot more rigid, so no annoying flexibility at the
-bottom of the touchpad. The rigidity also avoid keyboard marks on
-the screen.&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="hardware"></category></entry><entry><title>Rust week of 2015-12-25</title><link href="http://tshepang.net/rust-week-of-2015-12-25" rel="alternate"></link><updated>2015-12-30T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-12-30:rust-week-of-2015-12-25</id><summary type="html">&lt;p&gt;I made &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30644"&gt;three&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30645"&gt;documentation&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30648"&gt;submissions&lt;/a&gt; this time around.&lt;/p&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust week of 2015-12-25</title><link href="http://tshepang.net/rust-week-of-2015-12-25" rel="alternate"></link><updated>2015-12-30T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-12-30:rust-week-of-2015-12-25</id><summary type="html">&lt;p&gt;I made &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30644"&gt;three&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30645"&gt;documentation&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/30648"&gt;submissions&lt;/a&gt; this time around.&lt;/p&gt;
 </summary><category term="Rust"></category></entry><entry><title>favorite FLOSS</title><link href="http://tshepang.net/favorite-floss" rel="alternate"></link><updated>2015-12-24T22:56:19+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2015-12-24:favorite-floss</id><summary type="html">&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
 it has to both be personally useful and I have to like it a lot:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;desktop&lt;/strong&gt;: &lt;a class="reference external" href="http://dwm.suckless.org"&gt;dwm&lt;/a&gt;&lt;/p&gt;
