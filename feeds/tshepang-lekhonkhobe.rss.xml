@@ -1,5 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 27 Jan 2016 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2016-01-22</title><link>http://tshepang.net/rust-week-of-2016-01-22</link><description>&lt;ul class="simple"&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 04 Feb 2016 23:57:29 +0200</lastBuildDate><item><title>FLOSS I use a-lot</title><link>http://tshepang.net/floss-i-use-a-lot</link><description>&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
+There is &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;a separate post&lt;/a&gt; for those.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;wajig&lt;/strong&gt;: &lt;a class="reference external" href="http://tshepang.net/tags#wajig-ref"&gt;I also develop and maintain it&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;APT&lt;/strong&gt;: a collection of Debian package management tools&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;software development&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Emacs&lt;/strong&gt;: I also use it as a general purpose text editor&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git-cola&lt;/strong&gt;: &lt;a class="reference external" href="http://tshepang.net/project-of-note-git-cola"&gt;why me loves it&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GNU toolchain&lt;/strong&gt; (GCC, make, GLibC, ...)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Git&lt;/strong&gt;: as if I had a choice... work and open source&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mercurial&lt;/strong&gt;: my favorite&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://meldmerge.org"&gt;Meld&lt;/a&gt;: the most excellent diff tool I've used yet&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CPython&lt;/strong&gt;: I spend more time with Python as compared to any other
+programming language&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Rust&lt;/strong&gt;: this has since replaced Python as my favorite language
+(and ecosystem)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;entertainment&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Quod Libet&lt;/strong&gt;: audio player that comes with a very excellent tag
+editor, &lt;strong&gt;Ex Falso&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VLC&lt;/strong&gt;: user interface could be a lot better&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;GUI applications&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Xfce Terminal&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Firefox&lt;/strong&gt;: not as pretty as my previous favorite, Chrome; but that
+it has a more trustworthy steward (Mozilla vs. Google), and
+it being less restrictive (Chrome makes it painful to install third
+party add-ons) makes it a winner&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gnumeric&lt;/strong&gt;: it's faster than LibreOffice spreadsheet, and has a
+superior search interface&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://lzone.de/liferea"&gt;Liferea&lt;/a&gt;: would not be using this had it not been for Google Reader
+shutdown, but am glad they did because I like this tool, ugly and unkool
+as it is&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Thunderbird&lt;/strong&gt;: I prefer Evolution, but it gave me some issues last
+time I tried; I don't remember the details&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.transmissionbt.com"&gt;Transmission&lt;/a&gt;: the only torrent client I have ever used&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Nautilus&lt;/strong&gt;: decent GUI file manager&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FileZilla&lt;/strong&gt;: I should really find something nicer for my SFTP needs&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://fileroller.sourceforge.net"&gt;File Roller&lt;/a&gt;: nice and simple GUI archive manager&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;miscellaneous tools&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;dwm&lt;/strong&gt;: &lt;a class="reference external" href="http://tshepang.net/my-current-desktop-setup"&gt;replaced GNOME as my primary desktop environment&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://tmux.sourceforge.net"&gt;tmux&lt;/a&gt;: amazingly powerful, but I wish it had less rendering bugs&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;head&lt;/strong&gt; and &lt;strong&gt;tail&lt;/strong&gt;: included in GNU coreutils suite of tools&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.greenwoodsoftware.com/less"&gt;less&lt;/a&gt;: indispensable!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Minicom&lt;/strong&gt;: I use this at work when I need a serial terminal&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OpenSSH&lt;/strong&gt;: duh!&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/joelthelion/autojump"&gt;autojump&lt;/a&gt;: makes navigating the filesystem a joy&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://fabfile.org"&gt;Fabric&lt;/a&gt;: I use it to build and deploy my blogs... it's some sort of
+replacement for shell scripting&lt;/li&gt;
+&lt;li&gt;VirtualBox: pretty much the only virtualisation tool I use;
+My use is extensive... I often leave a virtual machine running for days&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://rg3.github.io/youtube-dl"&gt;youtube-dl&lt;/a&gt;: I prefer watching videos with VLC&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Thu, 04 Feb 2016 23:57:29 +0200</pubDate><guid>tag:tshepang.net,2016-02-04:floss-i-use-a-lot</guid><category>list</category></item><item><title>Python wishes</title><link>http://tshepang.net/python-wishes</link><description>&lt;p&gt;None of these is likely to happen at all.
+It's even safe to use the word &lt;em&gt;never&lt;/em&gt; with a great amount of certainty;
+but I wanted to document them anyway, if for no other reason than rescue
+them from the exclusiveness of my mind:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;add a &lt;tt class="docutils literal"&gt;prepend&lt;/tt&gt; method to list objects, make it as efficient as
+&lt;tt class="docutils literal"&gt;collections.deque&lt;/tt&gt;, then remove the latter&lt;/li&gt;
+&lt;li&gt;remove &lt;tt class="docutils literal"&gt;f.readlines()&lt;/tt&gt;;
+&lt;tt class="docutils literal"&gt;list(f)&lt;/tt&gt; is a clearer and more general replacement (&lt;a class="reference external" href="http://bugs.python.org/issue13510#msg186940"&gt;source&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;rm &lt;tt class="docutils literal"&gt;os.system&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;os.popen*&lt;/tt&gt; and relatives;
+we already have the &lt;a class="reference external" href="http://docs.python.org/3/library/subprocess"&gt;subprocess module&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;change module names to be PEP-compliant, everywhere&lt;/li&gt;
+&lt;li&gt;remove &lt;tt class="docutils literal"&gt;lambda&lt;/tt&gt;; it's not Pythonic, and just feels like a wart;
+it also does a good job of making Python code less readable&lt;/li&gt;
+&lt;li&gt;make &lt;tt class="docutils literal"&gt;item&lt;/tt&gt; go out of scope when outside for-loops like &lt;tt class="docutils literal"&gt;for item
+in range(count)&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Thu, 04 Feb 2016 23:57:29 +0200</pubDate><guid>tag:tshepang.net,2016-02-04:python-wishes</guid><category>Python</category></item><item><title>about 'developer of note' series</title><link>http://tshepang.net/about-developer-of-note-series</link><description>&lt;p&gt;I respect a lot of software developers, but many of those are not
+going to have an entry in &lt;a class="reference external" href="http://tshepang.net/tags#developer-of-note-ref"&gt;this series&lt;/a&gt;, and not because they are
+lesser in my eyes... I need a news item that would trigger a
+post.  Thing is, if you write about someone, you actually need to have
+some content (duh!), and saying &amp;quot;Guide van Rossum rocks for creating
+Python, and am grateful!&amp;quot;  is simply not enough, hence a need for a
+trigger.  In fact, I used to call this series &lt;em&gt;developer of the
+moment&lt;/em&gt;, but at some point felt that the new name is more fitting,
+especially since a few of these developers
+generated some new triggers along the way.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Thu, 04 Feb 2016 23:02:22 +0200</pubDate><guid>tag:tshepang.net,2016-02-04:about-developer-of-note-series</guid><category>developer-of-note</category></item><item><title>Rust week of 2016-01-29</title><link>http://tshepang.net/rust-week-of-2016-01-29</link><description>&lt;p&gt;I &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/31411"&gt;submitted&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/31412"&gt;four&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/31413"&gt;documentation&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/31415"&gt;changes&lt;/a&gt; this time.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Thu, 04 Feb 2016 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2016-02-04:rust-week-of-2016-01-29</guid><category>Rust</category></item><item><title>Rust week of 2016-01-22</title><link>http://tshepang.net/rust-week-of-2016-01-22</link><description>&lt;ul class="simple"&gt;
 &lt;li&gt;I &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/31241"&gt;submitted&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/31245"&gt;a few&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/31246"&gt;documentation&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/31247"&gt;changes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;I &lt;a class="reference external" href="https://github.com/rust-lang/rust/issues/31242"&gt;requested clarification&lt;/a&gt; on one documentation issue&lt;/li&gt;
 &lt;li&gt;I submitted &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/31244"&gt;results of running rustfmt&lt;/a&gt;  on a bit of code&lt;/li&gt;
@@ -196,114 +285,7 @@ useful this would be though.&lt;/li&gt;
 &lt;li&gt;A feed icon that is visible from the main page (and maybe Category
 pages).&lt;/li&gt;
 &lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Wed, 16 Dec 2015 12:37:47 +0200</pubDate><guid>tag:tshepang.net,2015-12-16:ideal-static-blog-generator</guid><category>blogging</category></item><item><title>companies I deeply appreciate</title><link>http://tshepang.net/companies-i-deeply-appreciate</link><description>&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://en.wikipedia.org/wiki/Red_Hat"&gt;Red Hat&lt;/a&gt; contributes more to &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open_source_software"&gt;FLOSS&lt;/a&gt; than any other company,
-employing hundreds of developers to work full-time on it.&lt;/li&gt;
-&lt;li&gt;Google runs &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Google_Summer_of_Code"&gt;the Summer of Code program&lt;/a&gt;, which pays hundreds of
-students to work full-time for a few months on FLOSS projects of
-their choosing.&lt;/li&gt;
-&lt;li&gt;The &lt;a class="reference external" href="http://stackexchange.com"&gt;Stack Exchange&lt;/a&gt; family of sites attempt to provide the best Q&amp;amp;A
-for a wide array of topics. The most popular of these is &lt;a class="reference external" href="http://stackoverflow.com"&gt;Stack Overflow&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.atlassian.com"&gt;Atlassian&lt;/a&gt; offers &lt;a class="reference external" href="https://bitbucket.org"&gt;Bitbucket&lt;/a&gt;,
-a gratis hosting service for public software projects;
-this is a great thing, but not special since there are others offering
-the same, most notably &lt;a class="reference external" href="https://github.com"&gt;GitHub&lt;/a&gt;.
-What makes it special is that it also offers gratis hosting
-for unlimited private repositories.
-I have over a dozen such repositories and each time I create one,
-I feel like the world is a wonderful place... I am grateful.&lt;/li&gt;
-&lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Wed, 16 Dec 2015 12:37:47 +0200</pubDate><guid>tag:tshepang.net,2015-12-16:companies-i-deeply-appreciate</guid><category>list</category></item><item><title>about 'developer of note' series</title><link>http://tshepang.net/about-developer-of-note-series</link><description>&lt;p&gt;I respect a lot of software developers, but many of those are not
-going to have an entry in &lt;a class="reference external" href="http://tshepang.net/tags#developer-of-note-ref"&gt;this series&lt;/a&gt;, and not because they are
-lesser in my eyes... I need a need a news item that would trigger a
-post.  Thing is, if you write about someone, you actually need to have
-some content (duh!), and saying &amp;quot;Guide van Rossum rocks for creating
-Python, and am grateful!&amp;quot;  is simply not enough, hence a need for a
-trigger.  In fact, I used to call this series &lt;em&gt;developer of the
-moment&lt;/em&gt;, but at some point felt that the new name is more fitting,
-especially since a few of these honorable developers actually
-generated some new triggers along the way.&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Wed, 16 Dec 2015 12:37:47 +0200</pubDate><guid>tag:tshepang.net,2015-12-16:about-developer-of-note-series</guid><category>developer-of-note</category></item><item><title>Python wishes</title><link>http://tshepang.net/python-wishes</link><description>&lt;p&gt;None of these is likely to happen at all.
-It's even safe to use the word &lt;em&gt;never&lt;/em&gt; with a great amount of certainty;
-but I wanted to document them anyway, if for no other reason than rescue
-them from the exclusiveness of my mind:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;add a &lt;tt class="docutils literal"&gt;prepend&lt;/tt&gt; method to list objects, make it as efficient as
-&lt;tt class="docutils literal"&gt;collections.deque&lt;/tt&gt;, then remove the latter&lt;/li&gt;
-&lt;li&gt;remove &lt;tt class="docutils literal"&gt;f.readlines()&lt;/tt&gt;;
-&lt;tt class="docutils literal"&gt;list(f)&lt;/tt&gt; is a clearer and more general replacement (&lt;a class="reference external" href="http://bugs.python.org/issue13510#msg186940"&gt;source&lt;/a&gt;).&lt;/li&gt;
-&lt;li&gt;rm &lt;tt class="docutils literal"&gt;os.system&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;os.popen*&lt;/tt&gt; and relatives;
-we already have the &lt;a class="reference external" href="http://docs.python.org/3/library/subprocess"&gt;subprocess module&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;rid of all forms of string formatting,
-other than &lt;a class="reference external" href="http://docs.python.org/3/library/string#string-formatting"&gt;Advanced String Formatting&lt;/a&gt;;
-do it everywhere, including the &lt;a class="reference external" href="http://docs.python.org/3/library/logging"&gt;logging module&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;change module names to be PEP-compliant, everywhere&lt;/li&gt;
-&lt;li&gt;remove &lt;tt class="docutils literal"&gt;lambda&lt;/tt&gt;; it's not Pythonic, and just feels like a wart;
-it also does a good job of making Python code less readable&lt;/li&gt;
-&lt;li&gt;make &lt;tt class="docutils literal"&gt;item&lt;/tt&gt; go out of scope when outside for-loops like &lt;tt class="docutils literal"&gt;for item
-in range(count)&lt;/tt&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Wed, 16 Dec 2015 12:37:47 +0200</pubDate><guid>tag:tshepang.net,2015-12-16:python-wishes</guid><category>Python</category></item><item><title>FLOSS I use a-lot</title><link>http://tshepang.net/floss-i-use-a-lot</link><description>&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
-There is &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;a separate post&lt;/a&gt; for those.&lt;/p&gt;
-&lt;hr class="docutils" /&gt;
-&lt;p&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;strong&gt;wajig&lt;/strong&gt;: &lt;a class="reference external" href="http://tshepang.net/tags#wajig-ref"&gt;I also develop and maintain it&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;APT&lt;/strong&gt;: a collection of Debian package management tools&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;software development&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;strong&gt;Emacs&lt;/strong&gt;: I also use it as a general purpose text editor&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;git-cola&lt;/strong&gt;: &lt;a class="reference external" href="http://tshepang.net/project-of-note-git-cola"&gt;why me loves it&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GNU toolchain&lt;/strong&gt; (GCC, make, GLibC, ...)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Git&lt;/strong&gt;: as if I had a choice... work and open source&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Mercurial&lt;/strong&gt;: my favorite&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://meldmerge.org"&gt;Meld&lt;/a&gt;: the most excellent diff tool I've used yet&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;CPython&lt;/strong&gt;: I spend more time with Python as compared to any other
-programming language&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;entertainment&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;strong&gt;Quod Libet&lt;/strong&gt;: audio player that comes with a very excellent tag
-editor, &lt;strong&gt;Ex Falso&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;VLC&lt;/strong&gt;: user interface could be a lot better&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;GUI applications&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;strong&gt;Xfce Terminal&lt;/strong&gt;: nicer than my previous favorite, GNOME Terminal&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Evince&lt;/strong&gt;: I would love to get a PDF reader with better navigation&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Firefox&lt;/strong&gt;: not as pretty as my previous favorite, Chrome; but that
-it has a more trustworthy steward (Mozilla vs. Google), and
-it being less restrictive (Chrome makes it painful to install third
-party add-ons) makes it a winner&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Gnumeric&lt;/strong&gt;: it's faster than LibreOffice spreadsheet, and has a
-superior search interface&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://lzone.de/liferea"&gt;Liferea&lt;/a&gt;: would not be using this had it not been for Google Reader
-shutdown, but am glad they did because I like this tool, ugly and unkool
-as it is&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Thunderbird&lt;/strong&gt;: I prefer Evolution, but it gave me some issues last
-time I tried; I don't remember the details&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.transmissionbt.com"&gt;Transmission&lt;/a&gt;: the only torrent client I have ever used&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Nautilus&lt;/strong&gt;: decent GUI file manager&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;FileZilla&lt;/strong&gt;: I should really find something nicer for my SFTP needs&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://fileroller.sourceforge.net"&gt;File Roller&lt;/a&gt;: nice and simple GUI archive manager&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;miscellaneous tools&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;strong&gt;dwm&lt;/strong&gt;: &lt;a class="reference external" href="http://tshepang.net/my-current-desktop-setup"&gt;replaced GNOME as my primary desktop environment&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://tmux.sourceforge.net"&gt;tmux&lt;/a&gt;: amazingly powerful, but I wish it had less rendering bugs&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;head&lt;/strong&gt; and &lt;strong&gt;tail&lt;/strong&gt;: included in GNU coreutils suite of tools&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.greenwoodsoftware.com/less"&gt;less&lt;/a&gt;: indispensable!&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Minicom&lt;/strong&gt;: use this for some ancient setups at work, for some clients&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;OpenSSH&lt;/strong&gt;: duh!&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://github.com/joelthelion/autojump"&gt;autojump&lt;/a&gt;: makes navigating the filesystem a joy&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://fabfile.org"&gt;Fabric&lt;/a&gt;: I use it to build and deploy my blogs... it's some sort of
-replacement for shell scripting&lt;/li&gt;
-&lt;li&gt;VirtualBox: pretty much the only virtualisation tool I use;
-My use is extensive... I often leave a virtual machine running for days&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://rg3.github.io/youtube-dl"&gt;youtube-dl&lt;/a&gt;: I prefer watching videos with VLC&lt;/li&gt;
-&lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Wed, 16 Dec 2015 12:37:47 +0200</pubDate><guid>tag:tshepang.net,2015-12-16:floss-i-use-a-lot</guid><category>list</category></item><item><title>top tracks: hip-hop</title><link>http://tshepang.net/top-tracks-hip-hop</link><description>&lt;p&gt;Not included below are tracks from the best hip-hop albums yet made,
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Wed, 16 Dec 2015 12:37:47 +0200</pubDate><guid>tag:tshepang.net,2015-12-16:ideal-static-blog-generator</guid><category>blogging</category></item><item><title>top tracks: hip-hop</title><link>http://tshepang.net/top-tracks-hip-hop</link><description>&lt;p&gt;Not included below are tracks from the best hip-hop albums yet made,
 &lt;a class="reference external" href="http://tshepang.net/doggystyle-1993"&gt;Doggystyle&lt;/a&gt; and &lt;a class="reference external" href="http://tshepang.net/the-score-1996"&gt;The Score&lt;/a&gt;.&lt;/p&gt;
 &lt;div class="section" id="landmarks"&gt;
 &lt;h2&gt;landmarks&lt;/h2&gt;
@@ -3507,7 +3489,7 @@ expectation. This makes me feel guilty and stressed.&lt;/p&gt;
 &lt;li&gt;I want to start using &lt;a class="reference external" href="https://github.com/kislyuk/argcomplete"&gt;argcomplete&lt;/a&gt; at some point, a more dynamic
 shell completion tool, replacing the current hand-rolled solution.
 I find shell programming hard, and argcomplete, which is inspired by
-&lt;a class="reference external" href="http://furius.ca/optcomplete/"&gt;optcomplete&lt;/a&gt; is a brilliant workaround.&lt;/li&gt;
+&lt;a class="reference external" href="http://furius.ca/optcomplete/"&gt;optcomplete&lt;/a&gt;, is a brilliant workaround.&lt;/li&gt;
 &lt;li&gt;Someone asked me to restore gjig, the GUI tool that &lt;a class="reference external" href="http://tshepang.net/wajig-21-released"&gt;I removed from
 wajig&lt;/a&gt; some releases ago. This will be an opportunity to learn
 GTK+ again. I did a bit of it, even contributing patches (&lt;a class="reference external" href="http://projects.gnome.org/tracker/"&gt;Tracker
@@ -3515,7 +3497,7 @@ project&lt;/a&gt;), but was never quite confident. It's very likely that I
 won't work on this... too much work.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;But ultimately, I would love for the standard Debian packaging tools
-to get the the point where they make wajig irrelevant. After all, wajig
+to get the point where they make wajig irrelevant. After all, wajig
 was created to be a wrapper that helps ease the mess.&lt;/p&gt;
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;Here's the work I did in the past working on wajig, have a look at
