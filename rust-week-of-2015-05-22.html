@@ -117,8 +117,8 @@ by a function, though it uses something of an ugly syntax:</p>
 <span class="w">    </span><span class="nb">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Inverse: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">foo</span><span class="p">.</span><span class="n">invert</span><span class="p">());</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
-<p>The <tt class="docutils literal">&lt;T: Invert&gt;</tt> means this function will only accept <tt class="docutils literal">foo</tt>
-that implements the <tt class="docutils literal">Invert</tt> trait.
+<p>The <tt class="docutils literal">&lt;T: Invert&gt;</tt> means this function will only accept <tt class="docutils literal">foo</tt> whose type
+implements the <tt class="docutils literal">Invert</tt> trait.
 You can check by calling it with an <tt class="docutils literal">i32</tt> value, in which it will
 succeed:</p>
 <div class="highlight"><pre><span class="n">print_inverse</span><span class="p">(</span><span class="mi">10_</span><span class="k">i32</span><span class="p">);</span><span class="w"></span>
