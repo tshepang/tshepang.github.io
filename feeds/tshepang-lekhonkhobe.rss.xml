@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 13 Feb 2016 00:00:00 +0200</lastBuildDate><item><title>Leftovers - Season 2 Episode 1</title><link>http://tshepang.net/leftovers-season-2-episode-1</link><description>&lt;p&gt;Few tv episodes have left as much an impact on me as this bizarre
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 18 Feb 2016 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2016-02-12</title><link>http://tshepang.net/rust-week-of-2016-02-12</link><description>&lt;p&gt;I &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/31762"&gt;submitted&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/31763"&gt;four&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/31764"&gt;documentation&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/31765"&gt;changes&lt;/a&gt; this time.
+I also enjoyed reading &lt;a class="reference external" href="http://www.matusiak.eu/numerodix/blog/2016/1/10/two-weeks-rust/"&gt;Two Weeks of Rust&lt;/a&gt;, a blog post resulting
+from building something non-trivial using the language.&lt;/p&gt;
+&lt;p&gt;In terms of learning, I've always been wondering why one does not need
+&lt;tt class="docutils literal"&gt;mut&lt;/tt&gt; when reading values from an iterator via a &lt;tt class="docutils literal"&gt;for loop&lt;/tt&gt; , but
+does not when reading them using &lt;tt class="docutils literal"&gt;next&lt;/tt&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="c1"&gt;// iterator over CLI arguments&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;do_something&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="c1"&gt;// versus&lt;/span&gt;
+
+&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;mut&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="c1"&gt;// iterator over CLI arguments&lt;/span&gt;
+&lt;span class="n"&gt;do_something&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;next&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;do_something&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;next&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I think can be done because, with the &lt;tt class="docutils literal"&gt;for loop&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;it&lt;/tt&gt; cannot be used
+anymore, and that's why it can get away with being immutable. I'm not
+100% yet, because this feels like a lousy explanation.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Thu, 18 Feb 2016 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2016-02-18:rust-week-of-2016-02-12</guid><category>Rust</category></item><item><title>Leftovers - Season 2 Episode 1</title><link>http://tshepang.net/leftovers-season-2-episode-1</link><description>&lt;p&gt;Few tv episodes have left as much an impact on me as this bizarre
 one. I was reeling from it for days after watching it first time, and
 I hardly ever re-visit tv shows.&lt;/p&gt;
 &lt;p&gt;The performances are without flaw. My one favorite is that of they guy
