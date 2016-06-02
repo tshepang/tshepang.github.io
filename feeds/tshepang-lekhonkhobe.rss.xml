@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 26 May 2016 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2016-05-20</title><link>http://tshepang.net/rust-week-of-2016-05-20</link><description>&lt;p&gt;I just did two submissions, which also happen to be my first
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 02 Jun 2016 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2016-05-27</title><link>http://tshepang.net/rust-week-of-2016-05-27</link><description>&lt;p&gt;Being a fanboy, I found the discussion &lt;a class="reference external" href="https://www.reddit.com/r/rust/comments/4kqhqz"&gt;Why aren't you using Rust at
+work?&lt;/a&gt; rather depressing. It's also relevant to me since I am
+currently writing some internal tool at work, and wonder how far it
+will go before re-writing in something &lt;em&gt;more acceptable&lt;/em&gt;, like
+Python. To be fair, there was also &lt;a class="reference external" href="https://www.reddit.com/r/rust/comments/4kqhqz//d3hx9l0"&gt;some great praise&lt;/a&gt; of the ecosystem.&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;I read the intro of &lt;a class="reference external" href="https://github.com/sfackler/rust-postgres/blob/master/README.md"&gt;rust-postgres&lt;/a&gt; and even made &lt;a class="reference external" href="https://github.com/sfackler/rust-postgres/pull/186"&gt;a small
+contribution&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;I was surprised that &lt;a class="reference external" href="http://stackoverflow.com/questions/37550208"&gt;there is no Rust set type that preserves
+insertion order&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;Something I learned about running system commands, imagine you had a
+complex command like:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+ssh some-hostname &amp;quot;uname &amp;amp;&amp;amp; echo &amp;amp;&amp;amp; free --human&amp;quot;
+&lt;/pre&gt;
+&lt;p&gt;Running such in Rust would be:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;process&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;Command&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ssh&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;arg&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;work&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;arg&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;uname &amp;amp;&amp;amp; echo &amp;amp;&amp;amp; free --human&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nb"&gt;spawn&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;problem&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Thu, 02 Jun 2016 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2016-06-02:rust-week-of-2016-05-27</guid><category>Rust</category></item><item><title>Rust week of 2016-05-20</title><link>http://tshepang.net/rust-week-of-2016-05-20</link><description>&lt;p&gt;I just did two submissions, which also happen to be my first
 contributions to the respective projects,
 &lt;a class="reference external" href="https://github.com/uutils/coreutils/pull/888"&gt;Rust coreutils&lt;/a&gt; and &lt;a class="reference external" href="https://github.com/danburkert/fs2-rs/pull/7"&gt;fs2&lt;/a&gt;.&lt;/p&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Thu, 26 May 2016 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2016-05-26:rust-week-of-2016-05-20</guid><category>Rust</category></item><item><title>Rust week of 2016-05-13</title><link>http://tshepang.net/rust-week-of-2016-05-13</link><description>&lt;p&gt;&lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/33633"&gt;Just&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/33634"&gt;four&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/33635"&gt;changes&lt;/a&gt; this week, including &lt;a class="reference external" href="https://github.com/rust-lang/blog.rust-lang.org/pull/98"&gt;one for the blog&lt;/a&gt;.&lt;/p&gt;
