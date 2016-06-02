@@ -98,7 +98,7 @@ ssh some-hostname &quot;uname &amp;&amp; echo &amp;&amp; free --human&quot;
 </pre>
 <p>Running such in Rust would be:</p>
 <div class="highlight"><pre><span class="n">std</span><span class="o">::</span><span class="n">process</span><span class="o">::</span><span class="n">Command</span><span class="o">::</span><span class="n">new</span><span class="p">(</span><span class="s">&quot;ssh&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="p">.</span><span class="n">arg</span><span class="p">(</span><span class="s">&quot;work&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="p">.</span><span class="n">arg</span><span class="p">(</span><span class="s">&quot;some-hostname&quot;</span><span class="p">)</span><span class="w"></span>
 <span class="w">   </span><span class="p">.</span><span class="n">arg</span><span class="p">(</span><span class="s">&quot;uname &amp;&amp; echo &amp;&amp; free --human&quot;</span><span class="p">)</span><span class="w"></span>
 <span class="w">   </span><span class="p">.</span><span class="nb">spawn</span><span class="p">()</span><span class="w"></span>
 <span class="w">   </span><span class="p">.</span><span class="n">expect</span><span class="p">(</span><span class="s">&quot;problem&quot;</span><span class="p">);</span><span class="w"></span>
