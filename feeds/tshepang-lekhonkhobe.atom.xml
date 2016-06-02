@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2016-06-02T00:00:00+02:00</updated><entry><title>Rust week of 2016-05-27</title><link href="http://tshepang.net/rust-week-of-2016-05-27" rel="alternate"></link><updated>2016-06-02T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2016-06-02:rust-week-of-2016-05-27</id><summary type="html">&lt;p&gt;Being a fanboy, I found the discussion &lt;a class="reference external" href="https://www.reddit.com/r/rust/comments/4kqhqz"&gt;Why aren't you using Rust at
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2016-06-02T11:11:49+02:00</updated><entry><title>I am a very jealous person</title><link href="http://tshepang.net/i-am-a-very-jealous-person" rel="alternate"></link><updated>2016-06-02T11:11:49+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2016-06-02:i-am-a-very-jealous-person</id><summary type="html">&lt;p&gt;Following is some of the cases where competing software won this or
+that battle, and I am jealous since I want everyone to use what I
+like:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Git (and GitHub) is so much more successful than Mercurial (and
+Bitbucket), my preferred VCS. I mean even &lt;a class="reference external" href="http://tshepang.net/me-loves-new-git-site-design"&gt;the website looks
+better&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Markdown is a far more popular light-weight markup language than
+the far more advanced &lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt;.
+It's particularly sad when it's not used where it's needed
+most... documenting large projects (&lt;a class="reference external" href="http://doc.rust-lang.org"&gt;example&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="Python"></category><category term="non-Python"></category><category term="non-Debian"></category><category term="VCS"></category></entry><entry><title>Rust week of 2016-05-27</title><link href="http://tshepang.net/rust-week-of-2016-05-27" rel="alternate"></link><updated>2016-06-02T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2016-06-02:rust-week-of-2016-05-27</id><summary type="html">&lt;p&gt;Being a fanboy, I found the discussion &lt;a class="reference external" href="https://www.reddit.com/r/rust/comments/4kqhqz"&gt;Why aren't you using Rust at
 work?&lt;/a&gt; rather depressing. It's also relevant to me since I am
 currently writing some internal tool at work, and wonder how far it
 will go before re-writing in something &lt;em&gt;more acceptable&lt;/em&gt;, like
@@ -14,12 +26,12 @@ insertion order&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Something I learned about running system commands, imagine you had a
 complex command like:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-ssh some-hostname &amp;quot;uname &amp;amp;&amp;amp; echo &amp;amp;&amp;amp; free --human&amp;quot;
+ssh some-hostname &amp;quot;uname --all &amp;amp;&amp;amp; free --human&amp;quot;
 &lt;/pre&gt;
 &lt;p&gt;Running such in Rust would be:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;process&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;Command&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ssh&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;arg&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;some-hostname&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;arg&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;uname &amp;amp;&amp;amp; echo &amp;amp;&amp;amp; free --human&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;arg&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;uname --all &amp;amp;&amp;amp; free --human&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nb"&gt;spawn&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;problem&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -1377,27 +1389,7 @@ Python... perhaps the best I've read&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://lists.debian.org/debian-devel-announce/2014/01/msg00006.html"&gt;Debian Developers and Maintainers&lt;/a&gt; are given gratis access to
 play Valve games; another Debian win&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="Debian"></category><category term="Python"></category><category term="non-Python"></category><category term="non-FLOSS"></category><category term="links"></category></entry><entry><title>I am a very jealous person</title><link href="http://tshepang.net/i-am-a-very-jealous-person" rel="alternate"></link><updated>2014-09-20T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-09-20:i-am-a-very-jealous-person</id><summary type="html">&lt;p&gt;Following is some of the cases where competing software won this or
-that battle, and I am jealous since I want everyone to use what I
-like:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/project-of-note-discourse"&gt;I am jealous&lt;/a&gt; that Discourse is written in Ruby, and not Python.
-I am also jealous that the official service runs on Ubuntu, and not
-Debian.&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://www.digitalocean.com/blog_posts/try-ghost-a-simple-blogging-platform-for-free"&gt;The pre-built DigitalOcean image that runs the
-(impressive-sounding) Ghost blogging system is built on Ubuntu&lt;/a&gt;,
-and not Debian.&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://caremad.io/2013/10/a-look-at-pypi-downloads"&gt;Python 3 adoption still disappointing&lt;/a&gt; - a mere blip compared to
-Python 2 as regards PyPI downloads&lt;/li&gt;
-&lt;li&gt;Git (and GitHub) is so much more successful than Mercurial (and
-Bitbucket), my preferred VCS. Damn, even &lt;a class="reference external" href="http://tshepang.net/me-loves-new-git-site-design"&gt;the website looks
-better&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Markdown is a far more popular light-weight markup language than
-the far more advanced &lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt;.
-It's particularly sad when it's not used where it's needed
-most... documenting large projects (&lt;a class="reference external" href="http://doc.rust-lang.org"&gt;example&lt;/a&gt;).&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="Python"></category><category term="non-Python"></category><category term="non-Debian"></category><category term="VCS"></category></entry><entry><title>project of note: Debian LTS</title><link href="http://tshepang.net/project-of-note-debian-lts" rel="alternate"></link><updated>2014-09-11T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-09-11:project-of-note-debian-lts</id><summary type="html">&lt;p&gt;One of the complaints about Debian stable releases is that they reach
+</summary><category term="Debian"></category><category term="Python"></category><category term="non-Python"></category><category term="non-FLOSS"></category><category term="links"></category></entry><entry><title>project of note: Debian LTS</title><link href="http://tshepang.net/project-of-note-debian-lts" rel="alternate"></link><updated>2014-09-11T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2014-09-11:project-of-note-debian-lts</id><summary type="html">&lt;p&gt;One of the complaints about Debian stable releases is that they reach
 End Of Life too early (~3 years). This can result in some people
 choosing commercially-backed alternatives like Ubuntu and Red Hat, for
 they don't want to be bothered to have to upgrade that frequently (not
@@ -3670,8 +3662,6 @@ helping create what is likely &lt;a class="reference external" href="http://stac
 on the web&lt;/a&gt;. So whenever he goes and creates something else, I
 naturally do pay attention, and this &lt;a class="reference external" href="http://www.discourse.org"&gt;Discourse&lt;/a&gt; thing looks amazing,
 at least from by limited usage so far.&lt;/p&gt;
-&lt;p&gt;I am just jealous that it's written in Ruby, and not Python. I am also
-jealous that &lt;a class="reference external" href="http://blog.discourse.org/2013/04/the-discourse-servers"&gt;the main service runs on Ubuntu, and not Debian&lt;/a&gt;.&lt;/p&gt;
 </summary><category term="non-Python"></category><category term="non-Debian"></category><category term="project-of-note"></category></entry><entry><title>me loving Auto Fill Mode (Emacs)</title><link href="http://tshepang.net/me-loving-auto-fill-mode-emacs" rel="alternate"></link><updated>2013-05-10T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-05-10:me-loving-auto-fill-mode-emacs</id><summary type="html">&lt;p&gt;For the past 2 weeks or so, I have been learning Emacs, something I've
 been meaning to do for years now. I decided to do it seriously (not
 skip a day, sometimes hours at a time), and am really liking it. It's

@@ -94,12 +94,12 @@ insertion order</a>.</p>
 <p>Something I learned about running system commands, imagine you had a
 complex command like:</p>
 <pre class="literal-block">
-ssh some-hostname &quot;uname &amp;&amp; echo &amp;&amp; free --human&quot;
+ssh some-hostname &quot;uname --all &amp;&amp; free --human&quot;
 </pre>
 <p>Running such in Rust would be:</p>
 <div class="highlight"><pre><span class="n">std</span><span class="o">::</span><span class="n">process</span><span class="o">::</span><span class="n">Command</span><span class="o">::</span><span class="n">new</span><span class="p">(</span><span class="s">&quot;ssh&quot;</span><span class="p">)</span><span class="w"></span>
 <span class="w">   </span><span class="p">.</span><span class="n">arg</span><span class="p">(</span><span class="s">&quot;some-hostname&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="p">.</span><span class="n">arg</span><span class="p">(</span><span class="s">&quot;uname &amp;&amp; echo &amp;&amp; free --human&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="p">.</span><span class="n">arg</span><span class="p">(</span><span class="s">&quot;uname --all &amp;&amp; free --human&quot;</span><span class="p">)</span><span class="w"></span>
 <span class="w">   </span><span class="p">.</span><span class="nb">spawn</span><span class="p">()</span><span class="w"></span>
 <span class="w">   </span><span class="p">.</span><span class="n">expect</span><span class="p">(</span><span class="s">&quot;problem&quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
@@ -144,6 +144,7 @@ ssh some-hostname &quot;uname &amp;&amp; echo &amp;&amp; free --human&quot;
             <nav>
             <ul class="articles-timeline">
                 <li class="previous-article">« <a href="http://tshepang.net/rust-week-of-2016-05-20" title="Previous: Rust week of 2016-05-20">Rust week of 2016-05-20</a></li>
+                <li class="next-article"><a href="http://tshepang.net/i-am-a-very-jealous-person" title="Next: I am a very jealous person">I am a very jealous person</a> »</li>
             </ul>
             </nav>
             </aside>
