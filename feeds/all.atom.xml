@@ -1,5 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2016-06-02T11:11:49+02:00</updated><entry><title>I am a very jealous person</title><link href="http://tshepang.net/i-am-a-very-jealous-person" rel="alternate"></link><updated>2016-06-02T11:11:49+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2016-06-02:i-am-a-very-jealous-person</id><summary type="html">&lt;p&gt;Following is some of the cases where competing software won this or
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2016-06-09T00:00:00+02:00</updated><entry><title>Rust week of 2016-06-03</title><link href="http://tshepang.net/rust-week-of-2016-06-03" rel="alternate"></link><updated>2016-06-09T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2016-06-09:rust-week-of-2016-06-03</id><summary type="html">&lt;p&gt;I did more Rust coding than most weeks this time around, busy with the
+project &lt;a class="reference external" href="http://tshepang.net/rust-week-of-2016-05-27"&gt;I mentioned last week&lt;/a&gt;. My favorite parts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;I love the fact that &lt;a class="reference external" href="https://github.com/hannobraun/inotify-rs"&gt;inotify-rs&lt;/a&gt; (&lt;a class="reference external" href="http://tshepang.net/rust-week-of-2015-07-31"&gt;first mention&lt;/a&gt;) collects
+events in the background, so that when you are done with whatever
+task you were busy with, you can check if there is anything new to
+act upon (e.g. a new file was created in a watched directory). This
+allows one to do away with using threads, reducing code complexity.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Rust error handling is so nice, and forces one to think better about
+code. As an example, when you doing any I/O, you mostly want to do
+that in a separate function so that you can return a &lt;tt class="docutils literal"&gt;Result&lt;/tt&gt;
+type, something like &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;Result&amp;lt;(),&lt;/span&gt; &lt;span class="pre"&gt;std::io::Error&amp;gt;&lt;/span&gt;&lt;/tt&gt;. This forces you
+to isolate just the I/O handling part from the other parts of the
+logic, where you'd for maybe just want to return a &lt;tt class="docutils literal"&gt;bool&lt;/tt&gt; type.
+In my case, I would not get any I/O error, but I would get failure
+from running an external process (see &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;std::process&lt;/span&gt;&lt;/tt&gt; module) where
+the exit status was not 0. That meant I/O error failure case and the
+process error case had to be handled in separate places.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;In the example I gave above, &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;Result&amp;lt;(),&lt;/span&gt; &lt;span class="pre"&gt;std::io::Error&amp;gt;&lt;/span&gt;&lt;/tt&gt;, this
+means that we don't care about the success return value. On the
+calling side, we have an option to use a &lt;tt class="docutils literal"&gt;match&lt;/tt&gt; statement to
+handle the result:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;match&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;Ok&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;Err&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;do_something_with&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;There is a convenient syntax to deal with such case, where you don't
+care about one of values... &lt;tt class="docutils literal"&gt;if let&lt;/tt&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;Err&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;do_something_with&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;So elegant!&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;I submitted &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/34185"&gt;just one contribution&lt;/a&gt; this time around.&lt;/p&gt;
+</summary><category term="Rust"></category></entry><entry><title>I am a very jealous person</title><link href="http://tshepang.net/i-am-a-very-jealous-person" rel="alternate"></link><updated>2016-06-02T11:11:49+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2016-06-02:i-am-a-very-jealous-person</id><summary type="html">&lt;p&gt;Following is some of the cases where competing software won this or
 that battle, and I am jealous since I want everyone to use what I
 like:&lt;/p&gt;
 &lt;ul class="simple"&gt;
