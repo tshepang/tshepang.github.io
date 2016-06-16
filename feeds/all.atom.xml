@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2016-06-09T00:00:00+02:00</updated><entry><title>Rust week of 2016-06-03</title><link href="http://tshepang.net/rust-week-of-2016-06-03" rel="alternate"></link><updated>2016-06-09T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2016-06-09:rust-week-of-2016-06-03</id><summary type="html">&lt;p&gt;I did more Rust coding than most weeks this time around, busy with the
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2016-06-16T00:00:00+02:00</updated><entry><title>Rust week of 2016-06-10</title><link href="http://tshepang.net/rust-week-of-2016-06-10" rel="alternate"></link><updated>2016-06-16T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2016-06-16:rust-week-of-2016-06-10</id><summary type="html">&lt;p&gt;I was made sad by the complexity of involving STDIN when using
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;std::process&lt;/span&gt;&lt;/tt&gt; module:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+fn o_to_0() -&amp;gt; std::io::Err(bool) {
+    let mut p = std::process::Command::new(&amp;quot;tr&amp;quot;)
+        .arg(&amp;quot;o&amp;quot;)
+        .arg(&amp;quot;0&amp;quot;)
+        .stdin(std::process::Stdio::piped())
+        .spawn()?;
+    let input = &amp;quot;foo&amp;quot;;
+    if let Some(stdin) = p.stdin.as_mut() {
+        stdin.write_all(input.as_bytes()?;
+    }
+    Ok(p.wait()?.success())
+}
+&lt;/pre&gt;
+&lt;p&gt;I wonder if this can be more easy, in other languages and/or libraries.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;I made &lt;a class="reference external" href="https://github.com/uutils/coreutils/pull/899"&gt;two&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/34314"&gt;submissions&lt;/a&gt;, and gave some commentary &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/34114"&gt;on another&lt;/a&gt;.&lt;/p&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust week of 2016-06-03</title><link href="http://tshepang.net/rust-week-of-2016-06-03" rel="alternate"></link><updated>2016-06-09T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2016-06-09:rust-week-of-2016-06-03</id><summary type="html">&lt;p&gt;I did more Rust coding than most weeks this time around, busy with the
 project &lt;a class="reference external" href="http://tshepang.net/rust-week-of-2016-05-27"&gt;I mentioned last week&lt;/a&gt;. My favorite parts:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;I love the fact that &lt;a class="reference external" href="https://github.com/hannobraun/inotify-rs"&gt;inotify-rs&lt;/a&gt; (&lt;a class="reference external" href="http://tshepang.net/rust-week-of-2015-07-31"&gt;first mention&lt;/a&gt;) collects
