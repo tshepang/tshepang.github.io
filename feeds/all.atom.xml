@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2016-06-16T00:00:00+02:00</updated><entry><title>Rust week of 2016-06-10</title><link href="http://tshepang.net/rust-week-of-2016-06-10" rel="alternate"></link><updated>2016-06-16T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2016-06-16:rust-week-of-2016-06-10</id><summary type="html">&lt;p&gt;I was made sad by the complexity of involving STDIN when using
 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;std::process&lt;/span&gt;&lt;/tt&gt; module:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-fn o_to_0() -&amp;gt; std::io::Err(bool) {
+fn o_to_0() -&amp;gt; std::io::Result&amp;lt;bool&amp;gt; {
     let mut p = std::process::Command::new(&amp;quot;tr&amp;quot;)
         .arg(&amp;quot;o&amp;quot;)
         .arg(&amp;quot;0&amp;quot;)
@@ -10,7 +10,7 @@ fn o_to_0() -&amp;gt; std::io::Err(bool) {
         .spawn()?;
     let input = &amp;quot;foo&amp;quot;;
     if let Some(stdin) = p.stdin.as_mut() {
-        stdin.write_all(input.as_bytes()?;
+        stdin.write_all(input.as_bytes())?;
     }
     Ok(p.wait()?.success())
 }

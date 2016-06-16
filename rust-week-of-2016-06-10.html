@@ -15,12 +15,12 @@
 
 <meta property="og:title" content="Rust week of 2016-06-10 "/>
 <meta property="og:url" content="http://tshepang.net/rust-week-of-2016-06-10" />
-<meta property="og:description" content="I was made sad by the complexity of involving STDIN when using std::process module: fn o_to_0() -&gt; std::io::Err(bool) { let mut p = std::process::Command::new(&#34;tr&#34;) .arg(&#34;o&#34;) .arg(&#34;0&#34;) .stdin(std::process::Stdio::piped()) .spawn()?; let input = &#34;foo&#34;; if let Some(stdin) = p.stdin.as_mut() { stdin ..." />
+<meta property="og:description" content="I was made sad by the complexity of involving STDIN when using std::process module: fn o_to_0() -&gt; std::io::Result&lt;bool&gt; { let mut p = std::process::Command::new(&#34;tr&#34;) .arg(&#34;o&#34;) .arg(&#34;0&#34;) .stdin(std::process::Stdio::piped()) .spawn()?; let input = &#34;foo&#34;; if let Some(stdin) = p.stdin.as_mut() { stdin ..." />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2016-06-16T00:00:00+02:00" />
 <meta name="twitter:title" content="Rust week of 2016-06-10 ">
-<meta name="twitter:description" content="I was made sad by the complexity of involving STDIN when using std::process module: fn o_to_0() -&gt; std::io::Err(bool) { let mut p = std::process::Command::new(&#34;tr&#34;) .arg(&#34;o&#34;) .arg(&#34;0&#34;) .stdin(std::process::Stdio::piped()) .spawn()?; let input = &#34;foo&#34;; if let Some(stdin) = p.stdin.as_mut() { stdin ...">
+<meta name="twitter:description" content="I was made sad by the complexity of involving STDIN when using std::process module: fn o_to_0() -&gt; std::io::Result&lt;bool&gt; { let mut p = std::process::Command::new(&#34;tr&#34;) .arg(&#34;o&#34;) .arg(&#34;0&#34;) .stdin(std::process::Stdio::piped()) .spawn()?; let input = &#34;foo&#34;; if let Some(stdin) = p.stdin.as_mut() { stdin ...">
 
         <title>Rust week of 2016-06-10  · Tshepang logs
 </title>
@@ -82,7 +82,7 @@
             <p>I was made sad by the complexity of involving STDIN when using
 <tt class="docutils literal"><span class="pre">std::process</span></tt> module:</p>
 <pre class="literal-block">
-fn o_to_0() -&gt; std::io::Err(bool) {
+fn o_to_0() -&gt; std::io::Result&lt;bool&gt; {
     let mut p = std::process::Command::new(&quot;tr&quot;)
         .arg(&quot;o&quot;)
         .arg(&quot;0&quot;)
@@ -90,7 +90,7 @@ fn o_to_0() -&gt; std::io::Err(bool) {
         .spawn()?;
     let input = &quot;foo&quot;;
     if let Some(stdin) = p.stdin.as_mut() {
-        stdin.write_all(input.as_bytes()?;
+        stdin.write_all(input.as_bytes())?;
     }
     Ok(p.wait()?.success())
 }
