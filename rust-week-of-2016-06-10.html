@@ -81,20 +81,19 @@
             
             <p>I was made sad by the complexity of involving STDIN when using
 <tt class="docutils literal"><span class="pre">std::process</span></tt> module:</p>
-<pre class="literal-block">
-fn o_to_0() -&gt; std::io::Result&lt;bool&gt; {
-    let mut p = std::process::Command::new(&quot;tr&quot;)
-        .arg(&quot;o&quot;)
-        .arg(&quot;0&quot;)
-        .stdin(std::process::Stdio::piped())
-        .spawn()?;
-    let input = &quot;foo&quot;;
-    if let Some(stdin) = p.stdin.as_mut() {
-        stdin.write_all(input.as_bytes())?;
-    }
-    Ok(p.wait()?.success())
-}
-</pre>
+<div class="highlight"><pre><span class="k">fn</span><span class="w"> </span><span class="n">o_to_0</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">io</span><span class="o">::</span><span class="nb">Result</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">process</span><span class="o">::</span><span class="n">Command</span><span class="o">::</span><span class="n">new</span><span class="p">(</span><span class="s">&quot;tr&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">.</span><span class="n">arg</span><span class="p">(</span><span class="s">&quot;o&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">.</span><span class="n">arg</span><span class="p">(</span><span class="s">&quot;0&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">.</span><span class="n">stdin</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">process</span><span class="o">::</span><span class="n">Stdio</span><span class="o">::</span><span class="n">piped</span><span class="p">())</span><span class="w"></span>
+<span class="w">        </span><span class="p">.</span><span class="nb">spawn</span><span class="p">()</span><span class="o">?</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;foo&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="n">stdin</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">stdin</span><span class="p">.</span><span class="n">as_mut</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">stdin</span><span class="p">.</span><span class="n">write_all</span><span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="n">as_bytes</span><span class="p">())</span><span class="o">?</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="nb">Ok</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">wait</span><span class="p">()</span><span class="o">?</span><span class="p">.</span><span class="n">success</span><span class="p">())</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
 <p>I wonder if this can be more easy, in other languages and/or libraries.</p>
 <hr class="docutils" />
 <p>I made <a class="reference external" href="https://github.com/uutils/coreutils/pull/899">two</a> <a class="reference external" href="https://github.com/rust-lang/rust/pull/34314">submissions</a>, and gave some commentary <a class="reference external" href="https://github.com/rust-lang/rust/pull/34114">on another</a>.</p>
