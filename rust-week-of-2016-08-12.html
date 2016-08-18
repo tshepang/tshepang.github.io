@@ -15,12 +15,12 @@
 
 <meta property="og:title" content="Rust week of 2016-08-12 "/>
 <meta property="og:url" content="http://tshepang.net/rust-week-of-2016-08-12" />
-<meta property="og:description" content="I enjoyed a useful (and tiny) library that helps align text nicely. Following is an example of its usage: &lt;!-- sourcecode: rust extern crate unindent; use unindent::unindent; fn main() { let text = &#34; A long text is beginning here and not in the previous line, because it wouldn&#39;t fit in comfort ..." />
+<meta property="og:description" content="I enjoyed a useful (and tiny) library that helps align text nicely. Following is an example of its usage: extern crate unindent; use unindent::unindent; fn main() { let text = &#34; A long text is beginning here and not in the previous line, because it wouldn&#39;t fit in comfort. &#34; println!(&#34;{}&#34;, unindent ..." />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2016-08-18T00:00:00+02:00" />
 <meta name="twitter:title" content="Rust week of 2016-08-12 ">
-<meta name="twitter:description" content="I enjoyed a useful (and tiny) library that helps align text nicely. Following is an example of its usage: &lt;!-- sourcecode: rust extern crate unindent; use unindent::unindent; fn main() { let text = &#34; A long text is beginning here and not in the previous line, because it wouldn&#39;t fit in comfort ...">
+<meta name="twitter:description" content="I enjoyed a useful (and tiny) library that helps align text nicely. Following is an example of its usage: extern crate unindent; use unindent::unindent; fn main() { let text = &#34; A long text is beginning here and not in the previous line, because it wouldn&#39;t fit in comfort. &#34; println!(&#34;{}&#34;, unindent ...">
 
         <title>Rust week of 2016-08-12  · Tshepang logs
 </title>
@@ -81,18 +81,17 @@
             
             <p>I enjoyed a useful (and tiny) library that helps align text
 nicely. Following is an example of its usage:</p>
-<!-- sourcecode: rust
+<div class="highlight"><pre><span class="k">extern</span><span class="w"> </span><span class="n">crate</span><span class="w"> </span><span class="n">unindent</span><span class="p">;</span><span class="w"></span>
+<span class="kn">use</span><span class="w"> </span><span class="n">unindent</span><span class="o">::</span><span class="n">unindent</span><span class="p">;</span><span class="w"></span>
 
-extern crate unindent;
-use unindent::unindent;
-
-fn main() {
-    let text = "
-        A long text is beginning here and not in the previous line,
-        because it wouldn't fit in comfort.
-    "
-    println!("{}", unindent(text));
-} -->
+<span class="k">fn</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;</span>
+<span class="s">        A long text is beginning here and not in the previous line,</span>
+<span class="s">        because it wouldn&#39;t fit in comfort.</span>
+<span class="s">    &quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nb">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">unindent</span><span class="p">(</span><span class="n">text</span><span class="p">));</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
 <p>I submitted to <a class="reference external" href="https://github.com/dtolnay/indoc/pull/4">small</a> <a class="reference external" href="https://github.com/dtolnay/indoc/pull/5">improvements</a> to its documentation. I also
 contributed <a class="reference external" href="https://github.com/rust-lang/cargo/pull/3015">a style improvement</a> to Cargo, the Rust package manager.</p>
 
