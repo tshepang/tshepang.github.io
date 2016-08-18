@@ -13,16 +13,16 @@
 
 <meta name="keywords" content="Rust, computing, " />
 
-<meta property="og:title" content="Rust week of 2015-07-10 "/>
-<meta property="og:url" content="http://tshepang.net/rust-week-of-2015-07-10" />
-<meta property="og:description" content="I submitted these: Two improvements to documentation that explains errors I removed some redundant info from I/O docs I did this one last week, and forgot to submit it" />
+<meta property="og:title" content="Rust week of 2016-08-12 "/>
+<meta property="og:url" content="http://tshepang.net/rust-week-of-2016-08-12" />
+<meta property="og:description" content="I enjoyed a useful (and tiny) library that helps align text nicely. Following is an example of its usage:" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
-<meta property="og:article:published_time" content="2015-07-11T00:00:00+02:00" />
-<meta name="twitter:title" content="Rust week of 2015-07-10 ">
-<meta name="twitter:description" content="I submitted these: Two improvements to documentation that explains errors I removed some redundant info from I/O docs I did this one last week, and forgot to submit it">
+<meta property="og:article:published_time" content="2016-08-17T00:00:00+02:00" />
+<meta name="twitter:title" content="Rust week of 2016-08-12 ">
+<meta name="twitter:description" content="I enjoyed a useful (and tiny) library that helps align text nicely. Following is an example of its usage:">
 
-        <title>Rust week of 2015-07-10  · Tshepang logs
+        <title>Rust week of 2016-08-12  · Tshepang logs
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -71,7 +71,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://tshepang.net/rust-week-of-2015-07-10"> Rust week of 2015-07-10  </a></h1>
+    <h1><a href="http://tshepang.net/rust-week-of-2016-08-12"> Rust week of 2016-08-12  </a></h1>
     </header>
 </div>
 
@@ -79,12 +79,24 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>I submitted these:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://github.com/rust-lang/rust/pull/26973">Two</a> <a class="reference external" href="https://github.com/rust-lang/rust/pull/26976">improvements</a> to documentation that explains errors</li>
-<li>I <a class="reference external" href="https://github.com/rust-lang/rust/pull/26979">removed</a> some redundant info from I/O docs</li>
-<li>I did <a class="reference external" href="https://github.com/rust-lang/rust/pull/26974">this one</a> last week, and forgot to submit it</li>
-</ul>
+            <p>I enjoyed a useful (and tiny) library that helps align text
+nicely. Following is an example of its usage:</p>
+<blockquote>
+<!-- sourcecode: rust
+
+extern crate unindent;
+use unindent::unindent;
+
+fn main() {
+    let text = "
+        A long text is beginning here and not in the previous line,
+        because it wouldn't fit in comfort.
+    "
+    println!("{}", unindent(text));
+} -->
+</blockquote>
+<p>I submitted to <a class="reference external" href="https://github.com/dtolnay/indoc/pull/4">small</a> <a class="reference external" href="https://github.com/dtolnay/indoc/pull/5">improvements</a> to its documentation. I also
+contributed <a class="reference external" href="https://github.com/rust-lang/cargo/pull/3015">a style improvement</a> to Cargo, the Rust package manager.</p>
 
             
             <section>
@@ -92,7 +104,7 @@
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://tshepang.net/rust-week-of-2015-07-10#disqus_thread">
+                href="http://tshepang.net/rust-week-of-2016-08-12#disqus_thread">
                 Comments
             </a>
         </div>
@@ -102,8 +114,8 @@
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'tshepanglogs';
-        var disqus_identifier = 'http://tshepang.net/rust-week-of-2015-07-10';
-    var disqus_url = 'http://tshepang.net/rust-week-of-2015-07-10';
+        var disqus_identifier = 'http://tshepang.net/rust-week-of-2016-08-12';
+    var disqus_url = 'http://tshepang.net/rust-week-of-2016-08-12';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -125,8 +137,7 @@
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/rust-week-of-2015-07-03" title="Previous: Rust week of 2015-07-03">Rust week of 2015-07-03</a></li>
-                <li class="next-article"><a href="http://tshepang.net/top-tracks-louis-armstrong" title="Next: top tracks: Louis Armstrong">top tracks: Louis Armstrong</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/rust-week-of-2016-08-05" title="Previous: Rust week of 2016-08-05">Rust week of 2016-08-05</a></li>
             </ul>
             </nav>
             </aside>
@@ -134,7 +145,7 @@
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2015-07-11T00:00:00+02:00">Jul 11, 2015</time>
+            <time pubdate="pubdate" datetime="2016-08-17T00:00:00+02:00">Aug 17, 2016</time>
             <h4>Category</h4>
             <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
             <h4>Tags</h4>
