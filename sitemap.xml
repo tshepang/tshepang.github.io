@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://tshepang.net/index.html</loc>
-<lastmod>2016-08-25T23:34:38-00:00</lastmod>
+<lastmod>2016-09-01T22:31:13-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://tshepang.net/archives.html</loc>
-<lastmod>2016-08-25T23:34:38-00:00</lastmod>
+<lastmod>2016-09-01T22:31:13-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://tshepang.net/tags.html</loc>
-<lastmod>2016-08-25T23:34:38-00:00</lastmod>
+<lastmod>2016-09-01T22:31:13-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://tshepang.net/categories.html</loc>
-<lastmod>2016-08-25T23:34:38-00:00</lastmod>
+<lastmod>2016-09-01T22:31:13-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -62,6 +62,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://tshepang.net/rust-week-of-2016-07-29</loc>
 <lastmod>2016-08-04T00:00:00+02:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://tshepang.net/rust-week-of-2016-08-26</loc>
+<lastmod>2016-08-01T00:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
