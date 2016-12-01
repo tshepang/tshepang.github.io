@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 24 Nov 2016 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2016-11-18</title><link>http://tshepang.net/rust-week-of-2016-11-18</link><description>&lt;p&gt;I was surprised by the ease of use of &lt;a class="reference external" href="https://crates.io/crates/libflate"&gt;libflate&lt;/a&gt; when decompressing a
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 28 Nov 2016 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2016-11-25</title><link>http://tshepang.net/rust-week-of-2016-11-25</link><description>&lt;p&gt;I been wanting to write a Rust reStructuredText parser for the longest
+time, and surprised to find that &lt;a class="reference external" href="https://github.com/flying-sheep/rust-rst"&gt;one has been around for months&lt;/a&gt;. I
+do not have the skills enough to build such a thing, so am glad
+someone beat me to it.&lt;/p&gt;
+&lt;p&gt;In terms of contributions, there were &lt;a class="reference external" href="https://github.com/rust-lang/cargo/pull/3357"&gt;just&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/cargo/pull/3358"&gt;two&lt;/a&gt; this week.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Mon, 28 Nov 2016 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2016-11-28:rust-week-of-2016-11-25</guid><category>Rust</category></item><item><title>Rust week of 2016-11-18</title><link>http://tshepang.net/rust-week-of-2016-11-18</link><description>&lt;p&gt;I was surprised by the ease of use of &lt;a class="reference external" href="https://crates.io/crates/libflate"&gt;libflate&lt;/a&gt; when decompressing a
 gzip'ed file:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;extern&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;crate&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;libflate&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
@@ -4399,11 +4404,11 @@ on software&lt;/a&gt;. I am very grateful for the chance the owner, who
 interviewed me for the position, took on me. I learned an incredible
 amount of stuff.&lt;/p&gt;
 &lt;p&gt;Some months ago, a friend enticed me to the idea of doing something
-else, giving me contacts for &lt;a class="reference external" href="http://www.embedded-iq.com"&gt;some company&lt;/a&gt; building software and
+else, giving me contacts for &lt;a class="reference external" href="http://eiq.co.za"&gt;some company&lt;/a&gt; building software and
 electronics products for the mining industry. So I wasn't actually
 looking for work, but I was glad of the opportunity since I was sort
 of stagnating, and it really looked like this new company did some
-pmore fun stuff, and I got the vibe that I'd really get challenged.&lt;/p&gt;
+fun stuff, and I got the vibe that I'd really get challenged.&lt;/p&gt;
 &lt;p&gt;It's been 3 months now, and my guess was right. I keep getting
 surprised by the levels of smart I encounter regurlarly. These are the
 sorts of people I simply can't match with my lesser brain, but am glad

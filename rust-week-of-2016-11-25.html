@@ -13,16 +13,16 @@
 
 <meta name="keywords" content="Rust, computing, " />
 
-<meta property="og:title" content="Rust week of 2016-05-27 "/>
-<meta property="og:url" content="http://tshepang.net/rust-week-of-2016-05-27" />
-<meta property="og:description" content="Being a fanboy, I found the discussion Why aren&#39;t you using Rust at work? rather depressing. It&#39;s also relevant to me since I am currently writing some internal tool at work, and wonder how far it will go before re-writing in something more acceptable, like Python. To be ..." />
+<meta property="og:title" content="Rust week of 2016-11-25 "/>
+<meta property="og:url" content="http://tshepang.net/rust-week-of-2016-11-25" />
+<meta property="og:description" content="I been wanting to write a Rust reStructuredText parser for the longest time, and surprised to find that one has been around for months. I do not have the skills enough to build such a thing, so am glad someone beat me to it. In terms of contributions, there were ..." />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
-<meta property="og:article:published_time" content="2016-06-02T00:00:00+02:00" />
-<meta name="twitter:title" content="Rust week of 2016-05-27 ">
-<meta name="twitter:description" content="Being a fanboy, I found the discussion Why aren&#39;t you using Rust at work? rather depressing. It&#39;s also relevant to me since I am currently writing some internal tool at work, and wonder how far it will go before re-writing in something more acceptable, like Python. To be ...">
+<meta property="og:article:published_time" content="2016-11-28T00:00:00+02:00" />
+<meta name="twitter:title" content="Rust week of 2016-11-25 ">
+<meta name="twitter:description" content="I been wanting to write a Rust reStructuredText parser for the longest time, and surprised to find that one has been around for months. I do not have the skills enough to build such a thing, so am glad someone beat me to it. In terms of contributions, there were ...">
 
-        <title>Rust week of 2016-05-27  · Tshepang logs
+        <title>Rust week of 2016-11-25  · Tshepang logs
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -71,7 +71,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://tshepang.net/rust-week-of-2016-05-27"> Rust week of 2016-05-27  </a></h1>
+    <h1><a href="http://tshepang.net/rust-week-of-2016-11-25"> Rust week of 2016-11-25  </a></h1>
     </header>
 </div>
 
@@ -79,30 +79,11 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>Being a fanboy, I found the discussion <a class="reference external" href="https://www.reddit.com/r/rust/comments/4kqhqz">Why aren't you using Rust at
-work?</a> rather depressing. It's also relevant to me since I am
-currently writing some internal tool at work, and wonder how far it
-will go before re-writing in something <em>more acceptable</em>, like
-Python. To be fair, there was also <a class="reference external" href="https://www.reddit.com/r/rust/comments/4kqhqz//d3hx9l0">some great praise</a> of the ecosystem.</p>
-<hr class="docutils" />
-<p>I read the intro of <a class="reference external" href="https://github.com/sfackler/rust-postgres/blob/master/README.md">rust-postgres</a> and even made <a class="reference external" href="https://github.com/sfackler/rust-postgres/pull/186">a small
-contribution</a>. I also made a <a class="reference external" href="https://github.com/rust-lang/rust/pull/34033">doc contribution</a> to stdlib.</p>
-<hr class="docutils" />
-<p>I was surprised that <a class="reference external" href="http://stackoverflow.com/questions/37550208">there is no Rust set type that preserves
-insertion order</a>.</p>
-<hr class="docutils" />
-<p>Something I learned about running system commands, imagine you had a
-complex command like:</p>
-<pre class="literal-block">
-ssh some-hostname &quot;uname --all &amp;&amp; free --human&quot;
-</pre>
-<p>Running such in Rust would be:</p>
-<div class="highlight"><pre><span class="n">std</span><span class="o">::</span><span class="n">process</span><span class="o">::</span><span class="n">Command</span><span class="o">::</span><span class="n">new</span><span class="p">(</span><span class="s">&quot;ssh&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="p">.</span><span class="n">arg</span><span class="p">(</span><span class="s">&quot;some-hostname&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="p">.</span><span class="n">arg</span><span class="p">(</span><span class="s">&quot;uname --all &amp;&amp; free --human&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="p">.</span><span class="nb">spawn</span><span class="p">()</span><span class="w"></span>
-<span class="w">   </span><span class="p">.</span><span class="n">expect</span><span class="p">(</span><span class="s">&quot;problem&quot;</span><span class="p">);</span><span class="w"></span>
-</pre></div>
+            <p>I been wanting to write a Rust reStructuredText parser for the longest
+time, and surprised to find that <a class="reference external" href="https://github.com/flying-sheep/rust-rst">one has been around for months</a>. I
+do not have the skills enough to build such a thing, so am glad
+someone beat me to it.</p>
+<p>In terms of contributions, there were <a class="reference external" href="https://github.com/rust-lang/cargo/pull/3357">just</a> <a class="reference external" href="https://github.com/rust-lang/cargo/pull/3358">two</a> this week.</p>
 
             
             <section>
@@ -110,7 +91,7 @@ ssh some-hostname &quot;uname --all &amp;&amp; free --human&quot;
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://tshepang.net/rust-week-of-2016-05-27#disqus_thread">
+                href="http://tshepang.net/rust-week-of-2016-11-25#disqus_thread">
                 Comments
             </a>
         </div>
@@ -120,8 +101,8 @@ ssh some-hostname &quot;uname --all &amp;&amp; free --human&quot;
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'tshepanglogs';
-        var disqus_identifier = 'http://tshepang.net/rust-week-of-2016-05-27';
-    var disqus_url = 'http://tshepang.net/rust-week-of-2016-05-27';
+        var disqus_identifier = 'http://tshepang.net/rust-week-of-2016-11-25';
+    var disqus_url = 'http://tshepang.net/rust-week-of-2016-11-25';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -143,8 +124,7 @@ ssh some-hostname &quot;uname --all &amp;&amp; free --human&quot;
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/rust-week-of-2016-05-20" title="Previous: Rust week of 2016-05-20">Rust week of 2016-05-20</a></li>
-                <li class="next-article"><a href="http://tshepang.net/i-am-a-very-jealous-person" title="Next: I am a very jealous person">I am a very jealous person</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/rust-week-of-2016-11-18" title="Previous: Rust week of 2016-11-18">Rust week of 2016-11-18</a></li>
             </ul>
             </nav>
             </aside>
@@ -152,7 +132,7 @@ ssh some-hostname &quot;uname --all &amp;&amp; free --human&quot;
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2016-06-02T00:00:00+02:00">Jun 2, 2016</time>
+            <time pubdate="pubdate" datetime="2016-11-28T00:00:00+02:00">Nov 28, 2016</time>
             <h4>Category</h4>
             <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
             <h4>Tags</h4>
