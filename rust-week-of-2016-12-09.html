@@ -13,16 +13,16 @@
 
 <meta name="keywords" content="Rust, computing, " />
 
-<meta property="og:title" content="trying to understand stack memory "/>
-<meta property="og:url" content="http://tshepang.net/trying-to-understand-stack-memory" />
-<meta property="og:description" content="Python is a language that is so high level that concepts like stack and heap memory are hidden from its users. Not so with lower-level languages like C. Following examples are implemented in Rust, which is easier to use than C: fn main() { let a = 0i8; let b = 0 ..." />
+<meta property="og:title" content="Rust week of 2016-12-09 "/>
+<meta property="og:url" content="http://tshepang.net/rust-week-of-2016-12-09" />
+<meta property="og:description" content="I played some with serde-yaml and rust-yaml. I last looked YAML some yeats, and looking again, I am surprised by its complexity. As far as contributions go, there were just two." />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
-<meta property="og:article:published_time" content="2014-08-04T00:00:00+02:00" />
-<meta name="twitter:title" content="trying to understand stack memory ">
-<meta name="twitter:description" content="Python is a language that is so high level that concepts like stack and heap memory are hidden from its users. Not so with lower-level languages like C. Following examples are implemented in Rust, which is easier to use than C: fn main() { let a = 0i8; let b = 0 ...">
+<meta property="og:article:published_time" content="2016-12-15T00:00:00+02:00" />
+<meta name="twitter:title" content="Rust week of 2016-12-09 ">
+<meta name="twitter:description" content="I played some with serde-yaml and rust-yaml. I last looked YAML some yeats, and looking again, I am surprised by its complexity. As far as contributions go, there were just two.">
 
-        <title>trying to understand stack memory  · Tshepang logs
+        <title>Rust week of 2016-12-09  · Tshepang logs
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -71,7 +71,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://tshepang.net/trying-to-understand-stack-memory"> trying to understand stack memory  </a></h1>
+    <h1><a href="http://tshepang.net/rust-week-of-2016-12-09"> Rust week of 2016-12-09  </a></h1>
     </header>
 </div>
 
@@ -79,68 +79,10 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>Python is a language that is so high level that concepts like stack
-and heap memory are hidden from its users. Not so with lower-level
-languages like C. Following examples are implemented in Rust, which is
-easier to use than C:</p>
-<div class="highlight"><pre><span class="k">fn</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="k">i8</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="k">i8</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="k">i8</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">    </span><span class="nb">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;{:p}&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="nb">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;{:p}&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="nb">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;{:p}&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">c</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</pre></div>
-<p>We build and run it like this:</p>
-<pre class="literal-block">
-$ rustc main.rs &amp;&amp; ./main
-0x7fff0c8d16d7
-0x7fff0c8d16d6
-0x7fff0c8d16d5
-</pre>
-<p>In our code, the three variables are each given 1 byte of memory
-(<tt class="docutils literal">i8</tt> means 8-bit integer). The addresses are given in reverse
-order. An explanation I heard is so that the heap grows the opposite
-direction to the stack, which helps separate things nicely. I suppose
-this would be for performance reasons and/or simpler memory management
-code.</p>
-<p>If we use larger types, we'll see each value taking more than just one
-address:</p>
-<div class="highlight"><pre><span class="k">fn</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="k">i16</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="k">i16</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="k">i16</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">    </span><span class="nb">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;{:p}&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="nb">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;{:p}&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="nb">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;{:p}&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">c</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</pre></div>
-<p>Output:</p>
-<pre class="literal-block">
-$ rustc main.rs &amp;&amp; ./main
-0x7fff2462aed6
-0x7fff2462aed4
-0x7fff2462aed2
-</pre>
-<p>In this case, each of the variables take 2 addresses (<tt class="docutils literal">i16</tt> means
-16-bit integer). Using <tt class="docutils literal">i32</tt> results in each taking 4 addresses:</p>
-<pre class="literal-block">
-$ rustc main.rs &amp;&amp; ./main
-0x7ffff7706024
-0x7ffff7706020
-0x7ffff770601c
-</pre>
-<p>And then, finally, <tt class="docutils literal">i64</tt> results in each variable taking 8 addresses
-(64 bits) of space:</p>
-<pre class="literal-block">
-$ rustc main.rs &amp;&amp; ./main
-0x7fffd27383b0
-0x7fffd27383a8
-0x7fffd27383a0
-</pre>
+            <p>I played some with serde-yaml and rust-yaml.
+I last looked YAML some yeats, and looking again,
+I am surprised by its complexity.</p>
+<p>As far as contributions go, there were <a class="reference external" href="https://github.com/rust-lang/rust/pull/38395">just</a> <a class="reference external" href="https://github.com/Keats/tera/pull/92">two</a>.</p>
 
             
             <section>
@@ -148,7 +90,7 @@ $ rustc main.rs &amp;&amp; ./main
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://tshepang.net/trying-to-understand-stack-memory#disqus_thread">
+                href="http://tshepang.net/rust-week-of-2016-12-09#disqus_thread">
                 Comments
             </a>
         </div>
@@ -158,8 +100,8 @@ $ rustc main.rs &amp;&amp; ./main
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'tshepanglogs';
-        var disqus_identifier = 'http://tshepang.net/trying-to-understand-stack-memory';
-    var disqus_url = 'http://tshepang.net/trying-to-understand-stack-memory';
+        var disqus_identifier = 'http://tshepang.net/rust-week-of-2016-12-09';
+    var disqus_url = 'http://tshepang.net/rust-week-of-2016-12-09';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -181,8 +123,7 @@ $ rustc main.rs &amp;&amp; ./main
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/discovering-python-decorators" title="Previous: discovering Python @decorators">discovering Python @decorators</a></li>
-                <li class="next-article"><a href="http://tshepang.net/loving-the-ssh-multi-hop-feature-of-emacs" title="Next: loving the SSH multi-hop feature of Emacs">loving the SSH multi-hop feature of Emacs</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/rust-week-of-2016-12-02" title="Previous: Rust week of 2016-12-02">Rust week of 2016-12-02</a></li>
             </ul>
             </nav>
             </aside>
@@ -190,7 +131,7 @@ $ rustc main.rs &amp;&amp; ./main
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2014-08-04T00:00:00+02:00">Aug 4, 2014</time>
+            <time pubdate="pubdate" datetime="2016-12-15T00:00:00+02:00">Dec 15, 2016</time>
             <h4>Category</h4>
             <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
             <h4>Tags</h4>
