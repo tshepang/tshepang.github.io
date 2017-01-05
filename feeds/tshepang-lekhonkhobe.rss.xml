@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 29 Dec 2016 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2016-12-23</title><link>http://tshepang.net/rust-week-of-2016-12-23</link><description>&lt;p&gt;I enjoyed going through the tutorial on &lt;a class="reference external" href="https://siciarz.net/24-days-rust-structured-logging"&gt;slog&lt;/a&gt;,
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 03 Jan 2017 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2016-12-30</title><link>http://tshepang.net/rust-week-of-2016-12-30</link><description>&lt;p&gt;We need more quality code reviews like &lt;a class="reference external" href="http://blog.mbrt.it/2016-12-01-ripgrep-code-review"&gt;this one&lt;/a&gt; for ripgrep.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;I used &lt;a class="reference external" href="https://docs.rs/reqwest"&gt;reqwest&lt;/a&gt; for the first time,
+and was made sad because using HTTP headers is as hard as doing the
+same for &lt;a class="reference external" href="https://docs.rs/hyper"&gt;hyper&lt;/a&gt;,
+especially given that this is supposed to be a more easy library:&lt;/p&gt;
+&lt;!-- sourcecode: Rust
+
+let mut auth_bearer = Headers::new();
+headers.set(
+    Authorization (
+        Bearer {
+            token: "some token",
+        }
+    )
+);
+let mut client = reqwest::Client::new();
+client.get("example.com").headers(auth_bearer).send(); --&gt;
+&lt;p&gt;It can imagine a more nice API:&lt;/p&gt;
+&lt;!-- sourcecode: Rust
+
+let client = reqwest::Client::new();
+let auth_bearer = reqwest::Header::Bearer::new("some token");
+client.get("example.com").header(auth_bearer).send(); --&gt;
+&lt;p&gt;I did not think much about this, so maybe there are issues with the desired.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;Just &lt;a class="reference external" href="https://github.com/serde-rs/json/pull/182"&gt;one contribution&lt;/a&gt; this time.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Tue, 03 Jan 2017 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2017-01-03:rust-week-of-2016-12-30</guid><category>Rust</category></item><item><title>Rust week of 2016-12-23</title><link>http://tshepang.net/rust-week-of-2016-12-23</link><description>&lt;p&gt;I enjoyed going through the tutorial on &lt;a class="reference external" href="https://siciarz.net/24-days-rust-structured-logging"&gt;slog&lt;/a&gt;,
 which helped reduce the complexity I experienced some time ago when
 I first looked.&lt;/p&gt;
 &lt;p&gt;I made &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/38681"&gt;just&lt;/a&gt; &lt;a class="reference external" href="https://github.com/slog-rs/json/pull/3"&gt;two&lt;/a&gt; contributions this time around.&lt;/p&gt;
