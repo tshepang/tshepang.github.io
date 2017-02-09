@@ -94,8 +94,10 @@ were missing it. I also updated the code to run on modern Rust.</p>
 </li>
 <li><p class="first">I got some clarity on the concept of traits by re-reading the
 well-written post, <a class="reference external" href="http://blog.rust-lang.org/2015/05/11/traits.html">Abstraction without overhead: traits in
-Rust</a>. For example, they can be used to add methods, even to existing
-types. Here is a demonstration:</p>
+Rust</a>.
+One feature they have is they allow adding methods to types,
+including upstream ones,
+example being stdlib types as follows:</p>
 <div class="highlight"><pre><span class="k">trait</span><span class="w"> </span><span class="n">Invert</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="k">fn</span><span class="w"> </span><span class="n">invert</span><span class="p">(</span><span class="o">&amp;</span><span class="bp">self</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">f64</span><span class="p">;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>

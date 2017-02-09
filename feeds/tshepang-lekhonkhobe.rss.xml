@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 09 Feb 2017 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2017-02-02</title><link>http://tshepang.net/rust-week-of-2017-02-02</link><description>&lt;p&gt;I very much enjoyed reading about &lt;a class="reference external" href="http://aturon.github.io/blog/2016/09/07/futures-design"&gt;the design of Rust futures&lt;/a&gt;.
-It makes me lucky appreciate the smarts of those involved,
-how lucky we are to have people building excellent abstractions like such.
-It also nicely summarises Rust traits.&lt;/p&gt;
-&lt;p&gt;I reported &lt;a class="reference external" href="https://github.com/softprops/shiplift/issues/50"&gt;one issue&lt;/a&gt; and made &lt;a class="reference external" href="https://github.com/alexcrichton/futures-rs/pull/384"&gt;two&lt;/a&gt; &lt;a class="reference external" href="https://github.com/alexcrichton/futures-rs/pull/385"&gt;contributions&lt;/a&gt;.&lt;/p&gt;
+It makes me highly appreciate the smarts of those involved,
+and how lucky we are to have people building excellent abstractions like such.
+In addition, it also nicely summarises Rust traits.
+&lt;a class="reference external" href="https://github.com/softprops/shiplift/issues/50"&gt;I wrote a tiny bit about the feature&lt;/a&gt; myself some time ago.&lt;/p&gt;
+&lt;p&gt;I reported &lt;a class="reference external" href="https://github.com/alexcrichton/futures-rs/pull/384"&gt;one issue&lt;/a&gt; and made &lt;a class="reference external" href="https://github.com/alexcrichton/futures-rs/pull/385"&gt;two&lt;/a&gt; &lt;a class="reference external" href="http://tshepang.net/rust-week-of-2015-05-22"&gt;contributions&lt;/a&gt;.&lt;/p&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Thu, 09 Feb 2017 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2017-02-09:rust-week-of-2017-02-02</guid><category>Rust</category></item><item><title>Rust week of 2017-01-27</title><link>http://tshepang.net/rust-week-of-2017-01-27</link><description>&lt;p&gt;This week I submitted &lt;a class="reference external" href="https://github.com/softprops/shiplift/issues/45"&gt;one complaint&lt;/a&gt;,
 &lt;a class="reference external" href="https://github.com/softprops/shiplift/pull/46"&gt;and&lt;/a&gt; &lt;a class="reference external" href="https://github.com/softprops/shiplift/pull/47"&gt;just&lt;/a&gt; &lt;a class="reference external" href="https://github.com/softprops/shiplift/pull/49"&gt;four&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/39405"&gt;contributions&lt;/a&gt;.&lt;/p&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Thu, 02 Feb 2017 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2017-02-02:rust-week-of-2017-01-27</guid><category>Rust</category></item><item><title>Rust week of 2017-01-20</title><link>http://tshepang.net/rust-week-of-2017-01-20</link><description>&lt;p&gt;I enjoyed reading this post about bad C ideas that are seen in other languages,
@@ -1197,8 +1198,10 @@ were missing it. I also updated the code to run on modern Rust.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p class="first"&gt;I got some clarity on the concept of traits by re-reading the
 well-written post, &lt;a class="reference external" href="http://blog.rust-lang.org/2015/05/11/traits.html"&gt;Abstraction without overhead: traits in
-Rust&lt;/a&gt;. For example, they can be used to add methods, even to existing
-types. Here is a demonstration:&lt;/p&gt;
+Rust&lt;/a&gt;.
+One feature they have is they allow adding methods to types,
+including upstream ones,
+example being stdlib types as follows:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;trait&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Invert&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;fn&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;invert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;f64&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
