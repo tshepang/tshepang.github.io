@@ -13,16 +13,16 @@
 
 <meta name="keywords" content="Rust, computing, " />
 
-<meta property="og:title" content="Rust week of 2016-05-13 "/>
-<meta property="og:url" content="http://tshepang.net/rust-week-of-2016-05-13" />
-<meta property="og:description" content="Just four changes this week, including one for the blog." />
+<meta property="og:title" content="Rust week of 2017-02-23 "/>
+<meta property="og:url" content="http://tshepang.net/rust-week-of-2017-02-23" />
+<meta property="og:description" content="I was glad to have the Python equivalent of the shlex crate, understands shell quoting in order transform command arguments into what&#39;s suitable to send to process::Command::args method. This allows one to avoid the pain experienced by naively doing the following: let mut command = command.split(char ..." />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
-<meta property="og:article:published_time" content="2016-05-19T00:00:00+02:00" />
-<meta name="twitter:title" content="Rust week of 2016-05-13 ">
-<meta name="twitter:description" content="Just four changes this week, including one for the blog.">
+<meta property="og:article:published_time" content="2017-03-02T00:00:00+02:00" />
+<meta name="twitter:title" content="Rust week of 2017-02-23 ">
+<meta name="twitter:description" content="I was glad to have the Python equivalent of the shlex crate, understands shell quoting in order transform command arguments into what&#39;s suitable to send to process::Command::args method. This allows one to avoid the pain experienced by naively doing the following: let mut command = command.split(char ...">
 
-        <title>Rust week of 2016-05-13  · Tshepang logs
+        <title>Rust week of 2017-02-23  · Tshepang logs
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -71,7 +71,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://tshepang.net/rust-week-of-2016-05-13"> Rust week of 2016-05-13  </a></h1>
+    <h1><a href="http://tshepang.net/rust-week-of-2017-02-23"> Rust week of 2017-02-23  </a></h1>
     </header>
 </div>
 
@@ -79,7 +79,46 @@
         <div class="span8 offset2 article-content">
 
             
-            <p><a class="reference external" href="https://github.com/rust-lang/rust/pull/33633">Just</a> <a class="reference external" href="https://github.com/rust-lang/rust/pull/33634">four</a> <a class="reference external" href="https://github.com/rust-lang/rust/pull/33635">changes</a> this week, including <a class="reference external" href="https://github.com/rust-lang/blog.rust-lang.org/pull/98">one for the blog</a>.</p>
+            <p>I was glad to have the Python equivalent of the <a class="reference external" href="https://crates.io/crates/shlex">shlex</a> crate,
+understands shell quoting in order transform command arguments into
+what's suitable to send to <tt class="docutils literal"><span class="pre">process::Command::args</span></tt> method.
+This allows one to avoid the pain experienced by naively doing the
+following:</p>
+<div class="highlight"><pre><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">command</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="n">char</span><span class="o">::</span><span class="n">is_whitespace</span><span class="p">);</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="n">process</span><span class="o">::</span><span class="n">command</span><span class="o">::</span><span class="n">new</span><span class="p">(</span><span class="n">command</span><span class="p">.</span><span class="n">next</span><span class="p">().</span><span class="n">unwrap</span><span class="p">())</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="n">args</span><span class="p">(</span><span class="n">command</span><span class="p">.</span><span class="n">collect</span><span class="o">::&lt;</span><span class="n">Vec</span><span class="o">&lt;</span><span class="n">_</span><span class="o">&gt;&gt;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="nb">spawn</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">...</span><span class="w"></span>
+</pre></div>
+<p>If the command is something like
+<tt class="docutils literal">hg commit <span class="pre">--message</span> 'git eat world'</tt>,
+then the iterator would expand to:</p>
+<ul class="simple">
+<li>hg</li>
+<li>commit</li>
+<li>--message</li>
+<li>'git</li>
+<li>eat</li>
+<li>world'</li>
+</ul>
+<p>That will not run, and will fail with a not-obvious error message.
+Using shlex, instead:</p>
+<div class="highlight"><pre><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shlex</span><span class="o">::</span><span class="n">split</span><span class="p">(</span><span class="n">args</span><span class="p">).</span><span class="n">unwrap</span><span class="p">());</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="n">process</span><span class="o">::</span><span class="n">command</span><span class="o">::</span><span class="n">new</span><span class="p">(</span><span class="n">command</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">unwrap</span><span class="p">())</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="n">args</span><span class="p">(</span><span class="n">command</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="nb">spawn</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">...</span><span class="w"></span>
+</pre></div>
+<p>Output should then be like:</p>
+<ul class="simple">
+<li>hg</li>
+<li>commit</li>
+<li>--message</li>
+<li>'git eat world'</li>
+</ul>
+<hr class="docutils" />
+<p><a class="reference external" href="https://github.com/ctz/hyper-rustls/pull/5">Just one contribution</a> this week,
+and it's not even that great... not sure it's an improvement</p>
 
             
             <section>
@@ -87,7 +126,7 @@
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://tshepang.net/rust-week-of-2016-05-13#disqus_thread">
+                href="http://tshepang.net/rust-week-of-2017-02-23#disqus_thread">
                 Comments
             </a>
         </div>
@@ -97,8 +136,8 @@
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'tshepanglogs';
-        var disqus_identifier = 'http://tshepang.net/rust-week-of-2016-05-13';
-    var disqus_url = 'http://tshepang.net/rust-week-of-2016-05-13';
+        var disqus_identifier = 'http://tshepang.net/rust-week-of-2017-02-23';
+    var disqus_url = 'http://tshepang.net/rust-week-of-2017-02-23';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -120,8 +159,7 @@
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/rust-week-of-2016-05-06" title="Previous: Rust week of 2016-05-06">Rust week of 2016-05-06</a></li>
-                <li class="next-article"><a href="http://tshepang.net/rust-week-of-2016-05-20" title="Next: Rust week of 2016-05-20">Rust week of 2016-05-20</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/what-i-like-about-rust" title="Previous: what I like about Rust">what I like about Rust</a></li>
             </ul>
             </nav>
             </aside>
@@ -129,7 +167,7 @@
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2016-05-19T00:00:00+02:00">May 19, 2016</time>
+            <time pubdate="pubdate" datetime="2017-03-02T00:00:00+02:00">Mar 2, 2017</time>
             <h4>Category</h4>
             <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
             <h4>Tags</h4>
