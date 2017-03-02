@@ -187,24 +187,7 @@ trigger.  In fact, I used to call this series &lt;em&gt;developer of the
 moment&lt;/em&gt;, but at some point felt that the new name is more fitting,
 especially since a few of these developers
 generated some new triggers along the way.&lt;/p&gt;
-</summary><category term="developer-of-note"></category></entry><entry><title>Python wishes</title><link href="http://tshepang.net/python-wishes" rel="alternate"></link><updated>2017-03-01T19:57:12+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-03-01:python-wishes</id><summary type="html">&lt;p&gt;None of these is likely to happen at all.
-It's even safe to use the word &lt;em&gt;never&lt;/em&gt; with a great amount of certainty;
-but I wanted to document them anyway, if for no other reason than rescue
-them from the exclusiveness of my mind:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;add a &lt;tt class="docutils literal"&gt;prepend&lt;/tt&gt; method to list objects, make it as efficient as
-&lt;tt class="docutils literal"&gt;collections.deque&lt;/tt&gt;, then remove the latter&lt;/li&gt;
-&lt;li&gt;remove &lt;tt class="docutils literal"&gt;f.readlines()&lt;/tt&gt;;
-&lt;tt class="docutils literal"&gt;list(f)&lt;/tt&gt; is a clearer and more general replacement (&lt;a class="reference external" href="http://bugs.python.org/issue13510#msg186940"&gt;source&lt;/a&gt;).&lt;/li&gt;
-&lt;li&gt;rm &lt;tt class="docutils literal"&gt;os.system&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;os.popen*&lt;/tt&gt; and relatives;
-we already have the &lt;a class="reference external" href="http://docs.python.org/3/library/subprocess"&gt;subprocess module&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;change module names to be PEP-compliant, everywhere&lt;/li&gt;
-&lt;li&gt;remove &lt;tt class="docutils literal"&gt;lambda&lt;/tt&gt;; it's not Pythonic, and just feels like a wart;
-it also does a good job of making Python code less readable&lt;/li&gt;
-&lt;li&gt;make &lt;tt class="docutils literal"&gt;item&lt;/tt&gt; go out of scope when outside for-loops like &lt;tt class="docutils literal"&gt;for item
-in range(count)&lt;/tt&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="Python"></category></entry><entry><title>I am a very jealous person</title><link href="http://tshepang.net/i-am-a-very-jealous-person" rel="alternate"></link><updated>2017-03-01T19:57:12+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-03-01:i-am-a-very-jealous-person</id><summary type="html">&lt;p&gt;Following is some of the cases where competing software won this or
+</summary><category term="developer-of-note"></category></entry><entry><title>I am a very jealous person</title><link href="http://tshepang.net/i-am-a-very-jealous-person" rel="alternate"></link><updated>2017-03-01T19:57:12+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-03-01:i-am-a-very-jealous-person</id><summary type="html">&lt;p&gt;Following is some of the cases where competing software won this or
 that battle, and I am jealous since I want everyone to use what I
 like:&lt;/p&gt;
 &lt;ul class="simple"&gt;
