@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2017-03-02T00:00:00+02:00</updated><entry><title>Rust week of 2017-02-23</title><link href="http://tshepang.net/rust-week-of-2017-02-23" rel="alternate"></link><updated>2017-03-02T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-03-02:rust-week-of-2017-02-23</id><summary type="html">&lt;p&gt;I was glad to have the Python equivalent of the &lt;a class="reference external" href="https://crates.io/crates/shlex"&gt;shlex&lt;/a&gt; crate,
-understands shell quoting in order transform command arguments into
-what's suitable to send to &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;process::Command::args&lt;/span&gt;&lt;/tt&gt; method.
+which understands shell quoting,
+helping in transforming command arguments into
+what's suitable to send to &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;process::Command::args&lt;/span&gt;&lt;/tt&gt;.
 This allows one to avoid the pain experienced by naively doing the
 following:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;mut&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;char&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;is_whitespace&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
