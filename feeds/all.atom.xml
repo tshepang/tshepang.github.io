@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2017-03-29T00:00:00+02:00</updated><entry><title>Rust week of 2017-03-23</title><link href="http://tshepang.net/rust-week-of-2017-03-23" rel="alternate"></link><updated>2017-03-29T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-03-29:rust-week-of-2017-03-23</id><summary type="html">&lt;p&gt;Because I'm not serious,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2017-04-06T00:00:00+02:00</updated><entry><title>Rust week of 2017-03-30</title><link href="http://tshepang.net/rust-week-of-2017-03-30" rel="alternate"></link><updated>2017-04-06T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-04-06:rust-week-of-2017-03-30</id><summary type="html">&lt;p&gt;I very enjoyed reading &lt;a class="reference external" href="https://internals.rust-lang.org/t/5016/38"&gt;this (rather lengthy) comment&lt;/a&gt; on a thread
+discussing Rust CStr/Cstring APIs.
+It shows great depth of knowledge and shows no fear of expressing
+strong opinions... I loves it.
+As for argument itself,
+I don't know enough to to have a qualified opinion,
+though the opposition is quite strong against the proposal
+(to deprecate those APIs).&lt;/p&gt;
+&lt;p&gt;I also made &lt;a class="reference external" href="https://github.com/Byron/open-rs/pull/7"&gt;two&lt;/a&gt; &lt;a class="reference external" href="https://github.com/azerupi/mdBook/pull/239"&gt;contributions&lt;/a&gt;,
+and submitted &lt;a class="reference external" href="https://github.com/azerupi/mdBook/issues/240"&gt;two&lt;/a&gt; &lt;a class="reference external" href="https://github.com/tailhook/probor/issues/5"&gt;complaints&lt;/a&gt;.&lt;/p&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-03-23</title><link href="http://tshepang.net/rust-week-of-2017-03-23" rel="alternate"></link><updated>2017-03-29T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-03-29:rust-week-of-2017-03-23</id><summary type="html">&lt;p&gt;Because I'm not serious,
 I made just &lt;a class="reference external" href="https://github.com/azerupi/mdBook/pull/238"&gt;one contribution&lt;/a&gt;.&lt;/p&gt;
 </summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-03-16</title><link href="http://tshepang.net/rust-week-of-2017-03-16" rel="alternate"></link><updated>2017-03-23T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-03-23:rust-week-of-2017-03-16</id><summary type="html">&lt;p&gt;I made &lt;a class="reference external" href="https://github.com/pyfisch/cbor/pull/27"&gt;two&lt;/a&gt; &lt;a class="reference external" href="https://github.com/pyfisch/cbor/pull/28"&gt;contributions&lt;/a&gt; this past week.
 Meanwhile,

@@ -13,16 +13,16 @@
 
 <meta name="keywords" content="Rust, computing, " />
 
-<meta property="og:title" content="Rust week of 2016-06-10 "/>
-<meta property="og:url" content="http://tshepang.net/rust-week-of-2016-06-10" />
-<meta property="og:description" content="I was made sad by the complexity of involving STDIN when using std::process module: fn o_to_0() -&gt; std::io::Result&lt;bool&gt; { let mut p = std::process::Command::new(&#34;tr&#34;) .arg(&#34;o&#34;) .arg(&#34;0&#34;) .stdin(std::process::Stdio::piped()) .spawn()?; let input = &#34;foo&#34;; if let Some(stdin) = p.stdin.as_mut() { stdin ..." />
+<meta property="og:title" content="Rust week of 2017-03-30 "/>
+<meta property="og:url" content="http://tshepang.net/rust-week-of-2017-03-30" />
+<meta property="og:description" content="I very enjoyed reading this (rather lengthy) comment on a thread discussing Rust CStr/Cstring APIs. It shows great depth of knowledge and shows no fear of expressing strong opinions... I loves it. As for argument itself, I don&#39;t know enough to to have a qualified opinion, though the ..." />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
-<meta property="og:article:published_time" content="2016-06-16T00:00:00+02:00" />
-<meta name="twitter:title" content="Rust week of 2016-06-10 ">
-<meta name="twitter:description" content="I was made sad by the complexity of involving STDIN when using std::process module: fn o_to_0() -&gt; std::io::Result&lt;bool&gt; { let mut p = std::process::Command::new(&#34;tr&#34;) .arg(&#34;o&#34;) .arg(&#34;0&#34;) .stdin(std::process::Stdio::piped()) .spawn()?; let input = &#34;foo&#34;; if let Some(stdin) = p.stdin.as_mut() { stdin ...">
+<meta property="og:article:published_time" content="2017-04-06T00:00:00+02:00" />
+<meta name="twitter:title" content="Rust week of 2017-03-30 ">
+<meta name="twitter:description" content="I very enjoyed reading this (rather lengthy) comment on a thread discussing Rust CStr/Cstring APIs. It shows great depth of knowledge and shows no fear of expressing strong opinions... I loves it. As for argument itself, I don&#39;t know enough to to have a qualified opinion, though the ...">
 
-        <title>Rust week of 2016-06-10  · Tshepang logs
+        <title>Rust week of 2017-03-30  · Tshepang logs
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -71,7 +71,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://tshepang.net/rust-week-of-2016-06-10"> Rust week of 2016-06-10  </a></h1>
+    <h1><a href="http://tshepang.net/rust-week-of-2017-03-30"> Rust week of 2017-03-30  </a></h1>
     </header>
 </div>
 
@@ -79,24 +79,16 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>I was made sad by the complexity of involving STDIN when using
-<tt class="docutils literal"><span class="pre">std::process</span></tt> module:</p>
-<div class="highlight"><pre><span class="k">fn</span><span class="w"> </span><span class="n">o_to_0</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">io</span><span class="o">::</span><span class="nb">Result</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">process</span><span class="o">::</span><span class="n">Command</span><span class="o">::</span><span class="n">new</span><span class="p">(</span><span class="s">&quot;tr&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="p">.</span><span class="n">arg</span><span class="p">(</span><span class="s">&quot;o&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="p">.</span><span class="n">arg</span><span class="p">(</span><span class="s">&quot;0&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="p">.</span><span class="n">stdin</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">process</span><span class="o">::</span><span class="n">Stdio</span><span class="o">::</span><span class="n">piped</span><span class="p">())</span><span class="w"></span>
-<span class="w">        </span><span class="p">.</span><span class="nb">spawn</span><span class="p">()</span><span class="o">?</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;foo&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="n">stdin</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">stdin</span><span class="p">.</span><span class="n">as_mut</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">stdin</span><span class="p">.</span><span class="n">write_all</span><span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="n">as_bytes</span><span class="p">())</span><span class="o">?</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="nb">Ok</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">wait</span><span class="p">()</span><span class="o">?</span><span class="p">.</span><span class="n">success</span><span class="p">())</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</pre></div>
-<p>I wonder if this can be more easy, in other languages and/or libraries.</p>
-<hr class="docutils" />
-<p>I made <a class="reference external" href="https://github.com/uutils/coreutils/pull/899">two</a> <a class="reference external" href="https://github.com/rust-lang/rust/pull/34314">submissions</a>, and gave some commentary <a class="reference external" href="https://github.com/rust-lang/rust/pull/34114">on another</a>.</p>
+            <p>I very enjoyed reading <a class="reference external" href="https://internals.rust-lang.org/t/5016/38">this (rather lengthy) comment</a> on a thread
+discussing Rust CStr/Cstring APIs.
+It shows great depth of knowledge and shows no fear of expressing
+strong opinions... I loves it.
+As for argument itself,
+I don't know enough to to have a qualified opinion,
+though the opposition is quite strong against the proposal
+(to deprecate those APIs).</p>
+<p>I also made <a class="reference external" href="https://github.com/Byron/open-rs/pull/7">two</a> <a class="reference external" href="https://github.com/azerupi/mdBook/pull/239">contributions</a>,
+and submitted <a class="reference external" href="https://github.com/azerupi/mdBook/issues/240">two</a> <a class="reference external" href="https://github.com/tailhook/probor/issues/5">complaints</a>.</p>
 
             
             <section>
@@ -104,7 +96,7 @@
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://tshepang.net/rust-week-of-2016-06-10#disqus_thread">
+                href="http://tshepang.net/rust-week-of-2017-03-30#disqus_thread">
                 Comments
             </a>
         </div>
@@ -114,8 +106,8 @@
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'tshepanglogs';
-        var disqus_identifier = 'http://tshepang.net/rust-week-of-2016-06-10';
-    var disqus_url = 'http://tshepang.net/rust-week-of-2016-06-10';
+        var disqus_identifier = 'http://tshepang.net/rust-week-of-2017-03-30';
+    var disqus_url = 'http://tshepang.net/rust-week-of-2017-03-30';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -137,8 +129,7 @@
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/rust-week-of-2016-06-03" title="Previous: Rust week of 2016-06-03">Rust week of 2016-06-03</a></li>
-                <li class="next-article"><a href="http://tshepang.net/rust-week-of-2016-06-17" title="Next: Rust week of 2016-06-17">Rust week of 2016-06-17</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/rust-week-of-2017-03-23" title="Previous: Rust week of 2017-03-23">Rust week of 2017-03-23</a></li>
             </ul>
             </nav>
             </aside>
@@ -146,7 +137,7 @@
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2016-06-16T00:00:00+02:00">Jun 16, 2016</time>
+            <time pubdate="pubdate" datetime="2017-04-06T00:00:00+02:00">Apr 6, 2017</time>
             <h4>Category</h4>
             <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
             <h4>Tags</h4>
