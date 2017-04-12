@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2017-04-06T00:00:00+02:00</updated><entry><title>Rust week of 2017-03-30</title><link href="http://tshepang.net/rust-week-of-2017-03-30" rel="alternate"></link><updated>2017-04-06T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-04-06:rust-week-of-2017-03-30</id><summary type="html">&lt;p&gt;I very enjoyed reading &lt;a class="reference external" href="https://internals.rust-lang.org/t/5016/38"&gt;this (rather lengthy) comment&lt;/a&gt; on a thread
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2017-04-13T00:00:00+02:00</updated><entry><title>Rust week of 2017-04-06</title><link href="http://tshepang.net/rust-week-of-2017-04-06" rel="alternate"></link><updated>2017-04-13T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-04-13:rust-week-of-2017-04-06</id><summary type="html">&lt;p&gt;I enjoyed working with &lt;a class="reference external" href="https://github.com/tailhook/probor"&gt;probor&lt;/a&gt;,
+which is a protocol built on top of CBOR data format.
+I made &lt;a class="reference external" href="https://github.com/tailhook/probor/pull/6"&gt;a submission&lt;/a&gt; to fix the example in the README,
+using the code in &lt;a class="reference external" href="https://github.com/tailhook/probor/tree/master/rust/examples"&gt;examples/ directory&lt;/a&gt;.
+I managed to turn JSON to CBOR on one side of a TCP socket,
+and decode it back to JSON on the other side (using &lt;a class="reference external" href="https://github.com/serde-rs/json"&gt;serde_json&lt;/a&gt;).
+I failed, however, transporting that CBOR data over MQTT
+(using the oh-so-complex &lt;a class="reference external" href="https://github.com/zonyitoo/mqtt-rs"&gt;mqtt-rs&lt;/a&gt;).&lt;/p&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-03-30</title><link href="http://tshepang.net/rust-week-of-2017-03-30" rel="alternate"></link><updated>2017-04-06T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-04-06:rust-week-of-2017-03-30</id><summary type="html">&lt;p&gt;I very enjoyed reading &lt;a class="reference external" href="https://internals.rust-lang.org/t/5016/38"&gt;this (rather lengthy) comment&lt;/a&gt; on a thread
 discussing Rust CStr/Cstring APIs.
 It shows great depth of knowledge and shows no fear of expressing
 strong opinions... I loves it.
@@ -640,7 +648,7 @@ awkward since I use the Ctrl+Shift+Insert combo to (middle-)paste&lt;/li&gt;
 &lt;li&gt;Gentle corners (though a bit too gentle, making this a less pretty
 laptop)&lt;/li&gt;
 &lt;li&gt;Power consumption is very low, and I could easily get 8 hours of battery
-lifeon this thing with a moderate workload&lt;/li&gt;
+life with a moderate workload&lt;/li&gt;
 &lt;li&gt;I loves the touchpad: it's more smooth and large&lt;/li&gt;
 &lt;li&gt;The keyboard also feels a lot better; it's such pleasure to use!&lt;/li&gt;
 &lt;li&gt;The body is also a lot more rigid, so no annoying flexibility at the
