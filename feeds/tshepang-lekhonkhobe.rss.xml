@@ -2,8 +2,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 20 Apr 2017 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2017-04-13</title><link>http://tshepang.net/rust-week-of-2017-04-13</link><description>&lt;p&gt;Continuing on the work from &lt;a class="reference external" href="http://tshepang.net/rust-week-of-2017-04-06"&gt;last week&lt;/a&gt;,
 I found a far more pleasant MQTT client library, &lt;a class="reference external" href="https://crates.io/crates/mqttc"&gt;mqttc&lt;/a&gt;,
 and managed to send &lt;a class="reference external" href="https://github.com/tailhook/probor"&gt;probor&lt;/a&gt; messages across.
-I also &lt;a class="reference external" href="https://github.com/tailhook/probor/issues/8"&gt;submitted&lt;/a&gt; a small note for the README
-regarding payload size,&lt;/p&gt;
+I also submitted &lt;a class="reference external" href="https://github.com/tailhook/probor/issues/8"&gt;a small note for the README&lt;/a&gt;
+regarding payload size.&lt;/p&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Thu, 20 Apr 2017 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2017-04-20:rust-week-of-2017-04-13</guid><category>Rust</category></item><item><title>Rust week of 2017-04-06</title><link>http://tshepang.net/rust-week-of-2017-04-06</link><description>&lt;p&gt;I enjoyed working with &lt;a class="reference external" href="https://github.com/tailhook/probor"&gt;probor&lt;/a&gt;,
 which is a protocol built on top of CBOR data format.
 I made &lt;a class="reference external" href="https://github.com/tailhook/probor/pull/6"&gt;a submission&lt;/a&gt; to fix the example in the README,
