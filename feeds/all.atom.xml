@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2017-06-07T00:00:00+02:00</updated><entry><title>Rust week of 2017-05-31</title><link href="http://tshepang.net/rust-week-of-2017-05-31" rel="alternate"></link><updated>2017-06-07T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-06-07:rust-week-of-2017-05-31</id><summary type="html">&lt;p&gt;Very little Rust this week, with just &lt;a class="reference external" href="https://github.com/rust-lang/cargo/pull/4137"&gt;one contribution&lt;/a&gt;.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2017-06-10T15:16:10+02:00</updated><entry><title>FLOSS pipe dreams</title><link href="http://tshepang.net/floss-pipe-dreams" rel="alternate"></link><updated>2017-06-10T15:16:10+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-06-10:floss-pipe-dreams</id><summary type="html">&lt;p&gt;In which I am hoping that &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; would supplant proprietary
+alternatives:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;3D content creation&lt;/strong&gt;:
+&lt;a class="reference external" href="http://blender.org"&gt;Blender&lt;/a&gt; should be mainstream... used in blockbusters&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;image manipulation&lt;/strong&gt;:
+&lt;a class="reference external" href="http://gimp.org"&gt;GIMP&lt;/a&gt; should acquire feature-parity with Photoshop, and then steal the market&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DBMS&lt;/strong&gt;:
+&lt;a class="reference external" href="http://postgresql.org"&gt;PostgreSQL&lt;/a&gt; should acquire feature-parity with Oracle,
+and then steal the market&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Operating system&lt;/strong&gt;:
+&lt;a class="reference external" href="http://debian.org"&gt;Debian&lt;/a&gt; should be THE reference platform for various user types
+(large corporations, audio/video professionals, software developers,
+gamers, etc.), taking the market away from macOS and Windows&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;scientific computing&lt;/strong&gt;:
+&lt;a class="reference external" href="http://numpy.org"&gt;NumPy&lt;/a&gt; and &lt;a class="reference external" href="http://pandas.pydata.org"&gt;pandas&lt;/a&gt; should acquire feature-parity with MATLAB,
+and then steal the market&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="Debian"></category><category term="Python"></category><category term="non-FLOSS"></category></entry><entry><title>Rust 2.0 wishlist</title><link href="http://tshepang.net/rust-20-wishlist" rel="alternate"></link><updated>2017-06-10T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-06-10:rust-20-wishlist</id><summary type="html">&lt;ul class="simple"&gt;
+&lt;li&gt;Remove the &lt;tt class="docutils literal"&gt;try!&lt;/tt&gt; macro...
+it has a better replacement in the form of the &lt;tt class="docutils literal"&gt;?&lt;/tt&gt; operator.&lt;/li&gt;
+&lt;li&gt;Remove &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;std::sync::mpsc&lt;/span&gt;&lt;/tt&gt; from stdlib,
+making it available externally...
+it does not feel general enough.&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-06-08</title><link href="http://tshepang.net/rust-week-of-2017-06-08" rel="alternate"></link><updated>2017-06-08T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-06-08:rust-week-of-2017-06-08</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="https://github.com/stevedonovan/gentle-intro/issues/39"&gt;I&lt;/a&gt; &lt;a class="reference external" href="https://github.com/stevedonovan/gentle-intro/issues/41"&gt;submitted&lt;/a&gt; &lt;a class="reference external" href="https://github.com/stevedonovan/gentle-intro/issues/43"&gt;four&lt;/a&gt; &lt;a class="reference external" href="https://github.com/stevedonovan/gentle-intro/issues/44"&gt;complaints&lt;/a&gt; and &lt;a class="reference external" href="https://github.com/stevedonovan/gentle-intro/pull/40"&gt;made&lt;/a&gt; &lt;a class="reference external" href="https://github.com/stevedonovan/gentle-intro/pull/42"&gt;three&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/42551"&gt;contributions&lt;/a&gt; this week.&lt;/p&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-06-01</title><link href="http://tshepang.net/rust-week-of-2017-06-01" rel="alternate"></link><updated>2017-06-07T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-06-07:rust-week-of-2017-06-01</id><summary type="html">&lt;p&gt;Very little Rust this week, with just &lt;a class="reference external" href="https://github.com/rust-lang/cargo/pull/4137"&gt;one contribution&lt;/a&gt;.&lt;/p&gt;
 </summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-05-25</title><link href="http://tshepang.net/rust-week-of-2017-05-25" rel="alternate"></link><updated>2017-05-31T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-05-31:rust-week-of-2017-05-25</id><summary type="html">&lt;p&gt;There were &lt;a class="reference external" href="https://github.com/TyOverby/bincode/pull/186"&gt;three&lt;/a&gt; &lt;a class="reference external" href="https://github.com/TyOverby/bincode/pull/187"&gt;small&lt;/a&gt; &lt;a class="reference external" href="https://github.com/TyOverby/bincode/pull/188"&gt;contributions&lt;/a&gt; this time.&lt;/p&gt;
 </summary><category term="Rust"></category></entry><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2017-05-27T08:25:50+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-05-27:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
 There is &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;a separate post&lt;/a&gt; for those.&lt;/p&gt;
@@ -2741,30 +2767,7 @@ Such A Long Time Gone&lt;/strong&gt;. You wonder how it slipped in there. The 11
 track, &lt;strong&gt;Stimela (Coal Train)&lt;/strong&gt;, is not the best version of this
 beloved song. It's of mere decent quality. To be fair, it's also not
 the worst.&lt;/p&gt;
-</summary><category term="excellent"></category></entry><entry><title>FLOSS pipe dreams</title><link href="http://tshepang.net/floss-pipe-dreams" rel="alternate"></link><updated>2013-11-30T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-11-30:floss-pipe-dreams</id><summary type="html">&lt;p&gt;In which I am hoping that &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; would supplant proprietary
-alternatives:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;strong&gt;3D content creation&lt;/strong&gt;:
-&lt;a class="reference external" href="http://blender.org"&gt;Blender&lt;/a&gt; should be mainstream... used in blockbusters&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;desktop&lt;/strong&gt;:
-&lt;a class="reference external" href="http://gnome.org"&gt;GNOME&lt;/a&gt; (or &lt;a class="reference external" href="http://kde.org"&gt;KDE&lt;/a&gt;) should replace Mac OS X as THE desktop experience,
-and then steal the market&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;CRM/ERP&lt;/strong&gt;:
-&lt;a class="reference external" href="http://tryton.org"&gt;Tryton&lt;/a&gt; should acquire feature-parity with SAP, and then steal the market&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;image manipulation&lt;/strong&gt;:
-&lt;a class="reference external" href="http://gimp.org"&gt;GIMP&lt;/a&gt; should acquire feature-parity with Photoshop, and then steal the market&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;DBMS&lt;/strong&gt;:
-&lt;a class="reference external" href="http://postgresql.org"&gt;PostgreSQL&lt;/a&gt; should acquire feature-parity with Oracle,
-and then steal the market&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Operating system&lt;/strong&gt;:
-&lt;a class="reference external" href="http://debian.org"&gt;Debian&lt;/a&gt; should be THE reference platform for various user types
-(large corporations, audio/video professionals, software developers,
-gamers, etc.), taking the market away from OS X and Windows&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;scientific computing&lt;/strong&gt;:
-&lt;a class="reference external" href="http://numpy.org"&gt;NumPy&lt;/a&gt; and &lt;a class="reference external" href="http://pandas.pydata.org"&gt;pandas&lt;/a&gt; should acquire feature-parity with MATLAB,
-and then steal the market&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="GNOME"></category><category term="Debian"></category><category term="Python"></category><category term="non-FLOSS"></category></entry><entry><title>pleasantly surprised by replace-string (Emacs)</title><link href="http://tshepang.net/pleasantly-surprised-by-replace-string-emacs" rel="alternate"></link><updated>2013-11-26T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-11-26:pleasantly-surprised-by-replace-string-emacs</id><summary type="html">&lt;p&gt;If you want to replace some string in Emacs, the primary function to
+</summary><category term="excellent"></category></entry><entry><title>pleasantly surprised by replace-string (Emacs)</title><link href="http://tshepang.net/pleasantly-surprised-by-replace-string-emacs" rel="alternate"></link><updated>2013-11-26T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2013-11-26:pleasantly-surprised-by-replace-string-emacs</id><summary type="html">&lt;p&gt;If you want to replace some string in Emacs, the primary function to
 use is &lt;strong&gt;replace-string&lt;/strong&gt; (I think). If the strings, 'old' and 'new'
 are provided, it will, by default, replace all occurrences, regardless
 of case, while also preserving case of whatever 'old' was. It's
@@ -7283,22 +7286,7 @@ and is pretty thorough (check how he explains the myriad possibilities,
 and how he challenges even those), and nearly as exciting as the 1st
 time I read Richard Feynman's &amp;quot;&lt;a class="reference external" href="http://www.nanoparticles.org/pdf/Feynman.pdf"&gt;There's Plenty of Room At the
 Bottom&lt;/a&gt;&amp;quot;. I consider this essential reading for any enquiring mind.&lt;/p&gt;
-</summary><category term="future-tech"></category></entry><entry><title>unrealized dreams</title><link href="http://tshepang.net/unrealized-dreams" rel="alternate"></link><updated>2009-09-17T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2009-09-17:unrealized-dreams</id><summary type="html">&lt;p&gt;My biggest dream for a long while was becoming a DD (Debian Developer),
-but why am I not pursuing that? Let me just say laziness and lack of
-motivation, or even lack of focus. There's so many things I want to be
-technically proficient at and it's tough to choose one (Python coding,
-Debian system admin, GTK+, &lt;a class="reference external" href="http://projects.gnome.org/tracker/"&gt;Tracker&lt;/a&gt;, Xorg). And there's distractions
-all over the place.&lt;/p&gt;
-&lt;p&gt;Whether I'm going ahead with this is still unresolved so the dream ain't
-nearly dead, but the dead dream is that of becoming an academic in some
-field. As with FLOSS there's many interesting fields to choose from
-(mathematics, electronics, computer science, physics) but I ain't going
-any of these routes, most likely because I don't enjoy formal education,
-disliking the pressures involved. Hating stress, I would rather pursue
-these on my own as I'm doing with FLOSS. Or maybe I'm just a chicken,
-afraid of committing! I mean I didn't even finish my university degree
-due to similar excuses I mention above. Ah well...&lt;/p&gt;
-</summary></entry><entry><title>Illadelph Halflife (1996)</title><link href="http://tshepang.net/illadelph-halflife-1996" rel="alternate"></link><updated>2009-07-27T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2009-07-27:illadelph-halflife-1996</id><summary type="html">&lt;p&gt;This is undoubtedly the best album by &lt;a class="reference external" href="http://en.wikipedia.org/wiki/The_Roots"&gt;The Roots&lt;/a&gt;, and includes
+</summary><category term="future-tech"></category></entry><entry><title>Illadelph Halflife (1996)</title><link href="http://tshepang.net/illadelph-halflife-1996" rel="alternate"></link><updated>2009-07-27T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2009-07-27:illadelph-halflife-1996</id><summary type="html">&lt;p&gt;This is undoubtedly the best album by &lt;a class="reference external" href="http://en.wikipedia.org/wiki/The_Roots"&gt;The Roots&lt;/a&gt;, and includes
 timeless acts like:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;em&gt;Section&lt;/em&gt;&lt;/li&gt;
