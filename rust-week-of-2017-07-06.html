@@ -13,16 +13,16 @@
 
 <meta name="keywords" content="Rust, computing, " />
 
-<meta property="og:title" content="Rust week of 2015-05-15 "/>
-<meta property="og:url" content="http://tshepang.net/rust-week-of-2015-05-15" />
-<meta property="og:description" content="This is the first of what I intend to be a weekly series of posts related to my favorite programming language. I here take Rust weeks to begin each Friday, since Stable releases of the Rust distribution (language and included libraries) are to be released on that week day. This ..." />
+<meta property="og:title" content="Rust week of 2017-07-06 "/>
+<meta property="og:url" content="http://tshepang.net/rust-week-of-2017-07-06" />
+<meta property="og:description" content="Very little Rust this week, but I did make one complaint, and one contribution." />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
-<meta property="og:article:published_time" content="2015-05-23T00:00:00+02:00" />
-<meta name="twitter:title" content="Rust week of 2015-05-15 ">
-<meta name="twitter:description" content="This is the first of what I intend to be a weekly series of posts related to my favorite programming language. I here take Rust weeks to begin each Friday, since Stable releases of the Rust distribution (language and included libraries) are to be released on that week day. This ...">
+<meta property="og:article:published_time" content="2017-07-12T00:00:00+02:00" />
+<meta name="twitter:title" content="Rust week of 2017-07-06 ">
+<meta name="twitter:description" content="Very little Rust this week, but I did make one complaint, and one contribution.">
 
-        <title>Rust week of 2015-05-15  · Tshepang logs
+        <title>Rust week of 2017-07-06  · Tshepang logs
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -71,7 +71,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://tshepang.net/rust-week-of-2015-05-15"> Rust week of 2015-05-15  </a></h1>
+    <h1><a href="http://tshepang.net/rust-week-of-2017-07-06"> Rust week of 2017-07-06  </a></h1>
     </header>
 </div>
 
@@ -79,34 +79,9 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>This is the first of what I intend to be a weekly series of posts
-related to my favorite programming language.  I here take Rust weeks
-to begin each Friday, since Stable releases of the Rust distribution
-(language and included libraries) are to be released on that week day.
-This is also a great excuse to write more regularly.</p>
-<hr class="docutils" />
-<ul>
-<li><p class="first">I read a high quality post titled <a class="reference external" href="http://chrismorgan.info/blog/rust-ownership-the-hard-way.html">Rust ownership, the hard way</a>.
-I learned quite a bit going through it, like the meaning of
-<tt class="docutils literal">#[derive(Clone, Copy)]</tt>, which I see a lot but never knew what it
-meant.
-I also learned that there are 7 ways to introduce a variable
-binding (taking <tt class="docutils literal">foo</tt> as the name of that binding):</p>
-<pre class="literal-block">
-let foo ...
-for foo in ... (for loop)
-foo =&gt; ... (match block)
-if let foo = ... (if block)
-while let foo = ... (while loop)
-fn func(foo: ... (function argument)
-| foo | ... (closure argument)
-</pre>
-</li>
-<li><p class="first">I <a class="reference external" href="https://github.com/rust-lang/rust/pull/25629">submitted</a> <a class="reference external" href="https://github.com/rust-lang/rust/pull/25656">some</a> <a class="reference external" href="https://github.com/rust-lang/rust/pull/25659">documentation</a> <a class="reference external" href="https://github.com/rust-lang/rust/pull/25666">improvements</a>. The latter one
-was especially time-consuming, but it helped me explore the
-<tt class="docutils literal"><span class="pre">std::path</span></tt> module. It even led me to bump onto <a class="reference external" href="https://github.com/rust-lang/rust/issues/25673">a rustdoc bug</a>.</p>
-</li>
-</ul>
+            <p>Very little Rust this week,
+but I did make <a class="reference external" href="https://github.com/brson/stdx/issues/53">one complaint</a>,
+and <a class="reference external" href="https://github.com/brson/stdx/pull/54">one contribution</a>.</p>
 
             
             <section>
@@ -114,7 +89,7 @@ was especially time-consuming, but it helped me explore the
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://tshepang.net/rust-week-of-2015-05-15#disqus_thread">
+                href="http://tshepang.net/rust-week-of-2017-07-06#disqus_thread">
                 Comments
             </a>
         </div>
@@ -124,8 +99,8 @@ was especially time-consuming, but it helped me explore the
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'tshepanglogs';
-        var disqus_identifier = 'http://tshepang.net/rust-week-of-2015-05-15';
-    var disqus_url = 'http://tshepang.net/rust-week-of-2015-05-15';
+        var disqus_identifier = 'http://tshepang.net/rust-week-of-2017-07-06';
+    var disqus_url = 'http://tshepang.net/rust-week-of-2017-07-06';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -147,8 +122,7 @@ was especially time-consuming, but it helped me explore the
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/simple-code-for-a-slot-machine-game" title="Previous: Simple code for a slot machine game">Simple code for a slot machine game</a></li>
-                <li class="next-article"><a href="http://tshepang.net/various-rust-ways-of-displaying-stuff-to-the-screen" title="Next: various Rust ways of displaying stuff to the screen">various Rust ways of displaying stuff to the screen</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/rust-week-of-2017-06-29" title="Previous: Rust week of 2017-06-29">Rust week of 2017-06-29</a></li>
             </ul>
             </nav>
             </aside>
@@ -156,7 +130,7 @@ was especially time-consuming, but it helped me explore the
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2015-05-23T00:00:00+02:00">May 23, 2015</time>
+            <time pubdate="pubdate" datetime="2017-07-12T00:00:00+02:00">Jul 12, 2017</time>
             <h4>Category</h4>
             <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
             <h4>Tags</h4>
