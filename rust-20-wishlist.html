@@ -15,12 +15,12 @@
 
 <meta property="og:title" content="Rust 2.0 wishlist "/>
 <meta property="og:url" content="http://tshepang.net/rust-20-wishlist" />
-<meta property="og:description" content="Remove the try! macro... it has a better replacement in the form of the ? operator. Remove std::sync::mpsc from stdlib, making it available externally... it does not feel general enough." />
+<meta property="og:description" content="Remove the try! macro... it has a better replacement in the form of the question_mark (?) operator. Remove std::sync::mpsc from stdlib, making it available externally... it does not feel general enough. Assigning values to struct bindings should use the equal sign, not the colon: // now Shoe { size: 10, style ..." />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
-<meta property="og:article:published_time" content="2017-06-10T00:00:00+02:00" />
+<meta property="og:article:published_time" content="2017-07-23T20:50:38.516819+02:00" />
 <meta name="twitter:title" content="Rust 2.0 wishlist ">
-<meta name="twitter:description" content="Remove the try! macro... it has a better replacement in the form of the ? operator. Remove std::sync::mpsc from stdlib, making it available externally... it does not feel general enough.">
+<meta name="twitter:description" content="Remove the try! macro... it has a better replacement in the form of the question_mark (?) operator. Remove std::sync::mpsc from stdlib, making it available externally... it does not feel general enough. Assigning values to struct bindings should use the equal sign, not the colon: // now Shoe { size: 10, style ...">
 
         <title>Rust 2.0 wishlist  · Tshepang logs
 </title>
@@ -79,12 +79,23 @@
         <div class="span8 offset2 article-content">
 
             
-            <ul class="simple">
-<li>Remove the <tt class="docutils literal">try!</tt> macro...
-it has a better replacement in the form of the <tt class="docutils literal">?</tt> operator.</li>
-<li>Remove <tt class="docutils literal"><span class="pre">std::sync::mpsc</span></tt> from stdlib,
+            <ul>
+<li><p class="first">Remove the <tt class="docutils literal">try!</tt> macro...
+it has a better replacement in the form of the question_mark (<tt class="docutils literal">?</tt>) operator.</p>
+</li>
+<li><p class="first">Remove <tt class="docutils literal"><span class="pre">std::sync::mpsc</span></tt> from stdlib,
 making it available externally...
-it does not feel general enough.</li>
+it does not feel general enough.</p>
+</li>
+<li><p class="first">Assigning values to struct bindings should use the equal sign,
+not the colon:</p>
+<div class="highlight"><pre><span class="c1">// now</span>
+<span class="n">Shoe</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">size</span><span class="o">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">style</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;sneaker&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="c1">// dream</span>
+<span class="n">Shoe</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">style</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;sneaker&quot;</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+</pre></div>
+<p>This would be consistent with the rest of the language.</p>
+</li>
 </ul>
 
             
@@ -126,8 +137,7 @@ it does not feel general enough.</li>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/rust-week-of-2017-06-08" title="Previous: Rust week of 2017-06-08">Rust week of 2017-06-08</a></li>
-                <li class="next-article"><a href="http://tshepang.net/floss-pipe-dreams" title="Next: FLOSS pipe dreams">FLOSS pipe dreams</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/rust-week-of-2017-07-20" title="Previous: Rust week of 2017-07-20">Rust week of 2017-07-20</a></li>
             </ul>
             </nav>
             </aside>
@@ -135,13 +145,13 @@ it does not feel general enough.</li>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2017-06-10T00:00:00+02:00">Jun 10, 2017</time>
+            <time pubdate="pubdate" datetime="2017-07-23T20:50:38.516819+02:00">Jul 23, 2017</time>
             <h4>Category</h4>
             <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
                 <li><a href="http://tshepang.net/tags.html#rust-ref">Rust
-                    <span>124</span>
+                    <span>125</span>
 </a></li>
             </ul>
 <h4>Stay in Touch</h4>
