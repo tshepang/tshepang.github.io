@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 23 Jul 2017 20:50:38 +0200</lastBuildDate><item><title>Rust 2.0 wishlist</title><link>http://tshepang.net/rust-20-wishlist</link><description>&lt;ul&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 24 Jul 2017 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2017-07-20</title><link>http://tshepang.net/rust-week-of-2017-07-20</link><description>&lt;p&gt;I am surprised by the ease of changing default Rust toolchain:&lt;/p&gt;
+&lt;blockquote&gt;
+# switch to nightly
+rustup default nightly
+# switch to stable
+rustup default stable&lt;/blockquote&gt;
+&lt;p&gt;This is more easy than remembering how to tell cargo to use to use a
+non-default toolchain, though that approach is not too bad either:&lt;/p&gt;
+&lt;blockquote&gt;
+# build with nightly
+cargo +nightly build&lt;/blockquote&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;I made &lt;a class="reference external" href="https://github.com/rust-lang/book/issues/828"&gt;two&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/book/issues/834"&gt;complaints&lt;/a&gt;,
+&lt;a class="reference external" href="https://github.com/brson/rust-cookbook/pull/253"&gt;as&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/43409"&gt;well&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/book/pull/827"&gt;as&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/43416"&gt;five&lt;/a&gt; &lt;a class="reference external" href="https://github.com/BurntSushi/walkdir/pull/75"&gt;contributions&lt;/a&gt;.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Mon, 24 Jul 2017 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2017-07-24:rust-week-of-2017-07-20</guid><category>Rust</category></item><item><title>Rust 2.0 wishlist</title><link>http://tshepang.net/rust-20-wishlist</link><description>&lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;Remove the &lt;tt class="docutils literal"&gt;try!&lt;/tt&gt; macro...
 it has a better replacement in the form of the question_mark (&lt;tt class="docutils literal"&gt;?&lt;/tt&gt;) operator.&lt;/p&gt;
 &lt;/li&gt;
@@ -17,21 +31,7 @@ not the colon:&lt;/p&gt;
 &lt;p&gt;This would be consistent with the rest of the language.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sun, 23 Jul 2017 20:50:38 +0200</pubDate><guid>tag:tshepang.net,2017-07-23:rust-20-wishlist</guid><category>Rust</category></item><item><title>Rust week of 2017-07-20</title><link>http://tshepang.net/rust-week-of-2017-07-20</link><description>&lt;p&gt;I am surprised by the ease of changing default Rust toolchain:&lt;/p&gt;
-&lt;blockquote&gt;
-# switch to nightly
-rustup default nightly
-# switch to stable
-rustup default stable&lt;/blockquote&gt;
-&lt;p&gt;This is more easy than remembering how to tell cargo to use to use a
-non-default toolchain, though that approach is not too bad either:&lt;/p&gt;
-&lt;blockquote&gt;
-# build with nightly
-cargo +nightly build&lt;/blockquote&gt;
-&lt;hr class="docutils" /&gt;
-&lt;p&gt;I made &lt;a class="reference external" href="https://github.com/rust-lang/book/issues/828"&gt;two&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/book/issues/834"&gt;complaints&lt;/a&gt;,
-&lt;a class="reference external" href="https://github.com/brson/rust-cookbook/pull/253"&gt;and&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/43409"&gt;just&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/book/pull/827"&gt;four&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/43416"&gt;contributions&lt;/a&gt;.&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sun, 23 Jul 2017 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2017-07-23:rust-week-of-2017-07-20</guid><category>Rust</category></item><item><title>Rust week of 2017-07-13</title><link>http://tshepang.net/rust-week-of-2017-07-13</link><description>&lt;p&gt;I am tempted, &lt;a class="reference external" href="http://tshepang.net/rust-week-of-2017-01-06"&gt;once again&lt;/a&gt;, to try out &lt;a class="reference external" href="https://github.com/Wilfred/remacs"&gt;Remacs&lt;/a&gt;,
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sun, 23 Jul 2017 20:50:38 +0200</pubDate><guid>tag:tshepang.net,2017-07-23:rust-20-wishlist</guid><category>Rust</category></item><item><title>Rust week of 2017-07-13</title><link>http://tshepang.net/rust-week-of-2017-07-13</link><description>&lt;p&gt;I am tempted, &lt;a class="reference external" href="http://tshepang.net/rust-week-of-2017-01-06"&gt;once again&lt;/a&gt;, to try out &lt;a class="reference external" href="https://github.com/Wilfred/remacs"&gt;Remacs&lt;/a&gt;,
 a Rust port of GNU Emacs.
 It's very encouraging that it tries to be compatible,
 for the drop-in-replacement effect.&lt;/p&gt;
