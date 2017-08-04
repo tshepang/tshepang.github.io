@@ -1,19 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2017-07-24T00:00:00+02:00</updated><entry><title>Rust week of 2017-07-20</title><link href="http://tshepang.net/rust-week-of-2017-07-20" rel="alternate"></link><updated>2017-07-24T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-07-24:rust-week-of-2017-07-20</id><summary type="html">&lt;p&gt;I am surprised by the ease of changing default Rust toolchain:&lt;/p&gt;
-&lt;blockquote&gt;
-# switch to nightly
-rustup default nightly
-# switch to stable
-rustup default stable&lt;/blockquote&gt;
-&lt;p&gt;This is more easy than remembering how to tell cargo to use to use a
-non-default toolchain, though that approach is not too bad either:&lt;/p&gt;
-&lt;blockquote&gt;
-# build with nightly
-cargo +nightly build&lt;/blockquote&gt;
-&lt;hr class="docutils" /&gt;
-&lt;p&gt;I made &lt;a class="reference external" href="https://github.com/rust-lang/book/issues/828"&gt;two&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/book/issues/834"&gt;complaints&lt;/a&gt;,
-&lt;a class="reference external" href="https://github.com/brson/rust-cookbook/pull/253"&gt;as&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/43409"&gt;well&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/book/pull/827"&gt;as&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/43416"&gt;five&lt;/a&gt; &lt;a class="reference external" href="https://github.com/BurntSushi/walkdir/pull/75"&gt;contributions&lt;/a&gt;.&lt;/p&gt;
-</summary><category term="Rust"></category></entry><entry><title>Rust 2.0 wishlist</title><link href="http://tshepang.net/rust-20-wishlist" rel="alternate"></link><updated>2017-07-23T20:50:38+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-07-23:rust-20-wishlist</id><summary type="html">&lt;ul&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2017-08-04T00:00:00+02:00</updated><entry><title>Rust week of 2017-07-27</title><link href="http://tshepang.net/rust-week-of-2017-07-27" rel="alternate"></link><updated>2017-08-04T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-04:rust-week-of-2017-07-27</id><summary type="html">&lt;p&gt;I been using this series to help push me into constant Rust activity,
+ensuring I do not skip a week sitting idle.
+It worked in that, indeed, no 7 days passed without a single
+contribution to the ecosystem, no matter how tiny,
+and this has been going on for over a 100 weeks
+(i.e. &lt;a class="reference external" href="http://tshepang.net/rust-week-of-2015-05-15"&gt;since 2015-05-15&lt;/a&gt;, also Rust 1.0 release date).&lt;/p&gt;
+&lt;p&gt;The problem is I felt silly recording the tiny parts,
+stuff like a typo fixes, just to keep this going.
+Well, it's time to stop that.
+I intend to avoid recording such,
+and if it means no blog post for that week, so be it.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This was inspired by having a laptop failure,
+with a draft that wasn't backed up anywhere.
+That draft only consisted of a list of those tiny contributions,
+and it felt extra silly trying to recreate it for publication.&lt;/em&gt;&lt;/p&gt;
+</summary><category term="Rust"></category></entry><entry><title>what I like about Rust</title><link href="http://tshepang.net/what-i-like-about-rust" rel="alternate"></link><updated>2017-08-03T15:06:28+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:what-i-like-about-rust</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Ambitious: the aim of being memory safe without the use of a garbage
+collector, allowing it to achieve C++ execution speeds.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Naming conventions:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;name_with_underscores&lt;/tt&gt; for variable and function names&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;HttpRequest&lt;/tt&gt; instead of &lt;tt class="docutils literal"&gt;HTTPRequest&lt;/tt&gt; for type names&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Error reporting: compile errors are the best I've seen (though I've
+only really seen those of C and C++); they are even color-coded!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;2 short keywords:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;fn&lt;/tt&gt; for function declarations&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;use&lt;/tt&gt;, instead of &lt;tt class="docutils literal"&gt;using&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;import&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;I love that I don't need to add (the tedious) parenthesis around the
+&lt;em&gt;condition expression&lt;/em&gt; in an &lt;em&gt;if&lt;/em&gt;, &lt;em&gt;while&lt;/em&gt;, and &lt;em&gt;match&lt;/em&gt; statements:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;true&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="c1"&gt;// always executes&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;The semicolon rule: I initially found it surprising that omitting a
+semicolon after a value is shorthand for returning. I appreciate it
+now... it's quite nifty, and I in fact now find &lt;tt class="docutils literal"&gt;return&lt;/tt&gt;
+statements ugly.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Traits: they are an elegant way of providing abstract interfaces,
+and are therefore used in generic programming. As an example, a
+function can be made to accept different data types, so long as
+those types implement the given trait (or traits). Gorgeous!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;The &lt;tt class="docutils literal"&gt;match&lt;/tt&gt; statement is kool: exhaustiveness check, no
+fall-through, and nice syntax.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Allowing a trailing comma after a list of items, which is really
+great for copy-pasting and diffs.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Packaging conventions: by default, the build tool, Cargo, ensures that all
+build sources (which may include documentation) are placed in &lt;cite&gt;src/&lt;/cite&gt;
+in the root of a source distribution.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;A fast-paced and time-based release cycle: a stable release will be
+made every 6 weeks, which is very ambitious for a programming
+language.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Development process:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;No one, including the Core Team, pushes anything to the Rust tree. Each
+person gets their changes reviewed first, and they mostly get
+approved by someone else.&lt;/li&gt;
+&lt;li&gt;Merging the changes to the tree is nearly always done via a continuous
+integration system, which first ensures that each change passes all
+tests.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Allows one to redefine variables, even with different types:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ten&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This is convenient.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;The amount of iterations its design went through during its pre-1.0
+development, which included numerous breaking changes,
+was... impressive. That's an indication that what resulted is a far
+better design than we could have had. The sheer amount of effort
+taken, which was such a unique experience for me, makes me feel
+grateful (I watched the activity for about a year before 1.0 was
+released). I am also grateful for the resilient users who kept up
+with the pain of the frequent changes, for they helped keep the
+language relevant and exciting, while also providing feedback.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="Rust"></category></entry><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2017-08-03T15:06:27+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
+I do celebrate each time I see a project use it. So, here I list the
+most notable projects I am aware of that do, which also gives me hope
+that it isn't being suffocated too much by Git:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://hg.mozilla.org/mozilla-central"&gt;Firefox&lt;/a&gt;, world number 3 desktop web browser (number of users)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://hg.python.org/cpython"&gt;CPython&lt;/a&gt; and &lt;a class="reference external" href="https://bitbucket.org/pypy/pypy"&gt;PyPy&lt;/a&gt;, the most important implementations of a top 10
+popular programming language&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://hg.openjdk.java.net"&gt;OpenJDK&lt;/a&gt;, the top open source implementation of the Java platform&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.vim.org/mercurial.php"&gt;VIM&lt;/a&gt; and &lt;a class="reference external" href="http://wiki.netbeans.org/WorkingWithNetBeansSources#Mercurial_access"&gt;Netbeans&lt;/a&gt;, two of the most popular text editors for programmers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And here is one which is not FLOSS (i.e. proprietary):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook"&gt;Facebook&lt;/a&gt;, world number 2 website in terms of visitor numbers&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="VCS"></category><category term="non-FLOSS"></category><category term="list"></category></entry><entry><title>ideal static blog generator</title><link href="http://tshepang.net/ideal-static-blog-generator" rel="alternate"></link><updated>2017-08-03T15:06:27+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:ideal-static-blog-generator</id><summary type="html">&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
+missed:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt; support is mandatory.
+It's the only markup language I like.&lt;/li&gt;
+&lt;li&gt;Landing Page should be an Archives View (Post title and date) or a
+subset (i.e. Recent Posts).  I would not mind if the latest Post or
+the About Page were displayed, so long as they are followed by this
+Archives View.&lt;/li&gt;
+&lt;li&gt;Categories should be determined by directory into which a file (the
+raw material for a Post) is placed. Specifying this in the metadata
+section of the file should of course take precedence.&lt;/li&gt;
+&lt;li&gt;Publish date should never be placed at the bottom of a Post. It is
+too important a piece metadata to treat this way.&lt;/li&gt;
+&lt;li&gt;An option to have clean URLs (i.e. trailing &lt;tt class="docutils literal"&gt;.html&lt;/tt&gt; removed).&lt;/li&gt;
+&lt;li&gt;Date-based directory structure should not be mandatory (unlike with
+Tinkerer).&lt;/li&gt;
+&lt;li&gt;Inline literals and literal blocks (for code) should be
+distinguished by background colour; using a different font is just not
+good enough.&lt;/li&gt;
+&lt;li&gt;Tags (and maybe Categories) should be displayed on each post.&lt;/li&gt;
+&lt;li&gt;Blogofile has a strange requirement of having &lt;a class="reference external" href="http://docs.blogofile.com/en/latest/posts.html"&gt;post headers be YAML
+format&lt;/a&gt;. Maybe there's a good reason, but I want my generator to
+not require anything special in file contents.&lt;/li&gt;
+&lt;li&gt;Ability to determine Publish date from file mtime.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;nice-to-have&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Ability to combine multiple tags.&lt;/li&gt;
+&lt;li&gt;Ability to show posts linking to current one, but I'm not sure how
+useful this would be though.&lt;/li&gt;
+&lt;li&gt;A feed icon that is visible from the main page (and maybe Category
+pages).&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="blogging"></category></entry><entry><title>favorite FLOSS</title><link href="http://tshepang.net/favorite-floss" rel="alternate"></link><updated>2017-08-03T15:06:27+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:favorite-floss</id><summary type="html">&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
+it has to both be personally useful and I have to like it a lot:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;desktop&lt;/strong&gt;: &lt;a class="reference external" href="http://dwm.suckless.org"&gt;dwm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;web browser&lt;/strong&gt;: Firefox&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;development&lt;/strong&gt;: &lt;a class="reference external" href="http://rust-lang.org"&gt;Rust&lt;/a&gt;, Emacs, Meld, &lt;a class="reference external" href="http://mercurial.selenic.com"&gt;Mercurial&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;file manager&lt;/strong&gt;: Bash, Emacs (Dired mode)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;misc utilities:&lt;/strong&gt; &lt;a class="reference external" href="http://blog.burntsushi.net/ripgrep"&gt;ripgrep&lt;/a&gt;, &lt;a class="reference external" href="http://tshepang.net/project-of-note-sudo"&gt;Sudo&lt;/a&gt;, Lsof, less,
+procps (top, watch), Ex Falso, autojump, gnumeric,
+coreutils (cat, head, tail), &lt;a class="reference external" href="http://tshepang.net/project-of-note-linkchecker"&gt;LinkChecker&lt;/a&gt;, &lt;a class="reference external" href="http://guichaz.free.fr/iotop"&gt;Iotop&lt;/a&gt;, &lt;a class="reference external" href="http://tshepang.net/project-of-note-rdiff-backup"&gt;rdiff-backup&lt;/a&gt;,
+OpenSSH, &lt;a class="reference external" href="http://humdi.net/vnstat"&gt;vnstat&lt;/a&gt;, &lt;a class="reference external" href="http://tmux.sourceforge.net"&gt;tmux&lt;/a&gt;, File Roller, youtube-dl&lt;/p&gt;
+</summary><category term="list"></category></entry><entry><title>about 'developer of note' series</title><link href="http://tshepang.net/about-developer-of-note-series" rel="alternate"></link><updated>2017-08-03T15:06:27+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:about-developer-of-note-series</id><summary type="html">&lt;p&gt;I respect a lot of software developers, but many of those are not
+going to have an entry in &lt;a class="reference external" href="http://tshepang.net/tags#developer-of-note-ref"&gt;this series&lt;/a&gt;, and not because they are
+lesser in my eyes... I need a news item that would trigger a
+post.  Thing is, if you write about someone, you actually need to have
+some content (duh!), and saying &amp;quot;Guide van Rossum rocks for creating
+Python, and am grateful!&amp;quot;  is simply not enough, hence a need for a
+trigger.  In fact, I used to call this series &lt;em&gt;developer of the
+moment&lt;/em&gt;, but at some point felt that the new name is more fitting,
+especially since a few of these developers
+generated some new triggers along the way.&lt;/p&gt;
+</summary><category term="developer-of-note"></category></entry><entry><title>Rust 2.0 wishlist</title><link href="http://tshepang.net/rust-20-wishlist" rel="alternate"></link><updated>2017-08-03T15:06:27+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:rust-20-wishlist</id><summary type="html">&lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;Remove the &lt;tt class="docutils literal"&gt;try!&lt;/tt&gt; macro...
 it has a better replacement in the form of the question_mark (&lt;tt class="docutils literal"&gt;?&lt;/tt&gt;) operator.&lt;/p&gt;
 &lt;/li&gt;
@@ -31,50 +178,19 @@ not the colon:&lt;/p&gt;
 &lt;p&gt;This would be consistent with the rest of the language.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-07-13</title><link href="http://tshepang.net/rust-week-of-2017-07-13" rel="alternate"></link><updated>2017-07-19T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-07-19:rust-week-of-2017-07-13</id><summary type="html">&lt;p&gt;I am tempted, &lt;a class="reference external" href="http://tshepang.net/rust-week-of-2017-01-06"&gt;once again&lt;/a&gt;, to try out &lt;a class="reference external" href="https://github.com/Wilfred/remacs"&gt;Remacs&lt;/a&gt;,
-a Rust port of GNU Emacs.
-It's very encouraging that it tries to be compatible,
-for the drop-in-replacement effect.&lt;/p&gt;
-&lt;p&gt;I am glad &lt;a class="reference external" href="https://github.com/TeXitoi/structopt/pull/17"&gt;the change to add subcommands to structopt&lt;/a&gt;
-has been merged. It was the one important missing piece to &lt;a class="reference external" href="https://github.com/TeXitoi/structopt"&gt;this
-wonderful project&lt;/a&gt;.
-I also made &lt;a class="reference external" href="https://github.com/TeXitoi/structopt/pull/19"&gt;a contribution&lt;/a&gt; to the project.&lt;/p&gt;
-</summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-07-06</title><link href="http://tshepang.net/rust-week-of-2017-07-06" rel="alternate"></link><updated>2017-07-12T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-07-12:rust-week-of-2017-07-06</id><summary type="html">&lt;p&gt;Very little Rust this week,
-but I did make &lt;a class="reference external" href="https://github.com/brson/stdx/issues/53"&gt;one complaint&lt;/a&gt;,
-and &lt;a class="reference external" href="https://github.com/brson/stdx/pull/54"&gt;one contribution&lt;/a&gt;.&lt;/p&gt;
-</summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-06-29</title><link href="http://tshepang.net/rust-week-of-2017-06-29" rel="alternate"></link><updated>2017-07-05T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-07-05:rust-week-of-2017-06-29</id><summary type="html">&lt;p&gt;Almost not Rust this week,
-but with &lt;a class="reference external" href="https://github.com/stevedonovan/gentle-intro/pull/45"&gt;one embarassingly tiny contribution&lt;/a&gt;.&lt;/p&gt;
-</summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-06-22</title><link href="http://tshepang.net/rust-week-of-2017-06-22" rel="alternate"></link><updated>2017-06-25T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-06-25:rust-week-of-2017-06-22</id><summary type="html">&lt;p&gt;I wrote a tool that helps with &lt;a class="reference external" href="http://semver.org"&gt;semver&lt;/a&gt; git tagging, which made
-explore the rather large (and unfriendly) API of &lt;a class="reference external" href="https://github.com/alexcrichton/git2-rs"&gt;git2-rs library&lt;/a&gt;.
-It needs lots of love, or at a more idiomatic replacement.&lt;/p&gt;
-&lt;p&gt;Regarding contributions, I made &lt;a class="reference external" href="https://github.com/chyh1990/yaml-rust/pull/79"&gt;just one&lt;/a&gt;.&lt;/p&gt;
-</summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-06-15</title><link href="http://tshepang.net/rust-week-of-2017-06-15" rel="alternate"></link><updated>2017-06-21T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-06-21:rust-week-of-2017-06-15</id><summary type="html">&lt;p&gt;I used &lt;a class="reference external" href="https://github.com/TeXitoi/structopt"&gt;structopt&lt;/a&gt; for the first time,
-and found it reduces the pain of CLI parsing (via &lt;a class="reference external" href="https://github.com/kbknapp/clap-rs"&gt;clap&lt;/a&gt;).
-Its main shortcoming is &lt;a class="reference external" href="https://github.com/TeXitoi/structopt/issues/1"&gt;lack of subcommand support&lt;/a&gt;,
-whose implementation would make a go-to for me.&lt;/p&gt;
-&lt;p&gt;Regarding contributions, I made &lt;a class="reference external" href="https://github.com/stevedonovan/to_vec/pull/1"&gt;one tiny one&lt;/a&gt;.&lt;/p&gt;
-</summary><category term="Rust"></category></entry><entry><title>FLOSS pipe dreams</title><link href="http://tshepang.net/floss-pipe-dreams" rel="alternate"></link><updated>2017-06-10T15:16:10+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-06-10:floss-pipe-dreams</id><summary type="html">&lt;p&gt;In which I am hoping that &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; would supplant proprietary
-alternatives:&lt;/p&gt;
+</summary><category term="Rust"></category></entry><entry><title>I am a very jealous person</title><link href="http://tshepang.net/i-am-a-very-jealous-person" rel="alternate"></link><updated>2017-08-03T15:06:27+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:i-am-a-very-jealous-person</id><summary type="html">&lt;p&gt;Following is some of the cases where competing software won this or
+that battle, and I am jealous since I want everyone to use what I
+like:&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;strong&gt;3D content creation&lt;/strong&gt;:
-&lt;a class="reference external" href="http://blender.org"&gt;Blender&lt;/a&gt; should be mainstream... used in blockbusters&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;image manipulation&lt;/strong&gt;:
-&lt;a class="reference external" href="http://gimp.org"&gt;GIMP&lt;/a&gt; should acquire feature-parity with Photoshop, and then steal the market&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;DBMS&lt;/strong&gt;:
-&lt;a class="reference external" href="http://postgresql.org"&gt;PostgreSQL&lt;/a&gt; should acquire feature-parity with Oracle,
-and then steal the market&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Operating system&lt;/strong&gt;:
-&lt;a class="reference external" href="http://debian.org"&gt;Debian&lt;/a&gt; should be THE reference platform for various user types
-(large corporations, audio/video professionals, software developers,
-gamers, etc.), taking the market away from macOS and Windows&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;scientific computing&lt;/strong&gt;:
-&lt;a class="reference external" href="http://numpy.org"&gt;NumPy&lt;/a&gt; and &lt;a class="reference external" href="http://pandas.pydata.org"&gt;pandas&lt;/a&gt; should acquire feature-parity with MATLAB,
-and then steal the market&lt;/li&gt;
+&lt;li&gt;Git (and GitHub) is so much more successful than Mercurial (and
+Bitbucket), my preferred VCS. I mean even &lt;a class="reference external" href="http://tshepang.net/me-loves-new-git-site-design"&gt;the website looks
+better&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Markdown is a far more popular light-weight markup language than
+the far more advanced &lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt;.
+It's particularly sad when it's not used where it's needed
+most... documenting large projects (&lt;a class="reference external" href="http://doc.rust-lang.org"&gt;example&lt;/a&gt;).&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="Debian"></category><category term="Python"></category><category term="non-FLOSS"></category></entry><entry><title>Rust week of 2017-06-08</title><link href="http://tshepang.net/rust-week-of-2017-06-08" rel="alternate"></link><updated>2017-06-08T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-06-08:rust-week-of-2017-06-08</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="https://github.com/stevedonovan/gentle-intro/issues/39"&gt;I&lt;/a&gt; &lt;a class="reference external" href="https://github.com/stevedonovan/gentle-intro/issues/41"&gt;submitted&lt;/a&gt; &lt;a class="reference external" href="https://github.com/stevedonovan/gentle-intro/issues/43"&gt;four&lt;/a&gt; &lt;a class="reference external" href="https://github.com/stevedonovan/gentle-intro/issues/44"&gt;complaints&lt;/a&gt; and &lt;a class="reference external" href="https://github.com/stevedonovan/gentle-intro/pull/40"&gt;made&lt;/a&gt; &lt;a class="reference external" href="https://github.com/stevedonovan/gentle-intro/pull/42"&gt;three&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/42551"&gt;contributions&lt;/a&gt; this week.&lt;/p&gt;
-</summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-06-01</title><link href="http://tshepang.net/rust-week-of-2017-06-01" rel="alternate"></link><updated>2017-06-07T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-06-07:rust-week-of-2017-06-01</id><summary type="html">&lt;p&gt;Very little Rust this week, with just &lt;a class="reference external" href="https://github.com/rust-lang/cargo/pull/4137"&gt;one contribution&lt;/a&gt;.&lt;/p&gt;
-</summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-05-25</title><link href="http://tshepang.net/rust-week-of-2017-05-25" rel="alternate"></link><updated>2017-05-31T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-05-31:rust-week-of-2017-05-25</id><summary type="html">&lt;p&gt;There were &lt;a class="reference external" href="https://github.com/TyOverby/bincode/pull/186"&gt;three&lt;/a&gt; &lt;a class="reference external" href="https://github.com/TyOverby/bincode/pull/187"&gt;small&lt;/a&gt; &lt;a class="reference external" href="https://github.com/TyOverby/bincode/pull/188"&gt;contributions&lt;/a&gt; this time.&lt;/p&gt;
-</summary><category term="Rust"></category></entry><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2017-05-27T08:25:50+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-05-27:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
+</summary><category term="Python"></category><category term="non-Python"></category><category term="non-Debian"></category><category term="VCS"></category></entry><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2017-08-03T15:06:27+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
 There is &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;a separate post&lt;/a&gt; for those.&lt;/p&gt;
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/p&gt;
@@ -121,17 +237,256 @@ editor, &lt;strong&gt;Ex Falso&lt;/strong&gt;&lt;/li&gt;
 replacement for shell scripting&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://rg3.github.io/youtube-dl"&gt;youtube-dl&lt;/a&gt;: I prefer watching videos locally, with VLC&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="list"></category></entry><entry><title>favorite FLOSS</title><link href="http://tshepang.net/favorite-floss" rel="alternate"></link><updated>2017-05-24T01:13:59+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-05-24:favorite-floss</id><summary type="html">&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
-it has to both be personally useful and I have to like it a lot:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;desktop&lt;/strong&gt;: &lt;a class="reference external" href="http://dwm.suckless.org"&gt;dwm&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;web browser&lt;/strong&gt;: Firefox&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;development&lt;/strong&gt;: &lt;a class="reference external" href="http://rust-lang.org"&gt;Rust&lt;/a&gt;, Emacs, Meld, &lt;a class="reference external" href="http://mercurial.selenic.com"&gt;Mercurial&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;file manager&lt;/strong&gt;: Bash, Emacs (Dired mode)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;misc utilities:&lt;/strong&gt; &lt;a class="reference external" href="http://blog.burntsushi.net/ripgrep"&gt;ripgrep&lt;/a&gt;, &lt;a class="reference external" href="http://tshepang.net/project-of-note-sudo"&gt;Sudo&lt;/a&gt;, Lsof, less,
-procps (top, watch), Ex Falso, autojump, gnumeric,
-coreutils (cat, head, tail), &lt;a class="reference external" href="http://tshepang.net/project-of-note-linkchecker"&gt;LinkChecker&lt;/a&gt;, &lt;a class="reference external" href="http://guichaz.free.fr/iotop"&gt;Iotop&lt;/a&gt;, &lt;a class="reference external" href="http://tshepang.net/project-of-note-rdiff-backup"&gt;rdiff-backup&lt;/a&gt;,
-OpenSSH, &lt;a class="reference external" href="http://humdi.net/vnstat"&gt;vnstat&lt;/a&gt;, &lt;a class="reference external" href="http://tmux.sourceforge.net"&gt;tmux&lt;/a&gt;, File Roller, youtube-dl&lt;/p&gt;
-</summary><category term="list"></category></entry><entry><title>Rust week of 2017-05-18</title><link href="http://tshepang.net/rust-week-of-2017-05-18" rel="alternate"></link><updated>2017-05-21T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-05-21:rust-week-of-2017-05-18</id><summary type="html">&lt;p&gt;I opened &lt;a class="reference external" href="https://github.com/biluohc/app/issues/2"&gt;one issue&lt;/a&gt; and made &lt;a class="reference external" href="https://github.com/biluohc/app/pull/1"&gt;one contribution&lt;/a&gt;.&lt;/p&gt;
+</summary><category term="list"></category></entry><entry><title>FLOSS pipe dreams</title><link href="http://tshepang.net/floss-pipe-dreams" rel="alternate"></link><updated>2017-08-03T15:06:27+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:floss-pipe-dreams</id><summary type="html">&lt;p&gt;In which I am hoping that &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; would supplant proprietary
+alternatives:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;3D content creation&lt;/strong&gt;:
+&lt;a class="reference external" href="http://blender.org"&gt;Blender&lt;/a&gt; should be mainstream... used in blockbusters&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;image manipulation&lt;/strong&gt;:
+&lt;a class="reference external" href="http://gimp.org"&gt;GIMP&lt;/a&gt; should acquire feature-parity with Photoshop, and then steal the market&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DBMS&lt;/strong&gt;:
+&lt;a class="reference external" href="http://postgresql.org"&gt;PostgreSQL&lt;/a&gt; should acquire feature-parity with Oracle,
+and then steal the market&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Operating system&lt;/strong&gt;:
+&lt;a class="reference external" href="http://debian.org"&gt;Debian&lt;/a&gt; should be THE reference platform for various user types
+(large corporations, audio/video professionals, software developers,
+gamers, etc.), taking the market away from macOS and Windows&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;scientific computing&lt;/strong&gt;:
+&lt;a class="reference external" href="http://numpy.org"&gt;NumPy&lt;/a&gt; and &lt;a class="reference external" href="http://pandas.pydata.org"&gt;pandas&lt;/a&gt; should acquire feature-parity with MATLAB,
+and then steal the market&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="Debian"></category><category term="Python"></category><category term="non-FLOSS"></category></entry><entry><title>top tv shows</title><link href="http://tshepang.net/top-tv-shows" rel="alternate"></link><updated>2017-08-03T15:06:27+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:top-tv-shows</id><summary type="html">&lt;p&gt;I specify seasons only if the rest of series was not so excellent.
+The list is roughly in the chronological order of the first time
+I watched them.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Yizo Yizo (seasons 1 and 2)&lt;/li&gt;
+&lt;li&gt;24&lt;/li&gt;
+&lt;li&gt;Game of Thrones&lt;/li&gt;
+&lt;li&gt;Homeland&lt;/li&gt;
+&lt;li&gt;Utopia&lt;/li&gt;
+&lt;li&gt;Girls (seasons 1 and 2)&lt;/li&gt;
+&lt;li&gt;House of Cards (seasons 1 and 2)&lt;/li&gt;
+&lt;li&gt;The Knick&lt;/li&gt;
+&lt;li&gt;Mr. Robot&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;honorable mentions&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;House&lt;/li&gt;
+&lt;li&gt;Death Note&lt;/li&gt;
+&lt;li&gt;Alphas&lt;/li&gt;
+&lt;li&gt;Breaking Bad&lt;/li&gt;
+&lt;li&gt;The Americans&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="tv"></category></entry><entry><title>top tracks: hip-hop</title><link href="http://tshepang.net/top-tracks-hip-hop" rel="alternate"></link><updated>2017-08-03T15:06:27+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:top-tracks-hip-hop</id><summary type="html">&lt;p&gt;Not included below are tracks from the best hip-hop albums yet made,
+&lt;a class="reference external" href="http://tshepang.net/doggystyle-1993"&gt;Doggystyle&lt;/a&gt; and &lt;a class="reference external" href="http://tshepang.net/the-score-1996"&gt;The Score&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="section" id="landmarks"&gt;
+&lt;h2&gt;landmarks&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;MC's Act Like They Don't Know (KRS-One and DJ Premier)&lt;/li&gt;
+&lt;li&gt;My Downfall (Notorious B.I.G.)&lt;/li&gt;
+&lt;li&gt;Nas is Like (Nas)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="masterpieces"&gt;
+&lt;h2&gt;masterpieces&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Animal in Man (Dead Prez)&lt;/li&gt;
+&lt;li&gt;Bad Dreams (Busta Rhymes)&lt;/li&gt;
+&lt;li&gt;Hip-Hop (Dead Prez)&lt;/li&gt;
+&lt;li&gt;In the Music (The Roots)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="excellent"&gt;
+&lt;h2&gt;excellent&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Beware (Big Pun)&lt;/li&gt;
+&lt;li&gt;Distortion to Static (The Roots)&lt;/li&gt;
+&lt;li&gt;Don't Feel Right (The Roots)&lt;/li&gt;
+&lt;li&gt;8 Mile (Eminem)&lt;/li&gt;
+&lt;li&gt;Elevators (Outkast)&lt;/li&gt;
+&lt;li&gt;Hard Knock Life (Jay-Z)&lt;/li&gt;
+&lt;li&gt;Hold (KRS-One)&lt;/li&gt;
+&lt;li&gt;How Many MC's (KRS-ONE)&lt;/li&gt;
+&lt;li&gt;I'm A African (Dead Prez)&lt;/li&gt;
+&lt;li&gt;It's A Party (Busta Rhymes feat. Zhane)&lt;/li&gt;
+&lt;li&gt;Kick in the Door (Notorious B.I.G.)&lt;/li&gt;
+&lt;li&gt;Mathematics (DJ Premier, Mos Def)&lt;/li&gt;
+&lt;li&gt;Mind Sex (Dead Prez)&lt;/li&gt;
+&lt;li&gt;Miss Jackson (Outkast)&lt;/li&gt;
+&lt;li&gt;Micranots? (Micranots)&lt;/li&gt;
+&lt;li&gt;Next Movement (The Roots)&lt;/li&gt;
+&lt;li&gt;Old School (Tupac)&lt;/li&gt;
+&lt;li&gt;Ooh! (De la Soul ft. RedMan)&lt;/li&gt;
+&lt;li&gt;Track 15, album: Slum (Slum Village)&lt;/li&gt;
+&lt;li&gt;Respiration (Blackstar feat. Common)&lt;/li&gt;
+&lt;li&gt;Respond/React (The Roots)&lt;/li&gt;
+&lt;li&gt;Section (The Roots)&lt;/li&gt;
+&lt;li&gt;Shook Ones Pt. II (Mobb Deep)&lt;/li&gt;
+&lt;li&gt;6th Sense (Common and DJ Premier)&lt;/li&gt;
+&lt;li&gt;Still (Dr Dre feat. Snoop Dogg)&lt;/li&gt;
+&lt;li&gt;Tell Me Something (Arrested Development)&lt;/li&gt;
+&lt;li&gt;Ten Crack Commandments (Notorious B.I.G.)&lt;/li&gt;
+&lt;li&gt;They Schools (Dead Prez)&lt;/li&gt;
+&lt;li&gt;Thirty Three Threes (Canibus)&lt;/li&gt;
+&lt;li&gt;Throw Yo Hands in the Air (Cypress Hill)&lt;/li&gt;
+&lt;li&gt;Tradin' War Stories (Tupac)&lt;/li&gt;
+&lt;li&gt;Travellin' Man (DJ Honda and Mos Def)&lt;/li&gt;
+&lt;li&gt;Way I Am, The (Eminem)&lt;/li&gt;
+&lt;li&gt;Woo-Ha (Busta Rhymes)&lt;/li&gt;
+&lt;li&gt;Wot They Do (The Roots)&lt;/li&gt;
+&lt;li&gt;You Came Up (Big Pun)&lt;/li&gt;
+&lt;li&gt;You'll Find A Way (Dead Prez)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="special-mentions"&gt;
+&lt;h2&gt;special mentions&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Quiet Storm (Mobb Deep feat. Lil' Kim) - chiefly for having a really
+favorite chorus by the Kim lady&lt;/li&gt;
+&lt;li&gt;Shove This Jay-Oh-Bee (Canibus) - me loving the so-alive beat&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</summary><category term="hip-hop"></category><category term="music"></category><category term="list"></category></entry><entry><title>top tracks: Burning Spear</title><link href="http://tshepang.net/top-tracks-burning-spear" rel="alternate"></link><updated>2017-08-03T15:06:27+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:top-tracks-burning-spear</id><summary type="html">&lt;div class="section" id="landmark"&gt;
+&lt;h2&gt;1 landmark&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Old Marcus Garvey (&lt;em&gt;Marcus Garvey&lt;/em&gt; - 1975)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="masterpieces"&gt;
+&lt;h2&gt;7 masterpieces&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Tradition (&lt;em&gt;Marcus Garvey&lt;/em&gt; - 1975)&lt;/li&gt;
+&lt;li&gt;Invasion aka Black Wa-da-da (&lt;em&gt;Marcus Garvey&lt;/em&gt; - 1975)&lt;/li&gt;
+&lt;li&gt;Marcus Garvey (&lt;em&gt;Marcus Garvey&lt;/em&gt; - 1975)&lt;/li&gt;
+&lt;li&gt;Give Me (&lt;em&gt;Marcus Garvey&lt;/em&gt; - 1975)&lt;/li&gt;
+&lt;li&gt;The Wilderness (&lt;em&gt;Live in Paris Zenith&lt;/em&gt; - 1988)&lt;/li&gt;
+&lt;li&gt;Slavery Days (&lt;em&gt;Marcus Garvey&lt;/em&gt; - 1975)&lt;/li&gt;
+&lt;li&gt;Mister Garvey (&lt;em&gt;Social Living&lt;/em&gt; - 1978)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="excellent-works"&gt;
+&lt;h2&gt;7 excellent works&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Creation Rebel (&lt;em&gt;Live in Paris Zenith&lt;/em&gt; - 1988)&lt;/li&gt;
+&lt;li&gt;Civilise Reggae (&lt;em&gt;Social Living&lt;/em&gt; - 1978)&lt;/li&gt;
+&lt;li&gt;Live Good (&lt;em&gt;Marcus Garvey&lt;/em&gt; - 1975)&lt;/li&gt;
+&lt;li&gt;Jordan River (&lt;em&gt;Marcus Garvey&lt;/em&gt; - 1975)&lt;/li&gt;
+&lt;li&gt;Institution (&lt;em&gt;Social Living&lt;/em&gt; - 1978)&lt;/li&gt;
+&lt;li&gt;Marcus Children Suffer (&lt;em&gt;Social Living&lt;/em&gt; - 1978)&lt;/li&gt;
+&lt;li&gt;The Youths (&lt;em&gt;(A)Live in Concert '97&lt;/em&gt; - 1998)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="honorable-mention"&gt;
+&lt;h2&gt;honorable mention&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Travelling (&lt;em&gt;Spear Burning&lt;/em&gt; - 2001)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</summary><category term="music"></category><category term="top-tracks"></category></entry><entry><title>top tracks: Fela Kuti</title><link href="http://tshepang.net/top-tracks-fela-kuti" rel="alternate"></link><updated>2017-08-03T15:06:27+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:top-tracks-fela-kuti</id><summary type="html">&lt;div class="section" id="landmarks"&gt;
+&lt;h2&gt;3 landmarks&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Lady (&lt;em&gt;Shakara&lt;/em&gt; - 1972)&lt;/li&gt;
+&lt;li&gt;Confusion (&lt;em&gt;Confusion&lt;/em&gt; - 1975)&lt;/li&gt;
+&lt;li&gt;Igbe (Na Shit) (&lt;em&gt;Gentleman&lt;/em&gt; - 1973)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="masterpieces"&gt;
+&lt;h2&gt;3 masterpieces&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;No Agreement (&lt;em&gt;No Agreement&lt;/em&gt; - 1977)&lt;/li&gt;
+&lt;li&gt;Shakara (&lt;em&gt;Shakara&lt;/em&gt; - 1972)&lt;/li&gt;
+&lt;li&gt;Gentleman (&lt;em&gt;Gentleman&lt;/em&gt; - 1973)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="excellent-works"&gt;
+&lt;h2&gt;12 excellent works&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Egbe Mi O (&lt;em&gt;Fela's London Scene&lt;/em&gt; - 1970)&lt;/li&gt;
+&lt;li&gt;Fefe Naa Efe (&lt;em&gt;Gentleman&lt;/em&gt; - 1973)&lt;/li&gt;
+&lt;li&gt;Who No Know Go Know (&lt;em&gt;Everything Scatter&lt;/em&gt; - 1975)&lt;/li&gt;
+&lt;li&gt;Just Like That (&lt;em&gt;Beast of No Nation&lt;/em&gt; - 1989)&lt;/li&gt;
+&lt;li&gt;Pansa Pansa (&lt;em&gt;Underground System&lt;/em&gt; - 1992)&lt;/li&gt;
+&lt;li&gt;Eko Ile (&lt;em&gt;Afrodisiac&lt;/em&gt; - 1973)&lt;/li&gt;
+&lt;li&gt;Alu Jon Jonki Jon (&lt;em&gt;Afrodisiac&lt;/em&gt; - 1973)&lt;/li&gt;
+&lt;li&gt;Water No Get Enemy (&lt;em&gt;Expensive Shit&lt;/em&gt; - 1975)&lt;/li&gt;
+&lt;li&gt;Zombie (&lt;em&gt;Zombie&lt;/em&gt; - 1978)&lt;/li&gt;
+&lt;li&gt;Teacher Don't Teach Me Nonsense (&lt;em&gt;Teacher Don't Teach Me Nonsense&lt;/em&gt;
+-1986)&lt;/li&gt;
+&lt;li&gt;Ikoyi Mentality Versus Mushin Mentality (&lt;em&gt;Why Black Man Dey Suffer&lt;/em&gt;
+-1971)&lt;/li&gt;
+&lt;li&gt;Ye Ye de Smell (&lt;em&gt;Live!&lt;/em&gt; - 1971)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="honorable-mention"&gt;
+&lt;h2&gt;honorable mention&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Why Black Man Dey Suffer (&lt;em&gt;Why Black Man Dey Suffer&lt;/em&gt; - 1971)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Not in the above lists because it gets spoiled by the vocals about halfway
+through. The instruments are incredible, and almost the only saving
+grace of the song, but they start to sound repetitive several minutes
+in. The beginning parts of the song, including its vocals, would earn
+this one a msterpiece had the rest been kept at that level.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Trouble Sleep Yanga Wake Am (&lt;em&gt;Roforofo Fight&lt;/em&gt; - 1972)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Black Man's Cry (&lt;em&gt;Live!&lt;/em&gt; - 1971)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</summary><category term="music"></category><category term="top-tracks"></category></entry><entry><title>top musicians</title><link href="http://tshepang.net/top-musicians" rel="alternate"></link><updated>2017-08-03T15:06:27+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:top-musicians</id><summary type="html">&lt;p&gt;The best musicians in history,
+a list created with the help of &lt;a class="reference external" href="http://tshepang.net/simple-rating-system-for-music"&gt;a simple rating system&lt;/a&gt;.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/top-tracks-fela-kuti"&gt;Fela Kuti&lt;/a&gt;, 27&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/top-tracks-burning-spear"&gt;Burning Spear&lt;/a&gt;, 24&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/letta-mbulu-vs-miriam-makeba"&gt;Letta Mbulu&lt;/a&gt;, 15&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/top-tracks-salif-keita"&gt;Salif Keita&lt;/a&gt;, 14&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/top-tracks-bob-marley"&gt;Bob Marley&lt;/a&gt;, 13&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/letta-mbulu-vs-miriam-makeba"&gt;Miriam Makeba&lt;/a&gt;, 11&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/top-tracks-the-roots"&gt;The Roots&lt;/a&gt;, 10&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/top-tracks-michael-jackson"&gt;Michael Jackson&lt;/a&gt;, 10&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="music"></category></entry><entry><title>Rust week of 2017-07-20</title><link href="http://tshepang.net/rust-week-of-2017-07-20" rel="alternate"></link><updated>2017-07-24T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-07-24:rust-week-of-2017-07-20</id><summary type="html">&lt;p&gt;I am surprised by the ease of changing default Rust toolchain:&lt;/p&gt;
+&lt;blockquote&gt;
+# switch to nightly
+rustup default nightly
+# switch to stable
+rustup default stable&lt;/blockquote&gt;
+&lt;p&gt;This is more easy than remembering how to tell cargo to use to use a
+non-default toolchain, though that approach is not too bad either:&lt;/p&gt;
+&lt;blockquote&gt;
+# build with nightly
+cargo +nightly build&lt;/blockquote&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;I made &lt;a class="reference external" href="https://github.com/rust-lang/book/issues/828"&gt;two&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/book/issues/834"&gt;complaints&lt;/a&gt;,
+&lt;a class="reference external" href="https://github.com/brson/rust-cookbook/pull/253"&gt;as&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/43409"&gt;well&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/book/pull/827"&gt;as&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/43416"&gt;five&lt;/a&gt; &lt;a class="reference external" href="https://github.com/BurntSushi/walkdir/pull/75"&gt;contributions&lt;/a&gt;.&lt;/p&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-07-13</title><link href="http://tshepang.net/rust-week-of-2017-07-13" rel="alternate"></link><updated>2017-07-19T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-07-19:rust-week-of-2017-07-13</id><summary type="html">&lt;p&gt;I am tempted, &lt;a class="reference external" href="http://tshepang.net/rust-week-of-2017-01-06"&gt;once again&lt;/a&gt;, to try out &lt;a class="reference external" href="https://github.com/Wilfred/remacs"&gt;Remacs&lt;/a&gt;,
+a Rust port of GNU Emacs.
+It's very encouraging that it tries to be compatible,
+for the drop-in-replacement effect.&lt;/p&gt;
+&lt;p&gt;I am glad &lt;a class="reference external" href="https://github.com/TeXitoi/structopt/pull/17"&gt;the change to add subcommands to structopt&lt;/a&gt;
+has been merged. It was the one important missing piece to &lt;a class="reference external" href="https://github.com/TeXitoi/structopt"&gt;this
+wonderful project&lt;/a&gt;.
+I also made &lt;a class="reference external" href="https://github.com/TeXitoi/structopt/pull/19"&gt;a contribution&lt;/a&gt; to the project.&lt;/p&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-07-06</title><link href="http://tshepang.net/rust-week-of-2017-07-06" rel="alternate"></link><updated>2017-07-12T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-07-12:rust-week-of-2017-07-06</id><summary type="html">&lt;p&gt;Very little Rust this week,
+but I did make &lt;a class="reference external" href="https://github.com/brson/stdx/issues/53"&gt;one complaint&lt;/a&gt;,
+and &lt;a class="reference external" href="https://github.com/brson/stdx/pull/54"&gt;one contribution&lt;/a&gt;.&lt;/p&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-06-29</title><link href="http://tshepang.net/rust-week-of-2017-06-29" rel="alternate"></link><updated>2017-07-05T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-07-05:rust-week-of-2017-06-29</id><summary type="html">&lt;p&gt;Almost not Rust this week,
+but with &lt;a class="reference external" href="https://github.com/stevedonovan/gentle-intro/pull/45"&gt;one embarassingly tiny contribution&lt;/a&gt;.&lt;/p&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-06-22</title><link href="http://tshepang.net/rust-week-of-2017-06-22" rel="alternate"></link><updated>2017-06-25T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-06-25:rust-week-of-2017-06-22</id><summary type="html">&lt;p&gt;I wrote a tool that helps with &lt;a class="reference external" href="http://semver.org"&gt;semver&lt;/a&gt; git tagging, which made
+explore the rather large (and unfriendly) API of &lt;a class="reference external" href="https://github.com/alexcrichton/git2-rs"&gt;git2-rs library&lt;/a&gt;.
+It needs lots of love, or at a more idiomatic replacement.&lt;/p&gt;
+&lt;p&gt;Regarding contributions, I made &lt;a class="reference external" href="https://github.com/chyh1990/yaml-rust/pull/79"&gt;just one&lt;/a&gt;.&lt;/p&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-06-15</title><link href="http://tshepang.net/rust-week-of-2017-06-15" rel="alternate"></link><updated>2017-06-21T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-06-21:rust-week-of-2017-06-15</id><summary type="html">&lt;p&gt;I used &lt;a class="reference external" href="https://github.com/TeXitoi/structopt"&gt;structopt&lt;/a&gt; for the first time,
+and found it reduces the pain of CLI parsing (via &lt;a class="reference external" href="https://github.com/kbknapp/clap-rs"&gt;clap&lt;/a&gt;).
+Its main shortcoming is &lt;a class="reference external" href="https://github.com/TeXitoi/structopt/issues/1"&gt;lack of subcommand support&lt;/a&gt;,
+whose implementation would make a go-to for me.&lt;/p&gt;
+&lt;p&gt;Regarding contributions, I made &lt;a class="reference external" href="https://github.com/stevedonovan/to_vec/pull/1"&gt;one tiny one&lt;/a&gt;.&lt;/p&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-06-08</title><link href="http://tshepang.net/rust-week-of-2017-06-08" rel="alternate"></link><updated>2017-06-08T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-06-08:rust-week-of-2017-06-08</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="https://github.com/stevedonovan/gentle-intro/issues/39"&gt;I&lt;/a&gt; &lt;a class="reference external" href="https://github.com/stevedonovan/gentle-intro/issues/41"&gt;submitted&lt;/a&gt; &lt;a class="reference external" href="https://github.com/stevedonovan/gentle-intro/issues/43"&gt;four&lt;/a&gt; &lt;a class="reference external" href="https://github.com/stevedonovan/gentle-intro/issues/44"&gt;complaints&lt;/a&gt; and &lt;a class="reference external" href="https://github.com/stevedonovan/gentle-intro/pull/40"&gt;made&lt;/a&gt; &lt;a class="reference external" href="https://github.com/stevedonovan/gentle-intro/pull/42"&gt;three&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/42551"&gt;contributions&lt;/a&gt; this week.&lt;/p&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-06-01</title><link href="http://tshepang.net/rust-week-of-2017-06-01" rel="alternate"></link><updated>2017-06-07T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-06-07:rust-week-of-2017-06-01</id><summary type="html">&lt;p&gt;Very little Rust this week, with just &lt;a class="reference external" href="https://github.com/rust-lang/cargo/pull/4137"&gt;one contribution&lt;/a&gt;.&lt;/p&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-05-25</title><link href="http://tshepang.net/rust-week-of-2017-05-25" rel="alternate"></link><updated>2017-05-31T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-05-31:rust-week-of-2017-05-25</id><summary type="html">&lt;p&gt;There were &lt;a class="reference external" href="https://github.com/TyOverby/bincode/pull/186"&gt;three&lt;/a&gt; &lt;a class="reference external" href="https://github.com/TyOverby/bincode/pull/187"&gt;small&lt;/a&gt; &lt;a class="reference external" href="https://github.com/TyOverby/bincode/pull/188"&gt;contributions&lt;/a&gt; this time.&lt;/p&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-05-18</title><link href="http://tshepang.net/rust-week-of-2017-05-18" rel="alternate"></link><updated>2017-05-21T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-05-21:rust-week-of-2017-05-18</id><summary type="html">&lt;p&gt;I opened &lt;a class="reference external" href="https://github.com/biluohc/app/issues/2"&gt;one issue&lt;/a&gt; and made &lt;a class="reference external" href="https://github.com/biluohc/app/pull/1"&gt;one contribution&lt;/a&gt;.&lt;/p&gt;
 </summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-05-11</title><link href="http://tshepang.net/rust-week-of-2017-05-11" rel="alternate"></link><updated>2017-05-17T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-05-17:rust-week-of-2017-05-11</id><summary type="html">&lt;p&gt;Like &lt;a class="reference external" href="http://tshepang.net/rust-week-of-2017-05-04"&gt;last week&lt;/a&gt; (and the one before it), very little Rust this week,
 and again I made just &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/42070"&gt;one tiny contribution&lt;/a&gt;.&lt;/p&gt;
 </summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-05-04</title><link href="http://tshepang.net/rust-week-of-2017-05-04" rel="alternate"></link><updated>2017-05-10T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-05-10:rust-week-of-2017-05-04</id><summary type="html">&lt;p&gt;Like &lt;a class="reference external" href="http://tshepang.net/rust-week-of-2017-04-27"&gt;last week&lt;/a&gt;, very little Rust this week,
@@ -217,347 +572,7 @@ Using shlex, instead:&lt;/p&gt;
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/ctz/hyper-rustls/pull/5"&gt;Just one contribution&lt;/a&gt; this week,
 and it's not even that great... not sure it's an improvement&lt;/p&gt;
-</summary><category term="Rust"></category></entry><entry><title>what I like about Rust</title><link href="http://tshepang.net/what-i-like-about-rust" rel="alternate"></link><updated>2017-03-01T19:57:13+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-03-01:what-i-like-about-rust</id><summary type="html">&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;Ambitious: the aim of being memory safe without the use of a garbage
-collector, allowing it to achieve C++ execution speeds.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Naming conventions:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;name_with_underscores&lt;/tt&gt; for variable and function names&lt;/li&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;HttpRequest&lt;/tt&gt; instead of &lt;tt class="docutils literal"&gt;HTTPRequest&lt;/tt&gt; for type names&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Error reporting: compile errors are the best I've seen (though I've
-only really seen those of C and C++); they are even color-coded!&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;2 short keywords:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;fn&lt;/tt&gt; for function declarations&lt;/li&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;use&lt;/tt&gt;, instead of &lt;tt class="docutils literal"&gt;using&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;import&lt;/tt&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;I love that I don't need to add (the tedious) parenthesis around the
-&lt;em&gt;condition expression&lt;/em&gt; in an &lt;em&gt;if&lt;/em&gt;, &lt;em&gt;while&lt;/em&gt;, and &lt;em&gt;match&lt;/em&gt; statements:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;true&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="c1"&gt;// always executes&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;The semicolon rule: I initially found it surprising that omitting a
-semicolon after a value is shorthand for returning. I appreciate it
-now... it's quite nifty, and I in fact now find &lt;tt class="docutils literal"&gt;return&lt;/tt&gt;
-statements ugly.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Traits: they are an elegant way of providing abstract interfaces,
-and are therefore used in generic programming. As an example, a
-function can be made to accept different data types, so long as
-those types implement the given trait (or traits). Gorgeous!&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;The &lt;tt class="docutils literal"&gt;match&lt;/tt&gt; statement is kool: exhaustiveness check, no
-fall-through, and nice syntax.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Allowing a trailing comma after a list of items, which is really
-great for copy-pasting and diffs.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Packaging conventions: by default, the build tool, Cargo, ensures that all
-build sources (which may include documentation) are placed in &lt;cite&gt;src/&lt;/cite&gt;
-in the root of a source distribution.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;A fast-paced and time-based release cycle: a stable release will be
-made every 6 weeks, which is very ambitious for a programming
-language.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Development process:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;No one, including the Core Team, pushes anything to the Rust tree. Each
-person gets their changes reviewed first, and they mostly get
-approved by someone else.&lt;/li&gt;
-&lt;li&gt;Merging the changes to the tree is nearly always done via a continuous
-integration system, which first ensures that each change passes all
-tests.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Allows one to redefine variables, even with different types:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ten&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This is convenient.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;The amount of iterations its design went through during its pre-1.0
-development, which included numerous breaking changes,
-was... impressive. That's an indication that what resulted is a far
-better design than we could have had. The sheer amount of effort
-taken, which was such a unique experience for me, makes me feel
-grateful (I watched the activity for about a year before 1.0 was
-released). I am also grateful for the resilient users who kept up
-with the pain of the frequent changes, for they helped keep the
-language relevant and exciting, while also providing feedback.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="Rust"></category></entry><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2017-03-01T19:57:12+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-03-01:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
-I do celebrate each time I see a project use it. So, here I list the
-most notable projects I am aware of that do, which also gives me hope
-that it isn't being suffocated too much by Git:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://hg.mozilla.org/mozilla-central"&gt;Firefox&lt;/a&gt;, world number 3 desktop web browser (number of users)&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://hg.python.org/cpython"&gt;CPython&lt;/a&gt; and &lt;a class="reference external" href="https://bitbucket.org/pypy/pypy"&gt;PyPy&lt;/a&gt;, the most important implementations of a top 10
-popular programming language&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://hg.openjdk.java.net"&gt;OpenJDK&lt;/a&gt;, the top open source implementation of the Java platform&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.vim.org/mercurial.php"&gt;VIM&lt;/a&gt; and &lt;a class="reference external" href="http://wiki.netbeans.org/WorkingWithNetBeansSources#Mercurial_access"&gt;Netbeans&lt;/a&gt;, two of the most popular text editors for programmers&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;And here is one which is not FLOSS (i.e. proprietary):&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook"&gt;Facebook&lt;/a&gt;, world number 2 website in terms of visitor numbers&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="VCS"></category><category term="non-FLOSS"></category><category term="list"></category></entry><entry><title>ideal static blog generator</title><link href="http://tshepang.net/ideal-static-blog-generator" rel="alternate"></link><updated>2017-03-01T19:57:12+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-03-01:ideal-static-blog-generator</id><summary type="html">&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
-missed:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt; support is mandatory.
-It's the only markup language I like.&lt;/li&gt;
-&lt;li&gt;Landing Page should be an Archives View (Post title and date) or a
-subset (i.e. Recent Posts).  I would not mind if the latest Post or
-the About Page were displayed, so long as they are followed by this
-Archives View.&lt;/li&gt;
-&lt;li&gt;Categories should be determined by directory into which a file (the
-raw material for a Post) is placed. Specifying this in the metadata
-section of the file should of course take precedence.&lt;/li&gt;
-&lt;li&gt;Publish date should never be placed at the bottom of a Post. It is
-too important a piece metadata to treat this way.&lt;/li&gt;
-&lt;li&gt;An option to have clean URLs (i.e. trailing &lt;tt class="docutils literal"&gt;.html&lt;/tt&gt; removed).&lt;/li&gt;
-&lt;li&gt;Date-based directory structure should not be mandatory (unlike with
-Tinkerer).&lt;/li&gt;
-&lt;li&gt;Inline literals and literal blocks (for code) should be
-distinguished by background colour; using a different font is just not
-good enough.&lt;/li&gt;
-&lt;li&gt;Tags (and maybe Categories) should be displayed on each post.&lt;/li&gt;
-&lt;li&gt;Blogofile has a strange requirement of having &lt;a class="reference external" href="http://docs.blogofile.com/en/latest/posts.html"&gt;post headers be YAML
-format&lt;/a&gt;. Maybe there's a good reason, but I want my generator to
-not require anything special in file contents.&lt;/li&gt;
-&lt;li&gt;Ability to determine Publish date from file mtime.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;nice-to-have&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Ability to combine multiple tags.&lt;/li&gt;
-&lt;li&gt;Ability to show posts linking to current one, but I'm not sure how
-useful this would be though.&lt;/li&gt;
-&lt;li&gt;A feed icon that is visible from the main page (and maybe Category
-pages).&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="blogging"></category></entry><entry><title>about 'developer of note' series</title><link href="http://tshepang.net/about-developer-of-note-series" rel="alternate"></link><updated>2017-03-01T19:57:12+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-03-01:about-developer-of-note-series</id><summary type="html">&lt;p&gt;I respect a lot of software developers, but many of those are not
-going to have an entry in &lt;a class="reference external" href="http://tshepang.net/tags#developer-of-note-ref"&gt;this series&lt;/a&gt;, and not because they are
-lesser in my eyes... I need a news item that would trigger a
-post.  Thing is, if you write about someone, you actually need to have
-some content (duh!), and saying &amp;quot;Guide van Rossum rocks for creating
-Python, and am grateful!&amp;quot;  is simply not enough, hence a need for a
-trigger.  In fact, I used to call this series &lt;em&gt;developer of the
-moment&lt;/em&gt;, but at some point felt that the new name is more fitting,
-especially since a few of these developers
-generated some new triggers along the way.&lt;/p&gt;
-</summary><category term="developer-of-note"></category></entry><entry><title>I am a very jealous person</title><link href="http://tshepang.net/i-am-a-very-jealous-person" rel="alternate"></link><updated>2017-03-01T19:57:12+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-03-01:i-am-a-very-jealous-person</id><summary type="html">&lt;p&gt;Following is some of the cases where competing software won this or
-that battle, and I am jealous since I want everyone to use what I
-like:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Git (and GitHub) is so much more successful than Mercurial (and
-Bitbucket), my preferred VCS. I mean even &lt;a class="reference external" href="http://tshepang.net/me-loves-new-git-site-design"&gt;the website looks
-better&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Markdown is a far more popular light-weight markup language than
-the far more advanced &lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt;.
-It's particularly sad when it's not used where it's needed
-most... documenting large projects (&lt;a class="reference external" href="http://doc.rust-lang.org"&gt;example&lt;/a&gt;).&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="Python"></category><category term="non-Python"></category><category term="non-Debian"></category><category term="VCS"></category></entry><entry><title>top tracks: hip-hop</title><link href="http://tshepang.net/top-tracks-hip-hop" rel="alternate"></link><updated>2017-03-01T19:57:12+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-03-01:top-tracks-hip-hop</id><summary type="html">&lt;p&gt;Not included below are tracks from the best hip-hop albums yet made,
-&lt;a class="reference external" href="http://tshepang.net/doggystyle-1993"&gt;Doggystyle&lt;/a&gt; and &lt;a class="reference external" href="http://tshepang.net/the-score-1996"&gt;The Score&lt;/a&gt;.&lt;/p&gt;
-&lt;div class="section" id="landmarks"&gt;
-&lt;h2&gt;landmarks&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;MC's Act Like They Don't Know (KRS-One and DJ Premier)&lt;/li&gt;
-&lt;li&gt;My Downfall (Notorious B.I.G.)&lt;/li&gt;
-&lt;li&gt;Nas is Like (Nas)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="masterpieces"&gt;
-&lt;h2&gt;masterpieces&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Animal in Man (Dead Prez)&lt;/li&gt;
-&lt;li&gt;Bad Dreams (Busta Rhymes)&lt;/li&gt;
-&lt;li&gt;Hip-Hop (Dead Prez)&lt;/li&gt;
-&lt;li&gt;In the Music (The Roots)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="excellent"&gt;
-&lt;h2&gt;excellent&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Beware (Big Pun)&lt;/li&gt;
-&lt;li&gt;Distortion to Static (The Roots)&lt;/li&gt;
-&lt;li&gt;Don't Feel Right (The Roots)&lt;/li&gt;
-&lt;li&gt;8 Mile (Eminem)&lt;/li&gt;
-&lt;li&gt;Elevators (Outkast)&lt;/li&gt;
-&lt;li&gt;Hard Knock Life (Jay-Z)&lt;/li&gt;
-&lt;li&gt;Hold (KRS-One)&lt;/li&gt;
-&lt;li&gt;How Many MC's (KRS-ONE)&lt;/li&gt;
-&lt;li&gt;I'm A African (Dead Prez)&lt;/li&gt;
-&lt;li&gt;It's A Party (Busta Rhymes feat. Zhane)&lt;/li&gt;
-&lt;li&gt;Kick in the Door (Notorious B.I.G.)&lt;/li&gt;
-&lt;li&gt;Mathematics (DJ Premier, Mos Def)&lt;/li&gt;
-&lt;li&gt;Mind Sex (Dead Prez)&lt;/li&gt;
-&lt;li&gt;Miss Jackson (Outkast)&lt;/li&gt;
-&lt;li&gt;Micranots? (Micranots)&lt;/li&gt;
-&lt;li&gt;Next Movement (The Roots)&lt;/li&gt;
-&lt;li&gt;Old School (Tupac)&lt;/li&gt;
-&lt;li&gt;Ooh! (De la Soul ft. RedMan)&lt;/li&gt;
-&lt;li&gt;Track 15, album: Slum (Slum Village)&lt;/li&gt;
-&lt;li&gt;Respiration (Blackstar feat. Common)&lt;/li&gt;
-&lt;li&gt;Respond/React (The Roots)&lt;/li&gt;
-&lt;li&gt;Section (The Roots)&lt;/li&gt;
-&lt;li&gt;Shook Ones Pt. II (Mobb Deep)&lt;/li&gt;
-&lt;li&gt;6th Sense (Common and DJ Premier)&lt;/li&gt;
-&lt;li&gt;Still (Dr Dre feat. Snoop Dogg)&lt;/li&gt;
-&lt;li&gt;Tell Me Something (Arrested Development)&lt;/li&gt;
-&lt;li&gt;Ten Crack Commandments (Notorious B.I.G.)&lt;/li&gt;
-&lt;li&gt;They Schools (Dead Prez)&lt;/li&gt;
-&lt;li&gt;Thirty Three Threes (Canibus)&lt;/li&gt;
-&lt;li&gt;Throw Yo Hands in the Air (Cypress Hill)&lt;/li&gt;
-&lt;li&gt;Tradin' War Stories (Tupac)&lt;/li&gt;
-&lt;li&gt;Travellin' Man (DJ Honda and Mos Def)&lt;/li&gt;
-&lt;li&gt;Way I Am, The (Eminem)&lt;/li&gt;
-&lt;li&gt;Woo-Ha (Busta Rhymes)&lt;/li&gt;
-&lt;li&gt;Wot They Do (The Roots)&lt;/li&gt;
-&lt;li&gt;You Came Up (Big Pun)&lt;/li&gt;
-&lt;li&gt;You'll Find A Way (Dead Prez)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="special-mentions"&gt;
-&lt;h2&gt;special mentions&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Quiet Storm (Mobb Deep feat. Lil' Kim) - chiefly for having a really
-favorite chorus by the Kim lady&lt;/li&gt;
-&lt;li&gt;Shove This Jay-Oh-Bee (Canibus) - me loving the so-alive beat&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-</summary><category term="hip-hop"></category><category term="music"></category><category term="list"></category></entry><entry><title>top tv shows</title><link href="http://tshepang.net/top-tv-shows" rel="alternate"></link><updated>2017-03-01T19:57:12+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-03-01:top-tv-shows</id><summary type="html">&lt;p&gt;I specify seasons only if the rest of series was not so excellent.
-The list is roughly in the chronological order of the first time
-I watched them.&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Yizo Yizo (seasons 1 and 2)&lt;/li&gt;
-&lt;li&gt;24&lt;/li&gt;
-&lt;li&gt;Game of Thrones&lt;/li&gt;
-&lt;li&gt;Homeland&lt;/li&gt;
-&lt;li&gt;Utopia&lt;/li&gt;
-&lt;li&gt;Girls (seasons 1 and 2)&lt;/li&gt;
-&lt;li&gt;House of Cards (seasons 1 and 2)&lt;/li&gt;
-&lt;li&gt;The Knick&lt;/li&gt;
-&lt;li&gt;Mr. Robot&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;honorable mentions&lt;/strong&gt;&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;House&lt;/li&gt;
-&lt;li&gt;Death Note&lt;/li&gt;
-&lt;li&gt;Alphas&lt;/li&gt;
-&lt;li&gt;Breaking Bad&lt;/li&gt;
-&lt;li&gt;The Americans&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="tv"></category></entry><entry><title>top tracks: Burning Spear</title><link href="http://tshepang.net/top-tracks-burning-spear" rel="alternate"></link><updated>2017-03-01T19:57:12+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-03-01:top-tracks-burning-spear</id><summary type="html">&lt;div class="section" id="landmark"&gt;
-&lt;h2&gt;1 landmark&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Old Marcus Garvey (&lt;em&gt;Marcus Garvey&lt;/em&gt; - 1975)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="masterpieces"&gt;
-&lt;h2&gt;7 masterpieces&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Tradition (&lt;em&gt;Marcus Garvey&lt;/em&gt; - 1975)&lt;/li&gt;
-&lt;li&gt;Invasion aka Black Wa-da-da (&lt;em&gt;Marcus Garvey&lt;/em&gt; - 1975)&lt;/li&gt;
-&lt;li&gt;Marcus Garvey (&lt;em&gt;Marcus Garvey&lt;/em&gt; - 1975)&lt;/li&gt;
-&lt;li&gt;Give Me (&lt;em&gt;Marcus Garvey&lt;/em&gt; - 1975)&lt;/li&gt;
-&lt;li&gt;The Wilderness (&lt;em&gt;Live in Paris Zenith&lt;/em&gt; - 1988)&lt;/li&gt;
-&lt;li&gt;Slavery Days (&lt;em&gt;Marcus Garvey&lt;/em&gt; - 1975)&lt;/li&gt;
-&lt;li&gt;Mister Garvey (&lt;em&gt;Social Living&lt;/em&gt; - 1978)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="excellent-works"&gt;
-&lt;h2&gt;7 excellent works&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Creation Rebel (&lt;em&gt;Live in Paris Zenith&lt;/em&gt; - 1988)&lt;/li&gt;
-&lt;li&gt;Civilise Reggae (&lt;em&gt;Social Living&lt;/em&gt; - 1978)&lt;/li&gt;
-&lt;li&gt;Live Good (&lt;em&gt;Marcus Garvey&lt;/em&gt; - 1975)&lt;/li&gt;
-&lt;li&gt;Jordan River (&lt;em&gt;Marcus Garvey&lt;/em&gt; - 1975)&lt;/li&gt;
-&lt;li&gt;Institution (&lt;em&gt;Social Living&lt;/em&gt; - 1978)&lt;/li&gt;
-&lt;li&gt;Marcus Children Suffer (&lt;em&gt;Social Living&lt;/em&gt; - 1978)&lt;/li&gt;
-&lt;li&gt;The Youths (&lt;em&gt;(A)Live in Concert '97&lt;/em&gt; - 1998)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="honorable-mention"&gt;
-&lt;h2&gt;honorable mention&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Travelling (&lt;em&gt;Spear Burning&lt;/em&gt; - 2001)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-</summary><category term="music"></category><category term="top-tracks"></category></entry><entry><title>top tracks: Fela Kuti</title><link href="http://tshepang.net/top-tracks-fela-kuti" rel="alternate"></link><updated>2017-03-01T19:57:12+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-03-01:top-tracks-fela-kuti</id><summary type="html">&lt;div class="section" id="landmarks"&gt;
-&lt;h2&gt;3 landmarks&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Lady (&lt;em&gt;Shakara&lt;/em&gt; - 1972)&lt;/li&gt;
-&lt;li&gt;Confusion (&lt;em&gt;Confusion&lt;/em&gt; - 1975)&lt;/li&gt;
-&lt;li&gt;Igbe (Na Shit) (&lt;em&gt;Gentleman&lt;/em&gt; - 1973)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="masterpieces"&gt;
-&lt;h2&gt;3 masterpieces&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;No Agreement (&lt;em&gt;No Agreement&lt;/em&gt; - 1977)&lt;/li&gt;
-&lt;li&gt;Shakara (&lt;em&gt;Shakara&lt;/em&gt; - 1972)&lt;/li&gt;
-&lt;li&gt;Gentleman (&lt;em&gt;Gentleman&lt;/em&gt; - 1973)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="excellent-works"&gt;
-&lt;h2&gt;12 excellent works&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Egbe Mi O (&lt;em&gt;Fela's London Scene&lt;/em&gt; - 1970)&lt;/li&gt;
-&lt;li&gt;Fefe Naa Efe (&lt;em&gt;Gentleman&lt;/em&gt; - 1973)&lt;/li&gt;
-&lt;li&gt;Who No Know Go Know (&lt;em&gt;Everything Scatter&lt;/em&gt; - 1975)&lt;/li&gt;
-&lt;li&gt;Just Like That (&lt;em&gt;Beast of No Nation&lt;/em&gt; - 1989)&lt;/li&gt;
-&lt;li&gt;Pansa Pansa (&lt;em&gt;Underground System&lt;/em&gt; - 1992)&lt;/li&gt;
-&lt;li&gt;Eko Ile (&lt;em&gt;Afrodisiac&lt;/em&gt; - 1973)&lt;/li&gt;
-&lt;li&gt;Alu Jon Jonki Jon (&lt;em&gt;Afrodisiac&lt;/em&gt; - 1973)&lt;/li&gt;
-&lt;li&gt;Water No Get Enemy (&lt;em&gt;Expensive Shit&lt;/em&gt; - 1975)&lt;/li&gt;
-&lt;li&gt;Zombie (&lt;em&gt;Zombie&lt;/em&gt; - 1978)&lt;/li&gt;
-&lt;li&gt;Teacher Don't Teach Me Nonsense (&lt;em&gt;Teacher Don't Teach Me Nonsense&lt;/em&gt;
--1986)&lt;/li&gt;
-&lt;li&gt;Ikoyi Mentality Versus Mushin Mentality (&lt;em&gt;Why Black Man Dey Suffer&lt;/em&gt;
--1971)&lt;/li&gt;
-&lt;li&gt;Ye Ye de Smell (&lt;em&gt;Live!&lt;/em&gt; - 1971)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="honorable-mention"&gt;
-&lt;h2&gt;honorable mention&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;Why Black Man Dey Suffer (&lt;em&gt;Why Black Man Dey Suffer&lt;/em&gt; - 1971)&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Not in the above lists because it gets spoiled by the vocals about halfway
-through. The instruments are incredible, and almost the only saving
-grace of the song, but they start to sound repetitive several minutes
-in. The beginning parts of the song, including its vocals, would earn
-this one a msterpiece had the rest been kept at that level.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Trouble Sleep Yanga Wake Am (&lt;em&gt;Roforofo Fight&lt;/em&gt; - 1972)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Black Man's Cry (&lt;em&gt;Live!&lt;/em&gt; - 1971)&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-</summary><category term="music"></category><category term="top-tracks"></category></entry><entry><title>top musicians</title><link href="http://tshepang.net/top-musicians" rel="alternate"></link><updated>2017-03-01T19:57:12+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-03-01:top-musicians</id><summary type="html">&lt;p&gt;The best musicians in history,
-a list created with the help of &lt;a class="reference external" href="http://tshepang.net/simple-rating-system-for-music"&gt;a simple rating system&lt;/a&gt;.&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/top-tracks-fela-kuti"&gt;Fela Kuti&lt;/a&gt;, 27&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/top-tracks-burning-spear"&gt;Burning Spear&lt;/a&gt;, 24&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/letta-mbulu-vs-miriam-makeba"&gt;Letta Mbulu&lt;/a&gt;, 15&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/top-tracks-salif-keita"&gt;Salif Keita&lt;/a&gt;, 14&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/top-tracks-bob-marley"&gt;Bob Marley&lt;/a&gt;, 13&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/letta-mbulu-vs-miriam-makeba"&gt;Miriam Makeba&lt;/a&gt;, 11&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/top-tracks-the-roots"&gt;The Roots&lt;/a&gt;, 10&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/top-tracks-michael-jackson"&gt;Michael Jackson&lt;/a&gt;, 10&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="music"></category></entry><entry><title>Rust week of 2017-02-16</title><link href="http://tshepang.net/rust-week-of-2017-02-16" rel="alternate"></link><updated>2017-02-18T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-02-18:rust-week-of-2017-02-16</id><summary type="html">&lt;p&gt;Just &lt;a class="reference external" href="https://github.com/slog-rs/slog/pull/114"&gt;one contribution&lt;/a&gt;, just like last wekk.
+</summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-02-16</title><link href="http://tshepang.net/rust-week-of-2017-02-16" rel="alternate"></link><updated>2017-02-18T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-02-18:rust-week-of-2017-02-16</id><summary type="html">&lt;p&gt;Just &lt;a class="reference external" href="https://github.com/slog-rs/slog/pull/114"&gt;one contribution&lt;/a&gt;, just like last wekk.
 I also &lt;a class="reference external" href="http://stackoverflow.com/q/42379689/321731"&gt;asked a question&lt;/a&gt; on Stack Overflow...
 so surprising that one can't change file owner using stdlib!&lt;/p&gt;
 </summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-02-09</title><link href="http://tshepang.net/rust-week-of-2017-02-09" rel="alternate"></link><updated>2017-02-10T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-02-10:rust-week-of-2017-02-09</id><summary type="html">&lt;p&gt;Just &lt;a class="reference external" href="https://github.com/faradayio/boondock/pull/11"&gt;one contribution&lt;/a&gt; this time. Damn!&lt;/p&gt;
