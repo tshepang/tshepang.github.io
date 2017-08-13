@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 08 Aug 2017 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2017-08-03</title><link>http://tshepang.net/rust-week-of-2017-08-03</link><description>&lt;p&gt;My first upload to &lt;a class="reference external" href="https://crates.io"&gt;the official Rust registry&lt;/a&gt;,
 &lt;a class="reference external" href="https://crates.io/crates/weeks-from-now"&gt;weeks-from-now&lt;/a&gt;. Finally!&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Tue, 08 Aug 2017 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2017-08-08:rust-week-of-2017-08-03</guid><category>Rust</category></item><item><title>Rust week of 2017-07-27</title><link>http://tshepang.net/rust-week-of-2017-07-27</link><description>&lt;p&gt;I been using this series to help push me into constant Rust activity,
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Tue, 08 Aug 2017 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2017-08-08:rust-week-of-2017-08-03</guid><category>Rust</category></item><item><title>Rust week of 2017-07-27 (special edition)</title><link>http://tshepang.net/rust-week-of-2017-07-27-special-edition</link><description>&lt;p&gt;I been using this series to help push me into constant Rust activity,
 ensuring I do not skip a week sitting idle.
 It worked in that, indeed, no 7 days passed without a single
 contribution to the ecosystem, no matter how tiny,
@@ -16,7 +16,7 @@ and if it means no blog post for that week, so be it.&lt;/p&gt;
 with a draft that wasn't backed up anywhere.
 That draft only consisted of a list of those tiny contributions,
 and it felt extra silly trying to recreate it for publication.&lt;/em&gt;&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Fri, 04 Aug 2017 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2017-08-04:rust-week-of-2017-07-27</guid><category>Rust</category></item><item><title>what I like about Rust</title><link>http://tshepang.net/what-i-like-about-rust</link><description>&lt;ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Fri, 04 Aug 2017 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2017-08-04:rust-week-of-2017-07-27-special-edition</guid><category>Rust</category></item><item><title>what I like about Rust</title><link>http://tshepang.net/what-i-like-about-rust</link><description>&lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;Ambitious: the aim of being memory safe without the use of a garbage
 collector, allowing it to achieve C++ execution speeds.&lt;/p&gt;
 &lt;/li&gt;
