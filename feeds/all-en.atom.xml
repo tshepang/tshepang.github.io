@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2017-08-08T00:00:00+02:00</updated><entry><title>Rust week of 2017-08-03</title><link href="http://tshepang.net/rust-week-of-2017-08-03" rel="alternate"></link><updated>2017-08-08T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-08:rust-week-of-2017-08-03</id><summary type="html">&lt;p&gt;My first upload to &lt;a class="reference external" href="https://crates.io"&gt;the official Rust registry&lt;/a&gt;,
-&lt;a class="reference external" href="https://crates.io/crates/weeks-from-now"&gt;weeks-from-now&lt;/a&gt;. Finally!&lt;/p&gt;
-</summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-07-27 (special edition)</title><link href="http://tshepang.net/rust-week-of-2017-07-27-special-edition" rel="alternate"></link><updated>2017-08-04T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-04:rust-week-of-2017-07-27-special-edition</id><summary type="html">&lt;p&gt;I been using this series to help push me into constant Rust activity,
-ensuring I do not skip a week sitting idle.
-It worked in that, indeed, no 7 days passed without a single
-contribution to the ecosystem, no matter how tiny,
-and this has been going on for over a 100 weeks
-(i.e. &lt;a class="reference external" href="http://tshepang.net/rust-week-of-2015-05-15"&gt;since 2015-05-15&lt;/a&gt;, also Rust 1.0 release date).&lt;/p&gt;
-&lt;p&gt;The problem is I felt silly recording the tiny parts,
-stuff like a typo fixes, just to keep this going.
-Well, it's time to stop that.
-I intend to avoid recording such,
-and if it means no blog post for that week, so be it.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;This was inspired by having a laptop failure,
-with a draft that wasn't backed up anywhere.
-That draft only consisted of a list of those tiny contributions,
-and it felt extra silly trying to recreate it for publication.&lt;/em&gt;&lt;/p&gt;
-</summary><category term="Rust"></category></entry><entry><title>what I like about Rust</title><link href="http://tshepang.net/what-i-like-about-rust" rel="alternate"></link><updated>2017-08-03T15:06:28+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:what-i-like-about-rust</id><summary type="html">&lt;ul&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2017-08-16T16:00:19+02:00</updated><entry><title>what I like about Rust</title><link href="http://tshepang.net/what-i-like-about-rust" rel="alternate"></link><updated>2017-08-16T16:00:19+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-16:what-i-like-about-rust</id><summary type="html">&lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;Ambitious: the aim of being memory safe without the use of a garbage
 collector, allowing it to achieve C++ execution speeds.&lt;/p&gt;
 &lt;/li&gt;
@@ -93,7 +76,7 @@ with the pain of the frequent changes, for they helped keep the
 language relevant and exciting, while also providing feedback.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="Rust"></category></entry><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2017-08-03T15:06:27+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
+</summary><category term="Rust"></category></entry><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2017-08-16T16:00:19+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-16:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
 I do celebrate each time I see a project use it. So, here I list the
 most notable projects I am aware of that do, which also gives me hope
 that it isn't being suffocated too much by Git:&lt;/p&gt;
@@ -108,7 +91,7 @@ popular programming language&lt;/li&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook"&gt;Facebook&lt;/a&gt;, world number 2 website in terms of visitor numbers&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="VCS"></category><category term="non-FLOSS"></category><category term="list"></category></entry><entry><title>ideal static blog generator</title><link href="http://tshepang.net/ideal-static-blog-generator" rel="alternate"></link><updated>2017-08-03T15:06:27+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:ideal-static-blog-generator</id><summary type="html">&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
+</summary><category term="VCS"></category><category term="non-FLOSS"></category><category term="list"></category></entry><entry><title>ideal static blog generator</title><link href="http://tshepang.net/ideal-static-blog-generator" rel="alternate"></link><updated>2017-08-16T16:00:19+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-16:ideal-static-blog-generator</id><summary type="html">&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
 missed:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt; support is mandatory.
@@ -142,7 +125,7 @@ useful this would be though.&lt;/li&gt;
 &lt;li&gt;A feed icon that is visible from the main page (and maybe Category
 pages).&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="blogging"></category></entry><entry><title>favorite FLOSS</title><link href="http://tshepang.net/favorite-floss" rel="alternate"></link><updated>2017-08-03T15:06:27+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:favorite-floss</id><summary type="html">&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
+</summary><category term="blogging"></category></entry><entry><title>favorite FLOSS</title><link href="http://tshepang.net/favorite-floss" rel="alternate"></link><updated>2017-08-16T16:00:19+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-16:favorite-floss</id><summary type="html">&lt;p&gt;For a piece of &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; (free/libre and open source software) to be here,
 it has to both be personally useful and I have to like it a lot:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;desktop&lt;/strong&gt;: &lt;a class="reference external" href="http://dwm.suckless.org"&gt;dwm&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;web browser&lt;/strong&gt;: Firefox&lt;/p&gt;
@@ -152,7 +135,7 @@ it has to both be personally useful and I have to like it a lot:&lt;/p&gt;
 procps (top, watch), Ex Falso, autojump, gnumeric,
 coreutils (cat, head, tail), &lt;a class="reference external" href="http://tshepang.net/project-of-note-linkchecker"&gt;LinkChecker&lt;/a&gt;, &lt;a class="reference external" href="http://guichaz.free.fr/iotop"&gt;Iotop&lt;/a&gt;, &lt;a class="reference external" href="http://tshepang.net/project-of-note-rdiff-backup"&gt;rdiff-backup&lt;/a&gt;,
 OpenSSH, &lt;a class="reference external" href="http://humdi.net/vnstat"&gt;vnstat&lt;/a&gt;, &lt;a class="reference external" href="http://tmux.sourceforge.net"&gt;tmux&lt;/a&gt;, File Roller, youtube-dl&lt;/p&gt;
-</summary><category term="list"></category></entry><entry><title>about 'developer of note' series</title><link href="http://tshepang.net/about-developer-of-note-series" rel="alternate"></link><updated>2017-08-03T15:06:27+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:about-developer-of-note-series</id><summary type="html">&lt;p&gt;I respect a lot of software developers, but many of those are not
+</summary><category term="list"></category></entry><entry><title>about 'developer of note' series</title><link href="http://tshepang.net/about-developer-of-note-series" rel="alternate"></link><updated>2017-08-16T16:00:19+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-16:about-developer-of-note-series</id><summary type="html">&lt;p&gt;I respect a lot of software developers, but many of those are not
 going to have an entry in &lt;a class="reference external" href="http://tshepang.net/tags#developer-of-note-ref"&gt;this series&lt;/a&gt;, and not because they are
 lesser in my eyes... I need a news item that would trigger a
 post.  Thing is, if you write about someone, you actually need to have
@@ -162,7 +145,7 @@ trigger.  In fact, I used to call this series &lt;em&gt;developer of the
 moment&lt;/em&gt;, but at some point felt that the new name is more fitting,
 especially since a few of these developers
 generated some new triggers along the way.&lt;/p&gt;
-</summary><category term="developer-of-note"></category></entry><entry><title>Rust 2.0 wishlist</title><link href="http://tshepang.net/rust-20-wishlist" rel="alternate"></link><updated>2017-08-03T15:06:27+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:rust-20-wishlist</id><summary type="html">&lt;ul&gt;
+</summary><category term="developer-of-note"></category></entry><entry><title>Rust 2.0 wishlist</title><link href="http://tshepang.net/rust-20-wishlist" rel="alternate"></link><updated>2017-08-16T16:00:19+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-16:rust-20-wishlist</id><summary type="html">&lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;Remove the &lt;tt class="docutils literal"&gt;try!&lt;/tt&gt; macro...
 it has a better replacement in the form of the question_mark (&lt;tt class="docutils literal"&gt;?&lt;/tt&gt;) operator.&lt;/p&gt;
 &lt;/li&gt;
@@ -180,7 +163,7 @@ not the colon:&lt;/p&gt;
 &lt;p&gt;This would be consistent with the rest of the language.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="Rust"></category></entry><entry><title>I am a very jealous person</title><link href="http://tshepang.net/i-am-a-very-jealous-person" rel="alternate"></link><updated>2017-08-03T15:06:27+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:i-am-a-very-jealous-person</id><summary type="html">&lt;p&gt;Following is some of the cases where competing software won this or
+</summary><category term="Rust"></category></entry><entry><title>I am a very jealous person</title><link href="http://tshepang.net/i-am-a-very-jealous-person" rel="alternate"></link><updated>2017-08-16T16:00:19+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-16:i-am-a-very-jealous-person</id><summary type="html">&lt;p&gt;Following is some of the cases where competing software won this or
 that battle, and I am jealous since I want everyone to use what I
 like:&lt;/p&gt;
 &lt;ul class="simple"&gt;
@@ -192,7 +175,7 @@ the far more advanced &lt;a class="reference external" href="http://docutils.sou
 It's particularly sad when it's not used where it's needed
 most... documenting large projects (&lt;a class="reference external" href="http://doc.rust-lang.org"&gt;example&lt;/a&gt;).&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="Python"></category><category term="non-Python"></category><category term="non-Debian"></category><category term="VCS"></category></entry><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2017-08-03T15:06:27+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
+</summary><category term="Python"></category><category term="non-Python"></category><category term="non-Debian"></category><category term="VCS"></category></entry><entry><title>FLOSS I use a-lot</title><link href="http://tshepang.net/floss-i-use-a-lot" rel="alternate"></link><updated>2017-08-16T16:00:19+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-16:floss-i-use-a-lot</id><summary type="html">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving.
 There is &lt;a class="reference external" href="http://tshepang.net/favorite-floss"&gt;a separate post&lt;/a&gt; for those.&lt;/p&gt;
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;&lt;strong&gt;Debian&lt;/strong&gt;: my primary OS, and also my favorite&lt;/p&gt;
@@ -239,7 +222,7 @@ editor, &lt;strong&gt;Ex Falso&lt;/strong&gt;&lt;/li&gt;
 replacement for shell scripting&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://rg3.github.io/youtube-dl"&gt;youtube-dl&lt;/a&gt;: I prefer watching videos locally, with VLC&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="list"></category></entry><entry><title>FLOSS pipe dreams</title><link href="http://tshepang.net/floss-pipe-dreams" rel="alternate"></link><updated>2017-08-03T15:06:27+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:floss-pipe-dreams</id><summary type="html">&lt;p&gt;In which I am hoping that &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; would supplant proprietary
+</summary><category term="list"></category></entry><entry><title>FLOSS pipe dreams</title><link href="http://tshepang.net/floss-pipe-dreams" rel="alternate"></link><updated>2017-08-16T16:00:19+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-16:floss-pipe-dreams</id><summary type="html">&lt;p&gt;In which I am hoping that &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Free_and_open-source_software"&gt;FLOSS&lt;/a&gt; would supplant proprietary
 alternatives:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;strong&gt;3D content creation&lt;/strong&gt;:
@@ -257,7 +240,7 @@ gamers, etc.), taking the market away from macOS and Windows&lt;/li&gt;
 &lt;a class="reference external" href="http://numpy.org"&gt;NumPy&lt;/a&gt; and &lt;a class="reference external" href="http://pandas.pydata.org"&gt;pandas&lt;/a&gt; should acquire feature-parity with MATLAB,
 and then steal the market&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="Debian"></category><category term="Python"></category><category term="non-FLOSS"></category></entry><entry><title>top tv shows</title><link href="http://tshepang.net/top-tv-shows" rel="alternate"></link><updated>2017-08-03T15:06:27+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:top-tv-shows</id><summary type="html">&lt;p&gt;I specify seasons only if the rest of series was not so excellent.
+</summary><category term="Debian"></category><category term="Python"></category><category term="non-FLOSS"></category></entry><entry><title>top tv shows</title><link href="http://tshepang.net/top-tv-shows" rel="alternate"></link><updated>2017-08-16T16:00:19+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-16:top-tv-shows</id><summary type="html">&lt;p&gt;I specify seasons only if the rest of series was not so excellent.
 The list is roughly in the chronological order of the first time
 I watched them.&lt;/p&gt;
 &lt;ul class="simple"&gt;
@@ -279,7 +262,7 @@ I watched them.&lt;/p&gt;
 &lt;li&gt;Breaking Bad&lt;/li&gt;
 &lt;li&gt;The Americans&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="tv"></category></entry><entry><title>top tracks: hip-hop</title><link href="http://tshepang.net/top-tracks-hip-hop" rel="alternate"></link><updated>2017-08-03T15:06:27+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:top-tracks-hip-hop</id><summary type="html">&lt;p&gt;Not included below are tracks from the best hip-hop albums yet made,
+</summary><category term="tv"></category></entry><entry><title>top tracks: hip-hop</title><link href="http://tshepang.net/top-tracks-hip-hop" rel="alternate"></link><updated>2017-08-16T16:00:19+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-16:top-tracks-hip-hop</id><summary type="html">&lt;p&gt;Not included below are tracks from the best hip-hop albums yet made,
 &lt;a class="reference external" href="http://tshepang.net/doggystyle-1993"&gt;Doggystyle&lt;/a&gt; and &lt;a class="reference external" href="http://tshepang.net/the-score-1996"&gt;The Score&lt;/a&gt;.&lt;/p&gt;
 &lt;div class="section" id="landmarks"&gt;
 &lt;h2&gt;landmarks&lt;/h2&gt;
@@ -348,7 +331,7 @@ favorite chorus by the Kim lady&lt;/li&gt;
 &lt;li&gt;Shove This Jay-Oh-Bee (Canibus) - me loving the so-alive beat&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</summary><category term="hip-hop"></category><category term="music"></category><category term="list"></category></entry><entry><title>top tracks: Burning Spear</title><link href="http://tshepang.net/top-tracks-burning-spear" rel="alternate"></link><updated>2017-08-03T15:06:27+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:top-tracks-burning-spear</id><summary type="html">&lt;div class="section" id="landmark"&gt;
+</summary><category term="hip-hop"></category><category term="music"></category><category term="list"></category></entry><entry><title>top tracks: Burning Spear</title><link href="http://tshepang.net/top-tracks-burning-spear" rel="alternate"></link><updated>2017-08-16T16:00:19+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-16:top-tracks-burning-spear</id><summary type="html">&lt;div class="section" id="landmark"&gt;
 &lt;h2&gt;1 landmark&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;Old Marcus Garvey (&lt;em&gt;Marcus Garvey&lt;/em&gt; - 1975)&lt;/li&gt;
@@ -384,7 +367,7 @@ favorite chorus by the Kim lady&lt;/li&gt;
 &lt;li&gt;Travelling (&lt;em&gt;Spear Burning&lt;/em&gt; - 2001)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</summary><category term="music"></category><category term="top-tracks"></category></entry><entry><title>top tracks: Fela Kuti</title><link href="http://tshepang.net/top-tracks-fela-kuti" rel="alternate"></link><updated>2017-08-03T15:06:27+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:top-tracks-fela-kuti</id><summary type="html">&lt;div class="section" id="landmarks"&gt;
+</summary><category term="music"></category><category term="top-tracks"></category></entry><entry><title>top tracks: Fela Kuti</title><link href="http://tshepang.net/top-tracks-fela-kuti" rel="alternate"></link><updated>2017-08-16T16:00:19+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-16:top-tracks-fela-kuti</id><summary type="html">&lt;div class="section" id="landmarks"&gt;
 &lt;h2&gt;3 landmarks&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;Lady (&lt;em&gt;Shakara&lt;/em&gt; - 1972)&lt;/li&gt;
@@ -437,7 +420,7 @@ this one a msterpiece had the rest been kept at that level.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</summary><category term="music"></category><category term="top-tracks"></category></entry><entry><title>top musicians</title><link href="http://tshepang.net/top-musicians" rel="alternate"></link><updated>2017-08-03T15:06:27+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-03:top-musicians</id><summary type="html">&lt;p&gt;The best musicians in history,
+</summary><category term="music"></category><category term="top-tracks"></category></entry><entry><title>top musicians</title><link href="http://tshepang.net/top-musicians" rel="alternate"></link><updated>2017-08-16T16:00:19+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-16:top-musicians</id><summary type="html">&lt;p&gt;The best musicians in history,
 a list created with the help of &lt;a class="reference external" href="http://tshepang.net/simple-rating-system-for-music"&gt;a simple rating system&lt;/a&gt;.&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/top-tracks-fela-kuti"&gt;Fela Kuti&lt;/a&gt;, 27&lt;/li&gt;
@@ -449,7 +432,30 @@ a list created with the help of &lt;a class="reference external" href="http://ts
 &lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/top-tracks-the-roots"&gt;The Roots&lt;/a&gt;, 10&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://tshepang.net/top-tracks-michael-jackson"&gt;Michael Jackson&lt;/a&gt;, 10&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="music"></category></entry><entry><title>Rust week of 2017-07-20</title><link href="http://tshepang.net/rust-week-of-2017-07-20" rel="alternate"></link><updated>2017-07-24T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-07-24:rust-week-of-2017-07-20</id><summary type="html">&lt;p&gt;I am surprised by the ease of changing default Rust toolchain:&lt;/p&gt;
+</summary><category term="music"></category></entry><entry><title>Rust week of 2017-08-10</title><link href="http://tshepang.net/rust-week-of-2017-08-10" rel="alternate"></link><updated>2017-08-16T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-16:rust-week-of-2017-08-10</id><summary type="html">&lt;p&gt;I created a tool I named &lt;a class="reference external" href="https://github.com/tshepang/mrh"&gt;mrh (multiple git repo helper)&lt;/a&gt;,
+which does a recursive search for git repos and checks if there
+are changes not committed.
+It's very useful for work, for we have a bunch of tiny repos,
+and it was such a pain to navigate to each and check status.
+I am so glad.&lt;/p&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-08-03</title><link href="http://tshepang.net/rust-week-of-2017-08-03" rel="alternate"></link><updated>2017-08-08T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-08:rust-week-of-2017-08-03</id><summary type="html">&lt;p&gt;My first upload to &lt;a class="reference external" href="https://crates.io"&gt;the official Rust registry&lt;/a&gt;,
+&lt;a class="reference external" href="https://crates.io/crates/weeks-from-now"&gt;weeks-from-now&lt;/a&gt;. Finally!&lt;/p&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-07-27 (special edition)</title><link href="http://tshepang.net/rust-week-of-2017-07-27-special-edition" rel="alternate"></link><updated>2017-08-04T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-04:rust-week-of-2017-07-27-special-edition</id><summary type="html">&lt;p&gt;I been using this series to help push me into constant Rust activity,
+ensuring I do not skip a week sitting idle.
+It worked in that, indeed, no 7 days passed without a single
+contribution to the ecosystem, no matter how tiny,
+and this has been going on for over a 100 weeks
+(i.e. &lt;a class="reference external" href="http://tshepang.net/rust-week-of-2015-05-15"&gt;since 2015-05-15&lt;/a&gt;, also Rust 1.0 release date).&lt;/p&gt;
+&lt;p&gt;The problem is I felt silly recording the tiny parts,
+stuff like a typo fixes, just to keep this going.
+Well, it's time to stop that.
+I intend to avoid recording such,
+and if it means no blog post for that week, so be it.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This was inspired by having a laptop failure,
+with a draft that wasn't backed up anywhere.
+That draft only consisted of a list of those tiny contributions,
+and it felt extra silly trying to recreate it for publication.&lt;/em&gt;&lt;/p&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-07-20</title><link href="http://tshepang.net/rust-week-of-2017-07-20" rel="alternate"></link><updated>2017-07-24T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-07-24:rust-week-of-2017-07-20</id><summary type="html">&lt;p&gt;I am surprised by the ease of changing default Rust toolchain:&lt;/p&gt;
 &lt;blockquote&gt;
 # switch to nightly
 rustup default nightly
