@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 18 Aug 2017 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2017-08-17</title><link>http://tshepang.net/rust-week-of-2017-08-17</link><description>&lt;p&gt;I added a feature to &lt;a class="reference external" href="https://github.com/tshepang/mrh"&gt;mrh (multiple git repo helper)&lt;/a&gt; that allows
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 23 Aug 2017 06:16:30 +0200</lastBuildDate><item><title>major projects using Mercurial</title><link>http://tshepang.net/major-projects-using-mercurial</link><description>&lt;p&gt;Mercurial is the only version control system that I actually like, and
+I do celebrate each time I see a project use it. So, here I list the
+most notable projects I am aware of that do, which also gives me hope
+that it isn't being suffocated too much by Git:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://hg.mozilla.org/mozilla-central"&gt;Firefox&lt;/a&gt;, world number 3 desktop web browser (number of users)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://hg.openjdk.java.net"&gt;OpenJDK&lt;/a&gt;, the top open source implementation of the Java platform&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.vim.org/mercurial.php"&gt;VIM&lt;/a&gt; and &lt;a class="reference external" href="http://wiki.netbeans.org/WorkingWithNetBeansSources#Mercurial_access"&gt;Netbeans&lt;/a&gt;, two of the most popular text editors for programmers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And here is one which is not FLOSS (i.e. proprietary):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook"&gt;Facebook&lt;/a&gt;, world number 2 website in terms of visitor numbers&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Wed, 23 Aug 2017 06:16:30 +0200</pubDate><guid>tag:tshepang.net,2017-08-23:major-projects-using-mercurial</guid><category>VCS</category><category>non-FLOSS</category><category>list</category></item><item><title>Rust week of 2017-08-17</title><link>http://tshepang.net/rust-week-of-2017-08-17</link><description>&lt;p&gt;I added a feature to &lt;a class="reference external" href="https://github.com/tshepang/mrh"&gt;mrh (multiple git repo helper)&lt;/a&gt; that allows
 one to display just those repos that have uncommitted changes...
 &lt;tt class="docutils literal"&gt;mrh &lt;span class="pre"&gt;--changed&lt;/span&gt;&lt;/tt&gt;.&lt;/p&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Fri, 18 Aug 2017 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2017-08-18:rust-week-of-2017-08-17</guid><category>Rust</category></item><item><title>what I like about Rust</title><link>http://tshepang.net/what-i-like-about-rust</link><description>&lt;ul&gt;
@@ -79,22 +92,7 @@ with the pain of the frequent changes, for they helped keep the
 language relevant and exciting, while also providing feedback.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Wed, 16 Aug 2017 16:00:19 +0200</pubDate><guid>tag:tshepang.net,2017-08-16:what-i-like-about-rust</guid><category>Rust</category></item><item><title>major projects using Mercurial</title><link>http://tshepang.net/major-projects-using-mercurial</link><description>&lt;p&gt;Mercurial is the only version control system that I actually like, and
-I do celebrate each time I see a project use it. So, here I list the
-most notable projects I am aware of that do, which also gives me hope
-that it isn't being suffocated too much by Git:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://hg.mozilla.org/mozilla-central"&gt;Firefox&lt;/a&gt;, world number 3 desktop web browser (number of users)&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://hg.python.org/cpython"&gt;CPython&lt;/a&gt; and &lt;a class="reference external" href="https://bitbucket.org/pypy/pypy"&gt;PyPy&lt;/a&gt;, the most important implementations of a top 10
-popular programming language&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://hg.openjdk.java.net"&gt;OpenJDK&lt;/a&gt;, the top open source implementation of the Java platform&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.vim.org/mercurial.php"&gt;VIM&lt;/a&gt; and &lt;a class="reference external" href="http://wiki.netbeans.org/WorkingWithNetBeansSources#Mercurial_access"&gt;Netbeans&lt;/a&gt;, two of the most popular text editors for programmers&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;And here is one which is not FLOSS (i.e. proprietary):&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook"&gt;Facebook&lt;/a&gt;, world number 2 website in terms of visitor numbers&lt;/li&gt;
-&lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Wed, 16 Aug 2017 16:00:19 +0200</pubDate><guid>tag:tshepang.net,2017-08-16:major-projects-using-mercurial</guid><category>VCS</category><category>non-FLOSS</category><category>list</category></item><item><title>ideal static blog generator</title><link>http://tshepang.net/ideal-static-blog-generator</link><description>&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Wed, 16 Aug 2017 16:00:19 +0200</pubDate><guid>tag:tshepang.net,2017-08-16:what-i-like-about-rust</guid><category>Rust</category></item><item><title>ideal static blog generator</title><link>http://tshepang.net/ideal-static-blog-generator</link><description>&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
 missed:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt; support is mandatory.
