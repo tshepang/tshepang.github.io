@@ -265,16 +265,18 @@ with a draft that wasn't backed up anywhere.
 That draft only consisted of a list of those tiny contributions,
 and it felt extra silly trying to recreate it for publication.&lt;/em&gt;&lt;/p&gt;
 </summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-07-20</title><link href="http://tshepang.net/rust-week-of-2017-07-20" rel="alternate"></link><updated>2017-07-24T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-07-24:rust-week-of-2017-07-20</id><summary type="html">&lt;p&gt;I am surprised by the ease of changing default Rust toolchain:&lt;/p&gt;
-&lt;blockquote&gt;
+&lt;pre class="literal-block"&gt;
 # switch to nightly
 rustup default nightly
 # switch to stable
-rustup default stable&lt;/blockquote&gt;
+rustup default stable
+&lt;/pre&gt;
 &lt;p&gt;This is more easy than remembering how to tell cargo to use to use a
 non-default toolchain, though that approach is not too bad either:&lt;/p&gt;
-&lt;blockquote&gt;
+&lt;pre class="literal-block"&gt;
 # build with nightly
-cargo +nightly build&lt;/blockquote&gt;
+cargo +nightly build
+&lt;/pre&gt;
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;I made &lt;a class="reference external" href="https://github.com/rust-lang/book/issues/828"&gt;two&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/book/issues/834"&gt;complaints&lt;/a&gt;,
 &lt;a class="reference external" href="https://github.com/brson/rust-cookbook/pull/253"&gt;as&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/43409"&gt;well&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/book/pull/827"&gt;as&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/43416"&gt;five&lt;/a&gt; &lt;a class="reference external" href="https://github.com/BurntSushi/walkdir/pull/75"&gt;contributions&lt;/a&gt;.&lt;/p&gt;
