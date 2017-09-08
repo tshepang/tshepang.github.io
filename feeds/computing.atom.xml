@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2017-08-30T22:14:39+02:00</updated><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2017-08-30T22:14:39+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-30:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2017-09-08T00:00:00+02:00</updated><entry><title>Rust week of 2017-08-31</title><link href="http://tshepang.net/rust-week-of-2017-08-31" rel="alternate"></link><updated>2017-09-08T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-09-08:rust-week-of-2017-08-31</id><summary type="html">&lt;p&gt;Week of 2017-08-24 did not really see any Rust activity.
+This week, however, I worked on &lt;a class="reference external" href="https://github.com/tshepang/mrh"&gt;mrh&lt;/a&gt;,
+a tool I created in order to look at status of multiple git repos,
+to avoid the tedium of navigating to each to check.
+The feature I added is checking if committed changes were pushed upstream.
+On the way there, I encountered these git2 APIS:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Branch::&lt;a class="reference external" href="https://docs.rs/git2/0.6.8/git2/struct.Branch.html#method.wrap"&gt;wrap&lt;/a&gt; (submitted &lt;a class="reference external" href="https://github.com/alexcrichton/git2-rs/pull/246"&gt;improvement to make doc less misleading&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Branch::&lt;a class="reference external" href="https://docs.rs/git2/0.6.8/git2/struct.Branch.html#method.upstream"&gt;upstream&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Repositoty::&lt;a class="reference external" href="https://docs.rs/git2/0.6.8/git2/struct.Repository.html#method.head"&gt;head&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I ended up &lt;a class="reference external" href="https://crates.io/crates/mrh"&gt;publishing the tool&lt;/a&gt; too,
+which is the second time &lt;a class="reference external" href="https://crates.io/crates/weeks-from-now"&gt;I've done so&lt;/a&gt;.&lt;/p&gt;
+</summary><category term="Rust"></category></entry><entry><title>major projects using Mercurial</title><link href="http://tshepang.net/major-projects-using-mercurial" rel="alternate"></link><updated>2017-08-30T22:14:39+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-08-30:major-projects-using-mercurial</id><summary type="html">&lt;p&gt;Mercurial is the only version control system that I actually like, and
 I do celebrate each time I see a project use it. So, here I list the
 most notable projects I am aware of that do, which also gives me hope
 that it isn't being suffocated too much by Git:&lt;/p&gt;
