@@ -86,9 +86,9 @@ to avoid the tedium of navigating to each to check.
 The feature I added is checking if committed changes were pushed upstream.
 On the way there, I encountered these git2 APIS:</p>
 <ul class="simple">
-<li>Branch::<a class="reference external" href="https://docs.rs/git2/0.6.8/git2/struct.Branch.html#method.wrap">wrap</a> (submitted <a class="reference external" href="https://github.com/alexcrichton/git2-rs/pull/246">improvement to make doc less misleading</a>)</li>
-<li>Branch::<a class="reference external" href="https://docs.rs/git2/0.6.8/git2/struct.Branch.html#method.upstream">upstream</a></li>
-<li>Repositoty::<a class="reference external" href="https://docs.rs/git2/0.6.8/git2/struct.Repository.html#method.head">head</a></li>
+<li><a class="reference external" href="https://docs.rs/git2/0.6.8/git2/struct.Branch.html#method.wrap">Branch::wrap</a> (submitted <a class="reference external" href="https://github.com/alexcrichton/git2-rs/pull/246">improvement to make doc less misleading</a>)</li>
+<li><a class="reference external" href="https://docs.rs/git2/0.6.8/git2/struct.Branch.html#method.upstream">Branch::upstream</a></li>
+<li><a class="reference external" href="https://docs.rs/git2/0.6.8/git2/struct.Repository.html#method.head">Repositoty::head</a></li>
 </ul>
 <p>I ended up <a class="reference external" href="https://crates.io/crates/mrh">publishing the tool</a> too,
 which is the second time <a class="reference external" href="https://crates.io/crates/weeks-from-now">I've done so</a>.</p>

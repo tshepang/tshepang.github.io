@@ -6,9 +6,9 @@ to avoid the tedium of navigating to each to check.
 The feature I added is checking if committed changes were pushed upstream.
 On the way there, I encountered these git2 APIS:&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;Branch::&lt;a class="reference external" href="https://docs.rs/git2/0.6.8/git2/struct.Branch.html#method.wrap"&gt;wrap&lt;/a&gt; (submitted &lt;a class="reference external" href="https://github.com/alexcrichton/git2-rs/pull/246"&gt;improvement to make doc less misleading&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Branch::&lt;a class="reference external" href="https://docs.rs/git2/0.6.8/git2/struct.Branch.html#method.upstream"&gt;upstream&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Repositoty::&lt;a class="reference external" href="https://docs.rs/git2/0.6.8/git2/struct.Repository.html#method.head"&gt;head&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://docs.rs/git2/0.6.8/git2/struct.Branch.html#method.wrap"&gt;Branch::wrap&lt;/a&gt; (submitted &lt;a class="reference external" href="https://github.com/alexcrichton/git2-rs/pull/246"&gt;improvement to make doc less misleading&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://docs.rs/git2/0.6.8/git2/struct.Branch.html#method.upstream"&gt;Branch::upstream&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://docs.rs/git2/0.6.8/git2/struct.Repository.html#method.head"&gt;Repositoty::head&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I ended up &lt;a class="reference external" href="https://crates.io/crates/mrh"&gt;publishing the tool&lt;/a&gt; too,
 which is the second time &lt;a class="reference external" href="https://crates.io/crates/weeks-from-now"&gt;I've done so&lt;/a&gt;.&lt;/p&gt;
