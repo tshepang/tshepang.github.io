@@ -7,7 +7,8 @@ API looks kool, and I plan to use it for other stuff,
 like text (and password) input.&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://github.com/myfreeweb/systemstat"&gt;systemstat&lt;/a&gt; has an ugly API,
 and relies on &lt;a class="reference external" href="https://github.com/flang-project/bytesize"&gt;bytesize&lt;/a&gt; for system memory data,
-whose API is not obvious.&lt;/li&gt;
+whose API is not obvious,
+and has &lt;a class="reference external" href="https://github.com/flang-project/bytesize/issues/8"&gt;a rather ugly display bug&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://github.com/andrew-d/interfaces-rs"&gt;interfaces&lt;/a&gt; has an okay API,
 but the &lt;a class="reference external" href="https://docs.rs/interfaces/0.0.2/interfaces/struct.Interface.html#method.get_all"&gt;get_all&lt;/a&gt; method simply does not belong to a type named Interface.&lt;/li&gt;
 &lt;/ul&gt;
