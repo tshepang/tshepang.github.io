@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 08 Sep 2017 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2017-08-31</title><link>http://tshepang.net/rust-week-of-2017-08-31</link><description>&lt;p&gt;Week of 2017-08-24 did not really see any Rust activity.
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 14 Sep 2017 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2017-09-07</title><link>http://tshepang.net/rust-week-of-2017-09-07</link><description>&lt;p&gt;I had the fortune of building a Rust project at work,
+and following are the libraries I used:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;I used &lt;a class="reference external" href="https://github.com/ticki/termion"&gt;termion&lt;/a&gt; just to clear the screen.
+API looks kool, and I plan to use it for other stuff,
+like text (and password) input.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/myfreeweb/systemstat"&gt;systemstat&lt;/a&gt; has an ugly API,
+and relies on &lt;a class="reference external" href="https://github.com/flang-project/bytesize"&gt;bytesize&lt;/a&gt; for system memory data,
+whose API is not obvious.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/andrew-d/interfaces-rs"&gt;interfaces&lt;/a&gt; has an okay API,
+but the &lt;a class="reference external" href="https://docs.rs/interfaces/0.0.2/interfaces/struct.Interface.html#method.get_all"&gt;get_all&lt;/a&gt; method simply does not belong to a type named Interface.&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Thu, 14 Sep 2017 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2017-09-14:rust-week-of-2017-09-07</guid><category>Rust</category></item><item><title>Rust week of 2017-08-31</title><link>http://tshepang.net/rust-week-of-2017-08-31</link><description>&lt;p&gt;Week of 2017-08-24 did not really see any Rust activity.
 This week, however, I worked on &lt;a class="reference external" href="https://github.com/tshepang/mrh"&gt;mrh&lt;/a&gt;,
 a tool I created in order to look at status of multiple git repos,
 to avoid the tedium of navigating to each to check.
