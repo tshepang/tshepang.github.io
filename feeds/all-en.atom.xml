@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2017-09-14T00:00:00+02:00</updated><entry><title>Rust week of 2017-09-07</title><link href="http://tshepang.net/rust-week-of-2017-09-07" rel="alternate"></link><updated>2017-09-14T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-09-14:rust-week-of-2017-09-07</id><summary type="html">&lt;p&gt;I had the fortune of building a Rust project at work,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2017-10-04T00:00:00+02:00</updated><entry><title>Rust weeks of 2017-09-14 to 2017-09-28</title><link href="http://tshepang.net/rust-weeks-of-2017-09-14-to-2017-09-28" rel="alternate"></link><updated>2017-10-04T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-10-04:rust-weeks-of-2017-09-14-to-2017-09-28</id><summary type="html">&lt;p&gt;Over the past 3 weeks,
+I continued work on &lt;a class="reference external" href="http://tshepang.net/rust-week-of-2017-09-07"&gt;a project I mentioned previously&lt;/a&gt;,
+a CLI UI for work.
+In addition to dependencies mentioned there,
+I used &lt;a class="reference external" href="https://github.com/zonyitoo/rust-ini"&gt;rust-ini&lt;/a&gt; and &lt;a class="reference external" href="https://github.com/dtolnay/serde-yaml"&gt;serde_yaml&lt;/a&gt;,
+I mostly enjoyed the experience,
+though not too happy with the code, which feels messy...
+I use &lt;a class="reference external" href="https://docs.rs/termion/1.5.1/termion/struct.AsyncReader.html"&gt;termion::AsynReader&lt;/a&gt;, which means I have to loop all over
+the place while waiting for stdin (keyboard input).
+I imagine there is a better way.&lt;/p&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-09-07</title><link href="http://tshepang.net/rust-week-of-2017-09-07" rel="alternate"></link><updated>2017-09-14T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-09-14:rust-week-of-2017-09-07</id><summary type="html">&lt;p&gt;I had the fortune of building a Rust project at work,
 and following are the libraries I used:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;I used &lt;a class="reference external" href="https://github.com/ticki/termion"&gt;termion&lt;/a&gt; just to clear the screen.
