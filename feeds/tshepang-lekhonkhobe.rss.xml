@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 04 Oct 2017 00:00:00 +0200</lastBuildDate><item><title>Rust weeks of 2017-09-14 to 2017-09-28</title><link>http://tshepang.net/rust-weeks-of-2017-09-14-to-2017-09-28</link><description>&lt;p&gt;Over the past 3 weeks,
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tshepang logs</title><link>http://tshepang.net/</link><description></description><atom:link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 13 Oct 2017 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2017-10-05</title><link>http://tshepang.net/rust-week-of-2017-10-05</link><description>&lt;p&gt;&lt;a class="reference external" href="http://tshepang.net/rust-weeks-of-2017-09-14-to-2017-09-28"&gt;Continuing with the work project&lt;/a&gt;,
+I replaced the &lt;a class="reference external" href="https://github.com/andrew-d/interfaces-rs"&gt;interfaces&lt;/a&gt; library with &lt;a class="reference external" href="https://github.com/libpnet/libpnet"&gt;pnet&lt;/a&gt;,
+a weird concoction of various network functionality in one ugly mess,
+but I did it because the order of the network interfaces it presents
+does not randomly change (the project is UI that presents various bits
+of info about the boxes that we sell, some of which is network-related),
+unlike is the case with &lt;em&gt;interfaces&lt;/em&gt;.
+It is also comforting that the library has more users
+(&lt;a class="reference external" href="https://crates.io/crates/interfaces/reverse_dependencies"&gt;one&lt;/a&gt; vs. &lt;a class="reference external" href="https://crates.io/crates/pnet/reverse_dependencies"&gt;eight&lt;/a&gt; at time of writing).&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Fri, 13 Oct 2017 00:00:00 +0200</pubDate><guid>tag:tshepang.net,2017-10-13:rust-week-of-2017-10-05</guid><category>Rust</category></item><item><title>Rust weeks of 2017-09-14 to 2017-09-28</title><link>http://tshepang.net/rust-weeks-of-2017-09-14-to-2017-09-28</link><description>&lt;p&gt;Over the past 3 weeks,
 I continued work on &lt;a class="reference external" href="http://tshepang.net/rust-week-of-2017-09-07"&gt;a project I mentioned previously&lt;/a&gt;,
 a CLI UI for work.
 In addition to dependencies mentioned there,
