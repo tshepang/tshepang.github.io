@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2017-10-18T00:00:00+02:00</updated><entry><title>Rust week of 2017-10-12</title><link href="http://tshepang.net/rust-week-of-2017-10-12" rel="alternate"></link><updated>2017-10-18T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-10-18:rust-week-of-2017-10-12</id><summary type="html">&lt;p&gt;I enjoyed &lt;a class="reference external" href="https://lambda.xyz/blog/rusts-fatal-flaw"&gt;a humorous joke post&lt;/a&gt; poking fun at inconsitend Rust
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2017-10-20T00:00:00+02:00</updated><entry><title>Rust week of 2017-10-19</title><link href="http://tshepang.net/rust-week-of-2017-10-19" rel="alternate"></link><updated>2017-10-20T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-10-20:rust-week-of-2017-10-19</id><summary type="html">&lt;p&gt;I released &lt;a class="reference external" href="https://crates.io/crates/mrh"&gt;mrh&lt;/a&gt; v0.2.0,
+which takes into account that when latest upstream git reference does
+not match one that's checked out,
+it could be that upstream is ahead.
+The assumption previously was that local is ahead of upstream,
+implying that a push is needed.
+The API that helped with this change is &lt;a class="reference external" href="https://docs.rs/git2/0.6.8/git2/struct.Repository.html#method.graph_ahead_behind"&gt;Repository.grapth_ahead_behind&lt;/a&gt;,
+a lovely and unexpected gift (&lt;a class="reference external" href="https://github.com/tshepang/mrh/commit/fc82fe9890cf3a8033fa78295308d888628caa39"&gt;commit&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;I used &lt;a class="reference external" href="https://crates.io/crates/cargo-outdated"&gt;cargo-outdated&lt;/a&gt; for the first... I like.&lt;/p&gt;
+</summary><category term="Rust"></category></entry><entry><title>Rust week of 2017-10-12</title><link href="http://tshepang.net/rust-week-of-2017-10-12" rel="alternate"></link><updated>2017-10-18T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-10-18:rust-week-of-2017-10-12</id><summary type="html">&lt;p&gt;I enjoyed &lt;a class="reference external" href="https://lambda.xyz/blog/rusts-fatal-flaw"&gt;a humorous joke post&lt;/a&gt; poking fun at inconsitend Rust
 naming of types.
 I also expanded &lt;a class="reference external" href="http://tshepang.net/rust-week-of-2017-10-05"&gt;the work project&lt;/a&gt; I been working on the past few
 weeks, this time doing some file I/O among other things,
