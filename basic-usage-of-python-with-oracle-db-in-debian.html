@@ -15,12 +15,12 @@
 
 <meta property="og:title" content="basic usage of Python with Oracle DB, in Debian "/>
 <meta property="og:url" content="http://tshepang.net/basic-usage-of-python-with-oracle-db-in-debian" />
-<meta property="og:description" content="What if you wanted to access Oracle using Python? Once you are set up, it&#39;s real easy. We use cx_Oracle, the most popular Python library to read Oracle DBs. Let&#39;s start by simply reading the DB: import cx_Oracle conn = cx_Oracle.connect(&#34;usr&#34;, &#34;pwd&#34;, &#34;tns&#34;) cursor = conn.cursor() cursor ..." />
+<meta property="og:description" content="What if you wanted to access Oracle using Python? Once you are set up, it&#39;s real easy. We use cx_Oracle, the most popular Python library to read Oracle DBs. Let&#39;s start by simply reading the DB: import cx_Oracle conn = cx_Oracle.connect(&#34;usr&#34;, &#34;pwd&#34;, &#34;tns&#34;) cursor = conn.cursor() cursor.execute(&#34;SELECT …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2011-01-27T00:00:00+02:00" />
 <meta name="twitter:title" content="basic usage of Python with Oracle DB, in Debian ">
-<meta name="twitter:description" content="What if you wanted to access Oracle using Python? Once you are set up, it&#39;s real easy. We use cx_Oracle, the most popular Python library to read Oracle DBs. Let&#39;s start by simply reading the DB: import cx_Oracle conn = cx_Oracle.connect(&#34;usr&#34;, &#34;pwd&#34;, &#34;tns&#34;) cursor = conn.cursor() cursor ...">
+<meta name="twitter:description" content="What if you wanted to access Oracle using Python? Once you are set up, it&#39;s real easy. We use cx_Oracle, the most popular Python library to read Oracle DBs. Let&#39;s start by simply reading the DB: import cx_Oracle conn = cx_Oracle.connect(&#34;usr&#34;, &#34;pwd&#34;, &#34;tns&#34;) cursor = conn.cursor() cursor.execute(&#34;SELECT …">
 
         <title>basic usage of Python with Oracle DB, in Debian  · Tshepang logs
 </title>
@@ -83,10 +83,10 @@
 up</a>, it's real easy. We use <a class="reference external" href="http://cx-oracle.sourceforge.net/html/index.html">cx_Oracle</a>, the most popular Python
 library to read Oracle DBs.</p>
 <p>Let's start by simply reading the DB:</p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">cx_Oracle</span>
-<span class="n">conn</span> <span class="o">=</span> <span class="n">cx_Oracle</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&quot;usr&quot;</span><span class="p">,</span> <span class="s">&quot;pwd&quot;</span><span class="p">,</span> <span class="s">&quot;tns&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cx_Oracle</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">cx_Oracle</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;usr&quot;</span><span class="p">,</span> <span class="s2">&quot;pwd&quot;</span><span class="p">,</span> <span class="s2">&quot;tns&quot;</span><span class="p">)</span>
 <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;SELECT * TABLE_NAME&quot;</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * TABLE_NAME&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()[</span><span class="mi">0</span><span class="p">]:</span>
     <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
 <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
@@ -94,20 +94,20 @@ library to read Oracle DBs.</p>
 <p>The <a class="reference external" href="http://cx-oracle.sourceforge.net/html/index.html">cx_Oracle</a> explain exactly what each of these means.</p>
 <p>If we wanted instead to modify stuff in there, we only add one extra
 line, which is <tt class="docutils literal">cursor.commit</tt>, like this:</p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">cx_Oracle</span>
-<span class="n">conn</span> <span class="o">=</span> <span class="n">cx_Oracle</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&quot;usr&quot;</span><span class="p">,</span> <span class="s">&quot;pwd&quot;</span><span class="p">,</span> <span class="s">&quot;tns&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cx_Oracle</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">cx_Oracle</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;usr&quot;</span><span class="p">,</span> <span class="s2">&quot;pwd&quot;</span><span class="p">,</span> <span class="s2">&quot;tns&quot;</span><span class="p">)</span>
 <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;SELECT * TABLE_NAME&quot;</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * TABLE_NAME&quot;</span><span class="p">)</span>
 <span class="n">cursor</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
 <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 <p>For real-world code, you are of course going to add exception handling
 for all this, something like this:</p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">cx_Oracle</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cx_Oracle</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="n">conn</span> <span class="o">=</span> <span class="n">cx_Oracle</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&quot;usr&quot;</span><span class="p">,</span> <span class="s">&quot;pwd&quot;</span><span class="p">,</span> <span class="s">&quot;tns&quot;</span><span class="p">)</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">cx_Oracle</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;usr&quot;</span><span class="p">,</span> <span class="s2">&quot;pwd&quot;</span><span class="p">,</span> <span class="s2">&quot;tns&quot;</span><span class="p">)</span>
     <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;SELECT * TABLE_NAME&quot;</span><span class="p">)</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * TABLE_NAME&quot;</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()[</span><span class="mi">0</span><span class="p">]:</span>
         <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
     <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/anne-jones.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-05-18T00:00:00+02:00</updated><entry><title>Simple code for a slot machine game</title><link href="http://tshepang.net/simple-code-for-a-slot-machine-game" rel="alternate"></link><updated>2015-05-18T00:00:00+02:00</updated><author><name>Anne Jones</name></author><id>tag:tshepang.net,2015-05-18:simple-code-for-a-slot-machine-game</id><summary type="html">&lt;p&gt;Basic knowledge in PHP is extremely useful for a computer
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs - Anne Jones</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/anne-jones.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2015-05-18T00:00:00+02:00</updated><entry><title>Simple code for a slot machine game</title><link href="http://tshepang.net/simple-code-for-a-slot-machine-game" rel="alternate"></link><published>2015-05-18T00:00:00+02:00</published><updated>2015-05-18T00:00:00+02:00</updated><author><name>Anne Jones</name></author><id>tag:tshepang.net,2015-05-18:/simple-code-for-a-slot-machine-game</id><summary type="html">&lt;p&gt;Basic knowledge in PHP is extremely useful for a computer
+programmer. PHP is easy to understand and widely used by computer
+programmers around the world. There are &lt;a class="reference external" href="http://www.homeandlearn.co.uk/php/php.html"&gt;plenty of tutorials on the
+web&lt;/a&gt; that you can check out in order to have basic knowledge of PHP
+and if you’re …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Basic knowledge in PHP is extremely useful for a computer
 programmer. PHP is easy to understand and widely used by computer
 programmers around the world. There are &lt;a class="reference external" href="http://www.homeandlearn.co.uk/php/php.html"&gt;plenty of tutorials on the
 web&lt;/a&gt; that you can check out in order to have basic knowledge of PHP
@@ -22,13 +26,13 @@ stepping-stone in furthering your programming knowledge.&lt;/p&gt;
 want to learn how to make other games apart from slot machines, you
 can go on ahead and click &lt;a class="reference external" href="http://www.ibm.com/developerworks/library/os-php-gamescripts3"&gt;this link&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Let's begin. First, we must establish the user interface of the game:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$faces = array (&amp;#39;Figure1&amp;#39;, &amp;#39;Figure2&amp;#39;, &amp;#39;Figure3&amp;#39;, &amp;#39;Figure4&amp;#39;, &amp;#39;Figure5&amp;#39;, &amp;#39;Figure6&amp;#39;);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$faces = array (&amp;#39;Figure1&amp;#39;, &amp;#39;Figure2&amp;#39;, &amp;#39;Figure3&amp;#39;, &amp;#39;Figure4&amp;#39;, &amp;#39;Figure5&amp;#39;, &amp;#39;Figure6&amp;#39;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;You can substitute any image you want for the figures: fruits, flags,
 your favorite cartoon hero, anything.  Then, you will have to declare
 the combinations of winning reels. In a traditional slot machine, 3
 images must match a payout line, so write the code like this:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$payouts = array (&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$payouts = array (&lt;/span&gt;
 &lt;span class="x"&gt;    &amp;#39;Figure1|Figure1|Figure&amp;#39; =&amp;gt; &amp;#39;10&amp;#39;,&lt;/span&gt;
 &lt;span class="x"&gt;    &amp;#39;Figure2| Figure2|Figure2&amp;#39; =&amp;gt; &amp;#39;20&amp;#39;,&lt;/span&gt;
 &lt;span class="x"&gt;    &amp;#39;Figure3|Figure3|Figure3&amp;#39; =&amp;gt; &amp;#39;25&amp;#39;,&lt;/span&gt;
@@ -44,7 +48,7 @@ images must match a payout line, so write the code like this:&lt;/p&gt;
 &lt;p&gt;Let's make the reels spin like a real slot machine. Traditional slots
 usually have the first and third reels spin in one direction, while
 the second reel spins in the other.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$wheel1 = array();&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$wheel1 = array();&lt;/span&gt;
 &lt;span class="x"&gt;foreach ($faces as $face) {&lt;/span&gt;
 &lt;span class="x"&gt;    $wheel1[] = $face;&lt;/span&gt;
 &lt;span class="x"&gt;}&lt;/span&gt;
@@ -56,4 +60,4 @@ elements (reel images, moving reels, and payout lines) of a classic
 Vegas slot machine.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;This is a guest post by Anne Jones&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-</summary></entry></feed>
+</content></entry></feed>

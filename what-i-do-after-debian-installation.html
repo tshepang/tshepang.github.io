@@ -15,12 +15,12 @@
 
 <meta property="og:title" content="what I do after Debian installation "/>
 <meta property="og:url" content="http://tshepang.net/what-i-do-after-debian-installation" />
-<meta property="og:description" content="I think anyone who has never done any OS install before can install Debian without any issue at all, provided they will not be doing any partitioning. It is that easy. As for me, I do a lot more installations than the average person, so I semi-automate the setup process ..." />
+<meta property="og:description" content="I think anyone who has never done any OS install before can install Debian without any issue at all, provided they will not be doing any partitioning. It is that easy. As for me, I do a lot more installations than the average person, so I semi-automate the setup process …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2012-11-10T00:00:00+02:00" />
 <meta name="twitter:title" content="what I do after Debian installation ">
-<meta name="twitter:description" content="I think anyone who has never done any OS install before can install Debian without any issue at all, provided they will not be doing any partitioning. It is that easy. As for me, I do a lot more installations than the average person, so I semi-automate the setup process ...">
+<meta name="twitter:description" content="I think anyone who has never done any OS install before can install Debian without any issue at all, provided they will not be doing any partitioning. It is that easy. As for me, I do a lot more installations than the average person, so I semi-automate the setup process …">
 
         <title>what I do after Debian installation  · Tshepang logs
 </title>
@@ -84,48 +84,48 @@ Debian without any issue at all, provided they will not be doing any
 partitioning. It is that easy.</p>
 <p>As for me, I do a lot more installations than the average person, so I
 semi-automate the setup process with the help of this script:</p>
-<div class="highlight"><pre><span class="c">#!/bin/bash</span>
+<div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
-<span class="c"># some convenience</span>
+<span class="c1"># some convenience</span>
 <span class="nb">shopt</span> -s expand_aliases
 <span class="nb">source</span> ~/nna/conf/bash_aliases
 
-<span class="c"># config files</span>
+<span class="c1"># config files</span>
 sudo cp ~/nna/conf/sources.list /etc/apt
 sudo cp ~/nna/conf/sudoers /etc
 
-<span class="c"># APT</span>
+<span class="c1"># APT</span>
 sudo apt-get update
 sudo apt-get --allow-unauthenticated upgrade
 sudo apt-get --allow-unauthenticated dist-upgrade
 sudo apt-get --allow-unauthenticated install devscripts debhelper build-essential python3-apt gpm
 
-<span class="c"># wajig</span>
+<span class="c1"># wajig</span>
 <span class="o">(</span><span class="nb">cd</span> ~/src/wajig <span class="o">&amp;&amp;</span> iiwajig<span class="o">)</span>
 ibase <span class="o">&amp;&amp;</span> inondebian <span class="o">&amp;&amp;</span> itracker <span class="o">&amp;&amp;</span> icpython <span class="o">&amp;&amp;</span> ipurge
 
-<span class="c"># for Tracker</span>
+<span class="c1"># for Tracker</span>
 sudo sh -c <span class="s2">&quot;echo &#39;fs.inotify.max_user_watches=100000&#39; &gt;&gt; /etc/sysctl.conf&quot;</span>
 
-<span class="c"># so I can share via a webserver, or easily access from browser</span>
+<span class="c1"># so I can share via a webserver, or easily access from browser</span>
 sudo ln -s ~/.custom_repo /var/www/custom_repo
 </pre></div>
 <p>Contents of Debian repository list file:</p>
-<div class="highlight"><pre><span class="nv">$ </span>cat /etc/apt/sources.list
+<div class="highlight"><pre><span></span>$ cat /etc/apt/sources.list
 deb file:/home/wena/.custom_repo tshepang main
 deb http://debian.mirror.ac.za/debian wheezy main contrib non-free
 </pre></div>
 <p>The <tt class="docutils literal">tshepang</tt> codename refers to my custom repository, the one
 managed by <a class="reference external" href="http://tshepang.net/project-of-note-reprepro">reprepro</a>.</p>
 <p>Contents of <strong>sudo</strong> setup file:</p>
-<div class="highlight"><pre><span class="nv">$ </span>sudo cat /etc/sudoers
+<div class="highlight"><pre><span></span>$ sudo cat /etc/sudoers
 Defaults env_reset
 Defaults mail_badpass
 Defaults <span class="nv">secure_path</span><span class="o">=</span><span class="s2">&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;</span>
 root     <span class="nv">ALL</span><span class="o">=(</span>ALL<span class="o">)</span> ALL
 %sudo    <span class="nv">ALL</span><span class="o">=(</span>ALL<span class="o">)</span> ALL
 Defaults !tty_tickets
-Defaults <span class="nv">timestamp_timeout</span><span class="o">=</span>100
+Defaults <span class="nv">timestamp_timeout</span><span class="o">=</span><span class="m">100</span>
 </pre></div>
 <p>The one change from default <strong>sudo</strong> setup is so that each bash session
 can inherit sudo powers from another. It's one case where I trade

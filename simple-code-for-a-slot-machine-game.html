@@ -15,12 +15,12 @@
 
 <meta property="og:title" content="Simple code for a slot machine game "/>
 <meta property="og:url" content="http://tshepang.net/simple-code-for-a-slot-machine-game" />
-<meta property="og:description" content="Basic knowledge in PHP is extremely useful for a computer programmer. PHP is easy to understand and widely used by computer programmers around the world. There are plenty of tutorials on the web that you can check out in order to have basic knowledge of PHP and if you’re ..." />
+<meta property="og:description" content="Basic knowledge in PHP is extremely useful for a computer programmer. PHP is easy to understand and widely used by computer programmers around the world. There are plenty of tutorials on the web that you can check out in order to have basic knowledge of PHP and if you’re …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Anne Jones" />
 <meta property="og:article:published_time" content="2015-05-18T00:00:00+02:00" />
 <meta name="twitter:title" content="Simple code for a slot machine game ">
-<meta name="twitter:description" content="Basic knowledge in PHP is extremely useful for a computer programmer. PHP is easy to understand and widely used by computer programmers around the world. There are plenty of tutorials on the web that you can check out in order to have basic knowledge of PHP and if you’re ...">
+<meta name="twitter:description" content="Basic knowledge in PHP is extremely useful for a computer programmer. PHP is easy to understand and widely used by computer programmers around the world. There are plenty of tutorials on the web that you can check out in order to have basic knowledge of PHP and if you’re …">
 
         <title>Simple code for a slot machine game  · Tshepang logs
 </title>
@@ -102,13 +102,13 @@ stepping-stone in furthering your programming knowledge.</p>
 want to learn how to make other games apart from slot machines, you
 can go on ahead and click <a class="reference external" href="http://www.ibm.com/developerworks/library/os-php-gamescripts3">this link</a>.</p>
 <p>Let's begin. First, we must establish the user interface of the game:</p>
-<div class="highlight"><pre><span class="x">$faces = array (&#39;Figure1&#39;, &#39;Figure2&#39;, &#39;Figure3&#39;, &#39;Figure4&#39;, &#39;Figure5&#39;, &#39;Figure6&#39;);</span>
+<div class="highlight"><pre><span></span><span class="x">$faces = array (&#39;Figure1&#39;, &#39;Figure2&#39;, &#39;Figure3&#39;, &#39;Figure4&#39;, &#39;Figure5&#39;, &#39;Figure6&#39;);</span>
 </pre></div>
 <p>You can substitute any image you want for the figures: fruits, flags,
 your favorite cartoon hero, anything.  Then, you will have to declare
 the combinations of winning reels. In a traditional slot machine, 3
 images must match a payout line, so write the code like this:</p>
-<div class="highlight"><pre><span class="x">$payouts = array (</span>
+<div class="highlight"><pre><span></span><span class="x">$payouts = array (</span>
 <span class="x">    &#39;Figure1|Figure1|Figure&#39; =&gt; &#39;10&#39;,</span>
 <span class="x">    &#39;Figure2| Figure2|Figure2&#39; =&gt; &#39;20&#39;,</span>
 <span class="x">    &#39;Figure3|Figure3|Figure3&#39; =&gt; &#39;25&#39;,</span>
@@ -124,7 +124,7 @@ images must match a payout line, so write the code like this:</p>
 <p>Let's make the reels spin like a real slot machine. Traditional slots
 usually have the first and third reels spin in one direction, while
 the second reel spins in the other.</p>
-<div class="highlight"><pre><span class="x">$wheel1 = array();</span>
+<div class="highlight"><pre><span></span><span class="x">$wheel1 = array();</span>
 <span class="x">foreach ($faces as $face) {</span>
 <span class="x">    $wheel1[] = $face;</span>
 <span class="x">}</span>

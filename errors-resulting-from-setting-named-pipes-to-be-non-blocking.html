@@ -15,12 +15,12 @@
 
 <meta property="og:title" content="errors resulting from setting named pipes to be non-blocking "/>
 <meta property="og:url" content="http://tshepang.net/errors-resulting-from-setting-named-pipes-to-be-non-blocking" />
-<meta property="og:description" content="Using C, I have been writing to named pipes in a non-blocking way and have been getting a whole bunch of EAGAIN errors. I have spent way too long on the web trying to find out why, and bumped onto this excellent answer. Looking at the manpage, I see that ..." />
+<meta property="og:description" content="Using C, I have been writing to named pipes in a non-blocking way and have been getting a whole bunch of EAGAIN errors. I have spent way too long on the web trying to find out why, and bumped onto this excellent answer. Looking at the manpage, I see that …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2012-11-18T00:00:00+02:00" />
 <meta name="twitter:title" content="errors resulting from setting named pipes to be non-blocking ">
-<meta name="twitter:description" content="Using C, I have been writing to named pipes in a non-blocking way and have been getting a whole bunch of EAGAIN errors. I have spent way too long on the web trying to find out why, and bumped onto this excellent answer. Looking at the manpage, I see that ...">
+<meta name="twitter:description" content="Using C, I have been writing to named pipes in a non-blocking way and have been getting a whole bunch of EAGAIN errors. I have spent way too long on the web trying to find out why, and bumped onto this excellent answer. Looking at the manpage, I see that …">
 
         <title>errors resulting from setting named pipes to be non-blocking  · Tshepang logs
 </title>
@@ -86,13 +86,13 @@ and bumped onto <a class="reference external" href="http://developerweb.net/view
 Looking at the manpage, I see that this would give the same value as
 EWOULDBLOCK, which is a far more meaningful name in this case.</p>
 <p>This is what will display those errors:</p>
-<div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="n">write</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">strlen</span><span class="p">(</span><span class="n">buffer</span><span class="p">))</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">write</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">strlen</span><span class="p">(</span><span class="n">buffer</span><span class="p">))</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">fprintf</span> <span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;error writing to file &#39;%s&#39;: %s (errno %d)&quot;</span><span class="p">,</span>
              <span class="n">path</span><span class="p">,</span> <span class="n">strerror</span><span class="p">(</span><span class="n">errno</span><span class="p">),</span> <span class="n">fd</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 <p>And here is how to avoid them:</p>
-<div class="highlight"><pre><span class="k">if</span> <span class="p">((</span><span class="n">write</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">strlen</span><span class="p">(</span><span class="n">buffer</span><span class="p">))</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">errno</span> <span class="o">!=</span> <span class="n">EWOULDBLOCK</span><span class="p">))</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">((</span><span class="n">write</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">strlen</span><span class="p">(</span><span class="n">buffer</span><span class="p">))</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">errno</span> <span class="o">!=</span> <span class="n">EWOULDBLOCK</span><span class="p">))</span> <span class="p">{</span>
     <span class="n">fprintf</span><span class="p">(</span> <span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;error writing to file &#39;%s&#39;: %s (errno %d)&quot;</span><span class="p">,</span>
              <span class="n">path</span><span class="p">,</span> <span class="n">strerror</span><span class="p">(</span><span class="n">errno</span><span class="p">),</span> <span class="n">fd</span><span class="p">);</span>
 <span class="p">}</span>

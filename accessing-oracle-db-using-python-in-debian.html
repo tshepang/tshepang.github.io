@@ -15,12 +15,12 @@
 
 <meta property="og:title" content="accessing Oracle DB using Python, in Debian "/>
 <meta property="og:url" content="http://tshepang.net/accessing-oracle-db-using-python-in-debian" />
-<meta property="og:description" content="The following instructions assume that you are using Debian Squeeze, the current &#39;stable&#39; release. The instructions here are very specific, so look elsewhere for something more generic. downloads: Get registered on Oracle website, and download oracle-instantclient11.2-basic*.rpm (~40MB). Get cx-Oracle rpm for your specific Python version and your specific ..." />
+<meta property="og:description" content="The following instructions assume that you are using Debian Squeeze, the current &#39;stable&#39; release. The instructions here are very specific, so look elsewhere for something more generic. downloads: Get registered on Oracle website, and download oracle-instantclient11.2-basic*.rpm (~40MB). Get cx-Oracle rpm for your specific Python version and your specific …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2011-01-15T00:00:00+02:00" />
 <meta name="twitter:title" content="accessing Oracle DB using Python, in Debian ">
-<meta name="twitter:description" content="The following instructions assume that you are using Debian Squeeze, the current &#39;stable&#39; release. The instructions here are very specific, so look elsewhere for something more generic. downloads: Get registered on Oracle website, and download oracle-instantclient11.2-basic*.rpm (~40MB). Get cx-Oracle rpm for your specific Python version and your specific ...">
+<meta name="twitter:description" content="The following instructions assume that you are using Debian Squeeze, the current &#39;stable&#39; release. The instructions here are very specific, so look elsewhere for something more generic. downloads: Get registered on Oracle website, and download oracle-instantclient11.2-basic*.rpm (~40MB). Get cx-Oracle rpm for your specific Python version and your specific …">
 
         <title>accessing Oracle DB using Python, in Debian  · Tshepang logs
 </title>
@@ -90,12 +90,12 @@ oracle-instantclient11.2-basic*.rpm (~40MB).</li>
 specific processor (in my case, 3.1 and i386 respectively).</li>
 </ul>
 <p><strong>installation and setup</strong>:</p>
-<div class="highlight"><pre>sudo apt-get install libpython3.1 libaio1 alien
+<div class="highlight"><pre><span></span>sudo apt-get install libpython3.1 libaio1 alien
 sudo alien --install oracle-instantclient11.2-basic*rpm cx_Oracle*rpm
 sudo ln -s /usr/lib/python3.1/site-packages/cx_Oracle.so /usr/lib/python3.1/lib-dynload
 sudo ln -s /usr/lib/oracle/11.2/client/lib/libnnz11.so /usr/lib
 sudo ln -s /usr/lib/oracle/11.2/client/lib/libclntsh.so.11.1 /usr/lib
-<span class="nb">echo export </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/lib/oracle/11.2/client/lib &gt;&gt; ~/.bashrc
+<span class="nb">echo</span> <span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/lib/oracle/11.2/client/lib &gt;&gt; ~/.bashrc
 <span class="nb">source</span> ~/.bashrc
 python3 -c <span class="s1">&#39;import cx_Oracle&#39;</span>
 </pre></div>

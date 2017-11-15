@@ -15,12 +15,12 @@
 
 <meta property="og:title" content="project of note: Requests "/>
 <meta property="og:url" content="http://tshepang.net/project-of-note-requests" />
-<meta property="og:description" content="Requests is a Python module that makes it real easy to deal with HTTP. As an example, something as scary as fetching a web page that needs authentication requires only a single line of code: requests.get(&#34;https://example.com&#34;, auth=(&#34;user&#34;, &#34;pass&#34;)) It&#39;s capable of a lot more ..." />
+<meta property="og:description" content="Requests is a Python module that makes it real easy to deal with HTTP. As an example, something as scary as fetching a web page that needs authentication requires only a single line of code: requests.get(&#34;https://example.com&#34;, auth=(&#34;user&#34;, &#34;pass&#34;)) It&#39;s capable of a lot more of …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2011-12-31T00:00:00+02:00" />
 <meta name="twitter:title" content="project of note: Requests ">
-<meta name="twitter:description" content="Requests is a Python module that makes it real easy to deal with HTTP. As an example, something as scary as fetching a web page that needs authentication requires only a single line of code: requests.get(&#34;https://example.com&#34;, auth=(&#34;user&#34;, &#34;pass&#34;)) It&#39;s capable of a lot more ...">
+<meta name="twitter:description" content="Requests is a Python module that makes it real easy to deal with HTTP. As an example, something as scary as fetching a web page that needs authentication requires only a single line of code: requests.get(&#34;https://example.com&#34;, auth=(&#34;user&#34;, &#34;pass&#34;)) It&#39;s capable of a lot more of …">
 
         <title>project of note: Requests  · Tshepang logs
 </title>
@@ -82,15 +82,15 @@
             <p>Requests is a Python module that makes it real easy to deal with HTTP.
 As an example, something as scary as fetching a web page that needs
 authentication requires only a single line of code:</p>
-<div class="highlight"><pre><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&quot;https://example.com&quot;</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="p">(</span><span class="s">&quot;user&quot;</span><span class="p">,</span> <span class="s">&quot;pass&quot;</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://example.com&quot;</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;pass&quot;</span><span class="p">))</span>
 </pre></div>
 <p>It's capable of <a class="reference external" href="http://docs.python-requests.org/en/latest/index.html#feature-support">a lot more</a> of course (<a class="reference external" href="http://docs.python-requests.org/en/latest/user/quickstart/">tutorial</a>), and it's weird
 that something this nice hasn't been around for ages. There is another
 that is much simpler to use and more advanced than Python's standard
 library named <a class="reference external" href="http://code.google.com/p/httplib2/">httplib2</a>, but it's not quite as simple/elegant:</p>
-<div class="highlight"><pre><span class="n">h</span> <span class="o">=</span> <span class="n">httplib2</span><span class="o">.</span><span class="n">Http</span><span class="p">(</span><span class="s">&quot;.cache&quot;</span><span class="p">)</span>  <span class="o">//</span> <span class="n">ugly</span>
-<span class="n">h</span><span class="o">.</span><span class="n">add_credentials</span><span class="p">(</span><span class="s">&quot;user&quot;</span><span class="p">,</span> <span class="s">&quot;pass&quot;</span><span class="p">)</span>
-<span class="n">resp</span><span class="p">,</span> <span class="n">content</span> <span class="o">=</span> <span class="n">h</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">&quot;https://example.com&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="n">h</span> <span class="o">=</span> <span class="n">httplib2</span><span class="o">.</span><span class="n">Http</span><span class="p">(</span><span class="s2">&quot;.cache&quot;</span><span class="p">)</span>  <span class="o">//</span> <span class="n">ugly</span>
+<span class="n">h</span><span class="o">.</span><span class="n">add_credentials</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;pass&quot;</span><span class="p">)</span>
+<span class="n">resp</span><span class="p">,</span> <span class="n">content</span> <span class="o">=</span> <span class="n">h</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;https://example.com&quot;</span><span class="p">)</span>
 </pre></div>
 <p>An example for achieving the same with only the standard library is far
 messier.</p>

@@ -15,12 +15,12 @@
 
 <meta property="og:title" content="my JHBuild setup "/>
 <meta property="og:url" content="http://tshepang.net/my-jhbuild-setup" />
-<meta property="og:description" content="JHBuild is a powerful and flexible build tool for GNOME. It does takes some getting used to in terms of set-up, but this wiki page is quite gentle, and it details how to get the code running on your machine. If you use Debian (or Ubuntu), you can use run ..." />
+<meta property="og:description" content="JHBuild is a powerful and flexible build tool for GNOME. It does takes some getting used to in terms of set-up, but this wiki page is quite gentle, and it details how to get the code running on your machine. If you use Debian (or Ubuntu), you can use run …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2011-03-19T00:00:00+02:00" />
 <meta name="twitter:title" content="my JHBuild setup ">
-<meta name="twitter:description" content="JHBuild is a powerful and flexible build tool for GNOME. It does takes some getting used to in terms of set-up, but this wiki page is quite gentle, and it details how to get the code running on your machine. If you use Debian (or Ubuntu), you can use run ...">
+<meta name="twitter:description" content="JHBuild is a powerful and flexible build tool for GNOME. It does takes some getting used to in terms of set-up, but this wiki page is quite gentle, and it details how to get the code running on your machine. If you use Debian (or Ubuntu), you can use run …">
 
         <title>my JHBuild setup  · Tshepang logs
 </title>
@@ -84,7 +84,7 @@ takes some getting used to in terms of set-up, but this <a class="reference exte
 quite gentle, and it details how to get the code running on your
 machine.</p>
 <p>If you use Debian (or Ubuntu), you can use run this command:</p>
-<div class="highlight"><pre>wajig --norecommends install build-essential docbook-xsl flex <span class="se">\</span>
+<div class="highlight"><pre><span></span>wajig --norecommends install build-essential docbook-xsl flex <span class="se">\</span>
 bison cvs gperf cmake  <span class="o">{</span>uuid,ppp<span class="o">}</span>-dev <span class="se">\</span>
 libx<span class="o">{</span>composite,randr,damage,ft2,i,t<span class="o">}</span>-dev <span class="se">\</span>
 libxcb-<span class="o">{</span>event1,aux0,atom1<span class="o">}</span>-dev <span class="se">\</span>
@@ -97,23 +97,23 @@ process. The <tt class="docutils literal"><span class="pre">--no-recommends</spa
 installation to packages I really need, avoiding the extra stuff deemed
 by the packager to be useful for me.</p>
 <p>My &quot;~/.jhbuilrc&quot; contains the following:</p>
-<div class="highlight"><pre><span class="c"># build directory</span>
-<span class="n">checkoutroot</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s">&quot;~/src/gnome&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="c1"># build directory</span>
+<span class="n">checkoutroot</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s2">&quot;~/src/gnome&quot;</span><span class="p">)</span>
 
-<span class="c"># don&#39;t spew lots of distracting status messages</span>
+<span class="c1"># don&#39;t spew lots of distracting status messages</span>
 <span class="n">notrayicon</span> <span class="o">=</span> <span class="bp">True</span>
 
-<span class="c"># attempt to build modules even if their dependencies weren&#39;t successfully built</span>
+<span class="c1"># attempt to build modules even if their dependencies weren&#39;t successfully built</span>
 <span class="n">nopoison</span> <span class="o">=</span> <span class="bp">True</span>
 
-<span class="c"># don&#39;t build these since they have issues; this implies that I must install my distro&#39;s development versions</span>
-<span class="n">skip</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;nss&#39;</span><span class="p">,</span> <span class="s">&#39;nspr&#39;</span><span class="p">]</span>
+<span class="c1"># don&#39;t build these since they have issues; this implies that I must install my distro&#39;s development versions</span>
+<span class="n">skip</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;nss&#39;</span><span class="p">,</span> <span class="s1">&#39;nspr&#39;</span><span class="p">]</span>
 
-<span class="c"># dont fetch moduleset xml files from the web; use ones that are installed locally</span>
+<span class="c1"># dont fetch moduleset xml files from the web; use ones that are installed locally</span>
 <span class="n">use_local_modulesets</span> <span class="o">=</span> <span class="bp">True</span>
 
-<span class="c"># where html-formatted logs are kept</span>
-<span class="n">tinderbox_outputdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s">&quot;~/temp/tinderbox&quot;</span><span class="p">)</span>
+<span class="c1"># where html-formatted logs are kept</span>
+<span class="n">tinderbox_outputdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s2">&quot;~/temp/tinderbox&quot;</span><span class="p">)</span>
 </pre></div>
 <p>See <a class="reference external" href="http://library.gnome.org/devel/jhbuild/unstable/config-reference.html.en">Configuration File Reference</a> for a detailed explanation of these
 options.</p>

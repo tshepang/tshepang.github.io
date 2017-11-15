@@ -15,12 +15,12 @@
 
 <meta property="og:title" content="Rust week of 2015-11-27 "/>
 <meta property="og:url" content="http://tshepang.net/rust-week-of-2015-11-27" />
-<meta property="og:description" content="I added missing examples to stdlib documentation. I also learned a bit about Chrono, seemingly the most comprehensive date and time library for Rust. I used to determine what the next release date for Rust is, using the following code: extern crate chrono; use chrono::{NaiveDate, Duration, Local}; fn main ..." />
+<meta property="og:description" content="I added missing examples to stdlib documentation. I also learned a bit about Chrono, seemingly the most comprehensive date and time library for Rust. I used to determine what the next release date for Rust is, using the following code: extern crate chrono; use chrono::{NaiveDate, Duration, Local}; fn main …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2015-12-03T00:00:00+02:00" />
 <meta name="twitter:title" content="Rust week of 2015-11-27 ">
-<meta name="twitter:description" content="I added missing examples to stdlib documentation. I also learned a bit about Chrono, seemingly the most comprehensive date and time library for Rust. I used to determine what the next release date for Rust is, using the following code: extern crate chrono; use chrono::{NaiveDate, Duration, Local}; fn main ...">
+<meta name="twitter:description" content="I added missing examples to stdlib documentation. I also learned a bit about Chrono, seemingly the most comprehensive date and time library for Rust. I used to determine what the next release date for Rust is, using the following code: extern crate chrono; use chrono::{NaiveDate, Duration, Local}; fn main …">
 
         <title>Rust week of 2015-11-27  · Tshepang logs
 </title>
@@ -83,18 +83,18 @@
 I also learned a bit about <a class="reference external" href="https://github.com/lifthrasiir/rust-chrono">Chrono</a>, seemingly the most comprehensive
 date and time library for Rust. I used to determine what the next
 release date for Rust is, using the following code:</p>
-<div class="highlight"><pre><span class="k">extern</span><span class="w"> </span><span class="n">crate</span><span class="w"> </span><span class="n">chrono</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><span class="k">extern</span><span class="w"> </span><span class="k">crate</span><span class="w"> </span><span class="n">chrono</span><span class="p">;</span><span class="w"></span>
 
-<span class="kn">use</span><span class="w"> </span><span class="n">chrono</span><span class="o">::</span><span class="p">{</span><span class="n">NaiveDate</span><span class="p">,</span><span class="w"> </span><span class="n">Duration</span><span class="p">,</span><span class="w"> </span><span class="n">Local</span><span class="p">};</span><span class="w"></span>
+<span class="k">use</span><span class="w"> </span><span class="n">chrono</span>::<span class="p">{</span><span class="n">NaiveDate</span><span class="p">,</span><span class="w"> </span><span class="n">Duration</span><span class="p">,</span><span class="w"> </span><span class="n">Local</span><span class="p">};</span><span class="w"></span>
 
-<span class="k">fn</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mf">0.</span><span class="p">.</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mi">0</span><span class="p">..</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="c1">// Rust 1.0 release</span>
-<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="n">initial</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NaiveDate</span><span class="o">::</span><span class="n">from_ymd</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="n">initial</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NaiveDate</span>::<span class="n">from_ymd</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">);</span><span class="w"></span>
 <span class="w">        </span><span class="c1">// 1.0 was released on a Friday, but nowadays they happen Thursdays</span>
-<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="n">release_date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">initial</span><span class="p">.</span><span class="n">checked_add</span><span class="p">(</span><span class="n">Duration</span><span class="o">::</span><span class="n">weeks</span><span class="p">(</span><span class="mi">6</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n</span><span class="p">)).</span><span class="n">unwrap</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Duration</span><span class="o">::</span><span class="n">days</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">release_date</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Local</span><span class="o">::</span><span class="n">today</span><span class="p">().</span><span class="n">naive_local</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="nb">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">release_date</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="n">release_date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">initial</span><span class="p">.</span><span class="n">checked_add</span><span class="p">(</span><span class="n">Duration</span>::<span class="n">weeks</span><span class="p">(</span><span class="mi">6</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n</span><span class="p">)).</span><span class="n">unwrap</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Duration</span>::<span class="n">days</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">release_date</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Local</span>::<span class="n">today</span><span class="p">().</span><span class="n">naive_local</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">release_date</span><span class="p">);</span><span class="w"></span>
 <span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
@@ -155,7 +155,7 @@ release date for Rust is, using the following code:</p>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
                 <li><a href="http://tshepang.net/tags.html#rust-ref">Rust
-                    <span>135</span>
+                    <span>136</span>
 </a></li>
             </ul>
 <h4>Stay in Touch</h4>

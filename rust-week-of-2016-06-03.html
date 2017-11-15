@@ -15,12 +15,12 @@
 
 <meta property="og:title" content="Rust week of 2016-06-03 "/>
 <meta property="og:url" content="http://tshepang.net/rust-week-of-2016-06-03" />
-<meta property="og:description" content="I did more Rust coding than most weeks this time around, busy with the project I mentioned last week. My favorite parts: I love the fact that inotify-rs (first mention) collects events in the background, so that when you are done with whatever task you were busy with, you can ..." />
+<meta property="og:description" content="I did more Rust coding than most weeks this time around, busy with the project I mentioned last week. My favorite parts: I love the fact that inotify-rs (first mention) collects events in the background, so that when you are done with whatever task you were busy with, you can …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2016-06-09T00:00:00+02:00" />
 <meta name="twitter:title" content="Rust week of 2016-06-03 ">
-<meta name="twitter:description" content="I did more Rust coding than most weeks this time around, busy with the project I mentioned last week. My favorite parts: I love the fact that inotify-rs (first mention) collects events in the background, so that when you are done with whatever task you were busy with, you can ...">
+<meta name="twitter:description" content="I did more Rust coding than most weeks this time around, busy with the project I mentioned last week. My favorite parts: I love the fact that inotify-rs (first mention) collects events in the background, so that when you are done with whatever task you were busy with, you can …">
 
         <title>Rust week of 2016-06-03  · Tshepang logs
 </title>
@@ -103,14 +103,14 @@ process error case had to be handled in separate places.</p>
 means that we don't care about the success return value. On the
 calling side, we have an option to use a <tt class="docutils literal">match</tt> statement to
 handle the result:</p>
-<div class="highlight"><pre><span class="k">match</span><span class="w"> </span><span class="n">foo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight"><pre><span></span><span class="k">match</span><span class="w"> </span><span class="n">foo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="nb">Ok</span><span class="p">(</span><span class="n">_</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">(),</span><span class="w"></span>
 <span class="w">    </span><span class="nb">Err</span><span class="p">(</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">do_something_with</span><span class="p">(</span><span class="n">error</span><span class="p">)</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 <p>There is a convenient syntax to deal with such case, where you don't
 care about one of values... <tt class="docutils literal">if let</tt>:</p>
-<div class="highlight"><pre><span class="k">if</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nb">Err</span><span class="p">(</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">foo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nb">Err</span><span class="p">(</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">foo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">do_something_with</span><span class="p">(</span><span class="n">error</span><span class="p">)</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
@@ -159,7 +159,7 @@ care about one of values... <tt class="docutils literal">if let</tt>:</p>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/rust-week-of-2016-05-27" title="Previous: Rust week of 2016-05-27">Rust week of 2016-05-27</a></li>
+                <li class="previous-article">« <a href="http://tshepang.net/i-am-a-very-jealous-person" title="Previous: I am a very jealous person">I am a very jealous person</a></li>
                 <li class="next-article"><a href="http://tshepang.net/rust-week-of-2016-06-10" title="Next: Rust week of 2016-06-10">Rust week of 2016-06-10</a> »</li>
             </ul>
             </nav>
@@ -174,7 +174,7 @@ care about one of values... <tt class="docutils literal">if let</tt>:</p>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
                 <li><a href="http://tshepang.net/tags.html#rust-ref">Rust
-                    <span>135</span>
+                    <span>136</span>
 </a></li>
             </ul>
 <h4>Stay in Touch</h4>

@@ -15,12 +15,12 @@
 
 <meta property="og:title" content="sorting dictionary items by value "/>
 <meta property="og:url" content="http://tshepang.net/sorting-dictionary-items-by-value" />
-<meta property="og:description" content="Following should be self-explanatory: $ python &gt;&gt;&gt; numbers = dict(zero=0, one=1, two=2, three=3) &gt;&gt;&gt; numbers {&#39;three&#39;: 3, &#39;zero&#39;: 0, &#39;two&#39;: 2, &#39;one&#39;: 1} &gt;&gt;&gt; sorted(numbers) [&#39;one&#39;, &#39;three&#39;, &#39;two&#39;, &#39;zero&#39;] &gt;&gt;&gt; sorted(numbers, key=numbers.get) [&#39;zero&#39;, &#39;one&#39;, &#39;two&#39;, &#39;three&#39;] The second-last command sorts by keys, but that&#39;s easy. Sorting ..." />
+<meta property="og:description" content="Following should be self-explanatory: $ python &gt;&gt;&gt; numbers = dict(zero=0, one=1, two=2, three=3) &gt;&gt;&gt; numbers {&#39;three&#39;: 3, &#39;zero&#39;: 0, &#39;two&#39;: 2, &#39;one&#39;: 1} &gt;&gt;&gt; sorted(numbers) [&#39;one&#39;, &#39;three&#39;, &#39;two&#39;, &#39;zero&#39;] &gt;&gt;&gt; sorted(numbers, key=numbers.get) [&#39;zero&#39;, &#39;one&#39;, &#39;two&#39;, &#39;three&#39;] The second-last command sorts by keys, but that&#39;s easy. Sorting by …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2012-06-26T00:00:00+02:00" />
 <meta name="twitter:title" content="sorting dictionary items by value ">
-<meta name="twitter:description" content="Following should be self-explanatory: $ python &gt;&gt;&gt; numbers = dict(zero=0, one=1, two=2, three=3) &gt;&gt;&gt; numbers {&#39;three&#39;: 3, &#39;zero&#39;: 0, &#39;two&#39;: 2, &#39;one&#39;: 1} &gt;&gt;&gt; sorted(numbers) [&#39;one&#39;, &#39;three&#39;, &#39;two&#39;, &#39;zero&#39;] &gt;&gt;&gt; sorted(numbers, key=numbers.get) [&#39;zero&#39;, &#39;one&#39;, &#39;two&#39;, &#39;three&#39;] The second-last command sorts by keys, but that&#39;s easy. Sorting ...">
+<meta name="twitter:description" content="Following should be self-explanatory: $ python &gt;&gt;&gt; numbers = dict(zero=0, one=1, two=2, three=3) &gt;&gt;&gt; numbers {&#39;three&#39;: 3, &#39;zero&#39;: 0, &#39;two&#39;: 2, &#39;one&#39;: 1} &gt;&gt;&gt; sorted(numbers) [&#39;one&#39;, &#39;three&#39;, &#39;two&#39;, &#39;zero&#39;] &gt;&gt;&gt; sorted(numbers, key=numbers.get) [&#39;zero&#39;, &#39;one&#39;, &#39;two&#39;, &#39;three&#39;] The second-last command sorts by keys, but that&#39;s easy. Sorting by …">
 
         <title>sorting dictionary items by value  · Tshepang logs
 </title>
@@ -80,14 +80,14 @@
 
             
             <p>Following should be self-explanatory:</p>
-<div class="highlight"><pre><span class="err">$</span> <span class="n">python</span>
+<div class="highlight"><pre><span></span><span class="err">$</span> <span class="n">python</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">zero</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">one</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">two</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">three</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span>
-<span class="p">{</span><span class="s">&#39;three&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s">&#39;zero&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&#39;two&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&#39;one&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<span class="p">{</span><span class="s1">&#39;three&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;zero&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;one&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-<span class="p">[</span><span class="s">&#39;one&#39;</span><span class="p">,</span> <span class="s">&#39;three&#39;</span><span class="p">,</span> <span class="s">&#39;two&#39;</span><span class="p">,</span> <span class="s">&#39;zero&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;zero&#39;</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">numbers</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
-<span class="p">[</span><span class="s">&#39;zero&#39;</span><span class="p">,</span> <span class="s">&#39;one&#39;</span><span class="p">,</span> <span class="s">&#39;two&#39;</span><span class="p">,</span> <span class="s">&#39;three&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;zero&#39;</span><span class="p">,</span> <span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">]</span>
 </pre></div>
 <p>The second-last command sorts by keys, but that's easy. Sorting by
 value, as shown by the last command above, is what trips many novices,

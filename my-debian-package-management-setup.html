@@ -15,12 +15,12 @@
 
 <meta property="og:title" content="my Debian package management setup "/>
 <meta property="og:url" content="http://tshepang.net/my-debian-package-management-setup" />
-<meta property="og:description" content="Much of this is obsolete: I no longer use debmirror and no longer keep the entire binary repository of i386 arch. There&#39;s a useful tool in Debian named debmirror. It&#39;s function is to create and manage a partial copy of an official Debian repository, and I use it ..." />
+<meta property="og:description" content="Much of this is obsolete: I no longer use debmirror and no longer keep the entire binary repository of i386 arch. There&#39;s a useful tool in Debian named debmirror. It&#39;s function is to create and manage a partial copy of an official Debian repository, and I use it to create …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2010-09-28T00:00:00+02:00" />
 <meta name="twitter:title" content="my Debian package management setup ">
-<meta name="twitter:description" content="Much of this is obsolete: I no longer use debmirror and no longer keep the entire binary repository of i386 arch. There&#39;s a useful tool in Debian named debmirror. It&#39;s function is to create and manage a partial copy of an official Debian repository, and I use it ...">
+<meta name="twitter:description" content="Much of this is obsolete: I no longer use debmirror and no longer keep the entire binary repository of i386 arch. There&#39;s a useful tool in Debian named debmirror. It&#39;s function is to create and manage a partial copy of an official Debian repository, and I use it to create …">
 
         <title>my Debian package management setup  · Tshepang logs
 </title>
@@ -123,14 +123,14 @@ custom (unofficial) Debian repo. It's a far more advanced tool than
 debmirror, and I think it can do what debmirror does (but I don't yet
 care to learn how).</p>
 <p>Moving on, here's the relevant entries from my /etc/apt/sources.list file:</p>
-<div class="highlight"><pre><span class="c"># local repos (debmirror)</span>
+<div class="highlight"><pre><span></span><span class="c1"># local repos (debmirror)</span>
 deb file:/home/wena/.repo_bin sid main
 deb-src file:/home/wena/.repo_src sid main
 
-<span class="c"># local repo (reprepro)</span>
+<span class="c1"># local repo (reprepro)</span>
 deb file:/home/wena/.repo_local cache main
 
-<span class="c"># remote repo</span>
+<span class="c1"># remote repo</span>
 deb ftp://ftp.sun.ac.za/ftp/debian/ sid main non-free contrib
 </pre></div>
 <p>So, what I do on a semi-regular basis is run:</p>

@@ -15,12 +15,12 @@
 
 <meta property="og:title" content="dangerous inconsistency in symlink removal "/>
 <meta property="og:url" content="http://tshepang.net/dangerous-inconsistency-in-symlink-removal" />
-<meta property="og:description" content="Here&#39;s how to make a symlink and to delete it: mkdir dir ln -s dir dirlink rm -r dirlink Here&#39;s another way to delete it: rm -r dirlink/ Although it will do the job, it will actually complain with: rm: cannot remove `dirlink&#39;: Not a directory Note that ..." />
+<meta property="og:description" content="Here&#39;s how to make a symlink and to delete it: mkdir dir ln -s dir dirlink rm -r dirlink Here&#39;s another way to delete it: rm -r dirlink/ Although it will do the job, it will actually complain with: rm: cannot remove `dirlink&#39;: Not a directory Note that we could …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2011-01-28T00:00:00+02:00" />
 <meta name="twitter:title" content="dangerous inconsistency in symlink removal ">
-<meta name="twitter:description" content="Here&#39;s how to make a symlink and to delete it: mkdir dir ln -s dir dirlink rm -r dirlink Here&#39;s another way to delete it: rm -r dirlink/ Although it will do the job, it will actually complain with: rm: cannot remove `dirlink&#39;: Not a directory Note that ...">
+<meta name="twitter:description" content="Here&#39;s how to make a symlink and to delete it: mkdir dir ln -s dir dirlink rm -r dirlink Here&#39;s another way to delete it: rm -r dirlink/ Although it will do the job, it will actually complain with: rm: cannot remove `dirlink&#39;: Not a directory Note that we could …">
 
         <title>dangerous inconsistency in symlink removal  · Tshepang logs
 </title>
@@ -80,18 +80,18 @@
 
             
             <p>Here's how to make a symlink and to delete it:</p>
-<div class="highlight"><pre>mkdir dir
+<div class="highlight"><pre><span></span>mkdir dir
 ln -s dir dirlink
 rm -r dirlink
 </pre></div>
 <p>Here's another way to delete it:</p>
-<div class="highlight"><pre>rm -r dirlink/
+<div class="highlight"><pre><span></span>rm -r dirlink/
 </pre></div>
 <p>Although it will do the job, it will actually complain with:</p>
-<div class="highlight"><pre>rm: cannot remove <span class="sb">`</span>dirlink<span class="err">&#39;</span>: Not a directory
+<div class="highlight"><pre><span></span>rm: cannot remove <span class="sb">`</span>dirlink<span class="err">&#39;</span>: Not a directory
 </pre></div>
 <p>Note that we could have achieved the deletion with just:</p>
-<div class="highlight"><pre>rm dirlink
+<div class="highlight"><pre><span></span>rm dirlink
 </pre></div>
 <p>This is because the symlink is just a single file. So there's no need to
 treat it like a directory when deleting.</p>

@@ -15,12 +15,12 @@
 
 <meta property="og:title" content="my current desktop setup "/>
 <meta property="og:url" content="http://tshepang.net/my-current-desktop-setup" />
-<meta property="og:description" content="Following is how my GUI environment is set-up on my home machine (a laptop) and work machine (a desktop). For the (libre) tools I frequently use, see this post instead. With recent Debian GNOME updates (late 2013), something got broken enough that I could not login to my account. I ..." />
+<meta property="og:description" content="Following is how my GUI environment is set-up on my home machine (a laptop) and work machine (a desktop). For the (libre) tools I frequently use, see this post instead. With recent Debian GNOME updates (late 2013), something got broken enough that I could not login to my account. I …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2014-02-16T00:00:00+02:00" />
 <meta name="twitter:title" content="my current desktop setup ">
-<meta name="twitter:description" content="Following is how my GUI environment is set-up on my home machine (a laptop) and work machine (a desktop). For the (libre) tools I frequently use, see this post instead. With recent Debian GNOME updates (late 2013), something got broken enough that I could not login to my account. I ...">
+<meta name="twitter:description" content="Following is how my GUI environment is set-up on my home machine (a laptop) and work machine (a desktop). For the (libre) tools I frequently use, see this post instead. With recent Debian GNOME updates (late 2013), something got broken enough that I could not login to my account. I …">
 
         <title>my current desktop setup  · Tshepang logs
 </title>
@@ -171,7 +171,7 @@ Type=XSession
 </pre>
 <p>On selecting the entry labeled <strong>Custom</strong> that appears on LightDM,
 and logging in, the following will get executed (<a class="reference external" href="https://bitbucket.org/tshepang/custom/src/tip/xsession">~/.xsession</a>):</p>
-<div class="highlight"><pre><span class="c"># apps</span>
+<div class="highlight"><pre><span></span><span class="c1"># apps</span>
 xfce4-terminal --hide-menubar --tab --tab --tab <span class="p">&amp;</span>
 firefox <span class="p">&amp;</span>
 nautilus --no-desktop <span class="p">&amp;</span>
@@ -182,21 +182,21 @@ quodlibet <span class="p">&amp;</span>
    icedove <span class="p">&amp;</span>
 <span class="k">fi</span>
 
-<span class="c"># settings</span>
+<span class="c1"># settings</span>
 xset b off
 xmodmap -e <span class="s2">&quot;clear Lock&quot;</span>
 xmodmap -e <span class="s2">&quot;keycode 66 = Super_L&quot;</span>
 
-<span class="c"># host-specific settings</span>
+<span class="c1"># host-specific settings</span>
 <span class="k">if</span> <span class="o">[</span> <span class="nv">$HOSTNAME</span> <span class="o">==</span> <span class="s1">&#39;twork&#39;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
     xrandr --output VGA-0 --output DVI-0 --right-of VGA-0
 <span class="k">else</span>
-    synclient <span class="nv">TapButton1</span><span class="o">=</span><span class="m">1</span> <span class="nv">TapButton2</span><span class="o">=</span><span class="m">3</span> <span class="nv">TapButton3</span><span class="o">=</span><span class="m">2</span> <span class="nv">MaxDoubleTapTime</span><span class="o">=</span>100
-    syndaemon -dti 1
+    synclient <span class="nv">TapButton1</span><span class="o">=</span><span class="m">1</span> <span class="nv">TapButton2</span><span class="o">=</span><span class="m">3</span> <span class="nv">TapButton3</span><span class="o">=</span><span class="m">2</span> <span class="nv">MaxDoubleTapTime</span><span class="o">=</span><span class="m">100</span>
+    syndaemon -dti <span class="m">1</span>
 <span class="k">fi</span>
 
-<span class="c"># clock</span>
-<span class="k">while</span> <span class="nb">true</span><span class="p">;</span> <span class="k">do</span>
+<span class="c1"># clock</span>
+<span class="k">while</span> true<span class="p">;</span> <span class="k">do</span>
     <span class="nv">datetime</span><span class="o">=</span><span class="k">$(</span> date +<span class="s2">&quot;%F %R&quot;</span> <span class="k">)</span>
     <span class="k">if</span> acpi -a <span class="p">|</span> grep off-line &gt; /dev/null<span class="p">;</span> <span class="k">then</span>
         <span class="nv">battery</span><span class="o">=</span><span class="k">$(</span> python -c <span class="s2">&quot;print(\&quot;</span><span class="k">$(</span>acpi<span class="k">)</span><span class="s2">\&quot;.split(&#39;,&#39;)[1].strip())&quot;</span> <span class="k">)</span>
@@ -207,7 +207,7 @@ xmodmap -e <span class="s2">&quot;keycode 66 = Super_L&quot;</span>
     sleep 1m
 <span class="k">done</span> <span class="p">&amp;</span>
 
-<span class="nb">exec </span>dwm
+<span class="nb">exec</span> dwm
 </pre></div>
 <p>Finally, this is what my dwm config changes look like (<a class="reference external" href="https://bitbucket.org/tshepang/custom/src/tip/config.def.h">config.def.h</a>):</p>
 <pre class="literal-block">
