@@ -12,8 +12,8 @@ not match one that's checked out,
 it could be that upstream is ahead.
 The assumption previously was that local is ahead of upstream,
 implying that a push is needed.
-The API that helped …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sun, 22 Oct 2017 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:tshepang.net,2017-10-22:/rust-week-of-2017-10-19</guid><category>Rust</category></item><item><title>Rust week of 2017-10-12</title><link>http://tshepang.net/rust-week-of-2017-10-12</link><description>&lt;p&gt;I enjoyed &lt;a class="reference external" href="https://lambda.xyz/blog/rusts-fatal-flaw"&gt;a humorous joke post&lt;/a&gt; poking fun at inconsitend Rust
-naming of types.
+The API that helped …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sun, 22 Oct 2017 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:tshepang.net,2017-10-22:/rust-week-of-2017-10-19</guid><category>Rust</category></item><item><title>Rust week of 2017-10-12</title><link>http://tshepang.net/rust-week-of-2017-10-12</link><description>&lt;p&gt;I enjoyed &lt;a class="reference external" href="https://lambda.xyz/blog/rusts-fatal-flaw"&gt;a humorous joke post&lt;/a&gt; poking fun at inconsistent Rust
+naming of some stdlib types.
 I also expanded &lt;a class="reference external" href="http://tshepang.net/rust-week-of-2017-10-05"&gt;the work project&lt;/a&gt; I been working on the past few
 weeks, this time doing some file I/O among other things,
 which is always finicky business.&lt;/p&gt;
