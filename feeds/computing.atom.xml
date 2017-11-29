@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs - computing</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2017-11-15T00:00:00+02:00</updated><entry><title>Rust week of 2017-11-09</title><link href="http://tshepang.net/rust-week-of-2017-11-09" rel="alternate"></link><published>2017-11-15T00:00:00+02:00</published><updated>2017-11-15T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-11-15:/rust-week-of-2017-11-09</id><summary type="html">&lt;p&gt;I've done nothing regarding the previous two weeks,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs - computing</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2017-11-29T00:00:00+02:00</updated><entry><title>Rust week of 2017-11-23</title><link href="http://tshepang.net/rust-week-of-2017-11-23" rel="alternate"></link><published>2017-11-29T00:00:00+02:00</published><updated>2017-11-29T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-11-29:/rust-week-of-2017-11-23</id><summary type="html">&lt;p&gt;There wasn't much last week, other than continuing with the functional
+testing work that queries Elasticsearch.
+This week, however, saw me extending &lt;a class="reference external" href="https://crates.io/crates/mrh"&gt;mrh&lt;/a&gt;
+(Pending is a repo state that requires action):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Allow ignoring Untracked files in output (feature request from a friend)&lt;/li&gt;
+&lt;li&gt;Distinguish Untracked state from other Pendings&lt;/li&gt;
+&lt;li&gt;Add 3 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;There wasn't much last week, other than continuing with the functional
+testing work that queries Elasticsearch.
+This week, however, saw me extending &lt;a class="reference external" href="https://crates.io/crates/mrh"&gt;mrh&lt;/a&gt;
+(Pending is a repo state that requires action):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Allow ignoring Untracked files in output (feature request from a friend)&lt;/li&gt;
+&lt;li&gt;Distinguish Untracked state from other Pendings&lt;/li&gt;
+&lt;li&gt;Add 3 more Pendings: added, removed, renamed&lt;/li&gt;
+&lt;li&gt;Do not quit after encountering malformed repos&lt;/li&gt;
+&lt;li&gt;Add color to output (via colored)&lt;/li&gt;
+&lt;li&gt;Add option to display absolute paths&lt;/li&gt;
+&lt;li&gt;Check if HEAD is tagged (with &lt;a class="reference external" href="https://stackoverflow.com/q/47500612/321731"&gt;some help from Stack Overflow&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I am glad.&lt;/p&gt;
+</content><category term="Rust"></category></entry><entry><title>Rust week of 2017-11-09</title><link href="http://tshepang.net/rust-week-of-2017-11-09" rel="alternate"></link><published>2017-11-15T00:00:00+02:00</published><updated>2017-11-15T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-11-15:/rust-week-of-2017-11-09</id><summary type="html">&lt;p&gt;I've done nothing regarding the previous two weeks,
 but this week had a look at Elasticsearch crates,
 as part of an effort to do some functional testing of the system at work.
 What I found was &lt;a class="reference external" href="https://docs.rs/elastic/*/elastic"&gt;a forest of APIs&lt;/a&gt; without a good guide,

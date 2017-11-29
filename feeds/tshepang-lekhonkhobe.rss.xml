@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Tshepang logs - Tshepang Lekhonkhobe</title><link>http://tshepang.net/</link><description></description><lastBuildDate>Wed, 15 Nov 2017 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2017-11-09</title><link>http://tshepang.net/rust-week-of-2017-11-09</link><description>&lt;p&gt;I've done nothing regarding the previous two weeks,
+<rss version="2.0"><channel><title>Tshepang logs - Tshepang Lekhonkhobe</title><link>http://tshepang.net/</link><description></description><lastBuildDate>Wed, 29 Nov 2017 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2017-11-23</title><link>http://tshepang.net/rust-week-of-2017-11-23</link><description>&lt;p&gt;There wasn't much last week, other than continuing with the functional
+testing work that queries Elasticsearch.
+This week, however, saw me extending &lt;a class="reference external" href="https://crates.io/crates/mrh"&gt;mrh&lt;/a&gt;
+(Pending is a repo state that requires action):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Allow ignoring Untracked files in output (feature request from a friend)&lt;/li&gt;
+&lt;li&gt;Distinguish Untracked state from other Pendings&lt;/li&gt;
+&lt;li&gt;Add 3 …&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Wed, 29 Nov 2017 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:tshepang.net,2017-11-29:/rust-week-of-2017-11-23</guid><category>Rust</category></item><item><title>Rust week of 2017-11-09</title><link>http://tshepang.net/rust-week-of-2017-11-09</link><description>&lt;p&gt;I've done nothing regarding the previous two weeks,
 but this week had a look at Elasticsearch crates,
 as part of an effort to do some functional testing of the system at work.
 What I found was &lt;a class="reference external" href="https://docs.rs/elastic/*/elastic"&gt;a forest of APIs&lt;/a&gt; without a good guide,
