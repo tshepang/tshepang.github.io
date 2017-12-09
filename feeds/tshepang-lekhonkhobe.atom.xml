@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs - Tshepang Lekhonkhobe</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2017-12-09T00:00:00+02:00</updated><entry><title>Rust week of 2017-11-30</title><link href="http://tshepang.net/rust-week-of-2017-11-30" rel="alternate"></link><published>2017-12-09T00:00:00+02:00</published><updated>2017-12-09T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-12-09:/rust-week-of-2017-11-30</id><summary type="html">&lt;p&gt;Like last week, I did some more work on &lt;a class="reference external" href="https://crates.io/crates/mrh"&gt;mrh&lt;/a&gt;:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs - Tshepang Lekhonkhobe</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2017-12-09T11:01:38+02:00</updated><entry><title>Rust 2.0 wishlist</title><link href="http://tshepang.net/rust-20-wishlist" rel="alternate"></link><published>2017-12-09T11:01:38+02:00</published><updated>2017-12-09T11:01:38+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-12-09:/rust-20-wishlist</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Remove the &lt;tt class="docutils literal"&gt;try!&lt;/tt&gt; macro...
+it has a better replacement in the form of the question_mark (&lt;tt class="docutils literal"&gt;?&lt;/tt&gt;) operator.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Remove &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;std::sync::mpsc&lt;/span&gt;&lt;/tt&gt; from stdlib,
+making it available externally...
+it does not feel general enough.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Assigning values to struct bindings should use the equal sign,
+not the colon:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;// now&lt;/span&gt;
+&lt;span class="n"&gt;Shoe&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;size&lt;/span&gt;: &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;style …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Remove the &lt;tt class="docutils literal"&gt;try!&lt;/tt&gt; macro...
+it has a better replacement in the form of the question_mark (&lt;tt class="docutils literal"&gt;?&lt;/tt&gt;) operator.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Remove &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;std::sync::mpsc&lt;/span&gt;&lt;/tt&gt; from stdlib,
+making it available externally...
+it does not feel general enough.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Assigning values to struct bindings should use the equal sign,
+not the colon:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;// now&lt;/span&gt;
+&lt;span class="n"&gt;Shoe&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;size&lt;/span&gt;: &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;style&lt;/span&gt;: &lt;span class="s"&gt;&amp;quot;sneaker&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="c1"&gt;// dream&lt;/span&gt;
+&lt;span class="n"&gt;Shoe&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;size&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;style&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;sneaker&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This would be consistent with the rest of the language.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;All collections types removed, except these basic ones:
+Vec, HashMap, and HashSet.
+Also, they would also be available from top-level
+(i.e. &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;std::{Vec,&lt;/span&gt; HashMap, HashSet}&lt;/tt&gt;),
+resulting in &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;std::collections&lt;/span&gt;&lt;/tt&gt; removal.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="Rust"></category></entry><entry><title>Rust week of 2017-11-30</title><link href="http://tshepang.net/rust-week-of-2017-11-30" rel="alternate"></link><published>2017-12-09T00:00:00+02:00</published><updated>2017-12-09T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-12-09:/rust-week-of-2017-11-30</id><summary type="html">&lt;p&gt;Like last week, I did some more work on &lt;a class="reference external" href="https://crates.io/crates/mrh"&gt;mrh&lt;/a&gt;:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;Replace colored with ansi_term (I prefer the API, and the latter was
 already a dependency of something else)&lt;/li&gt;
@@ -293,35 +328,6 @@ cargo +nightly build
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;I made &lt;a class="reference external" href="https://github.com/rust-lang/book/issues/828"&gt;two&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/book/issues/834"&gt;complaints&lt;/a&gt;,
 &lt;a class="reference external" href="https://github.com/brson/rust-cookbook/pull/253"&gt;as&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/43409"&gt;well&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/book/pull/827"&gt;as&lt;/a&gt; &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/43416"&gt;five&lt;/a&gt; &lt;a class="reference external" href="https://github.com/BurntSushi/walkdir/pull/75"&gt;contributions&lt;/a&gt;.&lt;/p&gt;
-</content><category term="Rust"></category></entry><entry><title>Rust 2.0 wishlist</title><link href="http://tshepang.net/rust-20-wishlist" rel="alternate"></link><published>2017-07-23T20:50:38+02:00</published><updated>2017-07-23T20:50:38+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-07-23:/rust-20-wishlist</id><summary type="html">&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;Remove the &lt;tt class="docutils literal"&gt;try!&lt;/tt&gt; macro...
-it has a better replacement in the form of the question_mark (&lt;tt class="docutils literal"&gt;?&lt;/tt&gt;) operator.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Remove &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;std::sync::mpsc&lt;/span&gt;&lt;/tt&gt; from stdlib,
-making it available externally...
-it does not feel general enough.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Assigning values to struct bindings should use the equal sign,
-not the colon:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;// now&lt;/span&gt;
-&lt;span class="n"&gt;Shoe&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;size&lt;/span&gt;: &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;style …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;Remove the &lt;tt class="docutils literal"&gt;try!&lt;/tt&gt; macro...
-it has a better replacement in the form of the question_mark (&lt;tt class="docutils literal"&gt;?&lt;/tt&gt;) operator.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Remove &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;std::sync::mpsc&lt;/span&gt;&lt;/tt&gt; from stdlib,
-making it available externally...
-it does not feel general enough.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Assigning values to struct bindings should use the equal sign,
-not the colon:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;// now&lt;/span&gt;
-&lt;span class="n"&gt;Shoe&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;size&lt;/span&gt;: &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;style&lt;/span&gt;: &lt;span class="s"&gt;&amp;quot;sneaker&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="c1"&gt;// dream&lt;/span&gt;
-&lt;span class="n"&gt;Shoe&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;size&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;style&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;sneaker&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This would be consistent with the rest of the language.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 </content><category term="Rust"></category></entry><entry><title>Rust week of 2017-07-13</title><link href="http://tshepang.net/rust-week-of-2017-07-13" rel="alternate"></link><published>2017-07-19T00:00:00+02:00</published><updated>2017-07-19T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-07-19:/rust-week-of-2017-07-13</id><summary type="html">&lt;p&gt;I am tempted, &lt;a class="reference external" href="http://tshepang.net/rust-week-of-2017-01-06"&gt;once again&lt;/a&gt;, to try out &lt;a class="reference external" href="https://github.com/Wilfred/remacs"&gt;Remacs&lt;/a&gt;,
 a Rust port of GNU Emacs.
 It's very encouraging that it tries to be compatible,
