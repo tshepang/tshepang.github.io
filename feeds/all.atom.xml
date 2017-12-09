@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2017-11-29T00:00:00+02:00</updated><entry><title>Rust week of 2017-11-23</title><link href="http://tshepang.net/rust-week-of-2017-11-23" rel="alternate"></link><published>2017-11-29T00:00:00+02:00</published><updated>2017-11-29T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-11-29:/rust-week-of-2017-11-23</id><summary type="html">&lt;p&gt;There wasn't much last week, other than continuing with the functional
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2017-12-09T00:00:00+02:00</updated><entry><title>Rust week of 2017-11-30</title><link href="http://tshepang.net/rust-week-of-2017-11-30" rel="alternate"></link><published>2017-12-09T00:00:00+02:00</published><updated>2017-12-09T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-12-09:/rust-week-of-2017-11-30</id><summary type="html">&lt;p&gt;Like last week, I did some more work on &lt;a class="reference external" href="https://crates.io/crates/mrh"&gt;mrh&lt;/a&gt;:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Replace colored with ansi_term (I prefer the API, and the latter was
+already a dependency of something else)&lt;/li&gt;
+&lt;li&gt;Remove &lt;a class="reference external" href="https://docs.rs/walkdir/2.0.1/walkdir/struct.WalkDir.html#method.follow_links"&gt;follow_symlinks&lt;/a&gt; feature (caused weird behavior)&lt;/li&gt;
+&lt;li&gt;Use &lt;a class="reference external" href="https://doc.rust-lang.org/std/path/struct.Path.html#method.strip_prefix"&gt;Path.strip_prefix&lt;/a&gt; instead of a custom solution&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For work (lucky me), I did a small …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Like last week, I did some more work on &lt;a class="reference external" href="https://crates.io/crates/mrh"&gt;mrh&lt;/a&gt;:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Replace colored with ansi_term (I prefer the API, and the latter was
+already a dependency of something else)&lt;/li&gt;
+&lt;li&gt;Remove &lt;a class="reference external" href="https://docs.rs/walkdir/2.0.1/walkdir/struct.WalkDir.html#method.follow_links"&gt;follow_symlinks&lt;/a&gt; feature (caused weird behavior)&lt;/li&gt;
+&lt;li&gt;Use &lt;a class="reference external" href="https://doc.rust-lang.org/std/path/struct.Path.html#method.strip_prefix"&gt;Path.strip_prefix&lt;/a&gt; instead of a custom solution&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For work (lucky me), I did a small tool that converts data from a CSV
+file containing network ports and their descriptions to a format that
+&lt;a class="reference external" href="https://www.elastic.co/products/logstash"&gt;logstash&lt;/a&gt; can use:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;I used &lt;a class="reference external" href="https://crates.io/crates/ordermap"&gt;csv&lt;/a&gt; crate first time, an experience made pleasant by serde&lt;/li&gt;
+&lt;li&gt;I also used &lt;a class="reference external" href="https://crates.io/crates/csv"&gt;ordermap&lt;/a&gt; first time, chosen because I care for output to match
+order in csv source file&lt;/li&gt;
+&lt;li&gt;Another first was &lt;a class="reference external" href="https://crates.io/crates/tera"&gt;tera&lt;/a&gt;, and its immaturity surprised me&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="Rust"></category></entry><entry><title>Rust week of 2017-11-23</title><link href="http://tshepang.net/rust-week-of-2017-11-23" rel="alternate"></link><published>2017-11-29T00:00:00+02:00</published><updated>2017-11-29T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-11-29:/rust-week-of-2017-11-23</id><summary type="html">&lt;p&gt;There wasn't much last week, other than continuing with the functional
 testing work that queries Elasticsearch.
 This week, however, saw me extending &lt;a class="reference external" href="https://crates.io/crates/mrh"&gt;mrh&lt;/a&gt;
 (Pending is a repo state that requires action):&lt;/p&gt;

@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Tshepang logs - Tshepang Lekhonkhobe</title><link>http://tshepang.net/</link><description></description><lastBuildDate>Wed, 29 Nov 2017 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2017-11-23</title><link>http://tshepang.net/rust-week-of-2017-11-23</link><description>&lt;p&gt;There wasn't much last week, other than continuing with the functional
+<rss version="2.0"><channel><title>Tshepang logs - Tshepang Lekhonkhobe</title><link>http://tshepang.net/</link><description></description><lastBuildDate>Sat, 09 Dec 2017 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2017-11-30</title><link>http://tshepang.net/rust-week-of-2017-11-30</link><description>&lt;p&gt;Like last week, I did some more work on &lt;a class="reference external" href="https://crates.io/crates/mrh"&gt;mrh&lt;/a&gt;:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Replace colored with ansi_term (I prefer the API, and the latter was
+already a dependency of something else)&lt;/li&gt;
+&lt;li&gt;Remove &lt;a class="reference external" href="https://docs.rs/walkdir/2.0.1/walkdir/struct.WalkDir.html#method.follow_links"&gt;follow_symlinks&lt;/a&gt; feature (caused weird behavior)&lt;/li&gt;
+&lt;li&gt;Use &lt;a class="reference external" href="https://doc.rust-lang.org/std/path/struct.Path.html#method.strip_prefix"&gt;Path.strip_prefix&lt;/a&gt; instead of a custom solution&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For work (lucky me), I did a small …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Sat, 09 Dec 2017 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:tshepang.net,2017-12-09:/rust-week-of-2017-11-30</guid><category>Rust</category></item><item><title>Rust week of 2017-11-23</title><link>http://tshepang.net/rust-week-of-2017-11-23</link><description>&lt;p&gt;There wasn't much last week, other than continuing with the functional
 testing work that queries Elasticsearch.
 This week, however, saw me extending &lt;a class="reference external" href="https://crates.io/crates/mrh"&gt;mrh&lt;/a&gt;
 (Pending is a repo state that requires action):&lt;/p&gt;
