@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Tshepang logs - Tshepang Lekhonkhobe</title><link>http://tshepang.net/</link><description></description><lastBuildDate>Sat, 09 Dec 2017 11:01:38 +0200</lastBuildDate><item><title>Rust 2.0 wishlist</title><link>http://tshepang.net/rust-20-wishlist</link><description>&lt;ul&gt;
+<rss version="2.0"><channel><title>Tshepang logs - Tshepang Lekhonkhobe</title><link>http://tshepang.net/</link><description></description><lastBuildDate>Thu, 14 Dec 2017 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2017-12-07</title><link>http://tshepang.net/rust-week-of-2017-12-07</link><description>&lt;p&gt;Some more work on &lt;a class="reference external" href="https://crates.io/crates/mrh"&gt;mrh&lt;/a&gt;:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Use ordermap for repeatable output&lt;/li&gt;
+&lt;li&gt;Turn into a library (backed by the command-line tool), which is a
+first for me (libs are more hard than apps, and helpfully force one
+to do a better design).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I experienced some failures too:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;I looked to using termcolor …&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Thu, 14 Dec 2017 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:tshepang.net,2017-12-14:/rust-week-of-2017-12-07</guid><category>Rust</category></item><item><title>Rust 2.0 wishlist</title><link>http://tshepang.net/rust-20-wishlist</link><description>&lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;Remove the &lt;tt class="docutils literal"&gt;try!&lt;/tt&gt; macro...
 it has a better replacement in the form of the question_mark (&lt;tt class="docutils literal"&gt;?&lt;/tt&gt;) operator.&lt;/p&gt;
 &lt;/li&gt;
