@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Tshepang logs - Tshepang Lekhonkhobe</title><link>http://tshepang.net/</link><description></description><lastBuildDate>Thu, 14 Dec 2017 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2017-12-07</title><link>http://tshepang.net/rust-week-of-2017-12-07</link><description>&lt;p&gt;Some more work on &lt;a class="reference external" href="https://crates.io/crates/mrh"&gt;mrh&lt;/a&gt;:&lt;/p&gt;
+<rss version="2.0"><channel><title>Tshepang logs - Tshepang Lekhonkhobe</title><link>http://tshepang.net/</link><description></description><lastBuildDate>Thu, 21 Dec 2017 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2017-12-14</title><link>http://tshepang.net/rust-week-of-2017-12-14</link><description>&lt;p&gt;Some more work on &lt;a class="reference external" href="https://crates.io/crates/mrh"&gt;mrh&lt;/a&gt;:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;A friend did me a nice favor of &lt;a class="reference external" href="https://github.com/tshepang/mrh/pull/1"&gt;creating an Iterator for Crawler&lt;/a&gt;,
+a task I failed at after 2 attempts... I don't yet truly get Rust lifetimes&lt;/li&gt;
+&lt;li&gt;Based on that work, I turned &lt;a class="reference external" href="https://docs.rs/mrh/0.8.1/mrh/struct.Crawler.html"&gt;Crawler&lt;/a&gt; itself into an Iterator&lt;/li&gt;
+&lt;li&gt;I added YAML and JSON output …&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Thu, 21 Dec 2017 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:tshepang.net,2017-12-21:/rust-week-of-2017-12-14</guid><category>Rust</category></item><item><title>Rust week of 2017-12-07</title><link>http://tshepang.net/rust-week-of-2017-12-07</link><description>&lt;p&gt;Some more work on &lt;a class="reference external" href="https://crates.io/crates/mrh"&gt;mrh&lt;/a&gt;:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;Use ordermap for repeatable output&lt;/li&gt;
 &lt;li&gt;Turn into a library (backed by the command-line tool), which is a
