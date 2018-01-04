@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2017-12-21T00:00:00+02:00</updated><entry><title>Rust week of 2017-12-14</title><link href="http://tshepang.net/rust-week-of-2017-12-14" rel="alternate"></link><published>2017-12-21T00:00:00+02:00</published><updated>2017-12-21T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-12-21:/rust-week-of-2017-12-14</id><summary type="html">&lt;p&gt;Some more work on &lt;a class="reference external" href="https://crates.io/crates/mrh"&gt;mrh&lt;/a&gt;:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2018-01-04T00:00:00+02:00</updated><entry><title>Rust week of 2017-12-28</title><link href="http://tshepang.net/rust-week-of-2017-12-28" rel="alternate"></link><published>2018-01-04T00:00:00+02:00</published><updated>2018-01-04T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2018-01-04:/rust-week-of-2017-12-28</id><summary type="html">&lt;p&gt;Very little Rust last week, but this week I played some with &lt;a class="reference external" href="https://github.com/ticki/termion"&gt;termion&lt;/a&gt;
+for some user interface on a private project.
+I borrowed some of the code from &lt;a class="reference external" href="http://tshepang.net/rust-weeks-of-2017-09-14-to-2017-09-28"&gt;a project I mentioned previously&lt;/a&gt;,
+one where I used the library for the first time.
+As was the case with that project …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Very little Rust last week, but this week I played some with &lt;a class="reference external" href="https://github.com/ticki/termion"&gt;termion&lt;/a&gt;
+for some user interface on a private project.
+I borrowed some of the code from &lt;a class="reference external" href="http://tshepang.net/rust-weeks-of-2017-09-14-to-2017-09-28"&gt;a project I mentioned previously&lt;/a&gt;,
+one where I used the library for the first time.
+As was the case with that project,
+I found handling of keyboard input tedious and non-intuitive,
+and imagine there must be an easier way.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;We had &lt;a class="reference external" href="https://www.meetup.com/Johannesburg-Rust-Meetup/events/246240196"&gt;another monthly meetup&lt;/a&gt; (we've had several of them so far),
+which was the usual random informal discussion of the
+exciting ecosystem of the great language that is Rust.&lt;/p&gt;
+</content><category term="Rust"></category></entry><entry><title>Rust week of 2017-12-14</title><link href="http://tshepang.net/rust-week-of-2017-12-14" rel="alternate"></link><published>2017-12-21T00:00:00+02:00</published><updated>2017-12-21T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2017-12-21:/rust-week-of-2017-12-14</id><summary type="html">&lt;p&gt;Some more work on &lt;a class="reference external" href="https://crates.io/crates/mrh"&gt;mrh&lt;/a&gt;:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;A friend did me a nice favor of &lt;a class="reference external" href="https://github.com/tshepang/mrh/pull/1"&gt;creating an Iterator for Crawler&lt;/a&gt;,
 a task I failed at after 2 attempts... I don't yet truly get Rust lifetimes&lt;/li&gt;
