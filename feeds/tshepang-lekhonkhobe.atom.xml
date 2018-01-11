@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs - Tshepang Lekhonkhobe</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2018-01-04T00:00:00+02:00</updated><entry><title>Rust week of 2017-12-28</title><link href="http://tshepang.net/rust-week-of-2017-12-28" rel="alternate"></link><published>2018-01-04T00:00:00+02:00</published><updated>2018-01-04T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2018-01-04:/rust-week-of-2017-12-28</id><summary type="html">&lt;p&gt;Very little Rust last week, but this week I played some with &lt;a class="reference external" href="https://github.com/ticki/termion"&gt;termion&lt;/a&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs - Tshepang Lekhonkhobe</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/tshepang-lekhonkhobe.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2018-01-11T00:00:00+02:00</updated><entry><title>Rust week of 2018-01-04</title><link href="http://tshepang.net/rust-week-of-2018-01-04" rel="alternate"></link><published>2018-01-11T00:00:00+02:00</published><updated>2018-01-11T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2018-01-11:/rust-week-of-2018-01-04</id><summary type="html">&lt;p&gt;Some more work on &lt;a class="reference external" href="https://crates.io/crates/mrh"&gt;mrh&lt;/a&gt;, I added the ability to check if there are
+unpulled commits as well as if there are tags that aren't pushed upstream.
+The latter is what motivated this work,
+a feature useful for work, to avoid forgetting pushing tags.
+This meant doing the dreaded work …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Some more work on &lt;a class="reference external" href="https://crates.io/crates/mrh"&gt;mrh&lt;/a&gt;, I added the ability to check if there are
+unpulled commits as well as if there are tags that aren't pushed upstream.
+The latter is what motivated this work,
+a feature useful for work, to avoid forgetting pushing tags.
+This meant doing the dreaded work of accessing the remote repo,
+which is complicated by potentially having to authenticate,
+in the case of private repos for example.
+It was painful (we need an easier git library),
+but it works (but so damn slow).
+The result is version 0.9.&lt;/p&gt;
+</content><category term="Rust"></category></entry><entry><title>Rust week of 2017-12-28</title><link href="http://tshepang.net/rust-week-of-2017-12-28" rel="alternate"></link><published>2018-01-04T00:00:00+02:00</published><updated>2018-01-04T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2018-01-04:/rust-week-of-2017-12-28</id><summary type="html">&lt;p&gt;Very little Rust last week, but this week I played some with &lt;a class="reference external" href="https://github.com/ticki/termion"&gt;termion&lt;/a&gt;
 for some user interface on a private project.
 I borrowed some of the code from &lt;a class="reference external" href="http://tshepang.net/rust-weeks-of-2017-09-14-to-2017-09-28"&gt;a project I mentioned previously&lt;/a&gt;,
 one where I used the library for the first time.
