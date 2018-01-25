@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2018-01-11T00:00:00+02:00</updated><entry><title>Rust week of 2018-01-04</title><link href="http://tshepang.net/rust-week-of-2018-01-04" rel="alternate"></link><published>2018-01-11T00:00:00+02:00</published><updated>2018-01-11T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2018-01-11:/rust-week-of-2018-01-04</id><summary type="html">&lt;p&gt;Some more work on &lt;a class="reference external" href="https://crates.io/crates/mrh"&gt;mrh&lt;/a&gt;, I added the ability to check if there are
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all-en.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2018-01-25T00:00:00+02:00</updated><entry><title>Rust week of 2018-01-18</title><link href="http://tshepang.net/rust-week-of-2018-01-18" rel="alternate"></link><published>2018-01-25T00:00:00+02:00</published><updated>2018-01-25T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2018-01-25:/rust-week-of-2018-01-18</id><summary type="html">&lt;p&gt;I did very little Rust on week of 2018-01-11,
+but &lt;a class="reference external" href="https://github.com/tshepang/mrh/commit/0bb76224978fca2324ae7b673472b68033db5a78"&gt;added --ignore-uncommitted-repos to mrh&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This week was more active...&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;I used the fantastic dialoguer for the first time...
+so pleasant, resulting in much cleaner code for a private project.&lt;/li&gt;
+&lt;li&gt;For &lt;a class="reference external" href="http://tshepang.net/rust-week-of-2017-10-05"&gt;the work project I mentioned some months ago&lt;/a&gt;,
+I added …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;I did very little Rust on week of 2018-01-11,
+but &lt;a class="reference external" href="https://github.com/tshepang/mrh/commit/0bb76224978fca2324ae7b673472b68033db5a78"&gt;added --ignore-uncommitted-repos to mrh&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This week was more active...&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;I used the fantastic dialoguer for the first time...
+so pleasant, resulting in much cleaner code for a private project.&lt;/li&gt;
+&lt;li&gt;For &lt;a class="reference external" href="http://tshepang.net/rust-week-of-2017-10-05"&gt;the work project I mentioned some months ago&lt;/a&gt;,
+I added a feature to check if certain ports of a remote machine are reachable.
+The bigger part though was it 'forced' me to refactor the code,
+since the various bits needed checking at different intervals...
+in my case, as an example, I check above reachability once in 60 seconds,
+but would check load average once in 6.&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="Rust"></category></entry><entry><title>Rust week of 2018-01-04</title><link href="http://tshepang.net/rust-week-of-2018-01-04" rel="alternate"></link><published>2018-01-11T00:00:00+02:00</published><updated>2018-01-11T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2018-01-11:/rust-week-of-2018-01-04</id><summary type="html">&lt;p&gt;Some more work on &lt;a class="reference external" href="https://crates.io/crates/mrh"&gt;mrh&lt;/a&gt;, I added the ability to check if there are
 unpulled commits as well as if there are tags that aren't pushed upstream.
 The latter is what motivated this work,
 a feature useful for work, to avoid forgetting pushing tags.

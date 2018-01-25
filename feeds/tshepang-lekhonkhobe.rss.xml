@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Tshepang logs - Tshepang Lekhonkhobe</title><link>http://tshepang.net/</link><description></description><lastBuildDate>Thu, 11 Jan 2018 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2018-01-04</title><link>http://tshepang.net/rust-week-of-2018-01-04</link><description>&lt;p&gt;Some more work on &lt;a class="reference external" href="https://crates.io/crates/mrh"&gt;mrh&lt;/a&gt;, I added the ability to check if there are
+<rss version="2.0"><channel><title>Tshepang logs - Tshepang Lekhonkhobe</title><link>http://tshepang.net/</link><description></description><lastBuildDate>Thu, 25 Jan 2018 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2018-01-18</title><link>http://tshepang.net/rust-week-of-2018-01-18</link><description>&lt;p&gt;I did very little Rust on week of 2018-01-11,
+but &lt;a class="reference external" href="https://github.com/tshepang/mrh/commit/0bb76224978fca2324ae7b673472b68033db5a78"&gt;added --ignore-uncommitted-repos to mrh&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This week was more active...&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;I used the fantastic dialoguer for the first time...
+so pleasant, resulting in much cleaner code for a private project.&lt;/li&gt;
+&lt;li&gt;For &lt;a class="reference external" href="http://tshepang.net/rust-week-of-2017-10-05"&gt;the work project I mentioned some months ago&lt;/a&gt;,
+I added …&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Thu, 25 Jan 2018 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:tshepang.net,2018-01-25:/rust-week-of-2018-01-18</guid><category>Rust</category></item><item><title>Rust week of 2018-01-04</title><link>http://tshepang.net/rust-week-of-2018-01-04</link><description>&lt;p&gt;Some more work on &lt;a class="reference external" href="https://crates.io/crates/mrh"&gt;mrh&lt;/a&gt;, I added the ability to check if there are
 unpulled commits as well as if there are tags that aren't pushed upstream.
 The latter is what motivated this work,
 a feature useful for work, to avoid forgetting pushing tags.
