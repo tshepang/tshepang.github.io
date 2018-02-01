@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs - computing</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2018-01-25T00:00:00+02:00</updated><entry><title>Rust week of 2018-01-18</title><link href="http://tshepang.net/rust-week-of-2018-01-18" rel="alternate"></link><published>2018-01-25T00:00:00+02:00</published><updated>2018-01-25T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2018-01-25:/rust-week-of-2018-01-18</id><summary type="html">&lt;p&gt;I did very little Rust on week of 2018-01-11,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs - computing</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/computing.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2018-02-01T00:00:00+02:00</updated><entry><title>Rust week of 2018-01-25</title><link href="http://tshepang.net/rust-week-of-2018-01-25" rel="alternate"></link><published>2018-02-01T00:00:00+02:00</published><updated>2018-02-01T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2018-02-01:/rust-week-of-2018-01-25</id><summary type="html">&lt;p&gt;Continuing on &lt;a class="reference external" href="http://tshepang.net/rust-week-of-2017-10-05"&gt;a work project&lt;/a&gt; I mentioned months ago,
+I had &lt;a class="reference external" href="https://github.com/libpnet/libpnet/issues/309"&gt;a failure related to cross-building pnet&lt;/a&gt;,
+a library I was using to get network interfaces.
+As a side note, &lt;a class="reference external" href="https://github.com/japaric/cross/issues/39"&gt;the fault was in the build process&lt;/a&gt;,
+not the crate itself.
+I tried a few others as replacement:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;getaddrs can't …&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Continuing on &lt;a class="reference external" href="http://tshepang.net/rust-week-of-2017-10-05"&gt;a work project&lt;/a&gt; I mentioned months ago,
+I had &lt;a class="reference external" href="https://github.com/libpnet/libpnet/issues/309"&gt;a failure related to cross-building pnet&lt;/a&gt;,
+a library I was using to get network interfaces.
+As a side note, &lt;a class="reference external" href="https://github.com/japaric/cross/issues/39"&gt;the fault was in the build process&lt;/a&gt;,
+not the crate itself.
+I tried a few others as replacement:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;getaddrs can't find ip address, and it's abandoned according to the author,
+in favor of &lt;a class="reference external" href="https://crates.io/crates/nix"&gt;nix crate&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;interfaces also fails to cross build, and I forgot that I actually
+tried it before, and was the reason I moved to pnet in the first place&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;systemstat works, and I already use it for a few things:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;load average&lt;/li&gt;
+&lt;li&gt;memory usage&lt;/li&gt;
+&lt;li&gt;uptime&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So, that's one less dependency, though I do wish this functionality
+was available from a more pleasant API... systemstat is ugly.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As a general note,
+I wish more people took the effort to state in the
+README if their software is abandoned,
+perhaps with mentions of alternatives.&lt;/p&gt;
+</content><category term="Rust"></category></entry><entry><title>Rust week of 2018-01-18</title><link href="http://tshepang.net/rust-week-of-2018-01-18" rel="alternate"></link><published>2018-01-25T00:00:00+02:00</published><updated>2018-01-25T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2018-01-25:/rust-week-of-2018-01-18</id><summary type="html">&lt;p&gt;I did very little Rust on week of 2018-01-11,
 but &lt;a class="reference external" href="https://github.com/tshepang/mrh/commit/0bb76224978fca2324ae7b673472b68033db5a78"&gt;added --ignore-uncommitted-repos to mrh&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This week was more active...&lt;/p&gt;
 &lt;ul class="simple"&gt;
@@ -16,7 +50,7 @@ so pleasant, resulting in much cleaner code for a private project.&lt;/li&gt;
 I added a feature to check if certain ports of a remote machine are reachable.
 The bigger part though was it 'forced' me to refactor the code,
 since the various bits needed checking at different intervals...
-in my case, as an example, I check above reachability once in 60 seconds,
+in my case, as an example, I check port reachability once in 60 seconds,
 but would check load average once in 6.&lt;/li&gt;
 &lt;/ul&gt;
 </content><category term="Rust"></category></entry><entry><title>Rust week of 2018-01-04</title><link href="http://tshepang.net/rust-week-of-2018-01-04" rel="alternate"></link><published>2018-01-11T00:00:00+02:00</published><updated>2018-01-11T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2018-01-11:/rust-week-of-2018-01-04</id><summary type="html">&lt;p&gt;Some more work on &lt;a class="reference external" href="https://crates.io/crates/mrh"&gt;mrh&lt;/a&gt;, I added the ability to check if there are
