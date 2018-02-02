@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2018-02-01T00:00:00+02:00</updated><entry><title>Rust week of 2018-01-25</title><link href="http://tshepang.net/rust-week-of-2018-01-25" rel="alternate"></link><published>2018-02-01T00:00:00+02:00</published><updated>2018-02-01T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2018-02-01:/rust-week-of-2018-01-25</id><summary type="html">&lt;p&gt;Continuing on &lt;a class="reference external" href="http://tshepang.net/rust-week-of-2017-10-05"&gt;a work project&lt;/a&gt; I mentioned months ago,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tshepang logs</title><link href="http://tshepang.net/" rel="alternate"></link><link href="http://tshepang.net/feeds/all.atom.xml" rel="self"></link><id>http://tshepang.net/</id><updated>2018-02-02T20:33:34+02:00</updated><entry><title>I am a very jealous person</title><link href="http://tshepang.net/i-am-a-very-jealous-person" rel="alternate"></link><published>2018-02-02T20:33:34+02:00</published><updated>2018-02-02T20:33:34+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2018-02-02:/i-am-a-very-jealous-person</id><summary type="html">&lt;p&gt;Following is some of the cases where competing software won this or
+that battle, and I am jealous since I want everyone to use what I
+like:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kubernetes/kubernetes"&gt;Kurbenetes&lt;/a&gt; is written in Go, and not Rust.
+It appears to be the most popular container orchestration system,
+and is among the hottest …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Following is some of the cases where competing software won this or
+that battle, and I am jealous since I want everyone to use what I
+like:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kubernetes/kubernetes"&gt;Kurbenetes&lt;/a&gt; is written in Go, and not Rust.
+It appears to be the most popular container orchestration system,
+and is among the hottest of new software projects,
+while having lots of momentum.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/grafana/grafana"&gt;Grafana&lt;/a&gt; is also written in Go, and not Rust.
+It produces the most pretty graphs I've seen yet,
+and is very featureful, and boasts hundreds of contributers.&lt;/li&gt;
+&lt;li&gt;Markdown is a far more popular light-weight markup language than
+the far more advanced &lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt;.
+It's particularly sad when it's not used where it's needed
+most... documenting large projects (&lt;a class="reference external" href="http://doc.rust-lang.org"&gt;example&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="Rust"></category><category term="non-Rust"></category></entry><entry><title>Rust week of 2018-01-25</title><link href="http://tshepang.net/rust-week-of-2018-01-25" rel="alternate"></link><published>2018-02-01T00:00:00+02:00</published><updated>2018-02-01T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2018-02-01:/rust-week-of-2018-01-25</id><summary type="html">&lt;p&gt;Continuing on &lt;a class="reference external" href="http://tshepang.net/rust-week-of-2017-10-05"&gt;a work project&lt;/a&gt; I mentioned months ago,
 I had &lt;a class="reference external" href="https://github.com/libpnet/libpnet/issues/309"&gt;a failure related to cross-building pnet&lt;/a&gt;,
 a library I was using to get network interfaces.
 As a side note, &lt;a class="reference external" href="https://github.com/japaric/cross/issues/39"&gt;the fault was in the build process&lt;/a&gt;,
@@ -1142,26 +1164,7 @@ care about one of values... &lt;tt class="docutils literal"&gt;if let&lt;/tt&gt;
 &lt;/ul&gt;
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;I submitted &lt;a class="reference external" href="https://github.com/rust-lang/rust/pull/34185"&gt;just one contribution&lt;/a&gt; this time around.&lt;/p&gt;
-</content><category term="Rust"></category></entry><entry><title>I am a very jealous person</title><link href="http://tshepang.net/i-am-a-very-jealous-person" rel="alternate"></link><published>2016-06-02T11:11:49+02:00</published><updated>2016-06-02T11:11:49+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2016-06-02:/i-am-a-very-jealous-person</id><summary type="html">&lt;p&gt;Following is some of the cases where competing software won this or
-that battle, and I am jealous since I want everyone to use what I
-like:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Git (and GitHub) is so much more successful than Mercurial (and
-Bitbucket), my preferred VCS. I mean even &lt;a class="reference external" href="http://tshepang.net/me-loves-new-git-site-design"&gt;the website looks
-better&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Markdown …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Following is some of the cases where competing software won this or
-that battle, and I am jealous since I want everyone to use what I
-like:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Git (and GitHub) is so much more successful than Mercurial (and
-Bitbucket), my preferred VCS. I mean even &lt;a class="reference external" href="http://tshepang.net/me-loves-new-git-site-design"&gt;the website looks
-better&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Markdown is a far more popular light-weight markup language than
-the far more advanced &lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;reStructuredText&lt;/a&gt;.
-It's particularly sad when it's not used where it's needed
-most... documenting large projects (&lt;a class="reference external" href="http://doc.rust-lang.org"&gt;example&lt;/a&gt;).&lt;/li&gt;
-&lt;/ul&gt;
-</content><category term="Python"></category><category term="non-Python"></category><category term="non-Debian"></category><category term="VCS"></category></entry><entry><title>Rust week of 2016-05-27</title><link href="http://tshepang.net/rust-week-of-2016-05-27" rel="alternate"></link><published>2016-06-02T00:00:00+02:00</published><updated>2016-06-02T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2016-06-02:/rust-week-of-2016-05-27</id><summary type="html">&lt;p&gt;Being a fanboy, I found the discussion &lt;a class="reference external" href="https://www.reddit.com/r/rust/comments/4kqhqz"&gt;Why aren't you using Rust at
+</content><category term="Rust"></category></entry><entry><title>Rust week of 2016-05-27</title><link href="http://tshepang.net/rust-week-of-2016-05-27" rel="alternate"></link><published>2016-06-02T00:00:00+02:00</published><updated>2016-06-02T00:00:00+02:00</updated><author><name>Tshepang Lekhonkhobe</name></author><id>tag:tshepang.net,2016-06-02:/rust-week-of-2016-05-27</id><summary type="html">&lt;p&gt;Being a fanboy, I found the discussion &lt;a class="reference external" href="https://www.reddit.com/r/rust/comments/4kqhqz"&gt;Why aren't you using Rust at
 work?&lt;/a&gt; rather depressing. It's also relevant to me since I am
 currently writing some internal tool at work, and wonder how far it
 will go before re-writing in something &lt;em&gt;more acceptable&lt;/em&gt;, like
