@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Tshepang logs - Tshepang Lekhonkhobe</title><link>http://tshepang.net/</link><description></description><lastBuildDate>Fri, 02 Feb 2018 20:33:34 +0200</lastBuildDate><item><title>I am a very jealous person</title><link>http://tshepang.net/i-am-a-very-jealous-person</link><description>&lt;p&gt;Following is some of the cases where competing software won this or
+<rss version="2.0"><channel><title>Tshepang logs - Tshepang Lekhonkhobe</title><link>http://tshepang.net/</link><description></description><lastBuildDate>Thu, 08 Feb 2018 00:00:00 +0200</lastBuildDate><item><title>Rust week of 2018-02-01</title><link>http://tshepang.net/rust-week-of-2018-02-01</link><description>&lt;p&gt;I used &lt;a class="reference external" href="https://crates.io/crates/serde_rusqlite"&gt;serde_rusqlite&lt;/a&gt; for the first time,
+and thought it was fantastic,
+if leveraging the wonderful serde framework.
+On a related note,
+it was kool to discover the &lt;a class="reference external" href="https://serde.rs/container-attrs.html#serderenameall--"&gt;rename_all attribute of serde&lt;/a&gt;,
+which helps reduce noise.
+Another attribute that reduces noise is &lt;tt class="docutils literal"&gt;[allow(dead_code)]&lt;/tt&gt;,
+which is also handy when using …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tshepang Lekhonkhobe</dc:creator><pubDate>Thu, 08 Feb 2018 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:tshepang.net,2018-02-08:/rust-week-of-2018-02-01</guid><category>Rust</category></item><item><title>I am a very jealous person</title><link>http://tshepang.net/i-am-a-very-jealous-person</link><description>&lt;p&gt;Following is some of the cases where competing software won this or
 that battle, and I am jealous since I want everyone to use what I
 like:&lt;/p&gt;
 &lt;ul class="simple"&gt;
