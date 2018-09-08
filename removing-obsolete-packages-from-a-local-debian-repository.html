@@ -79,77 +79,69 @@
         <div class="span8 offset2 article-content">
 
             
-            <div class="section" id="background-info">
-<h2>background info</h2>
+            <h1>background info</h1>
 <p>Bandwidth in South Africa is neither readily-available nor cheap, so
-whenever I fetch and install Debian packages (e.g. <tt class="docutils literal"><span class="pre">apt-get</span> upgrade</tt>),
-I also keep them in a local custom repository. I use a great tool named
-<a class="reference external" href="http://mirrorer.alioth.debian.org/">reprepro</a> for this, and this is the command I use to update that
+whenever I fetch and install Debian packages (e.g. <code>apt-get upgrade</code>), I
+also keep them in a local custom repository. I use a great tool named
+<a href="http://mirrorer.alioth.debian.org/">reprepro</a> for this, and this is the command I use to update that
 repository, given the location of the fresh package files:</p>
-<pre class="literal-block">
-$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang /var/cache/apt/archives/*deb
-</pre>
-<p>What's nice about the command is that, if there is an older version of
-the pacakge I'm adding, it gets replaced, and the package index is
+<div class="highlight"><pre><span></span>$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang /var/cache/apt/archives/*deb
+</pre></div>
+
+
+<p>What\'s nice about the command is that, if there is an older version of
+the pacakge I\'m adding, it gets replaced, and the package index is
 update accordingly.</p>
-</div>
-<div class="section" id="and-now-to-the-topic-at-hand">
-<h2>and now to the topic at hand</h2>
+<h1>and now to the topic at hand</h1>
 <p>I run that command more or less regularly, but very often the repository
 accumulates some junk:</p>
-<ul class="simple">
+<ul>
 <li>If a package gets renamed, reprepro has no way of knowing (at least
-as far as my setup goes). One notable case of this is Debian kernels,
-whose names match the major release versions (e.g.
-<tt class="docutils literal"><span class="pre">linux-image-3.1.0-1-686-pae</span></tt> becomes
-<tt class="docutils literal"><span class="pre">linux-image-3.2.0-1-686-pae</span></tt> when a new upstream release gets
-packaged). Lots other packages change names, and very often, for a
-variety of reasons (Debian is a little chaotic, often out of
-necessity, and it's amazing that its developers keep it so damn
-stable given all this change).</li>
+    as far as my setup goes). One notable case of this is Debian
+    kernels, whose names match the major release versions (e.g.
+    <code>linux-image-3.1.0-1-686-pae</code> becomes <code>linux-image-3.2.0-1-686-pae</code>
+    when a new upstream release gets packaged). Lots other packages
+    change names, and very often, for a variety of reasons (Debian is a
+    little chaotic, often out of necessity, and it\'s amazing that its
+    developers keep it so damn stable given all this change).</li>
 <li>If I add a package from an external repository or that I converted
-from an rpm, reprepro has no way of knowing that fact. Now if I stop
-using that package, it is just a waste of resources (CPU and disk
-usage).</li>
+    from an rpm, reprepro has no way of knowing that fact. Now if I stop
+    using that package, it is just a waste of resources (CPU and disk
+    usage).</li>
 </ul>
 <p>To help with the cleanup, I have written the following simple script:</p>
-<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
-
-<span class="kn">import</span> <span class="nn">apt_pkg</span>
-<span class="kn">import</span> <span class="nn">gzip</span>
-<span class="kn">import</span> <span class="nn">subprocess</span>
-
-<span class="n">CUSTOM_REPO</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;/home/wena/.custom_repo/dists/tshepang/main/&quot;</span>
-               <span class="s2">&quot;binary-i386/Packages.gz&quot;</span><span class="p">)</span>
-<span class="n">WHEEZY_REPO</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;/var/lib/apt/lists/ftp.de.debian.org_debian_dists_testing_{}_&quot;</span>
-               <span class="s2">&quot;binary-i386_Packages&quot;</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">custom_repo</span> <span class="o">=</span> <span class="n">apt_pkg</span><span class="o">.</span><span class="n">TagFile</span><span class="p">(</span><span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">CUSTOM_REPO</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">))</span>
-    <span class="n">archive_areas</span> <span class="o">=</span> <span class="s2">&quot;main contrib non-free&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-    <span class="n">wheezy_packages</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">archive_area</span> <span class="ow">in</span> <span class="n">archive_areas</span><span class="p">:</span>
-        <span class="n">repo</span> <span class="o">=</span> <span class="n">WHEEZY_REPO</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">archive_area</span><span class="p">)</span>
-        <span class="n">repo</span> <span class="o">=</span> <span class="n">apt_pkg</span><span class="o">.</span><span class="n">TagFile</span><span class="p">(</span><span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">repo</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">))</span>
-        <span class="n">wheezy_packages</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">pkg</span><span class="p">[</span><span class="s2">&quot;Package&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">pkg</span> <span class="ow">in</span> <span class="n">repo</span><span class="p">])</span>
-    <span class="k">for</span> <span class="n">package</span> <span class="ow">in</span> <span class="n">custom_repo</span><span class="p">:</span>
-        <span class="n">package_name</span> <span class="o">=</span> <span class="n">package</span><span class="p">[</span><span class="s2">&quot;Package&quot;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="n">package_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">wheezy_packages</span><span class="p">:</span>
-            <span class="n">cmd</span> <span class="o">=</span> <span class="s2">&quot;apt-cache policy &quot;</span> <span class="o">+</span> <span class="n">package_name</span>
-            <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">cmd</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
-            <span class="n">choice</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;remove from cache [Y/n]? &quot;</span><span class="p">)</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="n">choice</span> <span class="ow">or</span> <span class="n">choice</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">):</span>
-                <span class="n">cmd</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;reprepro -vv --basedir /home/wena/.custom_repo/ &quot;</span>
-                       <span class="s2">&quot;remove tshepang &quot;</span> <span class="o">+</span> <span class="n">package_name</span><span class="p">)</span>
-                <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">cmd</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">()</span>
-</pre></div>
-<p>And here's a snippet of its output:</p>
-<pre class="literal-block">
-cx-oracle:
+<p>``` {.sourceCode .python}</p>
+<h1>!/usr/bin/env python3</h1>
+<p>import apt_pkg
+import gzip
+import subprocess</p>
+<p>CUSTOM_REPO = ("/home/wena/.custom_repo/dists/tshepang/main/"
+               "binary-i386/Packages.gz")
+WHEEZY_REPO = ("/var/lib/apt/lists/ftp.de.debian.org_debian_dists_testing_{}_"
+               "binary-i386_Packages")</p>
+<p>def main():
+    custom_repo = apt_pkg.TagFile(gzip.open(CUSTOM_REPO, "rb"))
+    archive_areas = "main contrib non-free".split()
+    wheezy_packages = list()
+    for archive_area in archive_areas:
+        repo = WHEEZY_REPO.format(archive_area)
+        repo = apt_pkg.TagFile(gzip.open(repo, "rb"))
+        wheezy_packages.extend([pkg["Package"] for pkg in repo])
+    for package in custom_repo:
+        package_name = package["Package"]
+        if package_name not in wheezy_packages:
+            cmd = "apt-cache policy " + package_name
+            subprocess.call(cmd.split())
+            choice = input("remove from cache [Y/n]? ")
+            if not choice or choice.lower().startswith("y"):
+                cmd = ("reprepro -vv --basedir /home/wena/.custom_repo/ "
+                       "remove tshepang " + package_name)
+                subprocess.call(cmd.split())</p>
+<p>if <strong>name</strong> == "<strong>main</strong>":
+    main()
+```</p>
+<p>And here\'s a snippet of its output:</p>
+<div class="highlight"><pre><span></span>cx-oracle:
   Installed: 5.1.1-2
   Candidate: 5.1.1-2
   Version table:
@@ -157,13 +149,13 @@ cx-oracle:
         500 file:/home/wena/.custom_repo/ tshepang/main i386 Packages
         100 /var/lib/dpkg/status
 remove from cache [Y/n]?
-</pre>
+</pre></div>
+
+
 <p>What it does is look for packages which are only available in my custom
 reposity, as compared with the one in Wheezy (soon to be Debian 7). It
 then prompts me on whether or not to remove it from that custom
 repository. Today, it helped me get rid of dozens of junk.</p>
-</div>
-
             
             <section>
 <div class="accordion" id="accordion2">
@@ -203,8 +195,8 @@ repository. Today, it helped me get rid of dozens of junk.</p>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/links-2012-02-15" title="Previous: links 2012-02-15">links 2012-02-15</a></li>
-                <li class="next-article"><a href="http://tshepang.net/wajig-23-released" title="Next: wajig 2.3 released">wajig 2.3 released</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/links-2012-02-15" title="Previous: &#39;links 2012-02-15&#39;">'links 2012-02-15'</a></li>
+                <li class="next-article"><a href="http://tshepang.net/wajig-23-released" title="Next: &#39;wajig 2.3 released&#39;">'wajig 2.3 released'</a> »</li>
             </ul>
             </nav>
             </aside>

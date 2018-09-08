@@ -13,16 +13,16 @@
 
 <meta name="keywords" content="Rust, computing, " />
 
-<meta property="og:title" content="Rust week of 2016-08-12 "/>
+<meta property="og:title" content="&#39;Rust week of 2016-08-12&#39; "/>
 <meta property="og:url" content="http://tshepang.net/rust-week-of-2016-08-12" />
-<meta property="og:description" content="I enjoyed a useful (and tiny) library that helps align text nicely. Following is an example of its usage: extern crate unindent; use unindent::unindent; fn main() { let text = &#34; A long text is beginning here and not in the previous line, because it wouldn&#39;t fit in comfort. &#34; println!(&#34;{}&#34;, unindent …" />
+<meta property="og:description" content="I enjoyed a useful (and tiny) library that helps align text nicely. Following is an example of its usage: ::: {.sourcecode} rust extern crate unindent; use unindent::unindent; fn main() { let text = \&#34; A long text is beginning here and not in the previous line, because it wouldn\&#39;t fit in comfort …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2016-08-18T00:00:00+02:00" />
-<meta name="twitter:title" content="Rust week of 2016-08-12 ">
-<meta name="twitter:description" content="I enjoyed a useful (and tiny) library that helps align text nicely. Following is an example of its usage: extern crate unindent; use unindent::unindent; fn main() { let text = &#34; A long text is beginning here and not in the previous line, because it wouldn&#39;t fit in comfort. &#34; println!(&#34;{}&#34;, unindent …">
+<meta name="twitter:title" content="&#39;Rust week of 2016-08-12&#39; ">
+<meta name="twitter:description" content="I enjoyed a useful (and tiny) library that helps align text nicely. Following is an example of its usage: ::: {.sourcecode} rust extern crate unindent; use unindent::unindent; fn main() { let text = \&#34; A long text is beginning here and not in the previous line, because it wouldn\&#39;t fit in comfort …">
 
-        <title>Rust week of 2016-08-12  · Tshepang logs
+        <title>&#39;Rust week of 2016-08-12&#39;  · Tshepang logs
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -71,7 +71,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://tshepang.net/rust-week-of-2016-08-12"> Rust week of 2016-08-12  </a></h1>
+    <h1><a href="http://tshepang.net/rust-week-of-2016-08-12"> 'Rust week of 2016-08-12'  </a></h1>
     </header>
 </div>
 
@@ -79,22 +79,28 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>I enjoyed a useful (and tiny) library that helps align text
-nicely. Following is an example of its usage:</p>
-<div class="highlight"><pre><span></span><span class="k">extern</span><span class="w"> </span><span class="k">crate</span><span class="w"> </span><span class="n">unindent</span><span class="p">;</span><span class="w"></span>
-<span class="k">use</span><span class="w"> </span><span class="n">unindent</span>::<span class="n">unindent</span><span class="p">;</span><span class="w"></span>
-
-<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;</span>
-<span class="s">        A long text is beginning here and not in the previous line,</span>
-<span class="s">        because it wouldn&#39;t fit in comfort.</span>
-<span class="s">    &quot;</span><span class="w"></span>
-<span class="w">    </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">unindent</span><span class="p">(</span><span class="n">text</span><span class="p">));</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</pre></div>
-<p>I submitted to <a class="reference external" href="https://github.com/dtolnay/indoc/pull/4">small</a> <a class="reference external" href="https://github.com/dtolnay/indoc/pull/5">improvements</a> to its documentation. I also
-contributed <a class="reference external" href="https://github.com/rust-lang/cargo/pull/3015">a style improvement</a> to Cargo, the Rust package manager.</p>
-
+            <p>I enjoyed a useful (and tiny) library that helps align text nicely.
+Following is an example of its usage:</p>
+<p>::: {.sourcecode}
+rust</p>
+<p>extern crate unindent; use unindent::unindent;</p>
+<dl>
+<dt>fn main() {</dt>
+<dd>
+<dl>
+<dt>let text = \"</dt>
+<dd>
+<p>A long text is beginning here and not in the previous line,
+because it wouldn\'t fit in comfort.</p>
+</dd>
+</dl>
+<p>\" println!(\"{}\", unindent(text));</p>
+</dd>
+</dl>
+<p>}
+:::</p>
+<p>I submitted to <a href="https://github.com/dtolnay/indoc/pull/4">small</a> <a href="https://github.com/dtolnay/indoc/pull/5">improvements</a> to its documentation. I also
+contributed <a href="https://github.com/rust-lang/cargo/pull/3015">a style improvement</a> to Cargo, the Rust package manager.</p>
             
             <section>
 <div class="accordion" id="accordion2">
@@ -134,8 +140,8 @@ contributed <a class="reference external" href="https://github.com/rust-lang/car
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/rust-week-of-2016-08-05" title="Previous: Rust week of 2016-08-05">Rust week of 2016-08-05</a></li>
-                <li class="next-article"><a href="http://tshepang.net/rust-week-of-2016-08-19" title="Next: Rust week of 2016-08-19">Rust week of 2016-08-19</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/rust-week-of-2016-08-05" title="Previous: &#39;Rust week of 2016-08-05&#39;">'Rust week of 2016-08-05'</a></li>
+                <li class="next-article"><a href="http://tshepang.net/rust-week-of-2016-08-19" title="Next: &#39;Rust week of 2016-08-19&#39;">'Rust week of 2016-08-19'</a> »</li>
             </ul>
             </nav>
             </aside>

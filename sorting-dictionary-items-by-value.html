@@ -15,12 +15,12 @@
 
 <meta property="og:title" content="sorting dictionary items by value "/>
 <meta property="og:url" content="http://tshepang.net/sorting-dictionary-items-by-value" />
-<meta property="og:description" content="Following should be self-explanatory: $ python &gt;&gt;&gt; numbers = dict(zero=0, one=1, two=2, three=3) &gt;&gt;&gt; numbers {&#39;three&#39;: 3, &#39;zero&#39;: 0, &#39;two&#39;: 2, &#39;one&#39;: 1} &gt;&gt;&gt; sorted(numbers) [&#39;one&#39;, &#39;three&#39;, &#39;two&#39;, &#39;zero&#39;] &gt;&gt;&gt; sorted(numbers, key=numbers.get) [&#39;zero&#39;, &#39;one&#39;, &#39;two&#39;, &#39;three&#39;] The second-last command sorts by keys, but that&#39;s easy. Sorting by …" />
+<meta property="og:description" content="Following should be self-explanatory: ``` {.sourceCode .python} $ python numbers = dict(zero=0, one=1, two=2, three=3) numbers {&#39;three&#39;: 3, &#39;zero&#39;: 0, &#39;two&#39;: 2, &#39;one&#39;: 1} sorted(numbers) [&#39;one&#39;, &#39;three&#39;, &#39;two&#39;, &#39;zero&#39;] sorted(numbers, key=numbers.get) [&#39;zero&#39;, &#39;one&#39;, &#39;two&#39;, &#39;three&#39;] ``` The second-last command sorts by keys, but that\&#39;s …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2012-06-26T00:00:00+02:00" />
 <meta name="twitter:title" content="sorting dictionary items by value ">
-<meta name="twitter:description" content="Following should be self-explanatory: $ python &gt;&gt;&gt; numbers = dict(zero=0, one=1, two=2, three=3) &gt;&gt;&gt; numbers {&#39;three&#39;: 3, &#39;zero&#39;: 0, &#39;two&#39;: 2, &#39;one&#39;: 1} &gt;&gt;&gt; sorted(numbers) [&#39;one&#39;, &#39;three&#39;, &#39;two&#39;, &#39;zero&#39;] &gt;&gt;&gt; sorted(numbers, key=numbers.get) [&#39;zero&#39;, &#39;one&#39;, &#39;two&#39;, &#39;three&#39;] The second-last command sorts by keys, but that&#39;s easy. Sorting by …">
+<meta name="twitter:description" content="Following should be self-explanatory: ``` {.sourceCode .python} $ python numbers = dict(zero=0, one=1, two=2, three=3) numbers {&#39;three&#39;: 3, &#39;zero&#39;: 0, &#39;two&#39;: 2, &#39;one&#39;: 1} sorted(numbers) [&#39;one&#39;, &#39;three&#39;, &#39;two&#39;, &#39;zero&#39;] sorted(numbers, key=numbers.get) [&#39;zero&#39;, &#39;one&#39;, &#39;two&#39;, &#39;three&#39;] ``` The second-last command sorts by keys, but that\&#39;s …">
 
         <title>sorting dictionary items by value  · Tshepang logs
 </title>
@@ -80,20 +80,26 @@
 
             
             <p>Following should be self-explanatory:</p>
-<div class="highlight"><pre><span></span><span class="err">$</span> <span class="n">python</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">zero</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">one</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">two</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">three</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">numbers</span>
-<span class="p">{</span><span class="s1">&#39;three&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;zero&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;one&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-<span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;zero&#39;</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">numbers</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
-<span class="p">[</span><span class="s1">&#39;zero&#39;</span><span class="p">,</span> <span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">]</span>
-</pre></div>
-<p>The second-last command sorts by keys, but that's easy. Sorting by
+<p>``` {.sourceCode .python}
+$ python</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>numbers = dict(zero=0, one=1, two=2, three=3)
+numbers
+{'three': 3, 'zero': 0, 'two': 2, 'one': 1}
+sorted(numbers)
+['one', 'three', 'two', 'zero']
+sorted(numbers, key=numbers.get)
+['zero', 'one', 'two', 'three']
+```</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>The second-last command sorts by keys, but that\'s easy. Sorting by
 value, as shown by the last command above, is what trips many novices,
 and I had to spend too much time on the web finding how to do it, and I
-still don't really understand how it works, except that it works :)</p>
-
+still don\'t really understand how it works, except that it works :)</p>
             
             <section>
 <div class="accordion" id="accordion2">
@@ -133,8 +139,8 @@ still don't really understand how it works, except that it works :)</p>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/one-of-the-harsh-realities-of-working-on-a-big-floss-project" title="Previous: one of the harsh realities of working on a big FLOSS project">one of the harsh realities of working on a big FLOSS project</a></li>
-                <li class="next-article"><a href="http://tshepang.net/wajig-26-and-27" title="Next: wajig 2.6 and 2.7">wajig 2.6 and 2.7</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/when-a-floss-project-gets-real-big" title="Previous: when a FLOSS project gets real big">when a FLOSS project gets real big</a></li>
+                <li class="next-article"><a href="http://tshepang.net/wajig-26-and-27" title="Next: &#39;wajig 2.6 and 2.7&#39;">'wajig 2.6 and 2.7'</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -148,7 +154,7 @@ still don't really understand how it works, except that it works :)</p>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
                 <li><a href="http://tshepang.net/tags.html#python-ref">Python
-                    <span>62</span>
+                    <span>61</span>
 </a></li>
             </ul>
 <h4>Stay in Touch</h4>

@@ -79,147 +79,146 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>I was curious how my home machine performs compared to my work
-machine. Each of these have 4 logical processors (and 8GB of RAM), so
-are sort of comparable. I also added the <a class="reference external" href="https://www.digitalocean.com/?refcode=25b4887810cc">DigitalOcean</a> VPS with
-those specs (<a class="reference external" href="https://www.digitalocean.com/pricing">currently $80 per month</a>) because... why not.</p>
-<div class="section" id="machine-specs">
-<h2>Machine Specs</h2>
-<p>Each machine runs Debian testing (codename &quot;jessie&quot;). Following is the
+            <p>I was curious how my home machine performs compared to my work machine.
+Each of these have 4 logical processors (and 8GB of RAM), so are sort of
+comparable. I also added the <a href="https://www.digitalocean.com/?refcode=25b4887810cc">DigitalOcean</a> VPS with those specs
+(<a href="https://www.digitalocean.com/pricing">currently \$80 per month</a>) because... why not.</p>
+<h1>Machine Specs</h1>
+<p>Each machine runs Debian testing (codename \"jessie\"). Following is the
 output of these commands for each machine:</p>
-<pre class="literal-block">
-uname --all
-cat /proc/cpuinfo | sed --quiet '5p'
-</pre>
+<div class="highlight"><pre><span></span>uname --all
+cat /proc/cpuinfo | sed --quiet &#39;5p&#39;
+</pre></div>
+
+
 <p>Home machine:</p>
-<pre class="literal-block">
-Linux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU/Linux
-model name      : Intel(R) Core(TM) i5-2410M CPU &#64; 2.30GHz
-</pre>
+<div class="highlight"><pre><span></span>Linux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU/Linux
+model name      : Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz
+</pre></div>
+
+
 <p>Work machine:</p>
-<pre class="literal-block">
-Linux twork 3.10-3-amd64 #1 SMP Debian 3.10.11-1 (2013-09-10) x86_64 GNU/Linux
+<div class="highlight"><pre><span></span>Linux twork 3.10-3-amd64 #1 SMP Debian 3.10.11-1 (2013-09-10) x86_64 GNU/Linux
 model name      : AMD Phenom(tm) II X4 970 Processor
-</pre>
+</pre></div>
+
+
 <p>DigitalOcean VPS:</p>
-<pre class="literal-block">
-Linux tcloud 3.11-1-amd64 #1 SMP Debian 3.11.5-1 (2013-10-17) x86_64 GNU/Linux
+<div class="highlight"><pre><span></span>Linux tcloud 3.11-1-amd64 #1 SMP Debian 3.11.5-1 (2013-10-17) x86_64 GNU/Linux
 model name      : QEMU Virtual CPU version 1.0
-</pre>
-</div>
-<div class="section" id="cpython-benchmarks">
-<h2>CPython benchmarks</h2>
+</pre></div>
+
+
+<h1>CPython benchmarks</h1>
 <p>I ran two benchmarks, both from the latest VCS version of CPython,
 development branch:</p>
-<pre class="literal-block">
-$ hg identify --id --branch
+<div class="highlight"><pre><span></span>$ hg identify --id --branch
 b6a1a78818fe default
-</pre>
-<div class="section" id="build">
-<h3>Build</h3>
-<p>Here's the command I used:</p>
-<pre class="literal-block">
-make distclean; time (./configure &amp;&amp; make --silent --jobs=4)
-</pre>
-<div class="section" id="results">
-<h4>Results</h4>
+</pre></div>
+
+
+<h2>Build</h2>
+<p>Here\'s the command I used:</p>
+<div class="highlight"><pre><span></span>make distclean; time (./configure &amp;&amp; make --silent --jobs=4)
+</pre></div>
+
+
+<h3>Results</h3>
 <p>Home machine:</p>
-<pre class="literal-block">
-real    2m11.687s
+<div class="highlight"><pre><span></span>real    2m11.687s
 user    3m18.104s
 sys     0m9.964s
-</pre>
+</pre></div>
+
+
 <p>Work machine:</p>
-<pre class="literal-block">
-real    2m2.707s
+<div class="highlight"><pre><span></span>real    2m2.707s
 user    2m24.200s
 sys     0m12.280s
-</pre>
+</pre></div>
+
+
 <p>VPS:</p>
-<pre class="literal-block">
-real    2m30.931s
+<div class="highlight"><pre><span></span>real    2m30.931s
 user    3m7.272s
 sys     0m16.592s
-</pre>
-</div>
-</div>
-<div class="section" id="test-suite">
-<h3>Test suite</h3>
-<p>Here's the command I used:</p>
-<pre class="literal-block">
-time ./python -m test --multiprocess=0
-</pre>
+</pre></div>
+
+
+<h2>Test suite</h2>
+<p>Here\'s the command I used:</p>
+<div class="highlight"><pre><span></span>time ./python -m test --multiprocess=0
+</pre></div>
+
+
 <p><strong>--multiprocess=0</strong> means that there will be 6 tests run in parallel;
 that is the number logical cores (4 in my case) + 2 (to avoid waiting
 too long for tests which are largely idle)</p>
-<div class="section" id="id1">
-<h4>Results</h4>
-<p>Home machine:</p>
-<pre class="literal-block">
-real    3m42.571s
-user    7m13.124s
-sys     0m33.320s
-</pre>
-<p>Work machine:</p>
-<pre class="literal-block">
-real    2m29.957s
-user    4m9.052s
-sys     0m27.364s
-</pre>
-<p>VPS:</p>
-<pre class="literal-block">
-real    2m19.174s
-user    5m5.444s
-sys     0m40.008s
-</pre>
-</div>
-</div>
-</div>
-<div class="section" id="linux-kernel-build">
-<h2>Linux kernel build</h2>
-<p>Just for kicks, I decided to check how long building Linux would take;
-for this, I used latest 'final' release from Linus' git tree:</p>
-<pre class="literal-block">
-$ git log -1
-commit 6e4664525b1db28f8c4e1130957f70a94c19213e
-Author: Linus Torvalds &lt;torvalds&#64;linux-foundation.org&gt;
-Date:   Mon Sep 2 13:46:10 2013 -0700
-
-Linux 3.11
-</pre>
-<p>Here's the commands I used:</p>
-<pre class="literal-block">
-make distclean &amp;&amp; make defconfig &amp;&amp; time make
-</pre>
-<div class="section" id="id2">
 <h3>Results</h3>
 <p>Home machine:</p>
-<pre class="literal-block">
-real    6m11.622s
+<div class="highlight"><pre><span></span>real    3m42.571s
+user    7m13.124s
+sys     0m33.320s
+</pre></div>
+
+
+<p>Work machine:</p>
+<div class="highlight"><pre><span></span>real    2m29.957s
+user    4m9.052s
+sys     0m27.364s
+</pre></div>
+
+
+<p>VPS:</p>
+<div class="highlight"><pre><span></span>real    2m19.174s
+user    5m5.444s
+sys     0m40.008s
+</pre></div>
+
+
+<h1>Linux kernel build</h1>
+<p>Just for kicks, I decided to check how long building Linux would take;
+for this, I used latest \'final\' release from Linus\' git tree:</p>
+<div class="highlight"><pre><span></span>$ git log -1
+commit 6e4664525b1db28f8c4e1130957f70a94c19213e
+Author: Linus Torvalds &lt;torvalds@linux-foundation.org&gt;
+Date:   Mon Sep <span class="m">2</span> <span class="m">13</span>:46:10 <span class="m">2013</span> -0700
+
+Linux <span class="m">3</span>.11
+</pre></div>
+
+
+<p>Here\'s the commands I used:</p>
+<div class="highlight"><pre><span></span>make distclean &amp;&amp; make defconfig &amp;&amp; time make
+</pre></div>
+
+
+<h2>Results</h2>
+<p>Home machine:</p>
+<div class="highlight"><pre><span></span>real    6m11.622s
 user    21m2.664s
 sys     1m15.324s
-</pre>
+</pre></div>
+
+
 <p>Work machine:</p>
-<pre class="literal-block">
-real    2m40.275s
+<div class="highlight"><pre><span></span>real    2m40.275s
 user    8m55.624s
 sys     0m42.860s
-</pre>
+</pre></div>
+
+
 <p>VPS:</p>
-<pre class="literal-block">
-real    3m41.240s
+<div class="highlight"><pre><span></span>real    3m41.240s
 user    12m21.120s
 sys     1m17.844s
-</pre>
-</div>
-</div>
-<div class="section" id="conclusion">
-<h2>Conclusion</h2>
+</pre></div>
+
+
+<h1>Conclusion</h1>
 <p>My work machine is faster than the DigitalOcean offering of comparable
 specs, and much faster than my home machine, a laptop.</p>
-<p>(<a class="reference external" href="http://stackoverflow.com/a/556411/321731">detailed explanation of the output</a>)</p>
-</div>
-
+<p>(<a href="http://stackoverflow.com/a/556411/321731">detailed explanation of the output</a>)</p>
             
             <section>
 <div class="accordion" id="accordion2">
@@ -260,7 +259,7 @@ specs, and much faster than my home machine, a laptop.</p>
             <nav>
             <ul class="articles-timeline">
                 <li class="previous-article">« <a href="http://tshepang.net/projects-with-excellent-documentation" title="Previous: projects with excellent documentation">projects with excellent documentation</a></li>
-                <li class="next-article"><a href="http://tshepang.net/introducing-hedzoleh-soundz-1973" title="Next: Introducing Hedzoleh Soundz (1973)">Introducing Hedzoleh Soundz (1973)</a> »</li>
+                <li class="next-article"><a href="http://tshepang.net/introducing-hedzoleh-soundz-1973" title="Next: &#39;Introducing Hedzoleh Soundz (1973)&#39;">'Introducing Hedzoleh Soundz (1973)'</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -274,7 +273,7 @@ specs, and much faster than my home machine, a laptop.</p>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
                 <li><a href="http://tshepang.net/tags.html#python-ref">Python
-                    <span>62</span>
+                    <span>61</span>
 </a></li>
             </ul>
 <h4>Stay in Touch</h4>

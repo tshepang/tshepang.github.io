@@ -13,16 +13,16 @@
 
 <meta name="keywords" content="Rust, computing, " />
 
-<meta property="og:title" content="Rust week of 2016-12-30 "/>
+<meta property="og:title" content="&#39;Rust week of 2016-12-30&#39; "/>
 <meta property="og:url" content="http://tshepang.net/rust-week-of-2016-12-30" />
-<meta property="og:description" content="We need more quality code reviews like this one for ripgrep. I used reqwest for the first time, and was made sad because using HTTP headers is as hard as doing the same for hyper, especially given that this is supposed to be a more easy library: let mut auth_bearer …" />
+<meta property="og:description" content="We need more quality code reviews like this one for ripgrep. I used reqwest for the first time, and was made sad because using HTTP headers is as hard as doing the same for hyper, especially given that this is supposed to be a more easy library: ::: {.sourcecode} Rust let …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2017-01-03T00:00:00+02:00" />
-<meta name="twitter:title" content="Rust week of 2016-12-30 ">
-<meta name="twitter:description" content="We need more quality code reviews like this one for ripgrep. I used reqwest for the first time, and was made sad because using HTTP headers is as hard as doing the same for hyper, especially given that this is supposed to be a more easy library: let mut auth_bearer …">
+<meta name="twitter:title" content="&#39;Rust week of 2016-12-30&#39; ">
+<meta name="twitter:description" content="We need more quality code reviews like this one for ripgrep. I used reqwest for the first time, and was made sad because using HTTP headers is as hard as doing the same for hyper, especially given that this is supposed to be a more easy library: ::: {.sourcecode} Rust let …">
 
-        <title>Rust week of 2016-12-30  · Tshepang logs
+        <title>&#39;Rust week of 2016-12-30&#39;  · Tshepang logs
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -71,7 +71,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://tshepang.net/rust-week-of-2016-12-30"> Rust week of 2016-12-30  </a></h1>
+    <h1><a href="http://tshepang.net/rust-week-of-2016-12-30"> 'Rust week of 2016-12-30'  </a></h1>
     </header>
 </div>
 
@@ -79,32 +79,29 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>We need more quality code reviews like <a class="reference external" href="http://blog.mbrt.it/2016-12-01-ripgrep-code-review">this one</a> for ripgrep.</p>
-<hr class="docutils" />
-<p>I used <a class="reference external" href="https://docs.rs/reqwest">reqwest</a> for the first time,
-and was made sad because using HTTP headers is as hard as doing the
-same for <a class="reference external" href="https://docs.rs/hyper">hyper</a>,
-especially given that this is supposed to be a more easy library:</p>
-<div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">auth_bearer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Headers</span>::<span class="n">new</span><span class="p">();</span><span class="w"></span>
-<span class="n">headers</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="n">Authorization</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
-<span class="w">        </span><span class="n">Bearer</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">token</span>: <span class="s">&quot;some token&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">)</span><span class="w"></span>
-<span class="p">);</span><span class="w"></span>
-<span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reqwest</span>::<span class="n">Client</span>::<span class="n">new</span><span class="p">();</span><span class="w"></span>
-<span class="n">client</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">&quot;example.com&quot;</span><span class="p">).</span><span class="n">headers</span><span class="p">(</span><span class="n">auth_bearer</span><span class="p">).</span><span class="n">send</span><span class="p">();</span><span class="w"></span>
-</pre></div>
+            <p>We need more quality code reviews like <a href="http://blog.mbrt.it/2016-12-01-ripgrep-code-review">this one</a> for ripgrep.</p>
+<hr>
+<p>I used <a href="https://docs.rs/reqwest">reqwest</a> for the first time, and was made sad because using HTTP
+headers is as hard as doing the same for <a href="https://docs.rs/hyper">hyper</a>, especially given that
+this is supposed to be a more easy library:</p>
+<p>::: {.sourcecode}
+Rust</p>
+<p>let mut auth_bearer = Headers::new(); headers.set( Authorization (
+Bearer { token: \"some token\", } ) ); let mut client =
+reqwest::Client::new();
+client.get(\"example.com\").headers(auth_bearer).send();
+:::</p>
 <p>It can imagine a more nice API:</p>
-<div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="n">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reqwest</span>::<span class="n">Client</span>::<span class="n">new</span><span class="p">();</span><span class="w"></span>
-<span class="kd">let</span><span class="w"> </span><span class="n">auth_bearer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reqwest</span>::<span class="n">Header</span>::<span class="n">Bearer</span>::<span class="n">new</span><span class="p">(</span><span class="s">&quot;some token&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">client</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">&quot;example.com&quot;</span><span class="p">).</span><span class="n">header</span><span class="p">(</span><span class="n">auth_bearer</span><span class="p">).</span><span class="n">send</span><span class="p">();</span><span class="w"></span>
-</pre></div>
-<p>I did not think much about this, so maybe there are issues with the desired.</p>
-<hr class="docutils" />
-<p>Just <a class="reference external" href="https://github.com/serde-rs/json/pull/182">one contribution</a> this time.</p>
-
+<p>::: {.sourcecode}
+Rust</p>
+<p>let client = reqwest::Client::new(); let auth_bearer =
+reqwest::Header::Bearer::new(\"some token\");
+client.get(\"example.com\").header(auth_bearer).send();
+:::</p>
+<p>I did not think much about this, so maybe there are issues with the
+desired.</p>
+<hr>
+<p>Just <a href="https://github.com/serde-rs/json/pull/182">one contribution</a> this time.</p>
             
             <section>
 <div class="accordion" id="accordion2">
@@ -144,8 +141,8 @@ especially given that this is supposed to be a more easy library:</p>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/rust-week-of-2016-12-23" title="Previous: Rust week of 2016-12-23">Rust week of 2016-12-23</a></li>
-                <li class="next-article"><a href="http://tshepang.net/rust-week-of-2017-01-13" title="Next: Rust week of 2017-01-13">Rust week of 2017-01-13</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/rust-week-of-2016-12-23" title="Previous: &#39;Rust week of 2016-12-23&#39;">'Rust week of 2016-12-23'</a></li>
+                <li class="next-article"><a href="http://tshepang.net/rust-week-of-2017-01-13" title="Next: &#39;Rust week of 2017-01-13&#39;">'Rust week of 2017-01-13'</a> »</li>
             </ul>
             </nav>
             </aside>

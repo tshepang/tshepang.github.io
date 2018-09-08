@@ -11,16 +11,16 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="Debian, Python, computing, " />
+<meta name="keywords" content="'Debian, Python', computing, " />
 
 <meta property="og:title" content="comparing Debian repositories "/>
 <meta property="og:url" content="http://tshepang.net/comparing-debian-repositories" />
-<meta property="og:description" content="If you got two Debian repositories, it&#39;s quite easy to check the differences in package versions between them: import os import gzip import apt_pkg repo1 = &#34;~/.repo_custom/dists/cache/main/binary-i386/Packages.gz&#34; repo1 = os.path.expanduser(repo1) repo1 = apt_pkg.TagFile(gzip.open(repo1, &#34;rb&#34;)) repo1 = dict([(pkg[&#34;Package&#34;], pkg[&#34;Version …" />
+<meta property="og:description" content="If you got two Debian repositories, it\&#39;s quite easy to check the differences in package versions between them: ``` {.sourceCode .python} import os import gzip import apt_pkg repo1 = &#34;~/.repo_custom/dists/cache/main/binary-i386/Packages.gz&#34; repo1 = os.path.expanduser(repo1) repo1 = apt_pkg.TagFile(gzip.open(repo1, &#34;rb&#34;)) repo1 = dict([(pkg …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2011-02-09T00:00:00+02:00" />
 <meta name="twitter:title" content="comparing Debian repositories ">
-<meta name="twitter:description" content="If you got two Debian repositories, it&#39;s quite easy to check the differences in package versions between them: import os import gzip import apt_pkg repo1 = &#34;~/.repo_custom/dists/cache/main/binary-i386/Packages.gz&#34; repo1 = os.path.expanduser(repo1) repo1 = apt_pkg.TagFile(gzip.open(repo1, &#34;rb&#34;)) repo1 = dict([(pkg[&#34;Package&#34;], pkg[&#34;Version …">
+<meta name="twitter:description" content="If you got two Debian repositories, it\&#39;s quite easy to check the differences in package versions between them: ``` {.sourceCode .python} import os import gzip import apt_pkg repo1 = &#34;~/.repo_custom/dists/cache/main/binary-i386/Packages.gz&#34; repo1 = os.path.expanduser(repo1) repo1 = apt_pkg.TagFile(gzip.open(repo1, &#34;rb&#34;)) repo1 = dict([(pkg …">
 
         <title>comparing Debian repositories  · Tshepang logs
 </title>
@@ -79,50 +79,46 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>If you got two Debian repositories, it's quite easy to check the
+            <p>If you got two Debian repositories, it\'s quite easy to check the
 differences in package versions between them:</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">gzip</span>
-<span class="kn">import</span> <span class="nn">apt_pkg</span>
-
-<span class="n">repo1</span> <span class="o">=</span> <span class="s2">&quot;~/.repo_custom/dists/cache/main/binary-i386/Packages.gz&quot;</span>
-<span class="n">repo1</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">repo1</span><span class="p">)</span>
-<span class="n">repo1</span> <span class="o">=</span> <span class="n">apt_pkg</span><span class="o">.</span><span class="n">TagFile</span><span class="p">(</span><span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">repo1</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">))</span>
-<span class="n">repo1</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">([(</span><span class="n">pkg</span><span class="p">[</span><span class="s2">&quot;Package&quot;</span><span class="p">],</span> <span class="n">pkg</span><span class="p">[</span><span class="s2">&quot;Version&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">pkg</span> <span class="ow">in</span> <span class="n">repo1</span><span class="p">])</span>
-
-<span class="n">repo2</span> <span class="o">=</span> <span class="s2">&quot;~/.repo_bin/dists/squeeze/main/binary-i386/Packages.gz&quot;</span>
-<span class="n">repo2</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">repo2</span><span class="p">)</span>
-<span class="n">repo2</span> <span class="o">=</span> <span class="n">apt_pkg</span><span class="o">.</span><span class="n">TagFile</span><span class="p">(</span><span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">repo2</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">))</span>
-<span class="n">repo2</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">([(</span><span class="n">pkg</span><span class="p">[</span><span class="s2">&quot;Package&quot;</span><span class="p">],</span> <span class="n">pkg</span><span class="p">[</span><span class="s2">&quot;Version&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">pkg</span> <span class="ow">in</span> <span class="n">repo2</span><span class="p">])</span>
-
-<span class="n">apt_pkg</span><span class="o">.</span><span class="n">init_system</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">pkg</span> <span class="ow">in</span> <span class="n">repo1</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">pkg</span> <span class="ow">in</span> <span class="n">repo2</span><span class="p">:</span>
-        <span class="n">vc</span> <span class="o">=</span> <span class="n">apt_pkg</span><span class="o">.</span><span class="n">version_compare</span><span class="p">(</span><span class="n">repo1</span><span class="p">[</span><span class="n">pkg</span><span class="p">],</span> <span class="n">repo2</span><span class="p">[</span><span class="n">pkg</span><span class="p">])</span>
-        <span class="k">if</span> <span class="n">vc</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;{0}t{1}t({2})&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">repo1</span><span class="p">[</span><span class="n">pkg</span><span class="p">],</span> <span class="n">repo2</span><span class="p">[</span><span class="n">pkg</span><span class="p">],</span> <span class="n">pkg</span><span class="p">))</span>
-</pre></div>
-<p>The line <tt class="docutils literal">import apt_pkg</tt> implies that <strong>python3-apt</strong> is installed.</p>
-<p>Here's a snippet of what the output will look like:</p>
-<pre class="literal-block">
-2.32.1-2    2.28.1-6    (gconf-defaults-service)
+<p>``` {.sourceCode .python}
+import os
+import gzip
+import apt_pkg</p>
+<p>repo1 = "~/.repo_custom/dists/cache/main/binary-i386/Packages.gz"
+repo1 = os.path.expanduser(repo1)
+repo1 = apt_pkg.TagFile(gzip.open(repo1, "rb"))
+repo1 = dict([(pkg["Package"], pkg["Version"]) for pkg in repo1])</p>
+<p>repo2 = "~/.repo_bin/dists/squeeze/main/binary-i386/Packages.gz"
+repo2 = os.path.expanduser(repo2)
+repo2 = apt_pkg.TagFile(gzip.open(repo2, "rb"))
+repo2 = dict([(pkg["Package"], pkg["Version"]) for pkg in repo2])</p>
+<p>apt_pkg.init_system()
+for pkg in repo1:
+    if pkg in repo2:
+        vc = apt_pkg.version_compare(repo1[pkg], repo2[pkg])
+        if vc &gt; 0:
+            print("{0}t{1}t({2})".format(repo1[pkg], repo2[pkg], pkg))
+```</p>
+<p>The line <code>import apt_pkg</code> implies that <strong>python3-apt</strong> is installed.</p>
+<p>Here\'s a snippet of what the output will look like:</p>
+<div class="highlight"><pre><span></span>2.32.1-2    2.28.1-6    (gconf-defaults-service)
 0.23.0-1    0.21.1-1    (pylint)
 2.91.5-2    2.30.2-2    (libgnomekbd-common)
 0.21.2-1    0.16.4-1    (libpixman-1-dev)
 2.91.7-1    2.30.1-2    (nautilus)
 0.9.22-1    0.9.21-3    (pulseaudio-utils)
-</pre>
+</pre></div>
+
+
 <p>Here, we get a display of package versions where the repo1 (custom repo
 in this case) is greater than repo2 version. To do it the other way
-around, use the <tt class="docutils literal">&lt;</tt> character in the comparison line, <tt class="docutils literal">if vc &gt; 0</tt>.</p>
-<div class="section" id="further-reading">
-<h2>further reading</h2>
-<ul class="simple">
-<li>modules: <a class="reference external" href="http://docs.python.org/library/gzip">gzip</a>, <a class="reference external" href="http://docs.python.org/library/os">os</a></li>
-<li>3rd party library: <a class="reference external" href="http://apt.alioth.debian.org/python-apt-doc/library/apt_pkg.html">apt_pkg</a></li>
+around, use the <code>&lt;</code> character in the comparison line, <code>if vc &gt; 0</code>.</p>
+<h1>further reading</h1>
+<ul>
+<li>modules: <a href="http://docs.python.org/library/gzip">gzip</a>, <a href="http://docs.python.org/library/os">os</a></li>
+<li>3rd party library: [apt_pkg]</li>
 </ul>
-</div>
-
             
             <section>
 <div class="accordion" id="accordion2">
@@ -162,8 +158,8 @@ around, use the <tt class="docutils literal">&lt;</tt> character in the comparis
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/links-2011-02-07" title="Previous: links 2011-02-07">links 2011-02-07</a></li>
-                <li class="next-article"><a href="http://tshepang.net/links-2011-02-15" title="Next: links 2011-02-15">links 2011-02-15</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/links-2011-02-07" title="Previous: &#39;links 2011-02-07&#39;">'links 2011-02-07'</a></li>
+                <li class="next-article"><a href="http://tshepang.net/links-2011-02-15" title="Next: &#39;links 2011-02-15&#39;">'links 2011-02-15'</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -176,11 +172,11 @@ around, use the <tt class="docutils literal">&lt;</tt> character in the comparis
             <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://tshepang.net/tags.html#debian-ref">Debian
+                <li><a href="http://tshepang.net/tags.html#debian-ref">'Debian
                     <span>49</span>
 </a></li>
-                <li><a href="http://tshepang.net/tags.html#python-ref">Python
-                    <span>62</span>
+                <li><a href="http://tshepang.net/tags.html#python-ref">Python'
+                    <span>61</span>
 </a></li>
             </ul>
 <h4>Stay in Touch</h4>

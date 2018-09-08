@@ -11,18 +11,18 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="project-of-note, GNOME, computing, " />
+<meta name="keywords" content="'project-of-note, GNOME', computing, " />
 
-<meta property="og:title" content="project of note: rdiff-backup "/>
+<meta property="og:title" content="&#39;project of note: rdiff-backup&#39; "/>
 <meta property="og:url" content="http://tshepang.net/project-of-note-rdiff-backup" />
-<meta property="og:description" content="So I got my hands on a 250GB 2.5&#34; portable HDD, which led to me to go do proper backups again. I decided to go back to the familiar rdiff-backup and I became exceedingly impressed by its thorough documentation (manpage, FAQ, and the one place beginners should start, examples …" />
+<meta property="og:description" content="So I got my hands on a 250GB 2.5\&#34; portable HDD, which led to me to go do proper backups again. I decided to go back to the familiar rdiff-backup and I became exceedingly impressed by its thorough documentation (manpage, FAQ, and the one place beginners should start, examples …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2011-01-18T00:00:00+02:00" />
-<meta name="twitter:title" content="project of note: rdiff-backup ">
-<meta name="twitter:description" content="So I got my hands on a 250GB 2.5&#34; portable HDD, which led to me to go do proper backups again. I decided to go back to the familiar rdiff-backup and I became exceedingly impressed by its thorough documentation (manpage, FAQ, and the one place beginners should start, examples …">
+<meta name="twitter:title" content="&#39;project of note: rdiff-backup&#39; ">
+<meta name="twitter:description" content="So I got my hands on a 250GB 2.5\&#34; portable HDD, which led to me to go do proper backups again. I decided to go back to the familiar rdiff-backup and I became exceedingly impressed by its thorough documentation (manpage, FAQ, and the one place beginners should start, examples …">
 
-        <title>project of note: rdiff-backup  · Tshepang logs
+        <title>&#39;project of note: rdiff-backup&#39;  · Tshepang logs
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -71,7 +71,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://tshepang.net/project-of-note-rdiff-backup"> project of note: rdiff-backup  </a></h1>
+    <h1><a href="http://tshepang.net/project-of-note-rdiff-backup"> 'project of note: rdiff-backup'  </a></h1>
     </header>
 </div>
 
@@ -79,28 +79,28 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>So I got my hands on a 250GB 2.5&quot; portable HDD, which led to me to go do
-proper backups again. I decided to go back to the familiar
-<a class="reference external" href="http://rdiff-backup.nongnu.org/">rdiff-backup</a> and I became exceedingly impressed by its thorough
-documentation (<a class="reference external" href="http://rdiff-backup.nongnu.org/rdiff-backup.1.html">manpage</a>, <a class="reference external" href="http://rdiff-backup.nongnu.org/FAQ.html">FAQ</a>, and the one place beginners should
-start, <a class="reference external" href="http://rdiff-backup.nongnu.org/examples.html">examples</a>), a myriad capabilities (over 60 command line
+            <p>So I got my hands on a 250GB 2.5\" portable HDD, which led to me to go
+do proper backups again. I decided to go back to the familiar
+<a href="http://rdiff-backup.nongnu.org/">rdiff-backup</a> and I became exceedingly impressed by its thorough
+documentation (<a href="http://rdiff-backup.nongnu.org/rdiff-backup.1.html">manpage</a>, <a href="http://rdiff-backup.nongnu.org/FAQ.html">FAQ</a>, and the one place beginners should
+start, <a href="http://rdiff-backup.nongnu.org/examples.html">examples</a>), a myriad capabilities (over 60 command line
 options), and an elegant design (the target directory looks exactly like
 the original except for an extra directory named rdiff-backup-data,
-which contains all that's needed to roll-back, restore, check stats,
+which contains all that\'s needed to roll-back, restore, check stats,
 ...).</p>
 <p>My usage:</p>
-<pre class="literal-block">
-$ rdiff-backup --include-globbing-filelist rdiff-backup ~/ /media/backup
-</pre>
-<p>There, <tt class="docutils literal"><span class="pre">~/conf/rdiff-backup</span></tt> is a file that has a list of directories
-I want to exclude in the backup, and <tt class="docutils literal">/media/backup</tt> is the backup
-destination.</p>
-<hr class="docutils" />
-<p>There is a credible competitor in a form of duplicity, which is probably
-superior since it's got encryption. This duplicity also got a bonus of
-being used by some hot new GUI backup utility now <a class="reference external" href="http://lists.fedoraproject.org/pipermail/announce/2010-May/002815.html">endorsed by Fedora</a>
-and may in future be <a class="reference external" href="http://mail.gnome.org/archives/desktop-devel-list/2010-February/msg00013.html">an official part of GNOME</a>, Déjà Dup.</p>
+<div class="highlight"><pre><span></span>$ rdiff-backup --include-globbing-filelist rdiff-backup ~/ /media/backup
+</pre></div>
 
+
+<p>There, <code>~/conf/rdiff-backup</code> is a file that has a list of directories I
+want to exclude in the backup, and <code>/media/backup</code> is the backup
+destination.</p>
+<hr>
+<p>There is a credible competitor in a form of duplicity, which is probably
+superior since it\'s got encryption. This duplicity also got a bonus of
+being used by some hot new GUI backup utility now <a href="http://lists.fedoraproject.org/pipermail/announce/2010-May/002815.html">endorsed by Fedora</a>
+and may in future be <a href="http://mail.gnome.org/archives/desktop-devel-list/2010-February/msg00013.html">an official part of GNOME</a>, Déjà Dup.</p>
             
             <section>
 <div class="accordion" id="accordion2">
@@ -140,8 +140,8 @@ and may in future be <a class="reference external" href="http://mail.gnome.org/a
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/project-of-note-sudo" title="Previous: project of note: Sudo">project of note: Sudo</a></li>
-                <li class="next-article"><a href="http://tshepang.net/project-of-note-mailman" title="Next: project of note: Mailman">project of note: Mailman</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/project-of-note-sudo" title="Previous: &#39;project of note: Sudo&#39;">'project of note: Sudo'</a></li>
+                <li class="next-article"><a href="http://tshepang.net/project-of-note-mailman" title="Next: &#39;project of note: Mailman&#39;">'project of note: Mailman'</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -154,10 +154,10 @@ and may in future be <a class="reference external" href="http://mail.gnome.org/a
             <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://tshepang.net/tags.html#gnome-ref">GNOME
+                <li><a href="http://tshepang.net/tags.html#gnome-ref">GNOME'
                     <span>22</span>
 </a></li>
-                <li><a href="http://tshepang.net/tags.html#project-of-note-ref">project-of-note
+                <li><a href="http://tshepang.net/tags.html#project-of-note-ref">'project-of-note
                     <span>18</span>
 </a></li>
             </ul>

@@ -11,18 +11,18 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="project-of-note, Python, Pyramid, computing, " />
+<meta name="keywords" content="'project-of-note, Python, Pyramid', computing, " />
 
-<meta property="og:title" content="project of note: Sphinx "/>
+<meta property="og:title" content="&#39;project of note: Sphinx&#39; "/>
 <meta property="og:url" content="http://tshepang.net/project-of-note-sphinx" />
 <meta property="og:description" content="Sphinx is a tool that is used to generate documentation from reStructuredText (rST) markup language, and is mainly used in the Python ecosystem. I honor it much for it is a really powerful system, and I have come to appreciate it a lot recently, with my work on documentation of …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2013-08-08T00:00:00+02:00" />
-<meta name="twitter:title" content="project of note: Sphinx ">
+<meta name="twitter:title" content="&#39;project of note: Sphinx&#39; ">
 <meta name="twitter:description" content="Sphinx is a tool that is used to generate documentation from reStructuredText (rST) markup language, and is mainly used in the Python ecosystem. I honor it much for it is a really powerful system, and I have come to appreciate it a lot recently, with my work on documentation of …">
 
-        <title>project of note: Sphinx  · Tshepang logs
+        <title>&#39;project of note: Sphinx&#39;  · Tshepang logs
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -71,7 +71,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://tshepang.net/project-of-note-sphinx"> project of note: Sphinx  </a></h1>
+    <h1><a href="http://tshepang.net/project-of-note-sphinx"> 'project of note: Sphinx'  </a></h1>
     </header>
 </div>
 
@@ -79,31 +79,30 @@
         <div class="span8 offset2 article-content">
 
             
-            <p><a class="reference external" href="http://sphinx-doc.org">Sphinx</a> is a tool that is used to generate documentation from
-<a class="reference external" href="http://en.wikipedia.org/wiki/ReStructuredText">reStructuredText</a> (rST) markup language, and is mainly used in the Python
-ecosystem. I honor it much for it is a really powerful system, and I
-have come to appreciate it a lot recently, with my work on documentation
-of software that falls under the Pylons project.</p>
+            <p><a href="http://sphinx-doc.org">Sphinx</a> is a tool that is used to generate documentation from
+<a href="http://en.wikipedia.org/wiki/ReStructuredText">reStructuredText</a> (rST) markup language, and is mainly used in the
+Python ecosystem. I honor it much for it is a really powerful system,
+and I have come to appreciate it a lot recently, with my work on
+documentation of software that falls under the Pylons project.</p>
 <p>It is a pity that the markup is not as simple as that of the more
-popular <a class="reference external" href="http://en.wikipedia.org/wiki/Markdown">Markdown</a>, but maybe that was out of necessity, since it is
-far more advanced: it was initially built as a replacement for the
-tools that build CPython documentation, which is quite extensive and
-needs lots of rails.</p>
-<p>As an example of that power, have a look at <a class="reference external" href="https://github.com/Pylons/pyramid_tutorials/commit/134190">these changes I made</a> for
-<a class="reference external" href="http://docs.pylonsproject.org/projects/pyramid_tutorials/en/latest/">pyramid_tutorials</a>. In that commit, the feature I used allows you to
+popular <a href="http://en.wikipedia.org/wiki/Markdown">Markdown</a>, but maybe that was out of necessity, since it is far
+more advanced: it was initially built as a replacement for the tools
+that build CPython documentation, which is quite extensive and needs
+lots of rails.</p>
+<p>As an example of that power, have a look at <a href="https://github.com/Pylons/pyramid_tutorials/commit/134190">these changes I made</a> for
+[pyramid_tutorials]. In that commit, the feature I used allows you to
 include code snippets directly from files, instead of doing the
 copy-paste dance, avoiding duplication and rot. This feature is known as
-<a class="reference external" href="http://sphinx-doc.org/markup/code.html#directive-literalinclude">literalinclude</a>.</p>
+<a href="http://sphinx-doc.org/markup/code.html#directive-literalinclude">literalinclude</a>.</p>
 <p>Another feature I recently worked with in the recent past is
-<a class="reference external" href="http://sphinx-doc.org/ext/intersphinx.html#confval-intersphinx_mapping">intersphinx_mapping</a>. It allows one to generate
-references in rST as if those reference were local. For example, if
-you wanted to generate a link to the CPython <tt class="docutils literal">open()</tt> built-in
-function, you would need only specify it as <tt class="docutils literal">:func:open</tt>.  This is
-as opposed to finding the actual link and specifying it normally.</p>
-<p>One other feature I discovered (but haven't used yet) is <a class="reference external" href="http://sphinx-doc.org/domains.html#info-field-lists">Info field
-lists</a> feature. To see it in action, visit <a class="reference external" href="https://postgres-py.readthedocs.org/en/latest/#postgres.Postgres.run">this link</a>, and then
-look at <a class="reference external" href="https://postgres-py.readthedocs.org/en/latest/_modules/postgres.html#Postgres.run">its markup</a>. It's gorgeous!</p>
-
+[intersphinx_mapping]. It allows one to generate references in rST as
+if those reference were local. For example, if you wanted to generate a
+link to the CPython <code>open()</code> built-in function, you would need only
+specify it as <code>:func:open</code>. This is as opposed to finding the actual
+link and specifying it normally.</p>
+<p>One other feature I discovered (but haven\'t used yet) is <a href="http://sphinx-doc.org/domains.html#info-field-lists">Info field
+lists</a> feature. To see it in action, visit <a href="https://postgres-py.readthedocs.org/en/latest/#postgres.Postgres.run">this link</a>, and then look at
+<a href="https://postgres-py.readthedocs.org/en/latest/_modules/postgres.html#Postgres.run">its markup</a>. It\'s gorgeous!</p>
             
             <section>
 <div class="accordion" id="accordion2">
@@ -144,7 +143,7 @@ look at <a class="reference external" href="https://postgres-py.readthedocs.org/
             <nav>
             <ul class="articles-timeline">
                 <li class="previous-article">« <a href="http://tshepang.net/challenges-facing-python-from-other-languages" title="Previous: challenges facing Python from other languages">challenges facing Python from other languages</a></li>
-                <li class="next-article"><a href="http://tshepang.net/links-2013-08-09" title="Next: links 2013-08-09">links 2013-08-09</a> »</li>
+                <li class="next-article"><a href="http://tshepang.net/links-2013-08-09" title="Next: &#39;links 2013-08-09&#39;">'links 2013-08-09'</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -157,14 +156,14 @@ look at <a class="reference external" href="https://postgres-py.readthedocs.org/
             <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://tshepang.net/tags.html#project-of-note-ref">project-of-note
+                <li><a href="http://tshepang.net/tags.html#project-of-note-ref">'project-of-note
                     <span>18</span>
 </a></li>
-                <li><a href="http://tshepang.net/tags.html#pyramid-ref">Pyramid
-                    <span>5</span>
+                <li><a href="http://tshepang.net/tags.html#pyramid-ref">Pyramid'
+                    <span>4</span>
 </a></li>
                 <li><a href="http://tshepang.net/tags.html#python-ref">Python
-                    <span>62</span>
+                    <span>61</span>
 </a></li>
             </ul>
 <h4>Stay in Touch</h4>

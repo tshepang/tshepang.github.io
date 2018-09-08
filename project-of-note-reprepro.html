@@ -11,18 +11,18 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="Debian, project-of-note, computing, " />
+<meta name="keywords" content="'Debian, project-of-note', computing, " />
 
-<meta property="og:title" content="project of note: reprepro "/>
+<meta property="og:title" content="&#39;project of note: reprepro&#39; "/>
 <meta property="og:url" content="http://tshepang.net/project-of-note-reprepro" />
 <meta property="og:description" content="I have given kudos to reprepro twice before, and though those 2 posts are actually outdated, I still keep a custom repository, a subset of the official repository of a specific arch, but only of packages that I ever install. Every once in a while, I run this command: $ reprepro …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2012-05-11T00:00:00+02:00" />
-<meta name="twitter:title" content="project of note: reprepro ">
+<meta name="twitter:title" content="&#39;project of note: reprepro&#39; ">
 <meta name="twitter:description" content="I have given kudos to reprepro twice before, and though those 2 posts are actually outdated, I still keep a custom repository, a subset of the official repository of a specific arch, but only of packages that I ever install. Every once in a while, I run this command: $ reprepro …">
 
-        <title>project of note: reprepro  · Tshepang logs
+        <title>&#39;project of note: reprepro&#39;  · Tshepang logs
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -71,7 +71,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://tshepang.net/project-of-note-reprepro"> project of note: reprepro  </a></h1>
+    <h1><a href="http://tshepang.net/project-of-note-reprepro"> 'project of note: reprepro'  </a></h1>
     </header>
 </div>
 
@@ -79,40 +79,41 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>I have given kudos to <a class="reference external" href="http://mirrorer.alioth.debian.org/">reprepro</a> <a class="reference external" href="http://tshepang.net/reprepro-saved-my-live">twice</a> <a class="reference external" href="http://tshepang.net/what-i-do-after-debian-installation">before</a>, and though those 2
-posts are actually outdated, I still keep a custom repository, a subset
-of the official repository of a specific arch, but only of packages that
-I ever install.</p>
-<hr class="docutils" />
+            <p>I have given kudos to <a href="http://mirrorer.alioth.debian.org/">reprepro</a> <a href="http://tshepang.net/reprepro-saved-my-live">twice</a> <a href="http://tshepang.net/what-i-do-after-debian-installation">before</a>, and though those
+2 posts are actually outdated, I still keep a custom repository, a
+subset of the official repository of a specific arch, but only of
+packages that I ever install.</p>
+<hr>
 <p>Every once in a while, I run this command:</p>
-<pre class="literal-block">
-$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang \
+<div class="highlight"><pre><span></span>$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang <span class="se">\</span>
 /var/cache/apt/archives/*deb
-</pre>
+</pre></div>
+
+
 <p>What it does is add packages that are stored by the Debian package
-management system (located in <tt class="docutils literal">/var/cache/apt/archives</tt>) to the
-custom repository (located in <tt class="docutils literal"><span class="pre">~/.custom_repo</span></tt>). That ensures that I
-only keep packages that matter to me for any later install.</p>
-<p>Note that <tt class="docutils literal">tshepang</tt> is the name of the repository. It's an unofficial
-equivalent of <tt class="docutils literal">testing</tt> and <tt class="docutils literal">unstable</tt>.</p>
+management system (located in <code>/var/cache/apt/archives</code>) to the custom
+repository (located in <code>~/.custom_repo</code>). That ensures that I only keep
+packages that matter to me for any later install.</p>
+<p>Note that <code>tshepang</code> is the name of the repository. It\'s an unofficial
+equivalent of <code>testing</code> and <code>unstable</code>.</p>
 <p>Another command that I sometimes run, though less frequently, is:</p>
-<pre class="literal-block">
-$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang \
+<div class="highlight"><pre><span></span>$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang <span class="se">\</span>
 /var/cache/apt/archives/*deb
-</pre>
-<p>This one is used to help keep the repository fresh. Check out <a class="reference external" href="http://tshepang.net/removing-obsolete-packages-from-a-local-debian-repository">this
+</pre></div>
+
+
+<p>This one is used to help keep the repository fresh. Check out <a href="http://tshepang.net/removing-obsolete-packages-from-a-local-debian-repository">this
 post</a> for an explanation.</p>
 <p>Even less frequently, it happens that some package files are no longer
-referenced (i.e. not found in <tt class="docutils literal">Package.gz</tt>) for some reason. Here's
+referenced (i.e. not found in <code>Package.gz</code>) for some reason. Here\'s
 handy command to display them:</p>
-<pre class="literal-block">
-$ reprepro --basedir ~/.custom_repo dumpunreferenced
-</pre>
-<p>And here's another that actually gets rid of them:</p>
-<pre class="literal-block">
-$ reprepro --basedir ~/.custom_repo deleteunreferenced
-</pre>
+<div class="highlight"><pre><span></span>$ reprepro --basedir ~/.custom_repo dumpunreferenced
+</pre></div>
 
+
+<p>And here\'s another that actually gets rid of them:</p>
+<div class="highlight"><pre><span></span>$ reprepro --basedir ~/.custom_repo deleteunreferenced
+</pre></div>
             
             <section>
 <div class="accordion" id="accordion2">
@@ -152,8 +153,8 @@ $ reprepro --basedir ~/.custom_repo deleteunreferenced
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/dry-and-heavy-1977" title="Previous: Dry And Heavy (1977)">Dry And Heavy (1977)</a></li>
-                <li class="next-article"><a href="http://tshepang.net/developer-of-note-martin-pitt" title="Next: developer of note: Martin Pitt">developer of note: Martin Pitt</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/dry-and-heavy-1977" title="Previous: &#39;Dry And Heavy (1977)&#39;">'Dry And Heavy (1977)'</a></li>
+                <li class="next-article"><a href="http://tshepang.net/developer-of-note-martin-pitt" title="Next: &#39;developer of note: Martin Pitt&#39;">'developer of note: Martin Pitt'</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -166,10 +167,10 @@ $ reprepro --basedir ~/.custom_repo deleteunreferenced
             <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://tshepang.net/tags.html#debian-ref">Debian
+                <li><a href="http://tshepang.net/tags.html#debian-ref">'Debian
                     <span>49</span>
 </a></li>
-                <li><a href="http://tshepang.net/tags.html#project-of-note-ref">project-of-note
+                <li><a href="http://tshepang.net/tags.html#project-of-note-ref">project-of-note'
                     <span>18</span>
 </a></li>
             </ul>

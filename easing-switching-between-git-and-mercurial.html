@@ -11,16 +11,16 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="Python, VCS, computing, " />
+<meta name="keywords" content="'Python, VCS', computing, " />
 
 <meta property="og:title" content="easing switching between Git and Mercurial "/>
 <meta property="og:url" content="http://tshepang.net/easing-switching-between-git-and-mercurial" />
-<meta property="og:description" content="Each chance I get, I use Mercurial (e.g. personal stuff), and use Git when I don&#39;t have much of a choice (e.g. FLOSS and work). That is, I use both quite a lot, and too often I find myself running commands for one while on another&#39;s repository... error …" />
+<meta property="og:description" content="Each chance I get, I use Mercurial (e.g. personal stuff), and use Git when I don\&#39;t have much of a choice (e.g. FLOSS and work). That is, I use both quite a lot, and too often I find myself running commands for one while on another\&#39;s …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2013-10-16T00:00:00+02:00" />
 <meta name="twitter:title" content="easing switching between Git and Mercurial ">
-<meta name="twitter:description" content="Each chance I get, I use Mercurial (e.g. personal stuff), and use Git when I don&#39;t have much of a choice (e.g. FLOSS and work). That is, I use both quite a lot, and too often I find myself running commands for one while on another&#39;s repository... error …">
+<meta name="twitter:description" content="Each chance I get, I use Mercurial (e.g. personal stuff), and use Git when I don\&#39;t have much of a choice (e.g. FLOSS and work). That is, I use both quite a lot, and too often I find myself running commands for one while on another\&#39;s …">
 
         <title>easing switching between Git and Mercurial  · Tshepang logs
 </title>
@@ -79,42 +79,44 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>Each chance I get, I use Mercurial (e.g. personal stuff), and use Git
-when I don't have much of a choice (e.g. FLOSS and work). That is, I
+            <p>Each chance I get, I use Mercurial (e.g. personal stuff), and use Git
+when I don\'t have much of a choice (e.g. FLOSS and work). That is, I
 use both quite a lot, and too often I find myself running commands for
-one while on another's repository... error. I therefore decided to
-ease the pain my creating <a class="reference external" href="https://bitbucket.org/tshepang/scripts/src/tip/vcs.py">a script</a> which checks which VCS system
-I'm on, and displays the relevant command.</p>
+one while on another\'s repository... error. I therefore decided to
+ease the pain my creating <a href="https://bitbucket.org/tshepang/scripts/src/tip/vcs.py">a script</a> which checks which VCS system I\'m
+on, and displays the relevant command.</p>
 <p>Some examples of usage:</p>
-<div class="highlight"><pre><span></span>$ <span class="nb">cd</span> &lt;hg repo&gt;
+<p>``` {.sourceCode .sh}
+$ cd <hg repo>
 $ ./vcs.py --log
 hg log --no-merges --patch --stat --verbose
-$ <span class="nb">cd</span> &lt;git repo&gt;
+$ cd <git repo>
 $ ./vcs.py --log
-git log --no-merges --patch --stat
-</pre></div>
-<p>Here are the relevant BASH aliases:</p>
-<div class="highlight"><pre><span></span><span class="nb">alias</span> <span class="nv">vb</span><span class="o">=</span><span class="s1">&#39;$(~/scripts/vcs.py --branch)&#39;</span>
-<span class="nb">alias</span> <span class="nv">vd</span><span class="o">=</span><span class="s1">&#39;$(~/scripts/vcs.py --diff)&#39;</span>
-<span class="nb">alias</span> <span class="nv">vl</span><span class="o">=</span><span class="s1">&#39;$(~/scripts/vcs.py --log)&#39;</span>
-<span class="nb">alias</span> <span class="nv">vp</span><span class="o">=</span><span class="s1">&#39;$(~/scripts/vcs.py --push)&#39;</span>
-<span class="nb">alias</span> <span class="nv">vs</span><span class="o">=</span><span class="s1">&#39;$(~/scripts/vcs.py --status)&#39;</span>
-<span class="nb">alias</span> <span class="nv">vu</span><span class="o">=</span><span class="s1">&#39;$(~/scripts/vcs.py --pull)&#39;</span>
-<span class="nb">alias</span> <span class="nv">vc</span><span class="o">=</span><span class="s1">&#39;$(~/scripts/vcs.py --commit)&#39;</span>
-<span class="nb">alias</span> <span class="nv">vo</span><span class="o">=</span><span class="s1">&#39;$(~/scripts/vcs.py --checkout)&#39;</span>
-<span class="nb">alias</span> <span class="nv">vr</span><span class="o">=</span><span class="s1">&#39;$(~/scripts/vcs.py --revert)&#39;</span>
-</pre></div>
-<p>This makes my life so much easier, since I no longer have to care
-which VCS I'm on, at least for the most common of commands. I am
-pleased with self.</p>
-<hr class="docutils" />
-<p>As a sidenote, if you want to cycle between the changesets (Mercurial
-term) or Commits (Git term), use the following search term on your
-pager (tested with <a class="reference external" href="http://www.greenwoodsoftware.com/less">less</a>, which is Debian/Ubuntu default pager):</p>
-<pre class="literal-block">
-(^changeset)|(^commit)
-</pre>
+git log --no-merges --patch --stat</p>
+<div class="highlight"><pre><span></span>Here are the relevant BASH aliases:
 
+``` {.sourceCode .sh}
+alias vb=&#39;$(~/scripts/vcs.py --branch)&#39;
+alias vd=&#39;$(~/scripts/vcs.py --diff)&#39;
+alias vl=&#39;$(~/scripts/vcs.py --log)&#39;
+alias vp=&#39;$(~/scripts/vcs.py --push)&#39;
+alias vs=&#39;$(~/scripts/vcs.py --status)&#39;
+alias vu=&#39;$(~/scripts/vcs.py --pull)&#39;
+alias vc=&#39;$(~/scripts/vcs.py --commit)&#39;
+alias vo=&#39;$(~/scripts/vcs.py --checkout)&#39;
+alias vr=&#39;$(~/scripts/vcs.py --revert)&#39;
+</pre></div>
+
+
+<p>This makes my life so much easier, since I no longer have to care which
+VCS I\'m on, at least for the most common of commands. I am pleased with
+self.</p>
+<hr>
+<p>As a sidenote, if you want to cycle between the changesets (Mercurial
+term) or Commits (Git term), use the following search term on your pager
+(tested with <a href="http://www.greenwoodsoftware.com/less">less</a>, which is Debian/Ubuntu default pager):</p>
+<div class="highlight"><pre><span></span>(^changeset)|(^commit)
+</pre></div>
             
             <section>
 <div class="accordion" id="accordion2">
@@ -154,8 +156,8 @@ pager (tested with <a class="reference external" href="http://www.greenwoodsoftw
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/developer-of-note-armin-rigo" title="Previous: developer of note: Armin Rigo">developer of note: Armin Rigo</a></li>
-                <li class="next-article"><a href="http://tshepang.net/project-of-note-git-cola" title="Next: project of note: git-cola">project of note: git-cola</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/developer-of-note-armin-rigo" title="Previous: &#39;developer of note: Armin Rigo&#39;">'developer of note: Armin Rigo'</a></li>
+                <li class="next-article"><a href="http://tshepang.net/project-of-note-git-cola" title="Next: &#39;project of note: git-cola&#39;">'project of note: git-cola'</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -168,10 +170,10 @@ pager (tested with <a class="reference external" href="http://www.greenwoodsoftw
             <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://tshepang.net/tags.html#python-ref">Python
-                    <span>62</span>
+                <li><a href="http://tshepang.net/tags.html#python-ref">'Python
+                    <span>61</span>
 </a></li>
-                <li><a href="http://tshepang.net/tags.html#vcs-ref">VCS
+                <li><a href="http://tshepang.net/tags.html#vcs-ref">VCS'
                     <span>8</span>
 </a></li>
             </ul>

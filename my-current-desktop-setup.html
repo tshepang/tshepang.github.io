@@ -11,7 +11,7 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="GNOME, Debian, computing, " />
+<meta name="keywords" content="'GNOME, Debian', computing, " />
 
 <meta property="og:title" content="my current desktop setup "/>
 <meta property="og:url" content="http://tshepang.net/my-current-desktop-setup" />
@@ -79,36 +79,36 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>Following is how my GUI environment is set-up on <a class="reference external" href="http://tshepang.net/sony-vaio-pro-13-svp13212sgbi">my home machine</a>
-(a laptop) and work machine (a desktop). For the (libre) tools I
-frequently use, see <a class="reference external" href="http://tshepang.net/floss-i-use-a-lot">this post</a> instead.</p>
-<hr class="docutils" />
+            <p>Following is how my GUI environment is set-up on <a href="http://tshepang.net/sony-vaio-pro-13-svp13212sgbi">my home machine</a> (a
+laptop) and work machine (a desktop). For the (libre) tools I frequently
+use, see <a href="http://tshepang.net/floss-i-use-a-lot">this post</a> instead.</p>
+<hr>
 <p>With recent Debian GNOME updates (late 2013), something got broken
 enough that I could not login to my account. I saw this as a good
 opportunity to finally try something other than GNOME as my primary
 environment. I have before tinkered with other GUI environments (XFCE,
-KDE 3, FluxBox, LXDE, and most recently, Window Maker), but none
-lasted very long. But I think this time I will actually abandon GNOME
+KDE 3, FluxBox, LXDE, and most recently, Window Maker), but none lasted
+very long. But I think this time I will actually abandon GNOME
 permanently, after nearly a decade of use.</p>
-<p>I been playing with <a class="reference external" href="http://dwm.suckless.org">dwm</a> for the past several weeks, and the experience
+<p>I been playing with <a href="http://dwm.suckless.org">dwm</a> for the past several weeks, and the experience
 has convinced me to stay. I am attracted to the philosophy of
 minimalism, though I find they do take things a bit far in requiring
 users to tinker with C source code in order to configure it. Luckily
-it's not hard, and there's examples out there. It just takes a while
-since there isn't a comprehensive guide I could find.</p>
-<p>For my login manager, I use <a class="reference external" href="http://www.freedesktop.org/wiki/Software/LightDM">LightDM</a>. I added this line to its
-configuration, in <tt class="docutils literal">[SeatDefaults]</tt> section:</p>
-<pre class="literal-block">
-greeter-hide-users=false
-</pre>
+it\'s not hard, and there\'s examples out there. It just takes a while
+since there isn\'t a comprehensive guide I could find.</p>
+<p>For my login manager, I use <a href="http://www.freedesktop.org/wiki/Software/LightDM">LightDM</a>. I added this line to its
+configuration, in <code>[SeatDefaults]</code> section:</p>
+<div class="highlight"><pre><span></span>greeter-hide-users=false
+</pre></div>
+
+
 <p>It removes the need to manually enter my username each time I want to
 login.</p>
-<p>Reason I'm not using GDM? I wanted something light, which also
-wouldn't pull in dozens of packages that I won't use. For example:</p>
-<pre class="literal-block">
-$ sudo apt-get install --no-install-recommends gdm3
+<p>Reason I\'m not using GDM? I wanted something light, which also
+wouldn\'t pull in dozens of packages that I won\'t use. For example:</p>
+<div class="highlight"><pre><span></span>$ sudo apt-get install --no-install-recommends gdm3
 Reading package lists... Done
-Building dependency tree
+Building dependency tree       
 Reading state information... Done
 The following extra packages will be installed:
   bluez dconf-cli evolution-data-server evolution-data-server-common
@@ -149,129 +149,129 @@ The following NEW packages will be installed:
   libpackagekit-glib2-16 libpulse-mainloop-glib0 librest-0.7-0 libsoup-gnome2.4-1
   libtelepathy-glib0 libtelepathy-logger3 libwacom-common libwacom2 mutter-common
   obex-data-server obexd-client telepathy-mission-control-5
-0 upgraded, 67 newly installed, 0 to remove and 45 not upgraded.
-Need to get 0 B/31.0 MB of archives.
-After this operation, 90.8 MB of additional disk space will be used.
-</pre>
-<p>GNOME philosophy tends towards tight integration, leading to things
-being not as modular as I would like: how could a display manager end
-up depending on a Contacts tool, or the Bluetooth stack. It may
-be just how it was built in Debian, but that also means there
-were build options that allowed such tight coupling in the first
-place. GDM has served me well for years, but I'm not interested in all
-those tools it brings with.</p>
-<p>Anyways, enough with that. I added a custom <tt class="docutils literal">.desktop</tt> file which will
-become selectable on LightDM UI:</p>
-<pre class="literal-block">
-$ cat /usr/share/xsessions/custom.desktop
-[Desktop Entry]
-Name=Custom
-Exec=/etc/X11/Xsession
-Type=XSession
-</pre>
-<p>On selecting the entry labeled <strong>Custom</strong> that appears on LightDM,
-and logging in, the following will get executed (<a class="reference external" href="https://bitbucket.org/tshepang/custom/src/tip/xsession">~/.xsession</a>):</p>
-<div class="highlight"><pre><span></span><span class="c1"># apps</span>
-xfce4-terminal --hide-menubar --tab --tab --tab <span class="p">&amp;</span>
-firefox <span class="p">&amp;</span>
-nautilus --no-desktop <span class="p">&amp;</span>
-nm-applet <span class="p">&amp;</span>
-trayer --edge top --align right --widthtype request --distance <span class="m">15</span> <span class="p">&amp;</span>
-quodlibet <span class="p">&amp;</span>
-<span class="k">if</span> <span class="o">[</span> <span class="nv">$HOSTNAME</span> <span class="o">==</span> <span class="s1">&#39;twork&#39;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-   icedove <span class="p">&amp;</span>
-<span class="k">fi</span>
-
-<span class="c1"># settings</span>
-xset b off
-xmodmap -e <span class="s2">&quot;clear Lock&quot;</span>
-xmodmap -e <span class="s2">&quot;keycode 66 = Super_L&quot;</span>
-
-<span class="c1"># host-specific settings</span>
-<span class="k">if</span> <span class="o">[</span> <span class="nv">$HOSTNAME</span> <span class="o">==</span> <span class="s1">&#39;twork&#39;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-    xrandr --output VGA-0 --output DVI-0 --right-of VGA-0
-<span class="k">else</span>
-    synclient <span class="nv">TapButton1</span><span class="o">=</span><span class="m">1</span> <span class="nv">TapButton2</span><span class="o">=</span><span class="m">3</span> <span class="nv">TapButton3</span><span class="o">=</span><span class="m">2</span> <span class="nv">MaxDoubleTapTime</span><span class="o">=</span><span class="m">100</span>
-    syndaemon -dti <span class="m">1</span>
-<span class="k">fi</span>
-
-<span class="c1"># clock</span>
-<span class="k">while</span> true<span class="p">;</span> <span class="k">do</span>
-    <span class="nv">datetime</span><span class="o">=</span><span class="k">$(</span> date +<span class="s2">&quot;%F %R&quot;</span> <span class="k">)</span>
-    <span class="k">if</span> acpi -a <span class="p">|</span> grep off-line &gt; /dev/null<span class="p">;</span> <span class="k">then</span>
-        <span class="nv">battery</span><span class="o">=</span><span class="k">$(</span> python -c <span class="s2">&quot;print(\&quot;</span><span class="k">$(</span>acpi<span class="k">)</span><span class="s2">\&quot;.split(&#39;,&#39;)[1].strip())&quot;</span> <span class="k">)</span>
-        xsetroot -name <span class="s2">&quot;</span><span class="nv">$battery</span><span class="s2">&quot;&quot; | &quot;&quot;</span><span class="nv">$datetime</span><span class="s2">&quot;</span>
-    <span class="k">else</span>
-        xsetroot -name <span class="s2">&quot;</span><span class="nv">$datetime</span><span class="s2">&quot;</span>
-    <span class="k">fi</span>
-    sleep 1m
-<span class="k">done</span> <span class="p">&amp;</span>
-
-<span class="nb">exec</span> dwm
+<span class="m">0</span> upgraded, <span class="m">67</span> newly installed, <span class="m">0</span> to remove and <span class="m">45</span> not upgraded.
+Need to get <span class="m">0</span> B/31.0 MB of archives.
+After this operation, <span class="m">90</span>.8 MB of additional disk space will be used.
 </pre></div>
-<p>Finally, this is what my dwm config changes look like (<a class="reference external" href="https://bitbucket.org/tshepang/custom/src/tip/config.def.h">config.def.h</a>):</p>
-<pre class="literal-block">
-diff --git a/config.def.h b/config.def.h
-index 77ff358..78af5d6 100644
---- a/config.def.h
-+++ b/config.def.h
-&#64;&#64; -14,12 +14,15 &#64;&#64; static const Bool showbar           = True;     /*
+
+
+<p>GNOME philosophy tends towards tight integration, leading to things
+being not as modular as I would like: how could a display manager end up
+depending on a Contacts tool, or the Bluetooth stack. It may be just how
+it was built in Debian, but that also means there were build options
+that allowed such tight coupling in the first place. GDM has served me
+well for years, but I\'m not interested in all those tools it brings
+with.</p>
+<p>Anyways, enough with that. I added a custom <code>.desktop</code> file which will
+become selectable on LightDM UI:</p>
+<div class="highlight"><pre><span></span><span class="err">$</span> <span class="n">cat</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">xsessions</span><span class="o">/</span><span class="n">custom</span><span class="p">.</span><span class="n">desktop</span>
+<span class="p">[</span><span class="n">Desktop</span> <span class="n">Entry</span><span class="p">]</span>
+<span class="n">Name</span><span class="o">=</span><span class="n">Custom</span>
+<span class="n">Exec</span><span class="o">=/</span><span class="n">etc</span><span class="o">/</span><span class="n">X11</span><span class="o">/</span><span class="n">Xsession</span>
+<span class="n">Type</span><span class="o">=</span><span class="n">XSession</span>
+</pre></div>
+
+
+<p>On selecting the entry labeled <strong>Custom</strong> that appears on LightDM, and
+logging in, the following will get executed (<a href="https://bitbucket.org/tshepang/custom/src/tip/xsession">\~/.xsession</a>):</p>
+<p>``` {.sourceCode .sh}</p>
+<h1>apps</h1>
+<p>xfce4-terminal --hide-menubar --tab --tab --tab &amp;
+firefox &amp;
+nautilus --no-desktop &amp;
+nm-applet &amp;
+trayer --edge top --align right --widthtype request --distance 15 &amp;
+quodlibet &amp;
+if [ $HOSTNAME == 'twork' ]; then
+   icedove &amp;
+fi</p>
+<h1>settings</h1>
+<p>xset b off
+xmodmap -e "clear Lock"
+xmodmap -e "keycode 66 = Super_L"</p>
+<h1>host-specific settings</h1>
+<p>if [ $HOSTNAME == 'twork' ]; then
+    xrandr --output VGA-0 --output DVI-0 --right-of VGA-0
+else
+    synclient TapButton1=1 TapButton2=3 TapButton3=2 MaxDoubleTapTime=100
+    syndaemon -dti 1
+fi</p>
+<h1>clock</h1>
+<p>while true; do
+    datetime=$( date +"%F %R" )
+    if acpi -a | grep off-line &gt; /dev/null; then
+        battery=$( python -c "print(\"$(acpi)\".split(',')[1].strip())" )
+        xsetroot -name "$battery"" | ""$datetime"
+    else
+        xsetroot -name "$datetime"
+    fi
+    sleep 1m
+done &amp;</p>
+<p>exec dwm
+```</p>
+<p>Finally, this is what my dwm config changes look like (<a href="https://bitbucket.org/tshepang/custom/src/tip/config.def.h">config.def.h</a>):</p>
+<div class="highlight"><pre><span></span><span class="gh">diff --git a/config.def.h b/config.def.h</span>
+<span class="gh">index 77ff358..78af5d6 100644</span>
+<span class="gd">--- a/config.def.h</span>
+<span class="gi">+++ b/config.def.h</span>
+<span class="gu">@@ -14,12 +14,15 @@ static const Bool showbar           = True;     /*</span>
 False means no bar */
  static const Bool topbar            = True;     /* False means bottom
  bar */
 
  /* tagging */
--static const char *tags[] = { &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;,
+<span class="gd">-static const char *tags[] = { &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;,</span>
 &quot;9&quot; };
-+static const char *tags[] = { &quot;web&quot;, &quot;files&quot;, &quot;terminal&quot;, &quot;misc&quot; };
+<span class="gi">+static const char *tags[] = { &quot;web&quot;, &quot;files&quot;, &quot;terminal&quot;, &quot;misc&quot; };</span>
 
  static const Rule rules[] = {
--       /* class      instance    title       tags mask     isfloating
+<span class="gd">-       /* class      instance    title       tags mask     isfloating</span>
         monitor */
--       { &quot;Gimp&quot;,     NULL,       NULL,       0,
+<span class="gd">-       { &quot;Gimp&quot;,     NULL,       NULL,       0,</span>
         True,        -1 },
--       { &quot;Firefox&quot;,  NULL,       NULL,       1 &lt;&lt; 8,
+<span class="gd">-       { &quot;Firefox&quot;,  NULL,       NULL,       1 &lt;&lt; 8,</span>
         False,       -1 },
-+  /* class             instance  title  tags mask  isfloating
+<span class="gi">+  /* class             instance  title  tags mask  isfloating</span>
    monitor */
-+  { &quot;Iceweasel&quot;,       NULL,     NULL,  1 &lt;&lt; 0,    False,       -1 },
-+  { &quot;trayer&quot;,          NULL,     NULL,  1 &lt;&lt; 0,    False,       -1 },
-+  { &quot;Nautilus&quot;,        NULL,     NULL,  1 &lt;&lt; 1,    False,       -1 },
-+  { &quot;Xfce4-terminal&quot;,  NULL,     NULL,  1 &lt;&lt; 2,    False,       -1 },
-+  { &quot;Quodlibet&quot;,       NULL,     NULL,  1 &lt;&lt; 3,    False,       -1 },
+<span class="gi">+  { &quot;Iceweasel&quot;,       NULL,     NULL,  1 &lt;&lt; 0,    False,       -1 },</span>
+<span class="gi">+  { &quot;trayer&quot;,          NULL,     NULL,  1 &lt;&lt; 0,    False,       -1 },</span>
+<span class="gi">+  { &quot;Nautilus&quot;,        NULL,     NULL,  1 &lt;&lt; 1,    False,       -1 },</span>
+<span class="gi">+  { &quot;Xfce4-terminal&quot;,  NULL,     NULL,  1 &lt;&lt; 2,    False,       -1 },</span>
+<span class="gi">+  { &quot;Quodlibet&quot;,       NULL,     NULL,  1 &lt;&lt; 3,    False,       -1 },</span>
  };
 
  /* layout(s) */
-&#64;&#64; -35,7 +38,7 &#64;&#64; static const Layout layouts[] = {
+<span class="gu">@@ -35,7 +38,7 @@ static const Layout layouts[] = {</span>
  };
 
  /* key definitions */
--#define MODKEY Mod1Mask
-+#define MODKEY Mod4Mask
+<span class="gd">-#define MODKEY Mod1Mask</span>
+<span class="gi">+#define MODKEY Mod4Mask</span>
  #define TAGKEYS(KEY,TAG) \
         { MODKEY,                       KEY,      view,           {.ui
         = 1 &lt;&lt; TAG} }, \
         { MODKEY|ControlMask,           KEY,      toggleview,     {.ui
         = 1 &lt;&lt; TAG} }, \
-&#64;&#64; -47,7 +50,7 &#64;&#64; static const Layout layouts[] = {
+<span class="gu">@@ -47,7 +50,7 @@ static const Layout layouts[] = {</span>
 
  /* commands */
  static const char *dmenucmd[] = { &quot;dmenu_run&quot;, &quot;-fn&quot;, font, &quot;-nb&quot;,
  normbgcolor, &quot;-nf&quot;, normfgcolor, &quot;-sb&quot;, selbgcolor, &quot;-sf&quot;,
  selfgcolor, NULL };
--static const char *termcmd[]  = { &quot;uxterm&quot;, NULL };
-+static const char *termcmd[]  = { &quot;xfce4-terminal&quot;, &quot;--hide-menubar&quot;
+<span class="gd">-static const char *termcmd[]  = { &quot;uxterm&quot;, NULL };</span>
+<span class="gi">+static const char *termcmd[]  = { &quot;xfce4-terminal&quot;, &quot;--hide-menubar&quot;</span>
 };
 
  static Key keys[] = {
         /* modifier                     key        function
         argument */
-</pre>
+</pre></div>
+
+
 <p>Note that this diff is against the Debian package (version <strong>6.0-6</strong>). I
 could not change the modifier key with the upstream version of dwm.</p>
-<p>You will notice that I'm still using one major GNOME package,
-Nautilus, the file browser. It remains <a class="reference external" href="http://tshepang.net/favorite-floss">my favorite</a>.</p>
-
+<p>You will notice that I\'m still using one major GNOME package, Nautilus,
+the file browser. It remains <a href="http://tshepang.net/favorite-floss">my favorite</a>.</p>
             
             <section>
 <div class="accordion" id="accordion2">
@@ -325,10 +325,10 @@ Nautilus, the file browser. It remains <a class="reference external" href="http:
             <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://tshepang.net/tags.html#debian-ref">Debian
+                <li><a href="http://tshepang.net/tags.html#debian-ref">Debian'
                     <span>49</span>
 </a></li>
-                <li><a href="http://tshepang.net/tags.html#gnome-ref">GNOME
+                <li><a href="http://tshepang.net/tags.html#gnome-ref">'GNOME
                     <span>22</span>
 </a></li>
             </ul>

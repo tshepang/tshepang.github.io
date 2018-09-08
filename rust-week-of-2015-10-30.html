@@ -13,16 +13,16 @@
 
 <meta name="keywords" content="Rust, computing, " />
 
-<meta property="og:title" content="Rust week of 2015-10-30 "/>
+<meta property="og:title" content="&#39;Rust week of 2015-10-30&#39; "/>
 <meta property="og:url" content="http://tshepang.net/rust-week-of-2015-10-30" />
 <meta property="og:description" content="Just one submission this time around. Yep! I did however spend time pondering the magical forward type inference that I first experienced back in May, this time sparked by this example; see this line: let address = &#34;0.0.0.0:6567&#34;.parse().unwrap(); You actually have to read further to …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2015-11-06T00:00:00+02:00" />
-<meta name="twitter:title" content="Rust week of 2015-10-30 ">
+<meta name="twitter:title" content="&#39;Rust week of 2015-10-30&#39; ">
 <meta name="twitter:description" content="Just one submission this time around. Yep! I did however spend time pondering the magical forward type inference that I first experienced back in May, this time sparked by this example; see this line: let address = &#34;0.0.0.0:6567&#34;.parse().unwrap(); You actually have to read further to …">
 
-        <title>Rust week of 2015-10-30  · Tshepang logs
+        <title>&#39;Rust week of 2015-10-30&#39;  · Tshepang logs
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -71,7 +71,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://tshepang.net/rust-week-of-2015-10-30"> Rust week of 2015-10-30  </a></h1>
+    <h1><a href="http://tshepang.net/rust-week-of-2015-10-30"> 'Rust week of 2015-10-30'  </a></h1>
     </header>
 </div>
 
@@ -79,24 +79,23 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>Just <a class="reference external" href="https://github.com/rust-lang/rust/pull/29651">one submission</a> this time around. Yep! I did however spend
-time pondering the magical forward type inference that I first
-experienced <a class="reference external" href="http://tshepang.net/rust-week-of-2015-05-29">back in May</a>, this time sparked by <a class="reference external" href="https://github.com/carllerche/mio/blob/getting-started/doc/getting-started.md#writing-the-echo-server">this example</a>;
-see this line:</p>
-<pre class="literal-block">
-let address = &quot;0.0.0.0:6567&quot;.parse().unwrap();
-</pre>
+            <p>Just <a href="https://github.com/rust-lang/rust/pull/29651">one submission</a> this time around. Yep! I did however spend time
+pondering the magical forward type inference that I first experienced
+<a href="http://tshepang.net/rust-week-of-2015-05-29">back in May</a>, this time sparked by <a href="https://github.com/carllerche/mio/blob/getting-started/doc/getting-started.md#writing-the-echo-server">this example</a>; see this line:</p>
+<div class="highlight"><pre><span></span><span class="nt">let</span> <span class="nt">address</span> <span class="o">=</span> <span class="s2">&quot;0.0.0.0:6567&quot;</span><span class="p">.</span><span class="nc">parse</span><span class="o">()</span><span class="p">.</span><span class="nc">unwrap</span><span class="o">();</span>
+</pre></div>
+
+
 <p>You actually have to read further to figure the type that URL is going
 to be parsed as:</p>
-<pre class="literal-block">
-let server = TcpListener::bind(&amp;address).unwrap();
-</pre>
-<p>It would be less surprising if we had the following instead:</p>
-<pre class="literal-block">
-let address = SocketAddr::from_str(&quot;0.0.0.0:6567&quot;.unwrap();
-let server = TcpListener::bind(&amp;address).unwrap();
-</pre>
+<div class="highlight"><pre><span></span><span class="nt">let</span> <span class="nt">server</span> <span class="o">=</span> <span class="nt">TcpListener</span><span class="p">::</span><span class="nd">bind</span><span class="o">(&amp;</span><span class="nt">address</span><span class="o">)</span><span class="p">.</span><span class="nc">unwrap</span><span class="o">();</span>
+</pre></div>
 
+
+<p>It would be less surprising if we had the following instead:</p>
+<div class="highlight"><pre><span></span><span class="nt">let</span> <span class="nt">address</span> <span class="o">=</span> <span class="nt">SocketAddr</span><span class="p">::</span><span class="nd">from_str</span><span class="o">(</span><span class="s2">&quot;0.0.0.0:6567&quot;</span><span class="p">.</span><span class="nc">unwrap</span><span class="o">();</span>
+<span class="nt">let</span> <span class="nt">server</span> <span class="o">=</span> <span class="nt">TcpListener</span><span class="p">::</span><span class="nd">bind</span><span class="o">(&amp;</span><span class="nt">address</span><span class="o">)</span><span class="p">.</span><span class="nc">unwrap</span><span class="o">();</span>
+</pre></div>
             
             <section>
 <div class="accordion" id="accordion2">
@@ -136,8 +135,8 @@ let server = TcpListener::bind(&amp;address).unwrap();
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/top-tv-shows" title="Previous: top tv shows">top tv shows</a></li>
-                <li class="next-article"><a href="http://tshepang.net/rust-week-of-2015-11-06" title="Next: Rust week of 2015-11-06">Rust week of 2015-11-06</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/rust-week-of-2015-10-23" title="Previous: &#39;Rust week of 2015-10-23&#39;">'Rust week of 2015-10-23'</a></li>
+                <li class="next-article"><a href="http://tshepang.net/rust-week-of-2015-11-06" title="Next: &#39;Rust week of 2015-11-06&#39;">'Rust week of 2015-11-06'</a> »</li>
             </ul>
             </nav>
             </aside>

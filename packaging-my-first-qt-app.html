@@ -11,7 +11,7 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="Debian, non-Python, computing, " />
+<meta name="keywords" content="'Debian, non-Python', computing, " />
 
 <meta property="og:title" content="packaging my first Qt app "/>
 <meta property="og:url" content="http://tshepang.net/packaging-my-first-qt-app" />
@@ -81,40 +81,38 @@
             
             <p>Someone asked me to try get some KDE package into Debian. I estimated
 that it would take me around 10 hours to get it into good enough shape
-before asking some Debian Developer to upload it for me. Here goes
-some rough estimates:</p>
-<ul class="simple">
+before asking some Debian Developer to upload it for me. Here goes some
+rough estimates:</p>
+<ul>
 <li><strong>hour 1</strong>: Find documentation on the subject; I got a few after a
-quick search, which include the following:<ul>
-<li><a class="reference external" href="http://developer.ubuntu.com/packaging/html">Ubuntu Packaging Guide</a></li>
+    quick search, which include the following:<ul>
+<li><a href="http://developer.ubuntu.com/packaging/html">Ubuntu Packaging Guide</a></li>
 <li>Debian Packaging Tutorial (from Debian package,
-<tt class="docutils literal"><span class="pre">packaging-tutorial</span></tt>)</li>
+    <code>packaging-tutorial</code>)</li>
 </ul>
 </li>
 <li><strong>hour 2-3</strong>: Reading the Debian Packaging Tutorial which led me to
-reading <tt class="docutils literal"><span class="pre">dpkg-source</span></tt> manpage, using <tt class="docutils literal">dh_make</tt> to create a
-<tt class="docutils literal">debian/</tt> skeleton, and modifying the contents of that directory.</li>
+    reading <code>dpkg-source</code> manpage, using <code>dh_make</code> to create a <code>debian/</code>
+    skeleton, and modifying the contents of that directory.</li>
 <li><strong>hour 4-6</strong>: Struggling to kill the lintian complaint,
-<tt class="docutils literal"><span class="pre">binary-without-manpage</span></tt>. I went as far as reading the source code
-(Perl) that performs the check, but that didn't help much. I could
-have saved hours by looking at the <a class="reference external" href="http://www.debian.org/doc/manuals/maint-guide">Debian New Maintainers' Guide</a>
-earlier. I also added <tt class="docutils literal">export <span class="pre">LDFLAGS=-Wl,-z,relro</span></tt> to
-<tt class="docutils literal">debian/rules</tt> file to kill <tt class="docutils literal"><span class="pre">hardening-no-relro</span></tt> lintian
-warning.</li>
-<li><strong>hour 7-8</strong>: Determine what dependencies would be needed by building from
-a clean chroot (pbuilder). This was with the help of Debian New
-Maintainers' Guide, again.</li>
-<li><strong>hour 9-10</strong>: Reading <a class="reference external" href="https://wiki.debian.org/Hardening">Debian wiki page on Hardening</a> let me
-simplify my packaging further... removing the need to specify
-hardening flags explicitly (<a class="reference external" href="https://bitbucket.org/tshepang/ksig/commits/f4c7b60157b79847f918e3d8b24a74e6c5bec929">commit</a>). I also uploaded the package
-to <a class="reference external" href="http://mentors.debian.net">http://mentors.debian.net</a>, with the help of
-<a class="reference external" href="https://wiki.debian.org/DebianMentorsFaq">DebianMentorsFaq</a>. (<strong>2014.03 update</strong>: it has since been removed
-due to lack of activity)</li>
+    <code>binary-without-manpage</code>. I went as far as reading the source code
+    (Perl) that performs the check, but that didn\'t help much. I could
+    have saved hours by looking at the <a href="http://www.debian.org/doc/manuals/maint-guide">Debian New Maintainers\' Guide</a>
+    earlier. I also added <code>export LDFLAGS=-Wl,-z,relro</code> to
+    <code>debian/rules</code> file to kill <code>hardening-no-relro</code> lintian warning.</li>
+<li><strong>hour 7-8</strong>: Determine what dependencies would be needed by
+    building from a clean chroot (pbuilder). This was with the help of
+    Debian New Maintainers\' Guide, again.</li>
+<li><strong>hour 9-10</strong>: Reading <a href="https://wiki.debian.org/Hardening">Debian wiki page on Hardening</a> let me
+    simplify my packaging further... removing the need to specify
+    hardening flags explicitly (<a href="https://bitbucket.org/tshepang/ksig/commits/f4c7b60157b79847f918e3d8b24a74e6c5bec929">commit</a>). I also uploaded the package
+    to <a href="http://mentors.debian.net">http://mentors.debian.net</a>, with the help of <a href="https://wiki.debian.org/DebianMentorsFaq">DebianMentorsFaq</a>.
+    (<strong>2014.03 update</strong>: it has since been removed due to lack of
+    activity)</li>
 </ul>
 <p>The resulting package now lives at
-<a class="reference external" href="https://bitbucket.org/tshepang/ksig/src">https://bitbucket.org/tshepang/ksig/src</a>. The changes I made, the
-actual packaging work, are in <a class="reference external" href="https://bitbucket.org/tshepang/ksig/src/f4c7b60157b79847f918e3d8b24a74e6c5bec929/debian">this directory</a>.</p>
-
+<a href="https://bitbucket.org/tshepang/ksig/src">https://bitbucket.org/tshepang/ksig/src</a>. The changes I made, the
+actual packaging work, are in <a href="https://bitbucket.org/tshepang/ksig/src/f4c7b60157b79847f918e3d8b24a74e6c5bec929/debian">this directory</a>.</p>
             
             <section>
 <div class="accordion" id="accordion2">
@@ -154,7 +152,7 @@ actual packaging work, are in <a class="reference external" href="https://bitbuc
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/letta-mbulu-vs-miriam-makeba" title="Previous: Letta Mbulu vs. Miriam Makeba">Letta Mbulu vs. Miriam Makeba</a></li>
+                <li class="previous-article">« <a href="http://tshepang.net/letta-mbulu-vs-miriam-makeba" title="Previous: &#39;Letta Mbulu vs. Miriam Makeba&#39;">'Letta Mbulu vs. Miriam Makeba'</a></li>
                 <li class="next-article"><a href="http://tshepang.net/mentioning-alternatives-on-a-prominent-place" title="Next: mentioning alternatives on a prominent place">mentioning alternatives on a prominent place</a> »</li>
             </ul>
             </nav>
@@ -168,10 +166,10 @@ actual packaging work, are in <a class="reference external" href="https://bitbuc
             <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://tshepang.net/tags.html#debian-ref">Debian
+                <li><a href="http://tshepang.net/tags.html#debian-ref">'Debian
                     <span>49</span>
 </a></li>
-                <li><a href="http://tshepang.net/tags.html#non-python-ref">non-Python
+                <li><a href="http://tshepang.net/tags.html#non-python-ref">non-Python'
                     <span>17</span>
 </a></li>
             </ul>

@@ -11,18 +11,18 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="non-Python, Python, computing, " />
+<meta name="keywords" content="'non-Python, Python', computing, " />
 
-<meta property="og:title" content="cat, Python, and Perl "/>
+<meta property="og:title" content="&#39;cat, Python, and Perl&#39; "/>
 <meta property="og:url" content="http://tshepang.net/cat-python-and-perl" />
-<meta property="og:description" content="I came across a tutorial that showes how to implement a simple cat in Perl. I&#39;ve modified their example for the sake of simplicity: 1 2 3 4 5 6 7 8 9 sub cat { foreach my $filename (@_) { open FILE, $filename; while (my $line = &lt;FILE&gt;) { print $line; } } } cat @ARGV …" />
+<meta property="og:description" content="I came across a tutorial that showes how to implement a simple cat in Perl. I\&#39;ve modified their example for the sake of simplicity: ``` {.sourceCode .perl} sub cat { foreach my $filename (@_) { open FILE, $filename; while (my $line = ) { print $line; } } } cat @ARGV; Running this script (e.g. `perl cat …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2011-03-15T00:00:00+02:00" />
-<meta name="twitter:title" content="cat, Python, and Perl ">
-<meta name="twitter:description" content="I came across a tutorial that showes how to implement a simple cat in Perl. I&#39;ve modified their example for the sake of simplicity: 1 2 3 4 5 6 7 8 9 sub cat { foreach my $filename (@_) { open FILE, $filename; while (my $line = &lt;FILE&gt;) { print $line; } } } cat @ARGV …">
+<meta name="twitter:title" content="&#39;cat, Python, and Perl&#39; ">
+<meta name="twitter:description" content="I came across a tutorial that showes how to implement a simple cat in Perl. I\&#39;ve modified their example for the sake of simplicity: ``` {.sourceCode .perl} sub cat { foreach my $filename (@_) { open FILE, $filename; while (my $line = ) { print $line; } } } cat @ARGV; Running this script (e.g. `perl cat …">
 
-        <title>cat, Python, and Perl  · Tshepang logs
+        <title>&#39;cat, Python, and Perl&#39;  · Tshepang logs
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -71,7 +71,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://tshepang.net/cat-python-and-perl"> cat, Python, and Perl  </a></h1>
+    <h1><a href="http://tshepang.net/cat-python-and-perl"> 'cat, Python, and Perl'  </a></h1>
     </header>
 </div>
 
@@ -79,96 +79,82 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>I came across <a class="reference external" href="http://greenteapress.com/perl/perl.pdf">a tutorial</a> that showes how to implement a simple cat in
-Perl. I've modified their example for the sake of simplicity:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="k">sub</span> <span class="nf">cat</span> <span class="p">{</span>
-     <span class="k">foreach</span> <span class="k">my</span> <span class="nv">$filename</span> <span class="p">(</span><span class="nv">@_</span><span class="p">)</span> <span class="p">{</span>
-         <span class="nb">open</span> <span class="n">FILE</span><span class="p">,</span> <span class="nv">$filename</span><span class="p">;</span>
-         <span class="k">while</span> <span class="p">(</span><span class="k">my</span> <span class="nv">$line</span> <span class="o">=</span> <span class="sr">&lt;FILE&gt;</span><span class="p">)</span> <span class="p">{</span>
-             <span class="k">print</span> <span class="nv">$line</span><span class="p">;</span>
-         <span class="p">}</span>
-     <span class="p">}</span>
- <span class="p">}</span>
- <span class="n">cat</span> <span class="nv">@ARGV</span><span class="p">;</span>
-</pre></div>
-</td></tr></table><p>Running this script (e.g. <tt class="docutils literal">perl cat.pl file</tt>)
-will display those files as if you ran <tt class="docutils literal">cat file</tt>.</p>
-<p>I decided to see how the Python example would look like:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="kn">import</span> <span class="nn">sys</span>
- <span class="k">def</span> <span class="nf">cat</span><span class="p">(</span><span class="n">files</span><span class="p">):</span>
-     <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
-         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">FILE</span><span class="p">:</span>
-             <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">FILE</span><span class="p">:</span>
-                 <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
- <span class="n">cat</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
-</pre></div>
-</td></tr></table><p>Running this script (e.g. <tt class="docutils literal">python3 cat.py file1 file2</tt>)
-will give exactly the same result as above.</p>
-<div class="section" id="notes">
-<h2>notes</h2>
-<ul class="simple">
-<li>The Perl keyword, <tt class="docutils literal">my</tt>, indicates that the variabe it refers to is
-local. Without that, it's taken to be global. As for Python, this is
-implicit, and depends on where the variable is placed (scope).</li>
-<li>Perl has special ways of identifying data types. In our example,
-<tt class="docutils literal">$</tt> is used to identify a variable that has a single value, and is
-known as a scalar in Perl talk. This can be tedious of course (so
-much typing!). In Python, the data fed into the variable is the only
-thing that determines what type of the variable it is. I see this as
-noise from Perl. It results in some badness, as in you can have two
-variables names be the same, but given different types (e.g.
-<tt class="docutils literal">my $var; my &#64;var;</tt>)</li>
-<li>The upper case file handler, <tt class="docutils literal">FILE</tt>, is a matter of convention for
-Perl, and can be named 'anything'. I used it in the Python sample
-only for the sake of clarity.</li>
-<li>The <tt class="docutils literal">&lt;&gt;</tt> operator is special syntax that means a file is being
-manipulated. Python has no such.</li>
-<li>The <tt class="docutils literal">&#64;_</tt> is an argument list (<tt class="docutils literal">&#64;ARGV</tt>) from the function call,
-<tt class="docutils literal">cat</tt>. This is one other thing that is implicit about Perl, where
-you have to learn extra syntax (and concepts), where a simple
-argument list should have been provided during the function
-declaration, as in Python's <tt class="docutils literal">cat(files)</tt>.</li>
-<li>Note that I didn't need to import anything to get Perl to work with
-command line arguments. With Python, I need to explicitly do so,
-and that's via the <a class="reference external" href="http://docs.python.org/3/library/sys">sys module</a>, which is part of its standard library.</li>
-<li>The Python <tt class="docutils literal">with</tt> statement is meant to make our lives easier, but
-also adds syntax to the language. What it does is close a file for us
-so we don't have to do it.</li>
-<li>The Python <tt class="docutils literal">print()</tt> function adds a newline by default, and that
-would results in ugly output from our code, that's why we used the
-<tt class="docutils literal"><span class="pre">end=&quot;&quot;</span></tt>.</li>
-<li>The <tt class="docutils literal">[1:]</tt> from the last statement in the Python example means that
-we are slicing the list, removing the first element (element 0), and
-keeping everything else. We do this because the current running
-script is considered by Python as element 0, while in Perl, the 1st
-element is actually the first thing that appears on the command line
-after the script name. One would say that Perl does this more
-elegantly.</li>
-</ul>
-</div>
-<div class="section" id="further-reading">
-<h2>further reading</h2>
-<ul class="simple">
-<li><a class="reference external" href="http://docs.python.org/reference/executionmodel">Python scope</a></li>
-<li><a class="reference external" href="http://docs.python.org/3/library/functions#print">Python print function</a></li>
-<li><a class="reference external" href="http://docs.python.org/3/reference/compound_stmts#the-with-statement">Python with statement</a></li>
-</ul>
-</div>
+            <p>I came across <a href="http://greenteapress.com/perl/perl.pdf">a tutorial</a> that showes how to implement a simple cat in
+Perl. I\'ve modified their example for the sake of simplicity:</p>
+<p>``` {.sourceCode .perl}
+sub cat {
+    foreach my $filename (@_) {
+        open FILE, $filename;
+        while (my $line = <FILE>) {
+            print $line;
+        }
+    }
+}
+cat @ARGV;</p>
+<div class="highlight"><pre><span></span><span class="n">Running</span> <span class="n">this</span> <span class="n">script</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="sb">`perl cat.pl file`</span><span class="p">)</span> <span class="n">will</span> <span class="n">display</span> <span class="n">those</span> <span class="n">files</span>
+<span class="k">as</span> <span class="k">if</span> <span class="n">you</span> <span class="n">ran</span> <span class="sb">`cat file`</span><span class="o">.</span>
 
+<span class="n">I</span> <span class="n">decided</span> <span class="n">to</span> <span class="n">see</span> <span class="n">how</span> <span class="n">the</span> <span class="n">Python</span> <span class="n">example</span> <span class="n">would</span> <span class="n">look</span> <span class="n">like</span><span class="p">:</span>
+
+<span class="sb">``</span><span class="err">`</span> <span class="p">{</span><span class="o">.</span><span class="n">sourceCode</span> <span class="o">.</span><span class="n">python</span><span class="p">}</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="k">def</span> <span class="nf">cat</span><span class="p">(</span><span class="n">files</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">FILE</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">FILE</span><span class="p">:</span>
+                <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">cat</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+</pre></div>
+
+
+<p>Running this script (e.g. <code>python3 cat.py file1 file2</code>) will give
+exactly the same result as above.</p>
+<h1>notes</h1>
+<ul>
+<li>The Perl keyword, <code>my</code>, indicates that the variabe it refers to is
+    local. Without that, it\'s taken to be global. As for Python, this
+    is implicit, and depends on where the variable is placed (scope).</li>
+<li>Perl has special ways of identifying data types. In our example, <code>$</code>
+    is used to identify a variable that has a single value, and is known
+    as a scalar in Perl talk. This can be tedious of course (so much
+    typing!). In Python, the data fed into the variable is the only
+    thing that determines what type of the variable it is. I see this as
+    noise from Perl. It results in some badness, as in you can have two
+    variables names be the same, but given different types (e.g.
+    <code>my $var; my @var;</code>)</li>
+<li>The upper case file handler, <code>FILE</code>, is a matter of convention for
+    Perl, and can be named \'anything\'. I used it in the Python sample
+    only for the sake of clarity.</li>
+<li>The <code>&lt;&gt;</code> operator is special syntax that means a file is being
+    manipulated. Python has no such.</li>
+<li>The <code>@_</code> is an argument list (<code>@ARGV</code>) from the function call,
+    <code>cat</code>. This is one other thing that is implicit about Perl, where
+    you have to learn extra syntax (and concepts), where a simple
+    argument list should have been provided during the function
+    declaration, as in Python\'s <code>cat(files)</code>.</li>
+<li>Note that I didn\'t need to import anything to get Perl to work with
+    command line arguments. With Python, I need to explicitly do so, and
+    that\'s via the <a href="http://docs.python.org/3/library/sys">sys module</a>, which is part of its standard library.</li>
+<li>The Python <code>with</code> statement is meant to make our lives easier, but
+    also adds syntax to the language. What it does is close a file for
+    us so we don\'t have to do it.</li>
+<li>The Python <code>print()</code> function adds a newline by default, and that
+    would results in ugly output from our code, that\'s why we used the
+    <code>end=""</code>.</li>
+<li>The <code>[1:]</code> from the last statement in the Python example means that
+    we are slicing the list, removing the first element (element 0), and
+    keeping everything else. We do this because the current running
+    script is considered by Python as element 0, while in Perl, the 1st
+    element is actually the first thing that appears on the command line
+    after the script name. One would say that Perl does this more
+    elegantly.</li>
+</ul>
+<h1>further reading</h1>
+<ul>
+<li><a href="http://docs.python.org/reference/executionmodel">Python scope</a></li>
+<li><a href="http://docs.python.org/3/library/functions#print">Python print function</a></li>
+<li><a href="http://docs.python.org/3/reference/compound_stmts#the-with-statement">Python with statement</a></li>
+</ul>
             
             <section>
 <div class="accordion" id="accordion2">
@@ -208,7 +194,7 @@ elegantly.</li>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/music-is-the-weapon-2004" title="Previous: Music is the Weapon (2004)">Music is the Weapon (2004)</a></li>
+                <li class="previous-article">« <a href="http://tshepang.net/music-is-the-weapon-2004" title="Previous: &#39;Music is the Weapon (2004)&#39;">'Music is the Weapon (2004)'</a></li>
                 <li class="next-article"><a href="http://tshepang.net/my-jhbuild-setup" title="Next: my JHBuild setup">my JHBuild setup</a> »</li>
             </ul>
             </nav>
@@ -222,11 +208,11 @@ elegantly.</li>
             <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://tshepang.net/tags.html#non-python-ref">non-Python
+                <li><a href="http://tshepang.net/tags.html#non-python-ref">'non-Python
                     <span>17</span>
 </a></li>
-                <li><a href="http://tshepang.net/tags.html#python-ref">Python
-                    <span>62</span>
+                <li><a href="http://tshepang.net/tags.html#python-ref">Python'
+                    <span>61</span>
 </a></li>
             </ul>
 <h4>Stay in Touch</h4>

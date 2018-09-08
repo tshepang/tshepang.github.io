@@ -11,18 +11,18 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="Debian, Python, wajig, computing, " />
+<meta name="keywords" content="'Debian, Python, wajig', computing, " />
 
-<meta property="og:title" content="wajig 2.3 released "/>
+<meta property="og:title" content="&#39;wajig 2.3 released&#39; "/>
 <meta property="og:url" content="http://tshepang.net/wajig-23-released" />
-<meta property="og:description" content="It&#39;s been many months since wajig was released, but this was about as good as any since I probably did far more work on it than on any other release so far: The most user-visible change is that I changed the UI to feel more standard/natural, where each of …" />
+<meta property="og:description" content="It\&#39;s been many months since wajig was released, but this was about as good as any since I probably did far more work on it than on any other release so far: The most user-visible change is that I changed the UI to feel more standard/natural, where each …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2012-03-25T00:00:00+02:00" />
-<meta name="twitter:title" content="wajig 2.3 released ">
-<meta name="twitter:description" content="It&#39;s been many months since wajig was released, but this was about as good as any since I probably did far more work on it than on any other release so far: The most user-visible change is that I changed the UI to feel more standard/natural, where each of …">
+<meta name="twitter:title" content="&#39;wajig 2.3 released&#39; ">
+<meta name="twitter:description" content="It\&#39;s been many months since wajig was released, but this was about as good as any since I probably did far more work on it than on any other release so far: The most user-visible change is that I changed the UI to feel more standard/natural, where each …">
 
-        <title>wajig 2.3 released  · Tshepang logs
+        <title>&#39;wajig 2.3 released&#39;  · Tshepang logs
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -71,7 +71,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://tshepang.net/wajig-23-released"> wajig 2.3 released  </a></h1>
+    <h1><a href="http://tshepang.net/wajig-23-released"> 'wajig 2.3 released'  </a></h1>
     </header>
 </div>
 
@@ -79,66 +79,69 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>It's been many months since wajig was released, but this was about as
+            <p>It\'s been many months since wajig was released, but this was about as
 good as any since I probably did far more work on it than on any other
 release so far:</p>
 <ul>
-<li><p class="first">The most user-visible change is that I changed the UI to feel more
-standard/natural, where each of the wajig COMMANDS are 1st-class
-citizens. Let me give an example of user wanting to install a package
-named nautilus, but avoid installing its Recommends depencencies:</p>
-<div class="highlight"><pre><span></span><span class="c1"># ole</span>
-wajig —norecommends INSTALL nautilus
-<span class="c1"># new</span>
-wajig INSTALL —norecommends nautilus
-</pre></div>
+<li>
+<p>The most user-visible change is that I changed the UI to feel more
+    standard/natural, where each of the wajig COMMANDS are 1st-class
+    citizens. Let me give an example of user wanting to install a
+    package named nautilus, but avoid installing its Recommends
+    depencencies:</p>
+<p>``` {.sourceCode .sh}</p>
+<h1>ole</h1>
+<p>wajig —norecommends INSTALL nautilus</p>
+<h1>new</h1>
+<p>wajig INSTALL —norecommends nautilus
+```</p>
 <p>I call this natural because it makes more sense to have the
-<tt class="docutils literal"><span class="pre">--norecommends</span></tt> command line option to be specified <em>after</em> the
+<code>--norecommends</code> command line option to be specified <em>after</em> the
 (wajig) subcommand it modifies. Also, the way it was implemented
 previously, the option would silently be ignored if it was used in a
-case where it was irrelevant. That's not good, and it links to the
+case where it was irrelevant. That\'s not good, and it links to the
 next user-visible change.</p>
 </li>
-<li><p class="first">There is less magic and more strictness. Previously, these commands
-resulted in the same outcome:</p>
-<pre class="literal-block">
-wajig REMOVEORPHANS
+<li>
+<p>There is less magic and more strictness. Previously, these commands
+    resulted in the same outcome:</p>
+<div class="highlight"><pre><span></span>wajig REMOVEORPHANS
 wajig REMOVE-ORPHANS
 wajig R-____EMOVE-ORPH----___AN_S
-</pre>
-<p>What wajig did was simply sanitise the commands, getting rid of the
-junk. Well, I don't like that, but since I didn't want to break
-people's commands/aliases/scripts I actually tried to preserve that
-functionality, but argparse didn't let me do that, and messing around
-with <tt class="docutils literal">sys.argv</tt> before argparse jumped in was an error-prone mess,
-which links us to the next change, this time behind-the-scenes.</p>
-</li>
-<li><p class="first">I replaced the archaic <tt class="docutils literal">getopt</tt> CLI parser with a far more powerful
-<tt class="docutils literal">argparse</tt>. This change alone, when I truly embraced it, using its
-subcommand methods (see point 1 above), resulting in a ridiculous
-work that involved mainly unfun work and resulted in changing (adding
-and removing) thousands of lines code.</p>
-</li>
-<li><p class="first">The output of command <tt class="docutils literal">wajig COMMANDS</tt> is now generated
-dynamically, instead of simply being read from a separate file.
-Advantage is that it should now remain more up-to-date.</p>
-</li>
-<li><p class="first">The usage info for each COMMAND was store on its own file, and the
-aliases were symblic links to them. Now that's ugly, but I did it
-that was some time ago because I could not think of a better, quick
-way. The ugly solution is simple, but it added over a 100 files in
-user machines, which is just bad design. Well, modern Linux-based
-package management makes such invisible to all but the most
-avid/curious users, but I never liked it anyways. Now, all of that
-help info is auto-generated by <tt class="docutils literal">argparse</tt> (you can imagine I'm a
-big fan of that module by now).</p>
-</li>
-<li><p class="first">There's bunch of other changes, though most was code stuff. As for
-the user-visible stuff, a few COMMANDS were removed, a few options
-added/removed. <a class="reference external" href="http://packages.qa.debian.org/w/wajig/news/20120322T223441Z.html">Here's 'all' the gory details</a>.</p>
-</li>
-</ul>
+</pre></div>
 
+
+<p>What wajig did was simply sanitise the commands, getting rid of the
+junk. Well, I don\'t like that, but since I didn\'t want to break
+people\'s commands/aliases/scripts I actually tried to preserve that
+functionality, but argparse didn\'t let me do that, and messing
+around with <code>sys.argv</code> before argparse jumped in was an error-prone
+mess, which links us to the next change, this time
+behind-the-scenes.</p>
+</li>
+<li>
+<p>I replaced the archaic <code>getopt</code> CLI parser with a far more powerful
+    <code>argparse</code>. This change alone, when I truly embraced it, using its
+    subcommand methods (see point 1 above), resulting in a ridiculous
+    work that involved mainly unfun work and resulted in changing
+    (adding and removing) thousands of lines code.</p>
+</li>
+<li>The output of command <code>wajig COMMANDS</code> is now generated dynamically,
+    instead of simply being read from a separate file. Advantage is that
+    it should now remain more up-to-date.</li>
+<li>The usage info for each COMMAND was store on its own file, and the
+    aliases were symblic links to them. Now that\'s ugly, but I did it
+    that was some time ago because I could not think of a better, quick
+    way. The ugly solution is simple, but it added over a 100 files in
+    user machines, which is just bad design. Well, modern Linux-based
+    package management makes such invisible to all but the most
+    avid/curious users, but I never liked it anyways. Now, all of that
+    help info is auto-generated by <code>argparse</code> (you can imagine I\'m a
+    big fan of that module by now).</li>
+<li>There\'s bunch of other changes, though most was code stuff. As for
+    the user-visible stuff, a few COMMANDS were removed, a few options
+    added/removed. <a href="http://packages.qa.debian.org/w/wajig/news/20120322T223441Z.html">Here\'s \'all\' the gory details</a>.</li>
+</ul>
             
             <section>
 <div class="accordion" id="accordion2">
@@ -179,7 +182,7 @@ added/removed. <a class="reference external" href="http://packages.qa.debian.org
             <nav>
             <ul class="articles-timeline">
                 <li class="previous-article">« <a href="http://tshepang.net/removing-obsolete-packages-from-a-local-debian-repository" title="Previous: removing obsolete packages from a local Debian repository">removing obsolete packages from a local Debian repository</a></li>
-                <li class="next-article"><a href="http://tshepang.net/links-2012-03-27" title="Next: links 2012-03-27">links 2012-03-27</a> »</li>
+                <li class="next-article"><a href="http://tshepang.net/links-2012-03-27" title="Next: &#39;links 2012-03-27&#39;">'links 2012-03-27'</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -192,13 +195,13 @@ added/removed. <a class="reference external" href="http://packages.qa.debian.org
             <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://tshepang.net/tags.html#debian-ref">Debian
+                <li><a href="http://tshepang.net/tags.html#debian-ref">'Debian
                     <span>49</span>
 </a></li>
                 <li><a href="http://tshepang.net/tags.html#python-ref">Python
-                    <span>62</span>
+                    <span>61</span>
 </a></li>
-                <li><a href="http://tshepang.net/tags.html#wajig-ref">wajig
+                <li><a href="http://tshepang.net/tags.html#wajig-ref">wajig'
                     <span>14</span>
 </a></li>
             </ul>

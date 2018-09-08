@@ -11,16 +11,16 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="non-Debian, computing, " />
+<meta name="keywords" content="'non-Debian', computing, " />
 
 <meta property="og:title" content="impressed by the ease of creating Upstart jobs "/>
 <meta property="og:url" content="http://tshepang.net/impressed-by-the-ease-of-creating-upstart-jobs" />
-<meta property="og:description" content="At work, we run our systems on Ubuntu, which so far means the init system is Upstart. I needed to have one binary to start when the system boots, and because I&#39;m horrified by sysvinit scripts (which Upstart supports), I decided to give creating an Upstart job a try. I …" />
+<meta property="og:description" content="At work, we run our systems on Ubuntu, which so far means the init system is Upstart. I needed to have one binary to start when the system boots, and because I\&#39;m horrified by sysvinit scripts (which Upstart supports), I decided to give creating an Upstart job a try …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2014-10-30T00:00:00+02:00" />
 <meta name="twitter:title" content="impressed by the ease of creating Upstart jobs ">
-<meta name="twitter:description" content="At work, we run our systems on Ubuntu, which so far means the init system is Upstart. I needed to have one binary to start when the system boots, and because I&#39;m horrified by sysvinit scripts (which Upstart supports), I decided to give creating an Upstart job a try. I …">
+<meta name="twitter:description" content="At work, we run our systems on Ubuntu, which so far means the init system is Upstart. I needed to have one binary to start when the system boots, and because I\&#39;m horrified by sysvinit scripts (which Upstart supports), I decided to give creating an Upstart job a try …">
 
         <title>impressed by the ease of creating Upstart jobs  · Tshepang logs
 </title>
@@ -80,29 +80,29 @@
 
             
             <p>At work, we run our systems on Ubuntu, which so far means the init
-system is Upstart. I needed to have one binary to start when the
-system boots, and because I'm horrified by sysvinit scripts (which
-Upstart supports), I decided to give creating an Upstart job a try. I
-was surprised how easy it was:</p>
-<pre class="literal-block">
-exec /usr/local/bin/executable
+system is Upstart. I needed to have one binary to start when the system
+boots, and because I\'m horrified by sysvinit scripts (which Upstart
+supports), I decided to give creating an Upstart job a try. I was
+surprised how easy it was:</p>
+<div class="highlight"><pre><span></span>exec /usr/local/bin/executable
 start on startup
 respawn
-</pre>
-<p>I placed a file with above contents in <tt class="docutils literal">/etc/init/executable.conf</tt>,
-and that's pretty much it. Impressive.</p>
-<p>Here's what happens:</p>
-<ul class="simple">
-<li><tt class="docutils literal">exec</tt> instructs Upstart what executable to run</li>
-<li><tt class="docutils literal">start on</tt> is an instruction on when to start the service</li>
-<li><tt class="docutils literal">respawn</tt> means the service should re-start if ever it dies for
-some reason</li>
-</ul>
-<p>One convenient thing that's happening is that stdout output of the
-service gets re-directed to a log file, in this case
-<tt class="docutils literal">/var/log/upstart/executable.log</tt>. Cool stuff.</p>
-<p>I found help from <a class="reference external" href="http://upstart.ubuntu.com/getting-started.html">Getting Started</a> and <a class="reference external" href="http://upstart.ubuntu.com/cookbook">the Cookbook</a>.</p>
+</pre></div>
 
+
+<p>I placed a file with above contents in <code>/etc/init/executable.conf</code>, and
+that\'s pretty much it. Impressive.</p>
+<p>Here\'s what happens:</p>
+<ul>
+<li><code>exec</code> instructs Upstart what executable to run</li>
+<li><code>start on</code> is an instruction on when to start the service</li>
+<li><code>respawn</code> means the service should re-start if ever it dies for some
+    reason</li>
+</ul>
+<p>One convenient thing that\'s happening is that stdout output of the
+service gets re-directed to a log file, in this case
+<code>/var/log/upstart/executable.log</code>. Cool stuff.</p>
+<p>I found help from <a href="http://upstart.ubuntu.com/getting-started.html">Getting Started</a> and <a href="http://upstart.ubuntu.com/cookbook">the Cookbook</a>.</p>
             
             <section>
 <div class="accordion" id="accordion2">
@@ -142,8 +142,8 @@ service gets re-directed to a log file, in this case
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/links-2014-10-07" title="Previous: links 2014-10-07">links 2014-10-07</a></li>
-                <li class="next-article"><a href="http://tshepang.net/ideal-static-blog-generator" title="Next: ideal static blog generator">ideal static blog generator</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/links-2014-10-07" title="Previous: &#39;links 2014-10-07&#39;">'links 2014-10-07'</a></li>
+                <li class="next-article"><a href="http://tshepang.net/zerofree-rocks" title="Next: &#39;zerofree rocks!&#39;">'zerofree rocks!'</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -156,8 +156,8 @@ service gets re-directed to a log file, in this case
             <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://tshepang.net/tags.html#non-debian-ref">non-Debian
-                    <span>13</span>
+                <li><a href="http://tshepang.net/tags.html#non-debian-ref">'non-Debian'
+                    <span>11</span>
 </a></li>
             </ul>
 <h4>Stay in Touch</h4>

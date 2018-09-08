@@ -15,12 +15,12 @@
 
 <meta property="og:title" content="dangerous inconsistency in symlink removal "/>
 <meta property="og:url" content="http://tshepang.net/dangerous-inconsistency-in-symlink-removal" />
-<meta property="og:description" content="Here&#39;s how to make a symlink and to delete it: mkdir dir ln -s dir dirlink rm -r dirlink Here&#39;s another way to delete it: rm -r dirlink/ Although it will do the job, it will actually complain with: rm: cannot remove `dirlink&#39;: Not a directory Note that we could …" />
+<meta property="og:description" content="Here\&#39;s how to make a symlink and to delete it: ``` {.sourceCode .sh} mkdir dir ln -s dir dirlink rm -r dirlink Here\&#39;s another way to delete it: ``` {.sourceCode .sh} rm -r dirlink/ Although it will do the job, it will actually complain with: `` {.sourceCode .sh} rm: cannot remove …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2011-01-28T00:00:00+02:00" />
 <meta name="twitter:title" content="dangerous inconsistency in symlink removal ">
-<meta name="twitter:description" content="Here&#39;s how to make a symlink and to delete it: mkdir dir ln -s dir dirlink rm -r dirlink Here&#39;s another way to delete it: rm -r dirlink/ Although it will do the job, it will actually complain with: rm: cannot remove `dirlink&#39;: Not a directory Note that we could …">
+<meta name="twitter:description" content="Here\&#39;s how to make a symlink and to delete it: ``` {.sourceCode .sh} mkdir dir ln -s dir dirlink rm -r dirlink Here\&#39;s another way to delete it: ``` {.sourceCode .sh} rm -r dirlink/ Although it will do the job, it will actually complain with: `` {.sourceCode .sh} rm: cannot remove …">
 
         <title>dangerous inconsistency in symlink removal  · Tshepang logs
 </title>
@@ -79,29 +79,36 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>Here's how to make a symlink and to delete it:</p>
-<div class="highlight"><pre><span></span>mkdir dir
+            <p>Here\'s how to make a symlink and to delete it:</p>
+<p>``` {.sourceCode .sh}
+mkdir dir
 ln -s dir dirlink
-rm -r dirlink
+rm -r dirlink</p>
+<div class="highlight"><pre><span></span>Here\&#39;s another way to delete it:
+
+``` {.sourceCode .sh}
+rm -r dirlink/
 </pre></div>
-<p>Here's another way to delete it:</p>
-<div class="highlight"><pre><span></span>rm -r dirlink/
-</pre></div>
+
+
 <p>Although it will do the job, it will actually complain with:</p>
-<div class="highlight"><pre><span></span>rm: cannot remove <span class="sb">`</span>dirlink<span class="err">&#39;</span>: Not a directory
+<p><code>`` {.sourceCode .sh}
+rm: cannot remove</code>dirlink': Not a directory</p>
+<div class="highlight"><pre><span></span>Note that we could have achieved the deletion with just:
+
+``` {.sourceCode .sh}
+rm dirlink
 </pre></div>
-<p>Note that we could have achieved the deletion with just:</p>
-<div class="highlight"><pre><span></span>rm dirlink
-</pre></div>
-<p>This is because the symlink is just a single file. So there's no need to
-treat it like a directory when deleting.</p>
+
+
+<p>This is because the symlink is just a single file. So there\'s no need
+to treat it like a directory when deleting.</p>
 <p>Sadly, this behaviour is inconsistent when there is a mounted voulem.
 The first way of deletion has no problem, but the second one will wipe
-out the entire drive, if it so happens that <tt class="docutils literal">dir</tt> is the mount
-directory (i.e. <tt class="docutils literal">ln <span class="pre">-s</span> /media/my_drive dirlink &amp;&amp; rm <span class="pre">-r</span> dirlink/</tt>). I
-learned this the hard way :(</p>
-<p>[<strong>sidenote</strong>] Here's <a class="reference external" href="http://unix.stackexchange.com/q/6618/688">some explanation</a>.</p>
-
+out the entire drive, if it so happens that <code>dir</code> is the mount directory
+(i.e. <code>ln -s /media/my_drive dirlink &amp;&amp; rm -r dirlink/</code>). I learned this
+the hard way :(</p>
+<p>[<strong>sidenote</strong>] Here\'s <a href="http://unix.stackexchange.com/q/6618/688">some explanation</a>.</p>
             
             <section>
 <div class="accordion" id="accordion2">
@@ -141,7 +148,7 @@ learned this the hard way :(</p>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/basic-usage-of-python-with-oracle-db-in-debian" title="Previous: basic usage of Python with Oracle DB, in Debian">basic usage of Python with Oracle DB, in Debian</a></li>
+                <li class="previous-article">« <a href="http://tshepang.net/basic-usage-of-python-with-oracle-db-in-debian" title="Previous: &#39;basic usage of Python with Oracle DB, in Debian&#39;">'basic usage of Python with Oracle DB, in Debian'</a></li>
                 <li class="next-article"><a href="http://tshepang.net/basic-configparser-usage" title="Next: basic ConfigParser usage">basic ConfigParser usage</a> »</li>
             </ul>
             </nav>

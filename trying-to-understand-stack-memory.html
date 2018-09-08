@@ -15,12 +15,12 @@
 
 <meta property="og:title" content="trying to understand stack memory "/>
 <meta property="og:url" content="http://tshepang.net/trying-to-understand-stack-memory" />
-<meta property="og:description" content="Python is a language that is so high level that concepts like stack and heap memory are hidden from its users. Not so with lower-level languages like C. Following examples are implemented in Rust, which is easier to use than C: fn main() { let a = 0i8; let b = 0 …" />
+<meta property="og:description" content="Python is a language that is so high level that concepts like stack and heap memory are hidden from its users. Not so with lower-level languages like C. Following examples are implemented in Rust, which is easier to use than C: ::: {.sourcecode} rust fn main() { let a = 0i8; let b …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2014-08-04T00:00:00+02:00" />
 <meta name="twitter:title" content="trying to understand stack memory ">
-<meta name="twitter:description" content="Python is a language that is so high level that concepts like stack and heap memory are hidden from its users. Not so with lower-level languages like C. Following examples are implemented in Rust, which is easier to use than C: fn main() { let a = 0i8; let b = 0 …">
+<meta name="twitter:description" content="Python is a language that is so high level that concepts like stack and heap memory are hidden from its users. Not so with lower-level languages like C. Following examples are implemented in Rust, which is easier to use than C: ::: {.sourcecode} rust fn main() { let a = 0i8; let b …">
 
         <title>trying to understand stack memory  · Tshepang logs
 </title>
@@ -79,69 +79,73 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>Python is a language that is so high level that concepts like stack
-and heap memory are hidden from its users. Not so with lower-level
-languages like C. Following examples are implemented in Rust, which is
-easier to use than C:</p>
-<div class="highlight"><pre><span></span><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="k">i8</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="k">i8</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="k">i8</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">    </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;{:p}&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;{:p}&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;{:p}&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">c</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</pre></div>
+            <p>Python is a language that is so high level that concepts like stack and
+heap memory are hidden from its users. Not so with lower-level languages
+like C. Following examples are implemented in Rust, which is easier to
+use than C:</p>
+<p>::: {.sourcecode}
+rust</p>
+<dl>
+<dt>fn main() {</dt>
+<dd>
+<p>let a = 0i8; let b = 0i8; let c = 0i8;</p>
+<p>println!(\"{:p}\", &amp;a); println!(\"{:p}\", &amp;b); println!(\"{:p}\",
+&amp;c);</p>
+</dd>
+</dl>
+<p>}
+:::</p>
 <p>We build and run it like this:</p>
-<pre class="literal-block">
-$ rustc main.rs &amp;&amp; ./main
+<div class="highlight"><pre><span></span>$ rustc main.rs <span class="o">&amp;&amp;</span> ./main
 0x7fff0c8d16d7
 0x7fff0c8d16d6
 0x7fff0c8d16d5
-</pre>
-<p>In our code, the three variables are each given 1 byte of memory
-(<tt class="docutils literal">i8</tt> means 8-bit integer). The addresses are given in reverse
-order. An explanation I heard is so that the heap grows the opposite
-direction to the stack, which helps separate things nicely. I suppose
-this would be for performance reasons and/or simpler memory management
-code.</p>
-<p>If we use larger types, we'll see each value taking more than just one
-address:</p>
-<div class="highlight"><pre><span></span><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="k">i16</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="k">i16</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="k">i16</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">    </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;{:p}&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;{:p}&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;{:p}&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">c</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
 </pre></div>
+
+
+<p>In our code, the three variables are each given 1 byte of memory (<code>i8</code>
+means 8-bit integer). The addresses are given in reverse order. An
+explanation I heard is so that the heap grows the opposite direction to
+the stack, which helps separate things nicely. I suppose this would be
+for performance reasons and/or simpler memory management code.</p>
+<p>If we use larger types, we\'ll see each value taking more than just one
+address:</p>
+<p>::: {.sourcecode}
+rust</p>
+<dl>
+<dt>fn main() {</dt>
+<dd>
+<p>let a = 0i16; let b = 0i16; let c = 0i16;</p>
+<p>println!(\"{:p}\", &amp;a); println!(\"{:p}\", &amp;b); println!(\"{:p}\",
+&amp;c);</p>
+</dd>
+</dl>
+<p>}
+:::</p>
 <p>Output:</p>
-<pre class="literal-block">
-$ rustc main.rs &amp;&amp; ./main
+<div class="highlight"><pre><span></span>$ rustc main.rs <span class="o">&amp;&amp;</span> ./main
 0x7fff2462aed6
 0x7fff2462aed4
 0x7fff2462aed2
-</pre>
-<p>In this case, each of the variables take 2 addresses (<tt class="docutils literal">i16</tt> means
-16-bit integer). Using <tt class="docutils literal">i32</tt> results in each taking 4 addresses:</p>
-<pre class="literal-block">
-$ rustc main.rs &amp;&amp; ./main
+</pre></div>
+
+
+<p>In this case, each of the variables take 2 addresses (<code>i16</code> means 16-bit
+integer). Using <code>i32</code> results in each taking 4 addresses:</p>
+<div class="highlight"><pre><span></span>$ rustc main.rs <span class="o">&amp;&amp;</span> ./main
 0x7ffff7706024
 0x7ffff7706020
 0x7ffff770601c
-</pre>
-<p>And then, finally, <tt class="docutils literal">i64</tt> results in each variable taking 8 addresses
-(64 bits) of space:</p>
-<pre class="literal-block">
-$ rustc main.rs &amp;&amp; ./main
+</pre></div>
+
+
+<p>And then, finally, <code>i64</code> results in each variable taking 8 addresses (64
+bits) of space:</p>
+<div class="highlight"><pre><span></span>$ rustc main.rs <span class="o">&amp;&amp;</span> ./main
 0x7fffd27383b0
 0x7fffd27383a8
 0x7fffd27383a0
-</pre>
-
+</pre></div>
             
             <section>
 <div class="accordion" id="accordion2">
@@ -181,8 +185,8 @@ $ rustc main.rs &amp;&amp; ./main
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/discovering-python-decorators" title="Previous: discovering Python @decorators">discovering Python @decorators</a></li>
-                <li class="next-article"><a href="http://tshepang.net/loving-the-ssh-multi-hop-feature-of-emacs" title="Next: loving the SSH multi-hop feature of Emacs">loving the SSH multi-hop feature of Emacs</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/discovering-python-decorators" title="Previous: &#39;discovering Python \@decorators&#39;">'discovering Python \@decorators'</a></li>
+                <li class="next-article"><a href="http://tshepang.net/loving-the-ssh-multi-hop-feature-of-emacs" title="Next: &#39;loving the SSH multi-hop feature of Emacs&#39;">'loving the SSH multi-hop feature of Emacs'</a> »</li>
             </ul>
             </nav>
             </aside>

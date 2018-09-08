@@ -79,68 +79,72 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>JHBuild is a <a class="reference external" href="http://library.gnome.org/devel/jhbuild/unstable/command-reference.html.en">powerful</a> and <a class="reference external" href="http://library.gnome.org/devel/jhbuild/unstable/config-reference.html.en">flexible</a> build tool for GNOME. It does
-takes some getting used to in terms of set-up, but this <a class="reference external" href="http://live.gnome.org/Jhbuild">wiki page</a> is
+            <p>JHBuild is a <a href="http://library.gnome.org/devel/jhbuild/unstable/command-reference.html.en">powerful</a> and <a href="http://library.gnome.org/devel/jhbuild/unstable/config-reference.html.en">flexible</a> build tool for GNOME. It does
+takes some getting used to in terms of set-up, but this <a href="http://live.gnome.org/Jhbuild">wiki page</a> is
 quite gentle, and it details how to get the code running on your
 machine.</p>
 <p>If you use Debian (or Ubuntu), you can use run this command:</p>
-<div class="highlight"><pre><span></span>wajig --norecommends install build-essential docbook-xsl flex <span class="se">\</span>
-bison cvs gperf cmake  <span class="o">{</span>uuid,ppp<span class="o">}</span>-dev <span class="se">\</span>
-libx<span class="o">{</span>composite,randr,damage,ft2,i,t<span class="o">}</span>-dev <span class="se">\</span>
-libxcb-<span class="o">{</span>event1,aux0,atom1<span class="o">}</span>-dev <span class="se">\</span>
-lib<span class="o">{</span>pam0g,iw,db,gdbm,png12,ffi,tiff,vorbis,gl1-mesa,unistring<span class="o">}</span> <span class="se">\</span>
-lib<span class="o">{</span>quvi,icu,neon27,usb-1.0-0,asound2,ncurses5,udev,usb,acl1<span class="o">}</span> <span class="se">\</span>
-lib<span class="o">{</span>boost-signals,ldap2,sasl2<span class="o">}</span>-dev
-</pre></div>
-<p>It's installs the development packages that will be needed by the build
-process. The <tt class="docutils literal"><span class="pre">--no-recommends</span></tt> option means I want to limit the
+<p>``` {.sourceCode .sh}
+wajig --norecommends install build-essential docbook-xsl flex \
+bison cvs gperf cmake  {uuid,ppp}-dev \
+libx{composite,randr,damage,ft2,i,t}-dev \
+libxcb-{event1,aux0,atom1}-dev \
+lib{pam0g,iw,db,gdbm,png12,ffi,tiff,vorbis,gl1-mesa,unistring} \
+lib{quvi,icu,neon27,usb-1.0-0,asound2,ncurses5,udev,usb,acl1} \
+lib{boost-signals,ldap2,sasl2}-dev</p>
+<div class="highlight"><pre><span></span>It\&#39;s installs the development packages that will be needed by the build
+process. The `--no-recommends` option means I want to limit the
 installation to packages I really need, avoiding the extra stuff deemed
-by the packager to be useful for me.</p>
-<p>My &quot;~/.jhbuilrc&quot; contains the following:</p>
-<div class="highlight"><pre><span></span><span class="c1"># build directory</span>
-<span class="n">checkoutroot</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s2">&quot;~/src/gnome&quot;</span><span class="p">)</span>
+by the packager to be useful for me.
 
-<span class="c1"># don&#39;t spew lots of distracting status messages</span>
-<span class="n">notrayicon</span> <span class="o">=</span> <span class="bp">True</span>
+My \&quot;\~/.jhbuilrc\&quot; contains the following:
 
-<span class="c1"># attempt to build modules even if their dependencies weren&#39;t successfully built</span>
-<span class="n">nopoison</span> <span class="o">=</span> <span class="bp">True</span>
+``` {.sourceCode .python}
+# build directory
+checkoutroot = os.path.expanduser(&quot;~/src/gnome&quot;)
 
-<span class="c1"># don&#39;t build these since they have issues; this implies that I must install my distro&#39;s development versions</span>
-<span class="n">skip</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;nss&#39;</span><span class="p">,</span> <span class="s1">&#39;nspr&#39;</span><span class="p">]</span>
+# don&#39;t spew lots of distracting status messages
+notrayicon = True
 
-<span class="c1"># dont fetch moduleset xml files from the web; use ones that are installed locally</span>
-<span class="n">use_local_modulesets</span> <span class="o">=</span> <span class="bp">True</span>
+# attempt to build modules even if their dependencies weren&#39;t successfully built
+nopoison = True
 
-<span class="c1"># where html-formatted logs are kept</span>
-<span class="n">tinderbox_outputdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s2">&quot;~/temp/tinderbox&quot;</span><span class="p">)</span>
+# don&#39;t build these since they have issues; this implies that I must install my distro&#39;s development versions
+skip = [&#39;nss&#39;, &#39;nspr&#39;]
+
+# dont fetch moduleset xml files from the web; use ones that are installed locally
+use_local_modulesets = True
+
+# where html-formatted logs are kept
+tinderbox_outputdir = os.path.expanduser(&quot;~/temp/tinderbox&quot;)
 </pre></div>
-<p>See <a class="reference external" href="http://library.gnome.org/devel/jhbuild/unstable/config-reference.html.en">Configuration File Reference</a> for a detailed explanation of these
-options.</p>
-<p>After this, I run <tt class="docutils literal">jhbuild bootstrap <span class="pre">--ignore-system</span></tt>. This downloads,
-builds, and installs the basic tools for building packages (here's <a class="reference external" href="http://git.gnome.org/browse/jhbuild/tree/modulesets/bootstrap.modules">the
+
+
+<p>See <a href="http://library.gnome.org/devel/jhbuild/unstable/config-reference.html.en">Configuration File Reference</a> for a detailed explanation
+of these options.</p>
+<p>After this, I run <code>jhbuild bootstrap --ignore-system</code>. This downloads,
+builds, and installs the basic tools for building packages (here\'s <a href="http://git.gnome.org/browse/jhbuild/tree/modulesets/bootstrap.modules">the
 xml file</a> it uses to determine what these tools are, and where it
 downloads them from). To avoid issues with some incompatibility with my
-OS, I use <tt class="docutils literal"><span class="pre">--ignore-system</span></tt>, which ensures that the bootstrap command
+OS, I use <code>--ignore-system</code>, which ensures that the bootstrap command
 will use the blessed versions of these tools.</p>
 <p>When the bootstrap process is complete, I run the not-so-descriptive
-command <tt class="docutils literal">jhbuild tinderbox</tt> (See Command Reference for a detailed
+command <code>jhbuild tinderbox</code> (See Command Reference for a detailed
 explanation of this and the other options). This is the same as build,
 except that the output is stored in html files, in a directory specified
 by <strong>tinderbox_outputdir</strong> in the config file.</p>
 <p>Ideally, some hours later, the process should be complete. Reaching for
-&quot;~/temp/tinderbox&quot; will present you with a whole bunch of html files,
-one for each module. The file &quot;index.html&quot; will give a decent page that
-acts like a summary of the entire build process, showing which modules
-failed, and on what build stages. Gorgeous!</p>
-<hr class="docutils" />
+\"\~/temp/tinderbox\" will present you with a whole bunch of html files,
+one for each module. The file \"index.html\" will give a decent page
+that acts like a summary of the entire build process, showing which
+modules failed, and on what build stages. Gorgeous!</p>
+<hr>
 <p><strong>sidenotes</strong>:</p>
-<ul class="simple">
+<ul>
 <li>This process is rather simplified, for the sake of clarity.</li>
 <li>I run Debian 6, codenamed Squeeze.</li>
-<li>There is <a class="reference external" href="http://www.vuntz.net/journal/post/2010/09/23/My-love-for-jhbuild">a more thorough tutorial</a> elsewhere.</li>
+<li>There is <a href="http://www.vuntz.net/journal/post/2010/09/23/My-love-for-jhbuild">a more thorough tutorial</a> elsewhere.</li>
 </ul>
-
             
             <section>
 <div class="accordion" id="accordion2">
@@ -180,7 +184,7 @@ failed, and on what build stages. Gorgeous!</p>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/cat-python-and-perl" title="Previous: cat, Python, and Perl">cat, Python, and Perl</a></li>
+                <li class="previous-article">« <a href="http://tshepang.net/cat-python-and-perl" title="Previous: &#39;cat, Python, and Perl&#39;">'cat, Python, and Perl'</a></li>
                 <li class="next-article"><a href="http://tshepang.net/cleansing-multiple-build-directories" title="Next: cleansing multiple build directories">cleansing multiple build directories</a> »</li>
             </ul>
             </nav>

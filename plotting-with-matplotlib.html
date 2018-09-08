@@ -15,12 +15,12 @@
 
 <meta property="og:title" content="plotting with matplotlib "/>
 <meta property="og:url" content="http://tshepang.net/plotting-with-matplotlib" />
-<meta property="og:description" content="Here&#39;s drawing a simple graph: from matplotlib import pyplot x = range(10) # a list of 10 integers, 0-9 y = range(10) pyplot.plot(x, y) pyplot.show() And now for something a little more interesting: import random from matplotlib import pyplot x = range(10) y = random.sample(range(10), 10 …" />
+<meta property="og:description" content="Here\&#39;s drawing a simple graph: ``` {.sourceCode .python} from matplotlib import pyplot x = range(10) # a list of 10 integers, 0-9 y = range(10) pyplot.plot(x, y) pyplot.show() And now for something a little more interesting: ``` {.sourceCode .python} import random from matplotlib import pyplot x = range(10) y …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2011-02-17T00:00:00+02:00" />
 <meta name="twitter:title" content="plotting with matplotlib ">
-<meta name="twitter:description" content="Here&#39;s drawing a simple graph: from matplotlib import pyplot x = range(10) # a list of 10 integers, 0-9 y = range(10) pyplot.plot(x, y) pyplot.show() And now for something a little more interesting: import random from matplotlib import pyplot x = range(10) y = random.sample(range(10), 10 …">
+<meta name="twitter:description" content="Here\&#39;s drawing a simple graph: ``` {.sourceCode .python} from matplotlib import pyplot x = range(10) # a list of 10 integers, 0-9 y = range(10) pyplot.plot(x, y) pyplot.show() And now for something a little more interesting: ``` {.sourceCode .python} import random from matplotlib import pyplot x = range(10) y …">
 
         <title>plotting with matplotlib  · Tshepang logs
 </title>
@@ -79,54 +79,64 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>Here's drawing a simple graph:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span>
-<span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>  <span class="c1"># a list of 10 integers, 0-9</span>
-<span class="n">y</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-<p>And now for something a little more interesting:</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+            <p>Here\'s drawing a simple graph:</p>
+<p>``` {.sourceCode .python}
+from matplotlib import pyplot
+x = range(10)  # a list of 10 integers, 0-9
+y = range(10)
+pyplot.plot(x, y)
+pyplot.show()</p>
+<div class="highlight"><pre><span></span><span class="n">And</span> <span class="n">now</span> <span class="k">for</span> <span class="n">something</span> <span class="n">a</span> <span class="n">little</span> <span class="n">more</span> <span class="n">interesting</span><span class="p">:</span>
+
+<span class="sb">``</span><span class="err">`</span> <span class="p">{</span><span class="o">.</span><span class="n">sourceCode</span> <span class="o">.</span><span class="n">python</span><span class="p">}</span>
+<span class="kn">import</span> <span class="nn">random</span>
 <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span>
 <span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="mi">10</span><span class="p">)</span>
 <span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 <span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
+
+
 <p>We can have more than one graph on a single figure:</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span>
-<span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">y1</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="mi">10</span><span class="p">)</span>
-<span class="n">y2</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="mi">10</span><span class="p">)</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y2</span><span class="p">)</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-<p>What if the two graphs have much differing ranges:</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span>
-<span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">y1</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="mi">10</span><span class="p">)</span>
-<span class="n">y2</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">110</span><span class="p">),</span> <span class="mi">10</span><span class="p">)</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y2</span><span class="p">)</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-<p>Depending on need, that might not be ideal.
-So let's create two separate y-axes:</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<p>``` {.sourceCode .python}
+import random
+from matplotlib import pyplot
+x = range(10)
+y1 = random.sample(range(10), 10)
+y2 = random.sample(range(10), 10)
+pyplot.plot(x, y1, x, y2)
+pyplot.show()</p>
+<div class="highlight"><pre><span></span><span class="n">What</span> <span class="k">if</span> <span class="n">the</span> <span class="n">two</span> <span class="n">graphs</span> <span class="n">have</span> <span class="n">much</span> <span class="n">differing</span> <span class="n">ranges</span><span class="p">:</span>
+
+<span class="sb">``</span><span class="err">`</span> <span class="p">{</span><span class="o">.</span><span class="n">sourceCode</span> <span class="o">.</span><span class="n">python</span><span class="p">}</span>
+<span class="kn">import</span> <span class="nn">random</span>
 <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span>
 <span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">y1</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="mi">10</span><span class="p">)</span>
 <span class="n">y2</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">110</span><span class="p">),</span> <span class="mi">10</span><span class="p">)</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y1</span><span class="p">)</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y2</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y2</span><span class="p">)</span>
 <span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
-<p>Yeah, not exactly ideal. We lost the automatic coloring, and we don't
-even know which graph is which. Let's do better:</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+
+<p>Depending on need, that might not be ideal. So let\'s create two
+separate y-axes:</p>
+<p>``` {.sourceCode .python}
+import random
+from matplotlib import pyplot
+x = range(10)
+y1 = random.sample(range(10), 10)
+y2 = random.sample(range(100, 110), 10)
+pyplot.plot(x, y1)
+pyplot.twinx()
+pyplot.plot(x, y2)
+pyplot.show()</p>
+<div class="highlight"><pre><span></span><span class="n">Yeah</span><span class="p">,</span> <span class="ow">not</span> <span class="n">exactly</span> <span class="n">ideal</span><span class="o">.</span> <span class="n">We</span> <span class="n">lost</span> <span class="n">the</span> <span class="n">automatic</span> <span class="n">coloring</span><span class="p">,</span> <span class="ow">and</span> <span class="n">we</span> <span class="n">don</span>\<span class="s1">&#39;t</span>
+<span class="n">even</span> <span class="n">know</span> <span class="n">which</span> <span class="n">graph</span> <span class="ow">is</span> <span class="n">which</span><span class="o">.</span> <span class="n">Let</span>\<span class="s1">&#39;s do better:</span>
+
+<span class="sb">``</span><span class="err">`</span> <span class="p">{</span><span class="o">.</span><span class="n">sourceCode</span> <span class="o">.</span><span class="n">python</span><span class="p">}</span>
+<span class="kn">import</span> <span class="nn">random</span>
 <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span>
 <span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">y1</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="mi">10</span><span class="p">)</span>
@@ -138,18 +148,17 @@ even know which graph is which. Let's do better:</p>
 <span class="n">pyplot</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;y2&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
 <span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
-<p>This was done with the help of <a class="reference external" href="http://matplotlib.sourceforge.net/examples/api/two_scales.html">this example</a>. There's a heck of a
-<a class="reference external" href="http://matplotlib.sourceforge.net/examples/index.html">lot</a> <a class="reference external" href="http://matplotlib.sourceforge.net/gallery.html">more</a>.</p>
-<div class="section" id="further-reading">
-<h2>further reading</h2>
-<ul class="simple">
-<li>built-in function: <a class="reference external" href="http://docs.python.org/library/functions#range">range</a></li>
-<li>module: <a class="reference external" href="http://docs.python.org/library/random">random</a></li>
-<li>3rd-party module: <a class="reference external" href="http://matplotlib.sourceforge.net/api/pyplot_api.html">matplotlib.pyplot</a></li>
-<li><a class="reference external" href="http://matplotlib.sourceforge.net/contents.html">matplotlib documentation</a></li>
-</ul>
-</div>
 
+
+<p>This was done with the help of <a href="http://matplotlib.sourceforge.net/examples/api/two_scales.html">this example</a>. There\'s a heck of a
+<a href="http://matplotlib.sourceforge.net/examples/index.html">lot</a> <a href="http://matplotlib.sourceforge.net/gallery.html">more</a>.</p>
+<h1>further reading</h1>
+<ul>
+<li>built-in function: <a href="http://docs.python.org/library/functions#range">range</a></li>
+<li>module: <a href="http://docs.python.org/library/random">random</a></li>
+<li>3rd-party module: <a href="http://matplotlib.sourceforge.net/api/pyplot_api.html">matplotlib.pyplot</a></li>
+<li><a href="http://matplotlib.sourceforge.net/contents.html">matplotlib documentation</a></li>
+</ul>
             
             <section>
 <div class="accordion" id="accordion2">
@@ -189,8 +198,8 @@ even know which graph is which. Let's do better:</p>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/project-of-note-matplotlib" title="Previous: project of note: matplotlib">project of note: matplotlib</a></li>
-                <li class="next-article"><a href="http://tshepang.net/hold-it-down-1995" title="Next: Hold It Down (1995)">Hold It Down (1995)</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/project-of-note-matplotlib" title="Previous: &#39;project of note: matplotlib&#39;">'project of note: matplotlib'</a></li>
+                <li class="next-article"><a href="http://tshepang.net/hold-it-down-1995" title="Next: &#39;Hold It Down (1995)&#39;">'Hold It Down (1995)'</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -204,7 +213,7 @@ even know which graph is which. Let's do better:</p>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
                 <li><a href="http://tshepang.net/tags.html#python-ref">Python
-                    <span>62</span>
+                    <span>61</span>
 </a></li>
             </ul>
 <h4>Stay in Touch</h4>

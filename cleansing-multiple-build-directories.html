@@ -11,7 +11,7 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="Python, GNOME, computing, " />
+<meta name="keywords" content="'Python, GNOME', computing, " />
 
 <meta property="og:title" content="cleansing multiple build directories "/>
 <meta property="og:url" content="http://tshepang.net/cleansing-multiple-build-directories" />
@@ -79,37 +79,40 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>In my adventures of <a class="reference external" href="http://tshepang.net/my-jhbuild-setup">building GNOME with JHBuild</a>, it often happens
-that when I tweak something that affects the build environment (e.g. use
+            <p>In my adventures of <a href="http://tshepang.net/my-jhbuild-setup">building GNOME with JHBuild</a>, it often happens that
+when I tweak something that affects the build environment (e.g. use
 system Python instead of JHBuild-built one), I get a heck of a lot of
 build failures. This will happen even after I run jhbuild clean (which
-runs <tt class="docutils literal">make clean</tt> on the modules), testimony to the weakness ofthe
-GNOME build infrastructure (autotools, ...). This means that I need to
-run <tt class="docutils literal">make distclean</tt> or better still (where applicable)
-<tt class="docutils literal">git clean <span class="pre">-dfx</span></tt>. Note that I sometimes even have to uninstall one or
-two modules (on JHBuild path) to get a build failure fixe
-(<tt class="docutils literal">jhbuild uninstall modulename</tt>). This is laborious work, so I
-sometimes just wipe out the entire installation.</p>
-<p>Note that there's dozens of modules to build, so I wrote this little
+runs <code>make clean</code> on the modules), testimony to the weakness ofthe GNOME
+build infrastructure (autotools, ...). This means that I need to run
+<code>make distclean</code> or better still (where applicable) <code>git clean -dfx</code>.
+Note that I sometimes even have to uninstall one or two modules (on
+JHBuild path) to get a build failure fixe
+(<code>jhbuild uninstall modulename</code>). This is laborious work, so I sometimes
+just wipe out the entire installation.</p>
+<p>Note that there\'s dozens of modules to build, so I wrote this little
 script to take care of it:</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">subprocess</span>
-<span class="n">top_level</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s2">&quot;~/src/gnome&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">top_level</span><span class="p">):</span>
-    <span class="n">full_path</span> <span class="o">=</span> <span class="s2">&quot;{}/{}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">top_level</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">full_path</span><span class="p">):</span>
-        <span class="n">cmd</span> <span class="o">=</span> <span class="s2">&quot;cd ~/src/gnome/{} &amp;&amp; git clean -dfx&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">cmd</span> <span class="o">=</span> <span class="s2">&quot;cd ~/src/gnome/{} &amp;&amp; make distclean&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-            <span class="k">if</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="n">cmd</span> <span class="o">=</span> <span class="s2">&quot;cd ~/src/gnome/{} &amp;&amp; make clean&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-                <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-</pre></div>
-<div class="section" id="update">
-<h2>update</h2>
-<p>Someone very kind guy made <a class="reference external" href="http://codereview.stackexchange.com/questions/1476/cleansing-multiple-build-directories/1477#1477">a bunch of suggestions</a>, making my code much
-better:</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<p>``` {.sourceCode .python}
+import os
+import subprocess
+top_level = os.path.expanduser("~/src/gnome")
+for filename in os.listdir(top_level):
+    full_path = "{}/{}".format(top_level, filename)
+    if os.path.isdir(full_path):
+        cmd = "cd ~/src/gnome/{} &amp;&amp; git clean -dfx".format(filename)
+        if subprocess.call(cmd, shell=True) != 0:
+            cmd = "cd ~/src/gnome/{} &amp;&amp; make distclean".format(filename)
+            if subprocess.call(cmd, shell=True) != 0:
+                cmd = "cd ~/src/gnome/{} &amp;&amp; make clean".format(filename)
+                subprocess.call(cmd, shell=True)</p>
+<div class="highlight"><pre><span></span><span class="n">update</span>
+<span class="o">======</span>
+
+<span class="n">Someone</span> <span class="n">very</span> <span class="n">kind</span> <span class="n">guy</span> <span class="n">made</span> <span class="p">[</span><span class="n">a</span> <span class="n">bunch</span> <span class="n">of</span> <span class="n">suggestions</span><span class="p">],</span> <span class="n">making</span> <span class="n">my</span> <span class="n">code</span> <span class="n">much</span>
+<span class="n">better</span><span class="p">:</span>
+
+<span class="sb">``</span><span class="err">`</span> <span class="p">{</span><span class="o">.</span><span class="n">sourceCode</span> <span class="o">.</span><span class="n">python</span><span class="p">}</span>
+<span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">subprocess</span>
 <span class="n">top_level</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s2">&quot;~/src/gnome&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">top_level</span><span class="p">):</span>
@@ -120,12 +123,10 @@ better:</p>
             <span class="k">if</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="s2">&quot;make distclean&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">())</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="s2">&quot;make clean&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
 </pre></div>
-</div>
-<div class="section" id="further-reading">
-<h2>further reading</h2>
-<p>modules: <a class="reference external" href="http://docs.python.org//library/os">os</a>, <a class="reference external" href="http://docs.python.org//library/os.path">os.path</a>, <a class="reference external" href="http://docs.python.org//library/subprocess">subprocess</a></p>
-</div>
 
+
+<h1>further reading</h1>
+<p>modules: <a href="http://docs.python.org//library/os">os</a>, <a href="http://docs.python.org//library/os.path">os.path</a>, <a href="http://docs.python.org//library/subprocess">subprocess</a></p>
             
             <section>
 <div class="accordion" id="accordion2">
@@ -166,7 +167,7 @@ better:</p>
             <nav>
             <ul class="articles-timeline">
                 <li class="previous-article">« <a href="http://tshepang.net/my-jhbuild-setup" title="Previous: my JHBuild setup">my JHBuild setup</a></li>
-                <li class="next-article"><a href="http://tshepang.net/developer-of-note-josselin-mouette" title="Next: developer of note: Josselin Mouette">developer of note: Josselin Mouette</a> »</li>
+                <li class="next-article"><a href="http://tshepang.net/developer-of-note-josselin-mouette" title="Next: &#39;developer of note: Josselin Mouette&#39;">'developer of note: Josselin Mouette'</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -179,11 +180,11 @@ better:</p>
             <a class="category-link" href="http://tshepang.net/categories.html#computing-ref">computing</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://tshepang.net/tags.html#gnome-ref">GNOME
+                <li><a href="http://tshepang.net/tags.html#gnome-ref">GNOME'
                     <span>22</span>
 </a></li>
-                <li><a href="http://tshepang.net/tags.html#python-ref">Python
-                    <span>62</span>
+                <li><a href="http://tshepang.net/tags.html#python-ref">'Python
+                    <span>61</span>
 </a></li>
             </ul>
 <h4>Stay in Touch</h4>

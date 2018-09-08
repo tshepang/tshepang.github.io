@@ -84,70 +84,66 @@ Debian without any issue at all, provided they will not be doing any
 partitioning. It is that easy.</p>
 <p>As for me, I do a lot more installations than the average person, so I
 semi-automate the setup process with the help of this script:</p>
-<div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-
-<span class="c1"># some convenience</span>
-<span class="nb">shopt</span> -s expand_aliases
-<span class="nb">source</span> ~/nna/conf/bash_aliases
-
-<span class="c1"># config files</span>
-sudo cp ~/nna/conf/sources.list /etc/apt
-sudo cp ~/nna/conf/sudoers /etc
-
-<span class="c1"># APT</span>
-sudo apt-get update
-sudo apt-get --allow-unauthenticated upgrade
-sudo apt-get --allow-unauthenticated dist-upgrade
-sudo apt-get --allow-unauthenticated install devscripts debhelper build-essential python3-apt gpm
-
-<span class="c1"># wajig</span>
-<span class="o">(</span><span class="nb">cd</span> ~/src/wajig <span class="o">&amp;&amp;</span> iiwajig<span class="o">)</span>
-ibase <span class="o">&amp;&amp;</span> inondebian <span class="o">&amp;&amp;</span> itracker <span class="o">&amp;&amp;</span> icpython <span class="o">&amp;&amp;</span> ipurge
-
-<span class="c1"># for Tracker</span>
-sudo sh -c <span class="s2">&quot;echo &#39;fs.inotify.max_user_watches=100000&#39; &gt;&gt; /etc/sysctl.conf&quot;</span>
-
-<span class="c1"># so I can share via a webserver, or easily access from browser</span>
-sudo ln -s ~/.custom_repo /var/www/custom_repo
-</pre></div>
+<p>::: {.sourcecode}
+sh</p>
+<p>#!/bin/bash</p>
+<p># some convenience shopt -s expand_aliases source
+\~/nna/conf/bash_aliases</p>
+<p># config files sudo cp \~/nna/conf/sources.list /etc/apt sudo cp
+\~/nna/conf/sudoers /etc</p>
+<p># APT sudo apt-get update sudo apt-get --allow-unauthenticated upgrade
+sudo apt-get --allow-unauthenticated dist-upgrade sudo apt-get
+--allow-unauthenticated install devscripts debhelper build-essential
+python3-apt gpm</p>
+<p># wajig (cd \~/src/wajig &amp;&amp; iiwajig) ibase &amp;&amp; inondebian &amp;&amp; itracker &amp;&amp;
+icpython &amp;&amp; ipurge</p>
+<p># for Tracker sudo sh -c \"echo
+\'fs.inotify.max_user_watches=100000\' >> /etc/sysctl.conf\"</p>
+<p># so I can share via a webserver, or easily access from browser sudo ln
+-s \~/.custom_repo /var/www/custom_repo
+:::</p>
 <p>Contents of Debian repository list file:</p>
-<div class="highlight"><pre><span></span>$ cat /etc/apt/sources.list
+<p>``` {.sourceCode .sh}
+$ cat /etc/apt/sources.list
 deb file:/home/wena/.custom_repo tshepang main
-deb http://debian.mirror.ac.za/debian wheezy main contrib non-free
+deb http://debian.mirror.ac.za/debian wheezy main contrib non-free</p>
+<div class="highlight"><pre><span></span><span class="n">The</span> <span class="err">`</span><span class="n">tshepang</span><span class="err">`</span> <span class="n">codename</span> <span class="n">refers</span> <span class="n">to</span> <span class="n">my</span> <span class="n">custom</span> <span class="n">repository</span><span class="p">,</span> <span class="n">the</span> <span class="n">one</span> <span class="n">managed</span>
+<span class="n">by</span> <span class="p">[</span><span class="n">reprepro</span><span class="p">].</span>
+
+<span class="n">Contents</span> <span class="n">of</span> <span class="o">**</span><span class="n">sudo</span><span class="o">**</span> <span class="n">setup</span> <span class="nl">file</span><span class="p">:</span>
+
+<span class="err">```</span> <span class="p">{.</span><span class="n">sourceCode</span> <span class="p">.</span><span class="n">sh</span><span class="p">}</span>
+<span class="err">$</span> <span class="n">sudo</span> <span class="n">cat</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">sudoers</span>
+<span class="n">Defaults</span> <span class="n">env_reset</span>
+<span class="n">Defaults</span> <span class="n">mail_badpass</span>
+<span class="n">Defaults</span> <span class="n">secure_path</span><span class="o">=</span><span class="s">&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;</span>
+<span class="n">root</span>     <span class="n">ALL</span><span class="o">=</span><span class="p">(</span><span class="n">ALL</span><span class="p">)</span> <span class="n">ALL</span>
+<span class="nf">%sudo</span>    <span class="n">ALL</span><span class="o">=</span><span class="p">(</span><span class="n">ALL</span><span class="p">)</span> <span class="n">ALL</span>
+<span class="n">Defaults</span> <span class="o">!</span><span class="n">tty_tickets</span>
+<span class="n">Defaults</span> <span class="n">timestamp_timeout</span><span class="o">=</span><span class="mi">100</span>
 </pre></div>
-<p>The <tt class="docutils literal">tshepang</tt> codename refers to my custom repository, the one
-managed by <a class="reference external" href="http://tshepang.net/project-of-note-reprepro">reprepro</a>.</p>
-<p>Contents of <strong>sudo</strong> setup file:</p>
-<div class="highlight"><pre><span></span>$ sudo cat /etc/sudoers
-Defaults env_reset
-Defaults mail_badpass
-Defaults <span class="nv">secure_path</span><span class="o">=</span><span class="s2">&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;</span>
-root     <span class="nv">ALL</span><span class="o">=(</span>ALL<span class="o">)</span> ALL
-%sudo    <span class="nv">ALL</span><span class="o">=(</span>ALL<span class="o">)</span> ALL
-Defaults !tty_tickets
-Defaults <span class="nv">timestamp_timeout</span><span class="o">=</span><span class="m">100</span>
-</pre></div>
+
+
 <p>The one change from default <strong>sudo</strong> setup is so that each bash session
-can inherit sudo powers from another. It's one case where I trade
-<a class="reference external" href="http://ask.debian.net/questions/how-to-have-sudo-powers-shared-between-different-bash-sessions">security</a> for convenience. Another such case is increasing the
+can inherit sudo powers from another. It\'s one case where I trade
+<a href="http://ask.debian.net/questions/how-to-have-sudo-powers-shared-between-different-bash-sessions">security</a> for convenience. Another such case is increasing the
 ask-for-password timeout to 100 minutes, instead of the default 15
 minutes.</p>
 <p>And then these aliases, which point to scripts that install some
 packages:</p>
-<ul class="simple">
-<li><tt class="docutils literal">ibase</tt>: basic stuff I got to have, stuff like the components I use
-for my desktop apps, some CLI tools, and some documentation</li>
-<li><tt class="docutils literal">inondebian</tt>: packages that aren't part of Debian, e.g. stuff from
-external repositories, or nonm-free stuff from Debian repos</li>
-<li><tt class="docutils literal">itracker</tt>: I always run the git version of <a class="reference external" href="http://projects.gnome.org/tracker/">Tracker</a>, so these
-tools help me build it</li>
-<li><tt class="docutils literal">ipurge</tt>: stuff that was installed as Recommends dependencies of
-the above (e.g. <tt class="docutils literal"><span class="pre">gnome-bluetooth</span></tt>) or during Debian installation
-(e.g. <tt class="docutils literal">vim</tt>), but that I won't use</li>
+<ul>
+<li><code>ibase</code>: basic stuff I got to have, stuff like the components I use
+    for my desktop apps, some CLI tools, and some documentation</li>
+<li><code>inondebian</code>: packages that aren\'t part of Debian, e.g. stuff from
+    external repositories, or nonm-free stuff from Debian repos</li>
+<li><code>itracker</code>: I always run the git version of <a href="http://projects.gnome.org/tracker/">Tracker</a>, so these
+    tools help me build it</li>
+<li><code>ipurge</code>: stuff that was installed as Recommends dependencies of the
+    above (e.g. <code>gnome-bluetooth</code>) or during Debian installation (e.g.
+    <code>vim</code>), but that I won\'t use</li>
 </ul>
 <p>The symbolic links is so that those I share a network with (LAN) can
 have easy web browser access to some stuff on my machine.</p>
-
             
             <section>
 <div class="accordion" id="accordion2">
@@ -187,8 +183,8 @@ have easy web browser access to some stuff on my machine.</p>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://tshepang.net/links-2012-10-23" title="Previous: links 2012-10-23">links 2012-10-23</a></li>
-                <li class="next-article"><a href="http://tshepang.net/links-2012-11-18" title="Next: links 2012-11-18">links 2012-11-18</a> »</li>
+                <li class="previous-article">« <a href="http://tshepang.net/links-2012-10-23" title="Previous: &#39;links 2012-10-23&#39;">'links 2012-10-23'</a></li>
+                <li class="next-article"><a href="http://tshepang.net/links-2012-11-18" title="Next: &#39;links 2012-11-18&#39;">'links 2012-11-18'</a> »</li>
             </ul>
             </nav>
             </aside>

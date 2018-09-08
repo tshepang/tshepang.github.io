@@ -13,16 +13,16 @@
 
 <meta name="keywords" content="Rust, computing, " />
 
-<meta property="og:title" content="Rust week of 2015-05-22 "/>
+<meta property="og:title" content="&#39;Rust week of 2015-05-22&#39; "/>
 <meta property="og:url" content="http://tshepang.net/rust-week-of-2015-05-22" />
-<meta property="og:description" content="I bumped onto an oddity regarding &#39;pow&#39; method... there is no fallback. I found that converting a char to a String (or &amp;str) is not as obvious as I hoped. I read some of std::path code which resulted in some small changes. I re-discovered the convenience function, Iterator::cloned …" />
+<meta property="og:description" content="I bumped onto an oddity regarding \&#39;pow\&#39; method... there is no fallback. I found that converting a char to a String (or &amp;str) is [not as obvious as I hoped]. I read some of std::path code which resulted in [some small changes]. I re-discovered the convenience function, Iterator::cloned …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2015-05-25T00:00:00+02:00" />
-<meta name="twitter:title" content="Rust week of 2015-05-22 ">
-<meta name="twitter:description" content="I bumped onto an oddity regarding &#39;pow&#39; method... there is no fallback. I found that converting a char to a String (or &amp;str) is not as obvious as I hoped. I read some of std::path code which resulted in some small changes. I re-discovered the convenience function, Iterator::cloned …">
+<meta name="twitter:title" content="&#39;Rust week of 2015-05-22&#39; ">
+<meta name="twitter:description" content="I bumped onto an oddity regarding \&#39;pow\&#39; method... there is no fallback. I found that converting a char to a String (or &amp;str) is [not as obvious as I hoped]. I read some of std::path code which resulted in [some small changes]. I re-discovered the convenience function, Iterator::cloned …">
 
-        <title>Rust week of 2015-05-22  · Tshepang logs
+        <title>&#39;Rust week of 2015-05-22&#39;  · Tshepang logs
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -71,7 +71,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://tshepang.net/rust-week-of-2015-05-22"> Rust week of 2015-05-22  </a></h1>
+    <h1><a href="http://tshepang.net/rust-week-of-2015-05-22"> 'Rust week of 2015-05-22'  </a></h1>
     </header>
 </div>
 
@@ -80,74 +80,106 @@
 
             
             <ul>
-<li><p class="first">I bumped onto <a class="reference external" href="http://stackoverflow.com/q/30413090/321731">an oddity regarding 'pow' method</a>... there is no fallback.</p>
-</li>
-<li><p class="first">I found that converting a char to a String (or &amp;str) is <a class="reference external" href="http://stackoverflow.com/a/28003842/321731">not as obvious as I hoped</a>.</p>
-</li>
-<li><p class="first">I read some of <tt class="docutils literal"><span class="pre">std::path</span></tt> code which resulted in <a class="reference external" href="https://github.com/rust-lang/rust/pull/25736">some small changes</a>.</p>
-</li>
-<li><p class="first">I re-discovered the convenience function, <tt class="docutils literal"><span class="pre">Iterator::cloned</span></tt>, and
-submitted two related <a class="reference external" href="https://github.com/rust-lang/rust/pull/25756">documentation</a> <a class="reference external" href="https://github.com/rust-lang/rust/pull/25758">improvements</a>.</p>
-</li>
-<li><p class="first">I added syntax highlighting to the <a class="reference external" href="http://tshepang.net/tags.html#rust-ref">Rust posts on my blog</a> that
-were missing it. I also updated the code to run on modern Rust.</p>
-</li>
-<li><p class="first">I got some clarity on the concept of traits by re-reading the
-well-written post, <a class="reference external" href="http://blog.rust-lang.org/2015/05/11/traits.html">Abstraction without overhead: traits in
-Rust</a>.
-One feature they have is they allow adding methods to types,
-including upstream ones,
-example being stdlib types as follows:</p>
-<div class="highlight"><pre><span></span><span class="k">trait</span><span class="w"> </span><span class="n">Invert</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">fn</span> <span class="nf">invert</span><span class="p">(</span><span class="o">&amp;</span><span class="bp">self</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kt">f64</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<li>I bumped onto <a href="http://stackoverflow.com/q/30413090/321731">an oddity regarding \'pow\' method</a>... there is no
+    fallback.</li>
+<li>I found that converting a char to a String (or &amp;str) is [not as
+    obvious as I hoped].</li>
+<li>I read some of <code>std::path</code> code which resulted in [some small
+    changes].</li>
+<li>I re-discovered the convenience function, <code>Iterator::cloned</code>, and
+    submitted two related <a href="https://github.com/rust-lang/rust/pull/25756">documentation</a> <a href="https://github.com/rust-lang/rust/pull/25758">improvements</a>.</li>
+<li>I added syntax highlighting to the <a href="http://tshepang.net/tags.html#rust-ref">Rust posts on my blog</a> that were
+    missing it. I also updated the code to run on modern Rust.</li>
+<li>
+<p>I got some clarity on the concept of traits by re-reading the
+    well-written post, <a href="http://blog.rust-lang.org/2015/05/11/traits.html">Abstraction without overhead: traits in Rust</a>.
+    One feature they have is they allow adding methods to types,
+    including upstream ones, example being stdlib types as follows:</p>
+<p>::: {.sourcecode}
+rust</p>
+<dl>
+<dt>trait Invert {</dt>
+<dd>
+<p>fn invert(&amp;self) -> f64;</p>
+</dd>
+</dl>
+<p>}</p>
+<dl>
+<dt>impl Invert for i32 {</dt>
+<dd></dd>
+</dl>
+<div class="highlight"><pre><span></span>fn invert(&amp;self) -\&gt; f64 {
 
-<span class="k">impl</span><span class="w"> </span><span class="n">Invert</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">fn</span> <span class="nf">invert</span><span class="p">(</span><span class="o">&amp;</span><span class="bp">self</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kt">f64</span> <span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="mf">1.0</span><span class="o">/</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="kt">f64</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+:   1.0/(\*self as f64)
 
-<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10_</span><span class="k">i32</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">assert_eq</span><span class="o">!</span><span class="p">(</span><span class="n">foo</span><span class="p">.</span><span class="n">invert</span><span class="p">(),</span><span class="w"> </span><span class="mf">0.1</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+}
 </pre></div>
+
+
+<p>}</p>
+<dl>
+<dt>fn main() {</dt>
+<dd>
+<p>let foo = 10_i32; assert_eq!(foo.invert(), 0.1);</p>
+</dd>
+</dl>
+<p>}
+:::</p>
 <p>Another example is that one can limit the type of arguments accepted
 by a function, though it uses something of an ugly syntax:</p>
-<div class="highlight"><pre><span></span><span class="k">fn</span> <span class="nf">print_inverse</span><span class="o">&lt;</span><span class="n">T</span>: <span class="nc">Invert</span><span class="o">&gt;</span><span class="p">(</span><span class="n">foo</span>: <span class="nc">T</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;Inverse: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">foo</span><span class="p">.</span><span class="n">invert</span><span class="p">());</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</pre></div>
-<p>The <tt class="docutils literal">&lt;T: Invert&gt;</tt> means this function will only accept <tt class="docutils literal">foo</tt> whose type
-implements the <tt class="docutils literal">Invert</tt> trait.
-You can check by calling it with an <tt class="docutils literal">i32</tt> value, in which it will
-succeed:</p>
-<div class="highlight"><pre><span></span><span class="n">print_inverse</span><span class="p">(</span><span class="mi">10_</span><span class="k">i32</span><span class="p">);</span><span class="w"></span>
-</pre></div>
+<p>::: {.sourcecode}
+rust</p>
+<dl>
+<dt>fn print_inverse\&lt;T: Invert>(foo: T) {</dt>
+<dd>
+<p>println!(\"Inverse: {}\", foo.invert());</p>
+</dd>
+</dl>
+<p>}
+:::</p>
+<p>The <code>&lt;T: Invert&gt;</code> means this function will only accept <code>foo</code> whose
+type implements the <code>Invert</code> trait. You can check by calling it with
+an <code>i32</code> value, in which it will succeed:</p>
+<p>::: {.sourcecode}
+rust</p>
+<p>print_inverse(10_i32);
+:::</p>
 <p>Output:</p>
-<pre class="literal-block">
-Inverse: 0.1
-</pre>
+<div class="highlight"><pre><span></span><span class="n">Inverse</span><span class="o">:</span> <span class="mf">0.1</span>
+</pre></div>
+
+
 <p>Any other type will fail:</p>
-<div class="highlight"><pre><span></span><span class="n">print_inverse</span><span class="p">(</span><span class="mi">10_</span><span class="k">f64</span><span class="p">);</span><span class="w"></span>
-</pre></div>
+<p>::: {.sourcecode}
+rust</p>
+<p>print_inverse(10_f64);
+:::</p>
 <p>Output:</p>
-<pre class="literal-block">
-the trait `Invert` is not implemented for the type `f64` [E0277]
-</pre>
+<div class="highlight"><pre><span></span>the trait `Invert` is not implemented for the type `f64` [E0277]
+</pre></div>
+
+
 <p>This allows for a feature named generics, where one can use multiple
 types for the same function. For example, that error will disappear
 if you got this:</p>
-<div class="highlight"><pre><span></span><span class="k">impl</span><span class="w"> </span><span class="n">Invert</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="kt">f64</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">fn</span> <span class="nf">invert</span><span class="p">(</span><span class="o">&amp;</span><span class="bp">self</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kt">f64</span> <span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="mf">1.0</span><span class="o">/</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<p>::: {.sourcecode}
+rust</p>
+<dl>
+<dt>impl Invert for f64 {</dt>
+<dd></dd>
+</dl>
+<div class="highlight"><pre><span></span>fn invert(&amp;self) -\&gt; f64 {
+
+:   1.0/(\*self)
+
+}
 </pre></div>
+
+
+<p>}
+:::</p>
 </li>
 </ul>
-
             
             <section>
 <div class="accordion" id="accordion2">

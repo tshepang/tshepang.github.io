@@ -15,12 +15,12 @@
 
 <meta property="og:title" content="reprepro saved my live "/>
 <meta property="og:url" content="http://tshepang.net/reprepro-saved-my-live" />
-<meta property="og:description" content="Much of this is obsolete: I no longer build my own Debian packages. That&#39;s a joke title, but that fabulous tool really did help me a lot. When doing package builds, all I need to run is the following after a build: $ rm *udeb $ reprepro --basedir ~/.repo_directory includedeb sid *deb …" />
+<meta property="og:description" content="Much of this is obsolete: I no longer build my own Debian packages. That\&#39;s a joke title, but that fabulous tool really did help me a lot. When doing package builds, all I need to run is the following after a build: {.sourceCode .sh} $ rm *udeb $ reprepro --basedir ~/.repo_directory …" />
 <meta property="og:site_name" content="Tshepang logs" />
 <meta property="og:article:author" content="Tshepang Lekhonkhobe" />
 <meta property="og:article:published_time" content="2008-12-12T00:00:00+02:00" />
 <meta name="twitter:title" content="reprepro saved my live ">
-<meta name="twitter:description" content="Much of this is obsolete: I no longer build my own Debian packages. That&#39;s a joke title, but that fabulous tool really did help me a lot. When doing package builds, all I need to run is the following after a build: $ rm *udeb $ reprepro --basedir ~/.repo_directory includedeb sid *deb …">
+<meta name="twitter:description" content="Much of this is obsolete: I no longer build my own Debian packages. That\&#39;s a joke title, but that fabulous tool really did help me a lot. When doing package builds, all I need to run is the following after a build: {.sourceCode .sh} $ rm *udeb $ reprepro --basedir ~/.repo_directory …">
 
         <title>reprepro saved my live  · Tshepang logs
 </title>
@@ -80,43 +80,43 @@
 
             
             <p>Much of this is obsolete: I no longer build my own Debian packages.</p>
-<hr class="docutils" />
-<p>That's a joke title, but <a class="reference external" href="http://mirrorer.alioth.debian.org/">that fabulous tool</a> really did help me a
-lot. When doing package builds, all I need to run is the following
-after a build:</p>
-<div class="highlight"><pre><span></span>$ rm *udeb
+<hr>
+<p>That\'s a joke title, but <a href="http://mirrorer.alioth.debian.org/">that fabulous tool</a> really did help me a lot.
+When doing package builds, all I need to run is the following after a
+build:</p>
+<p><code>{.sourceCode .sh}
+$ rm *udeb
 $ reprepro --basedir ~/.repo_directory includedeb sid *deb
-$ sudo apt-get update
-</pre></div>
-<p>The first command removes debian-installer packages which I don't need,
+$ sudo apt-get update</code></p>
+<p>The first command removes debian-installer packages which I don\'t need,
 the second takes the remaining packages and adds them into the
 reprepro-managed Debian repository while also making them available in
-the Packages file, and the third updates the system's apt database in
+the Packages file, and the third updates the system\'s apt database in
 order to pick up the changes. Also, if I want to get rid of something
 from the repo, all I do is:</p>
-<pre class="literal-block">
-$ reprepro --basedir ~/.repo_directory removesrc sid glibc
-</pre>
-<p>I don't know why anyone would love to remove glibc binary packages, but
-it's that simple.</p>
+<div class="highlight"><pre><span></span>$ reprepro --basedir ~/.repo_directory removesrc sid glibc
+</pre></div>
+
+
+<p>I don\'t know why anyone would love to remove glibc binary packages, but
+it\'s that simple.</p>
 <p>Achieving this used to be painful before I discovered reprepro, for I
 did the whole thing manually, which was not scalable since old packages
 were sitting rotting in the repo, making it grow beyond 30GB (it now is
-about 10GB). This also meant that I ran 'apt-ftparchive packages' on the
-entire .debs each time I wanted an updated Packages file, and that was
-dozens of minutes of heavy I/O. This painful life has been going on for
-a number of months, and am stupid that I didn't search harder for a
+about 10GB). This also meant that I ran \'apt-ftparchive packages\' on
+the entire .debs each time I wanted an updated Packages file, and that
+was dozens of minutes of heavy I/O. This painful life has been going on
+for a number of months, and am stupid that I didn\'t search harder for a
 better solution.</p>
-<p>Before doing things this way, I was making use of the nifty <a class="reference external" href="http://aptoncd.sourceforge.net/">APTonCD</a>,
+<p>Before doing things this way, I was making use of the nifty <a href="http://aptoncd.sourceforge.net/">APTonCD</a>,
 but it started to become unusable due to excessive memory consumption
-after some system updates. It's not clear where the bug lies, nor do I
-know if it's a known problem, which I didn't report because I was using
-Ubuntu's package, a much improved and re-written 0.1.98, as opposed to
-Debian's 'bug-free' 0.1 (though I later discovered the bug to exist when
-running the package in Ubuntu 8.10 too).</p>
-<hr class="docutils" />
-<p><a class="reference external" href="http://tshepang.net/my-debian-package-management-setup">an update on how I do things now</a></p>
-
+after some system updates. It\'s not clear where the bug lies, nor do I
+know if it\'s a known problem, which I didn\'t report because I was
+using Ubuntu\'s package, a much improved and re-written 0.1.98, as
+opposed to Debian\'s \'bug-free\' 0.1 (though I later discovered the bug
+to exist when running the package in Ubuntu 8.10 too).</p>
+<hr>
+<p><a href="http://tshepang.net/my-debian-package-management-setup">an update on how I do things now</a></p>
             
             <section>
 <div class="accordion" id="accordion2">
@@ -157,7 +157,7 @@ running the package in Ubuntu 8.10 too).</p>
             <nav>
             <ul class="articles-timeline">
                 <li class="previous-article">« <a href="http://tshepang.net/gnome-killer-app" title="Previous: GNOME killer app">GNOME killer app</a></li>
-                <li class="next-article"><a href="http://tshepang.net/developer-of-note-manoj-srivastava" title="Next: developer of note: Manoj Srivastava">developer of note: Manoj Srivastava</a> »</li>
+                <li class="next-article"><a href="http://tshepang.net/developer-of-note-manoj-srivastava" title="Next: &#39;developer of note: Manoj Srivastava&#39;">'developer of note: Manoj Srivastava'</a> »</li>
             </ul>
             </nav>
             </aside>
