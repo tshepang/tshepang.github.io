@@ -62,11 +62,13 @@ externally... it does not feel general enough.</p>
 <li>
 <p>Assigning values to struct bindings should use the equal sign, not
 the colon:</p>
-<p>::: {.sourcecode}
-rust</p>
-<p>// now Shoe { size: 10, style: &quot;sneaker&quot;) }, // dream Shoe { size
-= 10, style = &quot;sneaker&quot; };
-:::</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#65737e;">// now
+</span><span style="background-color:#2b303b;color:#c0c5ce;">Shoe { size: </span><span style="background-color:#2b303b;color:#d08770;">10</span><span style="background-color:#2b303b;color:#c0c5ce;">, style: &quot;</span><span style="background-color:#2b303b;color:#a3be8c;">sneaker</span><span style="background-color:#2b303b;color:#c0c5ce;">&quot;) };
+</span><span style="background-color:#2b303b;color:#65737e;">// dream
+</span><span style="background-color:#2b303b;color:#c0c5ce;">Shoe { size = </span><span style="background-color:#2b303b;color:#d08770;">10</span><span style="background-color:#2b303b;color:#c0c5ce;">, style = &quot;</span><span style="background-color:#2b303b;color:#a3be8c;">sneaker</span><span style="background-color:#2b303b;color:#c0c5ce;">&quot; };
+</span></pre>
 <p>This would be consistent with the rest of the language.</p>
 </li>
 <li>
