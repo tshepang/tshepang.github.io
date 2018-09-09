@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">Rust week of 2016-05-27</h1>
+  <span class="post-date">2016-06-02</span>
+  <p>Being a fanboy, I found the discussion <a href="https://www.reddit.com/r/rust/comments/4kqhqz">Why aren't you using Rust at
+work?</a> rather depressing. It's also relevant to me since I am currently
+writing some internal tool at work, and wonder how far it will go before
+re-writing in something <em>more acceptable</em>, like Python. To be fair,
+there was also <a href="https://www.reddit.com/r/rust/comments/4kqhqz//d3hx9l0">some great praise</a> of the ecosystem.</p>
+<p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<p>I read the intro of <a href="https://github.com/sfackler/rust-postgres/blob/master/README.md">rust-postgres</a> and even made <a href="https://github.com/sfackler/rust-postgres/pull/186">a small
+contribution</a>. I also made a <a href="https://github.com/rust-lang/rust/pull/34033">doc contribution</a> to stdlib.</p>
+<p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<p>I was surprised that <a href="http://stackoverflow.com/questions/37550208">there is no Rust set type that preserves insertion
+order</a>.</p>
+<p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<p>Something I learned about running system commands, imagine you had a
+complex command like:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">ssh some-hostname &quot;uname --all &amp;&amp; free --human&quot;
+</span></pre>
+<p>Running such in Rust would be:</p>
+<p>::: {.sourcecode}
+rust</p>
+<p>std::process::Command::new(&quot;ssh&quot;)</p>
+<p>:   .arg(&quot;some-hostname&quot;) .arg(&quot;uname --all &amp;&amp; free --human&quot;)
+.spawn() .expect(&quot;problem&quot;);
+:::</p>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

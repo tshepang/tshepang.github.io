@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">reprepro saved my live</h1>
+  <span class="post-date">2008-12-12</span>
+  <p>Much of this is obsolete: I no longer build my own Debian packages.</p>
+<p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<p>That's a joke title, but <a href="http://mirrorer.alioth.debian.org/">that fabulous tool</a> really did help me a lot.
+When doing package builds, all I need to run is the following after a
+build:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">$ rm *udeb
+</span><span style="background-color:#2b303b;color:#c0c5ce;">$ reprepro --basedir ~/.repo_directory includedeb sid *deb
+</span><span style="background-color:#2b303b;color:#c0c5ce;">$ sudo apt-get update
+</span></pre>
+<p>The first command removes debian-installer packages which I don't need,
+the second takes the remaining packages and adds them into the
+reprepro-managed Debian repository while also making them available in
+the Packages file, and the third updates the system's apt database in
+order to pick up the changes. Also, if I want to get rid of something
+from the repo, all I do is:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">$ reprepro --basedir ~/.repo_directory removesrc sid glibc
+</span></pre>
+<p>I don't know why anyone would love to remove glibc binary packages, but
+it's that simple.</p>
+<p>Achieving this used to be painful before I discovered reprepro, for I
+did the whole thing manually, which was not scalable since old packages
+were sitting rotting in the repo, making it grow beyond 30GB (it now is
+about 10GB). This also meant that I ran 'apt-ftparchive packages' on
+the entire .debs each time I wanted an updated Packages file, and that
+was dozens of minutes of heavy I/O. This painful life has been going on
+for a number of months, and am stupid that I didn't search harder for a
+better solution.</p>
+<p>Before doing things this way, I was making use of the nifty <a href="http://aptoncd.sourceforge.net/">APTonCD</a>,
+but it started to become unusable due to excessive memory consumption
+after some system updates. It's not clear where the bug lies, nor do I
+know if it's a known problem, which I didn't report because I was
+using Ubuntu's package, a much improved and re-written 0.1.98, as
+opposed to Debian's 'bug-free' 0.1 (though I later discovered the bug
+to exist when running the package in Ubuntu 8.10 too).</p>
+<p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<p><a href="http://tshepang.net/my-debian-package-management-setup">an update on how I do things now</a></p>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

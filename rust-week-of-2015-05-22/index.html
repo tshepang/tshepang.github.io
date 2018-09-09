@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">Rust week of 2015-05-22</h1>
+  <span class="post-date">2015-05-25</span>
+  <ul>
+<li>
+<p>I bumped onto <a href="http://stackoverflow.com/q/30413090/321731">an oddity regarding 'pow' method</a>... there is no
+fallback.</p>
+</li>
+<li>
+<p>I found that converting a char to a String (or &amp;str) is <a href="http://stackoverflow.com/a/28003842/321731">not as
+obvious as I hoped</a>.</p>
+</li>
+<li>
+<p>I read some of <code>std::path</code> code which resulted in <a href="https://github.com/rust-lang/rust/pull/25736">some small
+changes</a>.</p>
+</li>
+<li>
+<p>I re-discovered the convenience function, <code>Iterator::cloned</code>, and
+submitted two related <a href="https://github.com/rust-lang/rust/pull/25756">documentation</a> <a href="https://github.com/rust-lang/rust/pull/25758">improvements</a>.</p>
+</li>
+<li>
+<p>I added syntax highlighting to the <a href="http://tshepang.net/tags.html#rust-ref">Rust posts on my blog</a> that were
+missing it. I also updated the code to run on modern Rust.</p>
+</li>
+<li>
+<p>I got some clarity on the concept of traits by re-reading the
+well-written post, <a href="http://blog.rust-lang.org/2015/05/11/traits.html">Abstraction without overhead: traits in Rust</a>.
+One feature they have is they allow adding methods to types,
+including upstream ones, example being stdlib types as follows:</p>
+<p>::: {.sourcecode}
+rust</p>
+<p>trait Invert {</p>
+<p>:   fn invert(&amp;self) -&gt; f64;</p>
+<p>}</p>
+<p>impl Invert for i32 {</p>
+<p>:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">fn invert(&amp;self) -\&gt; f64 {
+</span><span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#c0c5ce;">:   1.0/(\*self as f64)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#c0c5ce;">}
+</span></pre>
+<p>}</p>
+<p>fn main() {</p>
+<p>:   let foo = 10_i32; assert_eq!(foo.invert(), 0.1);</p>
+<p>}
+:::</p>
+<p>Another example is that one can limit the type of arguments accepted
+by a function, though it uses something of an ugly syntax:</p>
+<p>::: {.sourcecode}
+rust</p>
+<p>fn print_inverse&lt;T: Invert&gt;(foo: T) {</p>
+<p>:   println!(&quot;Inverse: {}&quot;, foo.invert());</p>
+<p>}
+:::</p>
+<p>The <code>&lt;T: Invert&gt;</code> means this function will only accept <code>foo</code> whose
+type implements the <code>Invert</code> trait. You can check by calling it with
+an <code>i32</code> value, in which it will succeed:</p>
+<p>::: {.sourcecode}
+rust</p>
+<p>print_inverse(10_i32);
+:::</p>
+<p>Output:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">Inverse: 0.1
+</span></pre>
+<p>Any other type will fail:</p>
+<p>::: {.sourcecode}
+rust</p>
+<p>print_inverse(10_f64);
+:::</p>
+<p>Output:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">the trait `Invert` is not implemented for the type `f64` [E0277]
+</span></pre>
+<p>This allows for a feature named generics, where one can use multiple
+types for the same function. For example, that error will disappear
+if you got this:</p>
+<p>::: {.sourcecode}
+rust</p>
+<p>impl Invert for f64 {</p>
+<p>:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">fn invert(&amp;self) -\&gt; f64 {
+</span><span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#c0c5ce;">:   1.0/(\*self)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#c0c5ce;">}
+</span></pre>
+<p>}
+:::</p>
+</li>
+</ul>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

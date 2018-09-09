@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">Rust week of 2015-10-30</h1>
+  <span class="post-date">2015-11-06</span>
+  <p>Just <a href="https://github.com/rust-lang/rust/pull/29651">one submission</a> this time around. Yep! I did however spend time
+pondering the magical forward type inference that I first experienced
+<a href="http://tshepang.net/rust-week-of-2015-05-29">back in May</a>, this time sparked by <a href="https://github.com/carllerche/mio/blob/getting-started/doc/getting-started.md#writing-the-echo-server">this example</a>; see this line:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">let address = &quot;0.0.0.0:6567&quot;.parse().unwrap();
+</span></pre>
+<p>You actually have to read further to figure the type that URL is going
+to be parsed as:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">let server = TcpListener::bind(&amp;address).unwrap();
+</span></pre>
+<p>It would be less surprising if we had the following instead:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">let address = SocketAddr::from_str(&quot;0.0.0.0:6567&quot;.unwrap();
+</span><span style="background-color:#2b303b;color:#c0c5ce;">let server = TcpListener::bind(&amp;address).unwrap();
+</span></pre>
+</div>
+
+        </div>
+
+    </body>
+
+</html>

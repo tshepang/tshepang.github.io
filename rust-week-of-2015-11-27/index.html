@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">Rust week of 2015-11-27</h1>
+  <span class="post-date">2015-12-03</span>
+  <p>I added <a href="https://github.com/rust-lang/rust/pull/30188">missing</a> <a href="https://github.com/rust-lang/rust/pull/30190">examples</a> to stdlib documentation. I also learned a
+bit about <a href="https://github.com/lifthrasiir/rust-chrono">Chrono</a>, seemingly the most comprehensive date and time
+library for Rust. I used to determine what the next release date for
+Rust is, using the following code:</p>
+<p>::: {.sourcecode}
+rust</p>
+<p>extern crate chrono;</p>
+<p>use chrono::{NaiveDate, Duration, Local};</p>
+<p>fn main() {</p>
+<p>:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">for n in 0.. {
+</span><span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#c0c5ce;">:   // Rust 1.0 release let initial = NaiveDate::from\_ymd(2015, 5,
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">15); // 1.0 was released on a Friday, but nowadays they happen
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">Thursdays let release\_date =
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">initial.checked\_add(Duration::weeks(6 \* n)).unwrap() -
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">Duration::days(1); if release\_date \&gt;
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">Local::today().naive\_local() { println!(\&quot;{}\&quot;, release\_date);
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">break; }
+</span><span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#c0c5ce;">}
+</span></pre>
+<p>}
+:::</p>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

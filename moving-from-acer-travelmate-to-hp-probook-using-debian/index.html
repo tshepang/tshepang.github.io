@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">moving from Acer TravelMate to HP Probook, using Debian</h1>
+  <span class="post-date">2011-07-16</span>
+  <p>I have been using an Acer TravelMate 6592 laptop for close to 3 years
+(ever since I got <a href="http://tshepang.net/me-got-meself-a-coding-job">my coding job</a>). It had some issues:</p>
+<ul>
+<li><a href="http://www.google.co.za/search?hl=en&amp;biw=1366&amp;bih=630&amp;q=6592+acer&amp;um=1&amp;ie=UTF-8&amp;tbm=isch&amp;source=og&amp;sa=N&amp;tab=wi">it's damn ugly</a>, though not as much as Lenovo ones</li>
+<li>it requires Intel non-free firmware for its Wi-Fi chipset</li>
+<li>it frequently refused to make the LAN accessible from Linux on boot;
+this was likely a BIOS issue</li>
+<li>the battery capacity was below 50% so it didn't last</li>
+<li>the hard drive was developing bad sectors</li>
+</ul>
+<p>Other than that, it truly was an excellent laptop, and I never
+complained about its performance, ever since I added a 2GB RAM stick, to
+make it a total of 4GB (except that I wished my HDD was faster, tempting
+me to buy an SSD). What else I really liked about it is the
+feature-packed touchpad: Beyond the normal two-finger and
+side-scrolling, it also had up-down-left-right buttons which allowed
+constant-speed scrolling. It's interesting that such a touchpad is very
+rare.</p>
+<p>I now got an HP Probook 4530s and its pros:</p>
+<ul>
+<li><a href="http://www.google.co.za/search?q=probook+4530s&amp;um=1&amp;ie=UTF-8&amp;tbm=isch&amp;source=og&amp;sa=N&amp;hl=en&amp;tab=wi&amp;biw=1366&amp;bih=630">it's stunning</a></li>
+<li>it's got a real fast hard drive; there were times when I saw speeds
+upwards to 70MB/s, which I never saw with the older laptop</li>
+<li>its Wi-Fi doesn't require non-free software</li>
+<li>it's far more modern (USB3 support) and supposedly faster (Core
+i5-2410M vs. Core 2 Duo T7500), but my typical workload made even
+the TravelMate more than adequate</li>
+</ul>
+<p>And the cons:</p>
+<ul>
+<li>a less featureful touchpad</li>
+<li>keyboard keys placed in weird locations (e.g. <strong>pg up</strong> and <strong>pg
+dn</strong> buttons are placed far away, at the top-right corner; I blame
+the (needless for me) numeric keypad</li>
+<li>the screen resolution is on the low side and so is the screen size;
+the older laptop is much bigger even if they are both labeled 15.4&quot;</li>
+</ul>
+<p>...and Debian:</p>
+<p>Quite a few times, I tend to want to stick to a stable release of
+Debian. Following Debian development does take time (frequent updates,
+curiosity to see what changed, and something getting broken here and
+there). So I tried to do the same here. Sadly, some of the software in
+Squeeze is too outdated to be optimal, so am glad to have teams like
+<a href="http://tshepang.net/thanks-to-the-debian-backports-team">Debian Backports folk</a>. But that wasn't enough, so I ended up
+installing Xorg components from Debian Unstable (Suspend doesn't work
+well with Squeeze (Debian 6) and backports doesn't have a newer X
+version.</p>
+<p>Let's see how long I last trying to keep pure by running as little from
+outside Squeeze as possible.</p>
+<p><strong>update</strong>:</p>
+<p>This didn't even last for 1 day. I was having issues with my X hanging
+the entire OS, forcing me to do a hard-reboot. This happened when I was
+watching a video using VLC, so I blamed it and installed the version
+from Debian Unstable. Sadly, doing things that way resulted in a VLC
+that refused to die normally, forcing me to do <code>kill -9 vlc</code>. I then
+just screwed my plans and upgraded fully to Unstable, and now VLC quits
+gracefully. Let's see if I'll have the X lockup again.</p>
+<p><strong>update 2</strong>:</p>
+<p>Well, I still experience machine lock-ups, the bad ones forcing a
+hard-reboot. This might be related to Wi-Fi because I used the system
+for quite a while using the wired link, without any such lock-up.</p>
+<p><strong>update 3</strong>:</p>
+<p>No more lock-ups, except very rarely. I run a mix of Testing and
+Unstable at the moment, but my &quot;/etc/sources.list&quot; file points solely
+at my custom repository and Testing, for it just is tiring to keep
+tracking Unstable... way too much bandwidth.</p>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

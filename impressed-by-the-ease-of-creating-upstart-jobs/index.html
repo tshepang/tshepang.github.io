@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">impressed by the ease of creating Upstart jobs</h1>
+  <span class="post-date">2014-10-30</span>
+  <p>At work, we run our systems on Ubuntu, which so far means the init
+system is Upstart. I needed to have one binary to start when the system
+boots, and because I'm horrified by sysvinit scripts (which Upstart
+supports), I decided to give creating an Upstart job a try. I was
+surprised how easy it was:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">exec /usr/local/bin/executable
+</span><span style="background-color:#2b303b;color:#c0c5ce;">start on startup
+</span><span style="background-color:#2b303b;color:#c0c5ce;">respawn
+</span></pre>
+<p>I placed a file with above contents in <code>/etc/init/executable.conf</code>, and
+that's pretty much it. Impressive.</p>
+<p>Here's what happens:</p>
+<ul>
+<li><code>exec</code> instructs Upstart what executable to run</li>
+<li><code>start on</code> is an instruction on when to start the service</li>
+<li><code>respawn</code> means the service should re-start if ever it dies for some
+reason</li>
+</ul>
+<p>One convenient thing that's happening is that stdout output of the
+service gets re-directed to a log file, in this case
+<code>/var/log/upstart/executable.log</code>. Cool stuff.</p>
+<p>I found help from <a href="http://upstart.ubuntu.com/getting-started.html">Getting Started</a> and <a href="http://upstart.ubuntu.com/cookbook">the Cookbook</a>.</p>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

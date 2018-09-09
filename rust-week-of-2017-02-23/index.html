@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">Rust week of 2017-02-23</h1>
+  <span class="post-date">2017-03-02</span>
+  <p>I was glad to have the Python equivalent of the <a href="https://crates.io/crates/shlex">shlex</a> crate, which
+understands shell quoting, helping in transforming command arguments
+into what's suitable to send to <code>process::Command::args</code>. This allows
+one to avoid the pain experienced by naively doing the following:</p>
+<p>::: {.sourcecode}
+rust</p>
+<p>let mut command = command.split(char::is_whitespace); let
+process::command::new(command.next().unwrap())
+.args(command.collect::&lt;Vec&lt;_&gt;&gt;) .spawn() ...
+:::</p>
+<p>If the command is something like <code>hg commit --message 'git eat world'</code>,
+then the iterator would expand to:</p>
+<ul>
+<li>hg</li>
+<li>commit</li>
+<li>--message</li>
+<li>'git</li>
+<li>eat</li>
+<li>world'</li>
+</ul>
+<p>That will not run, and will fail with a not-obvious error message. Using
+shlex, instead:</p>
+<p>::: {.sourcecode}
+rust</p>
+<p>let mut command = shlex::split(args).unwrap()); let
+process::command::new(command.remove(1).unwrap()) .args(command)
+.spawn() ...
+:::</p>
+<p>Output should then be like:</p>
+<ul>
+<li>hg</li>
+<li>commit</li>
+<li>--message</li>
+<li>git eat world</li>
+</ul>
+<p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<p><a href="https://github.com/ctz/hyper-rustls/pull/5">Just one contribution</a> this week, and it's not even that great... not
+sure it's an improvement</p>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

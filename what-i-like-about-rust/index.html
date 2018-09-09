@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">what I like about Rust</h1>
+  <span class="post-date">2015-12-31</span>
+  <ul>
+<li>
+<p>Ambitious: the aim of being memory safe without the use of a garbage
+collector, allowing it to achieve C++ execution speeds.</p>
+</li>
+<li>
+<p>Naming conventions:</p>
+<ul>
+<li><code>name_with_underscores</code> for variable and function names</li>
+<li><code>HttpRequest</code> instead of <code>HTTPRequest</code> for type names</li>
+</ul>
+</li>
+<li>
+<p>Error reporting: compile errors are the best I've seen (though
+I've only really seen those of C and C++); they are even
+color-coded!</p>
+</li>
+<li>
+<p>2 short keywords:</p>
+<ul>
+<li><code>fn</code> for function declarations</li>
+<li><code>use</code>, instead of <code>using</code> or <code>import</code></li>
+</ul>
+</li>
+<li>
+<p>I love that I don't need to add (the tedious) parenthesis around
+the <em>condition expression</em> in an <em>if</em>, <em>while</em>, and <em>match</em>
+statements:</p>
+<p>::: {.sourcecode}
+rust</p>
+<p>if true {</p>
+<p>:   // always executes</p>
+<p>}
+:::</p>
+</li>
+<li>
+<p>The semicolon rule: I initially found it surprising that omitting a
+semicolon after a value is shorthand for returning. I appreciate it
+now... it's quite nifty, and I in fact now find <code>return</code>
+statements ugly.</p>
+</li>
+<li>
+<p>Traits: they are an elegant way of providing abstract interfaces,
+and are therefore used in generic programming. As an example, a
+function can be made to accept different data types, so long as
+those types implement the given trait (or traits). Gorgeous!</p>
+</li>
+<li>
+<p>The <code>match</code> statement is kool: exhaustiveness check, no
+fall-through, and nice syntax.</p>
+</li>
+<li>
+<p>Allowing a trailing comma after a list of items, which is really
+great for copy-pasting and diffs.</p>
+</li>
+<li>
+<p>Packaging conventions: by default, the build tool, Cargo, ensures
+that all build sources (which may include documentation) are placed
+in src/ in the root of a source distribution.</p>
+</li>
+<li>
+<p>A fast-paced and time-based release cycle: a stable release will be
+made every 6 weeks, which is very ambitious for a programming
+language.</p>
+</li>
+<li>
+<p>Development process:</p>
+<ul>
+<li>No one, including the Core Team, pushes anything to the Rust
+tree. Each person gets their changes reviewed first, and they
+mostly get approved by someone else.</li>
+<li>Merging the changes to the tree is nearly always done via a
+continuous integration system, which first ensures that each
+change passes all tests.</li>
+</ul>
+</li>
+<li>
+<p>Allows one to redefine variables, even with different types:</p>
+<p>::: {.sourcecode}
+rust</p>
+<p>let foo = 10; let foo = &quot;ten&quot;;
+:::</p>
+<p>This is convenient.</p>
+</li>
+<li>
+<p>The amount of iterations its design went through during its pre-1.0
+development, which included numerous breaking changes, was...
+impressive. That's an indication that what resulted is a far better
+design than we could have had. The sheer amount of effort taken,
+which was such a unique experience for me, makes me feel grateful (I
+watched the activity for about a year before 1.0 was released). I am
+also grateful for the resilient users who kept up with the pain of
+the frequent changes, for they helped keep the language relevant and
+exciting, while also providing feedback.</p>
+</li>
+</ul>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

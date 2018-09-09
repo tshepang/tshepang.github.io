@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">my Debian package management setup</h1>
+  <span class="post-date">2010-09-28</span>
+  <p>Much of this is obsolete: I no longer use <code>debmirror</code> and no longer keep
+the entire binary repository of i386 arch.</p>
+<p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<p>There's a useful tool in Debian named debmirror. It's function is to
+create and manage a partial copy of an official Debian repository, and I
+use it to create 2 repos:</p>
+<ul>
+<li>an entire i386 Debian repo for <a href="http://www.debian.org/releases/squeeze/">Squeeze</a></li>
+<li>an entire source Debian repo for <a href="http://www.debian.org/releases/squeeze/">Squeeze</a></li>
+</ul>
+<p>How this works is that I'd run the following command (an example for
+the source repo):</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">/usr/bin/debmirror
+</span><span style="background-color:#2b303b;color:#c0c5ce;"> </span><span style="background-color:#2b303b;color:#c0c5ce;">--verbose
+</span><span style="background-color:#2b303b;color:#c0c5ce;"> </span><span style="background-color:#2b303b;color:#c0c5ce;">--progress
+</span><span style="background-color:#2b303b;color:#c0c5ce;"> </span><span style="background-color:#2b303b;color:#c0c5ce;">--host=ftp.sun.ac.za
+</span><span style="background-color:#2b303b;color:#c0c5ce;"> </span><span style="background-color:#2b303b;color:#c0c5ce;">--passive
+</span><span style="background-color:#2b303b;color:#c0c5ce;"> </span><span style="background-color:#2b303b;color:#c0c5ce;">--dist=squeeze
+</span><span style="background-color:#2b303b;color:#c0c5ce;"> </span><span style="background-color:#2b303b;color:#c0c5ce;">--root=ftp/debian
+</span><span style="background-color:#2b303b;color:#c0c5ce;"> </span><span style="background-color:#2b303b;color:#c0c5ce;">--section=main
+</span><span style="background-color:#2b303b;color:#c0c5ce;"> </span><span style="background-color:#2b303b;color:#c0c5ce;">--method=ftp
+</span><span style="background-color:#2b303b;color:#c0c5ce;"> </span><span style="background-color:#2b303b;color:#c0c5ce;">--arch=none
+</span><span style="background-color:#2b303b;color:#c0c5ce;"> </span><span style="background-color:#2b303b;color:#c0c5ce;">/home/wena/.repo_src
+</span></pre>
+<p>(look at debmirror's manpage to see what all those options mean)</p>
+<p>The result is that I'll be having ~30GB of Debian locally (for a
+comparison, see <a href="http://www.debian.org/mirror/size">total Debian archive size</a>).</p>
+<p>That's a lot of data, most of which I'll never use, but:</p>
+<ul>
+<li>I do this as a matter of convenience; I want to be able to install
+anything when I'm having a fresh machine, and internet access is
+not yet fast and cheap in South Africa.</li>
+<li>I also like to mess around with the packaging system, deleting and
+reinstalling packages on a whim, and I don't want to be waiting for
+some file to download when I do that kind of tinkering.</li>
+</ul>
+<p>Now, since it's ridiculous to do this every time just to have the most
+recent packages (a weekly update is maybe &gt;1GB of data), I've found
+another wonderful tool named reprepro. It's purpose is to create a
+custom (unofficial) Debian repo. It's a far more advanced tool than
+debmirror, and I think it can do what debmirror does (but I don't yet
+care to learn how).</p>
+<p>Moving on, here's the relevant entries from my /etc/apt/sources.list
+file:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;"># local repos (debmirror)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">deb file:/home/wena/.repo_bin sid main
+</span><span style="background-color:#2b303b;color:#c0c5ce;">deb-src file:/home/wena/.repo_src sid main
+</span><span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#c0c5ce;"># local repo (reprepro)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">deb file:/home/wena/.repo_local cache main
+</span><span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#c0c5ce;"># remote repo
+</span><span style="background-color:#2b303b;color:#c0c5ce;">deb ftp://ftp.sun.ac.za/ftp/debian/ sid main non-free contrib
+</span></pre>
+<p>So, what I do on a semi-regular basis is run:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">$ wajig update &amp;&amp; wajig upgrade
+</span></pre>
+<p>The newly-updated packages are stored in a cache so that a reinstall
+doesn't have to fetch from network again. After this I run:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">$ reprepro -vv --basedir ~/.repo_local includedeb cache /var/cache/apt/archives/*deb
+</span></pre>
+<p>This updates the local reprepro repo and after which I can then remove
+the cached packages:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">$ wajig clean
+</span></pre>
+<p>I do that because they are now available in my reprepro-managed repo.
+That now means that I got a massive mirror managed by debmirror and a
+smaller one managed by reprepro, and I have these on an external drive
+for in case I want to install Debian anywhere. What else my reprepro
+repo has is some other packages like <strong>skype</strong> and <strong>oracle-xe</strong>, as
+well as an odd packages from <a href="http://wiki.debian.org/DebianExperimental">Debian Experimental</a>.</p>
+<p>Not so simple I guess... but works so well for my needs.</p>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

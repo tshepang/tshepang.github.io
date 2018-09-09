@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">packaging my first Qt app</h1>
+  <span class="post-date">2013-08-27</span>
+  <p>Someone asked me to try get some KDE package into Debian. I estimated
+that it would take me around 10 hours to get it into good enough shape
+before asking some Debian Developer to upload it for me. Here goes some
+rough estimates:</p>
+<ul>
+<li><strong>hour 1</strong>: Find documentation on the subject; I got a few after a
+quick search, which include the following:
+<ul>
+<li><a href="http://developer.ubuntu.com/packaging/html">Ubuntu Packaging Guide</a></li>
+<li>Debian Packaging Tutorial (from Debian package,
+<code>packaging-tutorial</code>)</li>
+</ul>
+</li>
+<li><strong>hour 2-3</strong>: Reading the Debian Packaging Tutorial which led me to
+reading <code>dpkg-source</code> manpage, using <code>dh_make</code> to create a <code>debian/</code>
+skeleton, and modifying the contents of that directory.</li>
+<li><strong>hour 4-6</strong>: Struggling to kill the lintian complaint,
+<code>binary-without-manpage</code>. I went as far as reading the source code
+(Perl) that performs the check, but that didn't help much. I could
+have saved hours by looking at the <a href="http://www.debian.org/doc/manuals/maint-guide">Debian New Maintainers' Guide</a>
+earlier. I also added <code>export LDFLAGS=-Wl,-z,relro</code> to
+<code>debian/rules</code> file to kill <code>hardening-no-relro</code> lintian warning.</li>
+<li><strong>hour 7-8</strong>: Determine what dependencies would be needed by
+building from a clean chroot (pbuilder). This was with the help of
+Debian New Maintainers' Guide, again.</li>
+<li><strong>hour 9-10</strong>: Reading <a href="https://wiki.debian.org/Hardening">Debian wiki page on Hardening</a> let me
+simplify my packaging further... removing the need to specify
+hardening flags explicitly (<a href="https://bitbucket.org/tshepang/ksig/commits/f4c7b60157b79847f918e3d8b24a74e6c5bec929">commit</a>). I also uploaded the package
+to <a href="http://mentors.debian.net">http://mentors.debian.net</a>, with the help of <a href="https://wiki.debian.org/DebianMentorsFaq">DebianMentorsFaq</a>.
+(<strong>2014.03 update</strong>: it has since been removed due to lack of
+activity)</li>
+</ul>
+<p>The resulting package now lives at
+<a href="https://bitbucket.org/tshepang/ksig/src">https://bitbucket.org/tshepang/ksig/src</a>. The changes I made, the
+actual packaging work, are in <a href="https://bitbucket.org/tshepang/ksig/src/f4c7b60157b79847f918e3d8b24a74e6c5bec929/debian">this directory</a>.</p>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

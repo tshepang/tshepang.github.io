@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">Rust 2.0 wishlist</h1>
+  <span class="post-date">2017-12-09</span>
+  <ul>
+<li>
+<p>Remove the <code>try!</code> macro... it has a better replacement in the form
+of the question_mark (<code>?</code>) operator.</p>
+</li>
+<li>
+<p>Remove <code>std::sync::mpsc</code> from stdlib, making it available
+externally... it does not feel general enough.</p>
+</li>
+<li>
+<p>Assigning values to struct bindings should use the equal sign, not
+the colon:</p>
+<p>::: {.sourcecode}
+rust</p>
+<p>// now Shoe { size: 10, style: &quot;sneaker&quot;) }, // dream Shoe { size
+= 10, style = &quot;sneaker&quot; };
+:::</p>
+<p>This would be consistent with the rest of the language.</p>
+</li>
+<li>
+<p>All collections types removed, except these basic ones: Vec,
+HashMap, and HashSet. Also, they would also be available from
+top-level (i.e. <code>std::{Vec, HashMap, HashSet}</code>), resulting in
+<code>std::collections</code> removal.</p>
+</li>
+</ul>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

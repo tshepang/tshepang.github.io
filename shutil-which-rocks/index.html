@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">shutil.which() rocks</h1>
+  <span class="post-date">2013-05-26</span>
+  <p>Unix/Linux systems have a simple (but useful) tool named which, whose
+main purpose is to indicate where in the filesystem a particular
+executable is installed. This functionality was added in Python 3.3, and
+though simple, I was looking forward to its availability in Debian, just
+so I could replace wajig's own equivalent functionality, which only
+checked for file presence, and was hard-coded and therefore inflexible.
+<a href="http://docs.python.org/3/library/shutil#shutil.which">shutil.which()</a>, OTOH, looks for the given executable name in user's
+PATH and is more thorough, since it also checks if the executable name
+points to something that is actually executable. So, making use of this
+new function resulted in code that is both more robust and <a href="https://code.google.com/p/wajig/source/detail?r=e419e439e47f880ab17f6394e3faaa8ce3b15fe1">cleaner</a>.</p>
+<p>As a sidenote, this functionality <a href="http://bugs.python.org/issue444582">was first proposed in 2001</a>!</p>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

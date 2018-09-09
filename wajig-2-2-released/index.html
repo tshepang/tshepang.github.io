@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">wajig 2.2 released</h1>
+  <span class="post-date">2011-05-09</span>
+  <p>Our friendly Debian developer agreed to upload yet another release of
+wajig to Debian.</p>
+<ul>
+<li>This one is quite special since it now uses Python 3.</li>
+<li>It also does automatic dependency installation for DEB files. This
+part of the work took me longer because python-apt doesn't exactly
+make it easy. I even had to look in the code to be sure what exactly
+is happening. I ended up using a mixture of dpkg (for installation
+of stated DEBs, and to configure them) and python-apt (for the
+automatic installation part).</li>
+<li>The WHICHPACKAGE command, which displays which packages the given
+file path belongs to, got improved. It was using custom
+implementation which was broken for some uses, but there are
+available tools (<code>dpkg --list</code> for locally-installed packages and
+<code>apt-file search</code> for both local and remote packages) that do the
+job better, and I made use of them. These tools were probably not
+avaialable the time this feature was added to wajig.</li>
+</ul>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

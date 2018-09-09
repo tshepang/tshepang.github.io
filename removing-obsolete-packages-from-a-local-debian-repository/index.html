@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">removing obsolete packages from a local Debian repository</h1>
+  <span class="post-date">2012-02-21</span>
+  <h1 id="background-info">background info</h1>
+<p>Bandwidth in South Africa is neither readily-available nor cheap, so
+whenever I fetch and install Debian packages (e.g. <code>apt-get upgrade</code>), I
+also keep them in a local custom repository. I use a great tool named
+<a href="http://mirrorer.alioth.debian.org/">reprepro</a> for this, and this is the command I use to update that
+repository, given the location of the fresh package files:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang /var/cache/apt/archives/*deb
+</span></pre>
+<p>What's nice about the command is that, if there is an older version of
+the pacakge I'm adding, it gets replaced, and the package index is
+update accordingly.</p>
+<h1 id="and-now-to-the-topic-at-hand">and now to the topic at hand</h1>
+<p>I run that command more or less regularly, but very often the repository
+accumulates some junk:</p>
+<ul>
+<li>If a package gets renamed, reprepro has no way of knowing (at least
+as far as my setup goes). One notable case of this is Debian
+kernels, whose names match the major release versions (e.g.
+<code>linux-image-3.1.0-1-686-pae</code> becomes <code>linux-image-3.2.0-1-686-pae</code>
+when a new upstream release gets packaged). Lots other packages
+change names, and very often, for a variety of reasons (Debian is a
+little chaotic, often out of necessity, and it's amazing that its
+developers keep it so damn stable given all this change).</li>
+<li>If I add a package from an external repository or that I converted
+from an rpm, reprepro has no way of knowing that fact. Now if I stop
+using that package, it is just a waste of resources (CPU and disk
+usage).</li>
+</ul>
+<p>To help with the cleanup, I have written the following simple script:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">#!/usr/bin/env python3
+</span><span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#c0c5ce;">import apt_pkg
+</span><span style="background-color:#2b303b;color:#c0c5ce;">import gzip
+</span><span style="background-color:#2b303b;color:#c0c5ce;">import subprocess
+</span><span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#c0c5ce;">CUSTOM_REPO = (&quot;/home/wena/.custom_repo/dists/tshepang/main/&quot;
+</span><span style="background-color:#2b303b;color:#c0c5ce;">               </span><span style="background-color:#2b303b;color:#c0c5ce;">&quot;binary-i386/Packages.gz&quot;)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">WHEEZY_REPO = (&quot;/var/lib/apt/lists/ftp.de.debian.org_debian_dists_testing_{}_&quot;
+</span><span style="background-color:#2b303b;color:#c0c5ce;">               </span><span style="background-color:#2b303b;color:#c0c5ce;">&quot;binary-i386_Packages&quot;)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#c0c5ce;">def main():
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">custom_repo = apt_pkg.TagFile(gzip.open(CUSTOM_REPO, &quot;rb&quot;))
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">archive_areas = &quot;main contrib non-free&quot;.split()
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">wheezy_packages = list()
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">for archive_area in archive_areas:
+</span><span style="background-color:#2b303b;color:#c0c5ce;">        </span><span style="background-color:#2b303b;color:#c0c5ce;">repo = WHEEZY_REPO.format(archive_area)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">        </span><span style="background-color:#2b303b;color:#c0c5ce;">repo = apt_pkg.TagFile(gzip.open(repo, &quot;rb&quot;))
+</span><span style="background-color:#2b303b;color:#c0c5ce;">        </span><span style="background-color:#2b303b;color:#c0c5ce;">wheezy_packages.extend([pkg[&quot;Package&quot;] for pkg in repo])
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">for package in custom_repo:
+</span><span style="background-color:#2b303b;color:#c0c5ce;">        </span><span style="background-color:#2b303b;color:#c0c5ce;">package_name = package[&quot;Package&quot;]
+</span><span style="background-color:#2b303b;color:#c0c5ce;">        </span><span style="background-color:#2b303b;color:#c0c5ce;">if package_name not in wheezy_packages:
+</span><span style="background-color:#2b303b;color:#c0c5ce;">            </span><span style="background-color:#2b303b;color:#c0c5ce;">cmd = &quot;apt-cache policy &quot; + package_name
+</span><span style="background-color:#2b303b;color:#c0c5ce;">            </span><span style="background-color:#2b303b;color:#c0c5ce;">subprocess.call(cmd.split())
+</span><span style="background-color:#2b303b;color:#c0c5ce;">            </span><span style="background-color:#2b303b;color:#c0c5ce;">choice = input(&quot;remove from cache [Y/n]? &quot;)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">            </span><span style="background-color:#2b303b;color:#c0c5ce;">if not choice or choice.lower().startswith(&quot;y&quot;):
+</span><span style="background-color:#2b303b;color:#c0c5ce;">                </span><span style="background-color:#2b303b;color:#c0c5ce;">cmd = (&quot;reprepro -vv --basedir /home/wena/.custom_repo/ &quot;
+</span><span style="background-color:#2b303b;color:#c0c5ce;">                       </span><span style="background-color:#2b303b;color:#c0c5ce;">&quot;remove tshepang &quot; + package_name)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">                </span><span style="background-color:#2b303b;color:#c0c5ce;">subprocess.call(cmd.split())
+</span><span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#c0c5ce;">if __name__ == &quot;__main__&quot;:
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">main()
+</span></pre>
+<p>And here's a snippet of its output:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">cx-oracle:
+</span><span style="background-color:#2b303b;color:#c0c5ce;">  </span><span style="background-color:#2b303b;color:#c0c5ce;">Installed: 5.1.1-2
+</span><span style="background-color:#2b303b;color:#c0c5ce;">  </span><span style="background-color:#2b303b;color:#c0c5ce;">Candidate: 5.1.1-2
+</span><span style="background-color:#2b303b;color:#c0c5ce;">  </span><span style="background-color:#2b303b;color:#c0c5ce;">Version table:
+</span><span style="background-color:#2b303b;color:#c0c5ce;"> </span><span style="background-color:#2b303b;color:#c0c5ce;">*** 5.1.1-2 0
+</span><span style="background-color:#2b303b;color:#c0c5ce;">        </span><span style="background-color:#2b303b;color:#c0c5ce;">500 file:/home/wena/.custom_repo/ tshepang/main i386 Packages
+</span><span style="background-color:#2b303b;color:#c0c5ce;">        </span><span style="background-color:#2b303b;color:#c0c5ce;">100 /var/lib/dpkg/status
+</span><span style="background-color:#2b303b;color:#c0c5ce;">remove from cache [Y/n]?
+</span></pre>
+<p>What it does is look for packages which are only available in my custom
+reposity, as compared with the one in Wheezy (soon to be Debian 7). It
+then prompts me on whether or not to remove it from that custom
+repository. Today, it helped me get rid of dozens of junk.</p>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

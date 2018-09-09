@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">discovering Python @decorators</h1>
+  <span class="post-date">2014-07-08</span>
+  <p>There is a project at work where I needed to do the same action on
+various functions. It's basically a checkpoint system where I'd write
+some state to a file, but only when all the functionality in the given
+functions executed successfully. It was a one-line change but I thought
+it was a good excuse to create decorators for the first time in my life.</p>
+<p>Here is an example of a decorator function:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">def checkpoint(function):
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">wrapper(*args, **kwargs):
+</span><span style="background-color:#2b303b;color:#c0c5ce;">        </span><span style="background-color:#2b303b;color:#c0c5ce;">with open(PATH) as f:
+</span><span style="background-color:#2b303b;color:#c0c5ce;">            </span><span style="background-color:#2b303b;color:#c0c5ce;">for line in f:
+</span><span style="background-color:#2b303b;color:#c0c5ce;">                </span><span style="background-color:#2b303b;color:#c0c5ce;">if function.__name__ in line:
+</span><span style="background-color:#2b303b;color:#c0c5ce;">                    </span><span style="background-color:#2b303b;color:#c0c5ce;">return
+</span><span style="background-color:#2b303b;color:#c0c5ce;">        </span><span style="background-color:#2b303b;color:#c0c5ce;">value = function(*args, **kwargs)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">        </span><span style="background-color:#2b303b;color:#c0c5ce;">with open(PATH, &#39;a+&#39;) as f:
+</span><span style="background-color:#2b303b;color:#c0c5ce;">            </span><span style="background-color:#2b303b;color:#c0c5ce;">f.write(function.__name__)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">        </span><span style="background-color:#2b303b;color:#c0c5ce;">return value
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">return wrapper
+</span></pre>
+<p>All it does is write some text to a file, and avoid running whatever
+function will be <em>decorated</em> by it if there is a match in that file.
+This would be an indicator that the function had already been executed
+(in a previous run).</p>
+<p>The following snippet sees the use of this decorator:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">@checkpoint
+</span><span style="background-color:#2b303b;color:#c0c5ce;">def do_this(some_argument):
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;"># exit(1) on error
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">...
+</span><span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#c0c5ce;">@checkpoint
+</span><span style="background-color:#2b303b;color:#c0c5ce;">def do_that(some_other_argument, some_optional_argument=None):
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;"># exit(1) on error
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">...
+</span><span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#c0c5ce;">if __name__ == &#39;__main__&#39;:
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">do_this(&#39;some value&#39;)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">do_that(&#39;some other value&#39;)
+</span></pre>
+<p>Without the decorator syntax, the same functionality would be achieved
+with:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">def do_this(some_argument):
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;"># exit(1) on error
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">...
+</span><span style="background-color:#2b303b;color:#c0c5ce;">do_this = checkpoint(do_this)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#c0c5ce;">def do_that(some_other_argument, some_optional_argument=None):
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;"># exit(1) on error
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">...
+</span><span style="background-color:#2b303b;color:#c0c5ce;">do_that = checkpoint(do_that)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#c0c5ce;">if __name__ == &#39;__main__&#39;:
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">do_this(&#39;some value&#39;)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">do_that(&#39;some other value&#39;)
+</span></pre>
+<p>The latter format, though it presents less of a cognitive burden, feels
+less of an obvious solution, and it's a bit uglier as well. <a href="http://legacy.python.org/dev/peps/pep-0318">PEP 380</a>
+is a detailed discussion written over 10 years ago when the syntax was
+first added to the language.</p>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

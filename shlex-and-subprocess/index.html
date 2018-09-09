@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">shlex and subprocess</h1>
+  <span class="post-date">2011-01-25</span>
+  <p>I learned about a module called <a href="http://docs.python.org/library/shlex.html">shlex</a>. It's stated to be a simple
+lexical analyzer, and I don't really know what this means, but I found
+at least one of its uses. It provides a convenience method that lets me
+split a command line string, to feed into <a href="http://docs.python.org/library/subprocess.html">subprocess</a> module.</p>
+<p>Let's say I want to run the command <code>/bin/cat 'file with spaces'</code> from
+within <code>python</code>. A normal <code>split</code> won't work, because it uses white
+space as a delimiter (by default). To test, I will create a file named
+&quot;<strong>file with spaces</strong>&quot; and add text (<code>content of 'file with spaces'</code>).</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">$ echo &#39;content of file with spaces&#39; &gt; &#39;file with spaces&#39;
+</span></pre>
+<p>And here's the code, using the normal split method:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">import subprocess
+</span><span style="background-color:#2b303b;color:#c0c5ce;">cmd = &quot;/bin/cat &#39;file with spaces&#39;&quot;
+</span><span style="background-color:#2b303b;color:#c0c5ce;">formatted_cmd = cmd.split()
+</span><span style="background-color:#2b303b;color:#c0c5ce;">subprocess.Popen(formatted_cmd)
+</span></pre>
+<p>Output:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">/bin/cat: &#39;file: No such file or directory
+</span><span style="background-color:#2b303b;color:#c0c5ce;">/bin/cat: with: No such file or directory
+</span><span style="background-color:#2b303b;color:#c0c5ce;">/bin/cat: spaces&#39;: No such file or directory
+</span></pre>
+<p>That's when <code>shlex</code> module gets to be useful.</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">import shlex, subprocess
+</span><span style="background-color:#2b303b;color:#c0c5ce;">cmd = &quot;/bin/cat &#39;file with spaces&#39;&quot;
+</span><span style="background-color:#2b303b;color:#c0c5ce;">formatted_cmd = shlex.split(cmd)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">subprocess.Popen(formatted_cmd)
+</span></pre>
+<p>Output:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">content of &#39;file with spaces&#39;
+</span></pre>
+</div>
+
+        </div>
+
+    </body>
+
+</html>

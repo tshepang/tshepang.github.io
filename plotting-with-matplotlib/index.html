@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">plotting with matplotlib</h1>
+  <span class="post-date">2011-02-17</span>
+  <p>Here's drawing a simple graph:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">from matplotlib import pyplot
+</span><span style="background-color:#2b303b;color:#c0c5ce;">x = range(10)  # a list of 10 integers, 0-9
+</span><span style="background-color:#2b303b;color:#c0c5ce;">y = range(10)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">pyplot.plot(x, y)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">pyplot.show()
+</span></pre>
+<p>And now for something a little more interesting:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">import random
+</span><span style="background-color:#2b303b;color:#c0c5ce;">from matplotlib import pyplot
+</span><span style="background-color:#2b303b;color:#c0c5ce;">x = range(10)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">y = random.sample(range(10), 10)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">pyplot.plot(x, y)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">pyplot.show()
+</span></pre>
+<p>We can have more than one graph on a single figure:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">import random
+</span><span style="background-color:#2b303b;color:#c0c5ce;">from matplotlib import pyplot
+</span><span style="background-color:#2b303b;color:#c0c5ce;">x = range(10)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">y1 = random.sample(range(10), 10)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">y2 = random.sample(range(10), 10)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">pyplot.plot(x, y1, x, y2)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">pyplot.show()
+</span></pre>
+<p>What if the two graphs have much differing ranges:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">import random
+</span><span style="background-color:#2b303b;color:#c0c5ce;">from matplotlib import pyplot
+</span><span style="background-color:#2b303b;color:#c0c5ce;">x = range(10)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">y1 = random.sample(range(10), 10)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">y2 = random.sample(range(100, 110), 10)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">pyplot.plot(x, y1, x, y2)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">pyplot.show()
+</span></pre>
+<p>Depending on need, that might not be ideal. So let's create two
+separate y-axes:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">import random
+</span><span style="background-color:#2b303b;color:#c0c5ce;">from matplotlib import pyplot
+</span><span style="background-color:#2b303b;color:#c0c5ce;">x = range(10)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">y1 = random.sample(range(10), 10)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">y2 = random.sample(range(100, 110), 10)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">pyplot.plot(x, y1)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">pyplot.twinx()
+</span><span style="background-color:#2b303b;color:#c0c5ce;">pyplot.plot(x, y2)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">pyplot.show()
+</span></pre>
+<p>Yeah, not exactly ideal. We lost the automatic coloring, and we don't
+even know which graph is which. Let's do better:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">import random
+</span><span style="background-color:#2b303b;color:#c0c5ce;">from matplotlib import pyplot
+</span><span style="background-color:#2b303b;color:#c0c5ce;">x = range(10)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">y1 = random.sample(range(10), 10)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">y2 = random.sample(range(100, 110), 10)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">pyplot.plot(x, y1, &quot;red&quot;)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">pyplot.ylabel(&quot;y1&quot;, color=&quot;red&quot;)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">pyplot.twinx()
+</span><span style="background-color:#2b303b;color:#c0c5ce;">pyplot.plot(x, y2, &quot;blue&quot;)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">pyplot.ylabel(&quot;y2&quot;, color=&quot;blue&quot;)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">pyplot.show()
+</span></pre>
+<p>This was done with the help of <a href="http://matplotlib.sourceforge.net/examples/api/two_scales.html">this example</a>. There's a heck of a
+<a href="http://matplotlib.sourceforge.net/examples/index.html">lot</a> <a href="http://matplotlib.sourceforge.net/gallery.html">more</a>.</p>
+<h1 id="further-reading">further reading</h1>
+<ul>
+<li>built-in function: <a href="http://docs.python.org/library/functions#range">range</a></li>
+<li>module: <a href="http://docs.python.org/library/random">random</a></li>
+<li>3rd-party module: <a href="http://matplotlib.sourceforge.net/api/pyplot_api.html">matplotlib.pyplot</a></li>
+<li><a href="http://matplotlib.sourceforge.net/contents.html">matplotlib documentation</a></li>
+</ul>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

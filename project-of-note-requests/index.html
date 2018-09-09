@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">project of note: Requests</h1>
+  <span class="post-date">2011-12-31</span>
+  <p>Requests is a Python module that makes it real easy to deal with HTTP.
+As an example, something as scary as fetching a web page that needs
+authentication requires only a single line of code:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">requests.get(&quot;https://example.com&quot;, auth=(&quot;user&quot;, &quot;pass&quot;))
+</span></pre>
+<p>It's capable of <a href="http://docs.python-requests.org/en/latest/index.html#feature-support">a lot more</a> of course (<a href="http://docs.python-requests.org/en/latest/user/quickstart/">tutorial</a>), and it's weird
+that something this nice hasn't been around for ages. There is another
+that is much simpler to use and more advanced than Python's standard
+library named <a href="http://code.google.com/p/httplib2/">httplib2</a>, but it's not quite as simple/elegant:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">h = httplib2.Http(&quot;.cache&quot;)  // ugly
+</span><span style="background-color:#2b303b;color:#c0c5ce;">h.add_credentials(&quot;user&quot;, &quot;pass&quot;)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">resp, content = h.request(&quot;https://example.com&quot;)
+</span></pre>
+<p>An example for achieving the same with only the standard library is far
+messier.</p>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

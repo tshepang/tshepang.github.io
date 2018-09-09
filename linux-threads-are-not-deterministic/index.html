@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">Linux threads are not deterministic</h1>
+  <span class="post-date">2015-05-25</span>
+  <p>By deterministic, I am referring to their scheduling. Here's an example
+in Rust:</p>
+<p>::: {.sourcecode}
+rust</p>
+<p>use std::thread; use std::sync::mpsc::channel;</p>
+<p>fn main() {</p>
+<p>:   let thread_count = 4; let (tx, rx) = channel();</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">for x in 0..thread\_count {
+</span><span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#c0c5ce;">:   let tx = tx.clone(); thread::spawn(move \|\| { println!(\&quot;t{}
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">tx\&quot;, x); tx.send(x).unwrap(); });
+</span><span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#c0c5ce;">}
+</span><span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#c0c5ce;">for \_ in 0..thread\_count {
+</span><span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#c0c5ce;">:   println!(\&quot;rx from t{}\&quot;, rx.recv().unwrap());
+</span><span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#c0c5ce;">}
+</span></pre>
+<p>}
+:::</p>
+<p>What I'm doing there is create 4 child threads, from which I send
+messages that are to be captured by the main thread.</p>
+<p>I built and ran it with:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">rustc --opt-level 0 main.rs &amp;&amp; ./main
+</span></pre>
+<p>Following is output from one sample run:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">t1 tx
+</span><span style="background-color:#2b303b;color:#c0c5ce;">t0 tx
+</span><span style="background-color:#2b303b;color:#c0c5ce;">t2 tx
+</span><span style="background-color:#2b303b;color:#c0c5ce;">t3 tx
+</span><span style="background-color:#2b303b;color:#c0c5ce;">rx from t1
+</span><span style="background-color:#2b303b;color:#c0c5ce;">rx from t0
+</span><span style="background-color:#2b303b;color:#c0c5ce;">rx from t3
+</span><span style="background-color:#2b303b;color:#c0c5ce;">rx from t2
+</span></pre>
+<p>Following is what I get with another run:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">t0 tx
+</span><span style="background-color:#2b303b;color:#c0c5ce;">t1 tx
+</span><span style="background-color:#2b303b;color:#c0c5ce;">rx from t1
+</span><span style="background-color:#2b303b;color:#c0c5ce;">t2 tx
+</span><span style="background-color:#2b303b;color:#c0c5ce;">rx from t2
+</span><span style="background-color:#2b303b;color:#c0c5ce;">t3 tx
+</span><span style="background-color:#2b303b;color:#c0c5ce;">rx from t3
+</span><span style="background-color:#2b303b;color:#c0c5ce;">rx from t0
+</span></pre>
+<p>If it was all deterministic (i.e. predictable), <code>t0 tx</code> would always
+come before <code>t1 tx</code>, and <code>rx from t0</code> before <code>rx from t1</code>, and so on.</p>
+<p>I think this is done for performance reasons, where the kernel just
+looks for an available slot, running each thread on a best-effort basis.
+My guess is that a more real-time kernel would be more predictable.</p>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

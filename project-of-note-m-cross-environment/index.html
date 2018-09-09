@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">project of note: M cross environment</h1>
+  <span class="post-date">2013-04-20</span>
+  <p>I spend several hours researching how to build a Qt app (written in C++)
+on Debian for users who will run it on Windows. I also wanted it be just
+one binary at the end so that deployment is just a matter of copying and
+running the one executable. This means I needed to statically-link the
+app, and the sad news is that I first needed a statically-linked Qt.</p>
+<p>If I had actually known of <a href="http://mxe.cc">M cross environment</a> (MXE), I would have
+shaved nearly all of those 'wasted' hours. I am very grateful to the
+developers, especially because building Qt was mainly a matter of
+installing <a href="http://mxe.cc/#requirements-debian">a few build dependencies</a> and running <code>make qt</code>. An hour or
+two later, I had a newly cross-compiled Qt waiting for my use. It was
+also pleasant that the app, in a form of a <code>.exe</code> file, just worked on
+Windows 7.</p>
+<p>Having a look around, the build system actually looks elegant, and is a
+lot simpler than the scary mess that is <a href="https://live.gnome.org/Jhbuild">JHBuild</a>.</p>
+<p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<p>I have published two guides on Stack Overflow on how this works, <a href="http://stackoverflow.com/a/13211922/321731">one
+for Qt 4</a> and <a href="http://stackoverflow.com/a/14170591/321731">another for Qt 5</a>.</p>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

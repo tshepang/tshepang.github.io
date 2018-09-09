@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">easing switching between Git and Mercurial</h1>
+  <span class="post-date">2013-10-16</span>
+  <p>Each chance I get, I use Mercurial (e.g. personal stuff), and use Git
+when I don't have much of a choice (e.g. FLOSS and work). That is, I
+use both quite a lot, and too often I find myself running commands for
+one while on another's repository... error. I therefore decided to
+ease the pain my creating <a href="https://bitbucket.org/tshepang/scripts/src/tip/vcs.py">a script</a> which checks which VCS system I'm
+on, and displays the relevant command.</p>
+<p>Some examples of usage:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">$ cd &lt;hg repo&gt;
+</span><span style="background-color:#2b303b;color:#c0c5ce;">$ ./vcs.py --log
+</span><span style="background-color:#2b303b;color:#c0c5ce;">hg log --no-merges --patch --stat --verbose
+</span><span style="background-color:#2b303b;color:#c0c5ce;">$ cd &lt;git repo&gt;
+</span><span style="background-color:#2b303b;color:#c0c5ce;">$ ./vcs.py --log
+</span><span style="background-color:#2b303b;color:#c0c5ce;">git log --no-merges --patch --stat
+</span></pre>
+<p>Here are the relevant BASH aliases:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">alias vb=&#39;$(~/scripts/vcs.py --branch)&#39;
+</span><span style="background-color:#2b303b;color:#c0c5ce;">alias vd=&#39;$(~/scripts/vcs.py --diff)&#39;
+</span><span style="background-color:#2b303b;color:#c0c5ce;">alias vl=&#39;$(~/scripts/vcs.py --log)&#39;
+</span><span style="background-color:#2b303b;color:#c0c5ce;">alias vp=&#39;$(~/scripts/vcs.py --push)&#39;
+</span><span style="background-color:#2b303b;color:#c0c5ce;">alias vs=&#39;$(~/scripts/vcs.py --status)&#39;
+</span><span style="background-color:#2b303b;color:#c0c5ce;">alias vu=&#39;$(~/scripts/vcs.py --pull)&#39;
+</span><span style="background-color:#2b303b;color:#c0c5ce;">alias vc=&#39;$(~/scripts/vcs.py --commit)&#39;
+</span><span style="background-color:#2b303b;color:#c0c5ce;">alias vo=&#39;$(~/scripts/vcs.py --checkout)&#39;
+</span><span style="background-color:#2b303b;color:#c0c5ce;">alias vr=&#39;$(~/scripts/vcs.py --revert)&#39;
+</span></pre>
+<p>This makes my life so much easier, since I no longer have to care which
+VCS I'm on, at least for the most common of commands. I am pleased with
+self.</p>
+<p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<p>As a sidenote, if you want to cycle between the changesets (Mercurial
+term) or Commits (Git term), use the following search term on your pager
+(tested with <a href="http://www.greenwoodsoftware.com/less">less</a>, which is Debian/Ubuntu default pager):</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">(^changeset)|(^commit)
+</span></pre>
+</div>
+
+        </div>
+
+    </body>
+
+</html>

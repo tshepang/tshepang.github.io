@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">Java gripes</h1>
+  <span class="post-date">2011-11-02</span>
+  <p>Okay, so Java sucks 'a bit', but the following surprised me:</p>
+<ul>
+<li>I struggled to find a way to count the number of elements in an
+array. In a string it's done thus: <code>&quot;four&quot;.length()</code>. Given that, I
+expected that <code>{'f', 'o', 'u', 'r'}.length()</code> would gimme the same
+result. Nah! I found that I had to do
+<code>new char [] {'f', 'o', 'u', 'r'}.length</code>, and yes, without the
+brackets after length. WTF! There might be a good reason for such
+(seeming) inconsistency of course, but I've been spoilt by
+Python's elegant equivalents: <code>len(&quot;four&quot;)</code> and
+<code>len(['f','o', 'u', 'r'])</code> which all give the same result.
+(sidenote: <code>len()</code> is a Python built-in function, which explains why
+there's no dot notation there).</li>
+<li>The standard library doesn't have CSV handling! I had to find an
+external library for that!</li>
+<li>Given 2 strings, I can't do <code>str1==str2</code> for comparison, but am
+forced to use the string method, equals: <code>str1.equals(str2)</code>. This
+bit me a few times, and am sure am not the only one.</li>
+<li>The standard library doesn't have <code>.INI</code> file handling (<a href="http://stackoverflow.com/questions/3728823">Someone
+pointed to a 3rd party library</a>).</li>
+</ul>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

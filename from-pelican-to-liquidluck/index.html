@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">from Pelican to liquidluck</h1>
+  <span class="post-date">2013-10-03</span>
+  <p><strong>notes</strong>:</p>
+<ul>
+<li>This post was first published on <strong>2012-07-05</strong>, which is shortly
+after I started using <a href="http://liquidluck.readthedocs.org">liquidluck</a>.</li>
+<li>I have since moved back to Pelican on <strong>2013-09-29</strong>, with <a href="http://oncrashreboot.com/pelican-elegant">Elegant
+theme</a>. Reason: slow liquidluck development (<a href="https://github.com/lepture/liquidluck/issues/101">the author is busy
+with other projects</a>), though he has more recently been doing <a href="https://github.com/lepture/liquidluck/issues/104#issuecomment-22825084">some
+large changes in a branch</a>, which I assume is not ready. There is
+also <a href="https://github.com/lepture/liquidluck/issues/created_by/tshepang?sort=updated&amp;state=open">a backlog of doc improvements</a> I submitted, which are not even
+acknowledged. Do not consider this a complaint... the author in
+fact gave me more than I gave him... a nice piece of software. In
+fact, I might go back at some point, and will keep maintaining <a href="http://tshepang.net/looking-at-liquidluck-themes">live
+demos of the various liquidluck themes</a>. Also, <a href="http://movies.tshepang.net">my movie blog</a> is
+also still built with liquidluck.</li>
+<li>I have a separate post on <a href="http://tshepang.net/what-me-loves-about-static-website-generation">what I love about static website
+generators</a>.</li>
+</ul>
+<h1 id="why">why <a href="http://pelican.readthedocs.org">Pelican</a> rocks</h1>
+<ul>
+<li>It has categories (<a href="https://github.com/getnikola/nikola/issues/163">unlike nikola</a>)</li>
+<li>Post metadata:
+<ul>
+<li>if Date is not specified, file mtime is used (unlike
+<a href="http://blogofile.com">blogofile</a>)</li>
+<li>if Category is not specified, parent directory name is used
+(unlike blogofile)</li>
+<li>titles are allowed to have any character (unlike blogofile)</li>
+<li>there is an option to provide clean urls... remove trailing
+<code>.html</code></li>
+</ul>
+</li>
+<li>Does not force one into having ugly date-based filesystem structure
+(unlike <a href="http://tinkerer.me">Tinkerer</a>)</li>
+</ul>
+<h1 id="why-pelican-rocks-not">why Pelican rocks not</h1>
+<p>The default theme simply didn't fit my tastes, and <a href="http://tshepang.net/favorite-pelican-themes">the other themes
+weren't so satisfactory</a>. I spent way too long fiddling with them, and
+just couldn't be happy.</p>
+<h1 id="why-liquidluck">why liquidluck</h1>
+<p>So I have moved to <a href="http://liquidluck.readthedocs.org">liquidluck</a>, and am hoping I will not be 'forced'
+to move again. It's way too much work, and it took multiple messages
+between me and <a href="http://lepture.com">the developer</a> of this sleek new static site generator
+just to get it to behave the way I like it.</p>
+<p>I had to override stuff that's done by the software, by using <a href="https://bitbucket.org/tshepang/blog/src/1602cdf8/custom.py">this
+script</a>, which helped give it the advantages that Pelican has over the
+other generators I mentioned, while also solving the one problem Pelican
+has.. lack of a good-enough theme. This was achieved with the help of
+that very helpful and responsive developer.</p>
+<h1 id="issues">issues</h1>
+<ul>
+<li>
+<p>There is no visible way, at least for the default theme, to
+subscribe to RSS feeds of individual Categories.</p>
+</li>
+<li>
+<p>The text is a bit blurry/faint with the default theme, and none of
+<a href="http://tshepang.net/looking-at-liquidluck-themes">the other ones</a> are
+close to good-enough for my liking, all but the promising one named
+<a href="https://github.com/bingdian/liquidluck-theme-responsive">responsive</a>. It got 2 issues so far (see <a href="http://demo-responsive.tshepang.net">live demo</a>):</p>
+<ul>
+<li>Date is displayed at the bottom of a post... why make user
+scroll that far before presenting such a key piece of info.</li>
+<li>There is no link anywhere allowing to visit Home.</li>
+</ul>
+</li>
+<li>
+<p>Background color for <code>&lt;code&gt;</code> text is too unusual, and results in an
+ugly look. It does not fit with the general general theme, so should
+be grey really, which would match with that of <code>&lt;pre&gt;</code> text. I fixed
+it myself with the following patch:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">diff --git a/liquidluck/_themes/default/static/style.css b/liquidluck/_themes/default/static/style.css
+</span><span style="background-color:#2b303b;color:#c0c5ce;">index e90de80..94fa7e8 100644
+</span><span style="background-color:#2b303b;color:#c0c5ce;">+++ a/liquidluck/_themes/default/static/style.css
+</span><span style="background-color:#2b303b;color:#c0c5ce;">+++ b/liquidluck/_themes/default/static/style.css
+</span><span style="background-color:#2b303b;color:#c0c5ce;">@@ -112,7 +112,7 @@ pre {
+</span><span style="background-color:#2b303b;color:#c0c5ce;">     </span><span style="background-color:#2b303b;color:#c0c5ce;">border-radius: 3px;
+</span><span style="background-color:#2b303b;color:#c0c5ce;"> </span><span style="background-color:#2b303b;color:#c0c5ce;">}
+</span><span style="background-color:#2b303b;color:#c0c5ce;"> </span><span style="background-color:#2b303b;color:#c0c5ce;">code, tt {
+</span><span style="background-color:#2b303b;color:#c0c5ce;">-    background-color: #fee9cc;
+</span><span style="background-color:#2b303b;color:#c0c5ce;">+    background-color: #eee;
+</span><span style="background-color:#2b303b;color:#c0c5ce;">     </span><span style="background-color:#2b303b;color:#c0c5ce;">color: rgba(0, 0, 0, 0.75);
+</span><span style="background-color:#2b303b;color:#c0c5ce;">     </span><span style="background-color:#2b303b;color:#c0c5ce;">padding: 1px 3px;
+</span><span style="background-color:#2b303b;color:#c0c5ce;">     </span><span style="background-color:#2b303b;color:#c0c5ce;">font-size: 12px;
+</span></pre></li>
+</ul>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

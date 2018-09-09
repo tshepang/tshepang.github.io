@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">my JHBuild setup</h1>
+  <span class="post-date">2011-03-19</span>
+  <p>JHBuild is a <a href="http://library.gnome.org/devel/jhbuild/unstable/command-reference.html.en">powerful</a> and <a href="http://library.gnome.org/devel/jhbuild/unstable/config-reference.html.en">flexible</a> build tool for GNOME. It does
+takes some getting used to in terms of set-up, but this <a href="http://live.gnome.org/Jhbuild">wiki page</a> is
+quite gentle, and it details how to get the code running on your
+machine.</p>
+<p>If you use Debian (or Ubuntu), you can use run this command:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">wajig --norecommends install build-essential docbook-xsl flex \
+</span><span style="background-color:#2b303b;color:#c0c5ce;">bison cvs gperf cmake  {uuid,ppp}-dev \
+</span><span style="background-color:#2b303b;color:#c0c5ce;">libx{composite,randr,damage,ft2,i,t}-dev \
+</span><span style="background-color:#2b303b;color:#c0c5ce;">libxcb-{event1,aux0,atom1}-dev \
+</span><span style="background-color:#2b303b;color:#c0c5ce;">lib{pam0g,iw,db,gdbm,png12,ffi,tiff,vorbis,gl1-mesa,unistring} \
+</span><span style="background-color:#2b303b;color:#c0c5ce;">lib{quvi,icu,neon27,usb-1.0-0,asound2,ncurses5,udev,usb,acl1} \
+</span><span style="background-color:#2b303b;color:#c0c5ce;">lib{boost-signals,ldap2,sasl2}-dev
+</span></pre>
+<p>It's installs the development packages that will be needed by the build
+process. The <code>--no-recommends</code> option means I want to limit the
+installation to packages I really need, avoiding the extra stuff deemed
+by the packager to be useful for me.</p>
+<p>My &quot;~/.jhbuilrc&quot; contains the following:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;"># build directory
+</span><span style="background-color:#2b303b;color:#c0c5ce;">checkoutroot = os.path.expanduser(&quot;~/src/gnome&quot;)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#c0c5ce;"># don&#39;t spew lots of distracting status messages
+</span><span style="background-color:#2b303b;color:#c0c5ce;">notrayicon = True
+</span><span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#c0c5ce;"># attempt to build modules even if their dependencies weren&#39;t successfully built
+</span><span style="background-color:#2b303b;color:#c0c5ce;">nopoison = True
+</span><span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#c0c5ce;"># don&#39;t build these since they have issues; this implies that I must install my distro&#39;s development versions
+</span><span style="background-color:#2b303b;color:#c0c5ce;">skip = [&#39;nss&#39;, &#39;nspr&#39;]
+</span><span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#c0c5ce;"># dont fetch moduleset xml files from the web; use ones that are installed locally
+</span><span style="background-color:#2b303b;color:#c0c5ce;">use_local_modulesets = True
+</span><span style="background-color:#2b303b;color:#c0c5ce;">
+</span><span style="background-color:#2b303b;color:#c0c5ce;"># where html-formatted logs are kept
+</span><span style="background-color:#2b303b;color:#c0c5ce;">tinderbox_outputdir = os.path.expanduser(&quot;~/temp/tinderbox&quot;)
+</span></pre>
+<p>See <a href="http://library.gnome.org/devel/jhbuild/unstable/config-reference.html.en">Configuration File Reference</a> for a detailed explanation
+of these options.</p>
+<p>After this, I run <code>jhbuild bootstrap --ignore-system</code>. This downloads,
+builds, and installs the basic tools for building packages (here's <a href="http://git.gnome.org/browse/jhbuild/tree/modulesets/bootstrap.modules">the
+xml file</a> it uses to determine what these tools are, and where it
+downloads them from). To avoid issues with some incompatibility with my
+OS, I use <code>--ignore-system</code>, which ensures that the bootstrap command
+will use the blessed versions of these tools.</p>
+<p>When the bootstrap process is complete, I run the not-so-descriptive
+command <code>jhbuild tinderbox</code> (See Command Reference for a detailed
+explanation of this and the other options). This is the same as build,
+except that the output is stored in html files, in a directory specified
+by <strong>tinderbox_outputdir</strong> in the config file.</p>
+<p>Ideally, some hours later, the process should be complete. Reaching for
+&quot;~/temp/tinderbox&quot; will present you with a whole bunch of html files,
+one for each module. The file &quot;index.html&quot; will give a decent page
+that acts like a summary of the entire build process, showing which
+modules failed, and on what build stages. Gorgeous!</p>
+<p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<p><strong>sidenotes</strong>:</p>
+<ul>
+<li>This process is rather simplified, for the sake of clarity.</li>
+<li>I run Debian 6, codenamed Squeeze.</li>
+<li>There is <a href="http://www.vuntz.net/journal/post/2010/09/23/My-love-for-jhbuild">a more thorough tutorial</a> elsewhere.</li>
+</ul>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

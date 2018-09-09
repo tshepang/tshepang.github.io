@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">dangerous inconsistency in symlink removal</h1>
+  <span class="post-date">2011-01-28</span>
+  <p>Here's how to make a symlink and to delete it:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">mkdir dir
+</span><span style="background-color:#2b303b;color:#c0c5ce;">ln -s dir dirlink
+</span><span style="background-color:#2b303b;color:#c0c5ce;">rm -r dirlink
+</span></pre>
+<p>Here's another way to delete it:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">rm -r dirlink/
+</span></pre>
+<p>Although it will do the job, it will actually complain with:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">rm: cannot remove `dirlink&#39;: Not a directory
+</span></pre>
+<p>Note that we could have achieved the deletion with just:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">rm dirlink
+</span></pre>
+<p>This is because the symlink is just a single file. So there's no need
+to treat it like a directory when deleting.</p>
+<p>Sadly, this behaviour is inconsistent when there is a mounted voulem.
+The first way of deletion has no problem, but the second one will wipe
+out the entire drive, if it so happens that <code>dir</code> is the mount directory
+(i.e. <code>ln -s /media/my_drive dirlink &amp;&amp; rm -r dirlink/</code>). I learned this
+the hard way :(</p>
+<p>[<strong>sidenote</strong>] Here's <a href="http://unix.stackexchange.com/q/6618/688">some explanation</a>.</p>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

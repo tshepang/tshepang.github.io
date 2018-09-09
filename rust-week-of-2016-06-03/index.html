@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">Rust week of 2016-06-03</h1>
+  <span class="post-date">2016-06-09</span>
+  <p>I did more Rust coding than most weeks this time around, busy with the
+project <a href="http://tshepang.net/rust-week-of-2016-05-27">I mentioned last week</a>. My favorite parts:</p>
+<ul>
+<li>
+<p>I love the fact that <a href="https://github.com/hannobraun/inotify-rs">inotify-rs</a> (<a href="http://tshepang.net/rust-week-of-2015-07-31">first mention</a>) collects events
+in the background, so that when you are done with whatever task you
+were busy with, you can check if there is anything new to act upon
+(e.g. a new file was created in a watched directory). This allows
+one to do away with using threads, reducing code complexity.</p>
+</li>
+<li>
+<p>Rust error handling is so nice, and forces one to think better about
+code. As an example, when you doing any I/O, you mostly want to do
+that in a separate function so that you can return a <code>Result</code> type,
+something like <code>Result&lt;(), std::io::Error&gt;</code>. This forces you to
+isolate just the I/O handling part from the other parts of the
+logic, where you'd for maybe just want to return a <code>bool</code> type. In
+my case, I would not get any I/O error, but I would get failure from
+running an external process (see <code>std::process</code> module) where the
+exit status was not 0. That meant I/O error failure case and the
+process error case had to be handled in separate places.</p>
+</li>
+<li>
+<p>In the example I gave above, <code>Result&lt;(), std::io::Error&gt;</code>, this
+means that we don't care about the success return value. On the
+calling side, we have an option to use a <code>match</code> statement to handle
+the result:</p>
+<p>::: {.sourcecode}
+rust</p>
+<p>match foo() {</p>
+<p>:   Ok(_) =&gt; (), Err(error) =&gt; do_something_with(error)</p>
+<p>}
+:::</p>
+<p>There is a convenient syntax to deal with such case, where you
+don't care about one of values... <code>if let</code>:</p>
+<p>::: {.sourcecode}
+rust</p>
+<p>if let Err(error) = foo() {</p>
+<p>:   do_something_with(error)</p>
+<p>}
+:::</p>
+<p>So elegant!</p>
+</li>
+</ul>
+<p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<p>I submitted <a href="https://github.com/rust-lang/rust/pull/34185">just one contribution</a> this time around.</p>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

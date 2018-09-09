@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">project of note: Sphinx</h1>
+  <span class="post-date">2013-08-08</span>
+  <p><a href="http://sphinx-doc.org">Sphinx</a> is a tool that is used to generate documentation from
+<a href="http://en.wikipedia.org/wiki/ReStructuredText">reStructuredText</a> (rST) markup language, and is mainly used in the
+Python ecosystem. I honor it much for it is a really powerful system,
+and I have come to appreciate it a lot recently, with my work on
+documentation of software that falls under the Pylons project.</p>
+<p>It is a pity that the markup is not as simple as that of the more
+popular <a href="http://en.wikipedia.org/wiki/Markdown">Markdown</a>, but maybe that was out of necessity, since it is far
+more advanced: it was initially built as a replacement for the tools
+that build CPython documentation, which is quite extensive and needs
+lots of rails.</p>
+<p>As an example of that power, have a look at <a href="https://github.com/Pylons/pyramid_tutorials/commit/134190">these changes I made</a> for
+<a href="http://docs.pylonsproject.org/projects/pyramid_tutorials/en/latest/">pyramid_tutorials</a>. In that commit, the feature I used allows you to
+include code snippets directly from files, instead of doing the
+copy-paste dance, avoiding duplication and rot. This feature is known as
+<a href="http://sphinx-doc.org/markup/code.html#directive-literalinclude">literalinclude</a>.</p>
+<p>Another feature I recently worked with in the recent past is
+<a href="http://sphinx-doc.org/ext/intersphinx.html#confval-intersphinx_mapping">intersphinx_mapping</a>. It allows one to generate references in rST as
+if those reference were local. For example, if you wanted to generate a
+link to the CPython <code>open()</code> built-in function, you would need only
+specify it as <code>:func:open</code>. This is as opposed to finding the actual
+link and specifying it normally.</p>
+<p>One other feature I discovered (but haven't used yet) is <a href="http://sphinx-doc.org/domains.html#info-field-lists">Info field
+lists</a> feature. To see it in action, visit <a href="https://postgres-py.readthedocs.org/en/latest/#postgres.Postgres.run">this link</a>, and then look at
+<a href="https://postgres-py.readthedocs.org/en/latest/_modules/postgres.html#Postgres.run">its markup</a>. It's gorgeous!</p>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

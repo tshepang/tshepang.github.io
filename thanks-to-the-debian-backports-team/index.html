@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">thanks to the Debian backports team</h1>
+  <span class="post-date">2011-07-14</span>
+  <p>So I got this new HP laptop, Probook 4530s, and installed Debian 6
+(Squeeze) on it. I was left sitting with two unbearable problems:</p>
+<ul>
+<li>The touchpad wasn't fully operational (GNOME Mouse Preferences
+didn't have a Touchpad tab where I could change the settings).</li>
+<li>The video driver seemed to have a problem according to the output of
+<strong>xvinfo</strong> (<code>no adaptors present</code>).</li>
+</ul>
+<p>I curiously looked at <a href="http://backports.debian.org/">the backports</a>, and found Linux kernel 2.6.38
+(Squeeze has 2.6.32). I didn't expect much from it, but installed it
+anyway (I heard that it has improved desktop responsiveness). I was
+pleasantly surprised to find that it fixed the above two problems.
+Loveliness.</p>
+<p>On another note, I found that Mercurial 1.8 also has a backport. This is
+great news because I have repositories I created with that version and
+the format is incompatible with Squeeze's 1.6.</p>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

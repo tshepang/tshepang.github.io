@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">cat, Python, and Perl</h1>
+  <span class="post-date">2011-03-15</span>
+  <p>I came across <a href="http://greenteapress.com/perl/perl.pdf">a tutorial</a> that showes how to implement a simple cat in
+Perl. I've modified their example for the sake of simplicity:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">sub cat {
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">foreach my $filename (@_) {
+</span><span style="background-color:#2b303b;color:#c0c5ce;">        </span><span style="background-color:#2b303b;color:#c0c5ce;">open FILE, $filename;
+</span><span style="background-color:#2b303b;color:#c0c5ce;">        </span><span style="background-color:#2b303b;color:#c0c5ce;">while (my $line = &lt;FILE&gt;) {
+</span><span style="background-color:#2b303b;color:#c0c5ce;">            </span><span style="background-color:#2b303b;color:#c0c5ce;">print $line;
+</span><span style="background-color:#2b303b;color:#c0c5ce;">        </span><span style="background-color:#2b303b;color:#c0c5ce;">}
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">}
+</span><span style="background-color:#2b303b;color:#c0c5ce;">}
+</span><span style="background-color:#2b303b;color:#c0c5ce;">cat @ARGV;
+</span></pre>
+<p>Running this script (e.g. <code>perl cat.pl file</code>) will display those files
+as if you ran <code>cat file</code>.</p>
+<p>I decided to see how the Python example would look like:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">import sys
+</span><span style="background-color:#2b303b;color:#c0c5ce;">def cat(files):
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">for filename in files:
+</span><span style="background-color:#2b303b;color:#c0c5ce;">        </span><span style="background-color:#2b303b;color:#c0c5ce;">with open(filename) as FILE:
+</span><span style="background-color:#2b303b;color:#c0c5ce;">            </span><span style="background-color:#2b303b;color:#c0c5ce;">for line in FILE:
+</span><span style="background-color:#2b303b;color:#c0c5ce;">                </span><span style="background-color:#2b303b;color:#c0c5ce;">print(line, end=&quot;&quot;)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">cat(sys.argv[1:])
+</span></pre>
+<p>Running this script (e.g. <code>python3 cat.py file1 file2</code>) will give
+exactly the same result as above.</p>
+<h1 id="notes">notes</h1>
+<ul>
+<li>The Perl keyword, <code>my</code>, indicates that the variabe it refers to is
+local. Without that, it's taken to be global. As for Python, this
+is implicit, and depends on where the variable is placed (scope).</li>
+<li>Perl has special ways of identifying data types. In our example, <code>$</code>
+is used to identify a variable that has a single value, and is known
+as a scalar in Perl talk. This can be tedious of course (so much
+typing!). In Python, the data fed into the variable is the only
+thing that determines what type of the variable it is. I see this as
+noise from Perl. It results in some badness, as in you can have two
+variables names be the same, but given different types (e.g.
+<code>my $var; my @var;</code>)</li>
+<li>The upper case file handler, <code>FILE</code>, is a matter of convention for
+Perl, and can be named 'anything'. I used it in the Python sample
+only for the sake of clarity.</li>
+<li>The <code>&lt;&gt;</code> operator is special syntax that means a file is being
+manipulated. Python has no such.</li>
+<li>The <code>@_</code> is an argument list (<code>@ARGV</code>) from the function call,
+<code>cat</code>. This is one other thing that is implicit about Perl, where
+you have to learn extra syntax (and concepts), where a simple
+argument list should have been provided during the function
+declaration, as in Python's <code>cat(files)</code>.</li>
+<li>Note that I didn't need to import anything to get Perl to work with
+command line arguments. With Python, I need to explicitly do so, and
+that's via the <a href="http://docs.python.org/3/library/sys">sys module</a>, which is part of its standard library.</li>
+<li>The Python <code>with</code> statement is meant to make our lives easier, but
+also adds syntax to the language. What it does is close a file for
+us so we don't have to do it.</li>
+<li>The Python <code>print()</code> function adds a newline by default, and that
+would results in ugly output from our code, that's why we used the
+<code>end=&quot;&quot;</code>.</li>
+<li>The <code>[1:]</code> from the last statement in the Python example means that
+we are slicing the list, removing the first element (element 0), and
+keeping everything else. We do this because the current running
+script is considered by Python as element 0, while in Perl, the 1st
+element is actually the first thing that appears on the command line
+after the script name. One would say that Perl does this more
+elegantly.</li>
+</ul>
+<h1 id="further-reading">further reading</h1>
+<ul>
+<li><a href="http://docs.python.org/reference/executionmodel">Python scope</a></li>
+<li><a href="http://docs.python.org/3/library/functions#print">Python print function</a></li>
+<li><a href="http://docs.python.org/3/reference/compound_stmts#the-with-statement">Python with statement</a></li>
+</ul>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

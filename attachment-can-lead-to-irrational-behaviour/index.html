@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">attachment can lead to irrational behaviour</h1>
+  <span class="post-date">2012-02-01</span>
+  <p>In <a href="http://tshepang.net/me-got-meself-a-coding-job">my previous job</a>, we used to use some Java framework, <a href="http://www.mulesoft.org/">Mule ESB</a>,
+for our clients. The project is distributed with a lot of jar files,
+supposedly for the convenience of users. When we work on a project, we
+just add all those jars to the classpath (we use Eclipse, an excessively
+powerful and ugly IDE). Now, me being a sucker for the Debian way of
+doing things, I'd install packages providing all those jars from a
+Debian repository, then remove those Mule-distributed files, then add
+symlinks in place of them pointing back to the actualy files. Imagine
+how much time it took! Either that, or even easier (but still
+time-consuming), skip the symlink thing entirely and just add those jars
+(found in <strong>/usr/share/java</strong> directory) directly.</p>
+<p>Beyond just wasting time, the are other potential problems with my
+approach:</p>
+<ul>
+<li>Debian's jar versions did tend to be different to Mule-supplied
+versions. You can imagine what problems this can cause, especially
+because the versions included there are most likely the ones used
+for testing Mule.</li>
+<li>Even if the versions were the same, what if there are slight changes
+from Debian's side. Debian's strict <a href="http://www.debian.org/social_contract#guidelines">software guidelines</a> implies
+that they'll strip out some stuff that doesn't adhere. The good
+thing is that Debian appends <code>dfsg</code> to the version number, but <a href="http://askubuntu.com/q/11592/2591">not
+everybody knows that</a>. And even if they did, they would then need to
+spend time checking exactly what changed.</li>
+<li>Debian doesn't merely re-distribute the jar files. They actually
+rebuild them, with Debian-supplied compilers. Maybe this isn't an
+issue for Java projects, but who knows.</li>
+</ul>
+<p>This is not to knock the Debian way of doing things. It's actually
+quite excellent (hence my love), but it can't fit all scenarios. See
+Matt Zimmerman's <a href="http://mdzlog.alcor.net/2010/07/06/weve-packaged-all-of-the-free-software-what-now/">excellent post</a>, where he touches on this issue.</p>
+<p>I did wise up a bit by simply doing things the way the makers of Mule
+intended.</p>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

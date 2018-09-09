@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">Rust week of 2015-05-15</h1>
+  <span class="post-date">2015-05-23</span>
+  <p>This is the first of what I intend to be a weekly series of posts
+related to my favorite programming language. I here take Rust weeks to
+begin each Friday, since Stable releases of the Rust distribution
+(language and included libraries) are to be released on that week day.
+This is also a great excuse to write more regularly.</p>
+<p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<ul>
+<li>
+<p>I read a high quality post titled <a href="http://chrismorgan.info/blog/rust-ownership-the-hard-way.html">Rust ownership, the hard way</a>. I
+learned quite a bit going through it, like the meaning of
+<code>#[derive(Clone, Copy)]</code>, which I see a lot but never knew what it
+meant. I also learned that there are 7 ways to introduce a variable
+binding (taking <code>foo</code> as the name of that binding):</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">let foo ...
+</span><span style="background-color:#2b303b;color:#c0c5ce;">for foo in ... (for loop)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">foo =&gt; ... (match block)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">if let foo = ... (if block)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">while let foo = ... (while loop)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">fn func(foo: ... (function argument)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">| foo | ... (closure argument)
+</span></pre></li>
+<li>
+<p>I <a href="https://github.com/rust-lang/rust/pull/25629">submitted</a> <a href="https://github.com/rust-lang/rust/pull/25656">some</a> <a href="https://github.com/rust-lang/rust/pull/25659">documentation</a> <a href="https://github.com/rust-lang/rust/pull/25666">improvements</a>. The
+latter one was especially time-consuming, but it helped me explore
+the <code>std::path</code> module. It even led me to bump onto <a href="https://github.com/rust-lang/rust/issues/25673">a rustdoc bug</a>.</p>
+</li>
+</ul>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

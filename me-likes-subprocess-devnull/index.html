@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">me likes subprocess.DEVNULL</h1>
+  <span class="post-date">2013-04-11</span>
+  <p>If you want to run an external process from within Python, and are not
+interested in any errors that process may emit, there are a few ways you
+can go about it. I will demonstrate this by opening a Python shell in a
+directory that isn't version-controlled by <a href="http://mercurial.selenic.com">Mercurial</a>:</p>
+<ol>
+<li>
+<p>So, we don't want to see this ugliness:</p>
+<p>&gt;&gt;&gt; from subprocess import call &gt;&gt;&gt; call('hg
+status'.split()) abort: no repository found in
+'/home/tshepang/projects/pyramid' (.hg not found)! 255</p>
+</li>
+<li>
+<p>So, here's the simplest solution:</p>
+<p>&gt;&gt;&gt; import os &gt;&gt;&gt; from subprocess import call &gt;&gt;&gt; call('hg
+status'.split(), stderr=open(os.devnull)) 255</p>
+<p>Problem: it leaves the file descriptor open... not good.</p>
+</li>
+<li>
+<p>We fix:</p>
+<p>&gt;&gt;&gt; import os &gt;&gt;&gt; from subprocess import call &gt;&gt;&gt; DEVNULL =
+open(os.devnull) &gt;&gt;&gt; call('hg status'.split(), stderr=DEVNULL)
+255 &gt;&gt;&gt; DEVNULL.close()</p>
+<p>Much better, much uglier. (<a href="https://bitbucket.org/tshepang/scripts/src/tip/vcs.py">example usage</a>)</p>
+</li>
+<li>
+<p>Something better:</p>
+<p>&gt;&gt;&gt; import os &gt;&gt;&gt; from subprocess import call &gt;&gt;&gt; with
+open(os.devnull) as DEVNULL: ... call('hg status'.split(),
+stderr=DEVNULL) 255</p>
+<p>Looks much nicer, and is more convenient, unless we wanted to do
+something similar multiple times, in which case the previous example
+would be preferable.</p>
+</li>
+<li>
+<p>Best solution:</p>
+<p>&gt;&gt;&gt; import os &gt;&gt;&gt; from subprocess import call, DEVNULL &gt;&gt;&gt;
+call('hg status'.split(), stderr=DEVNULL) 255</p>
+</li>
+</ol>
+<p>This <a href="http://hg.python.org/cpython/rev/eaf93e156dff">small and wonderful feature</a> is <a href="http://docs.python.org/3/whatsnew/3.3.html#subprocess">new as of Python 3.3</a>.</p>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

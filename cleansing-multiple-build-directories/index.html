@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;poole.css">
+      <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="http:&#x2F;&#x2F;tshepang.net"><h1>Tshepang logs</h1></a>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev">twitter</a></li>
+                        
+                        <li><a href="https:&#x2F;&#x2F;github.com&#x2F;tshepang">github</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">cleansing multiple build directories</h1>
+  <span class="post-date">2011-03-26</span>
+  <p>In my adventures of <a href="http://tshepang.net/my-jhbuild-setup">building GNOME with JHBuild</a>, it often happens that
+when I tweak something that affects the build environment (e.g. use
+system Python instead of JHBuild-built one), I get a heck of a lot of
+build failures. This will happen even after I run jhbuild clean (which
+runs <code>make clean</code> on the modules), testimony to the weakness ofthe GNOME
+build infrastructure (autotools, ...). This means that I need to run
+<code>make distclean</code> or better still (where applicable) <code>git clean -dfx</code>.
+Note that I sometimes even have to uninstall one or two modules (on
+JHBuild path) to get a build failure fixe
+(<code>jhbuild uninstall modulename</code>). This is laborious work, so I sometimes
+just wipe out the entire installation.</p>
+<p>Note that there's dozens of modules to build, so I wrote this little
+script to take care of it:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">import os
+</span><span style="background-color:#2b303b;color:#c0c5ce;">import subprocess
+</span><span style="background-color:#2b303b;color:#c0c5ce;">top_level = os.path.expanduser(&quot;~/src/gnome&quot;)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">for filename in os.listdir(top_level):
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">full_path = &quot;{}/{}&quot;.format(top_level, filename)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">if os.path.isdir(full_path):
+</span><span style="background-color:#2b303b;color:#c0c5ce;">        </span><span style="background-color:#2b303b;color:#c0c5ce;">cmd = &quot;cd ~/src/gnome/{} &amp;&amp; git clean -dfx&quot;.format(filename)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">        </span><span style="background-color:#2b303b;color:#c0c5ce;">if subprocess.call(cmd, shell=True) != 0:
+</span><span style="background-color:#2b303b;color:#c0c5ce;">            </span><span style="background-color:#2b303b;color:#c0c5ce;">cmd = &quot;cd ~/src/gnome/{} &amp;&amp; make distclean&quot;.format(filename)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">            </span><span style="background-color:#2b303b;color:#c0c5ce;">if subprocess.call(cmd, shell=True) != 0:
+</span><span style="background-color:#2b303b;color:#c0c5ce;">                </span><span style="background-color:#2b303b;color:#c0c5ce;">cmd = &quot;cd ~/src/gnome/{} &amp;&amp; make clean&quot;.format(filename)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">                </span><span style="background-color:#2b303b;color:#c0c5ce;">subprocess.call(cmd, shell=True)
+</span></pre><h1 id="update">update</h1>
+<p>Someone very kind guy made <a href="http://codereview.stackexchange.com/questions/1476/cleansing-multiple-build-directories/1477#1477">a bunch of suggestions</a>, making my code much
+better:</p>
+<pre style="background-color:#2b303b">
+<span style="background-color:#2b303b;color:#c0c5ce;">import os
+</span><span style="background-color:#2b303b;color:#c0c5ce;">import subprocess
+</span><span style="background-color:#2b303b;color:#c0c5ce;">top_level = os.path.expanduser(&quot;~/src/gnome&quot;)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">for filename in os.listdir(top_level):
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">full_path = os.path.join(top_level, filename)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">if os.path.isdir(full_path):
+</span><span style="background-color:#2b303b;color:#c0c5ce;">        </span><span style="background-color:#2b303b;color:#c0c5ce;">os.chdir(full_path)
+</span><span style="background-color:#2b303b;color:#c0c5ce;">        </span><span style="background-color:#2b303b;color:#c0c5ce;">if subprocess.call(&quot;git clean -dfx&quot;.split()) != 0:
+</span><span style="background-color:#2b303b;color:#c0c5ce;">            </span><span style="background-color:#2b303b;color:#c0c5ce;">if subprocess.call(&quot;make distclean&quot;.split()) != 0:
+</span><span style="background-color:#2b303b;color:#c0c5ce;">                </span><span style="background-color:#2b303b;color:#c0c5ce;">subprocess.call(&quot;make clean&quot;.split())
+</span></pre><h1 id="further-reading">further reading</h1>
+<p>modules: <a href="http://docs.python.org//library/os">os</a>, <a href="http://docs.python.org//library/os.path">os.path</a>, <a href="http://docs.python.org//library/subprocess">subprocess</a></p>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>
