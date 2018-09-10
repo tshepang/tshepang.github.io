@@ -60,24 +60,24 @@ ease the pain my creating <a href="https://bitbucket.org/tshepang/scripts/src/ti
 on, and displays the relevant command.</p>
 <p>Some examples of usage:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">$ cd &lt;hg repo&gt;
-</span><span style="background-color:#2b303b;color:#c0c5ce;">$ ./vcs.py --log
-</span><span style="background-color:#2b303b;color:#c0c5ce;">hg log --no-merges --patch --stat --verbose
-</span><span style="background-color:#2b303b;color:#c0c5ce;">$ cd &lt;git repo&gt;
-</span><span style="background-color:#2b303b;color:#c0c5ce;">$ ./vcs.py --log
-</span><span style="background-color:#2b303b;color:#c0c5ce;">git log --no-merges --patch --stat
+<span style="color:#c0c5ce;">$ cd &lt;hg repo&gt;
+</span><span style="color:#c0c5ce;">$ ./vcs.py --log
+</span><span style="color:#c0c5ce;">hg log --no-merges --patch --stat --verbose
+</span><span style="color:#c0c5ce;">$ cd &lt;git repo&gt;
+</span><span style="color:#c0c5ce;">$ ./vcs.py --log
+</span><span style="color:#c0c5ce;">git log --no-merges --patch --stat
 </span></pre>
 <p>Here are the relevant BASH aliases:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">alias vb=&#39;$(~/scripts/vcs.py --branch)&#39;
-</span><span style="background-color:#2b303b;color:#c0c5ce;">alias vd=&#39;$(~/scripts/vcs.py --diff)&#39;
-</span><span style="background-color:#2b303b;color:#c0c5ce;">alias vl=&#39;$(~/scripts/vcs.py --log)&#39;
-</span><span style="background-color:#2b303b;color:#c0c5ce;">alias vp=&#39;$(~/scripts/vcs.py --push)&#39;
-</span><span style="background-color:#2b303b;color:#c0c5ce;">alias vs=&#39;$(~/scripts/vcs.py --status)&#39;
-</span><span style="background-color:#2b303b;color:#c0c5ce;">alias vu=&#39;$(~/scripts/vcs.py --pull)&#39;
-</span><span style="background-color:#2b303b;color:#c0c5ce;">alias vc=&#39;$(~/scripts/vcs.py --commit)&#39;
-</span><span style="background-color:#2b303b;color:#c0c5ce;">alias vo=&#39;$(~/scripts/vcs.py --checkout)&#39;
-</span><span style="background-color:#2b303b;color:#c0c5ce;">alias vr=&#39;$(~/scripts/vcs.py --revert)&#39;
+<span style="color:#c0c5ce;">alias vb=&#39;$(~/scripts/vcs.py --branch)&#39;
+</span><span style="color:#c0c5ce;">alias vd=&#39;$(~/scripts/vcs.py --diff)&#39;
+</span><span style="color:#c0c5ce;">alias vl=&#39;$(~/scripts/vcs.py --log)&#39;
+</span><span style="color:#c0c5ce;">alias vp=&#39;$(~/scripts/vcs.py --push)&#39;
+</span><span style="color:#c0c5ce;">alias vs=&#39;$(~/scripts/vcs.py --status)&#39;
+</span><span style="color:#c0c5ce;">alias vu=&#39;$(~/scripts/vcs.py --pull)&#39;
+</span><span style="color:#c0c5ce;">alias vc=&#39;$(~/scripts/vcs.py --commit)&#39;
+</span><span style="color:#c0c5ce;">alias vo=&#39;$(~/scripts/vcs.py --checkout)&#39;
+</span><span style="color:#c0c5ce;">alias vr=&#39;$(~/scripts/vcs.py --revert)&#39;
 </span></pre>
 <p>This makes my life so much easier, since I no longer have to care which
 VCS I'm on, at least for the most common of commands. I am pleased with
@@ -87,7 +87,7 @@ self.</p>
 term) or Commits (Git term), use the following search term on your pager
 (tested with <a href="http://www.greenwoodsoftware.com/less">less</a>, which is Debian/Ubuntu default pager):</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">(^changeset)|(^commit)
+<span style="color:#c0c5ce;">(^changeset)|(^commit)
 </span></pre>
 </div>
 

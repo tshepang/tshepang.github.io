@@ -59,13 +59,13 @@ rust</p>
 <p>fn o_to_0() -&gt; std::io::Result&lt;bool&gt; {</p>
 <p>:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">let mut p = std::process::Command::new(\&quot;tr\&quot;)
-</span><span style="background-color:#2b303b;color:#c0c5ce;">
-</span><span style="background-color:#2b303b;color:#c0c5ce;">:   .arg(\&quot;o\&quot;) .arg(\&quot;0\&quot;) .stdin(std::process::Stdio::piped())
-</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">.spawn()?;
-</span><span style="background-color:#2b303b;color:#c0c5ce;">
-</span><span style="background-color:#2b303b;color:#c0c5ce;">let input = \&quot;foo\&quot;; if let Some(stdin) = p.stdin.as\_mut() {
-</span><span style="background-color:#2b303b;color:#c0c5ce;">stdin.write\_all(input.as\_bytes())?; } Ok(p.wait()?.success())
+<span style="color:#c0c5ce;">let mut p = std::process::Command::new(\&quot;tr\&quot;)
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;">:   .arg(\&quot;o\&quot;) .arg(\&quot;0\&quot;) .stdin(std::process::Stdio::piped())
+</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">.spawn()?;
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;">let input = \&quot;foo\&quot;; if let Some(stdin) = p.stdin.as\_mut() {
+</span><span style="color:#c0c5ce;">stdin.write\_all(input.as\_bytes())?; } Ok(p.wait()?.success())
 </span></pre>
 <p>}
 :::</p>

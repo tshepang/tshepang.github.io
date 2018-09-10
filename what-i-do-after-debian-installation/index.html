@@ -77,22 +77,22 @@ icpython &amp;&amp; ipurge</p>
 :::</p>
 <p>Contents of Debian repository list file:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">$ cat /etc/apt/sources.list
-</span><span style="background-color:#2b303b;color:#c0c5ce;">deb file:/home/wena/.custom_repo tshepang main
-</span><span style="background-color:#2b303b;color:#c0c5ce;">deb http://debian.mirror.ac.za/debian wheezy main contrib non-free
+<span style="color:#c0c5ce;">$ cat /etc/apt/sources.list
+</span><span style="color:#c0c5ce;">deb file:/home/wena/.custom_repo tshepang main
+</span><span style="color:#c0c5ce;">deb http://debian.mirror.ac.za/debian wheezy main contrib non-free
 </span></pre>
 <p>The <code>tshepang</code> codename refers to my custom repository, the one managed
 by <a href="http://tshepang.net/project-of-note-reprepro">reprepro</a>.</p>
 <p>Contents of <strong>sudo</strong> setup file:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">$ sudo cat /etc/sudoers
-</span><span style="background-color:#2b303b;color:#c0c5ce;">Defaults env_reset
-</span><span style="background-color:#2b303b;color:#c0c5ce;">Defaults mail_badpass
-</span><span style="background-color:#2b303b;color:#c0c5ce;">Defaults secure_path=&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;
-</span><span style="background-color:#2b303b;color:#c0c5ce;">root     ALL=(ALL) ALL
-</span><span style="background-color:#2b303b;color:#c0c5ce;">%sudo    ALL=(ALL) ALL
-</span><span style="background-color:#2b303b;color:#c0c5ce;">Defaults !tty_tickets
-</span><span style="background-color:#2b303b;color:#c0c5ce;">Defaults timestamp_timeout=100
+<span style="color:#c0c5ce;">$ sudo cat /etc/sudoers
+</span><span style="color:#c0c5ce;">Defaults env_reset
+</span><span style="color:#c0c5ce;">Defaults mail_badpass
+</span><span style="color:#c0c5ce;">Defaults secure_path=&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;
+</span><span style="color:#c0c5ce;">root     ALL=(ALL) ALL
+</span><span style="color:#c0c5ce;">%sudo    ALL=(ALL) ALL
+</span><span style="color:#c0c5ce;">Defaults !tty_tickets
+</span><span style="color:#c0c5ce;">Defaults timestamp_timeout=100
 </span></pre>
 <p>The one change from default <strong>sudo</strong> setup is so that each bash session
 can inherit sudo powers from another. It's one case where I trade

@@ -60,59 +60,59 @@ comparable. I also added the <a href="https://www.digitalocean.com/?refcode=25b4
 <p>Each machine runs Debian testing (codename &quot;jessie&quot;). Following is the
 output of these commands for each machine:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">uname --all
-</span><span style="background-color:#2b303b;color:#c0c5ce;">cat /proc/cpuinfo | sed --quiet &#39;5p&#39;
+<span style="color:#c0c5ce;">uname --all
+</span><span style="color:#c0c5ce;">cat /proc/cpuinfo | sed --quiet &#39;5p&#39;
 </span></pre>
 <p>Home machine:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">Linux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU/Linux
-</span><span style="background-color:#2b303b;color:#c0c5ce;">model name      : Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz
+<span style="color:#c0c5ce;">Linux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU/Linux
+</span><span style="color:#c0c5ce;">model name      : Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz
 </span></pre>
 <p>Work machine:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">Linux twork 3.10-3-amd64 #1 SMP Debian 3.10.11-1 (2013-09-10) x86_64 GNU/Linux
-</span><span style="background-color:#2b303b;color:#c0c5ce;">model name      : AMD Phenom(tm) II X4 970 Processor
+<span style="color:#c0c5ce;">Linux twork 3.10-3-amd64 #1 SMP Debian 3.10.11-1 (2013-09-10) x86_64 GNU/Linux
+</span><span style="color:#c0c5ce;">model name      : AMD Phenom(tm) II X4 970 Processor
 </span></pre>
 <p>DigitalOcean VPS:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">Linux tcloud 3.11-1-amd64 #1 SMP Debian 3.11.5-1 (2013-10-17) x86_64 GNU/Linux
-</span><span style="background-color:#2b303b;color:#c0c5ce;">model name      : QEMU Virtual CPU version 1.0
+<span style="color:#c0c5ce;">Linux tcloud 3.11-1-amd64 #1 SMP Debian 3.11.5-1 (2013-10-17) x86_64 GNU/Linux
+</span><span style="color:#c0c5ce;">model name      : QEMU Virtual CPU version 1.0
 </span></pre><h1 id="cpython-benchmarks">CPython benchmarks</h1>
 <p>I ran two benchmarks, both from the latest VCS version of CPython,
 development branch:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">$ hg identify --id --branch
-</span><span style="background-color:#2b303b;color:#c0c5ce;">b6a1a78818fe default
+<span style="color:#c0c5ce;">$ hg identify --id --branch
+</span><span style="color:#c0c5ce;">b6a1a78818fe default
 </span></pre>
 <p>Build
 +++--</p>
 <p>Here's the command I used:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">make distclean; time (./configure &amp;&amp; make --silent --jobs=4)
+<span style="color:#c0c5ce;">make distclean; time (./configure &amp;&amp; make --silent --jobs=4)
 </span></pre><h3 id="results">Results</h3>
 <p>Home machine:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">real    2m11.687s
-</span><span style="background-color:#2b303b;color:#c0c5ce;">user    3m18.104s
-</span><span style="background-color:#2b303b;color:#c0c5ce;">sys     0m9.964s
+<span style="color:#c0c5ce;">real    2m11.687s
+</span><span style="color:#c0c5ce;">user    3m18.104s
+</span><span style="color:#c0c5ce;">sys     0m9.964s
 </span></pre>
 <p>Work machine:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">real    2m2.707s
-</span><span style="background-color:#2b303b;color:#c0c5ce;">user    2m24.200s
-</span><span style="background-color:#2b303b;color:#c0c5ce;">sys     0m12.280s
+<span style="color:#c0c5ce;">real    2m2.707s
+</span><span style="color:#c0c5ce;">user    2m24.200s
+</span><span style="color:#c0c5ce;">sys     0m12.280s
 </span></pre>
 <p>VPS:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">real    2m30.931s
-</span><span style="background-color:#2b303b;color:#c0c5ce;">user    3m7.272s
-</span><span style="background-color:#2b303b;color:#c0c5ce;">sys     0m16.592s
+<span style="color:#c0c5ce;">real    2m30.931s
+</span><span style="color:#c0c5ce;">user    3m7.272s
+</span><span style="color:#c0c5ce;">sys     0m16.592s
 </span></pre>
 <p>Test suite
 +++++++++-</p>
 <p>Here's the command I used:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">time ./python -m test --multiprocess=0
+<span style="color:#c0c5ce;">time ./python -m test --multiprocess=0
 </span></pre>
 <p><strong>--multiprocess=0</strong> means that there will be 6 tests run in parallel;
 that is the number logical cores (4 in my case) + 2 (to avoid waiting
@@ -120,55 +120,55 @@ too long for tests which are largely idle)</p>
 <h3 id="results-1">Results</h3>
 <p>Home machine:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">real    3m42.571s
-</span><span style="background-color:#2b303b;color:#c0c5ce;">user    7m13.124s
-</span><span style="background-color:#2b303b;color:#c0c5ce;">sys     0m33.320s
+<span style="color:#c0c5ce;">real    3m42.571s
+</span><span style="color:#c0c5ce;">user    7m13.124s
+</span><span style="color:#c0c5ce;">sys     0m33.320s
 </span></pre>
 <p>Work machine:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">real    2m29.957s
-</span><span style="background-color:#2b303b;color:#c0c5ce;">user    4m9.052s
-</span><span style="background-color:#2b303b;color:#c0c5ce;">sys     0m27.364s
+<span style="color:#c0c5ce;">real    2m29.957s
+</span><span style="color:#c0c5ce;">user    4m9.052s
+</span><span style="color:#c0c5ce;">sys     0m27.364s
 </span></pre>
 <p>VPS:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">real    2m19.174s
-</span><span style="background-color:#2b303b;color:#c0c5ce;">user    5m5.444s
-</span><span style="background-color:#2b303b;color:#c0c5ce;">sys     0m40.008s
+<span style="color:#c0c5ce;">real    2m19.174s
+</span><span style="color:#c0c5ce;">user    5m5.444s
+</span><span style="color:#c0c5ce;">sys     0m40.008s
 </span></pre><h1 id="linux-kernel-build">Linux kernel build</h1>
 <p>Just for kicks, I decided to check how long building Linux would take;
 for this, I used latest 'final' release from Linus' git tree:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">$ git log -1
-</span><span style="background-color:#2b303b;color:#c0c5ce;">commit 6e4664525b1db28f8c4e1130957f70a94c19213e
-</span><span style="background-color:#2b303b;color:#c0c5ce;">Author: Linus Torvalds &lt;torvalds@linux-foundation.org&gt;
-</span><span style="background-color:#2b303b;color:#c0c5ce;">Date:   Mon Sep 2 13:46:10 2013 -0700
-</span><span style="background-color:#2b303b;color:#c0c5ce;">
-</span><span style="background-color:#2b303b;color:#c0c5ce;">Linux 3.11
+<span style="color:#c0c5ce;">$ git log -1
+</span><span style="color:#c0c5ce;">commit 6e4664525b1db28f8c4e1130957f70a94c19213e
+</span><span style="color:#c0c5ce;">Author: Linus Torvalds &lt;torvalds@linux-foundation.org&gt;
+</span><span style="color:#c0c5ce;">Date:   Mon Sep 2 13:46:10 2013 -0700
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;">Linux 3.11
 </span></pre>
 <p>Here's the commands I used:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">make distclean &amp;&amp; make defconfig &amp;&amp; time make
+<span style="color:#c0c5ce;">make distclean &amp;&amp; make defconfig &amp;&amp; time make
 </span></pre>
 <p>Results
 ++++++-</p>
 <p>Home machine:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">real    6m11.622s
-</span><span style="background-color:#2b303b;color:#c0c5ce;">user    21m2.664s
-</span><span style="background-color:#2b303b;color:#c0c5ce;">sys     1m15.324s
+<span style="color:#c0c5ce;">real    6m11.622s
+</span><span style="color:#c0c5ce;">user    21m2.664s
+</span><span style="color:#c0c5ce;">sys     1m15.324s
 </span></pre>
 <p>Work machine:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">real    2m40.275s
-</span><span style="background-color:#2b303b;color:#c0c5ce;">user    8m55.624s
-</span><span style="background-color:#2b303b;color:#c0c5ce;">sys     0m42.860s
+<span style="color:#c0c5ce;">real    2m40.275s
+</span><span style="color:#c0c5ce;">user    8m55.624s
+</span><span style="color:#c0c5ce;">sys     0m42.860s
 </span></pre>
 <p>VPS:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">real    3m41.240s
-</span><span style="background-color:#2b303b;color:#c0c5ce;">user    12m21.120s
-</span><span style="background-color:#2b303b;color:#c0c5ce;">sys     1m17.844s
+<span style="color:#c0c5ce;">real    3m41.240s
+</span><span style="color:#c0c5ce;">user    12m21.120s
+</span><span style="color:#c0c5ce;">sys     1m17.844s
 </span></pre><h1 id="conclusion">Conclusion</h1>
 <p>My work machine is faster than the DigitalOcean offering of comparable
 specs, and much faster than my home machine, a laptop.</p>

@@ -58,13 +58,13 @@ quite gentle, and it details how to get the code running on your
 machine.</p>
 <p>If you use Debian (or Ubuntu), you can use run this command:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">wajig --norecommends install build-essential docbook-xsl flex \
-</span><span style="background-color:#2b303b;color:#c0c5ce;">bison cvs gperf cmake  {uuid,ppp}-dev \
-</span><span style="background-color:#2b303b;color:#c0c5ce;">libx{composite,randr,damage,ft2,i,t}-dev \
-</span><span style="background-color:#2b303b;color:#c0c5ce;">libxcb-{event1,aux0,atom1}-dev \
-</span><span style="background-color:#2b303b;color:#c0c5ce;">lib{pam0g,iw,db,gdbm,png12,ffi,tiff,vorbis,gl1-mesa,unistring} \
-</span><span style="background-color:#2b303b;color:#c0c5ce;">lib{quvi,icu,neon27,usb-1.0-0,asound2,ncurses5,udev,usb,acl1} \
-</span><span style="background-color:#2b303b;color:#c0c5ce;">lib{boost-signals,ldap2,sasl2}-dev
+<span style="color:#c0c5ce;">wajig --norecommends install build-essential docbook-xsl flex \
+</span><span style="color:#c0c5ce;">bison cvs gperf cmake  {uuid,ppp}-dev \
+</span><span style="color:#c0c5ce;">libx{composite,randr,damage,ft2,i,t}-dev \
+</span><span style="color:#c0c5ce;">libxcb-{event1,aux0,atom1}-dev \
+</span><span style="color:#c0c5ce;">lib{pam0g,iw,db,gdbm,png12,ffi,tiff,vorbis,gl1-mesa,unistring} \
+</span><span style="color:#c0c5ce;">lib{quvi,icu,neon27,usb-1.0-0,asound2,ncurses5,udev,usb,acl1} \
+</span><span style="color:#c0c5ce;">lib{boost-signals,ldap2,sasl2}-dev
 </span></pre>
 <p>It's installs the development packages that will be needed by the build
 process. The <code>--no-recommends</code> option means I want to limit the
@@ -72,23 +72,23 @@ installation to packages I really need, avoiding the extra stuff deemed
 by the packager to be useful for me.</p>
 <p>My &quot;~/.jhbuilrc&quot; contains the following:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;"># build directory
-</span><span style="background-color:#2b303b;color:#c0c5ce;">checkoutroot = os.path.expanduser(&quot;~/src/gnome&quot;)
-</span><span style="background-color:#2b303b;color:#c0c5ce;">
-</span><span style="background-color:#2b303b;color:#c0c5ce;"># don&#39;t spew lots of distracting status messages
-</span><span style="background-color:#2b303b;color:#c0c5ce;">notrayicon = True
-</span><span style="background-color:#2b303b;color:#c0c5ce;">
-</span><span style="background-color:#2b303b;color:#c0c5ce;"># attempt to build modules even if their dependencies weren&#39;t successfully built
-</span><span style="background-color:#2b303b;color:#c0c5ce;">nopoison = True
-</span><span style="background-color:#2b303b;color:#c0c5ce;">
-</span><span style="background-color:#2b303b;color:#c0c5ce;"># don&#39;t build these since they have issues; this implies that I must install my distro&#39;s development versions
-</span><span style="background-color:#2b303b;color:#c0c5ce;">skip = [&#39;nss&#39;, &#39;nspr&#39;]
-</span><span style="background-color:#2b303b;color:#c0c5ce;">
-</span><span style="background-color:#2b303b;color:#c0c5ce;"># dont fetch moduleset xml files from the web; use ones that are installed locally
-</span><span style="background-color:#2b303b;color:#c0c5ce;">use_local_modulesets = True
-</span><span style="background-color:#2b303b;color:#c0c5ce;">
-</span><span style="background-color:#2b303b;color:#c0c5ce;"># where html-formatted logs are kept
-</span><span style="background-color:#2b303b;color:#c0c5ce;">tinderbox_outputdir = os.path.expanduser(&quot;~/temp/tinderbox&quot;)
+<span style="color:#c0c5ce;"># build directory
+</span><span style="color:#c0c5ce;">checkoutroot = os.path.expanduser(&quot;~/src/gnome&quot;)
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;"># don&#39;t spew lots of distracting status messages
+</span><span style="color:#c0c5ce;">notrayicon = True
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;"># attempt to build modules even if their dependencies weren&#39;t successfully built
+</span><span style="color:#c0c5ce;">nopoison = True
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;"># don&#39;t build these since they have issues; this implies that I must install my distro&#39;s development versions
+</span><span style="color:#c0c5ce;">skip = [&#39;nss&#39;, &#39;nspr&#39;]
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;"># dont fetch moduleset xml files from the web; use ones that are installed locally
+</span><span style="color:#c0c5ce;">use_local_modulesets = True
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;"># where html-formatted logs are kept
+</span><span style="color:#c0c5ce;">tinderbox_outputdir = os.path.expanduser(&quot;~/temp/tinderbox&quot;)
 </span></pre>
 <p>See <a href="http://library.gnome.org/devel/jhbuild/unstable/config-reference.html.en">Configuration File Reference</a> for a detailed explanation
 of these options.</p>

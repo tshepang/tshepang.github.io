@@ -61,17 +61,17 @@ rust</p>
 <p>fn main() {</p>
 <p>:   let a = 0i8; let b = 0i8; let c = 0i8;</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">println!(\&quot;{:p}\&quot;, &amp;a); println!(\&quot;{:p}\&quot;, &amp;b); println!(\&quot;{:p}\&quot;,
-</span><span style="background-color:#2b303b;color:#c0c5ce;">&amp;c);
+<span style="color:#c0c5ce;">println!(\&quot;{:p}\&quot;, &amp;a); println!(\&quot;{:p}\&quot;, &amp;b); println!(\&quot;{:p}\&quot;,
+</span><span style="color:#c0c5ce;">&amp;c);
 </span></pre>
 <p>}
 :::</p>
 <p>We build and run it like this:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">$ rustc main.rs &amp;&amp; ./main
-</span><span style="background-color:#2b303b;color:#c0c5ce;">0x7fff0c8d16d7
-</span><span style="background-color:#2b303b;color:#c0c5ce;">0x7fff0c8d16d6
-</span><span style="background-color:#2b303b;color:#c0c5ce;">0x7fff0c8d16d5
+<span style="color:#c0c5ce;">$ rustc main.rs &amp;&amp; ./main
+</span><span style="color:#c0c5ce;">0x7fff0c8d16d7
+</span><span style="color:#c0c5ce;">0x7fff0c8d16d6
+</span><span style="color:#c0c5ce;">0x7fff0c8d16d5
 </span></pre>
 <p>In our code, the three variables are each given 1 byte of memory (<code>i8</code>
 means 8-bit integer). The addresses are given in reverse order. An
@@ -85,33 +85,33 @@ rust</p>
 <p>fn main() {</p>
 <p>:   let a = 0i16; let b = 0i16; let c = 0i16;</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">println!(\&quot;{:p}\&quot;, &amp;a); println!(\&quot;{:p}\&quot;, &amp;b); println!(\&quot;{:p}\&quot;,
-</span><span style="background-color:#2b303b;color:#c0c5ce;">&amp;c);
+<span style="color:#c0c5ce;">println!(\&quot;{:p}\&quot;, &amp;a); println!(\&quot;{:p}\&quot;, &amp;b); println!(\&quot;{:p}\&quot;,
+</span><span style="color:#c0c5ce;">&amp;c);
 </span></pre>
 <p>}
 :::</p>
 <p>Output:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">$ rustc main.rs &amp;&amp; ./main
-</span><span style="background-color:#2b303b;color:#c0c5ce;">0x7fff2462aed6
-</span><span style="background-color:#2b303b;color:#c0c5ce;">0x7fff2462aed4
-</span><span style="background-color:#2b303b;color:#c0c5ce;">0x7fff2462aed2
+<span style="color:#c0c5ce;">$ rustc main.rs &amp;&amp; ./main
+</span><span style="color:#c0c5ce;">0x7fff2462aed6
+</span><span style="color:#c0c5ce;">0x7fff2462aed4
+</span><span style="color:#c0c5ce;">0x7fff2462aed2
 </span></pre>
 <p>In this case, each of the variables take 2 addresses (<code>i16</code> means 16-bit
 integer). Using <code>i32</code> results in each taking 4 addresses:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">$ rustc main.rs &amp;&amp; ./main
-</span><span style="background-color:#2b303b;color:#c0c5ce;">0x7ffff7706024
-</span><span style="background-color:#2b303b;color:#c0c5ce;">0x7ffff7706020
-</span><span style="background-color:#2b303b;color:#c0c5ce;">0x7ffff770601c
+<span style="color:#c0c5ce;">$ rustc main.rs &amp;&amp; ./main
+</span><span style="color:#c0c5ce;">0x7ffff7706024
+</span><span style="color:#c0c5ce;">0x7ffff7706020
+</span><span style="color:#c0c5ce;">0x7ffff770601c
 </span></pre>
 <p>And then, finally, <code>i64</code> results in each variable taking 8 addresses (64
 bits) of space:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">$ rustc main.rs &amp;&amp; ./main
-</span><span style="background-color:#2b303b;color:#c0c5ce;">0x7fffd27383b0
-</span><span style="background-color:#2b303b;color:#c0c5ce;">0x7fffd27383a8
-</span><span style="background-color:#2b303b;color:#c0c5ce;">0x7fffd27383a0
+<span style="color:#c0c5ce;">$ rustc main.rs &amp;&amp; ./main
+</span><span style="color:#c0c5ce;">0x7fffd27383b0
+</span><span style="color:#c0c5ce;">0x7fffd27383a8
+</span><span style="color:#c0c5ce;">0x7fffd27383a0
 </span></pre>
 </div>
 

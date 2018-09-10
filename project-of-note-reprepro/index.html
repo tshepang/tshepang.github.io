@@ -59,8 +59,8 @@ packages that I ever install.</p>
 <p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
 <p>Every once in a while, I run this command:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang \
-</span><span style="background-color:#2b303b;color:#c0c5ce;">/var/cache/apt/archives/*deb
+<span style="color:#c0c5ce;">$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang \
+</span><span style="color:#c0c5ce;">/var/cache/apt/archives/*deb
 </span></pre>
 <p>What it does is add packages that are stored by the Debian package
 management system (located in <code>/var/cache/apt/archives</code>) to the custom
@@ -70,8 +70,8 @@ packages that matter to me for any later install.</p>
 equivalent of <code>testing</code> and <code>unstable</code>.</p>
 <p>Another command that I sometimes run, though less frequently, is:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang \
-</span><span style="background-color:#2b303b;color:#c0c5ce;">/var/cache/apt/archives/*deb
+<span style="color:#c0c5ce;">$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang \
+</span><span style="color:#c0c5ce;">/var/cache/apt/archives/*deb
 </span></pre>
 <p>This one is used to help keep the repository fresh. Check out <a href="http://tshepang.net/removing-obsolete-packages-from-a-local-debian-repository">this
 post</a> for an explanation.</p>
@@ -79,11 +79,11 @@ post</a> for an explanation.</p>
 referenced (i.e. not found in <code>Package.gz</code>) for some reason. Here's
 handy command to display them:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">$ reprepro --basedir ~/.custom_repo dumpunreferenced
+<span style="color:#c0c5ce;">$ reprepro --basedir ~/.custom_repo dumpunreferenced
 </span></pre>
 <p>And here's another that actually gets rid of them:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">$ reprepro --basedir ~/.custom_repo deleteunreferenced
+<span style="color:#c0c5ce;">$ reprepro --basedir ~/.custom_repo deleteunreferenced
 </span></pre>
 </div>
 

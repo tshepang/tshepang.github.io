@@ -57,38 +57,38 @@ it's real easy. We use <a href="http://cx-oracle.sourceforge.net/html/index.html
 read Oracle DBs.</p>
 <p>Let's start by simply reading the DB:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">import cx_Oracle
-</span><span style="background-color:#2b303b;color:#c0c5ce;">conn = cx_Oracle.connect(&quot;usr&quot;, &quot;pwd&quot;, &quot;tns&quot;)
-</span><span style="background-color:#2b303b;color:#c0c5ce;">cursor = conn.cursor()
-</span><span style="background-color:#2b303b;color:#c0c5ce;">cursor.execute(&quot;SELECT * TABLE_NAME&quot;)
-</span><span style="background-color:#2b303b;color:#c0c5ce;">for item in cursor.fetchall()[0]:
-</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">print(item)
-</span><span style="background-color:#2b303b;color:#c0c5ce;">conn.close()
+<span style="color:#c0c5ce;">import cx_Oracle
+</span><span style="color:#c0c5ce;">conn = cx_Oracle.connect(&quot;usr&quot;, &quot;pwd&quot;, &quot;tns&quot;)
+</span><span style="color:#c0c5ce;">cursor = conn.cursor()
+</span><span style="color:#c0c5ce;">cursor.execute(&quot;SELECT * TABLE_NAME&quot;)
+</span><span style="color:#c0c5ce;">for item in cursor.fetchall()[0]:
+</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">print(item)
+</span><span style="color:#c0c5ce;">conn.close()
 </span></pre>
 <p>The <a href="http://cx-oracle.sourceforge.net/html/index.html">cx_Oracle</a> explain exactly what each of these means.</p>
 <p>If we wanted instead to modify stuff in there, we only add one extra
 line, which is <code>cursor.commit</code>, like this:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">import cx_Oracle
-</span><span style="background-color:#2b303b;color:#c0c5ce;">conn = cx_Oracle.connect(&quot;usr&quot;, &quot;pwd&quot;, &quot;tns&quot;)
-</span><span style="background-color:#2b303b;color:#c0c5ce;">cursor = conn.cursor()
-</span><span style="background-color:#2b303b;color:#c0c5ce;">cursor.execute(&quot;SELECT * TABLE_NAME&quot;)
-</span><span style="background-color:#2b303b;color:#c0c5ce;">cursor.commit()
-</span><span style="background-color:#2b303b;color:#c0c5ce;">conn.close()
+<span style="color:#c0c5ce;">import cx_Oracle
+</span><span style="color:#c0c5ce;">conn = cx_Oracle.connect(&quot;usr&quot;, &quot;pwd&quot;, &quot;tns&quot;)
+</span><span style="color:#c0c5ce;">cursor = conn.cursor()
+</span><span style="color:#c0c5ce;">cursor.execute(&quot;SELECT * TABLE_NAME&quot;)
+</span><span style="color:#c0c5ce;">cursor.commit()
+</span><span style="color:#c0c5ce;">conn.close()
 </span></pre>
 <p>For real-world code, you are of course going to add exception handling
 for all this, something like this:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">import cx_Oracle
-</span><span style="background-color:#2b303b;color:#c0c5ce;">try:
-</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">conn = cx_Oracle.connect(&quot;usr&quot;, &quot;pwd&quot;, &quot;tns&quot;)
-</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">cursor = conn.cursor()
-</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">cursor.execute(&quot;SELECT * TABLE_NAME&quot;)
-</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">for item in cursor.fetchall()[0]:
-</span><span style="background-color:#2b303b;color:#c0c5ce;">        </span><span style="background-color:#2b303b;color:#c0c5ce;">print(item)
-</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">conn.close()
-</span><span style="background-color:#2b303b;color:#c0c5ce;">except Exception as e:
-</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">print(e)
+<span style="color:#c0c5ce;">import cx_Oracle
+</span><span style="color:#c0c5ce;">try:
+</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">conn = cx_Oracle.connect(&quot;usr&quot;, &quot;pwd&quot;, &quot;tns&quot;)
+</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">cursor = conn.cursor()
+</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">cursor.execute(&quot;SELECT * TABLE_NAME&quot;)
+</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">for item in cursor.fetchall()[0]:
+</span><span style="color:#c0c5ce;">        </span><span style="color:#c0c5ce;">print(item)
+</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">conn.close()
+</span><span style="color:#c0c5ce;">except Exception as e:
+</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">print(e)
 </span></pre>
 <p>That exception handling is rather oversimplified though, but is good
 enough for illustrative purposes. Also, note that there is no timeout

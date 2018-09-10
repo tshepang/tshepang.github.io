@@ -66,8 +66,8 @@ installation is also insane fast.</p>
 help</a>, where I needed to change two lines in
 `/usr/share/alsa/alsa.conf`:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">defaults.ctl.card 1
-</span><span style="background-color:#2b303b;color:#c0c5ce;">defaults.pcm.card 1
+<span style="color:#c0c5ce;">defaults.ctl.card 1
+</span><span style="color:#c0c5ce;">defaults.pcm.card 1
 </span></pre>
 <p>VLC video didn't work well either, but I needed only change Video
 Output to <strong>OpenGL GLX video output (XCB)</strong>, and all was well.</p>
@@ -75,34 +75,34 @@ Output to <strong>OpenGL GLX video output (XCB)</strong>, and all was well.</p>
 <p>I am now going to check how this machine compares to <a href="http://tshepang.net/a-bit-of-benchmarking">these others</a>.</p>
 <p>Specs:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">$ uname --all
-</span><span style="background-color:#2b303b;color:#c0c5ce;">Linux thome 3.12-1-amd64 #1 SMP Debian 3.12.9-1 (2014-02-01) x86_64 GNU/Linux
-</span><span style="background-color:#2b303b;color:#c0c5ce;">$ cat /proc/cpuinfo | sed --quiet &#39;5p&#39;
-</span><span style="background-color:#2b303b;color:#c0c5ce;">model name      : Intel(R) Core(TM) i5-4200U CPU @ 1.60GHz
+<span style="color:#c0c5ce;">$ uname --all
+</span><span style="color:#c0c5ce;">Linux thome 3.12-1-amd64 #1 SMP Debian 3.12.9-1 (2014-02-01) x86_64 GNU/Linux
+</span><span style="color:#c0c5ce;">$ cat /proc/cpuinfo | sed --quiet &#39;5p&#39;
+</span><span style="color:#c0c5ce;">model name      : Intel(R) Core(TM) i5-4200U CPU @ 1.60GHz
 </span></pre>
 <p>CPython build (changeset <code>b6a1a78818fe</code>):</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">$ make distclean; time (./configure &amp;&amp; make --silent --jobs=4)
-</span><span style="background-color:#2b303b;color:#c0c5ce;">[...]
-</span><span style="background-color:#2b303b;color:#c0c5ce;">real    1m52.372s
-</span><span style="background-color:#2b303b;color:#c0c5ce;">user    3m12.460s
-</span><span style="background-color:#2b303b;color:#c0c5ce;">sys     0m6.764s
+<span style="color:#c0c5ce;">$ make distclean; time (./configure &amp;&amp; make --silent --jobs=4)
+</span><span style="color:#c0c5ce;">[...]
+</span><span style="color:#c0c5ce;">real    1m52.372s
+</span><span style="color:#c0c5ce;">user    3m12.460s
+</span><span style="color:#c0c5ce;">sys     0m6.764s
 </span></pre>
 <p>CPython test suite:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">$ time ./python -m test --multiprocess=0
-</span><span style="background-color:#2b303b;color:#c0c5ce;">[...]
-</span><span style="background-color:#2b303b;color:#c0c5ce;">real    3m34.582s
-</span><span style="background-color:#2b303b;color:#c0c5ce;">user    5m12.260s
-</span><span style="background-color:#2b303b;color:#c0c5ce;">sys     0m20.640s
+<span style="color:#c0c5ce;">$ time ./python -m test --multiprocess=0
+</span><span style="color:#c0c5ce;">[...]
+</span><span style="color:#c0c5ce;">real    3m34.582s
+</span><span style="color:#c0c5ce;">user    5m12.260s
+</span><span style="color:#c0c5ce;">sys     0m20.640s
 </span></pre>
 <p>Linux kernel build (commit <code>6e4664525b1d</code>):</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">$ make distclean &amp;&amp; make defconfig &amp;&amp; time make
-</span><span style="background-color:#2b303b;color:#c0c5ce;">[...]
-</span><span style="background-color:#2b303b;color:#c0c5ce;">real    11m57.220s
-</span><span style="background-color:#2b303b;color:#c0c5ce;">user    11m1.544s
-</span><span style="background-color:#2b303b;color:#c0c5ce;">sys     0m38.260s
+<span style="color:#c0c5ce;">$ make distclean &amp;&amp; make defconfig &amp;&amp; time make
+</span><span style="color:#c0c5ce;">[...]
+</span><span style="color:#c0c5ce;">real    11m57.220s
+</span><span style="color:#c0c5ce;">user    11m1.544s
+</span><span style="color:#c0c5ce;">sys     0m38.260s
 </span></pre>
 <p>So the machine still doesn't compare with my work machine, a ~2
 year-old desktop. It is faster than my old laptop as expected, and
@@ -125,21 +125,21 @@ is buggy enough to cause OS hangs and other misbehaviour.</p>
 following commands does not help, at least not in a way I could
 notice:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">echo silent | sudo tee  /sys/devices/platform/sony-laptop/thermal_control
+<span style="color:#c0c5ce;">echo silent | sudo tee  /sys/devices/platform/sony-laptop/thermal_control
 </span></pre>
 <p>I don't know why this happens, given that I have never seen the
 temperature rise above 60 °C:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">$ sensors
-</span><span style="background-color:#2b303b;color:#c0c5ce;">acpitz-virtual-0
-</span><span style="background-color:#2b303b;color:#c0c5ce;">Adapter: Virtual device
-</span><span style="background-color:#2b303b;color:#c0c5ce;">temp1:        +48.0°C  (crit = +97.0°C)
-</span><span style="background-color:#2b303b;color:#c0c5ce;">
-</span><span style="background-color:#2b303b;color:#c0c5ce;">coretemp-isa-0000
-</span><span style="background-color:#2b303b;color:#c0c5ce;">Adapter: ISA adapter
-</span><span style="background-color:#2b303b;color:#c0c5ce;">Physical id 0:  +48.0°C  (high = +100.0°C, crit = +100.0°C)
-</span><span style="background-color:#2b303b;color:#c0c5ce;">Core 0:         +46.0°C  (high = +100.0°C, crit = +100.0°C)
-</span><span style="background-color:#2b303b;color:#c0c5ce;">Core 1:         +45.0°C  (high = +100.0°C, crit = +100.0°C)
+<span style="color:#c0c5ce;">$ sensors
+</span><span style="color:#c0c5ce;">acpitz-virtual-0
+</span><span style="color:#c0c5ce;">Adapter: Virtual device
+</span><span style="color:#c0c5ce;">temp1:        +48.0°C  (crit = +97.0°C)
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;">coretemp-isa-0000
+</span><span style="color:#c0c5ce;">Adapter: ISA adapter
+</span><span style="color:#c0c5ce;">Physical id 0:  +48.0°C  (high = +100.0°C, crit = +100.0°C)
+</span><span style="color:#c0c5ce;">Core 0:         +46.0°C  (high = +100.0°C, crit = +100.0°C)
+</span><span style="color:#c0c5ce;">Core 1:         +45.0°C  (high = +100.0°C, crit = +100.0°C)
 </span></pre></li>
 <li>
 <p>The screen brightness control is painful. It requires one to press

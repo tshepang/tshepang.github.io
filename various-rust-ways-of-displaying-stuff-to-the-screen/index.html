@@ -62,10 +62,10 @@ rust</p>
 :::</p>
 <p>I do however get this warning when I build it:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">$ rustc main.rs
-</span><span style="background-color:#2b303b;color:#c0c5ce;">main.rs:4:5: 4:42 warning: unused result which must be used, #[warn(unused_must_use)] on by default
-</span><span style="background-color:#2b303b;color:#c0c5ce;">main.rs:4     io::stdout().write_ln(b&quot;some output&quot;);
-</span><span style="background-color:#2b303b;color:#c0c5ce;">              </span><span style="background-color:#2b303b;color:#c0c5ce;">^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span style="color:#c0c5ce;">$ rustc main.rs
+</span><span style="color:#c0c5ce;">main.rs:4:5: 4:42 warning: unused result which must be used, #[warn(unused_must_use)] on by default
+</span><span style="color:#c0c5ce;">main.rs:4     io::stdout().write_ln(b&quot;some output&quot;);
+</span><span style="color:#c0c5ce;">              </span><span style="color:#c0c5ce;">^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 </span></pre>
 <p>Let's kill it:</p>
 <p>::: {.sourcecode}
@@ -83,11 +83,11 @@ rust</p>
 <p>fn main() {</p>
 <p>:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">match io::stdout().write\_all(b\&quot;some outputn\&quot;) {
-</span><span style="background-color:#2b303b;color:#c0c5ce;">
-</span><span style="background-color:#2b303b;color:#c0c5ce;">:   Ok(\_) =\&gt; (), Err(\_) =\&gt; panic!(),
-</span><span style="background-color:#2b303b;color:#c0c5ce;">
-</span><span style="background-color:#2b303b;color:#c0c5ce;">}
+<span style="color:#c0c5ce;">match io::stdout().write\_all(b\&quot;some outputn\&quot;) {
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;">:   Ok(\_) =\&gt; (), Err(\_) =\&gt; panic!(),
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;">}
 </span></pre>
 <p>}
 :::</p>
@@ -145,8 +145,8 @@ rust</p>
 :::</p>
 <p>You can test that it really goes to stderr by running it like:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">$ ./main &gt; /dev/null
-</span><span style="background-color:#2b303b;color:#c0c5ce;">some output
+<span style="color:#c0c5ce;">$ ./main &gt; /dev/null
+</span><span style="color:#c0c5ce;">some output
 </span></pre>
 </div>
 

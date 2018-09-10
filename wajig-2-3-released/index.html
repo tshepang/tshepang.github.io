@@ -63,10 +63,10 @@ citizens. Let me give an example of user wanting to install a
 package named nautilus, but avoid installing its Recommends
 depencencies:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;"># ole
-</span><span style="background-color:#2b303b;color:#c0c5ce;">wajig —norecommends INSTALL nautilus
-</span><span style="background-color:#2b303b;color:#c0c5ce;"># new
-</span><span style="background-color:#2b303b;color:#c0c5ce;">wajig INSTALL —norecommends nautilus
+<span style="color:#c0c5ce;"># ole
+</span><span style="color:#c0c5ce;">wajig —norecommends INSTALL nautilus
+</span><span style="color:#c0c5ce;"># new
+</span><span style="color:#c0c5ce;">wajig INSTALL —norecommends nautilus
 </span></pre>
 <p>I call this natural because it makes more sense to have the
 <code>--norecommends</code> command line option to be specified <em>after</em> the
@@ -79,9 +79,9 @@ next user-visible change.</p>
 <p>There is less magic and more strictness. Previously, these commands
 resulted in the same outcome:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">wajig REMOVEORPHANS
-</span><span style="background-color:#2b303b;color:#c0c5ce;">wajig REMOVE-ORPHANS
-</span><span style="background-color:#2b303b;color:#c0c5ce;">wajig R-____EMOVE-ORPH+++-___AN_S
+<span style="color:#c0c5ce;">wajig REMOVEORPHANS
+</span><span style="color:#c0c5ce;">wajig REMOVE-ORPHANS
+</span><span style="color:#c0c5ce;">wajig R-____EMOVE-ORPH+++-___AN_S
 </span></pre>
 <p>What wajig did was simply sanitise the commands, getting rid of the
 junk. Well, I don't like that, but since I didn't want to break

@@ -86,11 +86,11 @@ rust</p>
 <p>impl Invert for i32 {</p>
 <p>:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">fn invert(&amp;self) -\&gt; f64 {
-</span><span style="background-color:#2b303b;color:#c0c5ce;">
-</span><span style="background-color:#2b303b;color:#c0c5ce;">:   1.0/(\*self as f64)
-</span><span style="background-color:#2b303b;color:#c0c5ce;">
-</span><span style="background-color:#2b303b;color:#c0c5ce;">}
+<span style="color:#c0c5ce;">fn invert(&amp;self) -\&gt; f64 {
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;">:   1.0/(\*self as f64)
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;">}
 </span></pre>
 <p>}</p>
 <p>fn main() {</p>
@@ -114,7 +114,7 @@ rust</p>
 :::</p>
 <p>Output:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">Inverse: 0.1
+<span style="color:#c0c5ce;">Inverse: 0.1
 </span></pre>
 <p>Any other type will fail:</p>
 <p>::: {.sourcecode}
@@ -123,7 +123,7 @@ rust</p>
 :::</p>
 <p>Output:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">the trait `Invert` is not implemented for the type `f64` [E0277]
+<span style="color:#c0c5ce;">the trait `Invert` is not implemented for the type `f64` [E0277]
 </span></pre>
 <p>This allows for a feature named generics, where one can use multiple
 types for the same function. For example, that error will disappear
@@ -133,11 +133,11 @@ rust</p>
 <p>impl Invert for f64 {</p>
 <p>:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">fn invert(&amp;self) -\&gt; f64 {
-</span><span style="background-color:#2b303b;color:#c0c5ce;">
-</span><span style="background-color:#2b303b;color:#c0c5ce;">:   1.0/(\*self)
-</span><span style="background-color:#2b303b;color:#c0c5ce;">
-</span><span style="background-color:#2b303b;color:#c0c5ce;">}
+<span style="color:#c0c5ce;">fn invert(&amp;self) -\&gt; f64 {
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;">:   1.0/(\*self)
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;">}
 </span></pre>
 <p>}
 :::</p>

@@ -56,23 +56,23 @@
 Python: via the shell, or directly (via the kernel).</p>
 <p>This is via the shell:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">import subprocess
-</span><span style="background-color:#2b303b;color:#c0c5ce;">subprocess.Popen(&quot;echo test&quot;, shell=True)
+<span style="color:#c0c5ce;">import subprocess
+</span><span style="color:#c0c5ce;">subprocess.Popen(&quot;echo test&quot;, shell=True)
 </span></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">test
+<span style="color:#c0c5ce;">test
 </span></pre>
 <p>This is via the kernel:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">import subprocess
-</span><span style="background-color:#2b303b;color:#c0c5ce;">p = subprocess.Popen([&quot;echo&quot;, &quot;test&quot;], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-</span><span style="background-color:#2b303b;color:#c0c5ce;">output = p.communicate()
-</span><span style="background-color:#2b303b;color:#c0c5ce;">print(output)
+<span style="color:#c0c5ce;">import subprocess
+</span><span style="color:#c0c5ce;">p = subprocess.Popen([&quot;echo&quot;, &quot;test&quot;], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+</span><span style="color:#c0c5ce;">output = p.communicate()
+</span><span style="color:#c0c5ce;">print(output)
 </span></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">(b&#39;testn&#39;, b&#39;&#39;)
+<span style="color:#c0c5ce;">(b&#39;testn&#39;, b&#39;&#39;)
 </span></pre>
 <p>Not exactly what we want. The output is actually a tuple (<strong>stdout</strong>,
 <strong>stderr</strong>). Note that by default, <code>shell=False</code>, and that's why it's
@@ -80,14 +80,14 @@ not stated here.</p>
 <p>To get the equivalent of what we get from the first example, we have to
 do a bit more work:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">import subprocess
-</span><span style="background-color:#2b303b;color:#c0c5ce;">p = subprocess.Popen([&quot;echo&quot;, &quot;test&quot;], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-</span><span style="background-color:#2b303b;color:#c0c5ce;">output = p.communicate()
-</span><span style="background-color:#2b303b;color:#c0c5ce;">print(output[0].decode(), end=&quot;&quot;)
+<span style="color:#c0c5ce;">import subprocess
+</span><span style="color:#c0c5ce;">p = subprocess.Popen([&quot;echo&quot;, &quot;test&quot;], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+</span><span style="color:#c0c5ce;">output = p.communicate()
+</span><span style="color:#c0c5ce;">print(output[0].decode(), end=&quot;&quot;)
 </span></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">test
+<span style="color:#c0c5ce;">test
 </span></pre>
 <p>The <code>b</code> thing indicates that the string is in bytes format. To get a
 normal string from that, just run the string's <a href="http://docs.python.org/library/stdtypes.html?highlight=encode#str.decode">decode method</a>. Also,

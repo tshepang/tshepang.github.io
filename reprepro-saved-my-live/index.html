@@ -58,9 +58,9 @@
 When doing package builds, all I need to run is the following after a
 build:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">$ rm *udeb
-</span><span style="background-color:#2b303b;color:#c0c5ce;">$ reprepro --basedir ~/.repo_directory includedeb sid *deb
-</span><span style="background-color:#2b303b;color:#c0c5ce;">$ sudo apt-get update
+<span style="color:#c0c5ce;">$ rm *udeb
+</span><span style="color:#c0c5ce;">$ reprepro --basedir ~/.repo_directory includedeb sid *deb
+</span><span style="color:#c0c5ce;">$ sudo apt-get update
 </span></pre>
 <p>The first command removes debian-installer packages which I don't need,
 the second takes the remaining packages and adds them into the
@@ -69,7 +69,7 @@ the Packages file, and the third updates the system's apt database in
 order to pick up the changes. Also, if I want to get rid of something
 from the repo, all I do is:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">$ reprepro --basedir ~/.repo_directory removesrc sid glibc
+<span style="color:#c0c5ce;">$ reprepro --basedir ~/.repo_directory removesrc sid glibc
 </span></pre>
 <p>I don't know why anyone would love to remove glibc binary packages, but
 it's that simple.</p>

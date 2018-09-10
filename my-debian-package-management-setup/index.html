@@ -65,17 +65,17 @@ use it to create 2 repos:</p>
 <p>How this works is that I'd run the following command (an example for
 the source repo):</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">/usr/bin/debmirror
-</span><span style="background-color:#2b303b;color:#c0c5ce;"> </span><span style="background-color:#2b303b;color:#c0c5ce;">--verbose
-</span><span style="background-color:#2b303b;color:#c0c5ce;"> </span><span style="background-color:#2b303b;color:#c0c5ce;">--progress
-</span><span style="background-color:#2b303b;color:#c0c5ce;"> </span><span style="background-color:#2b303b;color:#c0c5ce;">--host=ftp.sun.ac.za
-</span><span style="background-color:#2b303b;color:#c0c5ce;"> </span><span style="background-color:#2b303b;color:#c0c5ce;">--passive
-</span><span style="background-color:#2b303b;color:#c0c5ce;"> </span><span style="background-color:#2b303b;color:#c0c5ce;">--dist=squeeze
-</span><span style="background-color:#2b303b;color:#c0c5ce;"> </span><span style="background-color:#2b303b;color:#c0c5ce;">--root=ftp/debian
-</span><span style="background-color:#2b303b;color:#c0c5ce;"> </span><span style="background-color:#2b303b;color:#c0c5ce;">--section=main
-</span><span style="background-color:#2b303b;color:#c0c5ce;"> </span><span style="background-color:#2b303b;color:#c0c5ce;">--method=ftp
-</span><span style="background-color:#2b303b;color:#c0c5ce;"> </span><span style="background-color:#2b303b;color:#c0c5ce;">--arch=none
-</span><span style="background-color:#2b303b;color:#c0c5ce;"> </span><span style="background-color:#2b303b;color:#c0c5ce;">/home/wena/.repo_src
+<span style="color:#c0c5ce;">/usr/bin/debmirror
+</span><span style="color:#c0c5ce;"> </span><span style="color:#c0c5ce;">--verbose
+</span><span style="color:#c0c5ce;"> </span><span style="color:#c0c5ce;">--progress
+</span><span style="color:#c0c5ce;"> </span><span style="color:#c0c5ce;">--host=ftp.sun.ac.za
+</span><span style="color:#c0c5ce;"> </span><span style="color:#c0c5ce;">--passive
+</span><span style="color:#c0c5ce;"> </span><span style="color:#c0c5ce;">--dist=squeeze
+</span><span style="color:#c0c5ce;"> </span><span style="color:#c0c5ce;">--root=ftp/debian
+</span><span style="color:#c0c5ce;"> </span><span style="color:#c0c5ce;">--section=main
+</span><span style="color:#c0c5ce;"> </span><span style="color:#c0c5ce;">--method=ftp
+</span><span style="color:#c0c5ce;"> </span><span style="color:#c0c5ce;">--arch=none
+</span><span style="color:#c0c5ce;"> </span><span style="color:#c0c5ce;">/home/wena/.repo_src
 </span></pre>
 <p>(look at debmirror's manpage to see what all those options mean)</p>
 <p>The result is that I'll be having ~30GB of Debian locally (for a
@@ -98,29 +98,29 @@ care to learn how).</p>
 <p>Moving on, here's the relevant entries from my /etc/apt/sources.list
 file:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;"># local repos (debmirror)
-</span><span style="background-color:#2b303b;color:#c0c5ce;">deb file:/home/wena/.repo_bin sid main
-</span><span style="background-color:#2b303b;color:#c0c5ce;">deb-src file:/home/wena/.repo_src sid main
-</span><span style="background-color:#2b303b;color:#c0c5ce;">
-</span><span style="background-color:#2b303b;color:#c0c5ce;"># local repo (reprepro)
-</span><span style="background-color:#2b303b;color:#c0c5ce;">deb file:/home/wena/.repo_local cache main
-</span><span style="background-color:#2b303b;color:#c0c5ce;">
-</span><span style="background-color:#2b303b;color:#c0c5ce;"># remote repo
-</span><span style="background-color:#2b303b;color:#c0c5ce;">deb ftp://ftp.sun.ac.za/ftp/debian/ sid main non-free contrib
+<span style="color:#c0c5ce;"># local repos (debmirror)
+</span><span style="color:#c0c5ce;">deb file:/home/wena/.repo_bin sid main
+</span><span style="color:#c0c5ce;">deb-src file:/home/wena/.repo_src sid main
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;"># local repo (reprepro)
+</span><span style="color:#c0c5ce;">deb file:/home/wena/.repo_local cache main
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;"># remote repo
+</span><span style="color:#c0c5ce;">deb ftp://ftp.sun.ac.za/ftp/debian/ sid main non-free contrib
 </span></pre>
 <p>So, what I do on a semi-regular basis is run:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">$ wajig update &amp;&amp; wajig upgrade
+<span style="color:#c0c5ce;">$ wajig update &amp;&amp; wajig upgrade
 </span></pre>
 <p>The newly-updated packages are stored in a cache so that a reinstall
 doesn't have to fetch from network again. After this I run:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">$ reprepro -vv --basedir ~/.repo_local includedeb cache /var/cache/apt/archives/*deb
+<span style="color:#c0c5ce;">$ reprepro -vv --basedir ~/.repo_local includedeb cache /var/cache/apt/archives/*deb
 </span></pre>
 <p>This updates the local reprepro repo and after which I can then remove
 the cached packages:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">$ wajig clean
+<span style="color:#c0c5ce;">$ wajig clean
 </span></pre>
 <p>I do that because they are now available in my reprepro-managed repo.
 That now means that I got a massive mirror managed by debmirror and a

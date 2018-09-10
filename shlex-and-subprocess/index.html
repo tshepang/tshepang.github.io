@@ -61,31 +61,31 @@ within <code>python</code>. A normal <code>split</code> won't work, because it u
 space as a delimiter (by default). To test, I will create a file named
 &quot;<strong>file with spaces</strong>&quot; and add text (<code>content of 'file with spaces'</code>).</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">$ echo &#39;content of file with spaces&#39; &gt; &#39;file with spaces&#39;
+<span style="color:#c0c5ce;">$ echo &#39;content of file with spaces&#39; &gt; &#39;file with spaces&#39;
 </span></pre>
 <p>And here's the code, using the normal split method:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">import subprocess
-</span><span style="background-color:#2b303b;color:#c0c5ce;">cmd = &quot;/bin/cat &#39;file with spaces&#39;&quot;
-</span><span style="background-color:#2b303b;color:#c0c5ce;">formatted_cmd = cmd.split()
-</span><span style="background-color:#2b303b;color:#c0c5ce;">subprocess.Popen(formatted_cmd)
+<span style="color:#c0c5ce;">import subprocess
+</span><span style="color:#c0c5ce;">cmd = &quot;/bin/cat &#39;file with spaces&#39;&quot;
+</span><span style="color:#c0c5ce;">formatted_cmd = cmd.split()
+</span><span style="color:#c0c5ce;">subprocess.Popen(formatted_cmd)
 </span></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">/bin/cat: &#39;file: No such file or directory
-</span><span style="background-color:#2b303b;color:#c0c5ce;">/bin/cat: with: No such file or directory
-</span><span style="background-color:#2b303b;color:#c0c5ce;">/bin/cat: spaces&#39;: No such file or directory
+<span style="color:#c0c5ce;">/bin/cat: &#39;file: No such file or directory
+</span><span style="color:#c0c5ce;">/bin/cat: with: No such file or directory
+</span><span style="color:#c0c5ce;">/bin/cat: spaces&#39;: No such file or directory
 </span></pre>
 <p>That's when <code>shlex</code> module gets to be useful.</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">import shlex, subprocess
-</span><span style="background-color:#2b303b;color:#c0c5ce;">cmd = &quot;/bin/cat &#39;file with spaces&#39;&quot;
-</span><span style="background-color:#2b303b;color:#c0c5ce;">formatted_cmd = shlex.split(cmd)
-</span><span style="background-color:#2b303b;color:#c0c5ce;">subprocess.Popen(formatted_cmd)
+<span style="color:#c0c5ce;">import shlex, subprocess
+</span><span style="color:#c0c5ce;">cmd = &quot;/bin/cat &#39;file with spaces&#39;&quot;
+</span><span style="color:#c0c5ce;">formatted_cmd = shlex.split(cmd)
+</span><span style="color:#c0c5ce;">subprocess.Popen(formatted_cmd)
 </span></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">content of &#39;file with spaces&#39;
+<span style="color:#c0c5ce;">content of &#39;file with spaces&#39;
 </span></pre>
 </div>
 
