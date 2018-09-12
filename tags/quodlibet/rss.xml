@@ -1,0 +1,59 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tshepang logs</title>
+        <link>http://tshepang.net</link>
+        <description></description>
+        <generator>Gutenberg</generator>
+        <language>en</language>
+        <atom:link href="http://tshepang.net/tags/quodlibet/rss.xml/" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Thu, 08 Jul 2010 00:00:00 +0000</lastBuildDate>
+        
+            <item>
+                <title>my first wajig contribution</title>
+                <pubDate>Thu, 08 Jul 2010 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/my-first-wajig-contribution/</link>
+                <guid>http://tshepang.net/my-first-wajig-contribution/</guid>
+                <description>&lt;p&gt;Due to my love for the application &lt;a href=&quot;http:&#x2F;&#x2F;code.google.com&#x2F;p&#x2F;quodlibet&#x2F;&quot;&gt;Quod Libet&lt;&#x2F;a&gt;, I have been
+contributing a bit to it. But due the complexity of the code, I looked
+elsewhere, and found a favorite tool package management tool, &lt;a href=&quot;http:&#x2F;&#x2F;code.google.com&#x2F;p&#x2F;wajig&#x2F;&quot;&gt;wajig&lt;&#x2F;a&gt;,
+and was surprised to find that it&#x27;s not kept in a VCS. Useful as it is,
+it&#x27;s code looks like a collection of hacks, so I started by offering a
+PEP-8 fix.&lt;&#x2F;p&gt;
+&lt;p&gt;[&lt;strong&gt;a day later&lt;&#x2F;strong&gt;] Inspired by that offer, the &lt;a href=&quot;http:&#x2F;&#x2F;code.google.com&#x2F;u&#x2F;113620423708378221129&#x2F;&quot;&gt;nice guy&lt;&#x2F;a&gt; that founded
+the project created a VCS repo for it, and even offered me &lt;a href=&quot;http:&#x2F;&#x2F;code.google.com&#x2F;p&#x2F;wajig&#x2F;people&#x2F;list&quot;&gt;commit
+rights&lt;&#x2F;a&gt;. I was amazed by the trust.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>Quod Libet and arrogance</title>
+                <pubDate>Sun, 19 Aug 2007 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/quod-libet-and-arrogance/</link>
+                <guid>http://tshepang.net/quod-libet-and-arrogance/</guid>
+                <description>&lt;p&gt;I&#x27;ve just seen, for the first time in memory, a concept of arrogant
+design stated &lt;a href=&quot;http:&#x2F;&#x2F;mystilleef.blogspot.com&#x2F;2006&#x2F;12&#x2F;031-coming-soon-to-distro-near-you.html#c4991460165173246170&quot;&gt;publicly&lt;&#x2F;a&gt;, a concept whose awareness previously existed
+only in my mind. This concept was brought up by my experiences with
+&lt;a href=&quot;http:&#x2F;&#x2F;code.google.com&#x2F;p&#x2F;quodlibet&#x2F;&quot;&gt;Quod Libet&lt;&#x2F;a&gt;, my favorite audio player. It unfortunately doesn&#x27;t
+conform to some common standards:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;I can&#x27;t open a song directly from a file manager (Nautilus)
+requiring me to open the application itself first, as if it&#x27;s the
+standard operating environment, yet it&#x27;s folder view is less than
+perfect, in that it doesn&#x27;t automatically update the contents if
+changed externally.&lt;&#x2F;li&gt;
+&lt;li&gt;It doesn&#x27;t use well-known shortcuts like B for previous track and N
+for next track, and invents its own, and if there&#x27;s not enough
+already.&lt;&#x2F;li&gt;
+&lt;li&gt;It does not allow me to drag a folder containing tracks, meaning I
+have to use its own interface to open all tracks.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;As regards the first link here, someone else also stated that Scribes&#x27;
+design is arrogant too, though I don&#x27;t think so. Scribes is just
+excellent and I don&#x27;t see the need for another editor, except if it had
+code &#x27;folding&#x27; and started-up faster than the current Scribes&#x27; 10
+seconds. [&lt;strong&gt;update&lt;&#x2F;strong&gt;: such &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;project-of-note-geany&quot;&gt;a replacement&lt;&#x2F;a&gt; was eventually discovered!]&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+    </channel>
+</rss>

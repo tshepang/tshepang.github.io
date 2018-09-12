@@ -1,0 +1,220 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tshepang logs</title>
+        <link>http://tshepang.net</link>
+        <description></description>
+        <generator>Gutenberg</generator>
+        <language>en</language>
+        <atom:link href="http://tshepang.net/tags/vcs/rss.xml/" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Wed, 30 Aug 2017 00:00:00 +0000</lastBuildDate>
+        
+            <item>
+                <title>major projects using Mercurial</title>
+                <pubDate>Wed, 30 Aug 2017 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/major-projects-using-mercurial/</link>
+                <guid>http://tshepang.net/major-projects-using-mercurial/</guid>
+                <description>&lt;p&gt;Mercurial is the only version control system that I actually like, and I
+do celebrate each time I see a project use it. So, here I list the most
+notable projects I am aware of that do, which also gives me hope that it
+isn&#x27;t being suffocated too much by Git:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;hg.mozilla.org&#x2F;mozilla-central&quot;&gt;Firefox&lt;&#x2F;a&gt;, world number 3 desktop web browser (number of users)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;hg.openjdk.java.net&quot;&gt;OpenJDK&lt;&#x2F;a&gt;, the top open source implementation of the Java platform&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;wiki.netbeans.org&#x2F;WorkingWithNetBeansSources#Mercurial_access&quot;&gt;Netbeans&lt;&#x2F;a&gt;, one of the most popular IDEs&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;And here is one which is not FLOSS (i.e. proprietary):&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;code.facebook.com&#x2F;posts&#x2F;218678814984400&#x2F;scaling-mercurial-at-facebook&quot;&gt;Facebook&lt;&#x2F;a&gt;, world number 2 website in terms of visitor numbers&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>project of note: git-cola</title>
+                <pubDate>Thu, 17 Oct 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/project-of-note-git-cola/</link>
+                <guid>http://tshepang.net/project-of-note-git-cola/</guid>
+                <description>&lt;p&gt;I use &lt;a href=&quot;http:&#x2F;&#x2F;git-cola.github.io&quot;&gt;git-cola&lt;&#x2F;a&gt; mostly when I want to commit various hunks separately;
+it makes that task real easy.&lt;&#x2F;p&gt;
+&lt;p&gt;I was impressed by its equivalent functionality for the git &lt;code&gt;--amend&lt;&#x2F;code&gt;
+option the first time I saw it. If you click on the &lt;strong&gt;Amend Last
+Commit&lt;&#x2F;strong&gt; radio button, it actually displays the commit message of that
+previous commit. I was surprised to see it, especially since on clicking
+that option, I quickly ran to the command-line to copy that commit
+message, only to see the message waiting for me, ready to be edited
+away.&lt;&#x2F;p&gt;
+&lt;p&gt;Another feature I really like is that if you attempt to commit something
+without staging it first, instead of just complaining, if offers to
+&lt;em&gt;stage and commit&lt;&#x2F;em&gt; all in one click. Nice.&lt;&#x2F;p&gt;
+&lt;p&gt;These functionalities are real simple, but they really make for a
+pleasant user experience. Pity I haven&#x27;t seen a tool as easy to use in
+the land of Mercurial. There, I use the command-line &lt;code&gt;hg record&lt;&#x2F;code&gt; which
+isn&#x27;t as pleasant.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>easing switching between Git and Mercurial</title>
+                <pubDate>Wed, 16 Oct 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/easing-switching-between-git-and-mercurial/</link>
+                <guid>http://tshepang.net/easing-switching-between-git-and-mercurial/</guid>
+                <description>&lt;p&gt;Each chance I get, I use Mercurial (e.g. personal stuff), and use Git
+when I don&#x27;t have much of a choice (e.g. FLOSS and work). That is, I
+use both quite a lot, and too often I find myself running commands for
+one while on another&#x27;s repository... error. I therefore decided to
+ease the pain my creating &lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;scripts&#x2F;src&#x2F;tip&#x2F;vcs.py&quot;&gt;a script&lt;&#x2F;a&gt; which checks which VCS system I&#x27;m
+on, and displays the relevant command.&lt;&#x2F;p&gt;
+&lt;p&gt;Some examples of usage:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ cd &amp;lt;hg repo&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ .&#x2F;vcs.py --log
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;hg log --no-merges --patch --stat --verbose
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ cd &amp;lt;git repo&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ .&#x2F;vcs.py --log
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;git log --no-merges --patch --stat
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Here are the relevant BASH aliases:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vb=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --branch)&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vd=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --diff)&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vl=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --log)&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vp=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --push)&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vs=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --status)&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vu=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --pull)&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vc=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --commit)&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vo=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --checkout)&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vr=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --revert)&amp;#39;
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This makes my life so much easier, since I no longer have to care which
+VCS I&#x27;m on, at least for the most common of commands. I am pleased with
+self.&lt;&#x2F;p&gt;
+&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;p&gt;As a sidenote, if you want to cycle between the changesets (Mercurial
+term) or Commits (Git term), use the following search term on your pager
+(tested with &lt;a href=&quot;http:&#x2F;&#x2F;www.greenwoodsoftware.com&#x2F;less&quot;&gt;less&lt;&#x2F;a&gt;, which is Debian&#x2F;Ubuntu default pager):&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(^changeset)|(^commit)
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
+            </item>
+        
+            <item>
+                <title>links 2013-06-01</title>
+                <pubDate>Sat, 01 Jun 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/links-2013-06-01/</link>
+                <guid>http://tshepang.net/links-2013-06-01/</guid>
+                <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;julien.danjou.info&#x2F;blog&#x2F;2013&#x2F;rant-about-github-pull-request-workflow-implementation&quot;&gt;a detailed look&lt;&#x2F;a&gt; at the shortcomings of GitHub Pull Requests
+workflow&lt;&#x2F;li&gt;
+&lt;li&gt;it is sad seeing projects using Git, instead of Mercurial; it&#x27;s
+sadder still seeing them &lt;a href=&quot;http:&#x2F;&#x2F;www.sqlalchemy.org&#x2F;blog&#x2F;2013&#x2F;05&#x2F;25&#x2F;sqlalchemy-migrated-to-git&quot;&gt;move from Mercurial to Git&lt;&#x2F;a&gt;; I am scared
+that my favorite VCS is becoming less and less relevant&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;pedrokroger.net&#x2F;using-sphinx-write-technical-books&quot;&gt;Using Sphinx to Write Technical Books&lt;&#x2F;a&gt; - nice guide&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;diveintohtml5.info&#x2F;past.html&quot;&gt;HTML history&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;diveintohtml5.info&#x2F;video.html&quot;&gt;intro to computer video&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>me likes subprocess.DEVNULL</title>
+                <pubDate>Thu, 11 Apr 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/me-likes-subprocess-devnull/</link>
+                <guid>http://tshepang.net/me-likes-subprocess-devnull/</guid>
+                <description>&lt;p&gt;If you want to run an external process from within Python, and are not
+interested in any errors that process may emit, there are a few ways you
+can go about it. I will demonstrate this by opening a Python shell in a
+directory that isn&#x27;t version-controlled by &lt;a href=&quot;http:&#x2F;&#x2F;mercurial.selenic.com&quot;&gt;Mercurial&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;So, we don&#x27;t want to see this ugliness:&lt;&#x2F;p&gt;
+&lt;p&gt;&amp;gt;&amp;gt;&amp;gt; from subprocess import call &amp;gt;&amp;gt;&amp;gt; call(&#x27;hg
+status&#x27;.split()) abort: no repository found in
+&#x27;&#x2F;home&#x2F;tshepang&#x2F;projects&#x2F;pyramid&#x27; (.hg not found)! 255&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;So, here&#x27;s the simplest solution:&lt;&#x2F;p&gt;
+&lt;p&gt;&amp;gt;&amp;gt;&amp;gt; import os &amp;gt;&amp;gt;&amp;gt; from subprocess import call &amp;gt;&amp;gt;&amp;gt; call(&#x27;hg
+status&#x27;.split(), stderr=open(os.devnull)) 255&lt;&#x2F;p&gt;
+&lt;p&gt;Problem: it leaves the file descriptor open... not good.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;We fix:&lt;&#x2F;p&gt;
+&lt;p&gt;&amp;gt;&amp;gt;&amp;gt; import os &amp;gt;&amp;gt;&amp;gt; from subprocess import call &amp;gt;&amp;gt;&amp;gt; DEVNULL =
+open(os.devnull) &amp;gt;&amp;gt;&amp;gt; call(&#x27;hg status&#x27;.split(), stderr=DEVNULL)
+255 &amp;gt;&amp;gt;&amp;gt; DEVNULL.close()&lt;&#x2F;p&gt;
+&lt;p&gt;Much better, much uglier. (&lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;scripts&#x2F;src&#x2F;tip&#x2F;vcs.py&quot;&gt;example usage&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Something better:&lt;&#x2F;p&gt;
+&lt;p&gt;&amp;gt;&amp;gt;&amp;gt; import os &amp;gt;&amp;gt;&amp;gt; from subprocess import call &amp;gt;&amp;gt;&amp;gt; with
+open(os.devnull) as DEVNULL: ... call(&#x27;hg status&#x27;.split(),
+stderr=DEVNULL) 255&lt;&#x2F;p&gt;
+&lt;p&gt;Looks much nicer, and is more convenient, unless we wanted to do
+something similar multiple times, in which case the previous example
+would be preferable.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Best solution:&lt;&#x2F;p&gt;
+&lt;p&gt;&amp;gt;&amp;gt;&amp;gt; import os &amp;gt;&amp;gt;&amp;gt; from subprocess import call, DEVNULL &amp;gt;&amp;gt;&amp;gt;
+call(&#x27;hg status&#x27;.split(), stderr=DEVNULL) 255&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;This &lt;a href=&quot;http:&#x2F;&#x2F;hg.python.org&#x2F;cpython&#x2F;rev&#x2F;eaf93e156dff&quot;&gt;small and wonderful feature&lt;&#x2F;a&gt; is &lt;a href=&quot;http:&#x2F;&#x2F;docs.python.org&#x2F;3&#x2F;whatsnew&#x2F;3.3.html#subprocess&quot;&gt;new as of Python 3.3&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>me loving the Kiln Harmony concept</title>
+                <pubDate>Wed, 03 Apr 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/me-loving-the-kiln-harmony-concept/</link>
+                <guid>http://tshepang.net/me-loving-the-kiln-harmony-concept/</guid>
+                <description>&lt;p&gt;I tend to work a lot with both Git and Mercurial, and to ease the pain
+of forgetting which I&#x27;m using at a given moment, I created a setup I
+described on &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;easing-switching-between-git-and-mercurial&quot;&gt;another post&lt;&#x2F;a&gt;. An even better solution is having all this
+sorted out on the server side, so that it doesn&#x27;t matter which of the
+two I&#x27;m using. This comes in a form of a product named &lt;a href=&quot;http:&#x2F;&#x2F;blog.fogcreek.com&#x2F;announcing-kiln-harmony-the-future-of-dvcs&#x2F;&quot;&gt;Kiln Harmony&lt;&#x2F;a&gt;,
+which also turns out to be &lt;a href=&quot;https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=5363085&quot;&gt;a complex beast&lt;&#x2F;a&gt; behind-the-scenes. Would be
+kool to see a FLOSS implementation of this.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>me loves new Git site design</title>
+                <pubDate>Wed, 16 May 2012 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/me-loves-new-git-site-design/</link>
+                <guid>http://tshepang.net/me-loves-new-git-site-design/</guid>
+                <description>&lt;p&gt;I really like the &lt;a href=&quot;http:&#x2F;&#x2F;git-scm.com&#x2F;&quot;&gt;new website design&lt;&#x2F;a&gt; of the Git project (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;blog&#x2F;1125-new-git-homepage&quot;&gt;story&lt;&#x2F;a&gt;). It
+even gained a nice and fresh icon, replacing the old which looked like
+it was created in 1995. Note that &lt;a href=&quot;http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20110716073224&#x2F;http:&#x2F;&#x2F;git-scm.com&#x2F;&quot;&gt;the old site&lt;&#x2F;a&gt; wasn&#x27;t crap either,
+and was already pretty much modern, following the &#x27;simple and bold&#x27;
+design trend I&#x27;ve witnessed in recent years. I&#x27;m jealous it&#x27;s better
+than that of &lt;a href=&quot;http:&#x2F;&#x2F;mercurial.selenic.com&#x2F;&quot;&gt;Mercurial&lt;&#x2F;a&gt;, my favorite VCS.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>thanks to the Debian backports team</title>
+                <pubDate>Thu, 14 Jul 2011 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/thanks-to-the-debian-backports-team/</link>
+                <guid>http://tshepang.net/thanks-to-the-debian-backports-team/</guid>
+                <description>&lt;p&gt;So I got this new HP laptop, Probook 4530s, and installed Debian 6
+(Squeeze) on it. I was left sitting with two unbearable problems:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;The touchpad wasn&#x27;t fully operational (GNOME Mouse Preferences
+didn&#x27;t have a Touchpad tab where I could change the settings).&lt;&#x2F;li&gt;
+&lt;li&gt;The video driver seemed to have a problem according to the output of
+&lt;strong&gt;xvinfo&lt;&#x2F;strong&gt; (&lt;code&gt;no adaptors present&lt;&#x2F;code&gt;).&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;I curiously looked at &lt;a href=&quot;http:&#x2F;&#x2F;backports.debian.org&#x2F;&quot;&gt;the backports&lt;&#x2F;a&gt;, and found Linux kernel 2.6.38
+(Squeeze has 2.6.32). I didn&#x27;t expect much from it, but installed it
+anyway (I heard that it has improved desktop responsiveness). I was
+pleasantly surprised to find that it fixed the above two problems.
+Loveliness.&lt;&#x2F;p&gt;
+&lt;p&gt;On another note, I found that Mercurial 1.8 also has a backport. This is
+great news because I have repositories I created with that version and
+the format is incompatible with Squeeze&#x27;s 1.6.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+    </channel>
+</rss>

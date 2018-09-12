@@ -1,0 +1,455 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tshepang logs</title>
+        <link>http://tshepang.net</link>
+        <description></description>
+        <generator>Gutenberg</generator>
+        <language>en</language>
+        <atom:link href="http://tshepang.net/tags/developer-of-note/rss.xml/" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Thu, 04 Feb 2016 00:00:00 +0000</lastBuildDate>
+        
+            <item>
+                <title>about &#x27;developer of note&#x27; series</title>
+                <pubDate>Thu, 04 Feb 2016 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/about-developer-of-note-series/</link>
+                <guid>http://tshepang.net/about-developer-of-note-series/</guid>
+                <description>&lt;p&gt;I respect a lot of software developers, but many of those are not going
+to have an entry in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;tags#developer-of-note-ref&quot;&gt;this series&lt;&#x2F;a&gt;, and not because they are lesser in my
+eyes... I need a news item that would trigger a post. Thing is, if you
+write about someone, you actually need to have some content (duh!), and
+saying &amp;quot;Guide van Rossum rocks for creating Python, and am grateful!&amp;quot;
+is simply not enough, hence a need for a trigger. In fact, I used to
+call this series &lt;em&gt;developer of the moment&lt;&#x2F;em&gt;, but at some point felt that
+the new name is more fitting, especially since a few of these developers
+generated some new triggers along the way.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>developer of note: Brett Cannon</title>
+                <pubDate>Mon, 24 Feb 2014 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/developer-of-note-brett-cannon/</link>
+                <guid>http://tshepang.net/developer-of-note-brett-cannon/</guid>
+                <description>&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;sayspy.blogspot.ca&#x2F;2013&#x2F;04&#x2F;a-decade-of-commits.html&quot;&gt;A core CPython developer&lt;&#x2F;a&gt;, Dr. Brett Cannon is among the key people
+pushing Python 3 forward, examples being:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;He once developed &lt;a href=&quot;http:&#x2F;&#x2F;py3ksupport.appspot.com&quot;&gt;a site&lt;&#x2F;a&gt; that displayed progress of support by
+major Python projects.&lt;&#x2F;li&gt;
+&lt;li&gt;He repeatedly gives talks on the topic.&lt;&#x2F;li&gt;
+&lt;li&gt;Most recently, he has developed &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;brettcannon&#x2F;caniusepython3&quot;&gt;a tool that checks which
+dependencies of a project lack Python 3 support&lt;&#x2F;a&gt;. It&#x27;s weird that a
+tool like this is only available now, over 5 years since Python 3.0
+was released.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;In addition to that:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;sayspy.blogspot.ca&#x2F;2012&#x2F;02&#x2F;how-i-bootstrapped-importlib.html&quot;&gt;He keeps improving the Python import system&lt;&#x2F;a&gt;, which is reportedly a
+complex beast.&lt;&#x2F;li&gt;
+&lt;li&gt;I am grateful that &lt;a href=&quot;http:&#x2F;&#x2F;sayspy.blogspot.ca&#x2F;2009&#x2F;03&#x2F;why-python-is-switching-to-mercurial.html&quot;&gt;he championed the move from Subversion to
+Mercurial for CPython development&lt;&#x2F;a&gt;. I held back participating in
+CPython development until this move was complete... Subversion is
+that painful to use.&lt;&#x2F;li&gt;
+&lt;li&gt;He created &lt;a href=&quot;http:&#x2F;&#x2F;docs.python.org&#x2F;devguide&quot;&gt;Python Developer&#x27;s Guide&lt;&#x2F;a&gt;, a great guide for those
+wishing to help out with core CPython development.&lt;&#x2F;li&gt;
+&lt;li&gt;Personally, &lt;a href=&quot;http:&#x2F;&#x2F;sayspy.blogspot.ca&#x2F;2013&#x2F;04&#x2F;why-im-signing-up-for-gittip.html&quot;&gt;he inspired me to take a serious look at Gittip&lt;&#x2F;a&gt;,
+resulting in my participation.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;There&#x27;s a lot more stuff he been doing for Python. Busy, busy guy.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>developer of note: Armin Rigo</title>
+                <pubDate>Sun, 13 Oct 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/developer-of-note-armin-rigo/</link>
+                <guid>http://tshepang.net/developer-of-note-armin-rigo/</guid>
+                <description>&lt;p&gt;Co-founder and lead developer of arguably the most exciting project in
+the Python ecosystem, &lt;a href=&quot;http:&#x2F;&#x2F;pypy.org&quot;&gt;PyPy&lt;&#x2F;a&gt;. He is also credited with doing the bulk of
+the work in building its &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;great-praise-for-the-rpython-translation-toolchain&quot;&gt;legendary RPython translation framework&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;p&gt;What inspired this post (originally published 2013-03-31) is the
+incredible honor given by the great Raymond Hettinger in &lt;a href=&quot;http:&#x2F;&#x2F;pyvideo.org&#x2F;video&#x2F;1669&#x2F;keynote-3&quot;&gt;one of his
+PyCon US 2013 talks&lt;&#x2F;a&gt;, where he deems him &amp;quot;probably the smartest person
+I have ever met&amp;quot;. Given that there isn&#x27;t a shortage of brilliance in
+the Python community, that&#x27;s some serious kudos.&lt;&#x2F;p&gt;
+&lt;p&gt;Also, here is what one of speakers at that conferences said:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;... Armin Rigo is awesome - he&#x27;s perhaps the only incredibly
+intelligent person involved with programming I&#x27;ve met who seemed
+genuinely happy about life (and not grumpy at all).&lt;&#x2F;p&gt;
+&lt;p&gt;-- &lt;a href=&quot;http:&#x2F;&#x2F;ashfall.github.io&#x2F;blog&#x2F;2013&#x2F;03&#x2F;23&#x2F;pycon-2013-down-the-rabbit-hole&quot;&gt;source&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>developer of note: Barry Warsaw</title>
+                <pubDate>Tue, 28 May 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/developer-of-note-barry-warsaw/</link>
+                <guid>http://tshepang.net/developer-of-note-barry-warsaw/</guid>
+                <description>&lt;p&gt;This guy, both an official Ubuntu developer and a core &lt;a href=&quot;http:&#x2F;&#x2F;python.org&quot;&gt;CPython&lt;&#x2F;a&gt;
+developer, is a great example of a FLOSS collaborator. He is always
+polite on mailing list discussions, kindly and &lt;a href=&quot;https:&#x2F;&#x2F;lists.debian.org&#x2F;debian-devel&#x2F;2013&#x2F;05&#x2F;msg01357.html&quot;&gt;patiently helps foster
+collaboration between Debian and Ubuntu&lt;&#x2F;a&gt; (there&#x27;s been some conflicts
+between the two camps). This is on top of his superb technical efforts
+demonstrated by his highly-detailed guides on various things, like
+upgrading various Python projects to run on Python 3 (&lt;a href=&quot;http:&#x2F;&#x2F;www.wefearchange.org&#x2F;2012&#x2F;01&#x2F;debian-package-for-python-2-and-3.html&quot;&gt;example 1&lt;&#x2F;a&gt;,
+&lt;a href=&quot;http:&#x2F;&#x2F;www.wefearchange.org&#x2F;2012&#x2F;01&#x2F;python-3-porting-fun-redux.html&quot;&gt;example 2&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;www.wefearchange.org&#x2F;2011&#x2F;12&#x2F;lessons-in-porting-to-python-3.html&quot;&gt;example 3&lt;&#x2F;a&gt;).&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>developer of note: Nick Coghlan</title>
+                <pubDate>Tue, 28 May 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/developer-of-note-nick-coghlan/</link>
+                <guid>http://tshepang.net/developer-of-note-nick-coghlan/</guid>
+                <description>&lt;p&gt;This is easily among the most active of all core CPython developers. His
+productivity is ridiculous, and I seriously wonder how he manages to do
+all he does, especially since &lt;a href=&quot;http:&#x2F;&#x2F;mail.python.org&#x2F;pipermail&#x2F;python-ideas&#x2F;2012-February&#x2F;014139.html&quot;&gt;he does it in his free time&lt;&#x2F;a&gt;. He also
+tends to be quite stern, which is extra kool since he does it while
+displaying &lt;a href=&quot;http:&#x2F;&#x2F;mail.python.org&#x2F;pipermail&#x2F;python-ideas&#x2F;2012-February&#x2F;013835.html&quot;&gt;great depth of knowledge&lt;&#x2F;a&gt; and &lt;a href=&quot;http:&#x2F;&#x2F;hg.python.org&#x2F;peps&#x2F;rev&#x2F;8a6e3b28dbef&quot;&gt;maturity&lt;&#x2F;a&gt;. Also, his great
+work has been &lt;a href=&quot;http:&#x2F;&#x2F;www.python.org&#x2F;community&#x2F;awards&#x2F;psf-awards&#x2F;#september-2011&quot;&gt;officially recognized by the Python Software Foundation&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The first work that prompted this recognition as &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;tags#developer-of-note-ref&quot;&gt;developer of note&lt;&#x2F;a&gt; is
+the proposal, &lt;a href=&quot;http:&#x2F;&#x2F;www.python.org&#x2F;dev&#x2F;peps&#x2F;pep-0413&#x2F;&quot;&gt;PEP 413&lt;&#x2F;a&gt;. The idea is that the Python standard library
+(stdlib) should release at a quicker rate than the Python language
+itself. This is a nice balance between two camps: those favoring
+&lt;em&gt;stability&lt;&#x2F;em&gt; over quicker availability of features, and those favoring
+the opposite. The PEP (Python Enhancement Proposal) is quite thorough,
+and is partly in opposition to the earlier &lt;a href=&quot;http:&#x2F;&#x2F;www.python.org&#x2F;dev&#x2F;peps&#x2F;pep-0407&quot;&gt;PEP 407&lt;&#x2F;a&gt;, which proposes
+that all of CPython (the language and its stdlib) should release faster.
+Nick Coghlan outlines the disadvantages with that approach in PEP 413 as
+well.&lt;&#x2F;p&gt;
+&lt;p&gt;Another PEP he is working on is &lt;a href=&quot;http:&#x2F;&#x2F;www.python.org&#x2F;dev&#x2F;peps&#x2F;pep-0432&quot;&gt;PEP 432&lt;&#x2F;a&gt;. Titled &lt;em&gt;Simplifying the
+CPython startup sequence&lt;&#x2F;em&gt;, it&#x27;s a highly detailed proposal to
+re-organise some of CPython code to ease maintenance. His deep knowledge
+on the project&#x27;s internals is also on display.&lt;&#x2F;p&gt;
+&lt;p&gt;Nick also builds and maintains a collection of notes known simply as
+&lt;a href=&quot;http:&#x2F;&#x2F;python-notes.boredomandlaziness.org&#x2F;en&#x2F;latest&#x2F;index.html&quot;&gt;Nick Coghlan&#x27;s Python Notes&lt;&#x2F;a&gt;. There is much wisdom there (complete
+with high quality clear writing), favorite of which is the just-updated
+&lt;a href=&quot;http:&#x2F;&#x2F;python-notes.boredomandlaziness.org&#x2F;en&#x2F;latest&#x2F;pep_ideas&#x2F;core_packaging_api.html#incremental-plans-to-improve-python-packaging&quot;&gt;Incremental Plans to Improve Python Packaging&lt;&#x2F;a&gt;, a thorough write-up on
+the history, current state, and future plans regarding the story of
+packaging (and installation) in the Python ecosystem. He also happens to
+be a great champion in pushing for progress on that front.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>developer of note: Vinay Sajip</title>
+                <pubDate>Sun, 31 Mar 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/developer-of-note-vinay-sajip/</link>
+                <guid>http://tshepang.net/developer-of-note-vinay-sajip/</guid>
+                <description>&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;plumberjack.blogspot.com&#x2F;&quot;&gt;Vinay Sajip&lt;&#x2F;a&gt; is the maintainer of &lt;a href=&quot;http:&#x2F;&#x2F;docs.python.org&#x2F;library&#x2F;logging&quot;&gt;logging&lt;&#x2F;a&gt;, a Python logging
+library&#x2F;module, available in the standard library. What prompted this
+post is his tireless improvements, not just to the software itself, but
+also the documentation surrounding it (&lt;a href=&quot;http:&#x2F;&#x2F;plumberjack.blogspot.com&#x2F;2011&#x2F;04&#x2F;logging-documentation-for-python-27.html&quot;&gt;example&lt;&#x2F;a&gt;). It&#x27;s all the more
+impressive that he continuously blogs about various ways to use the
+module, and maintains &lt;a href=&quot;http:&#x2F;&#x2F;docs.python.org&#x2F;howto&#x2F;logging-cookbook&quot;&gt;a bunch of nuggets on advanced usage&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;One early event, which is likely the first time I noticed him, is the
+time when he rebutted some apparently inaccurate claims against the
+module, at which he responded in a &lt;a href=&quot;http:&#x2F;&#x2F;plumberjack.blogspot.com&#x2F;2010&#x2F;09&#x2F;python-logging-functionality-facts-vs.html&quot;&gt;highly-detailed post&lt;&#x2F;a&gt;, which that
+lent credence to the module. This inspired me to give it a try, and
+&lt;a href=&quot;http:&#x2F;&#x2F;docs.python.org&#x2F;howto&#x2F;logging.html&quot;&gt;it&#x27;s not that hard&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;There&#x27;s one other project he works on, &lt;a href=&quot;http:&#x2F;&#x2F;sarge.readthedocs.org&quot;&gt;sarge&lt;&#x2F;a&gt;, which is like
+&lt;a href=&quot;http:&#x2F;&#x2F;docs.python.org&#x2F;library&#x2F;subprocess&quot;&gt;subprocess&lt;&#x2F;a&gt; on steroids. Have a look at &lt;a href=&quot;http:&#x2F;&#x2F;sarge.readthedocs.org&#x2F;en&#x2F;latest&#x2F;overview.html#why-not-just-use-subprocess&quot;&gt;why he created it&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Lately, he is working on &lt;a href=&quot;https:&#x2F;&#x2F;distlib.readthedocs.org&#x2F;en&#x2F;latest&#x2F;&quot;&gt;distlib&lt;&#x2F;a&gt;, a library which implements low-level
+functions that relate to packaging and distribution of Python software.
+This excites me a lot since it&#x27;s a key piece in the latest attempt at
+fixing Python packaging once and for all.&lt;&#x2F;p&gt;
+&lt;p&gt;On top of all this, he is very active on Stack Overflow, having answered
+&lt;a href=&quot;http:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;118903&#x2F;vinay-sajip?tab=answers&quot;&gt;hundreds of questions&lt;&#x2F;a&gt; there. Amazing!&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>developer of note: Jeff Forcier</title>
+                <pubDate>Tue, 15 Jan 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/developer-of-note-jeff-forcier/</link>
+                <guid>http://tshepang.net/developer-of-note-jeff-forcier/</guid>
+                <description>&lt;p&gt;The strength of character that &lt;a href=&quot;http:&#x2F;&#x2F;bitprophet.org&#x2F;about&#x2F;index.html&quot;&gt;Jeff &#x27;bitprophet&#x27; Forcier&lt;&#x2F;a&gt; possesses
+is admirable. He is the lead developer of &lt;a href=&quot;http:&#x2F;&#x2F;fabfile.org&quot;&gt;fabric&lt;&#x2F;a&gt;, the most popular
+deployment tool written in Python. I honor him here due to how he
+handled the issues with &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;paramiko&#x2F;paramiko&quot;&gt;paramiko&lt;&#x2F;a&gt;, the library that fabric uses
+heavily. He had to make tough decisions, like embedding that library in
+fabric source (due to various issues), and even forking it. All of this
+of course involved a lot of work and discussing, and thankfully at the
+end, the original &#x27;owner&#x27; of that indispensable piece of software
+relented and transferred it to this bitprophet character. This means
+Jeff now runs 2 of the most important tools in all of the Python
+world... &lt;a href=&quot;http:&#x2F;&#x2F;bitprophet.org&#x2F;blog&#x2F;2012&#x2F;09&#x2F;29&#x2F;paramiko-and-ssh&#x2F;&quot;&gt;more of the gory details&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>developer of note: Michael Meeks</title>
+                <pubDate>Thu, 09 Aug 2012 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/developer-of-note-michael-meeks/</link>
+                <guid>http://tshepang.net/developer-of-note-michael-meeks/</guid>
+                <description>&lt;p&gt;Being the most visible LibreOffice (and formerly, OpenOffice.org)
+developer for a number of years now, he is also a tireless communicator
+and organiser. The switch from OpenOffice.org to LibreOffice was not
+exactly a smooth ride, but this guy kept showing a positive attitude
+throughout. In &lt;a href=&quot;http:&#x2F;&#x2F;people.gnome.org&#x2F;%7Emichael&#x2F;blog&#x2F;2012-08-08-libreoffice-3-6-0.html&quot;&gt;the latest&lt;&#x2F;a&gt; of his longer-form blog posts (he normally
+writes tiny updates), he exposes the great progress that LibreOffice has
+had. This is not the most glamorous of software projects, but it
+certainly is among the most important in the world of &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;FLOSS&quot;&gt;FLOSS&lt;&#x2F;a&gt;, and it&#x27;s
+kool to have people keeping it going.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>developer of note: Victor Stinner</title>
+                <pubDate>Sat, 09 Jun 2012 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/developer-of-note-victor-stinner/</link>
+                <guid>http://tshepang.net/developer-of-note-victor-stinner/</guid>
+                <description>&lt;p&gt;Depending on the change, contributing to open source software can be
+intensely challenging. Referring specifically to CPython, the reference
+implementation of my favorite programming language, you can have
+hundreds of messages on the mailing lists, and at times, many more in
+the issue tracking system, all discussing the change in mind. Such
+changes are most often accompanied with a &lt;a href=&quot;http:&#x2F;&#x2F;www.python.org&#x2F;dev&#x2F;peps&#x2F;pep-0001&#x2F;&quot;&gt;PEP&lt;&#x2F;a&gt; (Python Enhancement
+Proposal), a document which is basically a design spec for such a
+change. It also, helpfully, summarises the arguments against the change,
+and addresses them while at it.&lt;&#x2F;p&gt;
+&lt;p&gt;Given all that, it can be quite challenging for any one individual to
+champion such important changes, and an example of one such heroic
+individual is &lt;a href=&quot;http:&#x2F;&#x2F;www.haypocalc.com&#x2F;wiki&#x2F;Accueil&quot;&gt;Victor Stinner&lt;&#x2F;a&gt;, a core CPython developer. He is the most
+visible of the guys who helped ensure acceptance of &lt;a href=&quot;http:&#x2F;&#x2F;www.python.org&#x2F;dev&#x2F;peps&#x2F;pep-0418&#x2F;&quot;&gt;PEP 418&lt;&#x2F;a&gt;, which
+proposes some time-related additions and improvements to the standard
+library&#x27;s &lt;a href=&quot;http:&#x2F;&#x2F;doc.python.org&#x2F;library&#x2F;time&quot;&gt;time module&lt;&#x2F;a&gt;. The sheer amount of discussion that went
+around this particular PEP was ridiculous. The mailing list discussions
+were practically endless, and so were the updates to the PEP, not to
+mention the amount of research involved, which was needed in order to
+have CPython expose this functionality in a cross-platform manner. Now,
+that&#x27;s some serious perseverance.&lt;&#x2F;p&gt;
+&lt;p&gt;In addition to this work, the guy has done a heck of a lot of work in
+cleaning up, re-factoring, and optimizing the string-handling code. I
+can&#x27;t imagine that this stuff is easy, especially since a large portion
+of it is in C! There&#x27;s a whole lot more work he has done... he&#x27;s
+among the most prolific of all core CPython developers.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>developer of note: Martin Pitt</title>
+                <pubDate>Tue, 15 May 2012 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/developer-of-note-martin-pitt/</link>
+                <guid>http://tshepang.net/developer-of-note-martin-pitt/</guid>
+                <description>&lt;p&gt;I suspect that &lt;a href=&quot;http:&#x2F;&#x2F;www.postgresql.org&#x2F;&quot;&gt;PostgreSQL&lt;&#x2F;a&gt; isn&#x27;t a trivial piece of software, and I
+consider it among the greatest of all FLOSS. It even bills itself the
+most advanced of all FLOSS databases. That&#x27;s what brought &lt;a href=&quot;http:&#x2F;&#x2F;www.piware.de&#x2F;&quot;&gt;Martin Pitt&lt;&#x2F;a&gt;
+to my attention, for he is it&#x27;s Debian (and now also Ubuntu)
+maintainer. One other notable thing about him is his quiet persona (I
+follow Debian development fairly closely, and I don&#x27;t remember seeing
+him take part in any of the arguments in its mailing lists). I only ever
+notice him when he&#x27;d give &lt;a href=&quot;http:&#x2F;&#x2F;www.piware.de&#x2F;2011&#x2F;09&#x2F;dropping-postgresql-9-0-packages-for-debianubuntubackports&#x2F;&quot;&gt;some random&lt;&#x2F;a&gt; &lt;a href=&quot;http:&#x2F;&#x2F;www.piware.de&#x2F;2012&#x2F;05&#x2F;packages-for-postgresql-9-2-beta-1-now-available&#x2F;&quot;&gt;status update&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>developer of note: Stefano Zacchiroli</title>
+                <pubDate>Sun, 15 Apr 2012 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/developer-of-note-stefano-zacchiroli/</link>
+                <guid>http://tshepang.net/developer-of-note-stefano-zacchiroli/</guid>
+                <description>&lt;p&gt;I admire &lt;a href=&quot;http:&#x2F;&#x2F;upsilon.cc&#x2F;%7Ezack&quot;&gt;this guy&lt;&#x2F;a&gt; a lot:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;his great passion for Debian (he speaks on behalf of it on a variety
+of events)&lt;&#x2F;li&gt;
+&lt;li&gt;mature and thoughtfulness in a variety of debates regarding this or
+that decision within Debian&lt;&#x2F;li&gt;
+&lt;li&gt;his ongoing push for collaboration between Debian and other distros&lt;&#x2F;li&gt;
+&lt;li&gt;his positive outlook for Debian, at a time when many are worried
+about its loss of relevance&lt;&#x2F;li&gt;
+&lt;li&gt;his passion for software freedom (we need people like this in an age
+where people tend to trade freedom for pragmatism)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;To prove I&#x27;m not the only one, there a bunch more guys who were happy
+enough with his 2010 term as Debian Project Leader (DPL), that they
+re-elected him again. What&#x27;s more interesting is that no one else stood
+for election. He also won the term &lt;a href=&quot;https:&#x2F;&#x2F;lists.debian.org&#x2F;debian-announce&#x2F;2012&#x2F;msg00008.html&quot;&gt;the third time&lt;&#x2F;a&gt;, so will reign over
+Debian in 2012.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>developer of note: John Palmieri</title>
+                <pubDate>Tue, 20 Sep 2011 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/developer-of-note-john-palmieri/</link>
+                <guid>http://tshepang.net/developer-of-note-john-palmieri/</guid>
+                <description>&lt;p&gt;Every so often, there appears a developer who pressures me away from my
+lazy, unfocused, and undisciplined ass to go do some useful programming.
+This time around it&#x27;s John Palmieri, the most visible of the developers
+of &lt;a href=&quot;https:&#x2F;&#x2F;wiki.gnome.org&#x2F;Projects&#x2F;PyGObject&quot;&gt;PyGObject&lt;&#x2F;a&gt; (Python bindings for GTK+ and GLib). The old way of using
+GTK+ with Python has for years been PyGTK and this guy has been
+tirelessly working to move the world to the more modern PyGObject, and
+has led at least one coding sprint to help achieve this goal. He also
+appears friendly and humble. He rocks!&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>developer of note: Josselin Mouette</title>
+                <pubDate>Fri, 08 Apr 2011 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/developer-of-note-josselin-mouette/</link>
+                <guid>http://tshepang.net/developer-of-note-josselin-mouette/</guid>
+                <description>&lt;p&gt;The efforts that Josselin Mouette puts into maintaining Debian&#x27;s GNOME
+are amazing (and seemingly thankless). He is the most visible member of
+that team-maintained part of Debian. He also portrays deep knowledge of
+GNOME&#x27;s oft-inconsistent and oft-complex internals, and does
+participate in upstream discussions.&lt;&#x2F;p&gt;
+&lt;p&gt;Here are two examples of his heroic efforts:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;His &lt;a href=&quot;http:&#x2F;&#x2F;lists.debian.org&#x2F;debian-release&#x2F;2009&#x2F;08&#x2F;msg00211.html&quot;&gt;great summary&lt;&#x2F;a&gt; of GNOME&#x27;s then-current release status.&lt;&#x2F;li&gt;
+&lt;li&gt;With the release of GNOME 3, here he prepares &lt;a href=&quot;http:&#x2F;&#x2F;lists.debian.org&#x2F;debian-gtk-gnome&#x2F;2011&#x2F;04&#x2F;msg00006.html&quot;&gt;a migration plan&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>developer of note: Martyn Russell</title>
+                <pubDate>Fri, 10 Sep 2010 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/developer-of-note-martyn-russell/</link>
+                <guid>http://tshepang.net/developer-of-note-martyn-russell/</guid>
+                <description>&lt;p&gt;Martyn Russell is &lt;a href=&quot;http:&#x2F;&#x2F;projects.gnome.org&#x2F;tracker&#x2F;&quot;&gt;Tracker&lt;&#x2F;a&gt;&#x27;s release manager, and being a fan of the
+project since the early pre-1.0 days, I have quite familiar with his
+work. But what triggered this honor is his work on &lt;a href=&quot;http:&#x2F;&#x2F;blogs.gnome.org&#x2F;mr&#x2F;2010&#x2F;09&#x2F;08&#x2F;tracker-needle&#x2F;&quot;&gt;Tracker Needle&lt;&#x2F;a&gt;
+(written in Vala), Tracker&#x27;s new GUI search tool, to replace the
+inadequate Tracker Search Tool (written in C). I&#x27;ve taken a look, and
+the design is pretty modern (check the video he gives in his
+&lt;a href=&quot;http:&#x2F;&#x2F;blogs.gnome.org&#x2F;mr&#x2F;2010&#x2F;09&#x2F;08&#x2F;tracker-needle&#x2F;&quot;&gt;announcement&lt;&#x2F;a&gt;).&lt;&#x2F;p&gt;
+&lt;p&gt;But Martyn has of course done &lt;a href=&quot;http:&#x2F;&#x2F;git.gnome.org&#x2F;browse&#x2F;tracker&#x2F;log&#x2F;?qt=author&amp;amp;q=martyn&quot;&gt;far more&lt;&#x2F;a&gt; for Tracker, and does a pretty
+damn good job managing the release. One thing he did outside of Tracker
+that I&#x27;m aware of is the re-design the &lt;a href=&quot;http:&#x2F;&#x2F;gtk.org&quot;&gt;http:&#x2F;&#x2F;gtk.org&lt;&#x2F;a&gt; page, giving it
+a very modern look (which it desperately needed).&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>developer of note: Philip van Hoof</title>
+                <pubDate>Fri, 13 Aug 2010 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/developer-of-note-philip-van-hoof/</link>
+                <guid>http://tshepang.net/developer-of-note-philip-van-hoof/</guid>
+                <description>&lt;p&gt;There hasn&#x27;t been anyone who has &lt;a href=&quot;http:&#x2F;&#x2F;pvanhoof.be&#x2F;blog&#x2F;index.php&#x2F;category&#x2F;tracker&quot;&gt;publicly talked about Tracker&lt;&#x2F;a&gt; as
+hard as Phillip van Hoof ever since the project was started a few years
+ago. He has recently &lt;a href=&quot;http:&#x2F;&#x2F;mail.gnome.org&#x2F;archives&#x2F;tracker-list&#x2F;2010-August&#x2F;msg00008.html&quot;&gt;outlined the current improvements and future
+plans&lt;&#x2F;a&gt; to make it rock even harder (and of course I understand very
+little of it, since there&#x27;s jargon all over the place, and &lt;a href=&quot;http:&#x2F;&#x2F;projects.gnome.org&#x2F;tracker&#x2F;&quot;&gt;Tracker&lt;&#x2F;a&gt;
+actually covers new ground).&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>developer of note: Alexander Reichle-Schmehl</title>
+                <pubDate>Sat, 24 Jul 2010 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/developer-of-note-alexander-reichle-schmehl/</link>
+                <guid>http://tshepang.net/developer-of-note-alexander-reichle-schmehl/</guid>
+                <description>&lt;p&gt;Debian got so many people doing what seem like thankless jobs in an
+effort to improve it. One of those guys is Alexander Reichle-Schmehl
+(look at my struggling tongue), who has for a number of months been
+pushing an initiative to fix a bunch of RC bugs weekly (&lt;a href=&quot;http:&#x2F;&#x2F;blog.schmehl.info&#x2F;2010&#x2F;07&#x2F;22#rc-squashing-squeeze-1&quot;&gt;example&lt;&#x2F;a&gt;). This
+developer has been busy &lt;a href=&quot;http:&#x2F;&#x2F;blog.schmehl.info&#x2F;Debian&#x2F;rc-stats&quot;&gt;keeping track of RC bug counts&lt;&#x2F;a&gt;, reducing the
+need for me to go check myself.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>developer of note: Aleksander Morgado</title>
+                <pubDate>Thu, 20 May 2010 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/developer-of-note-aleksander-morgado/</link>
+                <guid>http://tshepang.net/developer-of-note-aleksander-morgado/</guid>
+                <description>&lt;p&gt;The &lt;a href=&quot;http:&#x2F;&#x2F;projects.gnome.org&#x2F;tracker&#x2F;&quot;&gt;Tracker&lt;&#x2F;a&gt; team got this new guy, &lt;a href=&quot;http:&#x2F;&#x2F;sigquit.wordpress.com&#x2F;&quot;&gt;Aleksander Morgado&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;mail.gnome.org&#x2F;archives&#x2F;tracker-list&#x2F;2010-May&#x2F;msg00006.html&quot;&gt;doing&lt;&#x2F;a&gt;
+&lt;a href=&quot;http:&#x2F;&#x2F;mail.gnome.org&#x2F;archives&#x2F;tracker-list&#x2F;2010-May&#x2F;msg00037.html&quot;&gt;fabulous&lt;&#x2F;a&gt; &lt;a href=&quot;http:&#x2F;&#x2F;mail.gnome.org&#x2F;archives&#x2F;tracker-list&#x2F;2010-May&#x2F;msg00054.html&quot;&gt;work&lt;&#x2F;a&gt; &lt;a href=&quot;http:&#x2F;&#x2F;mail.gnome.org&#x2F;archives&#x2F;tracker-list&#x2F;2010-April&#x2F;msg00097.html&quot;&gt;on&lt;&#x2F;a&gt; Tracker&#x27;s extraction code. He does so while
+also providing thorough info on his activities.&lt;&#x2F;p&gt;
+&lt;p&gt;One thing that prompted me to honor him is his work on adding options to
+disable stop words, as well as to enable number indexing, fixing an old
+gripe of mine.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>developer of note: Michael Biebl</title>
+                <pubDate>Wed, 14 Apr 2010 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/developer-of-note-michael-biebl/</link>
+                <guid>http://tshepang.net/developer-of-note-michael-biebl/</guid>
+                <description>&lt;p&gt;So I really do honor all Debian Developers especially when they are
+named &lt;a href=&quot;http:&#x2F;&#x2F;qa.debian.org&#x2F;developer.php?login=biebl@debian.org&quot;&gt;Michael Biebl&lt;&#x2F;a&gt;. This guy is the lone maintainer of &lt;a href=&quot;http:&#x2F;&#x2F;projects.gnome.org&#x2F;tracker&#x2F;&quot;&gt;Tracker&lt;&#x2F;a&gt; and
+rsyslog in Debian (among others). Not just that but he is also a
+co-maintainer of a large number of GNOME technologies (gnome-session,
+dbus, avahi, gnome-power-manager, gvfs, hal, network-manager...).&lt;&#x2F;p&gt;
+&lt;p&gt;I love especially his role as some sorta QA for Tracker (he&#x27;s done a
+terrific job of it +++ most recently offering &lt;a href=&quot;http:&#x2F;&#x2F;mail.gnome.org&#x2F;archives&#x2F;tracker-list&#x2F;2010-April&#x2F;msg00044.html&quot;&gt;a bunch of patches&lt;&#x2F;a&gt; to
+fix some linking problems in the code). Oh, and I&#x27;m not the only one
+who noticed +++ &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;developer-of-note-josselin-mouette&quot;&gt;the great Josselin Mouette&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;np237.livejournal.com&#x2F;26532.html&quot;&gt;did offer accolades too&lt;&#x2F;a&gt;
+for Michael&#x27;s other work.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>developer of note: Manoj Srivastava</title>
+                <pubDate>Fri, 19 Dec 2008 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/developer-of-note-manoj-srivastava/</link>
+                <guid>http://tshepang.net/developer-of-note-manoj-srivastava/</guid>
+                <description>&lt;p&gt;Manoj Srivastava has for a number of years been Project Secretary, a
+very key role in Debian, a role where the incumbent runs project voting.
+What prompted this post is &lt;a href=&quot;http:&#x2F;&#x2F;lists.debian.org&#x2F;debian-vote&#x2F;2008&#x2F;12&#x2F;msg00275.html&quot;&gt;his recent resignation&lt;&#x2F;a&gt;, which was
+encouraged by hostility towards the handling of the recent controversial
+ballot. As evidenced by the &lt;a href=&quot;http:&#x2F;&#x2F;lists.debian.org&#x2F;debian-vote&#x2F;2008&#x2F;12&#x2F;msg00285.html&quot;&gt;various&lt;&#x2F;a&gt; &lt;a href=&quot;http:&#x2F;&#x2F;lists.debian.org&#x2F;debian-vote&#x2F;2008&#x2F;12&#x2F;msg00292.html&quot;&gt;supporters&lt;&#x2F;a&gt; and my own
+experience, he happens to be among the wisest of all DD&#x27;s. He is also
+among the most senior of all, having been involved since 1995.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>developer of note: Andreas Barth</title>
+                <pubDate>Tue, 10 Jun 2008 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/developer-of-note-andreas-barth/</link>
+                <guid>http://tshepang.net/developer-of-note-andreas-barth/</guid>
+                <description>&lt;p&gt;Andreas Barth is about as a great a Debian release manager as Steve
+Langasek, and though he recently stated &lt;a href=&quot;http:&#x2F;&#x2F;lists.debian.org&#x2F;debian-devel-announce&#x2F;2008&#x2F;05&#x2F;msg00000.html&quot;&gt;the wish to reduce time on
+release management&lt;&#x2F;a&gt;, he just did a &lt;a href=&quot;http:&#x2F;&#x2F;lists.debian.org&#x2F;debian-hppa&#x2F;2008&#x2F;06&#x2F;msg00022.html&quot;&gt;thorough analysis on the status of
+the hppa port&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>developer of note: Alexander Larsson</title>
+                <pubDate>Fri, 09 Nov 2007 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/developer-of-note-alexander-larsson/</link>
+                <guid>http://tshepang.net/developer-of-note-alexander-larsson/</guid>
+                <description>&lt;p&gt;I could not keep away from admiring the tremendous amount of work she
+does, most recently &lt;a href=&quot;http:&#x2F;&#x2F;mail.gnome.org&#x2F;archives&#x2F;desktop-devel-list&#x2F;2007-September&#x2F;msg00401.html&quot;&gt;GVFS and GIO&lt;&#x2F;a&gt; (both of which have just been
+&lt;a href=&quot;http:&#x2F;&#x2F;mail.gnome.org&#x2F;archives&#x2F;gnome-announce-list&#x2F;2007-November&#x2F;msg00006.html&quot;&gt;released&lt;&#x2F;a&gt;), and previously, GtkPrint.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>developer of note: Steve Langasek</title>
+                <pubDate>Mon, 11 Jun 2007 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/developer-of-note-steve-langasek/</link>
+                <guid>http://tshepang.net/developer-of-note-steve-langasek/</guid>
+                <description>&lt;p&gt;Steve Langasek has been Debian release manager for over two years and
+always managed to impress me with his technical knowledge of Debian
+packaging as well as relentless effort into getting this, the Debian
+system, into a releasable operating system. He is the definitive Debian
+watchdog, for I often pay attention when it&#x27;s his turn to talk on
+mailing lists, and he also happens to be among the most powerful of all
+DD&#x27;s (for it&#x27;s said that Debian release managers tend to be more
+powerful than Debian project leaders). Grandmaster!&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>developer of note: Aurelien Jarno</title>
+                <pubDate>Mon, 07 May 2007 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/developer-of-note-aurelien-jarno/</link>
+                <guid>http://tshepang.net/developer-of-note-aurelien-jarno/</guid>
+                <description>&lt;p&gt;In celebration of the beginning of this exercise, I recognize Aurelien
+Jarno as a very notable developer. This is due to his tireless efforts
+as the number one GLibC co-maintainer in Debian since several months (if
+the package&#x27;s debian changelog is to be relied upon). Also, GLibC,
+together with GCC and Linux, ought to be regarded as the most important
+packages of any GNU&#x2F;Linux system.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+    </channel>
+</rss>

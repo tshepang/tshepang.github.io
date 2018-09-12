@@ -1,0 +1,258 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tshepang logs</title>
+        <link>http://tshepang.net</link>
+        <description></description>
+        <generator>Gutenberg</generator>
+        <language>en</language>
+        <atom:link href="http://tshepang.net/tags/non-debian/rss.xml/" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Thu, 30 Oct 2014 00:00:00 +0000</lastBuildDate>
+        
+            <item>
+                <title>impressed by the ease of creating Upstart jobs</title>
+                <pubDate>Thu, 30 Oct 2014 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/impressed-by-the-ease-of-creating-upstart-jobs/</link>
+                <guid>http://tshepang.net/impressed-by-the-ease-of-creating-upstart-jobs/</guid>
+                <description>&lt;p&gt;At work, we run our systems on Ubuntu, which so far means the init
+system is Upstart. I needed to have one binary to start when the system
+boots, and because I&#x27;m horrified by sysvinit scripts (which Upstart
+supports), I decided to give creating an Upstart job a try. I was
+surprised how easy it was:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;exec &#x2F;usr&#x2F;local&#x2F;bin&#x2F;executable
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;start on startup
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;respawn
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;I placed a file with above contents in &lt;code&gt;&#x2F;etc&#x2F;init&#x2F;executable.conf&lt;&#x2F;code&gt;, and
+that&#x27;s pretty much it. Impressive.&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s what happens:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;exec&lt;&#x2F;code&gt; instructs Upstart what executable to run&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;start on&lt;&#x2F;code&gt; is an instruction on when to start the service&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;respawn&lt;&#x2F;code&gt; means the service should re-start if ever it dies for some
+reason&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;One convenient thing that&#x27;s happening is that stdout output of the
+service gets re-directed to a log file, in this case
+&lt;code&gt;&#x2F;var&#x2F;log&#x2F;upstart&#x2F;executable.log&lt;&#x2F;code&gt;. Cool stuff.&lt;&#x2F;p&gt;
+&lt;p&gt;I found help from &lt;a href=&quot;http:&#x2F;&#x2F;upstart.ubuntu.com&#x2F;getting-started.html&quot;&gt;Getting Started&lt;&#x2F;a&gt; and &lt;a href=&quot;http:&#x2F;&#x2F;upstart.ubuntu.com&#x2F;cookbook&quot;&gt;the Cookbook&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>project of note: Debian Installer</title>
+                <pubDate>Thu, 20 Mar 2014 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/project-of-note-debian-installer/</link>
+                <guid>http://tshepang.net/project-of-note-debian-installer/</guid>
+                <description>&lt;p&gt;I&#x27;ve looked at pretty installers like that of Ubuntu and Fedora, and
+they are all very easy and slick. But whenever I install Debian, I
+don&#x27;t really see how much harder it is to use, though it&#x27;s a lot
+uglier.&lt;&#x2F;p&gt;
+&lt;p&gt;Anyways, what triggered this post is the following tit-bit:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;d-i [Debian Installer] is the very first thing many of our users
+see, and has a huge range of uses, from simple desktop installs to
+massive corporate deployments; it&#x27;s unspeakably important that it
+works well, and it&#x27;s a testament to its design that it&#x27;s been able
+to trundle along without actually very much serious refactoring for
+the best part of five years now.&lt;&#x2F;p&gt;
+&lt;p&gt;-- &lt;a href=&quot;http:&#x2F;&#x2F;raphaelhertzog.com&#x2F;2010&#x2F;11&#x2F;25&#x2F;people-behind-debian-colin-watson&#x2F;&quot;&gt;an interview of Colin Watson&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;In addition, this tool (or rather, a set of tools) also happens to be
+rock-solid, and its great reliability and ease-of-use gets admiration
+from me on each install... I&#x27;ve done dozens, with not one instance of
+data loss.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>developer of note: Barry Warsaw</title>
+                <pubDate>Tue, 28 May 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/developer-of-note-barry-warsaw/</link>
+                <guid>http://tshepang.net/developer-of-note-barry-warsaw/</guid>
+                <description>&lt;p&gt;This guy, both an official Ubuntu developer and a core &lt;a href=&quot;http:&#x2F;&#x2F;python.org&quot;&gt;CPython&lt;&#x2F;a&gt;
+developer, is a great example of a FLOSS collaborator. He is always
+polite on mailing list discussions, kindly and &lt;a href=&quot;https:&#x2F;&#x2F;lists.debian.org&#x2F;debian-devel&#x2F;2013&#x2F;05&#x2F;msg01357.html&quot;&gt;patiently helps foster
+collaboration between Debian and Ubuntu&lt;&#x2F;a&gt; (there&#x27;s been some conflicts
+between the two camps). This is on top of his superb technical efforts
+demonstrated by his highly-detailed guides on various things, like
+upgrading various Python projects to run on Python 3 (&lt;a href=&quot;http:&#x2F;&#x2F;www.wefearchange.org&#x2F;2012&#x2F;01&#x2F;debian-package-for-python-2-and-3.html&quot;&gt;example 1&lt;&#x2F;a&gt;,
+&lt;a href=&quot;http:&#x2F;&#x2F;www.wefearchange.org&#x2F;2012&#x2F;01&#x2F;python-3-porting-fun-redux.html&quot;&gt;example 2&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;www.wefearchange.org&#x2F;2011&#x2F;12&#x2F;lessons-in-porting-to-python-3.html&quot;&gt;example 3&lt;&#x2F;a&gt;).&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>project of note: Discourse</title>
+                <pubDate>Sat, 11 May 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/project-of-note-discourse/</link>
+                <guid>http://tshepang.net/project-of-note-discourse/</guid>
+                <description>&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.codinghorror.com&#x2F;blog&#x2F;2013&#x2F;02&#x2F;civilized-discourse-construction-kit.html&quot;&gt;The announcement&lt;&#x2F;a&gt; by project lead, Jeff Atwood, sold me. This is one
+rather incredible guy, a game changer of sorts, most notable for helping
+create what is likely &lt;a href=&quot;http:&#x2F;&#x2F;stackoverflow.com&quot;&gt;the most important programming resource on the
+web&lt;&#x2F;a&gt;. So whenever he goes and creates something else, I naturally do pay
+attention, and this &lt;a href=&quot;http:&#x2F;&#x2F;www.discourse.org&quot;&gt;Discourse&lt;&#x2F;a&gt; thing looks amazing, at least from by
+limited usage so far.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>project of note: M cross environment</title>
+                <pubDate>Sat, 20 Apr 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/project-of-note-m-cross-environment/</link>
+                <guid>http://tshepang.net/project-of-note-m-cross-environment/</guid>
+                <description>&lt;p&gt;I spend several hours researching how to build a Qt app (written in C++)
+on Debian for users who will run it on Windows. I also wanted it be just
+one binary at the end so that deployment is just a matter of copying and
+running the one executable. This means I needed to statically-link the
+app, and the sad news is that I first needed a statically-linked Qt.&lt;&#x2F;p&gt;
+&lt;p&gt;If I had actually known of &lt;a href=&quot;http:&#x2F;&#x2F;mxe.cc&quot;&gt;M cross environment&lt;&#x2F;a&gt; (MXE), I would have
+shaved nearly all of those &#x27;wasted&#x27; hours. I am very grateful to the
+developers, especially because building Qt was mainly a matter of
+installing &lt;a href=&quot;http:&#x2F;&#x2F;mxe.cc&#x2F;#requirements-debian&quot;&gt;a few build dependencies&lt;&#x2F;a&gt; and running &lt;code&gt;make qt&lt;&#x2F;code&gt;. An hour or
+two later, I had a newly cross-compiled Qt waiting for my use. It was
+also pleasant that the app, in a form of a &lt;code&gt;.exe&lt;&#x2F;code&gt; file, just worked on
+Windows 7.&lt;&#x2F;p&gt;
+&lt;p&gt;Having a look around, the build system actually looks elegant, and is a
+lot simpler than the scary mess that is &lt;a href=&quot;https:&#x2F;&#x2F;live.gnome.org&#x2F;Jhbuild&quot;&gt;JHBuild&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;p&gt;I have published two guides on Stack Overflow on how this works, &lt;a href=&quot;http:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;13211922&#x2F;321731&quot;&gt;one
+for Qt 4&lt;&#x2F;a&gt; and &lt;a href=&quot;http:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;14170591&#x2F;321731&quot;&gt;another for Qt 5&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>links 2013-03-24</title>
+                <pubDate>Sun, 24 Mar 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/links-2013-03-24/</link>
+                <guid>http://tshepang.net/links-2013-03-24/</guid>
+                <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.bash.org&#x2F;?244321&quot;&gt;great IRC humor&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.impressivewebs.com&#x2F;css-white-space&#x2F;&quot;&gt;nice CSS white-space explanation&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;an &lt;a href=&quot;http:&#x2F;&#x2F;simeonfranklin.com&#x2F;blog&#x2F;2013&#x2F;mar&#x2F;17&#x2F;my-pycon-2013-poster&#x2F;&quot;&gt;interesting chart&lt;&#x2F;a&gt; on the pain beginners may feel when trying to
+use Python for particular tasks&lt;&#x2F;li&gt;
+&lt;li&gt;writing a solid feed reader &lt;a href=&quot;http:&#x2F;&#x2F;inessential.com&#x2F;2013&#x2F;03&#x2F;18&#x2F;brians_stupid_feed_tricks&quot;&gt;is not a joke&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;www.marco.org&#x2F;2013&#x2F;03&#x2F;19&#x2F;free-works&quot;&gt;via&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;I got deeply excited as I read about &lt;a href=&quot;http:&#x2F;&#x2F;www.linuxfromscratch.org&#x2F;hints&#x2F;downloads&#x2F;files&#x2F;more_control_and_pkg_man.txt&quot;&gt;a nice scheme of manual
+package management&lt;&#x2F;a&gt;, one of the many &lt;a href=&quot;http:&#x2F;&#x2F;www.linuxfromscratch.org&#x2F;hints&#x2F;list.html&quot;&gt;LFS hints&lt;&#x2F;a&gt;. I am looking
+forward to the challenge (which may result in me ditching Debian for
+home use).&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>links 2013-03-14</title>
+                <pubDate>Thu, 14 Mar 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/links-2013-03-14/</link>
+                <guid>http://tshepang.net/links-2013-03-14/</guid>
+                <description>&lt;ul&gt;
+&lt;li&gt;each feature release of Python comes with a great amount of changes,
+but I was particularly impressed by &lt;a href=&quot;http:&#x2F;&#x2F;docs.python.org&#x2F;3&#x2F;whatsnew&#x2F;3.2&quot;&gt;those of 3.2&lt;&#x2F;a&gt;; the latest such
+release &lt;a href=&quot;http:&#x2F;&#x2F;docs.python.org&#x2F;3&#x2F;whatsnew&#x2F;3.3&quot;&gt;isn&#x27;t too shabby either&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;the all-important factor of success in business... &lt;a href=&quot;http:&#x2F;&#x2F;blog.kowalczyk.info&#x2F;article&#x2F;ahcj&#x2F;Easy-vs-probable-or-how-to-make-money-with-softw.html&quot;&gt;luck&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;one interesting way of measuring Python 3 adoption is download
+numbers: &lt;a href=&quot;http:&#x2F;&#x2F;blog.briancurtin.com&#x2F;posts&#x2F;the-year-of-the-snake.html&quot;&gt;0.8 million out of a total of 2 million&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;another sad case of Ubuntu diverging from GNOME... &lt;a href=&quot;http:&#x2F;&#x2F;debarshiray.wordpress.com&#x2F;2012&#x2F;10&#x2F;06&#x2F;goa-why-it-is-the-way-it-is&#x2F;&quot;&gt;Online
+Accounts&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;blog.yorba.org&#x2F;jim&#x2F;2013&#x2F;02&#x2F;the-garden-of-the-forking-paths.html&quot;&gt;via&lt;&#x2F;a&gt;); as the author of that quality post says, they may
+have good reasons for this; it&#x27;s just that it looks bad on the
+surface&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;meta.stackoverflow.com&#x2F;a&#x2F;67891&#x2F;147166&quot;&gt;a detailed defense&lt;&#x2F;a&gt; on the choice of technology for Stack Exchange
+chat&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>nice review of Fedora 18</title>
+                <pubDate>Thu, 17 Jan 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/nice-review-of-fedora-18/</link>
+                <guid>http://tshepang.net/nice-review-of-fedora-18/</guid>
+                <description>&lt;p&gt;I really enjoyed reading &lt;a href=&quot;http:&#x2F;&#x2F;thomas.apestaart.org&#x2F;log&#x2F;?p=1514&quot;&gt;this review&lt;&#x2F;a&gt; of the experience of installing
+Fedora 18 and first use. Other than being well-written, I like the fact
+that he gives points to each pro and con. I also liked this bit of
+opinion, which I totally agree with:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Logging in. Being told there are updates. Holy crap -- 218 updates --
+for a release that&#x27;s a day old. Does the word &#x27;release&#x27; mean anything
+anymore? -5. Seriously, freeze that crap for a few days, only real
+security issues or facepalm bugs.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>developer of note: Martin Pitt</title>
+                <pubDate>Tue, 15 May 2012 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/developer-of-note-martin-pitt/</link>
+                <guid>http://tshepang.net/developer-of-note-martin-pitt/</guid>
+                <description>&lt;p&gt;I suspect that &lt;a href=&quot;http:&#x2F;&#x2F;www.postgresql.org&#x2F;&quot;&gt;PostgreSQL&lt;&#x2F;a&gt; isn&#x27;t a trivial piece of software, and I
+consider it among the greatest of all FLOSS. It even bills itself the
+most advanced of all FLOSS databases. That&#x27;s what brought &lt;a href=&quot;http:&#x2F;&#x2F;www.piware.de&#x2F;&quot;&gt;Martin Pitt&lt;&#x2F;a&gt;
+to my attention, for he is it&#x27;s Debian (and now also Ubuntu)
+maintainer. One other notable thing about him is his quiet persona (I
+follow Debian development fairly closely, and I don&#x27;t remember seeing
+him take part in any of the arguments in its mailing lists). I only ever
+notice him when he&#x27;d give &lt;a href=&quot;http:&#x2F;&#x2F;www.piware.de&#x2F;2011&#x2F;09&#x2F;dropping-postgresql-9-0-packages-for-debianubuntubackports&#x2F;&quot;&gt;some random&lt;&#x2F;a&gt; &lt;a href=&quot;http:&#x2F;&#x2F;www.piware.de&#x2F;2012&#x2F;05&#x2F;packages-for-postgresql-9-2-beta-1-now-available&#x2F;&quot;&gt;status update&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>Ubuntu 8.10 impressions</title>
+                <pubDate>Thu, 13 Nov 2008 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/ubuntu-8-10-impressions/</link>
+                <guid>http://tshepang.net/ubuntu-8-10-impressions/</guid>
+                <description>&lt;p&gt;I haven&#x27;t ran Ubuntu since 7.04 and gave 8.10 a try recently, primarily
+for doing wireless web connection at new job, and also that our sysadmin
+showed it to me in action with its NetworkManager 0.7 glory in action
+and had the installer handy. As I&#x27;ve come to expect from Ubuntu, the
+defaults artwork just looks gorgeous and with an especially stunning
+desktop background. It was also the first time I actually got to
+experience the 3D desktop effects that people have been making noise
+about these past several months (I did try this before, on Debian, but
+it was a mess with me having to go see README.Debian thing and still not
+managing, while in Ubuntu&#x27;s case, it was mere clicks away which I found
+through the handy Ubuntu user manual, which is easily accessible on the
+GNOME panel, and that&#x27;s what Debian desktop needs).&lt;&#x2F;p&gt;
+&lt;p&gt;Me became happy with Firefox which remembered the previously-visited
+paths (via the back-button) on session-restore, a feature I often miss
+when working with Epiphany.&lt;&#x2F;p&gt;
+&lt;p&gt;Some warts I&#x27;ve seen so far:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;The installer&#x27;s insistence on running the whole desktop before
+installation sucks because it really prolongs installation, and made
+worse by a lack of a visible alternative option.&lt;&#x2F;li&gt;
+&lt;li&gt;The feature I once praised in debian-installer, which informs one of
+the limits whithin which one may resize existing hard drive
+partitions, is absent in Ubuntu&#x27;s installer. The graphical
+partitioner does however looks real slick.&lt;&#x2F;li&gt;
+&lt;li&gt;Does not remember running apps when session is restarted.&lt;&#x2F;li&gt;
+&lt;li&gt;And I&#x27;ve already experienced 2 system freezes after running some
+updates, and the sort where I have to force machine reset.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>Ubuntu 8.10 looks good</title>
+                <pubDate>Fri, 03 Oct 2008 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/ubuntu-8-10-looks-good/</link>
+                <guid>http://tshepang.net/ubuntu-8-10-looks-good/</guid>
+                <description>&lt;p&gt;Ubuntu 8.10 Beta has been released and, if &lt;a href=&quot;https:&#x2F;&#x2F;lists.ubuntu.com&#x2F;archives&#x2F;ubuntu-announce&#x2F;2008-October&#x2F;000114.html&quot;&gt;the annoucement&lt;&#x2F;a&gt; is to be
+relied upon, things look good.&lt;&#x2F;p&gt;
+&lt;p&gt;What stands out above all else for me is &#x27;guest sessions&#x27; which allows
+users who don&#x27;t have login credentials access to the system. It&#x27;s
+interesting that such a thing has been non-existent (or at least I
+don&#x27;t know how to set it up) in the distros I&#x27;ve used so far, and
+really is useful, EG when you just wanna play some music from a machine.
+Many a time I get glad when easily getting into a Microsoft system even
+though that compromises security, a problem easily fixed in this
+release&#x27;s inclusion of easy encryption of user folders, which I suppose
+should hide confidential data from prying eyes.&lt;&#x2F;p&gt;
+&lt;p&gt;That&#x27;s not to say I&#x27;m gon be running an Ubuntu system anytime soon,
+especially given that I&#x27;m rather happy here (okay, sometimes; I mean
+how long am I going to wait for GNOME 2.24 to reach Sid) in Debian-land
+of course, and can only wait for those features.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+    </channel>
+</rss>

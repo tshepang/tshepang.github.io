@@ -1,0 +1,167 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tshepang logs</title>
+        <link>http://tshepang.net</link>
+        <description></description>
+        <generator>Gutenberg</generator>
+        <language>en</language>
+        <atom:link href="http://tshepang.net/tags/emacs/rss.xml/" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Thu, 04 Sep 2014 00:00:00 +0000</lastBuildDate>
+        
+            <item>
+                <title>loving the SSH multi-hop feature of Emacs</title>
+                <pubDate>Thu, 04 Sep 2014 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/loving-the-ssh-multi-hop-feature-of-emacs/</link>
+                <guid>http://tshepang.net/loving-the-ssh-multi-hop-feature-of-emacs/</guid>
+                <description>&lt;p&gt;I&#x27;m at home and want to access some system at work. I cannot access
+this system directly, so will have to use a VPN or sshfs, but I don&#x27;t
+know how to set VPN up and sshfs feels rather clunky (I first have to
+have some directory I&#x27;m going to mount the thing, and have to remember
+the command line syntax). With Emacs, I run the following command:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;C-x C-f &#x2F;ssh:work|ssh:10.0.0.107|ssh:10.0.0.148:~&#x2F;some&#x2F;files&#x2F;
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;What happens there is I ask Emacs to run &lt;code&gt;find-file&lt;&#x2F;code&gt;, which opens its
+file manager, &lt;strong&gt;Dired&lt;&#x2F;strong&gt;. It first accesses the server at work, then my
+work desktop (&lt;code&gt;10.0.0.107&lt;&#x2F;code&gt;), and then some machine (&lt;code&gt;10.0.0.148&lt;&#x2F;code&gt;) which
+I normally access via my work desktop (it got SSH keys). Finally, I&#x27;m
+then presented with the view of the files in &lt;code&gt;~&#x2F;some&#x2F;files&#x2F;&lt;&#x2F;code&gt; in that
+machine, which I can work on (view, edit, save) like any local file. I
+was surprised such a feature exists, thinking I&#x27;d have to do ugly
+things like port forwarding. I do use the single hop a lot (if that&#x27;s
+even the right name):&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;C-x C-f &#x2F;ssh:work:~&#x2F;some&#x2F;files&#x2F;
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Shortcut for that is:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;C-x C-f &#x2F;work:~&#x2F;some&#x2F;files&#x2F;
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;sidenotes&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The shortcut doesn&#x27;t work with multi-hop&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;I love the fact that Emacs accepts SSH settings, where for example,
+instead of specifying the whole &lt;a href=&quot;mailto:username@host&quot;&gt;username@host&lt;&#x2F;a&gt;, it accepts the
+aliases in &lt;code&gt;~&#x2F;.ssh&#x2F;config&lt;&#x2F;code&gt;, such that I only have to run:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;ssh work
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;instead of:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;ssh tshepang@hostname
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>pleasantly surprised by replace-string (Emacs)</title>
+                <pubDate>Tue, 26 Nov 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/pleasantly-surprised-by-replace-string-emacs/</link>
+                <guid>http://tshepang.net/pleasantly-surprised-by-replace-string-emacs/</guid>
+                <description>&lt;p&gt;If you want to replace some string in Emacs, the primary function to use
+is &lt;strong&gt;replace-string&lt;&#x2F;strong&gt; (I think). If the strings, &#x27;old&#x27; and &#x27;new&#x27; are
+provided, it will, by default, replace all occurrences, regardless of
+case, while also preserving case of whatever &#x27;old&#x27; was. It&#x27;s magical
+yes, but who doesn&#x27;t like some magic once in a while, especially when
+it&#x27;s so convenient... and so sane.&lt;&#x2F;p&gt;
+&lt;p&gt;(&lt;a href=&quot;http:&#x2F;&#x2F;www.gnu.org&#x2F;software&#x2F;emacs&#x2F;manual&#x2F;html_node&#x2F;emacs&#x2F;Replacement-and-Case.html#Replacement-and-Case&quot;&gt;official description&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>projects with excellent documentation</title>
+                <pubDate>Sat, 19 Oct 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/projects-with-excellent-documentation/</link>
+                <guid>http://tshepang.net/projects-with-excellent-documentation/</guid>
+                <description>&lt;p&gt;Here is a list of projects whose documentation I found to be
+highly-detailed and well-written.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;big&quot;&gt;big&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;a href=&quot;http:&#x2F;&#x2F;cmgm.stanford.edu&#x2F;classes&#x2F;unix&#x2F;emacs.html&quot;&gt;introductory tutorial of GNU Emacs&lt;&#x2F;a&gt; (looks a lot better when
+run from within Emacs), is written in a very gentle and careful way;
+it&#x27;s among the best tutorials I&#x27;ve seen. Same applies to &lt;a href=&quot;http:&#x2F;&#x2F;www.gnu.org&#x2F;software&#x2F;emacs&#x2F;manual&#x2F;html_node&#x2F;emacs&quot;&gt;the
+Emacs manual&lt;&#x2F;a&gt;, which I&#x27;m tempted to call the best I&#x27;ve read yet.
+It really, really goes into painstaking detail, and seems to have
+been written by professional technical writers.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;docs.python.org&quot;&gt;CPython&lt;&#x2F;a&gt; - this is quite massive, so although quality is generally
+high, it varies depending on where you are; &lt;a href=&quot;http:&#x2F;&#x2F;docs.python.org&#x2F;3&#x2F;library&#x2F;collections&quot;&gt;an example of
+excellence&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.sqlite.org&#x2F;docs.html&quot;&gt;sqlite3&lt;&#x2F;a&gt; - quite extensive, especially for an embeddable DBMS&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;small&quot;&gt;small&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;fedorahosted.org&#x2F;suds&#x2F;wiki&#x2F;Documentation&quot;&gt;Suds&lt;&#x2F;a&gt; - multiple, well-written examples&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.nongnu.org&#x2F;rdiff-backup&#x2F;examples.html&quot;&gt;rdiff-backup usage examples&lt;&#x2F;a&gt; - much smaller than the others listed
+here, but nevertheless deserves mention because it&#x27;s both gentle
+and thorough&lt;&#x2F;li&gt;
+&lt;li&gt;While working on giving a product of ours &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;me-got-meself-another-coding-job&quot;&gt;at work&lt;&#x2F;a&gt; the ability to
+speak &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Socketcan&quot;&gt;SocketCAN&lt;&#x2F;a&gt;, I really appreciated its &lt;a href=&quot;http:&#x2F;&#x2F;www.kernel.org&#x2F;doc&#x2F;Documentation&#x2F;networking&#x2F;can.txt&quot;&gt;official
+documentation&lt;&#x2F;a&gt;. It is very well-written and thorough (though it
+assumes prior knowledge of working with Linux sockets).&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>links 2013-05-11</title>
+                <pubDate>Sat, 11 May 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/links-2013-05-11/</link>
+                <guid>http://tshepang.net/links-2013-05-11/</guid>
+                <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;hg.python.org&#x2F;cpython&#x2F;rev&#x2F;d5ef330bac50&quot;&gt;Python interpreter finally gets tab completion by default&lt;&#x2F;a&gt;; to see
+wide use, this will have to wait for 3.4 release, &lt;a href=&quot;http:&#x2F;&#x2F;www.python.org&#x2F;dev&#x2F;peps&#x2F;pep-0429&quot;&gt;which will only
+arrive early 2014&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;I submitted &lt;a href=&quot;http:&#x2F;&#x2F;debbugs.gnu.org&#x2F;cgi&#x2F;bugreport.cgi?bug=14355&quot;&gt;my first bug report for Emacs&lt;&#x2F;a&gt;, perhaps my first ever
+to a pure GNU project; I say this because GNOME claims to be one,
+but it&#x27;s really only by name.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.pypy.org&#x2F;performance.html&quot;&gt;Excellent guide on improving Python performance&lt;&#x2F;a&gt;; it&#x27;s written
+with PyPy in mind, but has excellent generic advice.&lt;&#x2F;li&gt;
+&lt;li&gt;I enjoyed &lt;a href=&quot;http:&#x2F;&#x2F;thechangelog.com&#x2F;86&quot;&gt;this podcast&lt;&#x2F;a&gt; where Jeff Atwood talks about his new
+project, &lt;a href=&quot;http:&#x2F;&#x2F;www.discourse.org&quot;&gt;Discourse&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>me loving Auto Fill Mode (Emacs)</title>
+                <pubDate>Fri, 10 May 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/me-loving-auto-fill-mode-emacs/</link>
+                <guid>http://tshepang.net/me-loving-auto-fill-mode-emacs/</guid>
+                <description>&lt;p&gt;For the past 2 weeks or so, I have been learning Emacs, something I&#x27;ve
+been meaning to do for years now. I decided to do it seriously (not skip
+a day, sometimes hours at a time), and am really liking it. It&#x27;s a very
+well-designed application with a great amount of polish, far more than
+any editor I&#x27;ve seen yet (I&#x27;ve used Vim, Geany, Scribes, and Eclipse).
+It also helps that the documentation is so &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;projects-with-excellent-documentation&quot;&gt;well-written&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;So far, my single most favorite feature is &lt;a href=&quot;http:&#x2F;&#x2F;www.gnu.org&#x2F;software&#x2F;emacs&#x2F;manual&#x2F;html_node&#x2F;emacs&#x2F;Auto-Fill&quot;&gt;Auto Fill Mode&lt;&#x2F;a&gt;, which
+allows you to keep typing without caring about line breaks, for they get
+automatically get applied for you. Am very sure that this feature exists
+elsewhere, but I actually never used it.&lt;&#x2F;p&gt;
+&lt;p&gt;Related to that is the &lt;a href=&quot;http:&#x2F;&#x2F;www.gnu.org&#x2F;software&#x2F;emacs&#x2F;manual&#x2F;html_node&#x2F;emacs&#x2F;Fill-Commands&quot;&gt;fill-paragraph&lt;&#x2F;a&gt; command, which is invoked via
+the Alt+q shortcut (M-q) in Emacs speak. What it does is reformat the
+paragraph as if it was typed while in Auto Fill Mode. Is gorgeous!&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>links 2011-01-17</title>
+                <pubDate>Mon, 17 Jan 2011 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/links-2011-01-17/</link>
+                <guid>http://tshepang.net/links-2011-01-17/</guid>
+                <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;unix.stackexchange.com&#x2F;q&#x2F;5642&#x2F;688&quot;&gt;a wealth of info on &#x27;kill -9&#x27;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;unix.stackexchange.com&#x2F;a&#x2F;1010&#x2F;688&quot;&gt;the best comparison of vi and emacs I&#x27;ve seen yet&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;slott-softwarearchitect.blogspot.com&#x2F;2011&#x2F;01&#x2F;java-php-python-which-is-faster-in.html&quot;&gt;the complexity of programming language benchmarking&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.pixelbeat.org&#x2F;misc&#x2F;google_stars.html&quot;&gt;high profile FLOSS developers employed by Google&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;I have never seen such &lt;a href=&quot;http:&#x2F;&#x2F;me.veekun.com&#x2F;blog&#x2F;2012&#x2F;04&#x2F;09&#x2F;php-a-fractal-of-bad-design&#x2F;&quot;&gt;detailed criticism&lt;&#x2F;a&gt; of a programming
+language.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+            </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,100 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tshepang logs</title>
+        <link>http://tshepang.net</link>
+        <description></description>
+        <generator>Gutenberg</generator>
+        <language>en</language>
+        <atom:link href="http://tshepang.net/tags/scribes/rss.xml/" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Fri, 10 May 2013 00:00:00 +0000</lastBuildDate>
+        
+            <item>
+                <title>me loving Auto Fill Mode (Emacs)</title>
+                <pubDate>Fri, 10 May 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/me-loving-auto-fill-mode-emacs/</link>
+                <guid>http://tshepang.net/me-loving-auto-fill-mode-emacs/</guid>
+                <description>&lt;p&gt;For the past 2 weeks or so, I have been learning Emacs, something I&#x27;ve
+been meaning to do for years now. I decided to do it seriously (not skip
+a day, sometimes hours at a time), and am really liking it. It&#x27;s a very
+well-designed application with a great amount of polish, far more than
+any editor I&#x27;ve seen yet (I&#x27;ve used Vim, Geany, Scribes, and Eclipse).
+It also helps that the documentation is so &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;projects-with-excellent-documentation&quot;&gt;well-written&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;So far, my single most favorite feature is &lt;a href=&quot;http:&#x2F;&#x2F;www.gnu.org&#x2F;software&#x2F;emacs&#x2F;manual&#x2F;html_node&#x2F;emacs&#x2F;Auto-Fill&quot;&gt;Auto Fill Mode&lt;&#x2F;a&gt;, which
+allows you to keep typing without caring about line breaks, for they get
+automatically get applied for you. Am very sure that this feature exists
+elsewhere, but I actually never used it.&lt;&#x2F;p&gt;
+&lt;p&gt;Related to that is the &lt;a href=&quot;http:&#x2F;&#x2F;www.gnu.org&#x2F;software&#x2F;emacs&#x2F;manual&#x2F;html_node&#x2F;emacs&#x2F;Fill-Commands&quot;&gt;fill-paragraph&lt;&#x2F;a&gt; command, which is invoked via
+the Alt+q shortcut (M-q) in Emacs speak. What it does is reformat the
+paragraph as if it was typed while in Auto Fill Mode. Is gorgeous!&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>discarding Scribes for Geany</title>
+                <pubDate>Fri, 23 Jan 2009 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/discarding-scribes-for-geany/</link>
+                <guid>http://tshepang.net/discarding-scribes-for-geany/</guid>
+                <description>&lt;p&gt;The &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;scribes-satisfies-some-more&quot;&gt;version of Scribes in development&lt;&#x2F;a&gt; didn&#x27;t prove too satisfactory
+after a while (black background which I didn&#x27;t care to investigate how
+to revert to normal, among whatever other trouble I don&#x27;t remember) and
+there was me also unloving the idea of switching text editors, so
+decided to get &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;project-of-note-geany&quot;&gt;stuck with Geany&lt;&#x2F;a&gt;, and am not complaining much. It&#x27;s
+been a year-and-a-half of pleasure and pain and it was well worth it.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>Scribes satisfies some more</title>
+                <pubDate>Wed, 26 Nov 2008 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/scribes-satisfies-some-more/</link>
+                <guid>http://tshepang.net/scribes-satisfies-some-more/</guid>
+                <description>&lt;p&gt;I&#x27;m currently running development version of Scribes (from bzr repo)
+and it got fixes for two very annoying bugs:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;On opening a non-UTF8 file you&#x27;d get a message asking you to open
+it via the app&#x27;s file-selector, an uncomfortably long way around
+it; the version from bzr offers a choice of the encoding and then we
+live happily ever after.&lt;&#x2F;li&gt;
+&lt;li&gt;A worse problem that occurred when opening the file described above
+is that on closing the error dialogue, all other open Scribes
+windows would also close.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;All what this means is that Scribes remains installed on my machine(s).&lt;&#x2F;p&gt;
+&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;sidenote&lt;&#x2F;strong&gt;: Code-folding is still absent although I won&#x27;t need to use
+it since &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;project-of-note-geany&quot;&gt;Geany&lt;&#x2F;a&gt; does a nice job already.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>Quod Libet and arrogance</title>
+                <pubDate>Sun, 19 Aug 2007 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/quod-libet-and-arrogance/</link>
+                <guid>http://tshepang.net/quod-libet-and-arrogance/</guid>
+                <description>&lt;p&gt;I&#x27;ve just seen, for the first time in memory, a concept of arrogant
+design stated &lt;a href=&quot;http:&#x2F;&#x2F;mystilleef.blogspot.com&#x2F;2006&#x2F;12&#x2F;031-coming-soon-to-distro-near-you.html#c4991460165173246170&quot;&gt;publicly&lt;&#x2F;a&gt;, a concept whose awareness previously existed
+only in my mind. This concept was brought up by my experiences with
+&lt;a href=&quot;http:&#x2F;&#x2F;code.google.com&#x2F;p&#x2F;quodlibet&#x2F;&quot;&gt;Quod Libet&lt;&#x2F;a&gt;, my favorite audio player. It unfortunately doesn&#x27;t
+conform to some common standards:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;I can&#x27;t open a song directly from a file manager (Nautilus)
+requiring me to open the application itself first, as if it&#x27;s the
+standard operating environment, yet it&#x27;s folder view is less than
+perfect, in that it doesn&#x27;t automatically update the contents if
+changed externally.&lt;&#x2F;li&gt;
+&lt;li&gt;It doesn&#x27;t use well-known shortcuts like B for previous track and N
+for next track, and invents its own, and if there&#x27;s not enough
+already.&lt;&#x2F;li&gt;
+&lt;li&gt;It does not allow me to drag a folder containing tracks, meaning I
+have to use its own interface to open all tracks.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;As regards the first link here, someone else also stated that Scribes&#x27;
+design is arrogant too, though I don&#x27;t think so. Scribes is just
+excellent and I don&#x27;t see the need for another editor, except if it had
+code &#x27;folding&#x27; and started-up faster than the current Scribes&#x27; 10
+seconds. [&lt;strong&gt;update&lt;&#x2F;strong&gt;: such &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;project-of-note-geany&quot;&gt;a replacement&lt;&#x2F;a&gt; was eventually discovered!]&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+    </channel>
+</rss>

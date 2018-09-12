@@ -1,0 +1,334 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tshepang logs</title>
+        <link>http://tshepang.net</link>
+        <description></description>
+        <generator>Gutenberg</generator>
+        <language>en</language>
+        <atom:link href="http://tshepang.net/tags/untagged/rss.xml/" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Thu, 15 Jan 2015 00:00:00 +0000</lastBuildDate>
+        
+            <item>
+                <title>zerofree rocks!</title>
+                <pubDate>Thu, 15 Jan 2015 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/zerofree-rocks/</link>
+                <guid>http://tshepang.net/zerofree-rocks/</guid>
+                <description>&lt;p&gt;At work, we tend to use the same base image for multiple installations.
+I would often copy a whole-disk image of a system as a matter of
+convenience, because that way I only need to &lt;code&gt;dd&lt;&#x2F;code&gt; to the target, without
+any additional steps. The problem with this approach is that it is
+slower than taking a tarball of the files (from the source) and
+extracting them onto the target. That&#x27;s because it works with a lot
+more data than it needs. For example, say you have a 4GB disk which is
+only filled with 1GB data. The first method would mean that processing a
+useless 3GB of one and zeroes, but my main concern is that the
+whole-disk doesn&#x27;t compress well. So here&#x27;s what I tried after
+creating a tarball:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Simple file removal and extraction
+(&lt;code&gt;cd &#x2F;target &amp;amp;&amp;amp; rm -r * &amp;amp;&amp;amp; tar xf ~&#x2F;rootfs.tar&lt;&#x2F;code&gt;) didn&#x27;t work&lt;&#x2F;li&gt;
+&lt;li&gt;Re-formatting the drive (&lt;code&gt;mkfs.ext4 &#x2F;dev&#x2F;mmcblkp1&lt;&#x2F;code&gt;) and then
+extraction didn&#x27;t work either&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The issue is that with the 2 steps above, there still remains much data
+on the partition from previous use. That is, file removal and creating a
+filesystem doesn&#x27;t remove the actual data, but rather just makes the
+data inaccessible by conventional means. To the data compressor (&lt;code&gt;xz&lt;&#x2F;code&gt; in
+this case), that is all valid data. What needs to happen is for the data
+that is not allocated to be over-written with zeroes... enter
+&lt;a href=&quot;https:&#x2F;&#x2F;packages.debian.org&#x2F;sid&#x2F;zerofree&quot;&gt;zerofree&lt;&#x2F;a&gt; which does just that. After it was done, my compressed image
+shrinked from ~400MB to ~80MB. The original was about 2GB.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>pipe dream: Basic Income for South African adults</title>
+                <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/pipe-dream-basic-income-for-south-african-adults/</link>
+                <guid>http://tshepang.net/pipe-dream-basic-income-for-south-african-adults/</guid>
+                <description>&lt;p&gt;There are too many people suffering from poverty in South Africa, and
+the quickest way to eliminate it is to provide income for all adult
+citizens (18+). If each of these 30 million individuals earned R500&#x2F;week
+($1 is about R10), that would cost R780 billion. Compare that to the
+R900 billion that SARS expects to make in 2013&#x2F;2014 tax year.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;sources-of-funding&quot;&gt;Sources of funding&lt;&#x2F;h1&gt;
+&lt;p&gt;We will gain R140 billion by stopping the following:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;social grants (R120 billion)&lt;&#x2F;li&gt;
+&lt;li&gt;RDP (R10 billion)&lt;&#x2F;li&gt;
+&lt;li&gt;NSFAS (R5 billion)&lt;&#x2F;li&gt;
+&lt;li&gt;NSNP (R5 billion)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;We will gain an additional R450 billion by doubling the following:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Income tax (R300 billion)&lt;&#x2F;li&gt;
+&lt;li&gt;Company Income Tax (R150 billion)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;After all that, we are left with a shortfall of R190 billion. Where does
+it come from?&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Settling for R375 per week makes the problem go away&lt;&#x2F;li&gt;
+&lt;li&gt;Settling for R280 per week means Company Income Tax need not be
+doubled, to avoid companies running away from the country. But
+that&#x27;s now lower than Old Age Grant, so we&#x27;ll stop there as the
+worst compromise.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;why-r500&quot;&gt;Why R500&lt;&#x2F;h1&gt;
+&lt;p&gt;This gets a person with a dependent:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;a room to live in, with access to running water and electricity&lt;&#x2F;li&gt;
+&lt;li&gt;transport and cellphone costs&lt;&#x2F;li&gt;
+&lt;li&gt;groceries&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>got my eyes fixed</title>
+                <pubDate>Sun, 16 Feb 2014 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/got-my-eyes-fixed/</link>
+                <guid>http://tshepang.net/got-my-eyes-fixed/</guid>
+                <description>&lt;p&gt;On &lt;strong&gt;2014-02-12&lt;&#x2F;strong&gt; I had LASIK operation done to fix my being
+short-sighted. It cost over R30k (~$3000), but was worth it: I hate
+the inconvenience of spectacles, and the doctor claims I have better
+than 20&#x2F;20 vision.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>hierarchy of individuals in FLOSS projects</title>
+                <pubDate>Sat, 16 Nov 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/hierarchy-of-individuals-in-floss-projects/</link>
+                <guid>http://tshepang.net/hierarchy-of-individuals-in-floss-projects/</guid>
+                <description>&lt;p&gt;From top to bottom:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Author&lt;&#x2F;p&gt;
+&lt;p&gt;Sometimes referred to as primary author, to distinguish between
+other people who have contributed to the project, this is the
+creator. At times, someone in the lower ranks of the hierarchy
+happen to be more active in the project than the Author, in which
+case the Author often makes them Maintainer, explicitly or not.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Maintainer&lt;&#x2F;p&gt;
+&lt;p&gt;This is someone ultimately responsible for the project: handles bug
+reports, decides which changes to accept from lower contributors,
+and performs releases. Note that there can be more than one, unlike
+is the case with Author.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Contributor&lt;&#x2F;p&gt;
+&lt;p&gt;This is someone who submits improvements to project, either
+documentation or code. It can be a one-time contribution, but in
+case where this is frequent and spans a certain amount of time, she
+can move onto becoming a Maintainer.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Bug Reporter&lt;&#x2F;p&gt;
+&lt;p&gt;This is someone who suggests improvements to the project. Depending
+on the project, any of these are used: a mailing list, an IRC
+channel, a social networking service, email, or a dedicated
+Issue&#x2F;Bug tracking system can be used.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;User&lt;&#x2F;p&gt;
+&lt;p&gt;What the user is depends on the project, of course. Just to be
+clear, in the case of Python project, the user is a software
+developer, not the person who ends up using something written in the
+language.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;The &#x27;individual&#x27; in title means I&#x27;m ignoring non-human entities, like
+companies. I&#x27;m also ignoring non-core activities, like marketers or
+sysadmins, or even teachers. Those are not going to be easy to fit in
+this simple story, and are not common to that many FLOSS (Free&#x2F;Libre and
+Open Source) projects.&lt;&#x2F;p&gt;
+&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;p&gt;In the case of &lt;a href=&quot;http:&#x2F;&#x2F;linux.togaware.com&#x2F;survivor&#x2F;wajig.html&quot;&gt;wajig&lt;&#x2F;a&gt;, I am the Maintainer and Graham Williams is the
+Author. In the case of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;paramiko&#x2F;paramiko&quot;&gt;paramiko&lt;&#x2F;a&gt;, a far more important project, &lt;a href=&quot;http:&#x2F;&#x2F;bitprophet.org&#x2F;blog&#x2F;2012&#x2F;09&#x2F;29&#x2F;paramiko-and-ssh&quot;&gt;Jeff
+Forcier is the Maintainer&lt;&#x2F;a&gt;. The project was however created by &lt;a href=&quot;http:&#x2F;&#x2F;robey.lag.net&quot;&gt;Robey
+Pointer&lt;&#x2F;a&gt;, and &lt;a href=&quot;http:&#x2F;&#x2F;robey.lag.net&#x2F;2009&#x2F;02&#x2F;16&#x2F;paramiko-is-on-github-now.html&quot;&gt;he did not imagine&lt;&#x2F;a&gt; it would end up being THE Python SSH
+library today.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>dangerous inconsistency in symlink removal</title>
+                <pubDate>Fri, 28 Jan 2011 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/dangerous-inconsistency-in-symlink-removal/</link>
+                <guid>http://tshepang.net/dangerous-inconsistency-in-symlink-removal/</guid>
+                <description>&lt;p&gt;Here&#x27;s how to make a symlink and to delete it:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;mkdir dir
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;ln -s dir dirlink
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rm -r dirlink
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Here&#x27;s another way to delete it:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rm -r dirlink&#x2F;
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Although it will do the job, it will actually complain with:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rm: cannot remove &#96;dirlink&amp;#39;: Not a directory
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Note that we could have achieved the deletion with just:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rm dirlink
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This is because the symlink is just a single file. So there&#x27;s no need
+to treat it like a directory when deleting.&lt;&#x2F;p&gt;
+&lt;p&gt;Sadly, this behaviour is inconsistent when there is a mounted voulem.
+The first way of deletion has no problem, but the second one will wipe
+out the entire drive, if it so happens that &lt;code&gt;dir&lt;&#x2F;code&gt; is the mount directory
+(i.e. &lt;code&gt;ln -s &#x2F;media&#x2F;my_drive dirlink &amp;amp;&amp;amp; rm -r dirlink&#x2F;&lt;&#x2F;code&gt;). I learned this
+the hard way :(&lt;&#x2F;p&gt;
+&lt;p&gt;[&lt;strong&gt;sidenote&lt;&#x2F;strong&gt;] Here&#x27;s &lt;a href=&quot;http:&#x2F;&#x2F;unix.stackexchange.com&#x2F;q&#x2F;6618&#x2F;688&quot;&gt;some explanation&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>factors affecting choice of tools</title>
+                <pubDate>Thu, 06 Jan 2011 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/factors-affecting-choice-of-tools/</link>
+                <guid>http://tshepang.net/factors-affecting-choice-of-tools/</guid>
+                <description>&lt;p&gt;&lt;strong&gt;technical&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;speed&lt;&#x2F;li&gt;
+&lt;li&gt;resource-usage&lt;&#x2F;li&gt;
+&lt;li&gt;features&lt;&#x2F;li&gt;
+&lt;li&gt;stability&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;non-technical&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;ease-of-use&lt;&#x2F;li&gt;
+&lt;li&gt;polish&lt;&#x2F;li&gt;
+&lt;li&gt;standards-compliance&lt;&#x2F;li&gt;
+&lt;li&gt;popularity&lt;&#x2F;li&gt;
+&lt;li&gt;politics&lt;&#x2F;li&gt;
+&lt;li&gt;support&lt;&#x2F;li&gt;
+&lt;li&gt;familiarity&lt;&#x2F;li&gt;
+&lt;li&gt;taste&lt;&#x2F;li&gt;
+&lt;li&gt;monetary cost&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>it&#x27;s less work building from a VCS than from a tarball</title>
+                <pubDate>Sat, 20 Nov 2010 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/it-s-less-work-building-from-a-vcs-than-from-a-tarball/</link>
+                <guid>http://tshepang.net/it-s-less-work-building-from-a-vcs-than-from-a-tarball/</guid>
+                <description>&lt;p&gt;tarball:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;find the website&lt;&#x2F;li&gt;
+&lt;li&gt;find download link&lt;&#x2F;li&gt;
+&lt;li&gt;download the tarball&lt;&#x2F;li&gt;
+&lt;li&gt;navigate to the tarball (using a GUI file browser)&lt;&#x2F;li&gt;
+&lt;li&gt;extract the tarball (using a GUI extractor)&lt;&#x2F;li&gt;
+&lt;li&gt;navigate to the extracted directory (using the shell)&lt;&#x2F;li&gt;
+&lt;li&gt;and finally... &lt;code&gt;$ .&#x2F;configure &amp;amp;&amp;amp; make &amp;amp;&amp;amp; sudo make install&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Revision_control&quot;&gt;VCS&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;find the website&lt;&#x2F;li&gt;
+&lt;li&gt;find clone link&lt;&#x2F;li&gt;
+&lt;li&gt;clone the repository&lt;&#x2F;li&gt;
+&lt;li&gt;navigate to the cloned directory (using the shell)&lt;&#x2F;li&gt;
+&lt;li&gt;and finally... &lt;code&gt;$ .&#x2F;configure &amp;amp;&amp;amp; make &amp;amp;&amp;amp; sudo make install&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;So, that&#x27;s 2 extra steps for going the tarball way.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>abusing the computer &#x27;genius&#x27;</title>
+                <pubDate>Thu, 28 Oct 2010 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/abusing-the-computer-genius/</link>
+                <guid>http://tshepang.net/abusing-the-computer-genius/</guid>
+                <description>&lt;p&gt;Here&#x27;s a part-fictional account of events that are largely my fault:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Friend got a new laptop and I elect to install Debian (or whatever
+OS I find suitable at that moment) side-by-side with the
+pre-installed Windows.&lt;&#x2F;li&gt;
+&lt;li&gt;I show Friend around since he finds the interface unfamiliar, and I
+get a dry mouth explaining the advantages, while trying hard to
+avoid Windows bashing. He sort of agrees.&lt;&#x2F;li&gt;
+&lt;li&gt;I upgrade it later on (mainly because I&#x27;m hoping the new hotness
+will get their Wi-Fi hardware working).&lt;&#x2F;li&gt;
+&lt;li&gt;The upgrade breaks something else in the process, and I spend hours
+fixing it...&lt;&#x2F;li&gt;
+&lt;li&gt;Only to have them spend their computing lives in Windows since it&#x27;s
+more familiar (as well as the fact the software that came with their
+cell-phone doesn&#x27;t run anywhere else).&lt;&#x2F;li&gt;
+&lt;li&gt;We computer &#x27;geniuses&#x27; all know that Windows has a nasty habit of
+overwriting the boot partition such that an already-installed OS is
+no longer bootable, so I gotta come over, to make it bootable again
+(and this is made worse by the fact that reinstalls are pretty
+commom when Windows gives trouble).&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>a talk on what software engineering should be</title>
+                <pubDate>Fri, 01 Oct 2010 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/a-talk-on-what-software-engineering-should-be/</link>
+                <guid>http://tshepang.net/a-talk-on-what-software-engineering-should-be/</guid>
+                <description>&lt;p&gt;I really enjoyed &lt;a href=&quot;http:&#x2F;&#x2F;confreaks.net&#x2F;videos&#x2F;282-lsrc2010-real-software-engineering&quot;&gt;this humorous, eye-opening, and informative talk&lt;&#x2F;a&gt; that
+draws parallels between software and traditional engineering
+disciplines. The presenter really did good research to prepare for the
+presentation (which he heartily enjoyed), but unfortunately flies too
+quick near the end when realizing he&#x27;s out of time, without properly
+explaining what he proposes as &lt;strong&gt;real&lt;&#x2F;strong&gt; software engineering.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>&#x27;Stack Overflow&#x27; rocks hard!</title>
+                <pubDate>Thu, 22 Apr 2010 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/stack-overflow-rocks-hard/</link>
+                <guid>http://tshepang.net/stack-overflow-rocks-hard/</guid>
+                <description>&lt;p&gt;I can&#x27;t believe that I only now discovered &lt;a href=&quot;http:&#x2F;&#x2F;stackoverflow.com&quot;&gt;Stack Overflow&lt;&#x2F;a&gt;. It&#x27;s an
+excellent programming Q&amp;amp;A site which also happens to possess the best
+user interface and design I&#x27;ve ever seen on the web (if memory serves
+well). [&lt;strong&gt;update&lt;&#x2F;strong&gt;: this great design is shared by &lt;a href=&quot;http:&#x2F;&#x2F;stackexchange.com&#x2F;sites&quot;&gt;other sites in the
+family&lt;&#x2F;a&gt;]&lt;&#x2F;p&gt;
+&lt;p&gt;[&lt;strong&gt;sidenote&lt;&#x2F;strong&gt;] Within a few minutes of asking &lt;a href=&quot;http:&#x2F;&#x2F;stackoverflow.com&#x2F;q&#x2F;2690147&#x2F;321731&quot;&gt;some question&lt;&#x2F;a&gt;, I
+received a number of high-quality answers. It&#x27;s amazing!&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>enjoying net connection at home, finally</title>
+                <pubDate>Sun, 28 Sep 2008 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/enjoying-net-connection-at-home-finally/</link>
+                <guid>http://tshepang.net/enjoying-net-connection-at-home-finally/</guid>
+                <description>&lt;p&gt;After suffering with being forced to access the net on Windows XP &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;net-connection-at-home-finally&quot;&gt;for
+over 2 weeks&lt;&#x2F;a&gt;, I&#x27;m glad things turned out as I envisioned for I managed
+to get my device working on Debian &lt;a href=&quot;http:&#x2F;&#x2F;mybroadband.co.za&#x2F;vb&#x2F;showthread.php&#x2F;129619-Neotel-working-on-Linux!&quot;&gt;with a lot of help&lt;&#x2F;a&gt;. Here&#x27;s what
+went into my &#x2F;etc&#x2F;wvdial.conf:&lt;&#x2F;p&gt;
+&lt;p&gt;I had to run &lt;code&gt;sudo modprobe usbserial vendor=0x1d09 product=0x4000&lt;&#x2F;code&gt; and
+then &lt;code&gt;sudo wvdial neotel&lt;&#x2F;code&gt; afterwards and then I lived happily for
+long...&lt;&#x2F;p&gt;
+&lt;p&gt;Now why is XP so uncomfortable? I&#x27;m used to many of the conveniences of
+Debian that are absent in XP or I&#x27;m not motivated to find replacements
+for stuff like workspaces, copy-text-on-highlight, Epiphany, Quod Libet,
+debmirror, Nautilus, ...&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>net connection at home, finally</title>
+                <pubDate>Tue, 16 Sep 2008 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/net-connection-at-home-finally/</link>
+                <guid>http://tshepang.net/net-connection-at-home-finally/</guid>
+                <description>&lt;p&gt;I got &lt;a href=&quot;http:&#x2F;&#x2F;www.neotel.co.za&#x2F;&quot;&gt;internet connection&lt;&#x2F;a&gt; at home on September 12th (access at work
+has been terminated). It&#x27;s a 10GB&#x2F;month connection that goes for R600
+(around $80). Not too cheap but it&#x27;s the cheapest (per MB) in the
+country though, as far as I know.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+    </channel>
+</rss>

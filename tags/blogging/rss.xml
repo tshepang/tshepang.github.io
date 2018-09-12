@@ -1,0 +1,532 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tshepang logs</title>
+        <link>http://tshepang.net</link>
+        <description></description>
+        <generator>Gutenberg</generator>
+        <language>en</language>
+        <atom:link href="http://tshepang.net/tags/blogging/rss.xml/" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Sun, 11 Jan 2015 00:00:00 +0000</lastBuildDate>
+        
+            <item>
+                <title>ideal static blog generator</title>
+                <pubDate>Sun, 11 Jan 2015 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/ideal-static-blog-generator/</link>
+                <guid>http://tshepang.net/ideal-static-blog-generator/</guid>
+                <description>&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
+missed:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;docutils.sourceforge.net&#x2F;docs&#x2F;ref&#x2F;rst&#x2F;restructuredtext.html&quot;&gt;reStructuredText&lt;&#x2F;a&gt; support is mandatory. It&#x27;s the only markup
+language I like.&lt;&#x2F;li&gt;
+&lt;li&gt;Landing Page should be an Archives View (Post title and date) or a
+subset (i.e. Recent Posts). I would not mind if the latest Post or
+the About Page were displayed, so long as they are followed by this
+Archives View.&lt;&#x2F;li&gt;
+&lt;li&gt;Categories should be determined by directory into which a file (the
+raw material for a Post) is placed. Specifying this in the metadata
+section of the file should of course take precedence.&lt;&#x2F;li&gt;
+&lt;li&gt;Publish date should never be placed at the bottom of a Post. It is
+too important a piece metadata to treat this way.&lt;&#x2F;li&gt;
+&lt;li&gt;An option to have clean URLs (i.e. trailing &lt;code&gt;.html&lt;&#x2F;code&gt; removed).&lt;&#x2F;li&gt;
+&lt;li&gt;Date-based directory structure should not be mandatory (unlike with
+Tinkerer).&lt;&#x2F;li&gt;
+&lt;li&gt;Inline literals and literal blocks (for code) should be
+distinguished by background colour; using a different font is just
+not good enough.&lt;&#x2F;li&gt;
+&lt;li&gt;Tags (and maybe Categories) should be displayed on each post.&lt;&#x2F;li&gt;
+&lt;li&gt;Blogofile has a strange requirement of having &lt;a href=&quot;http:&#x2F;&#x2F;docs.blogofile.com&#x2F;en&#x2F;latest&#x2F;posts.html&quot;&gt;post headers be YAML
+format&lt;&#x2F;a&gt;. Maybe there&#x27;s a good reason, but I want my generator to
+not require anything special in file contents.&lt;&#x2F;li&gt;
+&lt;li&gt;Ability to determine Publish date from file mtime.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;nice-to-have&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ability to combine multiple tags.&lt;&#x2F;li&gt;
+&lt;li&gt;Ability to show posts linking to current one, but I&#x27;m not sure how
+useful this would be though.&lt;&#x2F;li&gt;
+&lt;li&gt;A feed icon that is visible from the main page (and maybe Category
+pages).&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>from Pelican to liquidluck</title>
+                <pubDate>Thu, 03 Oct 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/from-pelican-to-liquidluck/</link>
+                <guid>http://tshepang.net/from-pelican-to-liquidluck/</guid>
+                <description>&lt;p&gt;&lt;strong&gt;notes&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;This post was first published on &lt;strong&gt;2012-07-05&lt;&#x2F;strong&gt;, which is shortly
+after I started using &lt;a href=&quot;http:&#x2F;&#x2F;liquidluck.readthedocs.org&quot;&gt;liquidluck&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;I have since moved back to Pelican on &lt;strong&gt;2013-09-29&lt;&#x2F;strong&gt;, with &lt;a href=&quot;http:&#x2F;&#x2F;oncrashreboot.com&#x2F;pelican-elegant&quot;&gt;Elegant
+theme&lt;&#x2F;a&gt;. Reason: slow liquidluck development (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lepture&#x2F;liquidluck&#x2F;issues&#x2F;101&quot;&gt;the author is busy
+with other projects&lt;&#x2F;a&gt;), though he has more recently been doing &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lepture&#x2F;liquidluck&#x2F;issues&#x2F;104#issuecomment-22825084&quot;&gt;some
+large changes in a branch&lt;&#x2F;a&gt;, which I assume is not ready. There is
+also &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lepture&#x2F;liquidluck&#x2F;issues&#x2F;created_by&#x2F;tshepang?sort=updated&amp;amp;state=open&quot;&gt;a backlog of doc improvements&lt;&#x2F;a&gt; I submitted, which are not even
+acknowledged. Do not consider this a complaint... the author in
+fact gave me more than I gave him... a nice piece of software. In
+fact, I might go back at some point, and will keep maintaining &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;looking-at-liquidluck-themes&quot;&gt;live
+demos of the various liquidluck themes&lt;&#x2F;a&gt;. Also, &lt;a href=&quot;http:&#x2F;&#x2F;movies.tshepang.net&quot;&gt;my movie blog&lt;&#x2F;a&gt; is
+also still built with liquidluck.&lt;&#x2F;li&gt;
+&lt;li&gt;I have a separate post on &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;what-me-loves-about-static-website-generation&quot;&gt;what I love about static website
+generators&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;why&quot;&gt;why &lt;a href=&quot;http:&#x2F;&#x2F;pelican.readthedocs.org&quot;&gt;Pelican&lt;&#x2F;a&gt; rocks&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;It has categories (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;getnikola&#x2F;nikola&#x2F;issues&#x2F;163&quot;&gt;unlike nikola&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Post metadata:
+&lt;ul&gt;
+&lt;li&gt;if Date is not specified, file mtime is used (unlike
+&lt;a href=&quot;http:&#x2F;&#x2F;blogofile.com&quot;&gt;blogofile&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;if Category is not specified, parent directory name is used
+(unlike blogofile)&lt;&#x2F;li&gt;
+&lt;li&gt;titles are allowed to have any character (unlike blogofile)&lt;&#x2F;li&gt;
+&lt;li&gt;there is an option to provide clean urls... remove trailing
+&lt;code&gt;.html&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Does not force one into having ugly date-based filesystem structure
+(unlike &lt;a href=&quot;http:&#x2F;&#x2F;tinkerer.me&quot;&gt;Tinkerer&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;why-pelican-rocks-not&quot;&gt;why Pelican rocks not&lt;&#x2F;h1&gt;
+&lt;p&gt;The default theme simply didn&#x27;t fit my tastes, and &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;favorite-pelican-themes&quot;&gt;the other themes
+weren&#x27;t so satisfactory&lt;&#x2F;a&gt;. I spent way too long fiddling with them, and
+just couldn&#x27;t be happy.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;why-liquidluck&quot;&gt;why liquidluck&lt;&#x2F;h1&gt;
+&lt;p&gt;So I have moved to &lt;a href=&quot;http:&#x2F;&#x2F;liquidluck.readthedocs.org&quot;&gt;liquidluck&lt;&#x2F;a&gt;, and am hoping I will not be &#x27;forced&#x27;
+to move again. It&#x27;s way too much work, and it took multiple messages
+between me and &lt;a href=&quot;http:&#x2F;&#x2F;lepture.com&quot;&gt;the developer&lt;&#x2F;a&gt; of this sleek new static site generator
+just to get it to behave the way I like it.&lt;&#x2F;p&gt;
+&lt;p&gt;I had to override stuff that&#x27;s done by the software, by using &lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;blog&#x2F;src&#x2F;1602cdf8&#x2F;custom.py&quot;&gt;this
+script&lt;&#x2F;a&gt;, which helped give it the advantages that Pelican has over the
+other generators I mentioned, while also solving the one problem Pelican
+has.. lack of a good-enough theme. This was achieved with the help of
+that very helpful and responsive developer.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;issues&quot;&gt;issues&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;There is no visible way, at least for the default theme, to
+subscribe to RSS feeds of individual Categories.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;The text is a bit blurry&#x2F;faint with the default theme, and none of
+&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;looking-at-liquidluck-themes&quot;&gt;the other ones&lt;&#x2F;a&gt; are
+close to good-enough for my liking, all but the promising one named
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bingdian&#x2F;liquidluck-theme-responsive&quot;&gt;responsive&lt;&#x2F;a&gt;. It got 2 issues so far (see &lt;a href=&quot;http:&#x2F;&#x2F;demo-responsive.tshepang.net&quot;&gt;live demo&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Date is displayed at the bottom of a post... why make user
+scroll that far before presenting such a key piece of info.&lt;&#x2F;li&gt;
+&lt;li&gt;There is no link anywhere allowing to visit Home.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Background color for &lt;code&gt;&amp;lt;code&amp;gt;&lt;&#x2F;code&gt; text is too unusual, and results in an
+ugly look. It does not fit with the general general theme, so should
+be grey really, which would match with that of &lt;code&gt;&amp;lt;pre&amp;gt;&lt;&#x2F;code&gt; text. I fixed
+it myself with the following patch:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;diff --git a&#x2F;liquidluck&#x2F;_themes&#x2F;default&#x2F;static&#x2F;style.css b&#x2F;liquidluck&#x2F;_themes&#x2F;default&#x2F;static&#x2F;style.css
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;index e90de80..94fa7e8 100644
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+++ a&#x2F;liquidluck&#x2F;_themes&#x2F;default&#x2F;static&#x2F;style.css
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+++ b&#x2F;liquidluck&#x2F;_themes&#x2F;default&#x2F;static&#x2F;style.css
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;@@ -112,7 +112,7 @@ pre {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;border-radius: 3px;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;code, tt {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-    background-color: #fee9cc;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+    background-color: #eee;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;color: rgba(0, 0, 0, 0.75);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;padding: 1px 3px;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;font-size: 12px;
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>blogging with Pelican</title>
+                <pubDate>Mon, 30 Sep 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/blogging-with-pelican/</link>
+                <guid>http://tshepang.net/blogging-with-pelican/</guid>
+                <description>&lt;p&gt;&lt;strong&gt;notes&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;I have a separate post on &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;what-me-loves-about-static-website-generation&quot;&gt;what I love about static website
+generators&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;This post was first published on &lt;strong&gt;2012-05-20&lt;&#x2F;strong&gt;, which is before &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;from-pelican-to-liquidluck&quot;&gt;I
+started using liquidluck&lt;&#x2F;a&gt;, a competing tool.&lt;&#x2F;li&gt;
+&lt;li&gt;And then I moved back &lt;strong&gt;2013-09-29&lt;&#x2F;strong&gt; due to development inactivity
+of liquidluck.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;pelican.notmyidea.org&#x2F;&quot;&gt;Pelican&lt;&#x2F;a&gt; is a static blog generator; it converts marked-up text files
+to html (Pelican supports &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Markdown&quot;&gt;Markdown&lt;&#x2F;a&gt; and &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;ReStructuredText&quot;&gt;reStructuredText&lt;&#x2F;a&gt;). The
+resulting site is complete with an index (Archives view), Tags,
+Categories, and Pages (for non-bloggy stuff like a CV or About Me file).&lt;&#x2F;p&gt;
+&lt;p&gt;As for my blog, its tree structure looks like this (&lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;blog&#x2F;src&quot;&gt;repo&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;build&#x2F;...
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pages&#x2F;about-me.rst
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;posts&#x2F;{arts&#x2F;, computing&#x2F;, misc&#x2F;}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;CNAME
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;fabfile.py
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;new-post.py
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;README.rst
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;settings.py
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;code&gt;build&lt;&#x2F;code&gt; directory is where the output of the build process is
+stored.&lt;&#x2F;li&gt;
+&lt;li&gt;The &lt;code&gt;pages&lt;&#x2F;code&gt; directory is for any content that isn&#x27;t blog posts.&lt;&#x2F;li&gt;
+&lt;li&gt;The &lt;code&gt;posts&lt;&#x2F;code&gt; directory is where the large chunk of content lives, the
+blog posts themselves. Each of the four directories in there
+represent a Category, for example: if you place some file in
+&lt;code&gt;arts&#x2F;&lt;&#x2F;code&gt;, the post will be marked as falling under &lt;strong&gt;arts&lt;&#x2F;strong&gt; Category.&lt;&#x2F;li&gt;
+&lt;li&gt;I host my blog on GitHub, using a service the call GitHub Pages.
+&lt;code&gt;CNAME&lt;&#x2F;code&gt; is a file required by that service in the case where I want
+to use a domain other than &lt;code&gt;tshepang.github.io&lt;&#x2F;code&gt;. It&#x27;s content is
+&lt;code&gt;tshepang.net&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;blog&#x2F;src&#x2F;tip&#x2F;fabfile.py&quot;&gt;fabfile.py&lt;&#x2F;a&gt; contains the build instructions, all for convenience so
+that I only need to run 2 commands, one for the build, and another
+for GitHub upload. However, I mostly just run one command that does
+both.&lt;&#x2F;li&gt;
+&lt;li&gt;The &lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;blog&#x2F;src&#x2F;tip&#x2F;settings.py&quot;&gt;settings.py&lt;&#x2F;a&gt; file contains Pelican configuration. It should be
+somewhat mostly self-explanatory, but for those things that aren&#x27;t
+so obvious, do consult the documentation.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;blog&#x2F;src&#x2F;tip&#x2F;README.rst&quot;&gt;README.rst&lt;&#x2F;a&gt; has some basic instructions, as well as repository
+license.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Now as for the post itself, you need metadata to go with it. This is
+stuff like title, date, and tags. It can be tedious to create all such
+mundate stuff, especially the date. That&#x27;s why I wrote &lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;blog&#x2F;src&#x2F;tip&#x2F;new-post.py&quot;&gt;a script&lt;&#x2F;a&gt; that
+generates that file and populates it with the given metadata:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ python new-post.py &amp;#39;my blogging setup&amp;#39; misc --tags blogging
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This is the metadata, and also the beginning of the file:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;my blogging setup
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;=================
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:date: 2012-04-12
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:tags: blogging
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The script also opens the file in my favorite editor, so I can start
+adding content.&lt;&#x2F;p&gt;
+&lt;p&gt;When I&#x27;m done with the changes, I ensure I&#x27;m in the root directory of
+my blog, commit (&lt;code&gt;hg commit --message &#x27;new post&#x27;&lt;&#x2F;code&gt;) and run:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ fab
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;That&#x27;s a &lt;a href=&quot;http:&#x2F;&#x2F;fabfile.org&quot;&gt;fabric&lt;&#x2F;a&gt; command that uses the instructions found in
+&lt;code&gt;fabfile.py&lt;&#x2F;code&gt;. It builds the site, and then pushes it to GitHub Pages. It
+also pushes the sources to Bitbucket. Within a minute, the blog will be
+updated.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>favorite Pelican themes</title>
+                <pubDate>Mon, 30 Sep 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/favorite-pelican-themes/</link>
+                <guid>http://tshepang.net/favorite-pelican-themes/</guid>
+                <description>&lt;p&gt;I don&#x27;t like the default &lt;a href=&quot;http:&#x2F;&#x2F;docs.getpelican.com&#x2F;en&#x2F;latest&#x2F;&quot;&gt;Pelican&lt;&#x2F;a&gt; theme, &lt;code&gt;notmyidea&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;It is decent, but the post metadata feels cramped where its placed.&lt;&#x2F;li&gt;
+&lt;li&gt;The is no visible link to tags, never-mind a tag cloud (which is
+handy).&lt;&#x2F;li&gt;
+&lt;li&gt;I just don&#x27;t like the general look.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;So, I had a look at the others:&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;elegant&quot;&gt;&lt;a href=&quot;http:&#x2F;&#x2F;oncrashreboot.com&#x2F;pelican-elegant&quot;&gt;Elegant&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
+&lt;p&gt;This the least static-like of all themes I&#x27;ve seen yet which makes it
+the most innovative. The search feature, which sets it apart from its
+competitors, got me excited.&lt;&#x2F;p&gt;
+&lt;p&gt;It has some issues though (&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;favorite-pelican-themes#comment-1064640476&quot;&gt;to be fixed at some point&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;ignores Twitter setting&lt;&#x2F;li&gt;
+&lt;li&gt;RSS feeds are supported, but the icons aren&#x27;t made visible&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;It&#x27;s also not the prettiest of themes, but it will have to do, at least
+for now.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;gum&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;getpelican&#x2F;pelican-themes&#x2F;tree&#x2F;master&#x2F;gum&quot;&gt;gum&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
+&lt;p&gt;I was impressed enough that I was strongly considering settling for this
+one, despite the following issues:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;no Tags on individual Posts&lt;&#x2F;li&gt;
+&lt;li&gt;no Categories on individual Posts&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;getpelican&#x2F;pelican-themes&#x2F;issues&#x2F;152&quot;&gt;it doesn&#x27;t display bullets&lt;&#x2F;a&gt;!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;monospace&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;getpelican&#x2F;pelican-themes&#x2F;tree&#x2F;master&#x2F;monospace&quot;&gt;monospace&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;strong&gt;win&lt;&#x2F;strong&gt;] simple and elegant design&lt;&#x2F;li&gt;
+&lt;li&gt;[&lt;strong&gt;win&lt;&#x2F;strong&gt;] displays pages as a list, all but the newest one in the
+view&lt;&#x2F;li&gt;
+&lt;li&gt;[&lt;strong&gt;win&lt;&#x2F;strong&gt;] me loving the Archives view&lt;&#x2F;li&gt;
+&lt;li&gt;Categories are not shown in a prominent place (e.g. menu bar)&lt;&#x2F;li&gt;
+&lt;li&gt;no Tags on individual Posts&lt;&#x2F;li&gt;
+&lt;li&gt;no Categories on individual Posts&lt;&#x2F;li&gt;
+&lt;li&gt;ignores Twitter setting&lt;&#x2F;li&gt;
+&lt;li&gt;Post titles are capitalised (minor issue)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;just-read&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;getpelican&#x2F;pelican-themes&#x2F;tree&#x2F;master&#x2F;Just-Read&quot;&gt;Just Read&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;strong&gt;win&lt;&#x2F;strong&gt;] elegant and simple design (&lt;strong&gt;my favorite of all&lt;&#x2F;strong&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;[&lt;strong&gt;win&lt;&#x2F;strong&gt;] displays pages as a list, all but the newest one in the
+view&lt;&#x2F;li&gt;
+&lt;li&gt;Categories are 2nd-class citizens: they aren&#x27;t shown on the index
+page&lt;&#x2F;li&gt;
+&lt;li&gt;bullets are done wrong: the bullet-ed text is not indented&lt;&#x2F;li&gt;
+&lt;li&gt;on post view, there is no distinction between Tags and Categories&lt;&#x2F;li&gt;
+&lt;li&gt;too much border space on code snippets (&lt;strong&gt;pre&lt;&#x2F;strong&gt; tag?)&lt;&#x2F;li&gt;
+&lt;li&gt;background for code snippets is not distinctive&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;tuxlite&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;getpelican&#x2F;pelican-themes&#x2F;tree&#x2F;master&#x2F;tuxlite_tbs&quot;&gt;tuxlite_tbs&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;strong&gt;win&lt;&#x2F;strong&gt;] clean and simple design: nice menu-bar and sidebars&lt;&#x2F;li&gt;
+&lt;li&gt;tags aren&#x27;t shown along-aside posts&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;mockingbird&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;wrl&#x2F;pelican-mockingbird&quot;&gt;Mockingbird&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;strong&gt;win&lt;&#x2F;strong&gt;] very nice and clean design&lt;&#x2F;li&gt;
+&lt;li&gt;date on Archives looks like shit&lt;&#x2F;li&gt;
+&lt;li&gt;background for code snippets is not distinctive&lt;&#x2F;li&gt;
+&lt;li&gt;Categories only visible on individual Posts&lt;&#x2F;li&gt;
+&lt;li&gt;ignores Twitter setting&lt;&#x2F;li&gt;
+&lt;li&gt;does not support Disqus&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;neat&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;byk&#x2F;pelican-neat&quot;&gt;neat&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;[&lt;strong&gt;win&lt;&#x2F;strong&gt;] the look is different; it feels calm&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Archives view is not ideal, though it&#x27;s not in a prominent location&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Categories are not shown in a prominent place (e.g. on menu bar)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;when &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;byk&#x2F;pelican-neat#configuration-options&quot;&gt;custom fields&lt;&#x2F;a&gt; are not specified, they are handled in a naive
+manner:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;images&#x2F;neat.png&quot; alt=&quot;naive handling of unspecified custom fields&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;chunk&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tbunnyman&#x2F;pelican-chunk&quot;&gt;Chunk&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;strong&gt;win&lt;&#x2F;strong&gt;] a trendy look&lt;&#x2F;li&gt;
+&lt;li&gt;oversized text, especially blog title&lt;&#x2F;li&gt;
+&lt;li&gt;background for code snippets is not distinctive&lt;&#x2F;li&gt;
+&lt;li&gt;Archives look like shit&lt;&#x2F;li&gt;
+&lt;li&gt;ignores Twitter setting&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;bootstrap-2&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;getpelican&#x2F;pelican-themes&#x2F;tree&#x2F;master&#x2F;bootstrap2&quot;&gt;Bootstrap 2&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;strong&gt;win&lt;&#x2F;strong&gt;] the Menu bar is unbeatable&lt;&#x2F;li&gt;
+&lt;li&gt;the general look is too busy:
+&lt;ul&gt;
+&lt;li&gt;the Categories and Tags on the right must go&lt;&#x2F;li&gt;
+&lt;li&gt;who wants snippets on posts&lt;&#x2F;li&gt;
+&lt;li&gt;showing Category and Tag on main views&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;separate tag cloud page missing&lt;&#x2F;li&gt;
+&lt;li&gt;line length too long&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>looking at liquidluck themes</title>
+                <pubDate>Sat, 13 Apr 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/looking-at-liquidluck-themes/</link>
+                <guid>http://tshepang.net/looking-at-liquidluck-themes/</guid>
+                <description>&lt;p&gt;Following are demos of all liquidluck themes I could find, all running
+&lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;blog&#x2F;src&quot;&gt;this source&lt;&#x2F;a&gt;, but each slightly modified to change theme name
+(&lt;code&gt;settings.py&lt;&#x2F;code&gt;).&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lepture&#x2F;liquidluck-theme-moment&quot;&gt;moment&lt;&#x2F;a&gt; (the default theme; &lt;a href=&quot;http:&#x2F;&#x2F;demo-moment.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bingdian&#x2F;liquidluck-theme-responsive&quot;&gt;responsive&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;demo-responsive.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;popomore&#x2F;liquidluck-theme-reveal&quot;&gt;reveal&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;demo-reveal.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;leandromouta&#x2F;liquidluck-theme-thegrey&quot;&gt;thegrey&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;demo-thegrey.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;microjo&#x2F;liquidluck-theme-lovelymod&quot;&gt;lovelymod&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;demo-lovelymod.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bcho&#x2F;liquidluck-theme-cb3f20&quot;&gt;cb3f20&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;demo-cb3f20.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lepture&#x2F;liquidluck-theme-chiang&quot;&gt;chiang&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;demo-chiang.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;I get a blank page&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;When building, it fails with:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[E 130413 20:53:48 base:42] &amp;#39;None&amp;#39; has no attribute &amp;#39;strftime&amp;#39;
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lianqin7&#x2F;liquidluck-theme-icbu&quot;&gt;icbu&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;demo-icbu.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;When building, I get 2 of these messages:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[E 130413 23:40:19 base:42] &amp;#39;dict object&amp;#39; has no attribute &amp;#39;package&amp;#39;
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lepture&#x2F;liquidluck-theme-octopress&quot;&gt;octopress&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;demo-octopress.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;When building, I get 4 of these messages:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[E 130413 23:33:53 base:42] list index out of range
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lepture&#x2F;liquidluck-theme-bootstrap&quot;&gt;bootstrap&lt;&#x2F;a&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lepture&#x2F;liquidluck-theme-bootstrap&#x2F;issues&#x2F;1&quot;&gt;broken&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>links 2013-04-12</title>
+                <pubDate>Fri, 12 Apr 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/links-2013-04-12/</link>
+                <guid>http://tshepang.net/links-2013-04-12/</guid>
+                <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;arunrocks.com&#x2F;moving-blogs-to-pelican&quot;&gt;a nice post&lt;&#x2F;a&gt; on why static blog generation rocks; much better (and
+more detailed) than &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;what-me-loves-about-static-website-generation&quot;&gt;mine&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;xkcd.com&#x2F;1102&quot;&gt;the fallacy of fast growth&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;xkcd.com&#x2F;933&quot;&gt;being hardcore&lt;&#x2F;a&gt;; nice humor&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;english.blogoverflow.com&#x2F;2012&#x2F;12&#x2F;the-give-that-keeps-on-gifting-the-protean-nature-of-english-words-and-why-thats-a-good-thing&#x2F;&quot;&gt;embracing an ever-changing language&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;loving the clean design of &lt;a href=&quot;http:&#x2F;&#x2F;craig.is&#x2F;writing&#x2F;chrome-logger&#x2F;techspecs&quot;&gt;this page&lt;&#x2F;a&gt;; most of all, I love the
+code&#x2F;pre tag rendering.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>what me loves about static website generation</title>
+                <pubDate>Sat, 06 Apr 2013 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/what-me-loves-about-static-website-generation/</link>
+                <guid>http://tshepang.net/what-me-loves-about-static-website-generation/</guid>
+                <description>&lt;p&gt;There&#x27;s a ridiculous amount of power and flexiblity in having all the
+blog sources locally:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;One can use text editor of choice, which is a big help, given the
+quality of web-based editors in general.&lt;&#x2F;li&gt;
+&lt;li&gt;What this implies is that I can now put the blog in a &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Revision_control&quot;&gt;VCS&lt;&#x2F;a&gt;. This
+acts as some sort of backup too, since I place my sources on &lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;blog&quot;&gt;a
+remote server&lt;&#x2F;a&gt;.&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;This also means that I can do a heck of a lot of edits without being
+connected to the web, or deeper changes like playing search-replace
+through the entire blog.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;cons&quot;&gt;cons&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;The complexity of &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;blogging-with-pelican&quot;&gt;the setup&lt;&#x2F;a&gt; is going to scare many people away.&lt;&#x2F;li&gt;
+&lt;li&gt;It can take a lot of time to setup; For me, this was made worse by
+having a lot of posts, as well as &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;favorite-pelican-themes&quot;&gt;being rather particular&lt;&#x2F;a&gt; about
+the look and functionality of the output.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
+&lt;p&gt;I used to run a command like &lt;code&gt;wget --mirror http:&#x2F;&#x2F;tshepang.net&lt;&#x2F;code&gt;
+once in a while, just in case!&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>trying out Calepin</title>
+                <pubDate>Mon, 02 Apr 2012 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/trying-out-calepin/</link>
+                <guid>http://tshepang.net/trying-out-calepin/</guid>
+                <description>&lt;p&gt;&lt;strong&gt;update&lt;&#x2F;strong&gt;: The lack of reliability, worst of which was constant
+unavailability of my blog, led me to move on. This time it&#x27;s &lt;a href=&quot;http:&#x2F;&#x2F;pelican.notmyidea.org&quot;&gt;Pelican&lt;&#x2F;a&gt;,
+hosted by &lt;a href=&quot;http:&#x2F;&#x2F;pages.github.com&quot;&gt;GitHub Pages&lt;&#x2F;a&gt;. &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;blogging-with-pelican&quot;&gt;Here&#x27;s the setup&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;ve been meaning to move my blog(s) away from Posterous, due to its UI
+problems and ridiculously-slow page loads. I finally did it with the
+help of &lt;a href=&quot;http:&#x2F;&#x2F;calepin.co&#x2F;&quot;&gt;Calepin&lt;&#x2F;a&gt;, which itself has a bunch of problems. These are
+forgivable since it&#x27;s a Beta product:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;The presentation is way too simple&#x2F;plain, and doesn&#x27;t provide a way
+to customise it.&lt;&#x2F;li&gt;
+&lt;li&gt;I spent hours struggling with Dropbox login integration, where I
+often had to go to Chrome&#x27;s Incognito mode, and at some point, had
+to delete my Dropbox account as well, just to get it to work.&lt;&#x2F;li&gt;
+&lt;li&gt;It seems crazy that each time I want to publish I have to visit the
+web page to hit Publish, when Calepin should simply monitor the
+Dropbox account.&lt;&#x2F;li&gt;
+&lt;li&gt;The blog is unreachable whenever I publish. This isn&#x27;t such a big
+deal of course, but c&#x27;mon.&lt;&#x2F;li&gt;
+&lt;li&gt;When hitting Publish, it takes way too long (several seconds) before
+the page is rendered on the blog.&lt;&#x2F;li&gt;
+&lt;li&gt;...and am sure there will be more as time goes (proven by the fact
+that this list kept growing as I typed this post)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Despite all these problems, it will have to do for now, until I find
+another host, and maybe this time I will have to spend some cash.&lt;&#x2F;p&gt;
+&lt;p&gt;In the interest of balance, here&#x27;s &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;what-me-loves-about-static-website-generation&quot;&gt;what attracted me&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>Tumblr suckage</title>
+                <pubDate>Tue, 02 Nov 2010 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/tumblr-suckage/</link>
+                <guid>http://tshepang.net/tumblr-suckage/</guid>
+                <description>&lt;p&gt;&lt;strong&gt;update&lt;&#x2F;strong&gt;: after an unbearably-long downtime, I decided to make the
+switch, this time to &lt;strong&gt;Posterous&lt;&#x2F;strong&gt; (now-defunct).&lt;&#x2F;p&gt;
+&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;p&gt;As much as I love Tumblr, I got a few complaints:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;performance for some tasks is really bad; the most annoying one is
+the time it takes for the Edit button to appear&lt;&#x2F;li&gt;
+&lt;li&gt;search is real bad; often it doesn&#x27;t find stuff I know is there;
+sometimes I have to re-run the search before seeing results&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Pages&lt;&#x2F;strong&gt;: I can&#x27;t use Markdown to edit them&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Pages&lt;&#x2F;strong&gt;: I&#x27;m not presented with the Edit button at all; I instead
+have to do it via the Dashboard, then click Customize, then click
+Pages, then scroll and find the page I wanna edit!&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;royal.pingdom.com&#x2F;2010&#x2F;12&#x2F;17&#x2F;the-most-reliable-and-unreliable-blogging-services-2&#x2F;&quot;&gt;horrible uptime&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;I&#x27;m not sure if these problems will be fixed (I&#x27;ve reported one bug,
+without any real feedback). The collective of these problems makes me
+wanna search for another blog host. The challenge with the move is doing
+the laborious internal re-linking over again.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>new blogging platform</title>
+                <pubDate>Wed, 02 Jun 2010 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/new-blogging-platform/</link>
+                <guid>http://tshepang.net/new-blogging-platform/</guid>
+                <description>&lt;p&gt;Blogger&#x27;s post editor is so bad that I&#x27;ve been promising myself to
+move elsewhere for quite a while. I checked on &lt;a href=&quot;http:&#x2F;&#x2F;superuser.com&quot;&gt;Super User&lt;&#x2F;a&gt; what their
+recommendations are and they pointed mostly to Wordpress (which I found
+too ugly) but someone there also pointed to &lt;a href=&quot;http:&#x2F;&#x2F;tumblr.com&quot;&gt;Tumblr&lt;&#x2F;a&gt;, which I never
+heard of before. It really is more than a blogging platform (which was
+all I was actually looking for), and it does look good except for the
+fact that I miss the sidebar functionality which allows me to place
+things like favorite blogs, favorite posts, etc.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+    </channel>
+</rss>
