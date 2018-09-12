@@ -51,53 +51,74 @@
             
 <div class="post">
   <h1 class="post-title">FLOSS I use a-lot</h1>
-  <span class="post-date">2017-05-27</span>
-  <p>Following are tools I use a lot, but am not necessarily loving. There is
-<a href="http://tshepang.net/favorite-floss">a separate post</a> for those.</p>
-<p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
-<p><strong>Debian</strong>: my primary OS, and also my favorite</p>
+  <span class="post-date">2018-09-12</span>
+  <p>Following are tools I use a lot, but am not necessarily loving...
+There is <a href="http://tshepang.net/favorite-floss">a separate post</a> for those.</p>
+<hr />
+<p><em>environment</em></p>
 <ul>
-<li><strong>wajig</strong>: <a href="http://tshepang.net/tags#wajig-ref">I also develop and maintain it</a></li>
-<li><strong>APT</strong>: a collection of Debian package management tools</li>
+<li><strong>Debian</strong>: my primary OS, and also my favorite</li>
+<li><a href="http://tshepang.net/my-current-desktop-setup">dwm</a>: simple and clean window management</li>
+<li><a href="http://tmux.sourceforge.net">tmux</a>: amazingly powerful, though I wish it had less rendering bugs</li>
+<li><strong>Emacs</strong>: pleasant text editing and file management</li>
+<li><strong>bash</strong>, and <strong>fish</strong>: the latter is new to me, and still under
+evaluation... it's a far more pretty ui, with a fancy completion
+system that also gets in the way rather often</li>
 </ul>
-<p>software development</p>
+<p><em>software development</em></p>
 <ul>
-<li><strong>Emacs</strong>: I also use it as a general purpose text editor</li>
-<li><strong>Git</strong>: as if I had a choice... work and open source</li>
-<li><strong>Mercurial</strong>: my favorite</li>
-<li><strong>Rust</strong>: this has since replaced Python as my favorite language,
-and I spend far more time with it than any other</li>
+<li><strong>cargo</strong>: primary tool for Rust development</li>
+<li><strong>Git</strong>: this one has won the mindshare... using it for work and open source</li>
+<li><strong>Mercurial</strong>: slight preference over Git</li>
 </ul>
-<p>work</p>
+<p><em>work</em></p>
+<p>Out infrastructure is made up of remote machines that ferry data to
+central servers</p>
 <ul>
-<li>Docker: a central component of our infranstructure</li>
-<li>systemd: journalctl &amp; sysmtemctl</li>
+<li><strong>Docker</strong>: each component of the server runs in a container</li>
+<li><strong>salt</strong>: administers the remote machines</li>
+<li><strong>VirtualBox</strong>: these remotes can be virtual... great for testing</li>
+<li><strong>journalctl</strong> &amp; <strong>sysmtemctl</strong>: these remotes run systemd</li>
+<li><strong>Elasticsearch</strong>: the data store</li>
 </ul>
-<p>entertainment</p>
+<p><em>GUI applications</em></p>
+<ul>
+<li><strong>Xfce Terminal</strong></li>
+<li><strong>Firefox</strong></li>
+<li><a href="http://www.transmissionbt.com">Transmission</a>: the only torrent client I have ever used</li>
+<li><strong>Nautilus</strong>: decent GUI file manager</li>
+</ul>
+<p><em>network diagnosis</em></p>
+<ul>
+<li><a href="http://humdi.net/vnstat">vnstat</a>: nifty network usage viewer</li>
+<li><strong>ping</strong>: checks general reachability</li>
+<li><strong>mtr</strong>: interactive traceroute tool</li>
+<li><strong>netcat</strong>: for checking if tcp ports are reachable</li>
+</ul>
+<p><em>entertainment</em></p>
 <ul>
 <li><strong>Quod Libet</strong>: audio player that comes with a very excellent tag
 editor, <strong>Ex Falso</strong></li>
 <li><strong>VLC</strong>: user interface could be a lot better</li>
 </ul>
-<p>GUI applications</p>
+<p><em>miscellaneous tools</em></p>
 <ul>
-<li><strong>Xfce Terminal</strong></li>
-<li><strong>Firefox</strong></li>
-<li><a href="http://lzone.de/liferea">Liferea</a>: I like it, ugly and unkool as it is</li>
-<li><a href="http://www.transmissionbt.com">Transmission</a>: the only torrent client I have ever used</li>
-<li><strong>Nautilus</strong>: decent GUI file manager</li>
-</ul>
-<p>miscellaneous tools</p>
-<ul>
-<li><a href="http://tshepang.net/my-current-desktop-setup">dwm</a></li>
-<li><a href="http://tmux.sourceforge.net">tmux</a>: amazingly powerful, but I wish it had less rendering bugs</li>
+<li><strong>wajig</strong>: acts as pleasant front-end to apt and other
+package management tools;
+<a href="http://tshepang.net/tags#wajig-ref">I used to maintain it</a>, and it happens to be the one Debian
+package that makes me a Debian Maintainer (I got upload access
+for it)</li>
+<li><strong>apt</strong>: Debian package management</li>
 <li><strong>head</strong> and <strong>tail</strong>: included in GNU coreutils suite of tools</li>
 <li><a href="http://www.greenwoodsoftware.com/less">less</a>: indispensable!</li>
 <li><strong>OpenSSH</strong>: duh!</li>
-<li><a href="https://github.com/joelthelion/autojump">autojump</a>: makes navigating the filesystem a joy</li>
+<li><a href="http://tshepang.net/project-of-note-sudo">Sudo</a>: another duh!</li>
 <li><a href="http://fabfile.org">Fabric</a>: I use it to build and deploy my blogs... it's some
 sort of replacement for shell scripting</li>
 <li><a href="http://rg3.github.io/youtube-dl">youtube-dl</a>: I prefer watching videos locally, with VLC</li>
+<li><a href="http://blog.burntsushi.net/ripgrep">ripgrep</a>: grep replacement (better speed and ux),
+and the most important non-dev tool written in Rust</li>
+<li><a href="http://tshepang.net/project-of-note-sudo">Iotop</a>: nifty I/O usage viewer</li>
 </ul>
 
 </div>

@@ -80,13 +80,12 @@ color-coded!</p>
 <p>I love that I don't need to add (the tedious) parenthesis around
 the <em>condition expression</em> in an <em>if</em>, <em>while</em>, and <em>match</em>
 statements:</p>
-<p>::: {.sourcecode}
-rust</p>
-<p>if true {</p>
-<p>:   // always executes</p>
-<p>}
-:::</p>
-</li>
+<pre style="background-color:#2b303b">
+<span style="color:#b48ead;">if </span><span style="color:#d08770;">true </span><span style="color:#c0c5ce;">{
+</span><span style="color:#c0c5ce;">    </span><span style="color:#65737e;">// always executes
+</span><span style="color:#c0c5ce;">}
+</span><span style="color:#c0c5ce;">
+</span></pre></li>
 <li>
 <p>The semicolon rule: I initially found it surprising that omitting a
 semicolon after a value is shorthand for returning. I appreciate it
@@ -129,11 +128,11 @@ change passes all tests.</li>
 </ul>
 </li>
 <li>
-<p>Allows one to redefine variables, even with different types:</p>
-<p>::: {.sourcecode}
-rust</p>
-<p>let foo = 10; let foo = &quot;ten&quot;;
-:::</p>
+<p>Allows masking of variables, even with different types:</p>
+<pre style="background-color:#2b303b">
+<span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> foo = </span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">;
+</span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> foo = &quot;</span><span style="color:#a3be8c;">ten</span><span style="color:#c0c5ce;">&quot;;
+</span></pre>
 <p>This is convenient.</p>
 </li>
 <li>
