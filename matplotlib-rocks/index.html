@@ -112,12 +112,16 @@
 
     <div class="post-content">
       <p>Have a look at this code:</p>
-<p>::: {.sourcecode}
-python</p>
-<p>from matplotlib import pyplot import random</p>
-<p>x_axis = range(10) pyplot.plot(x_axis, random.sample(range(10), 10))
-pyplot.plot(x_axis, random.sample(range(10), 10)) pyplot.show()
-:::</p>
+<pre style="background-color:#2b303b">
+<span style="color:#c0c5ce;">
+</span><span style="color:#b48ead;">from </span><span style="color:#c0c5ce;">matplotlib </span><span style="color:#b48ead;">import </span><span style="color:#c0c5ce;">pyplot
+</span><span style="color:#b48ead;">import </span><span style="color:#c0c5ce;">random
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;">x_axis = </span><span style="color:#96b5b4;">range</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">)
+</span><span style="color:#c0c5ce;">pyplot.</span><span style="color:#bf616a;">plot</span><span style="color:#c0c5ce;">(x_axis, random.</span><span style="color:#bf616a;">sample</span><span style="color:#c0c5ce;">(</span><span style="color:#96b5b4;">range</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">), </span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">))
+</span><span style="color:#c0c5ce;">pyplot.</span><span style="color:#bf616a;">plot</span><span style="color:#c0c5ce;">(x_axis, random.</span><span style="color:#bf616a;">sample</span><span style="color:#c0c5ce;">(</span><span style="color:#96b5b4;">range</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">), </span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">))
+</span><span style="color:#c0c5ce;">pyplot.</span><span style="color:#bf616a;">show</span><span style="color:#c0c5ce;">()
+</span></pre>
 <p>With <a href="http://matplotlib.org">matplolib</a> installed, running the code above should resulted in
 the following image:</p>
 <p><img src="images/matplotlib-1.png" alt="image resulting from running the code above" /></p>
@@ -129,16 +133,21 @@ especially in my case because I needed a way to specify an arbitrary
 number of graphs. Without this magical feature, the code would be a lot
 uglier.</p>
 <p>Here goes:</p>
-<p>::: {.sourcecode}
-python</p>
-<p>from matplotlib import pyplot import argparse import random</p>
-<p>parser = argparse.ArgumentParser()
-parser.add_argument('number_of_graphs', type=int) args =
-parser.parse_args()</p>
-<p>x_axis = range(10) for n in range(args.number_of_graphs):
-pyplot.plot(x_axis, random.sample(range(10), 10), label=str(n))
-pyplot.legend() pyplot.show()
-:::</p>
+<pre style="background-color:#2b303b">
+<span style="color:#c0c5ce;">
+</span><span style="color:#b48ead;">from </span><span style="color:#c0c5ce;">matplotlib </span><span style="color:#b48ead;">import </span><span style="color:#c0c5ce;">pyplot
+</span><span style="color:#b48ead;">import </span><span style="color:#c0c5ce;">argparse
+</span><span style="color:#b48ead;">import </span><span style="color:#c0c5ce;">random
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;">parser = argparse.</span><span style="color:#bf616a;">ArgumentParser</span><span style="color:#c0c5ce;">()
+</span><span style="color:#c0c5ce;">parser.</span><span style="color:#bf616a;">add_argument</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">number_of_graphs</span><span style="color:#c0c5ce;">&#39;, </span><span style="color:#bf616a;">type</span><span style="color:#c0c5ce;">=int)
+</span><span style="color:#c0c5ce;">args = parser.</span><span style="color:#bf616a;">parse_args</span><span style="color:#c0c5ce;">()
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;">x_axis = </span><span style="color:#96b5b4;">range</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">) </span><span style="color:#b48ead;">for </span><span style="color:#c0c5ce;">n </span><span style="color:#b48ead;">in </span><span style="color:#96b5b4;">range</span><span style="color:#c0c5ce;">(args.number_of_graphs):
+</span><span style="color:#c0c5ce;">pyplot.</span><span style="color:#bf616a;">plot</span><span style="color:#c0c5ce;">(x_axis, random.</span><span style="color:#bf616a;">sample</span><span style="color:#c0c5ce;">(</span><span style="color:#96b5b4;">range</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">), </span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">), </span><span style="color:#bf616a;">label</span><span style="color:#c0c5ce;">=</span><span style="color:#bf616a;">str</span><span style="color:#c0c5ce;">(n))
+</span><span style="color:#c0c5ce;">pyplot.</span><span style="color:#bf616a;">legend</span><span style="color:#c0c5ce;">()
+</span><span style="color:#c0c5ce;">pyplot.</span><span style="color:#bf616a;">show</span><span style="color:#c0c5ce;">()
+</span></pre>
 <p>If I provide 3 as command line argument, I get this:</p>
 <p><img src="images/matplotlib-2.png" alt="image resulting from running the code above" /></p>
 <p>This feature left me pleasantly surprised.</p>
