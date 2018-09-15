@@ -100,6 +100,14 @@
                             </li>
                         
                     </ul>
+                    
+                    <div class="search-container">
+                      <input id="search" type="search" placeholder="🔎  search">
+                      <div class="search-results">
+                        <div class="search-results__items"></div>
+                      </div>
+                    </div>
+                    
                 </nav>
             </header>
 
@@ -125,7 +133,15 @@
                     <ul>
                         
                         <li>
+                            <a href="http://tshepang.net/a-bit-of-benchmarking/#build" class="toc-link">Build</a>
+                        </li>
+                        
+                        <li>
                             <a href="http://tshepang.net/a-bit-of-benchmarking/#results" class="toc-link">Results</a>
+                        </li>
+                        
+                        <li>
+                            <a href="http://tshepang.net/a-bit-of-benchmarking/#test-suite" class="toc-link">Test suite</a>
                         </li>
                         
                         <li>
@@ -138,6 +154,14 @@
                 
                 <li>
                     <a href="http://tshepang.net/a-bit-of-benchmarking/#linux-kernel-build" class="toc-link">Linux kernel build</a>
+                    
+                    <ul>
+                        
+                        <li>
+                            <a href="http://tshepang.net/a-bit-of-benchmarking/#results-2" class="toc-link">Results</a>
+                        </li>
+                        
+                    </ul>
                     
                 </li>
                 
@@ -169,7 +193,7 @@
 Each of these have 4 logical processors (and 8GB of RAM), so are sort of
 comparable. I also added the <a href="https://www.digitalocean.com/?refcode=25b4887810cc">DigitalOcean</a> VPS with those specs
 (<a href="https://www.digitalocean.com/pricing">currently $80 per month</a>) because... why not.</p>
-<h1 id="machine-specs">Machine Specs</h1>
+<h2 id="machine-specs">Machine Specs</h2>
 <p>Each machine runs Debian testing (codename &quot;jessie&quot;). Following is the
 output of these commands for each machine:</p>
 <pre style="background-color:#2b303b">
@@ -190,15 +214,13 @@ output of these commands for each machine:</p>
 <pre style="background-color:#2b303b">
 <span style="color:#c0c5ce;">Linux tcloud 3.11-1-amd64 #1 SMP Debian 3.11.5-1 (2013-10-17) x86_64 GNU/Linux
 </span><span style="color:#c0c5ce;">model name      : QEMU Virtual CPU version 1.0
-</span></pre><h1 id="cpython-benchmarks">CPython benchmarks</h1>
+</span></pre><h2 id="cpython-benchmarks">CPython benchmarks</h2>
 <p>I ran two benchmarks, both from the latest VCS version of CPython,
 development branch:</p>
 <pre style="background-color:#2b303b">
 <span style="color:#c0c5ce;">$ hg identify --id --branch
 </span><span style="color:#c0c5ce;">b6a1a78818fe default
-</span></pre>
-<p>Build
-+++--</p>
+</span></pre><h3 id="build">Build</h3>
 <p>Here's the command I used:</p>
 <pre style="background-color:#2b303b">
 <span style="color:#c0c5ce;">make distclean; time (./configure &amp;&amp; make --silent --jobs=4)
@@ -220,9 +242,7 @@ development branch:</p>
 <span style="color:#c0c5ce;">real    2m30.931s
 </span><span style="color:#c0c5ce;">user    3m7.272s
 </span><span style="color:#c0c5ce;">sys     0m16.592s
-</span></pre>
-<p>Test suite
-+++++++++-</p>
+</span></pre><h3 id="test-suite">Test suite</h3>
 <p>Here's the command I used:</p>
 <pre style="background-color:#2b303b">
 <span style="color:#c0c5ce;">time ./python -m test --multiprocess=0
@@ -248,7 +268,7 @@ too long for tests which are largely idle)</p>
 <span style="color:#c0c5ce;">real    2m19.174s
 </span><span style="color:#c0c5ce;">user    5m5.444s
 </span><span style="color:#c0c5ce;">sys     0m40.008s
-</span></pre><h1 id="linux-kernel-build">Linux kernel build</h1>
+</span></pre><h2 id="linux-kernel-build">Linux kernel build</h2>
 <p>Just for kicks, I decided to check how long building Linux would take;
 for this, I used latest 'final' release from Linus' git tree:</p>
 <pre style="background-color:#2b303b">
@@ -262,9 +282,7 @@ for this, I used latest 'final' release from Linus' git tree:</p>
 <p>Here's the commands I used:</p>
 <pre style="background-color:#2b303b">
 <span style="color:#c0c5ce;">make distclean &amp;&amp; make defconfig &amp;&amp; time make
-</span></pre>
-<p>Results
-++++++-</p>
+</span></pre><h3 id="results-2">Results</h3>
 <p>Home machine:</p>
 <pre style="background-color:#2b303b">
 <span style="color:#c0c5ce;">real    6m11.622s
@@ -282,7 +300,7 @@ for this, I used latest 'final' release from Linus' git tree:</p>
 <span style="color:#c0c5ce;">real    3m41.240s
 </span><span style="color:#c0c5ce;">user    12m21.120s
 </span><span style="color:#c0c5ce;">sys     1m17.844s
-</span></pre><h1 id="conclusion">Conclusion</h1>
+</span></pre><h2 id="conclusion">Conclusion</h2>
 <p>My work machine is faster than the DigitalOcean offering of comparable
 specs, and much faster than my home machine, a laptop.</p>
 <p>(<a href="http://stackoverflow.com/a/556411/321731">detailed explanation of the output</a>)</p>
@@ -311,6 +329,11 @@ specs, and much faster than my home machine, a laptop.</p>
 
       
           <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;even.js" ></script>
+          
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search_index.en.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search.js"></script>
+          
       
     </body>
 

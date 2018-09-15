@@ -32,7 +32,7 @@
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Successfully uploaded packages.
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;(&lt;a href=&quot;http:&#x2F;&#x2F;packages.qa.debian.org&#x2F;w&#x2F;wajig&#x2F;news&#x2F;20131013T074831Z.html&quot;&gt;the package was accepted within 30 minutes&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;And, yeah, that means &lt;a href=&quot;http:&#x2F;&#x2F;bugs.debian.org&#x2F;cgi-bin&#x2F;bugreport.cgi?msg=12;bug=723802&quot;&gt;I am now Debian Maintainer&lt;&#x2F;a&gt;. Other than giving me
 more freedom, this helps reduce the workload on &lt;a href=&quot;http:&#x2F;&#x2F;dirk.eddelbuettel.com&quot;&gt;Dirk Eddelbuettel&lt;&#x2F;a&gt;, who
 has been uploading wajig for several years now. He even &lt;a href=&quot;http:&#x2F;&#x2F;lists.debian.org&#x2F;debian-newmaint&#x2F;2013&#x2F;09&#x2F;msg00029.html&quot;&gt;became an
@@ -63,7 +63,7 @@ won&#x27;t work on this... too much work.&lt;&#x2F;li&gt;
 &lt;p&gt;But ultimately, I would love for the standard Debian packaging tools to
 get the point where they make wajig irrelevant. After all, wajig was
 created to be a wrapper that helps ease the mess.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;Here&#x27;s the work I did in the past working on wajig, have a look at &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;tagss#wajig-ref&quot;&gt;its
 tag&lt;&#x2F;a&gt;. Off the top of my head:&lt;&#x2F;p&gt;
 &lt;ul&gt;

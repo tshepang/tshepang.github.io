@@ -305,7 +305,7 @@ code from &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;rust-weeks-of-2017
 library for the first time. As was the case with that project, I found
 handling of keyboard input tedious and non-intuitive, and imagine there
 must be an easier way.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;We had &lt;a href=&quot;https:&#x2F;&#x2F;www.meetup.com&#x2F;Johannesburg-Rust-Meetup&#x2F;events&#x2F;246240196&quot;&gt;another monthly meetup&lt;&#x2F;a&gt; (we&#x27;ve had several of them so far),
 which was the usual random informal discussion of the exciting ecosystem
 of the great language that is Rust.&lt;&#x2F;p&gt;
@@ -450,13 +450,13 @@ rust&lt;&#x2F;p&gt;
 &lt;p&gt;let query = json!({&lt;&#x2F;p&gt;
 &lt;p&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;\&amp;quot;sort\&amp;quot;: \[
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;sort&amp;quot;: [
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   { \&amp;quot;\@timestamp\&amp;quot;: { \&amp;quot;order\&amp;quot;: \&amp;quot;asc\&amp;quot;, } }
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   { &amp;quot;@timestamp&amp;quot;: { &amp;quot;order&amp;quot;: &amp;quot;asc&amp;quot;, } }
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;\], \&amp;quot;query\&amp;quot;: { \&amp;quot;bool\&amp;quot;: { \&amp;quot;must\&amp;quot;: \[ { \&amp;quot;term\&amp;quot;: { \&amp;quot;marker\&amp;quot;:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;\&amp;quot;test0\&amp;quot; } }, { \&amp;quot;range\&amp;quot;: { \&amp;quot;\@timestamp\&amp;quot;: { \&amp;quot;gte\&amp;quot;:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;\&amp;quot;now-100s\&amp;quot;, \&amp;quot;lte\&amp;quot;: \&amp;quot;now\&amp;quot;, }}}, \] } }
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;], &amp;quot;query&amp;quot;: { &amp;quot;bool&amp;quot;: { &amp;quot;must&amp;quot;: [ { &amp;quot;term&amp;quot;: { &amp;quot;marker&amp;quot;:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;test0&amp;quot; } }, { &amp;quot;range&amp;quot;: { &amp;quot;@timestamp&amp;quot;: { &amp;quot;gte&amp;quot;:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;now-100s&amp;quot;, &amp;quot;lte&amp;quot;: &amp;quot;now&amp;quot;, }}}, ] } }
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;});
 :::&lt;&#x2F;p&gt;
@@ -734,7 +734,7 @@ non-default toolchain, though that approach is not too bad either:&lt;&#x2F;p&gt
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;# build with nightly
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cargo +nightly build
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I made &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;book&#x2F;issues&#x2F;828&quot;&gt;two&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;book&#x2F;issues&#x2F;834&quot;&gt;complaints&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;brson&#x2F;rust-cookbook&#x2F;pull&#x2F;253&quot;&gt;as&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;43409&quot;&gt;well&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;book&#x2F;pull&#x2F;827&quot;&gt;as&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;43416&quot;&gt;five&lt;&#x2F;a&gt;
 &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;BurntSushi&#x2F;walkdir&#x2F;pull&#x2F;75&quot;&gt;contributions&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
@@ -1069,7 +1069,7 @@ process::command::new(command.remove(1).unwrap()) .args(command)
 &lt;li&gt;--message&lt;&#x2F;li&gt;
 &lt;li&gt;git eat world&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ctz&#x2F;hyper-rustls&#x2F;pull&#x2F;5&quot;&gt;Just one contribution&lt;&#x2F;a&gt; this week, and it&#x27;s not even that great... not
 sure it&#x27;s an improvement&lt;&#x2F;p&gt;
 </description>
@@ -1224,13 +1224,13 @@ killed too easily.&lt;&#x2F;li&gt;
                 <description>&lt;p&gt;I asked &lt;a href=&quot;http:&#x2F;&#x2F;stackoverflow.com&#x2F;q&#x2F;41551036&#x2F;321731&quot;&gt;two&lt;&#x2F;a&gt; &lt;a href=&quot;http:&#x2F;&#x2F;stackoverflow.com&#x2F;q&#x2F;41614923&#x2F;321731&quot;&gt;questions&lt;&#x2F;a&gt; on Stack Overflow. The first led me to use
 the nifty &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;lazy_static&quot;&gt;lazy_static&lt;&#x2F;a&gt; macro for the first time, The second led me to
 submit &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sfackler&#x2F;hyper-native-tls&#x2F;issues&#x2F;1&quot;&gt;a complaint&lt;&#x2F;a&gt; (which got fixed within 3 minutes by the way).&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I am looking forward to two projects:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;blog.jwilm.io&#x2F;announcing-alacritty&quot;&gt;Alacritty&lt;&#x2F;a&gt;, a fast terminal emulator&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Wilfred&#x2F;remacs&quot;&gt;Remacs&lt;&#x2F;a&gt;, Emacs gradually implemented in Rust&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;As for contributions, I &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang-nursery&#x2F;lazy-static.rs&#x2F;pull&#x2F;57&quot;&gt;made&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sfackler&#x2F;hyper-openssl&#x2F;pull&#x2F;2&quot;&gt;just&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&#x2F;pull&#x2F;997&quot;&gt;three&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
             </item>
@@ -1251,7 +1251,7 @@ and made just &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alexcrichton&#x
                 <link>http://tshepang.net/rust-week-of-2016-12-30/</link>
                 <guid>http://tshepang.net/rust-week-of-2016-12-30/</guid>
                 <description>&lt;p&gt;We need more quality code reviews like &lt;a href=&quot;http:&#x2F;&#x2F;blog.mbrt.it&#x2F;2016-12-01-ripgrep-code-review&quot;&gt;this one&lt;&#x2F;a&gt; for ripgrep.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I used &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;reqwest&quot;&gt;reqwest&lt;&#x2F;a&gt; for the first time, and was made sad because using HTTP
 headers is as hard as doing the same for &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;hyper&quot;&gt;hyper&lt;&#x2F;a&gt;, especially given that
 this is supposed to be a more easy library:&lt;&#x2F;p&gt;
@@ -1271,7 +1271,7 @@ client.get(&amp;quot;example.com&amp;quot;).header(auth_bearer).send();
 :::&lt;&#x2F;p&gt;
 &lt;p&gt;I did not think much about this, so maybe there are issues with the
 desired.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;Just &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;serde-rs&#x2F;json&#x2F;pull&#x2F;182&quot;&gt;one contribution&lt;&#x2F;a&gt; this time.&lt;&#x2F;p&gt;
 </description>
             </item>
@@ -1387,7 +1387,7 @@ do_something_with(file);&lt;&#x2F;p&gt;
 &lt;p&gt;And that&#x27;s it, &lt;code&gt;file&lt;&#x2F;code&gt; is now like a normal file!&lt;&#x2F;p&gt;
 &lt;p&gt;Another module I used for the first time is &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;regex&quot;&gt;regex&lt;&#x2F;a&gt;, which seems to have
 such a well-designed API actually.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I made just &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;37956&quot;&gt;one contribution&lt;&#x2F;a&gt; this week.&lt;&#x2F;p&gt;
 </description>
             </item>
@@ -1442,7 +1442,7 @@ of Rust:&lt;&#x2F;p&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;internals.rust-lang.org&#x2F;t&#x2F;4275&quot;&gt;Cretonne&lt;&#x2F;a&gt;, an alternative to LLVM&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;jamey.thesharps.us&#x2F;2016&#x2F;10&#x2F;corrode-update-support-from-mozilla-and.html&quot;&gt;Corrode&lt;&#x2F;a&gt;, a C to Rust translator&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I made just &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;borntyping&#x2F;rust-psutil&#x2F;issues&#x2F;13&quot;&gt;one contribution&lt;&#x2F;a&gt; this week, and submitted &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;borntyping&#x2F;rust-psutil&#x2F;issues&#x2F;14&quot;&gt;one issue&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
             </item>
@@ -1583,12 +1583,12 @@ rust&lt;&#x2F;p&gt;
 &lt;p&gt;fn main() {&lt;&#x2F;p&gt;
 &lt;p&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;let text = \&amp;quot;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;let text = &amp;quot;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   A long text is beginning here and not in the previous line,
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;because it wouldn\&amp;#39;t fit in comfort.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;because it wouldn&amp;#39;t fit in comfort.
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;\&amp;quot; println!(\&amp;quot;{}\&amp;quot;, unindent(text));
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot; println!(&amp;quot;{}&amp;quot;, unindent(text));
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;}
 :::&lt;&#x2F;p&gt;
@@ -1662,7 +1662,7 @@ experiences of &lt;a href=&quot;http:&#x2F;&#x2F;www.integer32.com&#x2F;playgrou
 It made my code more clean... when you see your functions accept way
 too many arguments, chances are those are related, making it time for a
 bit of refactoring. It was fun.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;This week, I only made &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zonyitoo&#x2F;rust-ini&#x2F;pull&#x2F;28&quot;&gt;one submission&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
             </item>
@@ -1686,7 +1686,7 @@ project on the planet. I also did a &lt;a href=&quot;https:&#x2F;&#x2F;github.co
                 <description>&lt;p&gt;I struggled hard enough with a &lt;code&gt;does not live long enough&lt;&#x2F;code&gt; that I
 decided to ask for help, and the &lt;a href=&quot;http:&#x2F;&#x2F;stackoverflow.com&#x2F;q&#x2F;38023291&#x2F;321731&quot;&gt;solution to my problem&lt;&#x2F;a&gt; was actually
 quite simple.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I submitted &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&#x2F;pull&#x2F;846&quot;&gt;some&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lettre&#x2F;lettre&#x2F;pull&#x2F;76&quot;&gt;doc&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zonyitoo&#x2F;rust-ini&#x2F;pull&#x2F;27&quot;&gt;fixes&lt;&#x2F;a&gt; to various projects, and reported
 &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zonyitoo&#x2F;rust-ini&#x2F;issues&#x2F;26&quot;&gt;an issue&lt;&#x2F;a&gt; that promptly fixed on yet another. &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;34584&quot;&gt;I also ran rustfmt&lt;&#x2F;a&gt; on
 some part of Rust.&lt;&#x2F;p&gt;
@@ -1700,7 +1700,7 @@ some part of Rust.&lt;&#x2F;p&gt;
                 <guid>http://tshepang.net/rust-week-of-2016-06-17/</guid>
                 <description>&lt;p&gt;I found &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zonyitoo&#x2F;rust-ini&quot;&gt;a so nice library&lt;&#x2F;a&gt; that handles a favorite file format of mine,
 INI. I even made &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zonyitoo&#x2F;rust-ini&#x2F;pull&#x2F;25&quot;&gt;some tiny doc improvements for it&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I was surprised to find that &lt;a href=&quot;http:&#x2F;&#x2F;stackoverflow.com&#x2F;q&#x2F;37918670&#x2F;321731&quot;&gt;there is no easy&#x2F;clear way to interleave
 stdout and stderr with the standard library&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
@@ -1713,23 +1713,18 @@ stdout and stderr with the standard library&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
                 <guid>http://tshepang.net/rust-week-of-2016-06-10/</guid>
                 <description>&lt;p&gt;I was made sad by the complexity of involving STDIN when using
 &lt;code&gt;std::process&lt;&#x2F;code&gt; module:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;fn o_to_0() -&amp;gt; std::io::Result&amp;lt;bool&amp;gt; {&lt;&#x2F;p&gt;
-&lt;p&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;let mut p = std::process::Command::new(\&amp;quot;tr\&amp;quot;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   .arg(\&amp;quot;o\&amp;quot;) .arg(\&amp;quot;0\&amp;quot;) .stdin(std::process::Stdio::piped())
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.spawn()?;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;let input = \&amp;quot;foo\&amp;quot;; if let Some(stdin) = p.stdin.as\_mut() {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;stdin.write\_all(input.as\_bytes())?; } Ok(p.wait()?.success())
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;o_to_0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() -&amp;gt; std::io::Result&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;bool&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;gt; {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let mut&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; p = std::process::Command::new(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;tr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;arg&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;o&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;) .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;arg&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;) .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;stdin&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(std::process::Stdio::piped())
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;spawn&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;()?;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; input = &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;foo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;if let &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Some(stdin) = p.stdin.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;as_mut&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;stdin.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;write_all&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(input.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;as_bytes&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;())?; } Ok(p.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;wait&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;()?.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;success&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;())
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;}
-:::&lt;&#x2F;p&gt;
 &lt;p&gt;I wonder if this can be more easy, in other languages and&#x2F;or libraries.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I made &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;uutils&#x2F;coreutils&#x2F;pull&#x2F;899&quot;&gt;two&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;34314&quot;&gt;submissions&lt;&#x2F;a&gt;, and gave some commentary &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;34114&quot;&gt;on another&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
             </item>
@@ -1868,15 +1863,12 @@ characters are developed and&#x2F;or performed well, I always celebrate.&lt;&#x2
                 <description>&lt;p&gt;I did more Rust coding than most weeks this time around, busy with the
 project &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;rust-week-of-2016-05-27&quot;&gt;I mentioned last week&lt;&#x2F;a&gt;. My favorite parts:&lt;&#x2F;p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;I love the fact that &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hannobraun&#x2F;inotify-rs&quot;&gt;inotify-rs&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;rust-week-of-2015-07-31&quot;&gt;first mention&lt;&#x2F;a&gt;) collects events
+&lt;li&gt;I love the fact that &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hannobraun&#x2F;inotify-rs&quot;&gt;inotify-rs&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;rust-week-of-2015-07-31&quot;&gt;first mention&lt;&#x2F;a&gt;) collects events
 in the background, so that when you are done with whatever task you
 were busy with, you can check if there is anything new to act upon
 (e.g. a new file was created in a watched directory). This allows
-one to do away with using threads, reducing code complexity.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Rust error handling is so nice, and forces one to think better about
+one to do away with using threads, reducing code complexity.&lt;&#x2F;li&gt;
+&lt;li&gt;Rust error handling is so nice, and forces one to think better about
 code. As an example, when you doing any I&#x2F;O, you mostly want to do
 that in a separate function so that you can return a &lt;code&gt;Result&lt;&#x2F;code&gt; type,
 something like &lt;code&gt;Result&amp;lt;(), std::io::Error&amp;gt;&lt;&#x2F;code&gt;. This forces you to
@@ -1885,31 +1877,31 @@ logic, where you&#x27;d for maybe just want to return a &lt;code&gt;bool&lt;&#x2
 my case, I would not get any I&#x2F;O error, but I would get failure from
 running an external process (see &lt;code&gt;std::process&lt;&#x2F;code&gt; module) where the
 exit status was not 0. That meant I&#x2F;O error failure case and the
-process error case had to be handled in separate places.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;In the example I gave above, &lt;code&gt;Result&amp;lt;(), std::io::Error&amp;gt;&lt;&#x2F;code&gt;, this
+process error case had to be handled in separate places.&lt;&#x2F;li&gt;
+&lt;li&gt;In the example I gave above, &lt;code&gt;Result&amp;lt;(), std::io::Error&amp;gt;&lt;&#x2F;code&gt;, this
 means that we don&#x27;t care about the success return value. On the
 calling side, we have an option to use a &lt;code&gt;match&lt;&#x2F;code&gt; statement to handle
-the result:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;match foo() {&lt;&#x2F;p&gt;
-&lt;p&gt;:   Ok(_) =&amp;gt; (), Err(error) =&amp;gt; do_something_with(error)&lt;&#x2F;p&gt;
-&lt;p&gt;}
-:::&lt;&#x2F;p&gt;
-&lt;p&gt;There is a convenient syntax to deal with such case, where you
-don&#x27;t care about one of values... &lt;code&gt;if let&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;if let Err(error) = foo() {&lt;&#x2F;p&gt;
-&lt;p&gt;:   do_something_with(error)&lt;&#x2F;p&gt;
-&lt;p&gt;}
-:::&lt;&#x2F;p&gt;
-&lt;p&gt;So elegant!&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
+the result:&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#96;&#96;&#96;rust
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;match foo() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Ok(_) =&amp;gt; (), Err(error) =&amp;gt; do_something_with(error)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#96;&#96;&#96;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;There is a convenient syntax to deal with such case, where you
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;don&amp;#39;t care about one of values... &#96;if let&#96;:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#96;&#96;&#96;rust
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if let Err(error) = foo() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;do_something_with(error)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#96;&#96;&#96;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;So elegant!
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I submitted &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;34185&quot;&gt;just one contribution&lt;&#x2F;a&gt; this time around.&lt;&#x2F;p&gt;
 </description>
             </item>
@@ -1924,13 +1916,13 @@ work?&lt;&#x2F;a&gt; rather depressing. It&#x27;s also relevant to me since I am
 writing some internal tool at work, and wonder how far it will go before
 re-writing in something &lt;em&gt;more acceptable&lt;&#x2F;em&gt;, like Python. To be fair,
 there was also &lt;a href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;rust&#x2F;comments&#x2F;4kqhqz&#x2F;&#x2F;d3hx9l0&quot;&gt;some great praise&lt;&#x2F;a&gt; of the ecosystem.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I read the intro of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sfackler&#x2F;rust-postgres&#x2F;blob&#x2F;master&#x2F;README.md&quot;&gt;rust-postgres&lt;&#x2F;a&gt; and even made &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sfackler&#x2F;rust-postgres&#x2F;pull&#x2F;186&quot;&gt;a small
 contribution&lt;&#x2F;a&gt;. I also made a &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;34033&quot;&gt;doc contribution&lt;&#x2F;a&gt; to stdlib.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I was surprised that &lt;a href=&quot;http:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;37550208&quot;&gt;there is no Rust set type that preserves insertion
 order&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;Something I learned about running system commands, imagine you had a
 complex command like:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
@@ -2694,12 +2686,12 @@ rust&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;for n in 0.. {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   &#x2F;&#x2F; Rust 1.0 release let initial = NaiveDate::from\_ymd(2015, 5,
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   &#x2F;&#x2F; Rust 1.0 release let initial = NaiveDate::from_ymd(2015, 5,
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;15); &#x2F;&#x2F; 1.0 was released on a Friday, but nowadays they happen
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Thursdays let release\_date =
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;initial.checked\_add(Duration::weeks(6 \* n)).unwrap() -
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Duration::days(1); if release\_date \&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Local::today().naive\_local() { println!(\&amp;quot;{}\&amp;quot;, release\_date);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Thursdays let release_date =
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;initial.checked_add(Duration::weeks(6 * n)).unwrap() -
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Duration::days(1); if release_date &amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Local::today().naive_local() { println!(&amp;quot;{}&amp;quot;, release_date);
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;break; }
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
@@ -3163,7 +3155,7 @@ has only one blight... No Woman, No Cry.&lt;&#x2F;p&gt;
 for work, yay!), and I found it surprisingly easy to use. It&#x27;s not a
 very pretty API though, and I remember the Python API to be horrible
 too. Maybe the nature of inotify disallows beauty, who knows.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I submitted these to the Rust tree:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;27495&quot;&gt;Follow idiom&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -3413,7 +3405,7 @@ characters was ludicrous and felt forced, and the Jesus part even worse.&lt;&#x2
                 <description>&lt;p&gt;Work done on &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;book&#x2F;documentation.html&quot;&gt;the Documentation chapter&lt;&#x2F;a&gt; of the official Rust book:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;I submitted a &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;26506&quot;&gt;number&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;26508&quot;&gt;of&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;26509&quot;&gt;changes&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;I also found &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;issues&#x2F;26507&quot;&gt;misuse of the word, *thing*&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;I also found &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;issues&#x2F;26507&quot;&gt;misuse of the word, &lt;em&gt;thing&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;Elsewhere:&lt;&#x2F;p&gt;
 &lt;ul&gt;
@@ -3722,16 +3714,16 @@ rust&lt;&#x2F;p&gt;
 &lt;p&gt;fn main() {&lt;&#x2F;p&gt;
 &lt;p&gt;:   let thread_count = 4; let (tx, rx) = channel();&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for x in 0..thread\_count {
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for x in 0..thread_count {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   let tx = tx.clone(); thread::spawn(move \|\| { println!(\&amp;quot;t{}
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;tx\&amp;quot;, x); tx.send(x).unwrap(); });
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   let tx = tx.clone(); thread::spawn(move || { println!(&amp;quot;t{}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;tx&amp;quot;, x); tx.send(x).unwrap(); });
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for \_ in 0..thread\_count {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for _ in 0..thread_count {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   println!(\&amp;quot;rx from t{}\&amp;quot;, rx.recv().unwrap());
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   println!(&amp;quot;rx from t{}&amp;quot;, rx.recv().unwrap());
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
@@ -3812,9 +3804,9 @@ rust&lt;&#x2F;p&gt;
 &lt;p&gt;impl Invert for i32 {&lt;&#x2F;p&gt;
 &lt;p&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;fn invert(&amp;amp;self) -\&amp;gt; f64 {
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;fn invert(&amp;amp;self) -&amp;gt; f64 {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   1.0&#x2F;(\*self as f64)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   1.0&#x2F;(*self as f64)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
@@ -3859,9 +3851,9 @@ rust&lt;&#x2F;p&gt;
 &lt;p&gt;impl Invert for f64 {&lt;&#x2F;p&gt;
 &lt;p&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;fn invert(&amp;amp;self) -\&amp;gt; f64 {
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;fn invert(&amp;amp;self) -&amp;gt; f64 {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   1.0&#x2F;(\*self)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   1.0&#x2F;(*self)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
@@ -3878,13 +3870,13 @@ rust&lt;&#x2F;p&gt;
                 <link>http://tshepang.net/various-rust-ways-of-displaying-stuff-to-the-screen/</link>
                 <guid>http://tshepang.net/various-rust-ways-of-displaying-stuff-to-the-screen/</guid>
                 <description>&lt;p&gt;Here is a simple way of doing it:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;use std::io::{self, Write};&lt;&#x2F;p&gt;
-&lt;p&gt;fn main() {&lt;&#x2F;p&gt;
-&lt;p&gt;:   io::stdout().write_all(b&amp;quot;some outputn&amp;quot;);&lt;&#x2F;p&gt;
-&lt;p&gt;}
-:::&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#b48ead;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;std::io::{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;, Write};
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;io::stdout().&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;write_all&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;some outputn&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;I do however get this warning when I build it:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ rustc main.rs
@@ -3893,61 +3885,55 @@ rust&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;              &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Let&#x27;s kill it:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;use std::io::{self, Write};&lt;&#x2F;p&gt;
-&lt;p&gt;fn main() {&lt;&#x2F;p&gt;
-&lt;p&gt;:   io::stdout().write_all(b&amp;quot;some output&amp;quot;).unwrap();&lt;&#x2F;p&gt;
-&lt;p&gt;}
-:::&lt;&#x2F;p&gt;
-&lt;p&gt;What I did is is call &lt;code&gt;unwrap&lt;&#x2F;code&gt; which basically asks our operation to
-&lt;code&gt;panic!&lt;&#x2F;code&gt; in case of some error. Think of it as a shortcut of:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;use std::io::{self, Write};&lt;&#x2F;p&gt;
-&lt;p&gt;fn main() {&lt;&#x2F;p&gt;
-&lt;p&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;match io::stdout().write\_all(b\&amp;quot;some outputn\&amp;quot;) {
+&lt;span style=&quot;color:#b48ead;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;std::io::{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;, Write};
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   Ok(\_) =\&amp;gt; (), Err(\_) =\&amp;gt; panic!(),
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;io::stdout().&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;write_all&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;some output&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;();
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;}
-:::&lt;&#x2F;p&gt;
+&lt;p&gt;What I did is is call &lt;code&gt;unwrap&lt;&#x2F;code&gt; which basically asks our operation to
+&lt;code&gt;panic!&lt;&#x2F;code&gt; in case of some error. Think of it as a shortcut of:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#b48ead;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;std::io::{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;, Write};
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;match &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;io::stdout().&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;write_all&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;some outputn&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;) {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Ok(_) =&amp;gt; (), Err(_) =&amp;gt; panic!(),
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Some docs:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;io&#x2F;trait.Write.html#method.write_all&quot;&gt;std::io::Writer::write_line&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;result&#x2F;enum.Result.html#method.unwrap&quot;&gt;core::result::Result::unwrap&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;macro.panic!.html&quot;&gt;std::panic!&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;What if we wanted to do some string formatting:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;use std::io::{self, Write};&lt;&#x2F;p&gt;
-&lt;p&gt;fn main() {&lt;&#x2F;p&gt;
-&lt;p&gt;:   let second_word = &amp;quot;output&amp;quot;; let text = format!(&amp;quot;some {}n&amp;quot;,
-second_word); io::stdout().write_all(text.as_bytes()).unwrap();&lt;&#x2F;p&gt;
-&lt;p&gt;}
-:::&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#b48ead;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;std::io::{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;, Write};
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; second_word = &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;output&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; text = format!(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;some &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;{}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;second_word); io::stdout().&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;write_all&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(text.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;as_bytes&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;()).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;();
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;But there is a shortcut for the code above:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;use std::io::{self, Write};&lt;&#x2F;p&gt;
-&lt;p&gt;fn main() {&lt;&#x2F;p&gt;
-&lt;p&gt;:   let second_word = &amp;quot;output&amp;quot;; writeln!(&amp;amp;mut io::stdout(), &amp;quot;some
-{}&amp;quot;, second_word).unwrap();&lt;&#x2F;p&gt;
-&lt;p&gt;}
-:::&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#b48ead;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;std::io::{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;, Write};
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; second_word = &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;output&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;writeln!(&amp;amp;mut io::stdout(), &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;some &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;{}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, second_word).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;();
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;There is an even shorter shortcut:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;fn main() {&lt;&#x2F;p&gt;
-&lt;p&gt;:   let second_word = &amp;quot;output&amp;quot;; println!(&amp;quot;some {}&amp;quot;, second_word);&lt;&#x2F;p&gt;
-&lt;p&gt;}
-:::&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; second_word = &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;output&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;; println!(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;some &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;{}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, second_word);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Question to self: do we get a &lt;code&gt;panic!&lt;&#x2F;code&gt; if &lt;code&gt;println&lt;&#x2F;code&gt; gets an I&#x2F;O error?&lt;&#x2F;p&gt;
 &lt;p&gt;Some docs:&lt;&#x2F;p&gt;
 &lt;ul&gt;
@@ -3955,19 +3941,19 @@ rust&lt;&#x2F;p&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;macro.writeln!.html&quot;&gt;std::writeln!&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;macro.println!.html&quot;&gt;std::println!&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;So, why bother with all these many ways when there&#x27;s a simple
 &lt;code&gt;println!&lt;&#x2F;code&gt;? Flexibility. One example I can think of is writing to
 stderr. There is no simple macro for that (&lt;code&gt;println!&lt;&#x2F;code&gt; is for stdout).
 Short of implementing &lt;a href=&quot;http:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;27590832&#x2F;321731&quot;&gt;our own macro&lt;&#x2F;a&gt;, We&#x27;d have to do something like
 the following:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;use std::io;&lt;&#x2F;p&gt;
-&lt;p&gt;fn main() {&lt;&#x2F;p&gt;
-&lt;p&gt;:   writeln!(&amp;amp;mut io::stderr(), &amp;quot;some output&amp;quot;);&lt;&#x2F;p&gt;
-&lt;p&gt;}
-:::&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#b48ead;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;std::io;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;writeln!(&amp;amp;mut io::stderr(), &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;some output&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;You can test that it really goes to stderr by running it like:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ .&#x2F;main &amp;gt; &#x2F;dev&#x2F;null
@@ -4001,7 +3987,7 @@ related to my favorite programming language. I here take Rust weeks to
 begin each Friday, since Stable releases of the Rust distribution
 (language and included libraries) are to be released on that week day.
 This is also a great excuse to write more regularly.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;I read a high quality post titled &lt;a href=&quot;http:&#x2F;&#x2F;chrismorgan.info&#x2F;blog&#x2F;rust-ownership-the-hard-way.html&quot;&gt;Rust ownership, the hard way&lt;&#x2F;a&gt;. I
@@ -4074,7 +4060,7 @@ long time, especially given that he&#x27;s under camera surveillance&lt;&#x2F;li
 &lt;&#x2F;ul&gt;
 &lt;p&gt;You&#x27;ll wish the filmmakers would invest as much in plausibility and
 common sense as in the gorgeous suit on display here.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I really hated these bad things on the first revisit, but they were easy
 to overlook this time around. The good stuff managed to distract me well
 enough.&lt;&#x2F;p&gt;
@@ -4144,7 +4130,7 @@ mention (&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;rabbit-hole-2010&qu
 &lt;li&gt;Will Smith (Ali); also &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;favorite-of-career-performances&quot;&gt;favorite-of-career&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;Woody Harrelson (Seven Pounds)&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;related: &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;favorite-of-career-performances&quot;&gt;favorite-of-career performances&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </description>
             </item>
@@ -4376,8 +4362,7 @@ could feel like a year (as an example)&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;yellow-earth-1984&quot;&gt;Yellow Earth&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;many-many-recent-movies&quot;&gt;The Kite Runner&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
-&lt;p&gt;touching moments
-+++++++++++++++-&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;touching-moments&quot;&gt;touching moments&lt;&#x2F;h1&gt;
 &lt;ol&gt;
 &lt;li&gt;an interview with a woman whose life was improved by Kinsey&#x27;s work
 (&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;kinsey-2004&quot;&gt;Kinsey&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
@@ -4519,7 +4504,7 @@ match, all but the third (and last) of the third Season. The highlight
 here is the villain, who ranks as the best in the series (Moriarty is
 rather overdone). He represents great character development and is given
 a flawless performance.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;As a sidenote, of the series regulars, none of the characters was as
 interesting as that of Sherlock&#x27;s big brother. It&#x27;s a superb
 performance too, the character is such a joy (mature, wise,
@@ -4730,16 +4715,16 @@ pages).&lt;&#x2F;li&gt;
                 <description>&lt;p&gt;The year started with a whole lot of stellar performers but slowed down
 later on since I did things other than watch movies. Regardless, that
 early period represented some of the best movie years in recent memory.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;movie-of-the-year&quot;&gt;movie of the year&lt;&#x2F;h1&gt;
+&lt;h3 id=&quot;movie-of-the-year&quot;&gt;movie of the year&lt;&#x2F;h3&gt;
 &lt;p&gt;The super-fresh &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;district-9-2009&quot;&gt;District 9&lt;&#x2F;a&gt; takes the title, and is also the best movie
 to ever come out of South Africa.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;best-movie&quot;&gt;best movie&lt;&#x2F;h1&gt;
+&lt;h3 id=&quot;best-movie&quot;&gt;best movie&lt;&#x2F;h3&gt;
 &lt;p&gt;The year&#x27;s best movie is &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;baise-moi-2000&quot;&gt;Baise-moi&lt;&#x2F;a&gt;, whose unflinching and unsettling
 violence has the raw intensity of &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;bamboozled-2000&quot;&gt;Bamboozled&lt;&#x2F;a&gt;&#x27;s climax and the
 harshness of &lt;em&gt;Natural Born Killers&lt;&#x2F;em&gt;, without the humor. It&#x27;s runner-up
 is &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;district-9-2009&quot;&gt;District 9&lt;&#x2F;a&gt;, followed by &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;inglourious-basterds-2009&quot;&gt;Inglourious Basterds&lt;&#x2F;a&gt;, Tarantino&#x27;s best
 movie yet.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;performances&quot;&gt;performances&lt;&#x2F;h1&gt;
+&lt;h3 id=&quot;performances&quot;&gt;performances&lt;&#x2F;h3&gt;
 &lt;p&gt;My favorite performances are a tie and all go to one movie, &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;watchmen-2009&quot;&gt;Watchmen&lt;&#x2F;a&gt;
 +++ Jeffrey Dean Morgan as The Comedian and Jackie Earle Haley when face
 is unmasked. Runner-up is &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Raffa%C3%ABla_Anderson&quot;&gt;Raffaëla Anderson&lt;&#x2F;a&gt; as a crazed rape victim in
@@ -4756,7 +4741,7 @@ Will Be Blood&lt;&#x2F;a&gt;. Here&#x27;s the runner-ups:&lt;&#x2F;p&gt;
 &lt;p&gt;The year&#x27;s &lt;strong&gt;best female performance&lt;&#x2F;strong&gt; is a tie between that Rosario
 Dawson&#x27;s as the love interest in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;recent-movies-2009-04-14&quot;&gt;Seven Pounds&lt;&#x2F;a&gt;, and Tilda Swinton&#x27;s
 as fleeting lover in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;finchers-most-pointless-yet&quot;&gt;The Curious Case of Benjamin Button&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;characters&quot;&gt;characters&lt;&#x2F;h1&gt;
+&lt;h3 id=&quot;characters&quot;&gt;characters&lt;&#x2F;h3&gt;
 &lt;p&gt;Compared to last year, this year is lacklustre, except for desirable
 gals where Golshifteh Farahani (&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;recent-movies-2009-04-14&quot;&gt;Body of Lies&lt;&#x2F;a&gt;) and husky
 voice (likely Brenda Vaccaro) in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;recent-movies-2009-07-13&quot;&gt;Midnight Cowboy&lt;&#x2F;a&gt; take the crown. 1st
@@ -4764,8 +4749,7 @@ runner-up is leading lady, Zhao Tao, in &lt;a href=&quot;http:&#x2F;&#x2F;tshepa
 the warrior girl in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;avatar-2009&quot;&gt;Avatar&lt;&#x2F;a&gt;, who&#x2F;which also happens to be year&#x27;s
 &lt;strong&gt;best creature&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;Character design goes to the talking toys of &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;small-soldiers-1998&quot;&gt;Small Soldiers&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;visuals
-++++++-&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;visuals&quot;&gt;visuals&lt;&#x2F;h3&gt;
 &lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;2012-2009&quot;&gt;2012&lt;&#x2F;a&gt; has some seriously explosive visual effects, among the best ever.
 The runner-ups:&lt;&#x2F;p&gt;
 &lt;ol&gt;
@@ -4775,8 +4759,7 @@ The runner-ups:&lt;&#x2F;p&gt;
 &lt;&#x2F;ol&gt;
 &lt;p&gt;The best visual effects artefact is the robo-bikes in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;terminator-salvation-2009&quot;&gt;Terminator
 Salvation&lt;&#x2F;a&gt;, which ties with the exo-suit in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;district-9-2009&quot;&gt;District 9&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;misc elements
-++++++++++++-&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;misc-elements&quot;&gt;misc elements&lt;&#x2F;h3&gt;
 &lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;there-will-be-blood-2007&quot;&gt;There Will Be Blood&lt;&#x2F;a&gt; has the year&#x27;s &lt;strong&gt;best direction&lt;&#x2F;strong&gt;. &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;changeling-2008&quot;&gt;Changeling&lt;&#x2F;a&gt;
 has &lt;strong&gt;best production design&lt;&#x2F;strong&gt;, and its runner-up is &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;recent-movies-2009-03-06&quot;&gt;Shoot &#x27;Em Up&lt;&#x2F;a&gt;,
 which however gets &lt;strong&gt;best cinematography&lt;&#x2F;strong&gt;. &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;changeling-2008&quot;&gt;Changeling&lt;&#x2F;a&gt; also has &lt;strong&gt;best
@@ -4798,8 +4781,7 @@ moments&lt;&#x2F;strong&gt; is the relationship between the Chinese and Russian 
 constructor and sweet servant in &lt;em&gt;Monsoon Wedding&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;The &lt;strong&gt;best opening credits sequence&lt;&#x2F;strong&gt; is in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;recent-movies-2009-03-06&quot;&gt;Rock &#x27;n Rolla&lt;&#x2F;a&gt;. The &lt;strong&gt;worst humiliation&lt;&#x2F;strong&gt; is in near the end of &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;there-will-be-blood-2007&quot;&gt;There Will Be
 Blood&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;others:
-++++++-&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;others&quot;&gt;others&lt;&#x2F;h3&gt;
 &lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;tags&#x2F;2009-movie&#x2F;&quot;&gt;these&lt;&#x2F;a&gt; and these:&lt;&#x2F;p&gt;
 &lt;p&gt;Angels &amp;amp; Demons; Awake; Babylon A.D.; Bee Movie; Day the Earth Stood
 Still, The; Duplicity; Eagle Eye; Fan Boys; Frailty; Gran Torino;
@@ -5111,7 +5093,7 @@ on-a-date moments in movie memory.&lt;&#x2F;p&gt;
 first, and the whole thing doesn&#x27;t feel like it has good re-watch
 value. It feels more like (a really good) TV series, something like
 &lt;em&gt;Girls&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;It was an interesting discovery that the director responsible for this
 one (Nicole Holofcener) also made two other movies I love: &lt;em&gt;Friends With
 Money&lt;&#x2F;em&gt; and &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;please-give-2009&quot;&gt;Please Give&lt;&#x2F;a&gt;. For that reason, they deserve a revisit, more
@@ -5187,7 +5169,7 @@ wish there was more of an explanation of what the fuck fucked UK so bad.&lt;&#x2
 &lt;li&gt;Pierce Brosnan (&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;the-matador-2004&quot;&gt;The Matador&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;li&gt;Will Smith (Ali)&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;related: &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;best-of-career-performances&quot;&gt;best-of-career performances&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </description>
             </item>
@@ -5499,7 +5481,7 @@ rust&lt;&#x2F;p&gt;
 &lt;p&gt;fn main() {&lt;&#x2F;p&gt;
 &lt;p&gt;:   let a = 0i8; let b = 0i8; let c = 0i8;&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;println!(\&amp;quot;{:p}\&amp;quot;, &amp;amp;a); println!(\&amp;quot;{:p}\&amp;quot;, &amp;amp;b); println!(\&amp;quot;{:p}\&amp;quot;,
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;println!(&amp;quot;{:p}&amp;quot;, &amp;amp;a); println!(&amp;quot;{:p}&amp;quot;, &amp;amp;b); println!(&amp;quot;{:p}&amp;quot;,
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;amp;c);
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;}
@@ -5523,7 +5505,7 @@ rust&lt;&#x2F;p&gt;
 &lt;p&gt;fn main() {&lt;&#x2F;p&gt;
 &lt;p&gt;:   let a = 0i16; let b = 0i16; let c = 0i16;&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;println!(\&amp;quot;{:p}\&amp;quot;, &amp;amp;a); println!(\&amp;quot;{:p}\&amp;quot;, &amp;amp;b); println!(\&amp;quot;{:p}\&amp;quot;,
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;println!(&amp;quot;{:p}&amp;quot;, &amp;amp;a); println!(&amp;quot;{:p}&amp;quot;, &amp;amp;b); println!(&amp;quot;{:p}&amp;quot;,
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;amp;c);
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;}
@@ -5645,7 +5627,7 @@ humor is good and his abilities impressive. The time travel part wasn&#x27;t
 done bad and Wolverine is interesting. The Sentinels are fearsome and
 the power of Magneto ridiculous, much like he had in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;x-men-3-the-last-stand-2006&quot;&gt;X-Men 3: The Last
 Stand&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I see this received better reviews than any of the movies in the
 franchise, but I think the &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;x-men-2-2003&quot;&gt;X-Men 2&lt;&#x2F;a&gt; was better.&lt;&#x2F;p&gt;
 </description>
@@ -6162,32 +6144,19 @@ Investigation into Programming Language Syntax&lt;&#x2F;em&gt;. Now, since I&#x2
 Python sucker, here is what I would change in Python in order to follow
 advice from &lt;a href=&quot;http:&#x2F;&#x2F;dl.acm.org&#x2F;authorize?6968137&quot;&gt;that paper&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;before       after
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;++++++       +++--
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;!=          not=
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;%          mod
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;before       after
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;------       -----
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;!=          not=
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;%          mod
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;string        text
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;try-except  check-error
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;finally       always
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;raise        alert
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;def       procedure
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;print       output
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;import        use
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;int&#x2F;float     number
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
-&lt;blockquote&gt;
-&lt;p&gt;string text&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;try-except check-error&lt;&#x2F;p&gt;
-&lt;p&gt;:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;finally always
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;raise alert
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   def procedure
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;print output
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;import use
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;int&#x2F;float number&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
 &lt;p&gt;The most surprising finding is that both programmers and non-programmers
 found &lt;em&gt;while&lt;&#x2F;em&gt; and &lt;em&gt;for&lt;&#x2F;em&gt; not intuitive for looping constructs. The
 preferred alternatives are &lt;em&gt;repeat&lt;&#x2F;em&gt; and &lt;em&gt;loop&lt;&#x2F;em&gt;. Of these, I prefer
@@ -6366,7 +6335,7 @@ is quite good too, and the make-up is even better.&lt;&#x2F;p&gt;
 much (raunchy) sex, most of which is needless. The great jealousy the
 villains portray is unconvincing, and so is their bullying. Also, the
 ending feels rushed, as if there wasn&#x27;t much material to work with.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I enjoyed reading &lt;a href=&quot;http:&#x2F;&#x2F;variety.com&#x2F;2008&#x2F;film&#x2F;reviews&#x2F;pathology-1200535058&quot;&gt;this review&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
             </item>
@@ -6533,7 +6502,7 @@ man, that SSD is fast: it takes 6-7 seconds to GUI login screen. Package
 installation is also insane fast.&lt;&#x2F;p&gt;
 &lt;p&gt;There was much pain trying to get audio to work. Luckily &lt;a href=&quot;https:&#x2F;&#x2F;wiki.archlinux.org&#x2F;index.php&#x2F;Sony_Vaio_Pro_SVP-1x21#Sound&quot;&gt;I got some
 help&lt;&#x2F;a&gt;, where I needed to change two lines in
-&#96;&#x2F;usr&#x2F;share&#x2F;alsa&#x2F;alsa.conf&#96;:&lt;&#x2F;p&gt;
+&lt;code&gt;&#x2F;usr&#x2F;share&#x2F;alsa&#x2F;alsa.conf&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;defaults.ctl.card 1
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;defaults.pcm.card 1
@@ -6961,7 +6930,7 @@ experiences the same day over and over again.&lt;&#x2F;p&gt;
 convincing.&lt;&#x2F;p&gt;
 &lt;p&gt;The &lt;strong&gt;most overrated&lt;&#x2F;strong&gt; movie is [Sunset Boulevard] followed by [All
 About Eve]. The former is substandard while the second is quite decent.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;&quot;&gt;&#x27;old&#x27; movies&lt;&#x2F;h1&gt;
+&lt;h1 id=&quot;old-movies&quot;&gt;&#x27;old&#x27; movies&lt;&#x2F;h1&gt;
 &lt;p&gt;This section is meant to give a chance to movies I have watched before
 this year to appear in this review, for one reason or another.&lt;&#x2F;p&gt;
 &lt;p&gt;Of those, the &lt;strong&gt;best experience&lt;&#x2F;strong&gt; was offered by the masterpiece,
@@ -6977,7 +6946,7 @@ yet&lt;&#x2F;li&gt;
 humor surprised me, it being a childhood favorite, and also being
 made in the 80&#x27;s, a bad movie decade.&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;For a complete list of the movies I reviewed for the year, visit the
 [2011-movies tag].&lt;&#x2F;p&gt;
 &lt;p&gt;[Transformers: Dark of the Moon]:
@@ -7171,7 +7140,7 @@ works right? We are nice folk.&lt;&#x2F;p&gt;
 &lt;li&gt;Bajabula Bonke (&lt;em&gt;Still Grazing&lt;&#x2F;em&gt; - 2004)&lt;&#x2F;li&gt;
 &lt;li&gt;Yei Baa Gbe Wolo (&lt;em&gt;Introducing Hedzoleh Soundz&lt;&#x2F;em&gt; - 1973)&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;There are separate posts where I celebrate his two albums, &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;introducing-hedzoleh-soundz-1973&quot;&gt;Introducing
 Hedzoleh Soundz&lt;&#x2F;a&gt; and &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;still-grazing-2004&quot;&gt;Still Grazing&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
@@ -7505,7 +7474,7 @@ than 20&#x2F;20 vision.&lt;&#x2F;p&gt;
                 <description>&lt;p&gt;Following is how my GUI environment is set-up on &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;sony-vaio-pro-13-svp13212sgbi&quot;&gt;my home machine&lt;&#x2F;a&gt; (a
 laptop) and work machine (a desktop). For the (libre) tools I frequently
 use, see &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;floss-i-use-a-lot&quot;&gt;this post&lt;&#x2F;a&gt; instead.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;With recent Debian GNOME updates (late 2013), something got broken
 enough that I could not login to my account. I saw this as a good
 opportunity to finally try something other than GNOME as my primary
@@ -7623,7 +7592,7 @@ logging in, the following will get executed (&lt;a href=&quot;https:&#x2F;&#x2F;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;while true; do
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;datetime=$( date +&amp;quot;%F %R&amp;quot; )
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if acpi -a | grep off-line &amp;gt; &#x2F;dev&#x2F;null; then
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;battery=$( python -c &amp;quot;print(\&amp;quot;$(acpi)\&amp;quot;.split(&amp;#39;,&amp;#39;)[1].strip())&amp;quot; )
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;battery=$( python -c &amp;quot;print(&amp;quot;$(acpi)&amp;quot;.split(&amp;#39;,&amp;#39;)[1].strip())&amp;quot; )
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;xsetroot -name &amp;quot;$battery&amp;quot;&amp;quot; | &amp;quot;&amp;quot;$datetime&amp;quot;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;else
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;xsetroot -name &amp;quot;$datetime&amp;quot;
@@ -7672,11 +7641,11 @@ logging in, the following will get executed (&lt;a href=&quot;https:&#x2F;&#x2F;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;* key definitions *&#x2F;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-#define MODKEY Mod1Mask
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+#define MODKEY Mod4Mask
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;#define TAGKEYS(KEY,TAG) \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;#define TAGKEYS(KEY,TAG)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;{ MODKEY,                       KEY,      view,           {.ui
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= 1 &amp;lt;&amp;lt; TAG} }, \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= 1 &amp;lt;&amp;lt; TAG} },
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= 1 &amp;lt;&amp;lt; TAG} }, \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= 1 &amp;lt;&amp;lt; TAG} },
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;@@ -47,7 +50,7 @@ static const Layout layouts[] = {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;* commands *&#x2F;
@@ -8151,7 +8120,7 @@ companies. I&#x27;m also ignoring non-core activities, like marketers or
 sysadmins, or even teachers. Those are not going to be easy to fit in
 this simple story, and are not common to that many FLOSS (Free&#x2F;Libre and
 Open Source) projects.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;In the case of &lt;a href=&quot;http:&#x2F;&#x2F;linux.togaware.com&#x2F;survivor&#x2F;wajig.html&quot;&gt;wajig&lt;&#x2F;a&gt;, I am the Maintainer and Graham Williams is the
 Author. In the case of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;paramiko&#x2F;paramiko&quot;&gt;paramiko&lt;&#x2F;a&gt;, a far more important project, &lt;a href=&quot;http:&#x2F;&#x2F;bitprophet.org&#x2F;blog&#x2F;2012&#x2F;09&#x2F;29&#x2F;paramiko-and-ssh&quot;&gt;Jeff
 Forcier is the Maintainer&lt;&#x2F;a&gt;. The project was however created by &lt;a href=&quot;http:&#x2F;&#x2F;robey.lag.net&quot;&gt;Robey
@@ -8207,7 +8176,7 @@ one performance was beyond average, nor was any of the humor effective.&lt;&#x2F
 Each of these have 4 logical processors (and 8GB of RAM), so are sort of
 comparable. I also added the &lt;a href=&quot;https:&#x2F;&#x2F;www.digitalocean.com&#x2F;?refcode=25b4887810cc&quot;&gt;DigitalOcean&lt;&#x2F;a&gt; VPS with those specs
 (&lt;a href=&quot;https:&#x2F;&#x2F;www.digitalocean.com&#x2F;pricing&quot;&gt;currently $80 per month&lt;&#x2F;a&gt;) because... why not.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;machine-specs&quot;&gt;Machine Specs&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;machine-specs&quot;&gt;Machine Specs&lt;&#x2F;h2&gt;
 &lt;p&gt;Each machine runs Debian testing (codename &amp;quot;jessie&amp;quot;). Following is the
 output of these commands for each machine:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
@@ -8228,15 +8197,13 @@ output of these commands for each machine:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;Linux tcloud 3.11-1-amd64 #1 SMP Debian 3.11.5-1 (2013-10-17) x86_64 GNU&#x2F;Linux
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;model name      : QEMU Virtual CPU version 1.0
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h1 id=&quot;cpython-benchmarks&quot;&gt;CPython benchmarks&lt;&#x2F;h1&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;cpython-benchmarks&quot;&gt;CPython benchmarks&lt;&#x2F;h2&gt;
 &lt;p&gt;I ran two benchmarks, both from the latest VCS version of CPython,
 development branch:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ hg identify --id --branch
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;b6a1a78818fe default
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Build
-+++--&lt;&#x2F;p&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;build&quot;&gt;Build&lt;&#x2F;h3&gt;
 &lt;p&gt;Here&#x27;s the command I used:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;make distclean; time (.&#x2F;configure &amp;amp;&amp;amp; make --silent --jobs=4)
@@ -8258,9 +8225,7 @@ development branch:&lt;&#x2F;p&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    2m30.931s
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;user    3m7.272s
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     0m16.592s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Test suite
-+++++++++-&lt;&#x2F;p&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;test-suite&quot;&gt;Test suite&lt;&#x2F;h3&gt;
 &lt;p&gt;Here&#x27;s the command I used:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;time .&#x2F;python -m test --multiprocess=0
@@ -8286,7 +8251,7 @@ too long for tests which are largely idle)&lt;&#x2F;p&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    2m19.174s
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;user    5m5.444s
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     0m40.008s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h1 id=&quot;linux-kernel-build&quot;&gt;Linux kernel build&lt;&#x2F;h1&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;linux-kernel-build&quot;&gt;Linux kernel build&lt;&#x2F;h2&gt;
 &lt;p&gt;Just for kicks, I decided to check how long building Linux would take;
 for this, I used latest &#x27;final&#x27; release from Linus&#x27; git tree:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
@@ -8300,9 +8265,7 @@ for this, I used latest &#x27;final&#x27; release from Linus&#x27; git tree:&lt;
 &lt;p&gt;Here&#x27;s the commands I used:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;make distclean &amp;amp;&amp;amp; make defconfig &amp;amp;&amp;amp; time make
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Results
-++++++-&lt;&#x2F;p&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;results-2&quot;&gt;Results&lt;&#x2F;h3&gt;
 &lt;p&gt;Home machine:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    6m11.622s
@@ -8320,7 +8283,7 @@ for this, I used latest &#x27;final&#x27; release from Linus&#x27; git tree:&lt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    3m41.240s
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;user    12m21.120s
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     1m17.844s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h1&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
 &lt;p&gt;My work machine is faster than the DigitalOcean offering of comparable
 specs, and much faster than my home machine, a laptop.&lt;&#x2F;p&gt;
 &lt;p&gt;(&lt;a href=&quot;http:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;556411&#x2F;321731&quot;&gt;detailed explanation of the output&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
@@ -8420,7 +8383,7 @@ on, and displays the relevant command.&lt;&#x2F;p&gt;
 &lt;p&gt;This makes my life so much easier, since I no longer have to care which
 VCS I&#x27;m on, at least for the most common of commands. I am pleased with
 self.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;As a sidenote, if you want to cycle between the changesets (Mercurial
 term) or Commits (Git term), use the following search term on your pager
 (tested with &lt;a href=&quot;http:&#x2F;&#x2F;www.greenwoodsoftware.com&#x2F;less&quot;&gt;less&lt;&#x2F;a&gt;, which is Debian&#x2F;Ubuntu default pager):&lt;&#x2F;p&gt;
@@ -8437,7 +8400,7 @@ term) or Commits (Git term), use the following search term on your pager
                 <description>&lt;p&gt;Co-founder and lead developer of arguably the most exciting project in
 the Python ecosystem, &lt;a href=&quot;http:&#x2F;&#x2F;pypy.org&quot;&gt;PyPy&lt;&#x2F;a&gt;. He is also credited with doing the bulk of
 the work in building its &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;great-praise-for-the-rpython-translation-toolchain&quot;&gt;legendary RPython translation framework&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;What inspired this post (originally published 2013-03-31) is the
 incredible honor given by the great Raymond Hettinger in &lt;a href=&quot;http:&#x2F;&#x2F;pyvideo.org&#x2F;video&#x2F;1669&#x2F;keynote-3&quot;&gt;one of his
 PyCon US 2013 talks&lt;&#x2F;a&gt;, where he deems him &amp;quot;probably the smartest person
@@ -8477,7 +8440,7 @@ genuinely happy about life (and not grumpy at all).&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Successfully uploaded packages.
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;(&lt;a href=&quot;http:&#x2F;&#x2F;packages.qa.debian.org&#x2F;w&#x2F;wajig&#x2F;news&#x2F;20131013T074831Z.html&quot;&gt;the package was accepted within 30 minutes&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;And, yeah, that means &lt;a href=&quot;http:&#x2F;&#x2F;bugs.debian.org&#x2F;cgi-bin&#x2F;bugreport.cgi?msg=12;bug=723802&quot;&gt;I am now Debian Maintainer&lt;&#x2F;a&gt;. Other than giving me
 more freedom, this helps reduce the workload on &lt;a href=&quot;http:&#x2F;&#x2F;dirk.eddelbuettel.com&quot;&gt;Dirk Eddelbuettel&lt;&#x2F;a&gt;, who
 has been uploading wajig for several years now. He even &lt;a href=&quot;http:&#x2F;&#x2F;lists.debian.org&#x2F;debian-newmaint&#x2F;2013&#x2F;09&#x2F;msg00029.html&quot;&gt;became an
@@ -8798,7 +8761,7 @@ beyond)&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;The WTC Twin Towers would be here if they were still standing. At the
 time of their destruction, I admired them more than any other buildings
 on the planet. Together with the Statue of Liberty, they were to me the
@@ -8963,40 +8926,40 @@ performance.&lt;&#x2F;p&gt;
 &lt;p&gt;Following is example code; it accepts 2 arguments, a filename and text
 that will be written to that file:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;#include &amp;lt;string.h&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;#include &amp;lt;errno.h&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;#include &amp;lt;fcntl.h&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;#include &amp;lt;unistd.h&amp;gt;
+&lt;span style=&quot;color:#b48ead;&quot;&gt;#include &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;string.h&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;#include &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;errno.h&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;#include &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;stdio.h&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;#include &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;fcntl.h&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;#include &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;unistd.h&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;int
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;main (int argc, char **argv)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;int
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;argc&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;char &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;**&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;argv&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;{
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;char path[0xFF];
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;char content[0xFF];
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;int fd;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;char&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; path[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0xFF&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;];
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;char&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; content[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0xFF&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;];
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; fd;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;ssize_t written;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if (argc &amp;lt; 3) {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;fprintf (stderr, &amp;quot;usage: %s &amp;lt;filename&amp;gt; &amp;lt;content&amp;gt;\n&amp;quot;, argv[0]);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;return 1;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(argc &amp;lt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;3&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;) {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;fprintf &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(stderr, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;usage: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;%s&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt; &amp;lt;filename&amp;gt; &amp;lt;content&amp;gt;n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, argv[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;]);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;strcpy (path, argv[1]);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sprintf (content, &amp;quot;%s\n&amp;quot;, argv[2]);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;strcpy &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(path, argv[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;]);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;sprintf &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(content, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;%s&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, argv[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;]);
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;fd = creat (path, S_IRWXU);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if (fd == -1) {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;fprintf (stderr, &amp;quot;open error: %s (&amp;#39;%s&amp;#39;)\n&amp;quot;, strerror (errno), path);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;return 1;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;fd = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;creat &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(path, S_IRWXU);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(fd == -&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;) {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;fprintf &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(stderr, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;open error: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;%s&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt; (&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;%s&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;#39;)n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;strerror &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(errno), path);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;written = write (fd, content, strlen (content));
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if (written == -1) {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;fprintf (stderr, &amp;quot;write error: %s (&amp;#39;%s&amp;#39;)\n&amp;quot;, strerror (errno), path);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;return 1;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;written = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;write &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(fd, content, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;strlen &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(content));
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(written == -&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;) {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;fprintf &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(stderr, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;write error: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;%s&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt; (&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;%s&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;#39;)n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;strerror &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(errno), path);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;return 0;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Build command (using GCC 4.8.1):&lt;&#x2F;p&gt;
@@ -9058,9 +9021,9 @@ CPU instructions&lt;&#x2F;em&gt;. I have used &lt;code&gt;tree=calling&lt;&#x2F;
 the cost of all operations called by a parent (marked with a &lt;code&gt;*&lt;&#x2F;code&gt;) :&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ callgrind_annotate --tree=calling out play.c
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Profile data file &amp;#39;out&amp;#39; (creator: callgrind-3.8.1)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;I1 cache:
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;D1 cache:
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;LL cache:
@@ -9075,14 +9038,14 @@ the cost of all operations called by a parent (marked with a &lt;code&gt;*&lt;&#
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;User annotated:   play.c
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Auto-annotation:  off
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Ir
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;107,520  PROGRAM TOTALS
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Ir  file:function
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;24,113  *  &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;dl-lookup.c:do_lookup_x [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;1,053  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;dl-misc.c:_dl_name_match_p (25x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
@@ -9107,9 +9070,9 @@ the cost of all operations called by a parent (marked with a &lt;code&gt;*&lt;&#
 of all, which is the total cost for each line of my code:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;[continued]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-- User-annotated source: play.c
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Ir
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.  #include &amp;lt;string.h&amp;gt;
@@ -9127,14 +9090,14 @@ of all, which is the total cost for each line of my code:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.      ssize_t written;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;2      if (argc &amp;lt; 3) {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.     fprintf (stderr, &amp;quot;usage: %s &amp;lt;filename&amp;gt; &amp;lt;content&amp;gt;\n&amp;quot;, argv[0]);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.     fprintf (stderr, &amp;quot;usage: %s &amp;lt;filename&amp;gt; &amp;lt;content&amp;gt;n&amp;quot;, argv[0]);
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.     return 1;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.      }
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;7      strcpy (path, argv[1]);
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;21  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;strcpy-sse2-unaligned.S:__strcpy_sse2_unaligned (1x)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;799  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;dl-trampoline.S:_dl_runtime_resolve (1x)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;8      sprintf (content, &amp;quot;%s\n&amp;quot;, argv[2]);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;8      sprintf (content, &amp;quot;%sn&amp;quot;, argv[2]);
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;1,188  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;stdio-common&#x2F;sprintf.c:sprintf (1x)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;805  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;dl-trampoline.S:_dl_runtime_resolve (1x)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.
@@ -9142,7 +9105,7 @@ of all, which is the total cost for each line of my code:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;766  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;dl-trampoline.S:_dl_runtime_resolve (1x)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;7  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;io&#x2F;..&#x2F;sysdeps&#x2F;unix&#x2F;syscall-template.S:creat (1x)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;2      if (fd == -1) {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.     fprintf (stderr, &amp;quot;open error: %s (&amp;#39;%s&amp;#39;)\n&amp;quot;, strerror (errno), path);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.     fprintf (stderr, &amp;quot;open error: %s (&amp;#39;%s&amp;#39;)n&amp;quot;, strerror (errno), path);
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.     return 1;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.      }
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.
@@ -9151,19 +9114,19 @@ of all, which is the total cost for each line of my code:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;14  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;strlen-sse2-pminub.S:__strlen_sse2_pminub (1x)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;1,567  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;dl-trampoline.S:_dl_runtime_resolve (2x)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;2      if (written == -1) {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.     fprintf (stderr, &amp;quot;write error: %s (&amp;#39;%s&amp;#39;)\n&amp;quot;, strerror (errno), path);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.     fprintf (stderr, &amp;quot;write error: %s (&amp;#39;%s&amp;#39;)n&amp;quot;, strerror (errno), path);
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.     return 1;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.      }
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;1      return 0;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;2  }
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Ir
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0  percentage of events annotated
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;As an aside, note that the indentation is messed up a bit.&lt;&#x2F;p&gt;
-&lt;p&gt;---&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;Since I normally work at too high a level to care about CPU instructions
 cycles at this detail, I found the exercise eye-opening.&lt;&#x2F;p&gt;
 </description>
@@ -9958,7 +9921,7 @@ won&#x27;t work on this... too much work.&lt;&#x2F;li&gt;
 &lt;p&gt;But ultimately, I would love for the standard Debian packaging tools to
 get the point where they make wajig irrelevant. After all, wajig was
 created to be a wrapper that helps ease the mess.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;Here&#x27;s the work I did in the past working on wajig, have a look at &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;tagss#wajig-ref&quot;&gt;its
 tag&lt;&#x2F;a&gt;. Off the top of my head:&lt;&#x2F;p&gt;
 &lt;ul&gt;
@@ -10297,7 +10260,7 @@ also pleasant that the app, in a form of a &lt;code&gt;.exe&lt;&#x2F;code&gt; fi
 Windows 7.&lt;&#x2F;p&gt;
 &lt;p&gt;Having a look around, the build system actually looks elegant, and is a
 lot simpler than the scary mess that is &lt;a href=&quot;https:&#x2F;&#x2F;live.gnome.org&#x2F;Jhbuild&quot;&gt;JHBuild&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I have published two guides on Stack Overflow on how this works, &lt;a href=&quot;http:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;13211922&#x2F;321731&quot;&gt;one
 for Qt 4&lt;&#x2F;a&gt; and &lt;a href=&quot;http:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;14170591&#x2F;321731&quot;&gt;another for Qt 5&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
@@ -10475,36 +10438,66 @@ directory that isn&#x27;t version-controlled by &lt;a href=&quot;http:&#x2F;&#x2
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;So, we don&#x27;t want to see this ugliness:&lt;&#x2F;p&gt;
-&lt;p&gt;&amp;gt;&amp;gt;&amp;gt; from subprocess import call &amp;gt;&amp;gt;&amp;gt; call(&#x27;hg
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;from subprocess import call &amp;gt;&amp;gt;&amp;gt; call(&#x27;hg
 status&#x27;.split()) abort: no repository found in
 &#x27;&#x2F;home&#x2F;tshepang&#x2F;projects&#x2F;pyramid&#x27; (.hg not found)! 255&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;So, here&#x27;s the simplest solution:&lt;&#x2F;p&gt;
-&lt;p&gt;&amp;gt;&amp;gt;&amp;gt; import os &amp;gt;&amp;gt;&amp;gt; from subprocess import call &amp;gt;&amp;gt;&amp;gt; call(&#x27;hg
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;import os &amp;gt;&amp;gt;&amp;gt; from subprocess import call &amp;gt;&amp;gt;&amp;gt; call(&#x27;hg
 status&#x27;.split(), stderr=open(os.devnull)) 255&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
 &lt;p&gt;Problem: it leaves the file descriptor open... not good.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;We fix:&lt;&#x2F;p&gt;
-&lt;p&gt;&amp;gt;&amp;gt;&amp;gt; import os &amp;gt;&amp;gt;&amp;gt; from subprocess import call &amp;gt;&amp;gt;&amp;gt; DEVNULL =
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;import os &amp;gt;&amp;gt;&amp;gt; from subprocess import call &amp;gt;&amp;gt;&amp;gt; DEVNULL =
 open(os.devnull) &amp;gt;&amp;gt;&amp;gt; call(&#x27;hg status&#x27;.split(), stderr=DEVNULL)
 255 &amp;gt;&amp;gt;&amp;gt; DEVNULL.close()&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
 &lt;p&gt;Much better, much uglier. (&lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;scripts&#x2F;src&#x2F;tip&#x2F;vcs.py&quot;&gt;example usage&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;Something better:&lt;&#x2F;p&gt;
-&lt;p&gt;&amp;gt;&amp;gt;&amp;gt; import os &amp;gt;&amp;gt;&amp;gt; from subprocess import call &amp;gt;&amp;gt;&amp;gt; with
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;import os &amp;gt;&amp;gt;&amp;gt; from subprocess import call &amp;gt;&amp;gt;&amp;gt; with
 open(os.devnull) as DEVNULL: ... call(&#x27;hg status&#x27;.split(),
 stderr=DEVNULL) 255&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
 &lt;p&gt;Looks much nicer, and is more convenient, unless we wanted to do
 something similar multiple times, in which case the previous example
 would be preferable.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;Best solution:&lt;&#x2F;p&gt;
-&lt;p&gt;&amp;gt;&amp;gt;&amp;gt; import os &amp;gt;&amp;gt;&amp;gt; from subprocess import call, DEVNULL &amp;gt;&amp;gt;&amp;gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;import os &amp;gt;&amp;gt;&amp;gt; from subprocess import call, DEVNULL &amp;gt;&amp;gt;&amp;gt;
 call(&#x27;hg status&#x27;.split(), stderr=DEVNULL) 255&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 &lt;p&gt;This &lt;a href=&quot;http:&#x2F;&#x2F;hg.python.org&#x2F;cpython&#x2F;rev&#x2F;eaf93e156dff&quot;&gt;small and wonderful feature&lt;&#x2F;a&gt; is &lt;a href=&quot;http:&#x2F;&#x2F;docs.python.org&#x2F;3&#x2F;whatsnew&#x2F;3.3.html#subprocess&quot;&gt;new as of Python 3.3&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
@@ -10849,7 +10842,7 @@ bad&#x2F;tough guy; his narration is excellent though.&lt;&#x2F;li&gt;
 &lt;li&gt;The final shootout involving the Orientals was just needless, and
 its violence almost cartoonish.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;payback-straight-up-2006&quot;&gt;A Director&#x27;s Cut version&lt;&#x2F;a&gt; was released in 2006, and I loved it too.&lt;&#x2F;p&gt;
 </description>
             </item>
@@ -11066,7 +11059,7 @@ nothing novel there.&lt;&#x2F;p&gt;
 &lt;p&gt;Politically, the movie is important in that it does, in a rather subtle
 way, condemn homophobia. It also promotes interracial romantic
 relationships, which I always find beautiful.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;in-bruges-2008&quot;&gt;The earlier movie&lt;&#x2F;a&gt;, written and directed by the same person, is a
 superior work of art in many ways, though not as funny.&lt;&#x2F;p&gt;
 </description>
@@ -11155,7 +11148,7 @@ enjoyed watching the guy asking the questions... decent performance
 there. The guy rescuing the heroine is admirable too, though the action
 he finds self in is just cartoony. Is this not supposed to be close to
 reality?&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;There are some interesting quotables sprinkled all over the place. My
 favorite is one uttered by a master composer after an attempt at a piano
 by one apprentice:&lt;&#x2F;p&gt;
@@ -11180,7 +11173,7 @@ cast. The guy with the eyes does give a decent performance though, even
 though he has too much of a Frodo character in LOTR (i.e. not fresh).
 Also, the psychic lady is at least as pretty as she could act. The
 villain, on the other hand, is not so convincing.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I should be grateful that I didn&#x27;t get to see lead actor&#x27;s untalented
 face, though I was exposed to the embarassing mimicry of the Sylvester
 angry mouth.&lt;&#x2F;p&gt;
@@ -11342,7 +11335,7 @@ on.&lt;&#x2F;p&gt;
 &lt;p&gt;The most &lt;strong&gt;overrated&lt;&#x2F;strong&gt; movie is &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;a-nightmare-on-elm-street-1984&quot;&gt;A Nightmare on Elm Street&lt;&#x2F;a&gt;, followed by
 &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;a-streetcar-named-desire-1951&quot;&gt;A Streetcar Named Desire&lt;&#x2F;a&gt;. That second is hailed a masterpice by weird
 people.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;&quot;&gt;&#x27;old&#x27; movies&lt;&#x2F;h1&gt;
+&lt;h1 id=&quot;old-movies&quot;&gt;&#x27;old&#x27; movies&lt;&#x2F;h1&gt;
 &lt;p&gt;This section is meant to give a chance to movies I have watched before
 this year to appear in this review, for one reason or another.&lt;&#x2F;p&gt;
 &lt;p&gt;Of those, the &lt;strong&gt;best experience&lt;&#x2F;strong&gt; was offered by &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;being-john-malkovich-1999&quot;&gt;Being John Malkovich&lt;&#x2F;a&gt;,
@@ -11677,7 +11670,7 @@ attribute. Movies are, after all, primarily meant to entertain. In too
 many places, the movie is hard to bear, and it would be quite strange if
 anyone involved actually enjoyed the experience of making it. It is all
 humorless and dull, and full of pain, and disturbed characters.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.slantmagazine.com&#x2F;film&#x2F;review&#x2F;intimacy&#x2F;161&quot;&gt;a quality review&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </description>
             </item>
@@ -11989,7 +11982,7 @@ Sharon Stone), does not take place in Mars (sadly) and is a
 straight-forward thriller without any mind-fuck qualities the first one
 had. The action was really overlong, and had the too-many hero-luck
 moments, making it nearly unbearable towards the end.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;Some nice technology ideas I have not seen before:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Necklace that allows one to change appearance; by the way, the guy
@@ -12096,7 +12089,7 @@ who is concerned about destroying property of the Coca Cola Company; and
 he didn&#x27;t even look the idiot he was.&lt;&#x2F;p&gt;
 &lt;p&gt;The attention-to-detail, regarding the procedures the guys in the bomber
 plane follow, is impressive; the dialog is incredible.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;Have a look at &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;dr-strangelove-vs-payback&quot;&gt;a comparison&lt;&#x2F;a&gt; between this classic and a much younger
 &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;payback-1999&quot;&gt;Payback&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
@@ -12324,7 +12317,7 @@ much screen time, almost to a point where he is hard to bear. He must
 have been having fun doing the performance, which must have been easy as
 hell... stuff of comedies. The rest of the movie is very well-made and
 does not bore for a minute.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;Among the sad things of watching a movie based on actual events is the
 tendnecy to wonder how much of it is fiction. As for this movie,
 Wikipedia has &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Frost&#x2F;Nixon_(film)#Dramatic_license_and_factual_inaccuracies&quot;&gt;a nice collection of such cases&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
@@ -12417,20 +12410,20 @@ semi-automate the setup process with the help of this script:&lt;&#x2F;p&gt;
 &lt;p&gt;::: {.sourcecode}
 sh&lt;&#x2F;p&gt;
 &lt;p&gt;#!&#x2F;bin&#x2F;bash&lt;&#x2F;p&gt;
-&lt;p&gt;# some convenience shopt -s expand_aliases source
-~&#x2F;nna&#x2F;conf&#x2F;bash_aliases&lt;&#x2F;p&gt;
-&lt;p&gt;# config files sudo cp ~&#x2F;nna&#x2F;conf&#x2F;sources.list &#x2F;etc&#x2F;apt sudo cp
-~&#x2F;nna&#x2F;conf&#x2F;sudoers &#x2F;etc&lt;&#x2F;p&gt;
-&lt;p&gt;# APT sudo apt-get update sudo apt-get --allow-unauthenticated upgrade
-sudo apt-get --allow-unauthenticated dist-upgrade sudo apt-get
+&lt;h1 id=&quot;some-convenience-shopt-s-expand&quot;&gt;some convenience shopt -s expand_aliases source&lt;&#x2F;h1&gt;
+&lt;p&gt;~&#x2F;nna&#x2F;conf&#x2F;bash_aliases&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;config-files-sudo-cp-nna-conf-sources-list-etc-apt-sudo-cp&quot;&gt;config files sudo cp ~&#x2F;nna&#x2F;conf&#x2F;sources.list &#x2F;etc&#x2F;apt sudo cp&lt;&#x2F;h1&gt;
+&lt;p&gt;~&#x2F;nna&#x2F;conf&#x2F;sudoers &#x2F;etc&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;apt-sudo-apt-get-update-sudo-apt-get-allow-unauthenticated-upgrade&quot;&gt;APT sudo apt-get update sudo apt-get --allow-unauthenticated upgrade&lt;&#x2F;h1&gt;
+&lt;p&gt;sudo apt-get --allow-unauthenticated dist-upgrade sudo apt-get
 --allow-unauthenticated install devscripts debhelper build-essential
 python3-apt gpm&lt;&#x2F;p&gt;
-&lt;p&gt;# wajig (cd ~&#x2F;src&#x2F;wajig &amp;amp;&amp;amp; iiwajig) ibase &amp;amp;&amp;amp; inondebian &amp;amp;&amp;amp; itracker &amp;amp;&amp;amp;
-icpython &amp;amp;&amp;amp; ipurge&lt;&#x2F;p&gt;
-&lt;p&gt;# for Tracker sudo sh -c &amp;quot;echo
-&#x27;fs.inotify.max_user_watches=100000&#x27; &amp;gt;&amp;gt; &#x2F;etc&#x2F;sysctl.conf&amp;quot;&lt;&#x2F;p&gt;
-&lt;p&gt;# so I can share via a webserver, or easily access from browser sudo ln
--s ~&#x2F;.custom_repo &#x2F;var&#x2F;www&#x2F;custom_repo
+&lt;h1 id=&quot;wajig-cd-src-wajig&quot;&gt;wajig (cd ~&#x2F;src&#x2F;wajig &amp;&amp; iiwajig) ibase &amp;&amp; inondebian &amp;&amp; itracker &amp;&amp;&lt;&#x2F;h1&gt;
+&lt;p&gt;icpython &amp;amp;&amp;amp; ipurge&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;for-tracker-sudo-sh-c-echo&quot;&gt;for Tracker sudo sh -c &quot;echo&lt;&#x2F;h1&gt;
+&lt;p&gt;&#x27;fs.inotify.max_user_watches=100000&#x27; &amp;gt;&amp;gt; &#x2F;etc&#x2F;sysctl.conf&amp;quot;&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;so-i-can-share-via-a-webserver-or-easily-access-from-browser-sudo-ln&quot;&gt;so I can share via a webserver, or easily access from browser sudo ln&lt;&#x2F;h1&gt;
+&lt;p&gt;-s ~&#x2F;.custom_repo &#x2F;var&#x2F;www&#x2F;custom_repo
 :::&lt;&#x2F;p&gt;
 &lt;p&gt;Contents of Debian repository list file:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
@@ -13319,7 +13312,7 @@ not satisfactory.&lt;&#x2F;li&gt;
 &lt;li&gt;The helicopter driver lady should have been excluded. She is just
 not an interesting actor, and cheapens the movie further.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;h1 id=&quot;what-others-feel&quot;&gt;what others feel&lt;&#x2F;h1&gt;
 &lt;ul&gt;
 &lt;li&gt;I liked this &lt;a href=&quot;http:&#x2F;&#x2F;artsbeat.blogs.nytimes.com&#x2F;2009&#x2F;12&#x2F;22&#x2F;opening-pandoras-box-the-arguments-over-avatar&#x2F;&quot;&gt;short analysis&lt;&#x2F;a&gt; of the movie.&lt;&#x2F;li&gt;
@@ -13856,7 +13849,7 @@ impressive. As for the designs of the exo-skeleton, did they have to
 look so bulky? Anyways, the catwoman-like robots are wonderful to look
 at, complete with their metal-cutting whips. This is one case where sex
 appeal worked well.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;appleseed-ex-machina-2007&quot;&gt;my review of its sequel&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </description>
             </item>
@@ -14087,10 +14080,10 @@ notice him when he&#x27;d give &lt;a href=&quot;http:&#x2F;&#x2F;www.piware.de&#
 2 posts are actually outdated, I still keep a custom repository, a
 subset of the official repository of a specific arch, but only of
 packages that I ever install.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;Every once in a while, I run this command:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ reprepro -vv --basedir ~&#x2F;.custom_repo&#x2F; includedeb tshepang \
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ reprepro -vv --basedir ~&#x2F;.custom_repo&#x2F; includedeb tshepang
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;var&#x2F;cache&#x2F;apt&#x2F;archives&#x2F;*deb
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;What it does is add packages that are stored by the Debian package
@@ -14101,7 +14094,7 @@ packages that matter to me for any later install.&lt;&#x2F;p&gt;
 equivalent of &lt;code&gt;testing&lt;&#x2F;code&gt; and &lt;code&gt;unstable&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;Another command that I sometimes run, though less frequently, is:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ reprepro -vv --basedir ~&#x2F;.custom_repo&#x2F; includedeb tshepang \
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ reprepro -vv --basedir ~&#x2F;.custom_repo&#x2F; includedeb tshepang
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;var&#x2F;cache&#x2F;apt&#x2F;archives&#x2F;*deb
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;This one is used to help keep the repository fresh. Check out &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;removing-obsolete-packages-from-a-local-debian-repository&quot;&gt;this
@@ -14296,7 +14289,7 @@ however like 2 character designs:&lt;&#x2F;p&gt;
 &lt;li&gt;the oversized (and scary) robot&lt;&#x2F;li&gt;
 &lt;li&gt;they guy with a metal head&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;For a far better take on the title character, see &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;dredd-2012&quot;&gt;Dredd&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
             </item>
@@ -14364,7 +14357,7 @@ irritating) character played by Cuba Gooding, jnr.&lt;&#x2F;p&gt;
 movie reminds me of &lt;em&gt;Delicatessen&lt;&#x2F;em&gt;, only amplified, and treated with
 far superior skill, and a more engaging storyline. The sort of emotion
 this sort of movie instilled in me is quite rare, and has similar
-intensity to what is found in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;apocalypto-2006&quot;&gt;*Apocalypto*&lt;&#x2F;a&gt;. The costume design is
+intensity to what is found in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;apocalypto-2006&quot;&gt;&lt;em&gt;Apocalypto&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;. The costume design is
 perhaps even better than what can be seen in the (lesser) &lt;em&gt;Pirates of
 the Caribbean&lt;&#x2F;em&gt; trilogy.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
@@ -14583,7 +14576,7 @@ deep passion this guy has for excellence in the field.&lt;&#x2F;p&gt;
                 <description>&lt;p&gt;&lt;strong&gt;update&lt;&#x2F;strong&gt;: The lack of reliability, worst of which was constant
 unavailability of my blog, led me to move on. This time it&#x27;s &lt;a href=&quot;http:&#x2F;&#x2F;pelican.notmyidea.org&quot;&gt;Pelican&lt;&#x2F;a&gt;,
 hosted by &lt;a href=&quot;http:&#x2F;&#x2F;pages.github.com&quot;&gt;GitHub Pages&lt;&#x2F;a&gt;. &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;blogging-with-pelican&quot;&gt;Here&#x27;s the setup&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I&#x27;ve been meaning to move my blog(s) away from Posterous, due to its UI
 problems and ridiculously-slow page loads. I finally did it with the
 help of &lt;a href=&quot;http:&#x2F;&#x2F;calepin.co&#x2F;&quot;&gt;Calepin&lt;&#x2F;a&gt;, which itself has a bunch of problems. These are
@@ -15405,7 +15398,7 @@ here is among the most memorable, and it matches the movie quite well.&lt;&#x2F;
 BUrstyn&lt;&#x2F;a&gt;) expresses the high shitness levels of her life to son. Sadly
 this mommy character is a little overdone (as if retarded), though her
 acting is pretty good.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;A far &lt;a href=&quot;http:&#x2F;&#x2F;www.slantmagazine.com&#x2F;film&#x2F;review&#x2F;requiem-for-a-dream&#x2F;4394&quot;&gt;superior review&lt;&#x2F;a&gt;, even though it is a lot more negative than
 mine.&lt;&#x2F;p&gt;
 </description>
@@ -15462,7 +15455,7 @@ character. It was quite interesting to have the actors take different
 roles in each alternate reality.&lt;&#x2F;p&gt;
 &lt;p&gt;I would have preferred superior camerawork, not the shitty tv-like one,
 which was most evident in the very first scene.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;&lt;strong&gt;sidenotes&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;I found the &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;The_Butterfly_Effect#Reception&quot;&gt;negative critical reception&lt;&#x2F;a&gt; surprising.&lt;&#x2F;li&gt;
@@ -16063,7 +16056,7 @@ serving food during battle; the meet between fat cat and donkey&lt;&#x2F;li&gt;
 &lt;li&gt;the early scenes in which Shrek harks back to the early,
 freedom-filled, days&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;&lt;strong&gt;update&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
 &lt;p&gt;Movie revisits can be real strange. The first time I watched this one, I
 deemed it a masterpiece, but a revisit proved it not much better than
@@ -16100,7 +16093,7 @@ have been.&lt;&#x2F;p&gt;
 not-lethal-enough look of the lead (where&#x27;s Jet Li when you need him?).
 I would also have preffered a less polished feel of the camerawork (it
 feels too sanitised, too fantasy-like).&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;&lt;strong&gt;sidenotes&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;I was again wondering if there was something wrong with considering
@@ -16111,7 +16104,7 @@ Perhaps I will understand on a revisit.&lt;&#x2F;li&gt;
 negative conclusion.&lt;&#x2F;li&gt;
 &lt;li&gt;I am worried that this is another &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;the-case-of-the-matrix-reloaded&quot;&gt;Case of The Matrix Reloaded&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;&lt;strong&gt;update&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
 &lt;p&gt;This is indeed another &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;the-case-of-the-matrix-reloaded&quot;&gt;Case of The Matrix Reloaded&lt;&#x2F;a&gt;. It is far less
 impressive than on first viewing, but I still love the fantasy-like
@@ -16503,7 +16496,7 @@ movie Nicolas Cage has been in (remember &lt;em&gt;Ghost Rider&lt;&#x2F;em&gt;).
                 <link>http://tshepang.net/cemetery-junction-2010/</link>
                 <guid>http://tshepang.net/cemetery-junction-2010/</guid>
                 <description>&lt;p&gt;It got the same sort of camerawork and set design (set about the same
-time?) as &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;recent-movies-2010-05-06&quot;&gt;*An Education*&lt;&#x2F;a&gt;, and it also happens to be a coming-of-age
+time?) as &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;recent-movies-2010-05-06&quot;&gt;&lt;em&gt;An Education&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;, and it also happens to be a coming-of-age
 story, only a lot less serious and a lot more of a fairy-tale. The
 acting is decent, but Ralph Fiennes isn&#x27;t convincing... more a
 caricature than a shitty husband.&lt;&#x2F;p&gt;
@@ -17402,7 +17395,7 @@ Helena Bonham Carter, Kevin Bacon, and all supporting characters).&lt;&#x2F;p&gt
                 <pubDate>Tue, 10 May 2011 00:00:00 +0000</pubDate>
                 <link>http://tshepang.net/13-assassins-2010/</link>
                 <guid>http://tshepang.net/13-assassins-2010/</guid>
-                <description>&lt;p&gt;A re-imagining of a [Seven Samurai[], complete with its Toshiro
+                <description>&lt;p&gt;A re-imagining of a &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;seven-samurai-1954&quot;&gt;Seven Samurai&lt;&#x2F;a&gt;, complete with its Toshiro
 Mifune (the forest guy who is looked-down upon for not being a samurai,
 and his slight rebellion), its charismatic leader, battle and acting
 style (one wouldn&#x27;t guess that it was made only in 2010). The villain
@@ -17622,7 +17615,7 @@ else, maybe a budget, with some visual flair. But there&#x27;s nothing. In
 fact there is an uninteresting &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Elias_Koteas&quot;&gt;Elias Koteas&lt;&#x2F;a&gt; as the investigator (there
 was basically none in the earlier movie), and the companion of the
 vampire (played by an extrememly uninteresting &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Richard_Jenkins&quot;&gt;Richard Jenkins&lt;&#x2F;a&gt;, who
-bored me horrendously in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;eat-pray-love-2010&quot;&gt;*Eat Pray Love*&lt;&#x2F;a&gt;). But these greedy
+bored me horrendously in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;eat-pray-love-2010&quot;&gt;&lt;em&gt;Eat Pray Love&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;). But these greedy
 motherfuckas just wanted to exploit a good story, and give nothing in
 return. In fact, the even got lazy, walking briskly over material that
 was dealth with more depth in the first movie. But, I don&#x27;t know the
@@ -17708,7 +17701,7 @@ with amazing cinematography and, especially, production design. The only
 war movie that is any match on both these elements is &lt;em&gt;Saving Private
 Ryan&lt;&#x2F;em&gt;. Maybe that&#x27;s a careless statement, but then again my memory is
 hardly ever impressive.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;The version I watched is the one released in 2001, fully titled
 &lt;em&gt;Apocalypse Now Redux&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
 </description>
@@ -18052,7 +18045,7 @@ earth (as a result of global warming) is interesting.&lt;&#x2F;p&gt;
                 <pubDate>Sat, 02 Apr 2011 00:00:00 +0000</pubDate>
                 <link>http://tshepang.net/4-months-3-weeks-and-2-days-2007/</link>
                 <guid>http://tshepang.net/4-months-3-weeks-and-2-days-2007/</guid>
-                <description>&lt;p&gt;Done with the style of &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;crimson-gold-2003&quot;&gt;*Crimson Gold*&lt;&#x2F;a&gt;, it&#x27;s a superbly-made and
+                <description>&lt;p&gt;Done with the style of &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;crimson-gold-2003&quot;&gt;&lt;em&gt;Crimson Gold&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;, it&#x27;s a superbly-made and
 -acted movie about the ravages of poverty and the problems associated
 with making abortion illegal. The general ill-treatment people give each
 other is horrid, but luckily things are lightened up when our hero&#x27;s
@@ -18116,7 +18109,7 @@ smoke); the excessivley-advanced gadgets are nice.&lt;&#x2F;p&gt;
 (Gary Oldman), the world&#x27;s first vampire. It&#x27;s rather shocking that it
 was made by the great Francis Ford Coppola, and it&#x27;s probably his
 worst. A better (character development; acting) vampire can be found in
-&lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Nosferatu_the_Vampyre&quot;&gt;*Nosferatu*&lt;&#x2F;a&gt; (1979). Winona Ryder is quite bad as the vampire&#x27;s
+&lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Nosferatu_the_Vampyre&quot;&gt;&lt;em&gt;Nosferatu&lt;&#x2F;em&gt;&lt;&#x2F;a&gt; (1979). Winona Ryder is quite bad as the vampire&#x27;s
 lover, though not as much as Keanu Reeves (who also has a face so
 gorgeous).&lt;&#x2F;p&gt;
 &lt;p&gt;The concept of the vampire&#x27;s shadow, which defies physics, is rather
@@ -18194,7 +18187,7 @@ But it seems to the writers that wasn&#x27;t exciting enough, and there was
 instead an insistence on having it been done to others too, who were
 often innocent (e.g. you go through some horrid torture OR your wife
 dies). Sounds like desperate writing to me.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;An &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;recent-movies-2008-10-12&quot;&gt;earlier review&lt;&#x2F;a&gt; of another in the series.&lt;&#x2F;p&gt;
 </description>
             </item>
@@ -18281,12 +18274,12 @@ quite gentle, and it details how to get the code running on your
 machine.&lt;&#x2F;p&gt;
 &lt;p&gt;If you use Debian (or Ubuntu), you can use run this command:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;wajig --norecommends install build-essential docbook-xsl flex \
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;bison cvs gperf cmake  {uuid,ppp}-dev \
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;libx{composite,randr,damage,ft2,i,t}-dev \
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;libxcb-{event1,aux0,atom1}-dev \
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;lib{pam0g,iw,db,gdbm,png12,ffi,tiff,vorbis,gl1-mesa,unistring} \
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;lib{quvi,icu,neon27,usb-1.0-0,asound2,ncurses5,udev,usb,acl1} \
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;wajig --norecommends install build-essential docbook-xsl flex
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;bison cvs gperf cmake  {uuid,ppp}-dev
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;libx{composite,randr,damage,ft2,i,t}-dev
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;libxcb-{event1,aux0,atom1}-dev
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;lib{pam0g,iw,db,gdbm,png12,ffi,tiff,vorbis,gl1-mesa,unistring}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;lib{quvi,icu,neon27,usb-1.0-0,asound2,ncurses5,udev,usb,acl1}
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;lib{boost-signals,ldap2,sasl2}-dev
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;It&#x27;s installs the development packages that will be needed by the build
@@ -18331,7 +18324,7 @@ by &lt;strong&gt;tinderbox_outputdir&lt;&#x2F;strong&gt; in the config file.&lt;
 one for each module. The file &amp;quot;index.html&amp;quot; will give a decent page
 that acts like a summary of the entire build process, showing which
 modules failed, and on what build stages. Gorgeous!&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;&lt;strong&gt;sidenotes&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;This process is rather simplified, for the sake of clarity.&lt;&#x2F;li&gt;
@@ -18424,7 +18417,7 @@ making it feel like mere gloss (fairytale). Actually that&#x27;s one thing
 that the younger &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;the-informant-2009&quot;&gt;The Informant&lt;&#x2F;a&gt; (2009) stayed away from. No one was an
 angel there, well except for one FBI agent, but he wasn&#x27;t given a
 blowjob that our two heroes here got.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I&#x27;m not satisfied with this review. The movie is tough to review
 because it&#x27;s so sophisticated, with so much that&#x27;s beautiful (and so
 much lacking).&lt;&#x2F;p&gt;
@@ -18667,7 +18660,7 @@ rifles stopped becoming fashionable.&lt;&#x2F;p&gt;
                 <pubDate>Mon, 07 Mar 2011 00:00:00 +0000</pubDate>
                 <link>http://tshepang.net/the-road-2009/</link>
                 <guid>http://tshepang.net/the-road-2009/</guid>
-                <description>&lt;p&gt;It is better than the annoying &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;recent-movies-2010-10-25&quot;&gt;*The Book of Eli*&lt;&#x2F;a&gt;, but not as
+                <description>&lt;p&gt;It is better than the annoying &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;recent-movies-2010-10-25&quot;&gt;&lt;em&gt;The Book of Eli&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;, but not as
 interesting. The portrayal of the post-apocalyptic world is as grim as
 it gets, and seems far more realistic than &lt;em&gt;Eli&lt;&#x2F;em&gt; and &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;i-am-legend&quot;&gt;I Am Legend&lt;&#x2F;a&gt;. The
 danger they face, where people kill and&#x2F;or eat each other for survival,
@@ -18808,8 +18801,8 @@ title character doesn&#x27;t help.&lt;&#x2F;p&gt;
                 <link>http://tshepang.net/sleepy-hollow-1999/</link>
                 <guid>http://tshepang.net/sleepy-hollow-1999/</guid>
                 <description>&lt;p&gt;I had great fun watching this. I can&#x27;t even tell which I enjoyed more
-between it and another superb Tim Burton movie, &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;alice-in-wonderland-2010&quot;&gt;*Alice In
-Wonderland*&lt;&#x2F;a&gt;, nor which is better. The humor, which is solely driven by
+between it and another superb Tim Burton movie, &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;alice-in-wonderland-2010&quot;&gt;&lt;em&gt;Alice In
+Wonderland&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;, nor which is better. The humor, which is solely driven by
 the very capable Johnny Depp, is spot-on, while the mightily desirable
 Christina Ricci is put there as an excuse for a love interest. The
 character design of the headless horseman is wonderful, and so are the
@@ -18914,7 +18907,7 @@ hills.&lt;&#x2F;p&gt;
                 <pubDate>Mon, 28 Feb 2011 00:00:00 +0000</pubDate>
                 <link>http://tshepang.net/floetic-2002/</link>
                 <guid>http://tshepang.net/floetic-2002/</guid>
-                <description>&lt;p&gt;I love the smooth melody that is &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Floetic&quot;&gt;*Floetic*&lt;&#x2F;a&gt; by Floetry. It is the
+                <description>&lt;p&gt;I love the smooth melody that is &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Floetic&quot;&gt;&lt;em&gt;Floetic&lt;&#x2F;em&gt;&lt;&#x2F;a&gt; by Floetry. It is the
 sort of sound you find in Jill Scott&#x27;s near-masterpiece of an album,
 &lt;em&gt;Who&#x27;s Jill Scott&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;Here&#x27;s my favorites:&lt;&#x2F;p&gt;
@@ -19022,7 +19015,7 @@ me appreciate some of the pleasures we have here in South Africa.&lt;&#x2F;p&gt;
 strange since he wrote the screenplay, and is considered by the director
 as his mentor. Most notable, it&#x27;s far better than those two boring
 pieces.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;&lt;strong&gt;sidenotes&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Jonathan Rosenbaum, the best movie critic I&#x27;ve read, has a &lt;a href=&quot;http:&#x2F;&#x2F;www.jonathanrosenbaum.com&#x2F;?p=6061&quot;&gt;superb
@@ -19122,8 +19115,8 @@ Good ole cheap action-comedy.&lt;&#x2F;p&gt;
                 <guid>http://tshepang.net/the-cat-in-the-hat-2003/</guid>
                 <description>&lt;p&gt;One of these days I&#x27;m simply going to have to admit the world&#x27;s movie
 critics are quite strange, and I really can&#x27;t rely on them for what
-they consider excellent. Take for example their thoughts on &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;The_Cat_in_the_Hat_(film)#Reception&quot;&gt;*The Cat
-in the Hat*&lt;&#x2F;a&gt;. This is because I find it really great family
+they consider excellent. Take for example their thoughts on &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;The_Cat_in_the_Hat_(film)#Reception&quot;&gt;&lt;em&gt;The Cat
+in the Hat&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;. This is because I find it really great family
 entertainment. It&#x27;s great fantasy and very funny, with great production
 design.&lt;&#x2F;p&gt;
 </description>
@@ -19168,7 +19161,7 @@ duh!). I&#x27;ve never been much interested in the tv show in which this is
 based for similar reasons. But I relented, and in turn got punished by
 2hr+ of age-old formula that made me hate the genre in the first place.
 Regarding the story, the musings regarding sexual&#x2F;romantic relationships
-are quite sickening (think &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;eat-pray-love-2010&quot;&gt;*Eat Pray Love*&lt;&#x2F;a&gt;).&lt;&#x2F;p&gt;
+are quite sickening (think &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;eat-pray-love-2010&quot;&gt;&lt;em&gt;Eat Pray Love&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;).&lt;&#x2F;p&gt;
 </description>
             </item>
         
@@ -19555,7 +19548,7 @@ isn&#x27;t enough of great martial arts choreography.&lt;&#x2F;p&gt;
                 <description>&lt;p&gt;I don&#x27;t know if we were to take this as comic farce or serious fantasy
 drama, but it turned out too eccentric and unfocused. Luckily it got
 great cinematography.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I could not help but notice the physical resemblance between Max von
 Sydow (lead character) and Hugh Laurie of &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;House_(TV_series)&quot;&gt;House&lt;&#x2F;a&gt;) fame.&lt;&#x2F;p&gt;
 </description>
@@ -19867,7 +19860,7 @@ string, I get to use regular expressions (regexp)?&lt;&#x2F;p&gt;
 tabs as well? We need some more regexp help:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import java.util.Arrays;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;String[] splitString = &amp;quot;a    bnc&amp;quot;.split(&amp;quot;\s+&amp;quot;);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;String[] splitString = &amp;quot;a    bnc&amp;quot;.split(&amp;quot;s+&amp;quot;);
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;System.out.println(Arrays.asList(splitString));
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
@@ -20392,7 +20385,7 @@ which contains all that&#x27;s needed to roll-back, restore, check stats,
 &lt;p&gt;There, &lt;code&gt;~&#x2F;conf&#x2F;rdiff-backup&lt;&#x2F;code&gt; is a file that has a list of directories I
 want to exclude in the backup, and &lt;code&gt;&#x2F;media&#x2F;backup&lt;&#x2F;code&gt; is the backup
 destination.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;There is a credible competitor in a form of duplicity, which is probably
 superior since it&#x27;s got encryption. This duplicity also got a bonus of
 being used by some hot new GUI backup utility now &lt;a href=&quot;http:&#x2F;&#x2F;lists.fedoraproject.org&#x2F;pipermail&#x2F;announce&#x2F;2010-May&#x2F;002815.html&quot;&gt;endorsed by Fedora&lt;&#x2F;a&gt;
@@ -20972,7 +20965,7 @@ interior in &lt;em&gt;Resident Evil Afterlife&lt;&#x2F;em&gt;, the best &lt;stro
 &lt;strong&gt;best first-time viewing experience&lt;&#x2F;strong&gt;. This year, it is won by &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;iron-man-2&quot;&gt;Iron
 Man 2&lt;&#x2F;a&gt;, which failed on the rewatch value department. Runner-up is the
 masterful &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;precious-2009&quot;&gt;Precious&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;&quot;&gt;&#x27;old&#x27; movies&lt;&#x2F;h1&gt;
+&lt;h1 id=&quot;old-movies&quot;&gt;&#x27;old&#x27; movies&lt;&#x2F;h1&gt;
 &lt;p&gt;This section is meant to give a chance to movies I have watched before
 this year to appear in this review, for one reason or another.&lt;&#x2F;p&gt;
 &lt;p&gt;Of those, the &lt;strong&gt;best experience&lt;&#x2F;strong&gt; was offered by &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;smokin-aces-2006&quot;&gt;Smokin&#x27; Aces&lt;&#x2F;a&gt;, which
@@ -21390,7 +21383,7 @@ with FLOSS is not grounds for a dishonest review.&lt;&#x2F;p&gt;
                 <guid>http://tshepang.net/tumblr-suckage/</guid>
                 <description>&lt;p&gt;&lt;strong&gt;update&lt;&#x2F;strong&gt;: after an unbearably-long downtime, I decided to make the
 switch, this time to &lt;strong&gt;Posterous&lt;&#x2F;strong&gt; (now-defunct).&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;As much as I love Tumblr, I got a few complaints:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;performance for some tasks is really bad; the most annoying one is
@@ -21577,7 +21570,7 @@ explaining what he proposes as &lt;strong&gt;real&lt;&#x2F;strong&gt; software e
                 <guid>http://tshepang.net/my-debian-package-management-setup/</guid>
                 <description>&lt;p&gt;Much of this is obsolete: I no longer use &lt;code&gt;debmirror&lt;&#x2F;code&gt; and no longer keep
 the entire binary repository of i386 arch.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;There&#x27;s a useful tool in Debian named debmirror. It&#x27;s function is to
 create and manage a partial copy of an official Debian repository, and I
 use it to create 2 repos:&lt;&#x2F;p&gt;
@@ -22313,7 +22306,7 @@ fuck!&lt;&#x2F;p&gt;
 &lt;p&gt;I consumed much info (and time) during the process, which entailed
 looking at Git usage (branch, checkout, commit, format-patch, ...)
 through &lt;a href=&quot;http:&#x2F;&#x2F;pvanhoof.be&#x2F;blog&#x2F;&quot;&gt;Philip van Hoof&lt;&#x2F;a&gt;&#x27;s guidance.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;Philip van Hoof also &lt;a href=&quot;http:&#x2F;&#x2F;git.gnome.org&#x2F;browse&#x2F;tracker&#x2F;commit&#x2F;?id=c5a15f8231c63488605d799b9670aba01898fde4&quot;&gt;fixed&lt;&#x2F;a&gt; a hard-to-reproduce bug which was a pain
 for me. The fix is a workaround for a &lt;a href=&quot;http:&#x2F;&#x2F;www.gtk.org&#x2F;&quot;&gt;GTK+&lt;&#x2F;a&gt; bug.&lt;&#x2F;p&gt;
 </description>
@@ -22374,7 +22367,7 @@ movie.&lt;&#x2F;li&gt;
 &lt;p&gt;Based on these points, I vote for Richard as the winner, with the
 disclaimer that the latter part of the debate was getting too technical
 for me to follow thoroughly.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;&lt;strong&gt;sidenotes&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;See &lt;a href=&quot;http:&#x2F;&#x2F;commonsenseatheism.com&#x2F;?page_id=3&quot;&gt;Luke Muehlhauser&lt;&#x2F;a&gt;&#x27;s &lt;a href=&quot;http:&#x2F;&#x2F;commonsenseatheism.com&#x2F;?p=30&quot;&gt;well-argued take&lt;&#x2F;a&gt; on the issue of the
@@ -22459,7 +22452,7 @@ will disappoint any viewer.&lt;&#x2F;p&gt;
 &lt;p&gt;Also some of the action (and visual effects) is pretty good (check the
 train smash). This a really fresh kinda superhero and it makes one
 salivate for (superior) sequels.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;It was interesting to find that &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Hancock_(film)#Reception&quot;&gt;so many critics agreed&lt;&#x2F;a&gt; that the move
 started well and screwed up about halfway through.&lt;&#x2F;p&gt;
 </description>
@@ -22715,7 +22708,7 @@ hospital scenes.&lt;&#x2F;p&gt;
                 <description>&lt;p&gt;&lt;strong&gt;update&lt;&#x2F;strong&gt;: I am not running a business anymore (I gave up trying), and
 the major dream mentioned here died with it. So am keeping this here for
 its historical value... it&#x27;s also not bad writing.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I was having a discussion with a colleague over chat software, asking
 her about her major dreams. After some deliberations, and after
 revealing my own dream of helping a million people, I was touched when
@@ -22839,7 +22832,7 @@ Case of Benjamin Button&lt;&#x2F;em&gt;. Here&#x27;s a &lt;a href=&quot;http:&#x
 provides a real accomplished appearance. Cate Blanchett is a pleasure to
 watch as always as the main love interest, but nothing is as striking as
 the visual effects done on Brad Pitt&#x27;s twenty-something face.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;&lt;strong&gt;sidenote&lt;&#x2F;strong&gt;: Interestingly I later found that both movies were written
 by the same person.&lt;&#x2F;p&gt;
 </description>
@@ -22908,7 +22901,7 @@ nothing less (and it would be a spoiler to say which of the 2 she gets).
 Gong Li, who plays the title character in this The Story of Qiu Ju is at
 her best, and the direction is simple and raw. Oh, and the poverty and
 suffering displayed is unsettling.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;This story is more powerful than even &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;yellow-earth-1984&quot;&gt;Yellow Earth&lt;&#x2F;a&gt;, and with many more
 strong actors, while the winter weather looks even more harsh.&lt;&#x2F;p&gt;
 </description>
@@ -23184,7 +23177,7 @@ amazing elsewhere that it&#x27;s easily the best ever comic book adaptation
 &lt;p&gt;By the way, I&#x27;m pretty glad that the Knight&#x27;s romantic interest has
 been recast cuz&#x27; the previous actress was the weakest point in the
 magnificent &lt;em&gt;Batman Begins&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;A second look at &lt;em&gt;The Dark Knight&lt;&#x2F;em&gt; wasn&#x27;t favorable, all but:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Heath Ledger&#x27;s The Joker, the year&#x27;s performance&lt;&#x2F;li&gt;
@@ -23236,7 +23229,7 @@ inhabitants and especially the kids).&lt;&#x2F;p&gt;
 she&#x27;s so perfect and gorgeous and all that shit. Collin Farrell, who
 helped me undermine the movie on first appearance, does manage to pull
 quite a decent performance too.&lt;&#x2F;p&gt;
-&lt;p&gt;---&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I only realised this was Pocahontas when shown on the end-credits. Yeah,
 I watched the movie almost by accident. That it is romance made me
 worry, since it&#x27;s hard to find good ones. It doesn&#x27;t disappoint in
@@ -23284,7 +23277,7 @@ wife just sucks, much more than the unconvincing &#x27;first&#x27; victim.&lt;&#
                 <link>http://tshepang.net/reprepro-saved-my-live/</link>
                 <guid>http://tshepang.net/reprepro-saved-my-live/</guid>
                 <description>&lt;p&gt;Much of this is obsolete: I no longer build my own Debian packages.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;That&#x27;s a joke title, but &lt;a href=&quot;http:&#x2F;&#x2F;mirrorer.alioth.debian.org&#x2F;&quot;&gt;that fabulous tool&lt;&#x2F;a&gt; really did help me a lot.
 When doing package builds, all I need to run is the following after a
 build:&lt;&#x2F;p&gt;
@@ -23319,7 +23312,7 @@ know if it&#x27;s a known problem, which I didn&#x27;t report because I was
 using Ubuntu&#x27;s package, a much improved and re-written 0.1.98, as
 opposed to Debian&#x27;s &#x27;bug-free&#x27; 0.1 (though I later discovered the bug
 to exist when running the package in Ubuntu 8.10 too).&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;my-debian-package-management-setup&quot;&gt;an update on how I do things now&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </description>
             </item>
@@ -23338,7 +23331,7 @@ things I add to the panel on every fresh install (for I always am
 curious what&#x27;s up with my system). Given how useful it is, I now wonder
 why Debian doesn&#x27;t add it on the panel by default, especially that many
 new users won&#x27;t even be aware it exists in the first place.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;Clicking on that applet launches a more comprehensive system monitor
 which has 4 tabs (notebooks in GTK+ speak):&lt;&#x2F;p&gt;
 &lt;ul&gt;
@@ -23372,7 +23365,7 @@ is that on closing the error dialogue, all other open Scribes
 windows would also close.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;All what this means is that Scribes remains installed on my machine(s).&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;&lt;strong&gt;sidenote&lt;&#x2F;strong&gt;: Code-folding is still absent although I won&#x27;t need to use
 it since &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;project-of-note-geany&quot;&gt;Geany&lt;&#x2F;a&gt; does a nice job already.&lt;&#x2F;p&gt;
 </description>
@@ -24472,15 +24465,15 @@ human energy... WTF!) by being better elsewhere.&lt;&#x2F;p&gt;
                 <guid>http://tshepang.net/2007-movie-review/</guid>
                 <description>&lt;p&gt;Not such a good year at the movies if compared to &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;2005-movie-review&quot;&gt;2005&lt;&#x2F;a&gt; and &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;2006-movie-review&quot;&gt;2006&lt;&#x2F;a&gt;, and
 there&#x27;s isn&#x27;t even a single masterpiece.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;movie-of-the-year&quot;&gt;movie of the year&lt;&#x2F;h1&gt;
+&lt;h3 id=&quot;movie-of-the-year&quot;&gt;movie of the year&lt;&#x2F;h3&gt;
 &lt;p&gt;Nothing this year has had as much impact on me as has Mel Gibson&#x27;s
 &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;apocalypto-2006&quot;&gt;Apocalypto&lt;&#x2F;a&gt; given its gruelling tale of cruelty, the sort I never
 witnessed before. The runner-up is &lt;em&gt;300&lt;&#x2F;em&gt; for its awe-inspiring visual
 magnificence.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;best-movie-of-the-year&quot;&gt;best movie of the year&lt;&#x2F;h1&gt;
+&lt;h3 id=&quot;best-movie-of-the-year&quot;&gt;best movie of the year&lt;&#x2F;h3&gt;
 &lt;p&gt;There was a number of very well-made movies this year, but none was as
 good as &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;smokin-aces-2006&quot;&gt;Smokin&#x27; Aces&lt;&#x2F;a&gt; for its exciting action and excellent direction.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;enchanting&quot;&gt;enchanting&lt;&#x2F;h1&gt;
+&lt;h3 id=&quot;enchanting&quot;&gt;enchanting&lt;&#x2F;h3&gt;
 &lt;p&gt;&lt;em&gt;Polar Express&lt;&#x2F;em&gt; was made a number of years ago but it still packs a
 punch in many of its moments especially the near-accident of the magic
 train, the dance sequence of chocolate presentation, and the North pole
@@ -24488,21 +24481,21 @@ environment. These are possibly the most magical ever sequences in movie
 history. &lt;em&gt;Ratatouille&lt;&#x2F;em&gt;, another fantasy, is a very enjoyable runner-up,
 even given its formulaic touches, typical of so much animation out
 there.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;cinematography&quot;&gt;cinematography&lt;&#x2F;h1&gt;
+&lt;h3 id=&quot;cinematography&quot;&gt;cinematography&lt;&#x2F;h3&gt;
 &lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;munich-2005&quot;&gt;Munich&lt;&#x2F;a&gt; can&#x27;t be beaten in this category for its flawlessly-polished
 look. It is followed by a much smaller movie, &lt;em&gt;Three Colours Blue&lt;&#x2F;em&gt;, for
 its beautiful usage of lighting.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;production-design&quot;&gt;production design&lt;&#x2F;h1&gt;
+&lt;h3 id=&quot;production-design&quot;&gt;production design&lt;&#x2F;h3&gt;
 &lt;p&gt;It&#x27;s rare that an old movie would impress this much due to its visual
 aspects, but the design of the alien environment in &lt;em&gt;Alien&lt;&#x2F;em&gt; was
 breath-taking. The runner-up happened to be &lt;em&gt;District B13&lt;&#x2F;em&gt; for its
 rotting and crime-ridden urban setting.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;cast&quot;&gt;cast&lt;&#x2F;h1&gt;
+&lt;h3 id=&quot;cast&quot;&gt;cast&lt;&#x2F;h3&gt;
 &lt;p&gt;What helped make &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;apocalypto-2006&quot;&gt;Apocalypto&lt;&#x2F;a&gt; feel so real is its cast of unknowns; I
 did not notice any misplacement or annoying performance. The runner-up
 is the cast of &lt;em&gt;American Ganster&lt;&#x2F;em&gt; (and that does not include the two
 leads). &lt;em&gt;Hot Fuzz&lt;&#x2F;em&gt; wins the title for comic cast.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;performances&quot;&gt;performances&lt;&#x2F;h1&gt;
+&lt;h3 id=&quot;performances&quot;&gt;performances&lt;&#x2F;h3&gt;
 &lt;p&gt;My most favorite of all the year&#x27;s performances goes to Taraji Henson
 who plays an exciting, yet heartbreaking, role of a sniper in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;smokin-aces-2006&quot;&gt;Smokin&#x27;
 Aces&lt;&#x2F;a&gt;. The best female performance was however that of Anne Parillaud,
@@ -24513,7 +24506,7 @@ for male performances, there&#x27;s a tie between Anthony Hopkins in
 a pity because that was Forest&#x27;s best ever performance while Anthony&#x27;s
 was business-as-usual. Mark Ruffalo&#x27;s subdued but highly-focused
 character in &lt;em&gt;Zodiac&lt;&#x2F;em&gt; is runner-up.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;characters&quot;&gt;characters&lt;&#x2F;h1&gt;
+&lt;h3 id=&quot;characters&quot;&gt;characters&lt;&#x2F;h3&gt;
 &lt;p&gt;The best villain is Josh Brolin&#x27;s dirty cop found in &lt;em&gt;American Ganster&lt;&#x2F;em&gt;
 for its unflinching acts of corruption. My favorite character is Gerard
 Butler&#x27;s Spartan king in &lt;em&gt;300&lt;&#x2F;em&gt; while the most exotic is the Angelina
@@ -24526,7 +24519,7 @@ done. A special mention should go to John Heder&#x27;s goofy and
 kind-hearted ice skating champion in the delightful &lt;em&gt;Blades of Glory&lt;&#x2F;em&gt;.
 The &lt;strong&gt;best character design&lt;&#x2F;strong&gt; is the child-killing, pale monster in
 &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;pans-labyrinth-2006&quot;&gt;Pan&#x27;s Labyrinth&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;visuals&quot;&gt;visuals&lt;&#x2F;h1&gt;
+&lt;h3 id=&quot;visuals&quot;&gt;visuals&lt;&#x2F;h3&gt;
 &lt;p&gt;The year&#x27;s greatest spectacle &lt;em&gt;Transformers&lt;&#x2F;em&gt; is also the year&#x27;s best
 visual effects showcase, and should have tied with the runner-up,
 &lt;em&gt;Pirates of the Caribbean - At World&#x27;s End&lt;&#x2F;em&gt;, had it not been so
@@ -24536,7 +24529,7 @@ best imagery&#x2F;visual design, and &lt;em&gt;The Number 23&lt;&#x2F;em&gt; tak
 its gorgeous fantasy-like scenes. The most horrific&#x2F;shocking imagery
 emanates from &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;the-last-king-of-scotland-2006&quot;&gt;The Last King of Scotland&lt;&#x2F;a&gt;, a scene that showcases the
 aftermath of the cheating wife.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;action&quot;&gt;action&lt;&#x2F;h1&gt;
+&lt;h3 id=&quot;action&quot;&gt;action&lt;&#x2F;h3&gt;
 &lt;p&gt;The best action of any movie this year emanates from the gripping &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;the-bourne-ultimatum-2007&quot;&gt;The
 Bourne Ultimatum&lt;&#x2F;a&gt;, given its excellent execution and the relentless
 dedication of the Bourne character, and his lead adversary. The best
@@ -24544,7 +24537,7 @@ action sequence is however to be found in the final battle in &lt;em&gt;The
 Kingdom&lt;&#x2F;em&gt;. The best chase sequence is to be found in the very first scene
 of &lt;em&gt;District B13&lt;&#x2F;em&gt;, where the very athletic hero saves his neck from some
 very unloving fellows.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;miscellaneous&quot;&gt;miscellaneous&lt;&#x2F;h1&gt;
+&lt;h3 id=&quot;miscellaneous&quot;&gt;miscellaneous&lt;&#x2F;h3&gt;
 &lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;munich-2005&quot;&gt;Munich&lt;&#x2F;a&gt; ties with &lt;em&gt;Cars&lt;&#x2F;em&gt; as regards the best sound. There&#x27;s a tie
 between &lt;em&gt;The Number 23&lt;&#x2F;em&gt; and &lt;em&gt;Lucky Number Slevin&lt;&#x2F;em&gt; (presentation of
 textual info and the slick murders) as the best opening credits
@@ -24564,20 +24557,19 @@ movies. Instead of a landmark, I saw a badly-acted old-time thriller,
 not a bit better than those Humphrey Bogart flicks. The runner-up is
 &lt;em&gt;The Searchers&lt;&#x2F;em&gt; which lacked anything commendable, bar some nice images
 during the final battle.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;special-mention&quot;&gt;special mention&lt;&#x2F;h1&gt;
+&lt;h3 id=&quot;special-mention&quot;&gt;special mention&lt;&#x2F;h3&gt;
 &lt;p&gt;Something like &lt;em&gt;Alpha Dog&lt;&#x2F;em&gt; has not quite been done before and therefore
 maintains amazing levels of freshness given various moments (the angry
 telephone call, Justin Timberlake&#x27;s cool) even though it remains
 pointless. Another special mention should go to &lt;em&gt;Devil&#x27;s Rejects&lt;&#x2F;em&gt; for
 its crazy storyline of killers-for-fun and gruesome violence,
 reminiscent of &lt;em&gt;Natural Born Killers&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;best-first-time-viewing-experiences&quot;&gt;best first-time viewing experiences&lt;&#x2F;h1&gt;
+&lt;h3 id=&quot;best-first-time-viewing-experiences&quot;&gt;best first-time viewing experiences&lt;&#x2F;h3&gt;
 &lt;p&gt;As anyone knows and as seen many times above, movies never offer the
 same experience when revisited. So here&#x27;s a listing of those which were
 most impressive on first viewing in order of which had the most impact:
 &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;apocalypto-2006&quot;&gt;Apocalypto&lt;&#x2F;a&gt;, &lt;em&gt;Fearless&lt;&#x2F;em&gt;, &lt;em&gt;300&lt;&#x2F;em&gt;, &lt;em&gt;Next&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;others:
-++++++-&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;others&quot;&gt;others&lt;&#x2F;h3&gt;
 &lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;tags&#x2F;2007-movie&quot;&gt;these&lt;&#x2F;a&gt; and these:&lt;&#x2F;p&gt;
 &lt;p&gt;45; 30000 Leagues Under the Sea; 51st State; 88 Minutes; About A Boy;
 Aviator, The; Back to the Future 1 &amp;amp; 2; Bad Santa; Beat the Drum; Blood
@@ -24653,7 +24645,7 @@ watching it.&lt;&#x2F;p&gt;
 &lt;p&gt;The most enjoyable movie of this post is &lt;em&gt;Ray&lt;&#x2F;em&gt;, due to its wonderful
 music, interesting storyline and its lively editing. The character of
 the lead is real fun to watch and skillfully portrayed too.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;In &lt;em&gt;Scarface&lt;&#x2F;em&gt; is what must have been an inspiration of the two dirty
 cops in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;payback-1999&quot;&gt;Payback&lt;&#x2F;a&gt;; the dirty cop here wants a piece of action in return
 for not arresting Al Pacino&#x27;s character same as those in &lt;em&gt;Payback&lt;&#x2F;em&gt;.
@@ -24698,7 +24690,7 @@ provided by &lt;em&gt;Dr. Strangelove&lt;&#x2F;em&gt;&#x27;s above-stated charac
 least, the commander of the partly-damaged aircraft carrying nuclear
 weapons. The verdict, developed during this post&#x27;s writing, sees
 &lt;em&gt;Payback&lt;&#x2F;em&gt; as the lesser of the two.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;Sterling Hayden&#x27;s mad general must have inspired Kris Kristofferson&#x27;s
 crime lord because their mannerisms are so much similar. Although to a
 lesser extent, this also applies to George C. Scott&#x27;s general as
@@ -24900,7 +24892,7 @@ over-impressed by first-time viewings&lt;&#x2F;a&gt;: &lt;em&gt;Office Space&lt;
 due to its intelligent script (which is not so prevalent anymore) and
 Lola Rennt impressed me due to its innovative storytelling (which does
 not taste so fresh anymore).&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;John C. McGinley provides the only interesting performance of his I&#x27;ve
 yet seen in &lt;em&gt;Office Space&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
 </description>

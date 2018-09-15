@@ -100,6 +100,14 @@
                             </li>
                         
                     </ul>
+                    
+                    <div class="search-container">
+                      <input id="search" type="search" placeholder="🔎  search">
+                      <div class="search-results">
+                        <div class="search-results__items"></div>
+                      </div>
+                    </div>
+                    
                 </nav>
             </header>
 
@@ -156,9 +164,9 @@ rust</p>
 <p>impl Invert for i32 {</p>
 <p>:</p>
 <pre style="background-color:#2b303b">
-<span style="color:#c0c5ce;">fn invert(&amp;self) -\&gt; f64 {
+<span style="color:#c0c5ce;">fn invert(&amp;self) -&gt; f64 {
 </span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">:   1.0/(\*self as f64)
+</span><span style="color:#c0c5ce;">:   1.0/(*self as f64)
 </span><span style="color:#c0c5ce;">
 </span><span style="color:#c0c5ce;">}
 </span></pre>
@@ -203,9 +211,9 @@ rust</p>
 <p>impl Invert for f64 {</p>
 <p>:</p>
 <pre style="background-color:#2b303b">
-<span style="color:#c0c5ce;">fn invert(&amp;self) -\&gt; f64 {
+<span style="color:#c0c5ce;">fn invert(&amp;self) -&gt; f64 {
 </span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">:   1.0/(\*self)
+</span><span style="color:#c0c5ce;">:   1.0/(*self)
 </span><span style="color:#c0c5ce;">
 </span><span style="color:#c0c5ce;">}
 </span></pre>
@@ -238,6 +246,11 @@ rust</p>
 
       
           <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;even.js" ></script>
+          
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search_index.en.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search.js"></script>
+          
       
     </body>
 

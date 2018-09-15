@@ -100,6 +100,14 @@
                             </li>
                         
                     </ul>
+                    
+                    <div class="search-container">
+                      <input id="search" type="search" placeholder="🔎  search">
+                      <div class="search-results">
+                        <div class="search-results__items"></div>
+                      </div>
+                    </div>
+                    
                 </nav>
             </header>
 
@@ -129,36 +137,66 @@ directory that isn't version-controlled by <a href="http://mercurial.selenic.com
 <ol>
 <li>
 <p>So, we don't want to see this ugliness:</p>
-<p>&gt;&gt;&gt; from subprocess import call &gt;&gt;&gt; call('hg
+<blockquote>
+<blockquote>
+<blockquote>
+<p>from subprocess import call &gt;&gt;&gt; call('hg
 status'.split()) abort: no repository found in
 '/home/tshepang/projects/pyramid' (.hg not found)! 255</p>
+</blockquote>
+</blockquote>
+</blockquote>
 </li>
 <li>
 <p>So, here's the simplest solution:</p>
-<p>&gt;&gt;&gt; import os &gt;&gt;&gt; from subprocess import call &gt;&gt;&gt; call('hg
+<blockquote>
+<blockquote>
+<blockquote>
+<p>import os &gt;&gt;&gt; from subprocess import call &gt;&gt;&gt; call('hg
 status'.split(), stderr=open(os.devnull)) 255</p>
+</blockquote>
+</blockquote>
+</blockquote>
 <p>Problem: it leaves the file descriptor open... not good.</p>
 </li>
 <li>
 <p>We fix:</p>
-<p>&gt;&gt;&gt; import os &gt;&gt;&gt; from subprocess import call &gt;&gt;&gt; DEVNULL =
+<blockquote>
+<blockquote>
+<blockquote>
+<p>import os &gt;&gt;&gt; from subprocess import call &gt;&gt;&gt; DEVNULL =
 open(os.devnull) &gt;&gt;&gt; call('hg status'.split(), stderr=DEVNULL)
 255 &gt;&gt;&gt; DEVNULL.close()</p>
+</blockquote>
+</blockquote>
+</blockquote>
 <p>Much better, much uglier. (<a href="https://bitbucket.org/tshepang/scripts/src/tip/vcs.py">example usage</a>)</p>
 </li>
 <li>
 <p>Something better:</p>
-<p>&gt;&gt;&gt; import os &gt;&gt;&gt; from subprocess import call &gt;&gt;&gt; with
+<blockquote>
+<blockquote>
+<blockquote>
+<p>import os &gt;&gt;&gt; from subprocess import call &gt;&gt;&gt; with
 open(os.devnull) as DEVNULL: ... call('hg status'.split(),
 stderr=DEVNULL) 255</p>
+</blockquote>
+</blockquote>
+</blockquote>
 <p>Looks much nicer, and is more convenient, unless we wanted to do
 something similar multiple times, in which case the previous example
 would be preferable.</p>
 </li>
 <li>
 <p>Best solution:</p>
-<p>&gt;&gt;&gt; import os &gt;&gt;&gt; from subprocess import call, DEVNULL &gt;&gt;&gt;
+<blockquote>
+<blockquote>
+<blockquote>
+<p>import os &gt;&gt;&gt; from subprocess import call, DEVNULL &gt;&gt;&gt;
 call('hg status'.split(), stderr=DEVNULL) 255</p>
+</blockquote>
+</blockquote>
+</blockquote>
 </li>
 </ol>
 <p>This <a href="http://hg.python.org/cpython/rev/eaf93e156dff">small and wonderful feature</a> is <a href="http://docs.python.org/3/whatsnew/3.3.html#subprocess">new as of Python 3.3</a>.</p>
@@ -187,6 +225,11 @@ call('hg status'.split(), stderr=DEVNULL) 255</p>
 
       
           <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;even.js" ></script>
+          
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search_index.en.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search.js"></script>
+          
       
     </body>
 

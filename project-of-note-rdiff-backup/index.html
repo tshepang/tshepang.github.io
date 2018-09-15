@@ -100,6 +100,14 @@
                             </li>
                         
                     </ul>
+                    
+                    <div class="search-container">
+                      <input id="search" type="search" placeholder="🔎  search">
+                      <div class="search-results">
+                        <div class="search-results__items"></div>
+                      </div>
+                    </div>
+                    
                 </nav>
             </header>
 
@@ -138,7 +146,7 @@ which contains all that's needed to roll-back, restore, check stats,
 <p>There, <code>~/conf/rdiff-backup</code> is a file that has a list of directories I
 want to exclude in the backup, and <code>/media/backup</code> is the backup
 destination.</p>
-<p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<hr />
 <p>There is a credible competitor in a form of duplicity, which is probably
 superior since it's got encryption. This duplicity also got a bonus of
 being used by some hot new GUI backup utility now <a href="http://lists.fedoraproject.org/pipermail/announce/2010-May/002815.html">endorsed by Fedora</a>
@@ -168,6 +176,11 @@ and may in future be <a href="http://mail.gnome.org/archives/desktop-devel-list/
 
       
           <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;even.js" ></script>
+          
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search_index.en.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search.js"></script>
+          
       
     </body>
 

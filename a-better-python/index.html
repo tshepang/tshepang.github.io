@@ -100,6 +100,14 @@
                             </li>
                         
                     </ul>
+                    
+                    <div class="search-container">
+                      <input id="search" type="search" placeholder="🔎  search">
+                      <div class="search-results">
+                        <div class="search-results__items"></div>
+                      </div>
+                    </div>
+                    
                 </nav>
             </header>
 
@@ -127,32 +135,19 @@ Investigation into Programming Language Syntax</em>. Now, since I'm a
 Python sucker, here is what I would change in Python in order to follow
 advice from <a href="http://dl.acm.org/authorize?6968137">that paper</a>:</p>
 <pre style="background-color:#2b303b">
-<span style="color:#c0c5ce;">before       after
-</span><span style="color:#c0c5ce;">++++++       +++--
-</span><span style="color:#c0c5ce;"> </span><span style="color:#c0c5ce;">!=          not=
-</span><span style="color:#c0c5ce;">  </span><span style="color:#c0c5ce;">%          mod
+<span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">before       after
+</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">------       -----
+</span><span style="color:#c0c5ce;">     </span><span style="color:#c0c5ce;">!=          not=
+</span><span style="color:#c0c5ce;">      </span><span style="color:#c0c5ce;">%          mod
+</span><span style="color:#c0c5ce;">   </span><span style="color:#c0c5ce;">string        text
+</span><span style="color:#c0c5ce;">  </span><span style="color:#c0c5ce;">try-except  check-error
+</span><span style="color:#c0c5ce;">   </span><span style="color:#c0c5ce;">finally       always
+</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">raise        alert
+</span><span style="color:#c0c5ce;">     </span><span style="color:#c0c5ce;">def       procedure
+</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">print       output
+</span><span style="color:#c0c5ce;">   </span><span style="color:#c0c5ce;">import        use
+</span><span style="color:#c0c5ce;">  </span><span style="color:#c0c5ce;">int/float     number
 </span></pre>
-<blockquote>
-<p>string text</p>
-</blockquote>
-<blockquote>
-<p>try-except check-error</p>
-<p>:</p>
-<pre style="background-color:#2b303b">
-<span style="color:#c0c5ce;">finally always
-</span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">:
-</span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">raise alert
-</span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">:   def procedure
-</span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">print output
-</span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">import use
-</span></pre>
-<p>int/float number</p>
-</blockquote>
 <p>The most surprising finding is that both programmers and non-programmers
 found <em>while</em> and <em>for</em> not intuitive for looping constructs. The
 preferred alternatives are <em>repeat</em> and <em>loop</em>. Of these, I prefer
@@ -276,6 +271,11 @@ more a Python descendent... <strong>a better Python</strong>.</p>
 
       
           <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;even.js" ></script>
+          
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search_index.en.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search.js"></script>
+          
       
     </body>
 

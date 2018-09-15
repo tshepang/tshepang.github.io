@@ -66,7 +66,7 @@ won&#x27;t work on this... too much work.&lt;&#x2F;li&gt;
 &lt;p&gt;But ultimately, I would love for the standard Debian packaging tools to
 get the point where they make wajig irrelevant. After all, wajig was
 created to be a wrapper that helps ease the mess.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;Here&#x27;s the work I did in the past working on wajig, have a look at &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;tagss#wajig-ref&quot;&gt;its
 tag&lt;&#x2F;a&gt;. Off the top of my head:&lt;&#x2F;p&gt;
 &lt;ul&gt;
@@ -159,7 +159,7 @@ for Michael&#x27;s other work.&lt;&#x2F;p&gt;
 &lt;p&gt;I consumed much info (and time) during the process, which entailed
 looking at Git usage (branch, checkout, commit, format-patch, ...)
 through &lt;a href=&quot;http:&#x2F;&#x2F;pvanhoof.be&#x2F;blog&#x2F;&quot;&gt;Philip van Hoof&lt;&#x2F;a&gt;&#x27;s guidance.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;Philip van Hoof also &lt;a href=&quot;http:&#x2F;&#x2F;git.gnome.org&#x2F;browse&#x2F;tracker&#x2F;commit&#x2F;?id=c5a15f8231c63488605d799b9670aba01898fde4&quot;&gt;fixed&lt;&#x2F;a&gt; a hard-to-reproduce bug which was a pain
 for me. The fix is a workaround for a &lt;a href=&quot;http:&#x2F;&#x2F;www.gtk.org&#x2F;&quot;&gt;GTK+&lt;&#x2F;a&gt; bug.&lt;&#x2F;p&gt;
 </description>

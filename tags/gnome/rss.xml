@@ -54,7 +54,7 @@ like &lt;a href=&quot;http:&#x2F;&#x2F;developer.gnome.org&#x2F;gtk2&#x2F;stable
                 <description>&lt;p&gt;Following is how my GUI environment is set-up on &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;sony-vaio-pro-13-svp13212sgbi&quot;&gt;my home machine&lt;&#x2F;a&gt; (a
 laptop) and work machine (a desktop). For the (libre) tools I frequently
 use, see &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;floss-i-use-a-lot&quot;&gt;this post&lt;&#x2F;a&gt; instead.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;With recent Debian GNOME updates (late 2013), something got broken
 enough that I could not login to my account. I saw this as a good
 opportunity to finally try something other than GNOME as my primary
@@ -172,7 +172,7 @@ logging in, the following will get executed (&lt;a href=&quot;https:&#x2F;&#x2F;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;while true; do
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;datetime=$( date +&amp;quot;%F %R&amp;quot; )
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if acpi -a | grep off-line &amp;gt; &#x2F;dev&#x2F;null; then
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;battery=$( python -c &amp;quot;print(\&amp;quot;$(acpi)\&amp;quot;.split(&amp;#39;,&amp;#39;)[1].strip())&amp;quot; )
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;battery=$( python -c &amp;quot;print(&amp;quot;$(acpi)&amp;quot;.split(&amp;#39;,&amp;#39;)[1].strip())&amp;quot; )
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;xsetroot -name &amp;quot;$battery&amp;quot;&amp;quot; | &amp;quot;&amp;quot;$datetime&amp;quot;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;else
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;xsetroot -name &amp;quot;$datetime&amp;quot;
@@ -221,11 +221,11 @@ logging in, the following will get executed (&lt;a href=&quot;https:&#x2F;&#x2F;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;* key definitions *&#x2F;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-#define MODKEY Mod1Mask
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+#define MODKEY Mod4Mask
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;#define TAGKEYS(KEY,TAG) \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;#define TAGKEYS(KEY,TAG)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;{ MODKEY,                       KEY,      view,           {.ui
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= 1 &amp;lt;&amp;lt; TAG} }, \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= 1 &amp;lt;&amp;lt; TAG} },
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= 1 &amp;lt;&amp;lt; TAG} }, \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= 1 &amp;lt;&amp;lt; TAG} },
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;@@ -47,7 +50,7 @@ static const Layout layouts[] = {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;* commands *&#x2F;
@@ -451,12 +451,12 @@ quite gentle, and it details how to get the code running on your
 machine.&lt;&#x2F;p&gt;
 &lt;p&gt;If you use Debian (or Ubuntu), you can use run this command:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;wajig --norecommends install build-essential docbook-xsl flex \
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;bison cvs gperf cmake  {uuid,ppp}-dev \
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;libx{composite,randr,damage,ft2,i,t}-dev \
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;libxcb-{event1,aux0,atom1}-dev \
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;lib{pam0g,iw,db,gdbm,png12,ffi,tiff,vorbis,gl1-mesa,unistring} \
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;lib{quvi,icu,neon27,usb-1.0-0,asound2,ncurses5,udev,usb,acl1} \
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;wajig --norecommends install build-essential docbook-xsl flex
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;bison cvs gperf cmake  {uuid,ppp}-dev
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;libx{composite,randr,damage,ft2,i,t}-dev
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;libxcb-{event1,aux0,atom1}-dev
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;lib{pam0g,iw,db,gdbm,png12,ffi,tiff,vorbis,gl1-mesa,unistring}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;lib{quvi,icu,neon27,usb-1.0-0,asound2,ncurses5,udev,usb,acl1}
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;lib{boost-signals,ldap2,sasl2}-dev
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;It&#x27;s installs the development packages that will be needed by the build
@@ -501,7 +501,7 @@ by &lt;strong&gt;tinderbox_outputdir&lt;&#x2F;strong&gt; in the config file.&lt;
 one for each module. The file &amp;quot;index.html&amp;quot; will give a decent page
 that acts like a summary of the entire build process, showing which
 modules failed, and on what build stages. Gorgeous!&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;&lt;strong&gt;sidenotes&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;This process is rather simplified, for the sake of clarity.&lt;&#x2F;li&gt;
@@ -532,7 +532,7 @@ which contains all that&#x27;s needed to roll-back, restore, check stats,
 &lt;p&gt;There, &lt;code&gt;~&#x2F;conf&#x2F;rdiff-backup&lt;&#x2F;code&gt; is a file that has a list of directories I
 want to exclude in the backup, and &lt;code&gt;&#x2F;media&#x2F;backup&lt;&#x2F;code&gt; is the backup
 destination.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;There is a credible competitor in a form of duplicity, which is probably
 superior since it&#x27;s got encryption. This duplicity also got a bonus of
 being used by some hot new GUI backup utility now &lt;a href=&quot;http:&#x2F;&#x2F;lists.fedoraproject.org&#x2F;pipermail&#x2F;announce&#x2F;2010-May&#x2F;002815.html&quot;&gt;endorsed by Fedora&lt;&#x2F;a&gt;
@@ -635,7 +635,7 @@ for Michael&#x27;s other work.&lt;&#x2F;p&gt;
 &lt;p&gt;I consumed much info (and time) during the process, which entailed
 looking at Git usage (branch, checkout, commit, format-patch, ...)
 through &lt;a href=&quot;http:&#x2F;&#x2F;pvanhoof.be&#x2F;blog&#x2F;&quot;&gt;Philip van Hoof&lt;&#x2F;a&gt;&#x27;s guidance.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;Philip van Hoof also &lt;a href=&quot;http:&#x2F;&#x2F;git.gnome.org&#x2F;browse&#x2F;tracker&#x2F;commit&#x2F;?id=c5a15f8231c63488605d799b9670aba01898fde4&quot;&gt;fixed&lt;&#x2F;a&gt; a hard-to-reproduce bug which was a pain
 for me. The fix is a workaround for a &lt;a href=&quot;http:&#x2F;&#x2F;www.gtk.org&#x2F;&quot;&gt;GTK+&lt;&#x2F;a&gt; bug.&lt;&#x2F;p&gt;
 </description>
@@ -682,7 +682,7 @@ things I add to the panel on every fresh install (for I always am
 curious what&#x27;s up with my system). Given how useful it is, I now wonder
 why Debian doesn&#x27;t add it on the panel by default, especially that many
 new users won&#x27;t even be aware it exists in the first place.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;Clicking on that applet launches a more comprehensive system monitor
 which has 4 tabs (notebooks in GTK+ speak):&lt;&#x2F;p&gt;
 &lt;ul&gt;

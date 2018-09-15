@@ -100,6 +100,14 @@
                             </li>
                         
                     </ul>
+                    
+                    <div class="search-container">
+                      <input id="search" type="search" placeholder="🔎  search">
+                      <div class="search-results">
+                        <div class="search-results__items"></div>
+                      </div>
+                    </div>
+                    
                 </nav>
             </header>
 
@@ -126,10 +134,10 @@
 2 posts are actually outdated, I still keep a custom repository, a
 subset of the official repository of a specific arch, but only of
 packages that I ever install.</p>
-<p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<hr />
 <p>Every once in a while, I run this command:</p>
 <pre style="background-color:#2b303b">
-<span style="color:#c0c5ce;">$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang \
+<span style="color:#c0c5ce;">$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang
 </span><span style="color:#c0c5ce;">/var/cache/apt/archives/*deb
 </span></pre>
 <p>What it does is add packages that are stored by the Debian package
@@ -140,7 +148,7 @@ packages that matter to me for any later install.</p>
 equivalent of <code>testing</code> and <code>unstable</code>.</p>
 <p>Another command that I sometimes run, though less frequently, is:</p>
 <pre style="background-color:#2b303b">
-<span style="color:#c0c5ce;">$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang \
+<span style="color:#c0c5ce;">$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang
 </span><span style="color:#c0c5ce;">/var/cache/apt/archives/*deb
 </span></pre>
 <p>This one is used to help keep the repository fresh. Check out <a href="http://tshepang.net/removing-obsolete-packages-from-a-local-debian-repository">this
@@ -179,6 +187,11 @@ handy command to display them:</p>
 
       
           <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;even.js" ></script>
+          
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search_index.en.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search.js"></script>
+          
       
     </body>
 

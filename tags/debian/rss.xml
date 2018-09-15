@@ -131,7 +131,7 @@ greatest culprits:&lt;&#x2F;p&gt;
                 <description>&lt;p&gt;Following is how my GUI environment is set-up on &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;sony-vaio-pro-13-svp13212sgbi&quot;&gt;my home machine&lt;&#x2F;a&gt; (a
 laptop) and work machine (a desktop). For the (libre) tools I frequently
 use, see &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;floss-i-use-a-lot&quot;&gt;this post&lt;&#x2F;a&gt; instead.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;With recent Debian GNOME updates (late 2013), something got broken
 enough that I could not login to my account. I saw this as a good
 opportunity to finally try something other than GNOME as my primary
@@ -249,7 +249,7 @@ logging in, the following will get executed (&lt;a href=&quot;https:&#x2F;&#x2F;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;while true; do
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;datetime=$( date +&amp;quot;%F %R&amp;quot; )
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if acpi -a | grep off-line &amp;gt; &#x2F;dev&#x2F;null; then
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;battery=$( python -c &amp;quot;print(\&amp;quot;$(acpi)\&amp;quot;.split(&amp;#39;,&amp;#39;)[1].strip())&amp;quot; )
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;battery=$( python -c &amp;quot;print(&amp;quot;$(acpi)&amp;quot;.split(&amp;#39;,&amp;#39;)[1].strip())&amp;quot; )
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;xsetroot -name &amp;quot;$battery&amp;quot;&amp;quot; | &amp;quot;&amp;quot;$datetime&amp;quot;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;else
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;xsetroot -name &amp;quot;$datetime&amp;quot;
@@ -298,11 +298,11 @@ logging in, the following will get executed (&lt;a href=&quot;https:&#x2F;&#x2F;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;* key definitions *&#x2F;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-#define MODKEY Mod1Mask
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+#define MODKEY Mod4Mask
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;#define TAGKEYS(KEY,TAG) \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;#define TAGKEYS(KEY,TAG)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;{ MODKEY,                       KEY,      view,           {.ui
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= 1 &amp;lt;&amp;lt; TAG} }, \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= 1 &amp;lt;&amp;lt; TAG} },
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= 1 &amp;lt;&amp;lt; TAG} }, \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= 1 &amp;lt;&amp;lt; TAG} },
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;@@ -47,7 +50,7 @@ static const Layout layouts[] = {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;* commands *&#x2F;
@@ -366,7 +366,7 @@ will have to rely on &lt;a href=&quot;http:&#x2F;&#x2F;www.rankingthebrands.com&
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Successfully uploaded packages.
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;(&lt;a href=&quot;http:&#x2F;&#x2F;packages.qa.debian.org&#x2F;w&#x2F;wajig&#x2F;news&#x2F;20131013T074831Z.html&quot;&gt;the package was accepted within 30 minutes&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;And, yeah, that means &lt;a href=&quot;http:&#x2F;&#x2F;bugs.debian.org&#x2F;cgi-bin&#x2F;bugreport.cgi?msg=12;bug=723802&quot;&gt;I am now Debian Maintainer&lt;&#x2F;a&gt;. Other than giving me
 more freedom, this helps reduce the workload on &lt;a href=&quot;http:&#x2F;&#x2F;dirk.eddelbuettel.com&quot;&gt;Dirk Eddelbuettel&lt;&#x2F;a&gt;, who
 has been uploading wajig for several years now. He even &lt;a href=&quot;http:&#x2F;&#x2F;lists.debian.org&#x2F;debian-newmaint&#x2F;2013&#x2F;09&#x2F;msg00029.html&quot;&gt;became an
@@ -508,20 +508,20 @@ semi-automate the setup process with the help of this script:&lt;&#x2F;p&gt;
 &lt;p&gt;::: {.sourcecode}
 sh&lt;&#x2F;p&gt;
 &lt;p&gt;#!&#x2F;bin&#x2F;bash&lt;&#x2F;p&gt;
-&lt;p&gt;# some convenience shopt -s expand_aliases source
-~&#x2F;nna&#x2F;conf&#x2F;bash_aliases&lt;&#x2F;p&gt;
-&lt;p&gt;# config files sudo cp ~&#x2F;nna&#x2F;conf&#x2F;sources.list &#x2F;etc&#x2F;apt sudo cp
-~&#x2F;nna&#x2F;conf&#x2F;sudoers &#x2F;etc&lt;&#x2F;p&gt;
-&lt;p&gt;# APT sudo apt-get update sudo apt-get --allow-unauthenticated upgrade
-sudo apt-get --allow-unauthenticated dist-upgrade sudo apt-get
+&lt;h1 id=&quot;some-convenience-shopt-s-expand&quot;&gt;some convenience shopt -s expand_aliases source&lt;&#x2F;h1&gt;
+&lt;p&gt;~&#x2F;nna&#x2F;conf&#x2F;bash_aliases&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;config-files-sudo-cp-nna-conf-sources-list-etc-apt-sudo-cp&quot;&gt;config files sudo cp ~&#x2F;nna&#x2F;conf&#x2F;sources.list &#x2F;etc&#x2F;apt sudo cp&lt;&#x2F;h1&gt;
+&lt;p&gt;~&#x2F;nna&#x2F;conf&#x2F;sudoers &#x2F;etc&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;apt-sudo-apt-get-update-sudo-apt-get-allow-unauthenticated-upgrade&quot;&gt;APT sudo apt-get update sudo apt-get --allow-unauthenticated upgrade&lt;&#x2F;h1&gt;
+&lt;p&gt;sudo apt-get --allow-unauthenticated dist-upgrade sudo apt-get
 --allow-unauthenticated install devscripts debhelper build-essential
 python3-apt gpm&lt;&#x2F;p&gt;
-&lt;p&gt;# wajig (cd ~&#x2F;src&#x2F;wajig &amp;amp;&amp;amp; iiwajig) ibase &amp;amp;&amp;amp; inondebian &amp;amp;&amp;amp; itracker &amp;amp;&amp;amp;
-icpython &amp;amp;&amp;amp; ipurge&lt;&#x2F;p&gt;
-&lt;p&gt;# for Tracker sudo sh -c &amp;quot;echo
-&#x27;fs.inotify.max_user_watches=100000&#x27; &amp;gt;&amp;gt; &#x2F;etc&#x2F;sysctl.conf&amp;quot;&lt;&#x2F;p&gt;
-&lt;p&gt;# so I can share via a webserver, or easily access from browser sudo ln
--s ~&#x2F;.custom_repo &#x2F;var&#x2F;www&#x2F;custom_repo
+&lt;h1 id=&quot;wajig-cd-src-wajig&quot;&gt;wajig (cd ~&#x2F;src&#x2F;wajig &amp;&amp; iiwajig) ibase &amp;&amp; inondebian &amp;&amp; itracker &amp;&amp;&lt;&#x2F;h1&gt;
+&lt;p&gt;icpython &amp;amp;&amp;amp; ipurge&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;for-tracker-sudo-sh-c-echo&quot;&gt;for Tracker sudo sh -c &quot;echo&lt;&#x2F;h1&gt;
+&lt;p&gt;&#x27;fs.inotify.max_user_watches=100000&#x27; &amp;gt;&amp;gt; &#x2F;etc&#x2F;sysctl.conf&amp;quot;&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;so-i-can-share-via-a-webserver-or-easily-access-from-browser-sudo-ln&quot;&gt;so I can share via a webserver, or easily access from browser sudo ln&lt;&#x2F;h1&gt;
+&lt;p&gt;-s ~&#x2F;.custom_repo &#x2F;var&#x2F;www&#x2F;custom_repo
 :::&lt;&#x2F;p&gt;
 &lt;p&gt;Contents of Debian repository list file:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
@@ -628,10 +628,10 @@ notice him when he&#x27;d give &lt;a href=&quot;http:&#x2F;&#x2F;www.piware.de&#
 2 posts are actually outdated, I still keep a custom repository, a
 subset of the official repository of a specific arch, but only of
 packages that I ever install.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;Every once in a while, I run this command:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ reprepro -vv --basedir ~&#x2F;.custom_repo&#x2F; includedeb tshepang \
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ reprepro -vv --basedir ~&#x2F;.custom_repo&#x2F; includedeb tshepang
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;var&#x2F;cache&#x2F;apt&#x2F;archives&#x2F;*deb
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;What it does is add packages that are stored by the Debian package
@@ -642,7 +642,7 @@ packages that matter to me for any later install.&lt;&#x2F;p&gt;
 equivalent of &lt;code&gt;testing&lt;&#x2F;code&gt; and &lt;code&gt;unstable&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;Another command that I sometimes run, though less frequently, is:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ reprepro -vv --basedir ~&#x2F;.custom_repo&#x2F; includedeb tshepang \
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ reprepro -vv --basedir ~&#x2F;.custom_repo&#x2F; includedeb tshepang
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;var&#x2F;cache&#x2F;apt&#x2F;archives&#x2F;*deb
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;This one is used to help keep the repository fresh. Check out &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;removing-obsolete-packages-from-a-local-debian-repository&quot;&gt;this
@@ -1298,7 +1298,7 @@ machinery while at it.&lt;&#x2F;li&gt;
                 <guid>http://tshepang.net/my-debian-package-management-setup/</guid>
                 <description>&lt;p&gt;Much of this is obsolete: I no longer use &lt;code&gt;debmirror&lt;&#x2F;code&gt; and no longer keep
 the entire binary repository of i386 arch.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;There&#x27;s a useful tool in Debian named debmirror. It&#x27;s function is to
 create and manage a partial copy of an official Debian repository, and I
 use it to create 2 repos:&lt;&#x2F;p&gt;
@@ -1468,7 +1468,7 @@ among the most senior of all, having been involved since 1995.&lt;&#x2F;p&gt;
                 <link>http://tshepang.net/reprepro-saved-my-live/</link>
                 <guid>http://tshepang.net/reprepro-saved-my-live/</guid>
                 <description>&lt;p&gt;Much of this is obsolete: I no longer build my own Debian packages.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;That&#x27;s a joke title, but &lt;a href=&quot;http:&#x2F;&#x2F;mirrorer.alioth.debian.org&#x2F;&quot;&gt;that fabulous tool&lt;&#x2F;a&gt; really did help me a lot.
 When doing package builds, all I need to run is the following after a
 build:&lt;&#x2F;p&gt;
@@ -1503,7 +1503,7 @@ know if it&#x27;s a known problem, which I didn&#x27;t report because I was
 using Ubuntu&#x27;s package, a much improved and re-written 0.1.98, as
 opposed to Debian&#x27;s &#x27;bug-free&#x27; 0.1 (though I later discovered the bug
 to exist when running the package in Ubuntu 8.10 too).&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;my-debian-package-management-setup&quot;&gt;an update on how I do things now&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </description>
             </item>

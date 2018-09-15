@@ -100,6 +100,14 @@
                             </li>
                         
                     </ul>
+                    
+                    <div class="search-container">
+                      <input id="search" type="search" placeholder="🔎  search">
+                      <div class="search-results">
+                        <div class="search-results__items"></div>
+                      </div>
+                    </div>
+                    
                 </nav>
             </header>
 
@@ -125,7 +133,7 @@
       <p>Following is how my GUI environment is set-up on <a href="http://tshepang.net/sony-vaio-pro-13-svp13212sgbi">my home machine</a> (a
 laptop) and work machine (a desktop). For the (libre) tools I frequently
 use, see <a href="http://tshepang.net/floss-i-use-a-lot">this post</a> instead.</p>
-<p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<hr />
 <p>With recent Debian GNOME updates (late 2013), something got broken
 enough that I could not login to my account. I saw this as a good
 opportunity to finally try something other than GNOME as my primary
@@ -243,7 +251,7 @@ logging in, the following will get executed (<a href="https://bitbucket.org/tshe
 </span><span style="color:#c0c5ce;">while true; do
 </span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">datetime=$( date +&quot;%F %R&quot; )
 </span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">if acpi -a | grep off-line &gt; /dev/null; then
-</span><span style="color:#c0c5ce;">        </span><span style="color:#c0c5ce;">battery=$( python -c &quot;print(\&quot;$(acpi)\&quot;.split(&#39;,&#39;)[1].strip())&quot; )
+</span><span style="color:#c0c5ce;">        </span><span style="color:#c0c5ce;">battery=$( python -c &quot;print(&quot;$(acpi)&quot;.split(&#39;,&#39;)[1].strip())&quot; )
 </span><span style="color:#c0c5ce;">        </span><span style="color:#c0c5ce;">xsetroot -name &quot;$battery&quot;&quot; | &quot;&quot;$datetime&quot;
 </span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">else
 </span><span style="color:#c0c5ce;">        </span><span style="color:#c0c5ce;">xsetroot -name &quot;$datetime&quot;
@@ -292,11 +300,11 @@ logging in, the following will get executed (<a href="https://bitbucket.org/tshe
 </span><span style="color:#c0c5ce;"> </span><span style="color:#c0c5ce;">/* key definitions */
 </span><span style="color:#c0c5ce;">-#define MODKEY Mod1Mask
 </span><span style="color:#c0c5ce;">+#define MODKEY Mod4Mask
-</span><span style="color:#c0c5ce;"> </span><span style="color:#c0c5ce;">#define TAGKEYS(KEY,TAG) \
+</span><span style="color:#c0c5ce;"> </span><span style="color:#c0c5ce;">#define TAGKEYS(KEY,TAG)
 </span><span style="color:#c0c5ce;">        </span><span style="color:#c0c5ce;">{ MODKEY,                       KEY,      view,           {.ui
-</span><span style="color:#c0c5ce;">        </span><span style="color:#c0c5ce;">= 1 &lt;&lt; TAG} }, \
+</span><span style="color:#c0c5ce;">        </span><span style="color:#c0c5ce;">= 1 &lt;&lt; TAG} },
 </span><span style="color:#c0c5ce;">        </span><span style="color:#c0c5ce;">{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui
-</span><span style="color:#c0c5ce;">        </span><span style="color:#c0c5ce;">= 1 &lt;&lt; TAG} }, \
+</span><span style="color:#c0c5ce;">        </span><span style="color:#c0c5ce;">= 1 &lt;&lt; TAG} },
 </span><span style="color:#c0c5ce;">@@ -47,7 +50,7 @@ static const Layout layouts[] = {
 </span><span style="color:#c0c5ce;">
 </span><span style="color:#c0c5ce;"> </span><span style="color:#c0c5ce;">/* commands */
@@ -340,6 +348,11 @@ the file browser. It remains <a href="http://tshepang.net/favorite-floss">my fav
 
       
           <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;even.js" ></script>
+          
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search_index.en.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search.js"></script>
+          
       
     </body>
 

@@ -100,6 +100,14 @@
                             </li>
                         
                     </ul>
+                    
+                    <div class="search-container">
+                      <input id="search" type="search" placeholder="🔎  search">
+                      <div class="search-results">
+                        <div class="search-results__items"></div>
+                      </div>
+                    </div>
+                    
                 </nav>
             </header>
 
@@ -128,12 +136,12 @@ quite gentle, and it details how to get the code running on your
 machine.</p>
 <p>If you use Debian (or Ubuntu), you can use run this command:</p>
 <pre style="background-color:#2b303b">
-<span style="color:#c0c5ce;">wajig --norecommends install build-essential docbook-xsl flex \
-</span><span style="color:#c0c5ce;">bison cvs gperf cmake  {uuid,ppp}-dev \
-</span><span style="color:#c0c5ce;">libx{composite,randr,damage,ft2,i,t}-dev \
-</span><span style="color:#c0c5ce;">libxcb-{event1,aux0,atom1}-dev \
-</span><span style="color:#c0c5ce;">lib{pam0g,iw,db,gdbm,png12,ffi,tiff,vorbis,gl1-mesa,unistring} \
-</span><span style="color:#c0c5ce;">lib{quvi,icu,neon27,usb-1.0-0,asound2,ncurses5,udev,usb,acl1} \
+<span style="color:#c0c5ce;">wajig --norecommends install build-essential docbook-xsl flex
+</span><span style="color:#c0c5ce;">bison cvs gperf cmake  {uuid,ppp}-dev
+</span><span style="color:#c0c5ce;">libx{composite,randr,damage,ft2,i,t}-dev
+</span><span style="color:#c0c5ce;">libxcb-{event1,aux0,atom1}-dev
+</span><span style="color:#c0c5ce;">lib{pam0g,iw,db,gdbm,png12,ffi,tiff,vorbis,gl1-mesa,unistring}
+</span><span style="color:#c0c5ce;">lib{quvi,icu,neon27,usb-1.0-0,asound2,ncurses5,udev,usb,acl1}
 </span><span style="color:#c0c5ce;">lib{boost-signals,ldap2,sasl2}-dev
 </span></pre>
 <p>It's installs the development packages that will be needed by the build
@@ -178,7 +186,7 @@ by <strong>tinderbox_outputdir</strong> in the config file.</p>
 one for each module. The file &quot;index.html&quot; will give a decent page
 that acts like a summary of the entire build process, showing which
 modules failed, and on what build stages. Gorgeous!</p>
-<p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<hr />
 <p><strong>sidenotes</strong>:</p>
 <ul>
 <li>This process is rather simplified, for the sake of clarity.</li>
@@ -210,6 +218,11 @@ modules failed, and on what build stages. Gorgeous!</p>
 
       
           <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;even.js" ></script>
+          
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search_index.en.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search.js"></script>
+          
       
     </body>
 

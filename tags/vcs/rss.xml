@@ -88,7 +88,7 @@ on, and displays the relevant command.&lt;&#x2F;p&gt;
 &lt;p&gt;This makes my life so much easier, since I no longer have to care which
 VCS I&#x27;m on, at least for the most common of commands. I am pleased with
 self.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;As a sidenote, if you want to cycle between the changesets (Mercurial
 term) or Commits (Git term), use the following search term on your pager
 (tested with &lt;a href=&quot;http:&#x2F;&#x2F;www.greenwoodsoftware.com&#x2F;less&quot;&gt;less&lt;&#x2F;a&gt;, which is Debian&#x2F;Ubuntu default pager):&lt;&#x2F;p&gt;
@@ -127,36 +127,66 @@ directory that isn&#x27;t version-controlled by &lt;a href=&quot;http:&#x2F;&#x2
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;So, we don&#x27;t want to see this ugliness:&lt;&#x2F;p&gt;
-&lt;p&gt;&amp;gt;&amp;gt;&amp;gt; from subprocess import call &amp;gt;&amp;gt;&amp;gt; call(&#x27;hg
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;from subprocess import call &amp;gt;&amp;gt;&amp;gt; call(&#x27;hg
 status&#x27;.split()) abort: no repository found in
 &#x27;&#x2F;home&#x2F;tshepang&#x2F;projects&#x2F;pyramid&#x27; (.hg not found)! 255&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;So, here&#x27;s the simplest solution:&lt;&#x2F;p&gt;
-&lt;p&gt;&amp;gt;&amp;gt;&amp;gt; import os &amp;gt;&amp;gt;&amp;gt; from subprocess import call &amp;gt;&amp;gt;&amp;gt; call(&#x27;hg
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;import os &amp;gt;&amp;gt;&amp;gt; from subprocess import call &amp;gt;&amp;gt;&amp;gt; call(&#x27;hg
 status&#x27;.split(), stderr=open(os.devnull)) 255&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
 &lt;p&gt;Problem: it leaves the file descriptor open... not good.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;We fix:&lt;&#x2F;p&gt;
-&lt;p&gt;&amp;gt;&amp;gt;&amp;gt; import os &amp;gt;&amp;gt;&amp;gt; from subprocess import call &amp;gt;&amp;gt;&amp;gt; DEVNULL =
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;import os &amp;gt;&amp;gt;&amp;gt; from subprocess import call &amp;gt;&amp;gt;&amp;gt; DEVNULL =
 open(os.devnull) &amp;gt;&amp;gt;&amp;gt; call(&#x27;hg status&#x27;.split(), stderr=DEVNULL)
 255 &amp;gt;&amp;gt;&amp;gt; DEVNULL.close()&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
 &lt;p&gt;Much better, much uglier. (&lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;scripts&#x2F;src&#x2F;tip&#x2F;vcs.py&quot;&gt;example usage&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;Something better:&lt;&#x2F;p&gt;
-&lt;p&gt;&amp;gt;&amp;gt;&amp;gt; import os &amp;gt;&amp;gt;&amp;gt; from subprocess import call &amp;gt;&amp;gt;&amp;gt; with
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;import os &amp;gt;&amp;gt;&amp;gt; from subprocess import call &amp;gt;&amp;gt;&amp;gt; with
 open(os.devnull) as DEVNULL: ... call(&#x27;hg status&#x27;.split(),
 stderr=DEVNULL) 255&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
 &lt;p&gt;Looks much nicer, and is more convenient, unless we wanted to do
 something similar multiple times, in which case the previous example
 would be preferable.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;Best solution:&lt;&#x2F;p&gt;
-&lt;p&gt;&amp;gt;&amp;gt;&amp;gt; import os &amp;gt;&amp;gt;&amp;gt; from subprocess import call, DEVNULL &amp;gt;&amp;gt;&amp;gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;import os &amp;gt;&amp;gt;&amp;gt; from subprocess import call, DEVNULL &amp;gt;&amp;gt;&amp;gt;
 call(&#x27;hg status&#x27;.split(), stderr=DEVNULL) 255&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 &lt;p&gt;This &lt;a href=&quot;http:&#x2F;&#x2F;hg.python.org&#x2F;cpython&#x2F;rev&#x2F;eaf93e156dff&quot;&gt;small and wonderful feature&lt;&#x2F;a&gt; is &lt;a href=&quot;http:&#x2F;&#x2F;docs.python.org&#x2F;3&#x2F;whatsnew&#x2F;3.3.html#subprocess&quot;&gt;new as of Python 3.3&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;

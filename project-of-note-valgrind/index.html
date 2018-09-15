@@ -100,6 +100,14 @@
                             </li>
                         
                     </ul>
+                    
+                    <div class="search-container">
+                      <input id="search" type="search" placeholder="🔎  search">
+                      <div class="search-results">
+                        <div class="search-results__items"></div>
+                      </div>
+                    </div>
+                    
                 </nav>
             </header>
 
@@ -131,40 +139,40 @@ performance.</p>
 <p>Following is example code; it accepts 2 arguments, a filename and text
 that will be written to that file:</p>
 <pre style="background-color:#2b303b">
-<span style="color:#c0c5ce;">#include &lt;string.h&gt;
-</span><span style="color:#c0c5ce;">#include &lt;errno.h&gt;
-</span><span style="color:#c0c5ce;">#include &lt;stdio.h&gt;
-</span><span style="color:#c0c5ce;">#include &lt;fcntl.h&gt;
-</span><span style="color:#c0c5ce;">#include &lt;unistd.h&gt;
+<span style="color:#b48ead;">#include </span><span style="color:#c0c5ce;">&lt;</span><span style="color:#a3be8c;">string.h</span><span style="color:#c0c5ce;">&gt;
+</span><span style="color:#b48ead;">#include </span><span style="color:#c0c5ce;">&lt;</span><span style="color:#a3be8c;">errno.h</span><span style="color:#c0c5ce;">&gt;
+</span><span style="color:#b48ead;">#include </span><span style="color:#c0c5ce;">&lt;</span><span style="color:#a3be8c;">stdio.h</span><span style="color:#c0c5ce;">&gt;
+</span><span style="color:#b48ead;">#include </span><span style="color:#c0c5ce;">&lt;</span><span style="color:#a3be8c;">fcntl.h</span><span style="color:#c0c5ce;">&gt;
+</span><span style="color:#b48ead;">#include </span><span style="color:#c0c5ce;">&lt;</span><span style="color:#a3be8c;">unistd.h</span><span style="color:#c0c5ce;">&gt;
 </span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">int
-</span><span style="color:#c0c5ce;">main (int argc, char **argv)
+</span><span style="color:#b48ead;">int
+</span><span style="color:#8fa1b3;">main </span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">argc</span><span style="color:#c0c5ce;">, </span><span style="color:#b48ead;">char </span><span style="color:#c0c5ce;">**</span><span style="color:#bf616a;">argv</span><span style="color:#c0c5ce;">)
 </span><span style="color:#c0c5ce;">{
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">char path[0xFF];
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">char content[0xFF];
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">int fd;
+</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">char</span><span style="color:#c0c5ce;"> path[</span><span style="color:#d08770;">0xFF</span><span style="color:#c0c5ce;">];
+</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">char</span><span style="color:#c0c5ce;"> content[</span><span style="color:#d08770;">0xFF</span><span style="color:#c0c5ce;">];
+</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">int</span><span style="color:#c0c5ce;"> fd;
 </span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">ssize_t written;
 </span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">if (argc &lt; 3) {
-</span><span style="color:#c0c5ce;">        </span><span style="color:#c0c5ce;">fprintf (stderr, &quot;usage: %s &lt;filename&gt; &lt;content&gt;\n&quot;, argv[0]);
-</span><span style="color:#c0c5ce;">        </span><span style="color:#c0c5ce;">return 1;
+</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(argc &lt; </span><span style="color:#d08770;">3</span><span style="color:#c0c5ce;">) {
+</span><span style="color:#c0c5ce;">        </span><span style="color:#96b5b4;">fprintf </span><span style="color:#c0c5ce;">(stderr, &quot;</span><span style="color:#a3be8c;">usage: </span><span style="color:#d08770;">%s</span><span style="color:#a3be8c;"> &lt;filename&gt; &lt;content&gt;n</span><span style="color:#c0c5ce;">&quot;, argv[</span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">]);
+</span><span style="color:#c0c5ce;">        </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">;
 </span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">}
 </span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">strcpy (path, argv[1]);
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">sprintf (content, &quot;%s\n&quot;, argv[2]);
+</span><span style="color:#c0c5ce;">    </span><span style="color:#96b5b4;">strcpy </span><span style="color:#c0c5ce;">(path, argv[</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">]);
+</span><span style="color:#c0c5ce;">    </span><span style="color:#96b5b4;">sprintf </span><span style="color:#c0c5ce;">(content, &quot;</span><span style="color:#d08770;">%s</span><span style="color:#a3be8c;">n</span><span style="color:#c0c5ce;">&quot;, argv[</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">]);
 </span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">fd = creat (path, S_IRWXU);
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">if (fd == -1) {
-</span><span style="color:#c0c5ce;">        </span><span style="color:#c0c5ce;">fprintf (stderr, &quot;open error: %s (&#39;%s&#39;)\n&quot;, strerror (errno), path);
-</span><span style="color:#c0c5ce;">        </span><span style="color:#c0c5ce;">return 1;
+</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">fd = </span><span style="color:#bf616a;">creat </span><span style="color:#c0c5ce;">(path, S_IRWXU);
+</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(fd == -</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">) {
+</span><span style="color:#c0c5ce;">        </span><span style="color:#96b5b4;">fprintf </span><span style="color:#c0c5ce;">(stderr, &quot;</span><span style="color:#a3be8c;">open error: </span><span style="color:#d08770;">%s</span><span style="color:#a3be8c;"> (&#39;</span><span style="color:#d08770;">%s</span><span style="color:#a3be8c;">&#39;)n</span><span style="color:#c0c5ce;">&quot;, </span><span style="color:#96b5b4;">strerror </span><span style="color:#c0c5ce;">(errno), path);
+</span><span style="color:#c0c5ce;">        </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">;
 </span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">}
 </span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">written = write (fd, content, strlen (content));
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">if (written == -1) {
-</span><span style="color:#c0c5ce;">        </span><span style="color:#c0c5ce;">fprintf (stderr, &quot;write error: %s (&#39;%s&#39;)\n&quot;, strerror (errno), path);
-</span><span style="color:#c0c5ce;">        </span><span style="color:#c0c5ce;">return 1;
+</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">written = </span><span style="color:#bf616a;">write </span><span style="color:#c0c5ce;">(fd, content, </span><span style="color:#96b5b4;">strlen </span><span style="color:#c0c5ce;">(content));
+</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(written == -</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">) {
+</span><span style="color:#c0c5ce;">        </span><span style="color:#96b5b4;">fprintf </span><span style="color:#c0c5ce;">(stderr, &quot;</span><span style="color:#a3be8c;">write error: </span><span style="color:#d08770;">%s</span><span style="color:#a3be8c;"> (&#39;</span><span style="color:#d08770;">%s</span><span style="color:#a3be8c;">&#39;)n</span><span style="color:#c0c5ce;">&quot;, </span><span style="color:#96b5b4;">strerror </span><span style="color:#c0c5ce;">(errno), path);
+</span><span style="color:#c0c5ce;">        </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">;
 </span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">}
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">return 0;
+</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">;
 </span><span style="color:#c0c5ce;">}
 </span></pre>
 <p>Build command (using GCC 4.8.1):</p>
@@ -226,9 +234,9 @@ CPU instructions</em>. I have used <code>tree=calling</code> option so that I ca
 the cost of all operations called by a parent (marked with a <code>*</code>) :</p>
 <pre style="background-color:#2b303b">
 <span style="color:#c0c5ce;">$ callgrind_annotate --tree=calling out play.c
-</span><span style="color:#c0c5ce;">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+</span><span style="color:#c0c5ce;">---++++++--
 </span><span style="color:#c0c5ce;">Profile data file &#39;out&#39; (creator: callgrind-3.8.1)
-</span><span style="color:#c0c5ce;">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+</span><span style="color:#c0c5ce;">---++++++--
 </span><span style="color:#c0c5ce;">I1 cache:
 </span><span style="color:#c0c5ce;">D1 cache:
 </span><span style="color:#c0c5ce;">LL cache:
@@ -243,14 +251,14 @@ the cost of all operations called by a parent (marked with a <code>*</code>) :</
 </span><span style="color:#c0c5ce;">User annotated:   play.c
 </span><span style="color:#c0c5ce;">Auto-annotation:  off
 </span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+</span><span style="color:#c0c5ce;">---++++++--
 </span><span style="color:#c0c5ce;">Ir
-</span><span style="color:#c0c5ce;">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+</span><span style="color:#c0c5ce;">---++++++--
 </span><span style="color:#c0c5ce;">107,520  PROGRAM TOTALS
 </span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+</span><span style="color:#c0c5ce;">---++++++--
 </span><span style="color:#c0c5ce;">Ir  file:function
-</span><span style="color:#c0c5ce;">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+</span><span style="color:#c0c5ce;">---++++++--
 </span><span style="color:#c0c5ce;">
 </span><span style="color:#c0c5ce;">24,113  *  /build/eglibc-TepTGA/eglibc-2.17/elf/dl-lookup.c:do_lookup_x [/lib/x86_64-linux-gnu/ld-2.17.so]
 </span><span style="color:#c0c5ce;">1,053  &gt;   /build/eglibc-TepTGA/eglibc-2.17/elf/dl-misc.c:_dl_name_match_p (25x) [/lib/x86_64-linux-gnu/ld-2.17.so]
@@ -275,9 +283,9 @@ the cost of all operations called by a parent (marked with a <code>*</code>) :</
 of all, which is the total cost for each line of my code:</p>
 <pre style="background-color:#2b303b">
 <span style="color:#c0c5ce;">[continued]
-</span><span style="color:#c0c5ce;">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+</span><span style="color:#c0c5ce;">---++++++--
 </span><span style="color:#c0c5ce;">-- User-annotated source: play.c
-</span><span style="color:#c0c5ce;">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+</span><span style="color:#c0c5ce;">---++++++--
 </span><span style="color:#c0c5ce;">Ir
 </span><span style="color:#c0c5ce;">
 </span><span style="color:#c0c5ce;">.  #include &lt;string.h&gt;
@@ -295,14 +303,14 @@ of all, which is the total cost for each line of my code:</p>
 </span><span style="color:#c0c5ce;">.      ssize_t written;
 </span><span style="color:#c0c5ce;">.
 </span><span style="color:#c0c5ce;">2      if (argc &lt; 3) {
-</span><span style="color:#c0c5ce;">.     fprintf (stderr, &quot;usage: %s &lt;filename&gt; &lt;content&gt;\n&quot;, argv[0]);
+</span><span style="color:#c0c5ce;">.     fprintf (stderr, &quot;usage: %s &lt;filename&gt; &lt;content&gt;n&quot;, argv[0]);
 </span><span style="color:#c0c5ce;">.     return 1;
 </span><span style="color:#c0c5ce;">.      }
 </span><span style="color:#c0c5ce;">.
 </span><span style="color:#c0c5ce;">7      strcpy (path, argv[1]);
 </span><span style="color:#c0c5ce;">21  =&gt; /build/eglibc-TepTGA/eglibc-2.17/string/../sysdeps/x86_64/multiarch/strcpy-sse2-unaligned.S:__strcpy_sse2_unaligned (1x)
 </span><span style="color:#c0c5ce;">799  =&gt; /build/eglibc-TepTGA/eglibc-2.17/elf/../sysdeps/x86_64/dl-trampoline.S:_dl_runtime_resolve (1x)
-</span><span style="color:#c0c5ce;">8      sprintf (content, &quot;%s\n&quot;, argv[2]);
+</span><span style="color:#c0c5ce;">8      sprintf (content, &quot;%sn&quot;, argv[2]);
 </span><span style="color:#c0c5ce;">1,188  =&gt; /build/eglibc-TepTGA/eglibc-2.17/stdio-common/sprintf.c:sprintf (1x)
 </span><span style="color:#c0c5ce;">805  =&gt; /build/eglibc-TepTGA/eglibc-2.17/elf/../sysdeps/x86_64/dl-trampoline.S:_dl_runtime_resolve (1x)
 </span><span style="color:#c0c5ce;">.
@@ -310,7 +318,7 @@ of all, which is the total cost for each line of my code:</p>
 </span><span style="color:#c0c5ce;">766  =&gt; /build/eglibc-TepTGA/eglibc-2.17/elf/../sysdeps/x86_64/dl-trampoline.S:_dl_runtime_resolve (1x)
 </span><span style="color:#c0c5ce;">7  =&gt; /build/eglibc-TepTGA/eglibc-2.17/io/../sysdeps/unix/syscall-template.S:creat (1x)
 </span><span style="color:#c0c5ce;">2      if (fd == -1) {
-</span><span style="color:#c0c5ce;">.     fprintf (stderr, &quot;open error: %s (&#39;%s&#39;)\n&quot;, strerror (errno), path);
+</span><span style="color:#c0c5ce;">.     fprintf (stderr, &quot;open error: %s (&#39;%s&#39;)n&quot;, strerror (errno), path);
 </span><span style="color:#c0c5ce;">.     return 1;
 </span><span style="color:#c0c5ce;">.      }
 </span><span style="color:#c0c5ce;">.
@@ -319,19 +327,19 @@ of all, which is the total cost for each line of my code:</p>
 </span><span style="color:#c0c5ce;">14  =&gt; /build/eglibc-TepTGA/eglibc-2.17/string/../sysdeps/x86_64/multiarch/strlen-sse2-pminub.S:__strlen_sse2_pminub (1x)
 </span><span style="color:#c0c5ce;">1,567  =&gt; /build/eglibc-TepTGA/eglibc-2.17/elf/../sysdeps/x86_64/dl-trampoline.S:_dl_runtime_resolve (2x)
 </span><span style="color:#c0c5ce;">2      if (written == -1) {
-</span><span style="color:#c0c5ce;">.     fprintf (stderr, &quot;write error: %s (&#39;%s&#39;)\n&quot;, strerror (errno), path);
+</span><span style="color:#c0c5ce;">.     fprintf (stderr, &quot;write error: %s (&#39;%s&#39;)n&quot;, strerror (errno), path);
 </span><span style="color:#c0c5ce;">.     return 1;
 </span><span style="color:#c0c5ce;">.      }
 </span><span style="color:#c0c5ce;">1      return 0;
 </span><span style="color:#c0c5ce;">2  }
 </span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+</span><span style="color:#c0c5ce;">---++++++--
 </span><span style="color:#c0c5ce;">Ir
-</span><span style="color:#c0c5ce;">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+</span><span style="color:#c0c5ce;">---++++++--
 </span><span style="color:#c0c5ce;">0  percentage of events annotated
 </span></pre>
 <p>As an aside, note that the indentation is messed up a bit.</p>
-<p>---</p>
+<hr />
 <p>Since I normally work at too high a level to care about CPU instructions
 cycles at this detail, I found the exercise eye-opening.</p>
 
@@ -359,6 +367,11 @@ cycles at this detail, I found the exercise eye-opening.</p>
 
       
           <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;even.js" ></script>
+          
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search_index.en.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search.js"></script>
+          
       
     </body>
 

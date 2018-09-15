@@ -131,7 +131,7 @@ code from &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;rust-weeks-of-2017
 library for the first time. As was the case with that project, I found
 handling of keyboard input tedious and non-intuitive, and imagine there
 must be an easier way.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;We had &lt;a href=&quot;https:&#x2F;&#x2F;www.meetup.com&#x2F;Johannesburg-Rust-Meetup&#x2F;events&#x2F;246240196&quot;&gt;another monthly meetup&lt;&#x2F;a&gt; (we&#x27;ve had several of them so far),
 which was the usual random informal discussion of the exciting ecosystem
 of the great language that is Rust.&lt;&#x2F;p&gt;
@@ -276,13 +276,13 @@ rust&lt;&#x2F;p&gt;
 &lt;p&gt;let query = json!({&lt;&#x2F;p&gt;
 &lt;p&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;\&amp;quot;sort\&amp;quot;: \[
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;sort&amp;quot;: [
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   { \&amp;quot;\@timestamp\&amp;quot;: { \&amp;quot;order\&amp;quot;: \&amp;quot;asc\&amp;quot;, } }
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   { &amp;quot;@timestamp&amp;quot;: { &amp;quot;order&amp;quot;: &amp;quot;asc&amp;quot;, } }
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;\], \&amp;quot;query\&amp;quot;: { \&amp;quot;bool\&amp;quot;: { \&amp;quot;must\&amp;quot;: \[ { \&amp;quot;term\&amp;quot;: { \&amp;quot;marker\&amp;quot;:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;\&amp;quot;test0\&amp;quot; } }, { \&amp;quot;range\&amp;quot;: { \&amp;quot;\@timestamp\&amp;quot;: { \&amp;quot;gte\&amp;quot;:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;\&amp;quot;now-100s\&amp;quot;, \&amp;quot;lte\&amp;quot;: \&amp;quot;now\&amp;quot;, }}}, \] } }
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;], &amp;quot;query&amp;quot;: { &amp;quot;bool&amp;quot;: { &amp;quot;must&amp;quot;: [ { &amp;quot;term&amp;quot;: { &amp;quot;marker&amp;quot;:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;test0&amp;quot; } }, { &amp;quot;range&amp;quot;: { &amp;quot;@timestamp&amp;quot;: { &amp;quot;gte&amp;quot;:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;now-100s&amp;quot;, &amp;quot;lte&amp;quot;: &amp;quot;now&amp;quot;, }}}, ] } }
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;});
 :::&lt;&#x2F;p&gt;
@@ -464,7 +464,7 @@ non-default toolchain, though that approach is not too bad either:&lt;&#x2F;p&gt
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;# build with nightly
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cargo +nightly build
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I made &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;book&#x2F;issues&#x2F;828&quot;&gt;two&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;book&#x2F;issues&#x2F;834&quot;&gt;complaints&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;brson&#x2F;rust-cookbook&#x2F;pull&#x2F;253&quot;&gt;as&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;43409&quot;&gt;well&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;book&#x2F;pull&#x2F;827&quot;&gt;as&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;43416&quot;&gt;five&lt;&#x2F;a&gt;
 &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;BurntSushi&#x2F;walkdir&#x2F;pull&#x2F;75&quot;&gt;contributions&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
@@ -727,7 +727,7 @@ process::command::new(command.remove(1).unwrap()) .args(command)
 &lt;li&gt;--message&lt;&#x2F;li&gt;
 &lt;li&gt;git eat world&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ctz&#x2F;hyper-rustls&#x2F;pull&#x2F;5&quot;&gt;Just one contribution&lt;&#x2F;a&gt; this week, and it&#x27;s not even that great... not
 sure it&#x27;s an improvement&lt;&#x2F;p&gt;
 </description>
@@ -799,13 +799,13 @@ reasons I do not remember.&lt;&#x2F;p&gt;
                 <description>&lt;p&gt;I asked &lt;a href=&quot;http:&#x2F;&#x2F;stackoverflow.com&#x2F;q&#x2F;41551036&#x2F;321731&quot;&gt;two&lt;&#x2F;a&gt; &lt;a href=&quot;http:&#x2F;&#x2F;stackoverflow.com&#x2F;q&#x2F;41614923&#x2F;321731&quot;&gt;questions&lt;&#x2F;a&gt; on Stack Overflow. The first led me to use
 the nifty &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;lazy_static&quot;&gt;lazy_static&lt;&#x2F;a&gt; macro for the first time, The second led me to
 submit &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sfackler&#x2F;hyper-native-tls&#x2F;issues&#x2F;1&quot;&gt;a complaint&lt;&#x2F;a&gt; (which got fixed within 3 minutes by the way).&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I am looking forward to two projects:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;blog.jwilm.io&#x2F;announcing-alacritty&quot;&gt;Alacritty&lt;&#x2F;a&gt;, a fast terminal emulator&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Wilfred&#x2F;remacs&quot;&gt;Remacs&lt;&#x2F;a&gt;, Emacs gradually implemented in Rust&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;As for contributions, I &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang-nursery&#x2F;lazy-static.rs&#x2F;pull&#x2F;57&quot;&gt;made&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sfackler&#x2F;hyper-openssl&#x2F;pull&#x2F;2&quot;&gt;just&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&#x2F;pull&#x2F;997&quot;&gt;three&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
             </item>
@@ -826,7 +826,7 @@ and made just &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alexcrichton&#x
                 <link>http://tshepang.net/rust-week-of-2016-12-30/</link>
                 <guid>http://tshepang.net/rust-week-of-2016-12-30/</guid>
                 <description>&lt;p&gt;We need more quality code reviews like &lt;a href=&quot;http:&#x2F;&#x2F;blog.mbrt.it&#x2F;2016-12-01-ripgrep-code-review&quot;&gt;this one&lt;&#x2F;a&gt; for ripgrep.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I used &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;reqwest&quot;&gt;reqwest&lt;&#x2F;a&gt; for the first time, and was made sad because using HTTP
 headers is as hard as doing the same for &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;hyper&quot;&gt;hyper&lt;&#x2F;a&gt;, especially given that
 this is supposed to be a more easy library:&lt;&#x2F;p&gt;
@@ -846,7 +846,7 @@ client.get(&amp;quot;example.com&amp;quot;).header(auth_bearer).send();
 :::&lt;&#x2F;p&gt;
 &lt;p&gt;I did not think much about this, so maybe there are issues with the
 desired.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;Just &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;serde-rs&#x2F;json&#x2F;pull&#x2F;182&quot;&gt;one contribution&lt;&#x2F;a&gt; this time.&lt;&#x2F;p&gt;
 </description>
             </item>
@@ -926,7 +926,7 @@ do_something_with(file);&lt;&#x2F;p&gt;
 &lt;p&gt;And that&#x27;s it, &lt;code&gt;file&lt;&#x2F;code&gt; is now like a normal file!&lt;&#x2F;p&gt;
 &lt;p&gt;Another module I used for the first time is &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;regex&quot;&gt;regex&lt;&#x2F;a&gt;, which seems to have
 such a well-designed API actually.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I made just &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;37956&quot;&gt;one contribution&lt;&#x2F;a&gt; this week.&lt;&#x2F;p&gt;
 </description>
             </item>
@@ -961,7 +961,7 @@ of Rust:&lt;&#x2F;p&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;internals.rust-lang.org&#x2F;t&#x2F;4275&quot;&gt;Cretonne&lt;&#x2F;a&gt;, an alternative to LLVM&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;jamey.thesharps.us&#x2F;2016&#x2F;10&#x2F;corrode-update-support-from-mozilla-and.html&quot;&gt;Corrode&lt;&#x2F;a&gt;, a C to Rust translator&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I made just &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;borntyping&#x2F;rust-psutil&#x2F;issues&#x2F;13&quot;&gt;one contribution&lt;&#x2F;a&gt; this week, and submitted &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;borntyping&#x2F;rust-psutil&#x2F;issues&#x2F;14&quot;&gt;one issue&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
             </item>
@@ -1090,12 +1090,12 @@ rust&lt;&#x2F;p&gt;
 &lt;p&gt;fn main() {&lt;&#x2F;p&gt;
 &lt;p&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;let text = \&amp;quot;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;let text = &amp;quot;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   A long text is beginning here and not in the previous line,
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;because it wouldn\&amp;#39;t fit in comfort.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;because it wouldn&amp;#39;t fit in comfort.
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;\&amp;quot; println!(\&amp;quot;{}\&amp;quot;, unindent(text));
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot; println!(&amp;quot;{}&amp;quot;, unindent(text));
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;}
 :::&lt;&#x2F;p&gt;
@@ -1169,7 +1169,7 @@ experiences of &lt;a href=&quot;http:&#x2F;&#x2F;www.integer32.com&#x2F;playgrou
 It made my code more clean... when you see your functions accept way
 too many arguments, chances are those are related, making it time for a
 bit of refactoring. It was fun.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;This week, I only made &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zonyitoo&#x2F;rust-ini&#x2F;pull&#x2F;28&quot;&gt;one submission&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
             </item>
@@ -1193,7 +1193,7 @@ project on the planet. I also did a &lt;a href=&quot;https:&#x2F;&#x2F;github.co
                 <description>&lt;p&gt;I struggled hard enough with a &lt;code&gt;does not live long enough&lt;&#x2F;code&gt; that I
 decided to ask for help, and the &lt;a href=&quot;http:&#x2F;&#x2F;stackoverflow.com&#x2F;q&#x2F;38023291&#x2F;321731&quot;&gt;solution to my problem&lt;&#x2F;a&gt; was actually
 quite simple.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I submitted &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&#x2F;pull&#x2F;846&quot;&gt;some&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lettre&#x2F;lettre&#x2F;pull&#x2F;76&quot;&gt;doc&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zonyitoo&#x2F;rust-ini&#x2F;pull&#x2F;27&quot;&gt;fixes&lt;&#x2F;a&gt; to various projects, and reported
 &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zonyitoo&#x2F;rust-ini&#x2F;issues&#x2F;26&quot;&gt;an issue&lt;&#x2F;a&gt; that promptly fixed on yet another. &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;34584&quot;&gt;I also ran rustfmt&lt;&#x2F;a&gt; on
 some part of Rust.&lt;&#x2F;p&gt;
@@ -1207,7 +1207,7 @@ some part of Rust.&lt;&#x2F;p&gt;
                 <guid>http://tshepang.net/rust-week-of-2016-06-17/</guid>
                 <description>&lt;p&gt;I found &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zonyitoo&#x2F;rust-ini&quot;&gt;a so nice library&lt;&#x2F;a&gt; that handles a favorite file format of mine,
 INI. I even made &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zonyitoo&#x2F;rust-ini&#x2F;pull&#x2F;25&quot;&gt;some tiny doc improvements for it&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I was surprised to find that &lt;a href=&quot;http:&#x2F;&#x2F;stackoverflow.com&#x2F;q&#x2F;37918670&#x2F;321731&quot;&gt;there is no easy&#x2F;clear way to interleave
 stdout and stderr with the standard library&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
@@ -1220,23 +1220,18 @@ stdout and stderr with the standard library&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
                 <guid>http://tshepang.net/rust-week-of-2016-06-10/</guid>
                 <description>&lt;p&gt;I was made sad by the complexity of involving STDIN when using
 &lt;code&gt;std::process&lt;&#x2F;code&gt; module:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;fn o_to_0() -&amp;gt; std::io::Result&amp;lt;bool&amp;gt; {&lt;&#x2F;p&gt;
-&lt;p&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;let mut p = std::process::Command::new(\&amp;quot;tr\&amp;quot;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   .arg(\&amp;quot;o\&amp;quot;) .arg(\&amp;quot;0\&amp;quot;) .stdin(std::process::Stdio::piped())
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.spawn()?;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;let input = \&amp;quot;foo\&amp;quot;; if let Some(stdin) = p.stdin.as\_mut() {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;stdin.write\_all(input.as\_bytes())?; } Ok(p.wait()?.success())
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;o_to_0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() -&amp;gt; std::io::Result&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;bool&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;gt; {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let mut&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; p = std::process::Command::new(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;tr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;arg&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;o&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;) .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;arg&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;) .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;stdin&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(std::process::Stdio::piped())
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;spawn&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;()?;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; input = &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;foo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;if let &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Some(stdin) = p.stdin.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;as_mut&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;stdin.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;write_all&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(input.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;as_bytes&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;())?; } Ok(p.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;wait&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;()?.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;success&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;())
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;}
-:::&lt;&#x2F;p&gt;
 &lt;p&gt;I wonder if this can be more easy, in other languages and&#x2F;or libraries.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I made &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;uutils&#x2F;coreutils&#x2F;pull&#x2F;899&quot;&gt;two&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;34314&quot;&gt;submissions&lt;&#x2F;a&gt;, and gave some commentary &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;34114&quot;&gt;on another&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
             </item>
@@ -1249,15 +1244,12 @@ rust&lt;&#x2F;p&gt;
                 <description>&lt;p&gt;I did more Rust coding than most weeks this time around, busy with the
 project &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;rust-week-of-2016-05-27&quot;&gt;I mentioned last week&lt;&#x2F;a&gt;. My favorite parts:&lt;&#x2F;p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;I love the fact that &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hannobraun&#x2F;inotify-rs&quot;&gt;inotify-rs&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;rust-week-of-2015-07-31&quot;&gt;first mention&lt;&#x2F;a&gt;) collects events
+&lt;li&gt;I love the fact that &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hannobraun&#x2F;inotify-rs&quot;&gt;inotify-rs&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;rust-week-of-2015-07-31&quot;&gt;first mention&lt;&#x2F;a&gt;) collects events
 in the background, so that when you are done with whatever task you
 were busy with, you can check if there is anything new to act upon
 (e.g. a new file was created in a watched directory). This allows
-one to do away with using threads, reducing code complexity.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Rust error handling is so nice, and forces one to think better about
+one to do away with using threads, reducing code complexity.&lt;&#x2F;li&gt;
+&lt;li&gt;Rust error handling is so nice, and forces one to think better about
 code. As an example, when you doing any I&#x2F;O, you mostly want to do
 that in a separate function so that you can return a &lt;code&gt;Result&lt;&#x2F;code&gt; type,
 something like &lt;code&gt;Result&amp;lt;(), std::io::Error&amp;gt;&lt;&#x2F;code&gt;. This forces you to
@@ -1266,31 +1258,31 @@ logic, where you&#x27;d for maybe just want to return a &lt;code&gt;bool&lt;&#x2
 my case, I would not get any I&#x2F;O error, but I would get failure from
 running an external process (see &lt;code&gt;std::process&lt;&#x2F;code&gt; module) where the
 exit status was not 0. That meant I&#x2F;O error failure case and the
-process error case had to be handled in separate places.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;In the example I gave above, &lt;code&gt;Result&amp;lt;(), std::io::Error&amp;gt;&lt;&#x2F;code&gt;, this
+process error case had to be handled in separate places.&lt;&#x2F;li&gt;
+&lt;li&gt;In the example I gave above, &lt;code&gt;Result&amp;lt;(), std::io::Error&amp;gt;&lt;&#x2F;code&gt;, this
 means that we don&#x27;t care about the success return value. On the
 calling side, we have an option to use a &lt;code&gt;match&lt;&#x2F;code&gt; statement to handle
-the result:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;match foo() {&lt;&#x2F;p&gt;
-&lt;p&gt;:   Ok(_) =&amp;gt; (), Err(error) =&amp;gt; do_something_with(error)&lt;&#x2F;p&gt;
-&lt;p&gt;}
-:::&lt;&#x2F;p&gt;
-&lt;p&gt;There is a convenient syntax to deal with such case, where you
-don&#x27;t care about one of values... &lt;code&gt;if let&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;if let Err(error) = foo() {&lt;&#x2F;p&gt;
-&lt;p&gt;:   do_something_with(error)&lt;&#x2F;p&gt;
-&lt;p&gt;}
-:::&lt;&#x2F;p&gt;
-&lt;p&gt;So elegant!&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
+the result:&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#96;&#96;&#96;rust
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;match foo() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Ok(_) =&amp;gt; (), Err(error) =&amp;gt; do_something_with(error)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#96;&#96;&#96;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;There is a convenient syntax to deal with such case, where you
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;don&amp;#39;t care about one of values... &#96;if let&#96;:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#96;&#96;&#96;rust
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if let Err(error) = foo() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;do_something_with(error)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#96;&#96;&#96;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;So elegant!
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I submitted &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;34185&quot;&gt;just one contribution&lt;&#x2F;a&gt; this time around.&lt;&#x2F;p&gt;
 </description>
             </item>
@@ -1305,13 +1297,13 @@ work?&lt;&#x2F;a&gt; rather depressing. It&#x27;s also relevant to me since I am
 writing some internal tool at work, and wonder how far it will go before
 re-writing in something &lt;em&gt;more acceptable&lt;&#x2F;em&gt;, like Python. To be fair,
 there was also &lt;a href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;rust&#x2F;comments&#x2F;4kqhqz&#x2F;&#x2F;d3hx9l0&quot;&gt;some great praise&lt;&#x2F;a&gt; of the ecosystem.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I read the intro of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sfackler&#x2F;rust-postgres&#x2F;blob&#x2F;master&#x2F;README.md&quot;&gt;rust-postgres&lt;&#x2F;a&gt; and even made &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sfackler&#x2F;rust-postgres&#x2F;pull&#x2F;186&quot;&gt;a small
 contribution&lt;&#x2F;a&gt;. I also made a &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;34033&quot;&gt;doc contribution&lt;&#x2F;a&gt; to stdlib.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I was surprised that &lt;a href=&quot;http:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;37550208&quot;&gt;there is no Rust set type that preserves insertion
 order&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;Something I learned about running system commands, imagine you had a
 complex command like:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
@@ -1737,12 +1729,12 @@ rust&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;for n in 0.. {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   &#x2F;&#x2F; Rust 1.0 release let initial = NaiveDate::from\_ymd(2015, 5,
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   &#x2F;&#x2F; Rust 1.0 release let initial = NaiveDate::from_ymd(2015, 5,
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;15); &#x2F;&#x2F; 1.0 was released on a Friday, but nowadays they happen
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Thursdays let release\_date =
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;initial.checked\_add(Duration::weeks(6 \* n)).unwrap() -
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Duration::days(1); if release\_date \&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Local::today().naive\_local() { println!(\&amp;quot;{}\&amp;quot;, release\_date);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Thursdays let release_date =
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;initial.checked_add(Duration::weeks(6 * n)).unwrap() -
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Duration::days(1); if release_date &amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Local::today().naive_local() { println!(&amp;quot;{}&amp;quot;, release_date);
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;break; }
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
@@ -1947,7 +1939,7 @@ surprise success&lt;&#x2F;a&gt;, which now got over 6000 Impressions.&lt;&#x2F;p
 for work, yay!), and I found it surprisingly easy to use. It&#x27;s not a
 very pretty API though, and I remember the Python API to be horrible
 too. Maybe the nature of inotify disallows beauty, who knows.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;I submitted these to the Rust tree:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;27495&quot;&gt;Follow idiom&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -2045,7 +2037,7 @@ doc and annotations while they were removing obsolete code&lt;&#x2F;li&gt;
                 <description>&lt;p&gt;Work done on &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;book&#x2F;documentation.html&quot;&gt;the Documentation chapter&lt;&#x2F;a&gt; of the official Rust book:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;I submitted a &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;26506&quot;&gt;number&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;26508&quot;&gt;of&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;26509&quot;&gt;changes&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;I also found &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;issues&#x2F;26507&quot;&gt;misuse of the word, *thing*&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;I also found &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;issues&#x2F;26507&quot;&gt;misuse of the word, &lt;em&gt;thing&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;Elsewhere:&lt;&#x2F;p&gt;
 &lt;ul&gt;
@@ -2140,16 +2132,16 @@ rust&lt;&#x2F;p&gt;
 &lt;p&gt;fn main() {&lt;&#x2F;p&gt;
 &lt;p&gt;:   let thread_count = 4; let (tx, rx) = channel();&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for x in 0..thread\_count {
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for x in 0..thread_count {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   let tx = tx.clone(); thread::spawn(move \|\| { println!(\&amp;quot;t{}
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;tx\&amp;quot;, x); tx.send(x).unwrap(); });
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   let tx = tx.clone(); thread::spawn(move || { println!(&amp;quot;t{}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;tx&amp;quot;, x); tx.send(x).unwrap(); });
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for \_ in 0..thread\_count {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for _ in 0..thread_count {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   println!(\&amp;quot;rx from t{}\&amp;quot;, rx.recv().unwrap());
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   println!(&amp;quot;rx from t{}&amp;quot;, rx.recv().unwrap());
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
@@ -2230,9 +2222,9 @@ rust&lt;&#x2F;p&gt;
 &lt;p&gt;impl Invert for i32 {&lt;&#x2F;p&gt;
 &lt;p&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;fn invert(&amp;amp;self) -\&amp;gt; f64 {
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;fn invert(&amp;amp;self) -&amp;gt; f64 {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   1.0&#x2F;(\*self as f64)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   1.0&#x2F;(*self as f64)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
@@ -2277,9 +2269,9 @@ rust&lt;&#x2F;p&gt;
 &lt;p&gt;impl Invert for f64 {&lt;&#x2F;p&gt;
 &lt;p&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;fn invert(&amp;amp;self) -\&amp;gt; f64 {
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;fn invert(&amp;amp;self) -&amp;gt; f64 {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   1.0&#x2F;(\*self)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   1.0&#x2F;(*self)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
@@ -2296,13 +2288,13 @@ rust&lt;&#x2F;p&gt;
                 <link>http://tshepang.net/various-rust-ways-of-displaying-stuff-to-the-screen/</link>
                 <guid>http://tshepang.net/various-rust-ways-of-displaying-stuff-to-the-screen/</guid>
                 <description>&lt;p&gt;Here is a simple way of doing it:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;use std::io::{self, Write};&lt;&#x2F;p&gt;
-&lt;p&gt;fn main() {&lt;&#x2F;p&gt;
-&lt;p&gt;:   io::stdout().write_all(b&amp;quot;some outputn&amp;quot;);&lt;&#x2F;p&gt;
-&lt;p&gt;}
-:::&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#b48ead;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;std::io::{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;, Write};
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;io::stdout().&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;write_all&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;some outputn&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;I do however get this warning when I build it:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ rustc main.rs
@@ -2311,61 +2303,55 @@ rust&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;              &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Let&#x27;s kill it:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;use std::io::{self, Write};&lt;&#x2F;p&gt;
-&lt;p&gt;fn main() {&lt;&#x2F;p&gt;
-&lt;p&gt;:   io::stdout().write_all(b&amp;quot;some output&amp;quot;).unwrap();&lt;&#x2F;p&gt;
-&lt;p&gt;}
-:::&lt;&#x2F;p&gt;
-&lt;p&gt;What I did is is call &lt;code&gt;unwrap&lt;&#x2F;code&gt; which basically asks our operation to
-&lt;code&gt;panic!&lt;&#x2F;code&gt; in case of some error. Think of it as a shortcut of:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;use std::io::{self, Write};&lt;&#x2F;p&gt;
-&lt;p&gt;fn main() {&lt;&#x2F;p&gt;
-&lt;p&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;match io::stdout().write\_all(b\&amp;quot;some outputn\&amp;quot;) {
+&lt;span style=&quot;color:#b48ead;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;std::io::{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;, Write};
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   Ok(\_) =\&amp;gt; (), Err(\_) =\&amp;gt; panic!(),
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;io::stdout().&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;write_all&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;some output&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;();
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;}
-:::&lt;&#x2F;p&gt;
+&lt;p&gt;What I did is is call &lt;code&gt;unwrap&lt;&#x2F;code&gt; which basically asks our operation to
+&lt;code&gt;panic!&lt;&#x2F;code&gt; in case of some error. Think of it as a shortcut of:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#b48ead;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;std::io::{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;, Write};
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;match &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;io::stdout().&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;write_all&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;some outputn&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;) {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Ok(_) =&amp;gt; (), Err(_) =&amp;gt; panic!(),
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Some docs:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;io&#x2F;trait.Write.html#method.write_all&quot;&gt;std::io::Writer::write_line&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;result&#x2F;enum.Result.html#method.unwrap&quot;&gt;core::result::Result::unwrap&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;macro.panic!.html&quot;&gt;std::panic!&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;What if we wanted to do some string formatting:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;use std::io::{self, Write};&lt;&#x2F;p&gt;
-&lt;p&gt;fn main() {&lt;&#x2F;p&gt;
-&lt;p&gt;:   let second_word = &amp;quot;output&amp;quot;; let text = format!(&amp;quot;some {}n&amp;quot;,
-second_word); io::stdout().write_all(text.as_bytes()).unwrap();&lt;&#x2F;p&gt;
-&lt;p&gt;}
-:::&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#b48ead;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;std::io::{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;, Write};
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; second_word = &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;output&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; text = format!(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;some &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;{}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;second_word); io::stdout().&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;write_all&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(text.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;as_bytes&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;()).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;();
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;But there is a shortcut for the code above:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;use std::io::{self, Write};&lt;&#x2F;p&gt;
-&lt;p&gt;fn main() {&lt;&#x2F;p&gt;
-&lt;p&gt;:   let second_word = &amp;quot;output&amp;quot;; writeln!(&amp;amp;mut io::stdout(), &amp;quot;some
-{}&amp;quot;, second_word).unwrap();&lt;&#x2F;p&gt;
-&lt;p&gt;}
-:::&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#b48ead;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;std::io::{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;, Write};
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; second_word = &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;output&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;writeln!(&amp;amp;mut io::stdout(), &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;some &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;{}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, second_word).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;();
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;There is an even shorter shortcut:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;fn main() {&lt;&#x2F;p&gt;
-&lt;p&gt;:   let second_word = &amp;quot;output&amp;quot;; println!(&amp;quot;some {}&amp;quot;, second_word);&lt;&#x2F;p&gt;
-&lt;p&gt;}
-:::&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; second_word = &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;output&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;; println!(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;some &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;{}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, second_word);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Question to self: do we get a &lt;code&gt;panic!&lt;&#x2F;code&gt; if &lt;code&gt;println&lt;&#x2F;code&gt; gets an I&#x2F;O error?&lt;&#x2F;p&gt;
 &lt;p&gt;Some docs:&lt;&#x2F;p&gt;
 &lt;ul&gt;
@@ -2373,19 +2359,19 @@ rust&lt;&#x2F;p&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;macro.writeln!.html&quot;&gt;std::writeln!&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;macro.println!.html&quot;&gt;std::println!&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;p&gt;So, why bother with all these many ways when there&#x27;s a simple
 &lt;code&gt;println!&lt;&#x2F;code&gt;? Flexibility. One example I can think of is writing to
 stderr. There is no simple macro for that (&lt;code&gt;println!&lt;&#x2F;code&gt; is for stdout).
 Short of implementing &lt;a href=&quot;http:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;27590832&#x2F;321731&quot;&gt;our own macro&lt;&#x2F;a&gt;, We&#x27;d have to do something like
 the following:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;use std::io;&lt;&#x2F;p&gt;
-&lt;p&gt;fn main() {&lt;&#x2F;p&gt;
-&lt;p&gt;:   writeln!(&amp;amp;mut io::stderr(), &amp;quot;some output&amp;quot;);&lt;&#x2F;p&gt;
-&lt;p&gt;}
-:::&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#b48ead;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;std::io;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;writeln!(&amp;amp;mut io::stderr(), &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;some output&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;You can test that it really goes to stderr by running it like:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ .&#x2F;main &amp;gt; &#x2F;dev&#x2F;null
@@ -2403,7 +2389,7 @@ related to my favorite programming language. I here take Rust weeks to
 begin each Friday, since Stable releases of the Rust distribution
 (language and included libraries) are to be released on that week day.
 This is also a great excuse to write more regularly.&lt;&#x2F;p&gt;
-&lt;p&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;I read a high quality post titled &lt;a href=&quot;http:&#x2F;&#x2F;chrismorgan.info&#x2F;blog&#x2F;rust-ownership-the-hard-way.html&quot;&gt;Rust ownership, the hard way&lt;&#x2F;a&gt;. I
@@ -2516,7 +2502,7 @@ rust&lt;&#x2F;p&gt;
 &lt;p&gt;fn main() {&lt;&#x2F;p&gt;
 &lt;p&gt;:   let a = 0i8; let b = 0i8; let c = 0i8;&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;println!(\&amp;quot;{:p}\&amp;quot;, &amp;amp;a); println!(\&amp;quot;{:p}\&amp;quot;, &amp;amp;b); println!(\&amp;quot;{:p}\&amp;quot;,
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;println!(&amp;quot;{:p}&amp;quot;, &amp;amp;a); println!(&amp;quot;{:p}&amp;quot;, &amp;amp;b); println!(&amp;quot;{:p}&amp;quot;,
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;amp;c);
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;}
@@ -2540,7 +2526,7 @@ rust&lt;&#x2F;p&gt;
 &lt;p&gt;fn main() {&lt;&#x2F;p&gt;
 &lt;p&gt;:   let a = 0i16; let b = 0i16; let c = 0i16;&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;println!(\&amp;quot;{:p}\&amp;quot;, &amp;amp;a); println!(\&amp;quot;{:p}\&amp;quot;, &amp;amp;b); println!(\&amp;quot;{:p}\&amp;quot;,
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;println!(&amp;quot;{:p}&amp;quot;, &amp;amp;a); println!(&amp;quot;{:p}&amp;quot;, &amp;amp;b); println!(&amp;quot;{:p}&amp;quot;,
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;amp;c);
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;}

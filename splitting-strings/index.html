@@ -100,6 +100,14 @@
                             </li>
                         
                     </ul>
+                    
+                    <div class="search-container">
+                      <input id="search" type="search" placeholder="🔎  search">
+                      <div class="search-results">
+                        <div class="search-results__items"></div>
+                      </div>
+                    </div>
+                    
                 </nav>
             </header>
 
@@ -196,7 +204,7 @@ string, I get to use regular expressions (regexp)?</p>
 tabs as well? We need some more regexp help:</p>
 <pre style="background-color:#2b303b">
 <span style="color:#c0c5ce;">import java.util.Arrays;
-</span><span style="color:#c0c5ce;">String[] splitString = &quot;a    bnc&quot;.split(&quot;\s+&quot;);
+</span><span style="color:#c0c5ce;">String[] splitString = &quot;a    bnc&quot;.split(&quot;s+&quot;);
 </span><span style="color:#c0c5ce;">System.out.println(Arrays.asList(splitString));
 </span></pre>
 <p>Output:</p>
@@ -250,6 +258,11 @@ Java than in Python:</p>
 
       
           <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;even.js" ></script>
+          
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search_index.en.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search.js"></script>
+          
       
     </body>
 

@@ -100,6 +100,14 @@
                             </li>
                         
                     </ul>
+                    
+                    <div class="search-container">
+                      <input id="search" type="search" placeholder="🔎  search">
+                      <div class="search-results">
+                        <div class="search-results__items"></div>
+                      </div>
+                    </div>
+                    
                 </nav>
             </header>
 
@@ -135,12 +143,12 @@ rust</p>
 <pre style="background-color:#2b303b">
 <span style="color:#c0c5ce;">for n in 0.. {
 </span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">:   // Rust 1.0 release let initial = NaiveDate::from\_ymd(2015, 5,
+</span><span style="color:#c0c5ce;">:   // Rust 1.0 release let initial = NaiveDate::from_ymd(2015, 5,
 </span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">15); // 1.0 was released on a Friday, but nowadays they happen
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">Thursdays let release\_date =
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">initial.checked\_add(Duration::weeks(6 \* n)).unwrap() -
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">Duration::days(1); if release\_date \&gt;
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">Local::today().naive\_local() { println!(\&quot;{}\&quot;, release\_date);
+</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">Thursdays let release_date =
+</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">initial.checked_add(Duration::weeks(6 * n)).unwrap() -
+</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">Duration::days(1); if release_date &gt;
+</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">Local::today().naive_local() { println!(&quot;{}&quot;, release_date);
 </span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">break; }
 </span><span style="color:#c0c5ce;">
 </span><span style="color:#c0c5ce;">}
@@ -172,6 +180,11 @@ rust</p>
 
       
           <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;even.js" ></script>
+          
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search_index.en.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search.js"></script>
+          
       
     </body>
 

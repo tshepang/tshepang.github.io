@@ -100,6 +100,14 @@
                             </li>
                         
                     </ul>
+                    
+                    <div class="search-container">
+                      <input id="search" type="search" placeholder="🔎  search">
+                      <div class="search-results">
+                        <div class="search-results__items"></div>
+                      </div>
+                    </div>
+                    
                 </nav>
             </header>
 
@@ -123,13 +131,13 @@
 
     <div class="post-content">
       <p>Here is a simple way of doing it:</p>
-<p>::: {.sourcecode}
-rust</p>
-<p>use std::io::{self, Write};</p>
-<p>fn main() {</p>
-<p>:   io::stdout().write_all(b&quot;some outputn&quot;);</p>
-<p>}
-:::</p>
+<pre style="background-color:#2b303b">
+<span style="color:#b48ead;">use </span><span style="color:#c0c5ce;">std::io::{</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">, Write};
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
+</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">io::stdout().</span><span style="color:#96b5b4;">write_all</span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">b</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">some outputn</span><span style="color:#c0c5ce;">&quot;);
+</span><span style="color:#c0c5ce;">}
+</span></pre>
 <p>I do however get this warning when I build it:</p>
 <pre style="background-color:#2b303b">
 <span style="color:#c0c5ce;">$ rustc main.rs
@@ -138,61 +146,55 @@ rust</p>
 </span><span style="color:#c0c5ce;">              </span><span style="color:#c0c5ce;">^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 </span></pre>
 <p>Let's kill it:</p>
-<p>::: {.sourcecode}
-rust</p>
-<p>use std::io::{self, Write};</p>
-<p>fn main() {</p>
-<p>:   io::stdout().write_all(b&quot;some output&quot;).unwrap();</p>
-<p>}
-:::</p>
-<p>What I did is is call <code>unwrap</code> which basically asks our operation to
-<code>panic!</code> in case of some error. Think of it as a shortcut of:</p>
-<p>::: {.sourcecode}
-rust</p>
-<p>use std::io::{self, Write};</p>
-<p>fn main() {</p>
-<p>:</p>
 <pre style="background-color:#2b303b">
-<span style="color:#c0c5ce;">match io::stdout().write\_all(b\&quot;some outputn\&quot;) {
+<span style="color:#b48ead;">use </span><span style="color:#c0c5ce;">std::io::{</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">, Write};
 </span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">:   Ok(\_) =\&gt; (), Err(\_) =\&gt; panic!(),
-</span><span style="color:#c0c5ce;">
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
+</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">io::stdout().</span><span style="color:#96b5b4;">write_all</span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">b</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">some output</span><span style="color:#c0c5ce;">&quot;).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
 </span><span style="color:#c0c5ce;">}
 </span></pre>
-<p>}
-:::</p>
+<p>What I did is is call <code>unwrap</code> which basically asks our operation to
+<code>panic!</code> in case of some error. Think of it as a shortcut of:</p>
+<pre style="background-color:#2b303b">
+<span style="color:#b48ead;">use </span><span style="color:#c0c5ce;">std::io::{</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">, Write};
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
+</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">match </span><span style="color:#c0c5ce;">io::stdout().</span><span style="color:#96b5b4;">write_all</span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">b</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">some outputn</span><span style="color:#c0c5ce;">&quot;) {
+</span><span style="color:#c0c5ce;">        </span><span style="color:#c0c5ce;">Ok(_) =&gt; (), Err(_) =&gt; panic!(),
+</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">}
+</span><span style="color:#c0c5ce;">}
+</span></pre>
 <p>Some docs:</p>
 <ul>
 <li><a href="http://doc.rust-lang.org/std/io/trait.Write.html#method.write_all">std::io::Writer::write_line</a></li>
 <li><a href="http://doc.rust-lang.org/std/result/enum.Result.html#method.unwrap">core::result::Result::unwrap</a></li>
 <li><a href="http://doc.rust-lang.org/std/macro.panic!.html">std::panic!</a></li>
 </ul>
-<p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<hr />
 <p>What if we wanted to do some string formatting:</p>
-<p>::: {.sourcecode}
-rust</p>
-<p>use std::io::{self, Write};</p>
-<p>fn main() {</p>
-<p>:   let second_word = &quot;output&quot;; let text = format!(&quot;some {}n&quot;,
-second_word); io::stdout().write_all(text.as_bytes()).unwrap();</p>
-<p>}
-:::</p>
+<pre style="background-color:#2b303b">
+<span style="color:#b48ead;">use </span><span style="color:#c0c5ce;">std::io::{</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">, Write};
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
+</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> second_word = &quot;</span><span style="color:#a3be8c;">output</span><span style="color:#c0c5ce;">&quot;; </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> text = format!(&quot;</span><span style="color:#a3be8c;">some </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">n</span><span style="color:#c0c5ce;">&quot;,
+</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">second_word); io::stdout().</span><span style="color:#96b5b4;">write_all</span><span style="color:#c0c5ce;">(text.</span><span style="color:#96b5b4;">as_bytes</span><span style="color:#c0c5ce;">()).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+</span><span style="color:#c0c5ce;">}
+</span></pre>
 <p>But there is a shortcut for the code above:</p>
-<p>::: {.sourcecode}
-rust</p>
-<p>use std::io::{self, Write};</p>
-<p>fn main() {</p>
-<p>:   let second_word = &quot;output&quot;; writeln!(&amp;mut io::stdout(), &quot;some
-{}&quot;, second_word).unwrap();</p>
-<p>}
-:::</p>
+<pre style="background-color:#2b303b">
+<span style="color:#b48ead;">use </span><span style="color:#c0c5ce;">std::io::{</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">, Write};
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
+</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> second_word = &quot;</span><span style="color:#a3be8c;">output</span><span style="color:#c0c5ce;">&quot;;
+</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">writeln!(&amp;mut io::stdout(), &quot;</span><span style="color:#a3be8c;">some </span><span style="color:#d08770;">{}</span><span style="color:#c0c5ce;">&quot;, second_word).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+</span><span style="color:#c0c5ce;">}
+</span></pre>
 <p>There is an even shorter shortcut:</p>
-<p>::: {.sourcecode}
-rust</p>
-<p>fn main() {</p>
-<p>:   let second_word = &quot;output&quot;; println!(&quot;some {}&quot;, second_word);</p>
-<p>}
-:::</p>
+<pre style="background-color:#2b303b">
+<span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> second_word = &quot;</span><span style="color:#a3be8c;">output</span><span style="color:#c0c5ce;">&quot;; println!(&quot;</span><span style="color:#a3be8c;">some </span><span style="color:#d08770;">{}</span><span style="color:#c0c5ce;">&quot;, second_word);
+</span><span style="color:#c0c5ce;">}
+</span></pre>
 <p>Question to self: do we get a <code>panic!</code> if <code>println</code> gets an I/O error?</p>
 <p>Some docs:</p>
 <ul>
@@ -200,19 +202,19 @@ rust</p>
 <li><a href="http://doc.rust-lang.org/std/macro.writeln!.html">std::writeln!</a></li>
 <li><a href="http://doc.rust-lang.org/std/macro.println!.html">std::println!</a></li>
 </ul>
-<p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<hr />
 <p>So, why bother with all these many ways when there's a simple
 <code>println!</code>? Flexibility. One example I can think of is writing to
 stderr. There is no simple macro for that (<code>println!</code> is for stdout).
 Short of implementing <a href="http://stackoverflow.com/a/27590832/321731">our own macro</a>, We'd have to do something like
 the following:</p>
-<p>::: {.sourcecode}
-rust</p>
-<p>use std::io;</p>
-<p>fn main() {</p>
-<p>:   writeln!(&amp;mut io::stderr(), &quot;some output&quot;);</p>
-<p>}
-:::</p>
+<pre style="background-color:#2b303b">
+<span style="color:#b48ead;">use </span><span style="color:#c0c5ce;">std::io;
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
+</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">writeln!(&amp;mut io::stderr(), &quot;</span><span style="color:#a3be8c;">some output</span><span style="color:#c0c5ce;">&quot;);
+</span><span style="color:#c0c5ce;">}
+</span></pre>
 <p>You can test that it really goes to stderr by running it like:</p>
 <pre style="background-color:#2b303b">
 <span style="color:#c0c5ce;">$ ./main &gt; /dev/null
@@ -242,6 +244,11 @@ rust</p>
 
       
           <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;even.js" ></script>
+          
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search_index.en.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search.js"></script>
+          
       
     </body>
 

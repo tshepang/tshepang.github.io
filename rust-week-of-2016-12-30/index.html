@@ -100,6 +100,14 @@
                             </li>
                         
                     </ul>
+                    
+                    <div class="search-container">
+                      <input id="search" type="search" placeholder="🔎  search">
+                      <div class="search-results">
+                        <div class="search-results__items"></div>
+                      </div>
+                    </div>
+                    
                 </nav>
             </header>
 
@@ -123,7 +131,7 @@
 
     <div class="post-content">
       <p>We need more quality code reviews like <a href="http://blog.mbrt.it/2016-12-01-ripgrep-code-review">this one</a> for ripgrep.</p>
-<p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<hr />
 <p>I used <a href="https://docs.rs/reqwest">reqwest</a> for the first time, and was made sad because using HTTP
 headers is as hard as doing the same for <a href="https://docs.rs/hyper">hyper</a>, especially given that
 this is supposed to be a more easy library:</p>
@@ -143,7 +151,7 @@ client.get(&quot;example.com&quot;).header(auth_bearer).send();
 :::</p>
 <p>I did not think much about this, so maybe there are issues with the
 desired.</p>
-<p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<hr />
 <p>Just <a href="https://github.com/serde-rs/json/pull/182">one contribution</a> this time.</p>
 
     </div>
@@ -170,6 +178,11 @@ desired.</p>
 
       
           <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;even.js" ></script>
+          
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search_index.en.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search.js"></script>
+          
       
     </body>
 

@@ -100,6 +100,14 @@
                             </li>
                         
                     </ul>
+                    
+                    <div class="search-container">
+                      <input id="search" type="search" placeholder="🔎  search">
+                      <div class="search-results">
+                        <div class="search-results__items"></div>
+                      </div>
+                    </div>
+                    
                 </nav>
             </header>
 
@@ -130,16 +138,16 @@ rust</p>
 <p>fn main() {</p>
 <p>:   let thread_count = 4; let (tx, rx) = channel();</p>
 <pre style="background-color:#2b303b">
-<span style="color:#c0c5ce;">for x in 0..thread\_count {
+<span style="color:#c0c5ce;">for x in 0..thread_count {
 </span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">:   let tx = tx.clone(); thread::spawn(move \|\| { println!(\&quot;t{}
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">tx\&quot;, x); tx.send(x).unwrap(); });
+</span><span style="color:#c0c5ce;">:   let tx = tx.clone(); thread::spawn(move || { println!(&quot;t{}
+</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">tx&quot;, x); tx.send(x).unwrap(); });
 </span><span style="color:#c0c5ce;">
 </span><span style="color:#c0c5ce;">}
 </span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">for \_ in 0..thread\_count {
+</span><span style="color:#c0c5ce;">for _ in 0..thread_count {
 </span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">:   println!(\&quot;rx from t{}\&quot;, rx.recv().unwrap());
+</span><span style="color:#c0c5ce;">:   println!(&quot;rx from t{}&quot;, rx.recv().unwrap());
 </span><span style="color:#c0c5ce;">
 </span><span style="color:#c0c5ce;">}
 </span></pre>
@@ -203,6 +211,11 @@ My guess is that a more real-time kernel would be more predictable.</p>
 
       
           <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;even.js" ></script>
+          
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search_index.en.js"></script>
+          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.net&#x2F;search.js"></script>
+          
       
     </body>
 
