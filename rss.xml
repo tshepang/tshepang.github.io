@@ -1375,15 +1375,15 @@ story is also fascinating and so is the technology.&lt;&#x2F;p&gt;
                 <guid>http://tshepang.net/rust-week-of-2016-11-18/</guid>
                 <description>&lt;p&gt;I was surprised by the ease of use of &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;libflate&quot;&gt;libflate&lt;&#x2F;a&gt; when decompressing a
 gzip&#x27;ed file:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#b48ead;&quot;&gt;extern crate&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; libflate;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let mut&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; file = std::fs::&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;File::&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;open&amp;gt;(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;file.gz&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;();
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; file = libflate::gzip::Decoder::new(&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;mut&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; file).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;();
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;do_something_with&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(file);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;};
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;::: {.sourcecode}
+rust&lt;&#x2F;p&gt;
+&lt;p&gt;extern crate libflate;&lt;&#x2F;p&gt;
+&lt;p&gt;fn main() {&lt;&#x2F;p&gt;
+&lt;p&gt;:   let mut file = std::fs::&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;rust-week-of-2016-11-18&#x2F;File::open&quot;&gt;File::open&lt;&#x2F;a&gt;(&amp;quot;file.gz&amp;quot;).unwrap(); let file
+= libflate::gzip::Decoder::new(&amp;amp;mut file).unwrap();
+do_something_with(file);&lt;&#x2F;p&gt;
+&lt;p&gt;};
+:::&lt;&#x2F;p&gt;
 &lt;p&gt;And that&#x27;s it, &lt;code&gt;file&lt;&#x2F;code&gt; is now like a normal file!&lt;&#x2F;p&gt;
 &lt;p&gt;Another module I used for the first time is &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;regex&quot;&gt;regex&lt;&#x2F;a&gt;, which seems to have
 such a well-designed API actually.&lt;&#x2F;p&gt;
@@ -2565,6 +2565,7 @@ statements:&lt;&#x2F;p&gt;
 &lt;span style=&quot;color:#b48ead;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;{
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; always executes
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;The semicolon rule: I initially found it surprising that omitting a
@@ -3795,43 +3796,49 @@ missing it. I also updated the code to run on modern Rust.&lt;&#x2F;p&gt;
 well-written post, &lt;a href=&quot;http:&#x2F;&#x2F;blog.rust-lang.org&#x2F;2015&#x2F;05&#x2F;11&#x2F;traits.html&quot;&gt;Abstraction without overhead: traits in Rust&lt;&#x2F;a&gt;.
 One feature they have is they allow adding methods to types,
 including upstream ones, example being stdlib types as follows:&lt;&#x2F;p&gt;
+&lt;p&gt;::: {.sourcecode}
+rust&lt;&#x2F;p&gt;
+&lt;p&gt;trait Invert {&lt;&#x2F;p&gt;
+&lt;p&gt;:   fn invert(&amp;amp;self) -&amp;gt; f64;&lt;&#x2F;p&gt;
+&lt;p&gt;}&lt;&#x2F;p&gt;
+&lt;p&gt;impl Invert for i32 {&lt;&#x2F;p&gt;
+&lt;p&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#b48ead;&quot;&gt;trait &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Invert {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;invert&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;) -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;f64&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;fn invert(&amp;amp;self) -&amp;gt; f64 {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   1.0&#x2F;(*self as f64)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;impl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Invert &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;i32 {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;invert&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;) -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;f64 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;{
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1.0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;(*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;self &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;f64&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; foo = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10_&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;i32&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;; assert_eq!(foo.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;invert&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(), &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0.1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;);
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;}&lt;&#x2F;p&gt;
+&lt;p&gt;fn main() {&lt;&#x2F;p&gt;
+&lt;p&gt;:   let foo = 10_i32; assert_eq!(foo.invert(), 0.1);&lt;&#x2F;p&gt;
+&lt;p&gt;}
+:::&lt;&#x2F;p&gt;
 &lt;p&gt;Another example is that one can limit the type of arguments accepted
 by a function, though it uses something of an ugly syntax:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;print_inverse&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;lt;T: Invert&amp;gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;foo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;: T) {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;println!(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Inverse: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;{}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, foo.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;invert&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;());
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;::: {.sourcecode}
+rust&lt;&#x2F;p&gt;
+&lt;p&gt;fn print_inverse&amp;lt;T: Invert&amp;gt;(foo: T) {&lt;&#x2F;p&gt;
+&lt;p&gt;:   println!(&amp;quot;Inverse: {}&amp;quot;, foo.invert());&lt;&#x2F;p&gt;
+&lt;p&gt;}
+:::&lt;&#x2F;p&gt;
 &lt;p&gt;The &lt;code&gt;&amp;lt;T: Invert&amp;gt;&lt;&#x2F;code&gt; means this function will only accept &lt;code&gt;foo&lt;&#x2F;code&gt; whose
 type implements the &lt;code&gt;Invert&lt;&#x2F;code&gt; trait. You can check by calling it with
 an &lt;code&gt;i32&lt;&#x2F;code&gt; value, in which it will succeed:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#96b5b4;&quot;&gt;print_inverse&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10_&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;i32&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;);
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;::: {.sourcecode}
+rust&lt;&#x2F;p&gt;
+&lt;p&gt;print_inverse(10_i32);
+:::&lt;&#x2F;p&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;Inverse: 0.1
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Any other type will fail:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#96b5b4;&quot;&gt;print_inverse&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10_&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;f64&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;);
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;::: {.sourcecode}
+rust&lt;&#x2F;p&gt;
+&lt;p&gt;print_inverse(10_f64);
+:::&lt;&#x2F;p&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;the trait &#96;Invert&#96; is not implemented for the type &#96;f64&#96; [E0277]
@@ -3839,13 +3846,20 @@ an &lt;code&gt;i32&lt;&#x2F;code&gt; value, in which it will succeed:&lt;&#x2F;p
 &lt;p&gt;This allows for a feature named generics, where one can use multiple
 types for the same function. For example, that error will disappear
 if you got this:&lt;&#x2F;p&gt;
+&lt;p&gt;::: {.sourcecode}
+rust&lt;&#x2F;p&gt;
+&lt;p&gt;impl Invert for f64 {&lt;&#x2F;p&gt;
+&lt;p&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b&quot;&gt;
-&lt;span style=&quot;color:#b48ead;&quot;&gt;impl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Invert &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;f64 {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;invert&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;) -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;f64 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;{
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1.0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;(*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;fn invert(&amp;amp;self) -&amp;gt; f64 {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   1.0&#x2F;(*self)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;}
+:::&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </description>
             </item>
@@ -4089,11 +4103,11 @@ intelligent beings.&lt;&#x2F;p&gt;
 &lt;li&gt;Brat Pitt (&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;fight-club-1999&quot;&gt;Fight Club&lt;&#x2F;a&gt;); honorable mention (&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;the-counselor-2013&quot;&gt;The Counselor&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;li&gt;Carrie-Anne Moss (&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;memento-2000&quot;&gt;Memento&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;li&gt;Clive Owen (Closer)&lt;&#x2F;li&gt;
-&lt;li&gt;Colin Firth (&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;the-king-s-speech-2010&quot;&gt;The King&#x27;s Speech&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Colin Firth (&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;the-kings-speech-2010&quot;&gt;The King&#x27;s Speech&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;li&gt;David Straithairn (&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;good-night-and-good-luck-2005&quot;&gt;Good Night, and Good Luck&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;li&gt;Emma Thompson (&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;wit-2001&quot;&gt;Wit&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;li&gt;Forest Whitaker (&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;the-last-king-of-scotland-2006&quot;&gt;The Last King of Scotland&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;Geoffrey Rush (&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;the-king-s-speech-2010&quot;&gt;The King&#x27;s Speech&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Geoffrey Rush (&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;the-kings-speech-2010&quot;&gt;The King&#x27;s Speech&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;li&gt;Guy Pearce (&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;memento-2000&quot;&gt;Memento&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;li&gt;Hugh Jackman (&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;prisoners-2013&quot;&gt;Prisoners&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;li&gt;Jake Gyllenhaal (&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;nightcrawler&quot;&gt;Nightcrawler&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
@@ -4726,7 +4740,7 @@ Will Be Blood&lt;&#x2F;a&gt;. Here&#x27;s the runner-ups:&lt;&#x2F;p&gt;
 &lt;&#x2F;ol&gt;
 &lt;p&gt;The year&#x27;s &lt;strong&gt;best female performance&lt;&#x2F;strong&gt; is a tie between that Rosario
 Dawson&#x27;s as the love interest in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;recent-movies-2009-04-14&quot;&gt;Seven Pounds&lt;&#x2F;a&gt;, and Tilda Swinton&#x27;s
-as fleeting lover in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;fincher-s-most-pointless-yet&quot;&gt;The Curious Case of Benjamin Button&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+as fleeting lover in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;finchers-most-pointless-yet&quot;&gt;The Curious Case of Benjamin Button&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;characters&quot;&gt;characters&lt;&#x2F;h3&gt;
 &lt;p&gt;Compared to last year, this year is lacklustre, except for desirable
 gals where Golshifteh Farahani (&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;recent-movies-2009-04-14&quot;&gt;Body of Lies&lt;&#x2F;a&gt;) and husky
@@ -6760,7 +6774,7 @@ Penn, on the other hand, gives the worst of his career, perhaps due to
 the shitty make-up and bad character development. The movie starts off
 well, with the superbly-made heroic antics of the Josh Brolin character,
 complete with excellent cinematography and production design. But soon
-after, it feels like a failed attempt at an &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;l-a-confidential-1997&quot;&gt;L.A. Confidential&lt;&#x2F;a&gt;, and got
+after, it feels like a failed attempt at an &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;la-confidential-1997&quot;&gt;L.A. Confidential&lt;&#x2F;a&gt;, and got
 unfunny humor and misguided romance.&lt;&#x2F;p&gt;
 </description>
             </item>
@@ -12910,7 +12924,7 @@ was no resolve.&lt;&#x2F;p&gt;
                 <pubDate>Sun, 02 Sep 2012 00:00:00 +0000</pubDate>
                 <link>http://tshepang.net/harry-potter-and-the-chamber-of-secrets-2002/</link>
                 <guid>http://tshepang.net/harry-potter-and-the-chamber-of-secrets-2002/</guid>
-                <description>&lt;p&gt;Not as enchanting as &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;harry-potter-and-the-sorcerer-s-stone-2001&quot;&gt;the first one&lt;&#x2F;a&gt; but scarier with far bigger
+                <description>&lt;p&gt;Not as enchanting as &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;harry-potter-and-the-sorcerers-stone-2001&quot;&gt;the first one&lt;&#x2F;a&gt; but scarier with far bigger
 effects, though none is spectacular, much of which is clumsy: the
 spiders, the snake, and the angry tree. More tiring than the first since
 it&#x27;s more of the same thing. The new ugly slave-like character is
@@ -13483,7 +13497,7 @@ Thomas&lt;&#x2F;a&gt;. I also stopped wajig from accepting UPPERCASE subcommands
 since a few people on the mailing list expressed dislike, and that
 includes project founder.&lt;&#x2F;p&gt;
 &lt;p&gt;Version 2.7, the version that will be in the next stable release of
-Debian [&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;debian-7-will-release-with-wajig-2-7-3&quot;&gt;update&lt;&#x2F;a&gt;], Wheezy (Debian 7), fixes two bugs, one of which I
+Debian [&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;debian-7-will-release-with-wajig-273&quot;&gt;update&lt;&#x2F;a&gt;], Wheezy (Debian 7), fixes two bugs, one of which I
 sort of intentionally broke in order to fix some issues with the
 &lt;code&gt;--simulate&lt;&#x2F;code&gt; and&#x2F;or &lt;code&gt;--teaching&lt;&#x2F;code&gt; options. Someone &lt;a href=&quot;http:&#x2F;&#x2F;bugs.debian.org&#x2F;670687&quot;&gt;did complain about
 this&lt;&#x2F;a&gt; which was good since it&#x27;s a good indicator that someone actually
@@ -14446,7 +14460,7 @@ programming&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
                 <pubDate>Wed, 11 Apr 2012 00:00:00 +0000</pubDate>
                 <link>http://tshepang.net/wajig-2-5-released/</link>
                 <guid>http://tshepang.net/wajig-2-5-released/</guid>
-                <description>&lt;p&gt;The release of &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;wajig-2-3-released&quot;&gt;wajig 2.3&lt;&#x2F;a&gt;, though important to me, caused varius
+                <description>&lt;p&gt;The release of &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;wajig-23-released&quot;&gt;wajig 2.3&lt;&#x2F;a&gt;, though important to me, caused varius
 complaints because it changed much of the UI. 2.5 goes a long way
 towards fixing those. What particularly helped guide this release is my
 creating a &lt;a href=&quot;http:&#x2F;&#x2F;groups.google.com&#x2F;group&#x2F;wajig&quot;&gt;mailing list&lt;&#x2F;a&gt;, just so that I can ask users for opinions on
@@ -16590,7 +16604,7 @@ all too common in society, and doing it in a very humorous way. This is
 brilliant humor by the way. The effort of making the costumes and the
 environment feel authentic is impressive. The only real annoyance is the
 character of Brian&#x27;s mom.&lt;&#x2F;p&gt;
-&lt;p&gt;Luckily, unlike &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;monty-python-s-quest-for-the-holy-grail-1975&quot;&gt;Holy Grail&lt;&#x2F;a&gt;, it doesn&#x27;t feel too much like a
+&lt;p&gt;Luckily, unlike &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;monty-pythons-quest-for-the-holy-grail-1975&quot;&gt;Holy Grail&lt;&#x2F;a&gt;, it doesn&#x27;t feel too much like a
 collection of gags.&lt;&#x2F;p&gt;
 </description>
             </item>
@@ -16602,10 +16616,10 @@ collection of gags.&lt;&#x2F;p&gt;
                 <guid>http://tshepang.net/monty-python-s-the-meaning-of-life-1983/</guid>
                 <description>&lt;p&gt;Lots of excellent humor (&lt;em&gt;the machine that goes PING&lt;&#x2F;em&gt;, &lt;em&gt;welcome to the
 middle of the movie&lt;&#x2F;em&gt;, &lt;em&gt;baby falling from pussy&lt;&#x2F;em&gt;, ...), perhaps even
-funnier than &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;monty-python-s-life-of-brian-1979&quot;&gt;Life of Brian&lt;&#x2F;a&gt;, though it was quite a surprise that it
+funnier than &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;monty-pythons-life-of-brian-1979&quot;&gt;Life of Brian&lt;&#x2F;a&gt;, though it was quite a surprise that it
 resorted to vomit humor, and the most disgusting in memory.&lt;&#x2F;p&gt;
 &lt;p&gt;This one was also disorganised as a whole movie, though not as much as
-&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;monty-python-s-quest-for-the-holy-grail-1975&quot;&gt;Holy Grail&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;monty-pythons-quest-for-the-holy-grail-1975&quot;&gt;Holy Grail&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
             </item>
         
@@ -18808,7 +18822,7 @@ exciting wish for one computer program to escape into the real world.
 There&#x27;s interesting artefacts, like a small rod that transforms into a
 vehicle at will, while the simulation of Jeff Bridge&#x27;s face is
 disappointing, especiallly considering the great work done to Brad
-Pitt&#x27;s face in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;fincher-s-most-pointless-yet&quot;&gt;The Curious Case of Benjamin Button&lt;&#x2F;a&gt;, which was
+Pitt&#x27;s face in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;finchers-most-pointless-yet&quot;&gt;The Curious Case of Benjamin Button&lt;&#x2F;a&gt;, which was
 released in 2008. The imagery is very (too) stylish. None of the
 performances are worthy of praise (did they have to cast Olivia
 Wilde!?).&lt;&#x2F;p&gt;
@@ -19210,7 +19224,7 @@ a quality performance by an immeasurably gorgeous leading lady, it just
 feels like... there isn&#x27;t anything remarkable.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;strong&gt;sidenotes&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
 &lt;ul&gt;
-&lt;li&gt;Jonathan Rosenbaum has an &lt;a href=&quot;http:&#x2F;&#x2F;www.jonathanrosenbaum.com&#x2F;?p=5780&quot;&gt;interesting comparison&lt;&#x2F;a&gt; to &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;schindler-s-list-1993&quot;&gt;Schindler&#x27;s
+&lt;li&gt;Jonathan Rosenbaum has an &lt;a href=&quot;http:&#x2F;&#x2F;www.jonathanrosenbaum.com&#x2F;?p=5780&quot;&gt;interesting comparison&lt;&#x2F;a&gt; to &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;schindlers-list-1993&quot;&gt;Schindler&#x27;s
 List&lt;&#x2F;a&gt;, citing &lt;em&gt;Black Book&lt;&#x2F;em&gt; to be morally more complex, and therefore
 less escapist.&lt;&#x2F;li&gt;
 &lt;li&gt;The mention of the movie &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;mata-hari-1931&quot;&gt;Mata Hari&lt;&#x2F;a&gt; inspired me to watch it.&lt;&#x2F;li&gt;
@@ -23607,7 +23621,7 @@ aware. Luckily the material received better treament in this &lt;em&gt;Hellboy
 choreography in Yuen Woo Ping&#x27;s absence. Oh, and I couldn&#x27;t help but
 notice that the walking fish is modeled after that talkative robot in
 &lt;em&gt;Star Wars&lt;&#x2F;em&gt;. It&#x27;s also obvious that some (at least one) of the creature
-designs were inspired by childkiller from &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;pan-s-labyrinth-2006&quot;&gt;Pan&#x27;s Labyrinth&lt;&#x2F;a&gt;, and much
+designs were inspired by childkiller from &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;pans-labyrinth-2006&quot;&gt;Pan&#x27;s Labyrinth&lt;&#x2F;a&gt;, and much
 of the designs look childish and unconvincing.&lt;&#x2F;p&gt;
 &lt;p&gt;R. Lee Ermey doesn&#x27;t miss a step in the bad and unnecessary horror
 flick, &lt;em&gt;The Texas Chainsaw Massacre: The Beginning&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
@@ -24504,7 +24518,7 @@ year&#x27;s best detective given her unrelenting focus in getting the job
 done. A special mention should go to John Heder&#x27;s goofy and
 kind-hearted ice skating champion in the delightful &lt;em&gt;Blades of Glory&lt;&#x2F;em&gt;.
 The &lt;strong&gt;best character design&lt;&#x2F;strong&gt; is the child-killing, pale monster in
-&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;pan-s-labyrinth-2006&quot;&gt;Pan&#x27;s Labyrinth&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;pans-labyrinth-2006&quot;&gt;Pan&#x27;s Labyrinth&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;visuals&quot;&gt;visuals&lt;&#x2F;h3&gt;
 &lt;p&gt;The year&#x27;s greatest spectacle &lt;em&gt;Transformers&lt;&#x2F;em&gt; is also the year&#x27;s best
 visual effects showcase, and should have tied with the runner-up,
