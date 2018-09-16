@@ -148,7 +148,7 @@ changes</a>.</p>
 submitted two related <a href="https://github.com/rust-lang/rust/pull/25756">documentation</a> <a href="https://github.com/rust-lang/rust/pull/25758">improvements</a>.</p>
 </li>
 <li>
-<p>I added syntax highlighting to the <a href="http://tshepang.net/tagss.html#rust-ref">Rust posts on my blog</a> that were
+<p>I added syntax highlighting to the <a href="http://tshepang.net/tags/rust">Rust posts on my blog</a> that were
 missing it. I also updated the code to run on modern Rust.</p>
 </li>
 <li>
@@ -156,49 +156,43 @@ missing it. I also updated the code to run on modern Rust.</p>
 well-written post, <a href="http://blog.rust-lang.org/2015/05/11/traits.html">Abstraction without overhead: traits in Rust</a>.
 One feature they have is they allow adding methods to types,
 including upstream ones, example being stdlib types as follows:</p>
-<p>::: {.sourcecode}
-rust</p>
-<p>trait Invert {</p>
-<p>:   fn invert(&amp;self) -&gt; f64;</p>
-<p>}</p>
-<p>impl Invert for i32 {</p>
-<p>:</p>
 <pre style="background-color:#2b303b">
-<span style="color:#c0c5ce;">fn invert(&amp;self) -&gt; f64 {
-</span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">:   1.0/(*self as f64)
+<span style="color:#b48ead;">trait </span><span style="color:#c0c5ce;">Invert {
+</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">invert</span><span style="color:#c0c5ce;">(&amp;</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">) -&gt; </span><span style="color:#b48ead;">f64</span><span style="color:#c0c5ce;">;
 </span><span style="color:#c0c5ce;">
 </span><span style="color:#c0c5ce;">}
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#b48ead;">impl </span><span style="color:#c0c5ce;">Invert </span><span style="color:#b48ead;">for </span><span style="color:#c0c5ce;">i32 {
+</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">invert</span><span style="color:#c0c5ce;">(&amp;</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">) -&gt; </span><span style="color:#b48ead;">f64 </span><span style="color:#c0c5ce;">{
+</span><span style="color:#c0c5ce;">        </span><span style="color:#d08770;">1.0</span><span style="color:#c0c5ce;">/(*</span><span style="color:#bf616a;">self </span><span style="color:#c0c5ce;">as </span><span style="color:#b48ead;">f64</span><span style="color:#c0c5ce;">)
+</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">}
+</span><span style="color:#c0c5ce;">}
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
+</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> foo = </span><span style="color:#d08770;">10_</span><span style="color:#b48ead;">i32</span><span style="color:#c0c5ce;">; assert_eq!(foo.</span><span style="color:#96b5b4;">invert</span><span style="color:#c0c5ce;">(), </span><span style="color:#d08770;">0.1</span><span style="color:#c0c5ce;">);
+</span><span style="color:#c0c5ce;">}
 </span></pre>
-<p>}</p>
-<p>fn main() {</p>
-<p>:   let foo = 10_i32; assert_eq!(foo.invert(), 0.1);</p>
-<p>}
-:::</p>
 <p>Another example is that one can limit the type of arguments accepted
 by a function, though it uses something of an ugly syntax:</p>
-<p>::: {.sourcecode}
-rust</p>
-<p>fn print_inverse&lt;T: Invert&gt;(foo: T) {</p>
-<p>:   println!(&quot;Inverse: {}&quot;, foo.invert());</p>
-<p>}
-:::</p>
+<pre style="background-color:#2b303b">
+<span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">print_inverse</span><span style="color:#c0c5ce;">&lt;T: Invert&gt;(</span><span style="color:#bf616a;">foo</span><span style="color:#c0c5ce;">: T) {
+</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">println!(&quot;</span><span style="color:#a3be8c;">Inverse: </span><span style="color:#d08770;">{}</span><span style="color:#c0c5ce;">&quot;, foo.</span><span style="color:#96b5b4;">invert</span><span style="color:#c0c5ce;">());
+</span><span style="color:#c0c5ce;">}
+</span></pre>
 <p>The <code>&lt;T: Invert&gt;</code> means this function will only accept <code>foo</code> whose
 type implements the <code>Invert</code> trait. You can check by calling it with
 an <code>i32</code> value, in which it will succeed:</p>
-<p>::: {.sourcecode}
-rust</p>
-<p>print_inverse(10_i32);
-:::</p>
+<pre style="background-color:#2b303b">
+<span style="color:#96b5b4;">print_inverse</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">10_</span><span style="color:#b48ead;">i32</span><span style="color:#c0c5ce;">);
+</span></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b">
 <span style="color:#c0c5ce;">Inverse: 0.1
 </span></pre>
 <p>Any other type will fail:</p>
-<p>::: {.sourcecode}
-rust</p>
-<p>print_inverse(10_f64);
-:::</p>
+<pre style="background-color:#2b303b">
+<span style="color:#96b5b4;">print_inverse</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">10_</span><span style="color:#b48ead;">f64</span><span style="color:#c0c5ce;">);
+</span></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b">
 <span style="color:#c0c5ce;">the trait `Invert` is not implemented for the type `f64` [E0277]
@@ -206,20 +200,13 @@ rust</p>
 <p>This allows for a feature named generics, where one can use multiple
 types for the same function. For example, that error will disappear
 if you got this:</p>
-<p>::: {.sourcecode}
-rust</p>
-<p>impl Invert for f64 {</p>
-<p>:</p>
 <pre style="background-color:#2b303b">
-<span style="color:#c0c5ce;">fn invert(&amp;self) -&gt; f64 {
-</span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">:   1.0/(*self)
-</span><span style="color:#c0c5ce;">
+<span style="color:#b48ead;">impl </span><span style="color:#c0c5ce;">Invert </span><span style="color:#b48ead;">for </span><span style="color:#c0c5ce;">f64 {
+</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">invert</span><span style="color:#c0c5ce;">(&amp;</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">) -&gt; </span><span style="color:#b48ead;">f64 </span><span style="color:#c0c5ce;">{
+</span><span style="color:#c0c5ce;">        </span><span style="color:#d08770;">1.0</span><span style="color:#c0c5ce;">/(*</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">)
+</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">}
 </span><span style="color:#c0c5ce;">}
-</span></pre>
-<p>}
-:::</p>
-</li>
+</span></pre></li>
 </ul>
 
     </div>

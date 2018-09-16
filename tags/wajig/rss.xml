@@ -54,7 +54,7 @@ as a way of verifying your identity).&lt;&#x2F;p&gt;
 shell completion tool, replacing the current hand-rolled solution. I
 find shell programming hard, and argcomplete, which is inspired by
 &lt;a href=&quot;http:&#x2F;&#x2F;furius.ca&#x2F;optcomplete&#x2F;&quot;&gt;optcomplete&lt;&#x2F;a&gt;, is a brilliant workaround.&lt;&#x2F;li&gt;
-&lt;li&gt;Someone asked me to restore gjig, the GUI tool that &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;wajig-21-released&quot;&gt;I removed from
+&lt;li&gt;Someone asked me to restore gjig, the GUI tool that &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;wajig-2-1-released&quot;&gt;I removed from
 wajig&lt;&#x2F;a&gt; some releases ago. This will be an opportunity to learn GTK+
 again. I did a bit of it, even contributing patches (&lt;a href=&quot;http:&#x2F;&#x2F;projects.gnome.org&#x2F;tracker&#x2F;&quot;&gt;Tracker
 project&lt;&#x2F;a&gt;), but was never quite confident. It&#x27;s very likely that I
@@ -64,7 +64,7 @@ won&#x27;t work on this... too much work.&lt;&#x2F;li&gt;
 get the point where they make wajig irrelevant. After all, wajig was
 created to be a wrapper that helps ease the mess.&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
-&lt;p&gt;Here&#x27;s the work I did in the past working on wajig, have a look at &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;tagss#wajig-ref&quot;&gt;its
+&lt;p&gt;Here&#x27;s the work I did in the past working on wajig, have a look at &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;tags&#x2F;wajig&quot;&gt;its
 tag&lt;&#x2F;a&gt;. Off the top of my head:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;improved, simplified packaging&lt;&#x2F;li&gt;
@@ -143,7 +143,7 @@ the fix was in before Debian 7 freeze.&lt;&#x2F;p&gt;
                 <pubDate>Wed, 11 Apr 2012 00:00:00 +0000</pubDate>
                 <link>http://tshepang.net/wajig-2-5-released/</link>
                 <guid>http://tshepang.net/wajig-2-5-released/</guid>
-                <description>&lt;p&gt;The release of &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;wajig-23-released&quot;&gt;wajig 2.3&lt;&#x2F;a&gt;, though important to me, caused varius
+                <description>&lt;p&gt;The release of &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;wajig-2-3-released&quot;&gt;wajig 2.3&lt;&#x2F;a&gt;, though important to me, caused varius
 complaints because it changed much of the UI. 2.5 goes a long way
 towards fixing those. What particularly helped guide this release is my
 creating a &lt;a href=&quot;http:&#x2F;&#x2F;groups.google.com&#x2F;group&#x2F;wajig&quot;&gt;mailing list&lt;&#x2F;a&gt;, just so that I can ask users for opinions on
