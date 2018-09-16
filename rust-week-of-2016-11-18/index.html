@@ -132,15 +132,14 @@
     <div class="post-content">
       <p>I was surprised by the ease of use of <a href="https://crates.io/crates/libflate">libflate</a> when decompressing a
 gzip'ed file:</p>
-<p>::: {.sourcecode}
-rust</p>
-<p>extern crate libflate;</p>
-<p>fn main() {</p>
-<p>:   let mut file = std::fs::<a href="http://tshepang.net/rust-week-of-2016-11-18/File::open">File::open</a>(&quot;file.gz&quot;).unwrap(); let file
-= libflate::gzip::Decoder::new(&amp;mut file).unwrap();
-do_something_with(file);</p>
-<p>};
-:::</p>
+<pre style="background-color:#2b303b">
+<span style="color:#b48ead;">extern crate</span><span style="color:#c0c5ce;"> libflate;
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
+</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">let mut</span><span style="color:#c0c5ce;"> file = std::fs::&lt;</span><span style="color:#b48ead;">File::</span><span style="color:#c0c5ce;">open&gt;(&quot;</span><span style="color:#a3be8c;">file.gz</span><span style="color:#c0c5ce;">&quot;).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> file = libflate::gzip::Decoder::new(&amp;</span><span style="color:#b48ead;">mut</span><span style="color:#c0c5ce;"> file).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+</span><span style="color:#c0c5ce;">    </span><span style="color:#96b5b4;">do_something_with</span><span style="color:#c0c5ce;">(file);
+</span><span style="color:#c0c5ce;">};
+</span></pre>
 <p>And that's it, <code>file</code> is now like a normal file!</p>
 <p>Another module I used for the first time is <a href="https://crates.io/crates/regex">regex</a>, which seems to have
 such a well-designed API actually.</p>

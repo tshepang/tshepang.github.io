@@ -1375,15 +1375,14 @@ story is also fascinating and so is the technology.&lt;&#x2F;p&gt;
                 <guid>http://tshepang.net/rust-week-of-2016-11-18/</guid>
                 <description>&lt;p&gt;I was surprised by the ease of use of &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;libflate&quot;&gt;libflate&lt;&#x2F;a&gt; when decompressing a
 gzip&#x27;ed file:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;extern crate libflate;&lt;&#x2F;p&gt;
-&lt;p&gt;fn main() {&lt;&#x2F;p&gt;
-&lt;p&gt;:   let mut file = std::fs::&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;rust-week-of-2016-11-18&#x2F;File::open&quot;&gt;File::open&lt;&#x2F;a&gt;(&amp;quot;file.gz&amp;quot;).unwrap(); let file
-= libflate::gzip::Decoder::new(&amp;amp;mut file).unwrap();
-do_something_with(file);&lt;&#x2F;p&gt;
-&lt;p&gt;};
-:::&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#b48ead;&quot;&gt;extern crate&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; libflate;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let mut&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; file = std::fs::&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;File::&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;open&amp;gt;(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;file.gz&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;();
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; file = libflate::gzip::Decoder::new(&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;mut&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; file).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;();
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;do_something_with&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(file);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;};
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;And that&#x27;s it, &lt;code&gt;file&lt;&#x2F;code&gt; is now like a normal file!&lt;&#x2F;p&gt;
 &lt;p&gt;Another module I used for the first time is &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;regex&quot;&gt;regex&lt;&#x2F;a&gt;, which seems to have
 such a well-designed API actually.&lt;&#x2F;p&gt;
