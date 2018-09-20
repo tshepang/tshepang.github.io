@@ -6,7 +6,47 @@
         <generator>Gutenberg</generator>
         <language>en</language>
         <atom:link href="http://tshepang.net/rss.xml/" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Fri, 14 Sep 2018 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 20 Sep 2018 00:00:00 +0000</lastBuildDate>
+        
+            <item>
+                <title>speed of current laptop</title>
+                <pubDate>Thu, 20 Sep 2018 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/speed-of-current-laptop/</link>
+                <guid>http://tshepang.net/speed-of-current-laptop/</guid>
+                <description>&lt;p&gt;Few weeks ago I got me a new laptop (battery circuitry of my old Asus
+UX305 got fried).  This one is Asus UX410, with Intel i7-8550U
+processor and 16GB of DDR4 RAM.&lt;&#x2F;p&gt;
+&lt;p&gt;To check performance, I use &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;serde-rs&#x2F;json-benchmark&quot;&gt;Rust JSON Benchmark&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;git clone https:&#x2F;&#x2F;github.com&#x2F;serde-rs&#x2F;json-benchmark
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cd json-benchmark
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;git rev-parse HEAD
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rustc --version
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cargo run --release --bin json-benchmark
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Results:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;9eae8499c19ecdf3531d72451e0172b56e570c99
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rustc 1.29.0 (aa3ca1994 2018-09-11)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Finished release [optimized + debuginfo] target(s) in 0.04s
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Running &#96;target&#x2F;release&#x2F;json-benchmark&#96;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;                                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;DOM                STRUCT
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;======= serde_json ======= parse|stringify === parse|stringify ===
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;data&#x2F;canada.json           9.3ms     5.3ms     3.3ms     4.2ms
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;data&#x2F;citm_catalog.json     5.5ms     1.5ms     1.7ms     1.2ms
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;data&#x2F;twitter.json          2.1ms     0.9ms     0.9ms     0.8ms
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;======= json-rust ======== parse|stringify === parse|stringify ===
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;data&#x2F;canada.json           6.1ms     3.0ms
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;data&#x2F;citm_catalog.json     2.8ms     0.7ms
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;data&#x2F;twitter.json          1.2ms     0.5ms
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;==== rustc_serialize ===== parse|stringify === parse|stringify ===
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;data&#x2F;canada.json          14.6ms    33.4ms    19.3ms    48.5ms
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;data&#x2F;citm_catalog.json    11.6ms     3.1ms    15.4ms     2.9ms
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;data&#x2F;twitter.json          6.3ms     1.5ms     7.9ms     1.4ms
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
+            </item>
         
             <item>
                 <title>1st FLOSS patch contribution</title>
@@ -561,9 +601,9 @@ writing).&lt;&#x2F;p&gt;
                 <guid>http://tshepang.net/rust-weeks-of-2017-09-14-to-2017-09-28/</guid>
                 <description>&lt;p&gt;Over the past 3 weeks, I continued work on &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;rust-week-of-2017-09-07&quot;&gt;a project I mentioned
 previously&lt;&#x2F;a&gt;, a CLI UI for work. In addition to dependencies mentioned
-there, I used &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zonyitoo&#x2F;rust-ini&quot;&gt;rust-ini&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;dtolnay&#x2F;serde-yaml&quot;&gt;serde_yaml&lt;&#x2F;a&gt;, I mostly enjoyed the
+there, I used &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zonyitoo&#x2F;rust-ini&quot;&gt;rust-ini&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;dtolnay&#x2F;serde-yaml&quot;&gt;serde_yaml&lt;&#x2F;a&gt;. I mostly enjoyed the
 experience, though not too happy with the code, which feels messy... I
-use &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;termion&#x2F;1.5.1&#x2F;termion&#x2F;struct.AsyncReader.html&quot;&gt;termion::AsynReader&lt;&#x2F;a&gt;, which means I have to loop all over the place
+use [termion::AsyncReader], which means I have to loop all over the place
 while waiting for stdin (keyboard input). I imagine there is a better
 way.&lt;&#x2F;p&gt;
 </description>
@@ -704,7 +744,7 @@ Finally!&lt;&#x2F;p&gt;
 ensuring I do not skip a week sitting idle. It worked in that, indeed,
 no 7 days passed without a single contribution to the ecosystem, no
 matter how tiny, and this has been going on for over a 100 weeks (i.e.
-&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;rust-week-of-2015-05-15&quot;&gt;since 2015-05-15&lt;&#x2F;a&gt;, also Rust 1.0 release date).&lt;&#x2F;p&gt;
+&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;rust-week-of-2015-05-15&quot;&gt;since 2015-05-15&lt;&#x2F;a&gt;, the Rust 1.0 release date).&lt;&#x2F;p&gt;
 &lt;p&gt;The problem is I felt silly recording the tiny parts, stuff like a typo
 fixes, just to keep this going. Well, it&#x27;s time to stop that. I intend
 to avoid recording such, and if it means no blog post for that week, so
@@ -8102,7 +8142,7 @@ can move onto becoming a Maintainer.&lt;&#x2F;p&gt;
 &lt;p&gt;This is someone who suggests improvements to the project. Depending
 on the project, any of these are used: a mailing list, an IRC
 channel, a social networking service, email, or a dedicated
-Issue&#x2F;Bug tracking system can be used.&lt;&#x2F;p&gt;
+Issue&#x2F;Bug tracking system.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;User&lt;&#x2F;p&gt;
