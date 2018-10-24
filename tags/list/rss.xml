@@ -6,29 +6,11 @@
         <generator>Gutenberg</generator>
         <language>en</language>
         <atom:link href="http://tshepang.net/tags/list/rss.xml/" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Thu, 13 Sep 2018 00:00:00 +0000</lastBuildDate>
-        
-            <item>
-                <title>favorite FLOSS</title>
-                <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/favorite-floss/</link>
-                <guid>http://tshepang.net/favorite-floss/</guid>
-                <description>&lt;p&gt;For a piece of &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Free_and_open-source_software&quot;&gt;FLOSS&lt;&#x2F;a&gt; (free&#x2F;libre and open source software) to be here,
-it has to both be personally useful and I have to like it a-lot:&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;desktop&lt;&#x2F;strong&gt;: &lt;a href=&quot;http:&#x2F;&#x2F;dwm.suckless.org&quot;&gt;dwm&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;web browser&lt;&#x2F;strong&gt;: Firefox&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;development&lt;&#x2F;strong&gt;: Emacs, Meld&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;file manager&lt;&#x2F;strong&gt;: Emacs (Dired mode)&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;misc utilities:&lt;&#x2F;strong&gt; &lt;a href=&quot;http:&#x2F;&#x2F;blog.burntsushi.net&#x2F;ripgrep&quot;&gt;ripgrep&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;project-of-note-sudo&quot;&gt;Sudo&lt;&#x2F;a&gt;, Lsof, less, procps (top, watch),
-Ex Falso, gnumeric, coreutils (head, tail),
-&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;project-of-note-linkchecker&quot;&gt;LinkChecker&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;guichaz.free.fr&#x2F;iotop&quot;&gt;Iotop&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;project-of-note-rdiff-backup&quot;&gt;rdiff-backup&lt;&#x2F;a&gt;, OpenSSH, &lt;a href=&quot;http:&#x2F;&#x2F;humdi.net&#x2F;vnstat&quot;&gt;vnstat&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;tmux.sourceforge.net&quot;&gt;tmux&lt;&#x2F;a&gt;, File
-Roller, youtube-dl&lt;&#x2F;p&gt;
-</description>
-            </item>
+        <lastBuildDate>Thu, 25 Oct 2018 00:00:00 +0000</lastBuildDate>
         
             <item>
                 <title>FLOSS I use a-lot</title>
-                <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
+                <pubDate>Thu, 25 Oct 2018 00:00:00 +0000</pubDate>
                 <link>http://tshepang.net/floss-i-use-a-lot/</link>
                 <guid>http://tshepang.net/floss-i-use-a-lot/</guid>
                 <description>&lt;p&gt;Following are tools I use a lot, but am not necessarily loving...
@@ -40,14 +22,14 @@ There is &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;favorite-floss&quot
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;my-current-desktop-setup&quot;&gt;dwm&lt;&#x2F;a&gt;: simple and clean window management&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tmux.sourceforge.net&quot;&gt;tmux&lt;&#x2F;a&gt;: amazingly powerful, though I wish it had less rendering bugs&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;Emacs&lt;&#x2F;strong&gt;: pleasant text editing and file management&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;bash&lt;&#x2F;strong&gt;, and &lt;strong&gt;fish&lt;&#x2F;strong&gt;: the latter is new to me, and still under
-evaluation... it&#x27;s a far more pretty ui, with a fancy completion
-system that also gets in the way rather often&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;bash&lt;&#x2F;strong&gt;, and &lt;strong&gt;fish&lt;&#x2F;strong&gt;: the latter is new to me, and likely here to stay...
+it&#x27;s a far more pretty ui, with a fancy completion
+system, which sadly gets in the way rather often&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;&lt;em&gt;software development&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;cargo&lt;&#x2F;strong&gt;: primary tool for Rust development&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Git&lt;&#x2F;strong&gt;: this one has won the mindshare... using it for work and open source&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Git&lt;&#x2F;strong&gt;: this one has won the mindshare&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;Mercurial&lt;&#x2F;strong&gt;: slight preference over Git&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;&lt;em&gt;work&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
@@ -59,6 +41,7 @@ central servers&lt;&#x2F;p&gt;
 &lt;li&gt;&lt;strong&gt;VirtualBox&lt;&#x2F;strong&gt;: these remotes can be virtual... great for testing&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;journalctl&lt;&#x2F;strong&gt; &amp;amp; &lt;strong&gt;sysmtemctl&lt;&#x2F;strong&gt;: these remotes run systemd&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;Elasticsearch&lt;&#x2F;strong&gt;: the data store&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Ubuntu&lt;&#x2F;strong&gt;: the OS running these remotes, and the server (&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;i-am-a-very-jealous-person&quot;&gt;I jealous&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;&lt;em&gt;GUI applications&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;ul&gt;
@@ -99,6 +82,24 @@ sort of replacement for shell scripting&lt;&#x2F;li&gt;
 and the most important non-dev tool written in Rust&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;project-of-note-sudo&quot;&gt;Iotop&lt;&#x2F;a&gt;: nifty I&#x2F;O usage viewer&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>favorite FLOSS</title>
+                <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/favorite-floss/</link>
+                <guid>http://tshepang.net/favorite-floss/</guid>
+                <description>&lt;p&gt;For a piece of &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Free_and_open-source_software&quot;&gt;FLOSS&lt;&#x2F;a&gt; (free&#x2F;libre and open source software) to be here,
+it has to both be personally useful and I have to like it a-lot:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;desktop&lt;&#x2F;strong&gt;: &lt;a href=&quot;http:&#x2F;&#x2F;dwm.suckless.org&quot;&gt;dwm&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;web browser&lt;&#x2F;strong&gt;: Firefox&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;development&lt;&#x2F;strong&gt;: Emacs, Meld&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;file manager&lt;&#x2F;strong&gt;: Emacs (Dired mode)&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;misc utilities:&lt;&#x2F;strong&gt; &lt;a href=&quot;http:&#x2F;&#x2F;blog.burntsushi.net&#x2F;ripgrep&quot;&gt;ripgrep&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;project-of-note-sudo&quot;&gt;Sudo&lt;&#x2F;a&gt;, Lsof, less, procps (top, watch),
+Ex Falso, gnumeric, coreutils (head, tail),
+&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;project-of-note-linkchecker&quot;&gt;LinkChecker&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;guichaz.free.fr&#x2F;iotop&quot;&gt;Iotop&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;project-of-note-rdiff-backup&quot;&gt;rdiff-backup&lt;&#x2F;a&gt;, OpenSSH, &lt;a href=&quot;http:&#x2F;&#x2F;humdi.net&#x2F;vnstat&quot;&gt;vnstat&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;tmux.sourceforge.net&quot;&gt;tmux&lt;&#x2F;a&gt;, File
+Roller, youtube-dl&lt;&#x2F;p&gt;
 </description>
             </item>
         
