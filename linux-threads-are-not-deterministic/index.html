@@ -137,7 +137,7 @@ rust</p>
 <p>use std::thread; use std::sync::mpsc::channel;</p>
 <p>fn main() {</p>
 <p>:   let thread_count = 4; let (tx, rx) = channel();</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">for x in 0..thread_count {
 </span><span style="color:#c0c5ce;">
 </span><span style="color:#c0c5ce;">:   let tx = tx.clone(); thread::spawn(move || { println!(&quot;t{}
@@ -156,11 +156,11 @@ rust</p>
 <p>What I'm doing there is create 4 child threads, from which I send
 messages that are to be captured by the main thread.</p>
 <p>I built and ran it with:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">rustc --opt-level 0 main.rs &amp;&amp; ./main
 </span></pre>
 <p>Following is output from one sample run:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">t1 tx
 </span><span style="color:#c0c5ce;">t0 tx
 </span><span style="color:#c0c5ce;">t2 tx
@@ -171,7 +171,7 @@ messages that are to be captured by the main thread.</p>
 </span><span style="color:#c0c5ce;">rx from t2
 </span></pre>
 <p>Following is what I get with another run:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">t0 tx
 </span><span style="color:#c0c5ce;">t1 tx
 </span><span style="color:#c0c5ce;">rx from t1

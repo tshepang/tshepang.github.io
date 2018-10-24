@@ -136,7 +136,7 @@ subset of the official repository of a specific arch, but only of
 packages that I ever install.</p>
 <hr />
 <p>Every once in a while, I run this command:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang
 </span><span style="color:#c0c5ce;">/var/cache/apt/archives/*deb
 </span></pre>
@@ -147,7 +147,7 @@ packages that matter to me for any later install.</p>
 <p>Note that <code>tshepang</code> is the name of the repository. It's an unofficial
 equivalent of <code>testing</code> and <code>unstable</code>.</p>
 <p>Another command that I sometimes run, though less frequently, is:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang
 </span><span style="color:#c0c5ce;">/var/cache/apt/archives/*deb
 </span></pre>
@@ -156,11 +156,11 @@ post</a> for an explanation.</p>
 <p>Even less frequently, it happens that some package files are no longer
 referenced (i.e. not found in <code>Package.gz</code>) for some reason. Here's
 handy command to display them:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">$ reprepro --basedir ~/.custom_repo dumpunreferenced
 </span></pre>
 <p>And here's another that actually gets rid of them:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">$ reprepro --basedir ~/.custom_repo deleteunreferenced
 </span></pre>
     </div>

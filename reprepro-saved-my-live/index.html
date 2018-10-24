@@ -135,7 +135,7 @@
 <p>That's a joke title, but <a href="http://mirrorer.alioth.debian.org/">that fabulous tool</a> really did help me a lot.
 When doing package builds, all I need to run is the following after a
 build:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">$ rm *udeb
 </span><span style="color:#c0c5ce;">$ reprepro --basedir ~/.repo_directory includedeb sid *deb
 </span><span style="color:#c0c5ce;">$ sudo apt-get update
@@ -146,7 +146,7 @@ reprepro-managed Debian repository while also making them available in
 the Packages file, and the third updates the system's apt database in
 order to pick up the changes. Also, if I want to get rid of something
 from the repo, all I do is:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">$ reprepro --basedir ~/.repo_directory removesrc sid glibc
 </span></pre>
 <p>I don't know why anyone would love to remove glibc binary packages, but

@@ -133,14 +133,14 @@
       <p>Requests is a Python module that makes it real easy to deal with HTTP.
 As an example, something as scary as fetching a web page that needs
 authentication requires only a single line of code:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">requests.get(&quot;https://example.com&quot;, auth=(&quot;user&quot;, &quot;pass&quot;))
 </span></pre>
 <p>It's capable of <a href="http://docs.python-requests.org/en/latest/index.html#feature-support">a lot more</a> of course (<a href="http://docs.python-requests.org/en/latest/user/quickstart/">tutorial</a>), and it's weird
 that something this nice hasn't been around for ages. There is another
 that is much simpler to use and more advanced than Python's standard
 library named <a href="http://code.google.com/p/httplib2/">httplib2</a>, but it's not quite as simple/elegant:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">h = httplib2.Http(&quot;.cache&quot;)  // ugly
 </span><span style="color:#c0c5ce;">h.add_credentials(&quot;user&quot;, &quot;pass&quot;)
 </span><span style="color:#c0c5ce;">resp, content = h.request(&quot;https://example.com&quot;)

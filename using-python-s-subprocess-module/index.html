@@ -149,23 +149,23 @@
       <p>There are at least 2 ways to run a simple command like <code>echo test</code> in
 Python: via the shell, or directly (via the kernel).</p>
 <p>This is via the shell:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">import subprocess
 </span><span style="color:#c0c5ce;">subprocess.Popen(&quot;echo test&quot;, shell=True)
 </span></pre>
 <p>Output:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">test
 </span></pre>
 <p>This is via the kernel:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">import subprocess
 </span><span style="color:#c0c5ce;">p = subprocess.Popen([&quot;echo&quot;, &quot;test&quot;], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 </span><span style="color:#c0c5ce;">output = p.communicate()
 </span><span style="color:#c0c5ce;">print(output)
 </span></pre>
 <p>Output:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">(b&#39;testn&#39;, b&#39;&#39;)
 </span></pre>
 <p>Not exactly what we want. The output is actually a tuple (<strong>stdout</strong>,
@@ -173,14 +173,14 @@ Python: via the shell, or directly (via the kernel).</p>
 not stated here.</p>
 <p>To get the equivalent of what we get from the first example, we have to
 do a bit more work:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">import subprocess
 </span><span style="color:#c0c5ce;">p = subprocess.Popen([&quot;echo&quot;, &quot;test&quot;], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 </span><span style="color:#c0c5ce;">output = p.communicate()
 </span><span style="color:#c0c5ce;">print(output[0].decode(), end=&quot;&quot;)
 </span></pre>
 <p>Output:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">test
 </span></pre>
 <p>The <code>b</code> thing indicates that the string is in bytes format. To get a

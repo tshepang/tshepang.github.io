@@ -147,14 +147,14 @@ it&#x27;s not hard, and there&#x27;s examples out there. It just takes a while
 since there isn&#x27;t a comprehensive guide I could find.&lt;&#x2F;p&gt;
 &lt;p&gt;For my login manager, I use &lt;a href=&quot;http:&#x2F;&#x2F;www.freedesktop.org&#x2F;wiki&#x2F;Software&#x2F;LightDM&quot;&gt;LightDM&lt;&#x2F;a&gt;. I added this line to its
 configuration, in &lt;code&gt;[SeatDefaults]&lt;&#x2F;code&gt; section:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;greeter-hide-users=false
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;It removes the need to manually enter my username each time I want to
 login.&lt;&#x2F;p&gt;
 &lt;p&gt;Reason I&#x27;m not using GDM? I wanted something light, which also
 wouldn&#x27;t pull in dozens of packages that I won&#x27;t use. For example:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ sudo apt-get install --no-install-recommends gdm3
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Reading package lists... Done
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Building dependency tree
@@ -211,7 +211,7 @@ well for years, but I&#x27;m not interested in all those tools it brings
 with.&lt;&#x2F;p&gt;
 &lt;p&gt;Anyways, enough with that. I added a custom &lt;code&gt;.desktop&lt;&#x2F;code&gt; file which will
 become selectable on LightDM UI:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ cat &#x2F;usr&#x2F;share&#x2F;xsessions&#x2F;custom.desktop
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[Desktop Entry]
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Name=Custom
@@ -220,7 +220,7 @@ become selectable on LightDM UI:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;On selecting the entry labeled &lt;strong&gt;Custom&lt;&#x2F;strong&gt; that appears on LightDM, and
 logging in, the following will get executed (&lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;custom&#x2F;src&#x2F;tip&#x2F;xsession&quot;&gt;~&#x2F;.xsession&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;# apps
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;xfce4-terminal --hide-menubar --tab --tab --tab &amp;amp;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;firefox &amp;amp;
@@ -260,7 +260,7 @@ logging in, the following will get executed (&lt;a href=&quot;https:&#x2F;&#x2F;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;exec dwm
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Finally, this is what my dwm config changes look like (&lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;custom&#x2F;src&#x2F;tip&#x2F;config.def.h&quot;&gt;config.def.h&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;diff --git a&#x2F;config.def.h b&#x2F;config.def.h
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;index 77ff358..78af5d6 100644
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+++ a&#x2F;config.def.h
@@ -348,7 +348,7 @@ will have to rely on &lt;a href=&quot;http:&#x2F;&#x2F;www.rankingthebrands.com&
                 <link>http://tshepang.net/my-first-debian-upload/</link>
                 <guid>http://tshepang.net/my-first-debian-upload/</guid>
                 <description>&lt;p&gt;Output of my first ever upload to Debian (using &lt;a href=&quot;http:&#x2F;&#x2F;packages.debian.org&#x2F;dput&quot;&gt;dput&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;Trying to upload package to ftp-master (ftp.upload.debian.org)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Checking signature on .changes
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;gpg: Signature made Sun 13 Oct 2013 09:21:35 SAST using RSA key ID 500BF4A2
@@ -405,7 +405,7 @@ it&#x27;s still slow as fuck.&lt;&#x2F;p&gt;
 for recovery in case of issues. It was painful to use since it&#x27;s so
 slow, and kept inserting wrong characters in place of the username. It
 also tends to fail with the message:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;Failed to establish a connection to the console. Please reload.
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;It&#x27;s not a big issue anyways, since this will be a rarely-used feature.&lt;&#x2F;p&gt;
@@ -524,7 +524,7 @@ python3-apt gpm&lt;&#x2F;p&gt;
 &lt;p&gt;-s ~&#x2F;.custom_repo &#x2F;var&#x2F;www&#x2F;custom_repo
 :::&lt;&#x2F;p&gt;
 &lt;p&gt;Contents of Debian repository list file:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ cat &#x2F;etc&#x2F;apt&#x2F;sources.list
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;deb file:&#x2F;home&#x2F;wena&#x2F;.custom_repo tshepang main
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;deb http:&#x2F;&#x2F;debian.mirror.ac.za&#x2F;debian wheezy main contrib non-free
@@ -532,7 +532,7 @@ python3-apt gpm&lt;&#x2F;p&gt;
 &lt;p&gt;The &lt;code&gt;tshepang&lt;&#x2F;code&gt; codename refers to my custom repository, the one managed
 by &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;project-of-note-reprepro&quot;&gt;reprepro&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;Contents of &lt;strong&gt;sudo&lt;&#x2F;strong&gt; setup file:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ sudo cat &#x2F;etc&#x2F;sudoers
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Defaults env_reset
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Defaults mail_badpass
@@ -630,7 +630,7 @@ subset of the official repository of a specific arch, but only of
 packages that I ever install.&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;p&gt;Every once in a while, I run this command:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ reprepro -vv --basedir ~&#x2F;.custom_repo&#x2F; includedeb tshepang
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;var&#x2F;cache&#x2F;apt&#x2F;archives&#x2F;*deb
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
@@ -641,7 +641,7 @@ packages that matter to me for any later install.&lt;&#x2F;p&gt;
 &lt;p&gt;Note that &lt;code&gt;tshepang&lt;&#x2F;code&gt; is the name of the repository. It&#x27;s an unofficial
 equivalent of &lt;code&gt;testing&lt;&#x2F;code&gt; and &lt;code&gt;unstable&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;Another command that I sometimes run, though less frequently, is:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ reprepro -vv --basedir ~&#x2F;.custom_repo&#x2F; includedeb tshepang
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;var&#x2F;cache&#x2F;apt&#x2F;archives&#x2F;*deb
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
@@ -650,11 +650,11 @@ post&lt;&#x2F;a&gt; for an explanation.&lt;&#x2F;p&gt;
 &lt;p&gt;Even less frequently, it happens that some package files are no longer
 referenced (i.e. not found in &lt;code&gt;Package.gz&lt;&#x2F;code&gt;) for some reason. Here&#x27;s
 handy command to display them:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ reprepro --basedir ~&#x2F;.custom_repo dumpunreferenced
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;And here&#x27;s another that actually gets rid of them:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ reprepro --basedir ~&#x2F;.custom_repo deleteunreferenced
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
             </item>
@@ -738,7 +738,7 @@ standard&#x2F;natural, where each of the wajig COMMANDS are 1st-class
 citizens. Let me give an example of user wanting to install a
 package named nautilus, but avoid installing its Recommends
 depencencies:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;# ole
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;wajig —norecommends INSTALL nautilus
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;# new
@@ -754,7 +754,7 @@ next user-visible change.&lt;&#x2F;p&gt;
 &lt;li&gt;
 &lt;p&gt;There is less magic and more strictness. Previously, these commands
 resulted in the same outcome:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;wajig REMOVEORPHANS
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;wajig REMOVE-ORPHANS
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;wajig R-____EMOVE-ORPH+++-___AN_S
@@ -810,7 +810,7 @@ whenever I fetch and install Debian packages (e.g. &lt;code&gt;apt-get upgrade&l
 also keep them in a local custom repository. I use a great tool named
 &lt;a href=&quot;http:&#x2F;&#x2F;mirrorer.alioth.debian.org&#x2F;&quot;&gt;reprepro&lt;&#x2F;a&gt; for this, and this is the command I use to update that
 repository, given the location of the fresh package files:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ reprepro -vv --basedir ~&#x2F;.custom_repo&#x2F; includedeb tshepang &#x2F;var&#x2F;cache&#x2F;apt&#x2F;archives&#x2F;*deb
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;What&#x27;s nice about the command is that, if there is an older version of
@@ -834,7 +834,7 @@ using that package, it is just a waste of resources (CPU and disk
 usage).&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;To help with the cleanup, I have written the following simple script:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;#!&#x2F;usr&#x2F;bin&#x2F;env python3
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;import apt_pkg
@@ -870,7 +870,7 @@ usage).&lt;&#x2F;li&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;main()
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;And here&#x27;s a snippet of its output:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;cx-oracle:
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Installed: 5.1.1-2
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Candidate: 5.1.1-2
@@ -1139,7 +1139,7 @@ participate in upstream discussions.&lt;&#x2F;p&gt;
                 <guid>http://tshepang.net/comparing-debian-repositories/</guid>
                 <description>&lt;p&gt;If you got two Debian repositories, it&#x27;s quite easy to check the
 differences in package versions between them:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import os
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;import gzip
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;import apt_pkg
@@ -1163,7 +1163,7 @@ differences in package versions between them:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;The line &lt;code&gt;import apt_pkg&lt;&#x2F;code&gt; implies that &lt;strong&gt;python3-apt&lt;&#x2F;strong&gt; is installed.&lt;&#x2F;p&gt;
 &lt;p&gt;Here&#x27;s a snippet of what the output will look like:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;2.32.1-2    2.28.1-6    (gconf-defaults-service)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0.23.0-1    0.21.1-1    (pylint)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;2.91.5-2    2.30.2-2    (libgnomekbd-common)
@@ -1198,7 +1198,7 @@ oracle-instantclient11.2-basic*.rpm (~40MB).&lt;&#x2F;li&gt;
 specific processor (in my case, 3.1 and i386 respectively).&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;&lt;strong&gt;installation and setup&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;sudo apt-get install libpython3.1 libaio1 alien
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sudo alien --install oracle-instantclient11.2-basic*rpm cx_Oracle*rpm
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sudo ln -s &#x2F;usr&#x2F;lib&#x2F;python3.1&#x2F;site-packages&#x2F;cx_Oracle.so &#x2F;usr&#x2F;lib&#x2F;python3.1&#x2F;lib-dynload
@@ -1308,7 +1308,7 @@ use it to create 2 repos:&lt;&#x2F;p&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;How this works is that I&#x27;d run the following command (an example for
 the source repo):&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;usr&#x2F;bin&#x2F;debmirror
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;--verbose
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;--progress
@@ -1341,7 +1341,7 @@ debmirror, and I think it can do what debmirror does (but I don&#x27;t yet
 care to learn how).&lt;&#x2F;p&gt;
 &lt;p&gt;Moving on, here&#x27;s the relevant entries from my &#x2F;etc&#x2F;apt&#x2F;sources.list
 file:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;# local repos (debmirror)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;deb file:&#x2F;home&#x2F;wena&#x2F;.repo_bin sid main
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;deb-src file:&#x2F;home&#x2F;wena&#x2F;.repo_src sid main
@@ -1353,17 +1353,17 @@ file:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;deb ftp:&#x2F;&#x2F;ftp.sun.ac.za&#x2F;ftp&#x2F;debian&#x2F; sid main non-free contrib
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;So, what I do on a semi-regular basis is run:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ wajig update &amp;amp;&amp;amp; wajig upgrade
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;The newly-updated packages are stored in a cache so that a reinstall
 doesn&#x27;t have to fetch from network again. After this I run:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ reprepro -vv --basedir ~&#x2F;.repo_local includedeb cache &#x2F;var&#x2F;cache&#x2F;apt&#x2F;archives&#x2F;*deb
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;This updates the local reprepro repo and after which I can then remove
 the cached packages:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ wajig clean
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;I do that because they are now available in my reprepro-managed repo.
@@ -1472,7 +1472,7 @@ among the most senior of all, having been involved since 1995.&lt;&#x2F;p&gt;
 &lt;p&gt;That&#x27;s a joke title, but &lt;a href=&quot;http:&#x2F;&#x2F;mirrorer.alioth.debian.org&#x2F;&quot;&gt;that fabulous tool&lt;&#x2F;a&gt; really did help me a lot.
 When doing package builds, all I need to run is the following after a
 build:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ rm *udeb
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ reprepro --basedir ~&#x2F;.repo_directory includedeb sid *deb
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ sudo apt-get update
@@ -1483,7 +1483,7 @@ reprepro-managed Debian repository while also making them available in
 the Packages file, and the third updates the system&#x27;s apt database in
 order to pick up the changes. Also, if I want to get rid of something
 from the repo, all I do is:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ reprepro --basedir ~&#x2F;.repo_directory removesrc sid glibc
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;I don&#x27;t know why anyone would love to remove glibc binary packages, but

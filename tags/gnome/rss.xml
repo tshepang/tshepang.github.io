@@ -17,7 +17,7 @@
 I sent a patch that slightly improved the README of &lt;a href=&quot;http:&#x2F;&#x2F;projects.gnome.org&#x2F;tracker&#x2F;&quot;&gt;Tracker&lt;&#x2F;a&gt;,
 a project that is meant to be a data indexer (like &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Google_Desktop&quot;&gt;Google  Desktop&lt;&#x2F;a&gt;) and much more.
 It is the first ever FLOSS contribution I ever made:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;--- &#x2F;home&#x2F;wena&#x2F;FLOSS&#x2F;src&#x2F;tracker-0.5.3&#x2F;ChangeLog
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+++ &#x2F;home&#x2F;wena&#x2F;FLOSS&#x2F;src&#x2F;tracker-0.5.3-note-on-threadsafety&#x2F;ChangeLog
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;@@ -1,3 +1,6 @@
@@ -70,14 +70,14 @@ it&#x27;s not hard, and there&#x27;s examples out there. It just takes a while
 since there isn&#x27;t a comprehensive guide I could find.&lt;&#x2F;p&gt;
 &lt;p&gt;For my login manager, I use &lt;a href=&quot;http:&#x2F;&#x2F;www.freedesktop.org&#x2F;wiki&#x2F;Software&#x2F;LightDM&quot;&gt;LightDM&lt;&#x2F;a&gt;. I added this line to its
 configuration, in &lt;code&gt;[SeatDefaults]&lt;&#x2F;code&gt; section:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;greeter-hide-users=false
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;It removes the need to manually enter my username each time I want to
 login.&lt;&#x2F;p&gt;
 &lt;p&gt;Reason I&#x27;m not using GDM? I wanted something light, which also
 wouldn&#x27;t pull in dozens of packages that I won&#x27;t use. For example:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ sudo apt-get install --no-install-recommends gdm3
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Reading package lists... Done
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Building dependency tree
@@ -134,7 +134,7 @@ well for years, but I&#x27;m not interested in all those tools it brings
 with.&lt;&#x2F;p&gt;
 &lt;p&gt;Anyways, enough with that. I added a custom &lt;code&gt;.desktop&lt;&#x2F;code&gt; file which will
 become selectable on LightDM UI:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ cat &#x2F;usr&#x2F;share&#x2F;xsessions&#x2F;custom.desktop
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[Desktop Entry]
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Name=Custom
@@ -143,7 +143,7 @@ become selectable on LightDM UI:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;On selecting the entry labeled &lt;strong&gt;Custom&lt;&#x2F;strong&gt; that appears on LightDM, and
 logging in, the following will get executed (&lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;custom&#x2F;src&#x2F;tip&#x2F;xsession&quot;&gt;~&#x2F;.xsession&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;# apps
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;xfce4-terminal --hide-menubar --tab --tab --tab &amp;amp;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;firefox &amp;amp;
@@ -183,7 +183,7 @@ logging in, the following will get executed (&lt;a href=&quot;https:&#x2F;&#x2F;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;exec dwm
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Finally, this is what my dwm config changes look like (&lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;custom&#x2F;src&#x2F;tip&#x2F;config.def.h&quot;&gt;config.def.h&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;diff --git a&#x2F;config.def.h b&#x2F;config.def.h
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;index 77ff358..78af5d6 100644
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+++ a&#x2F;config.def.h
@@ -408,7 +408,7 @@ JHBuild path) to get a build failure fixe
 just wipe out the entire installation.&lt;&#x2F;p&gt;
 &lt;p&gt;Note that there&#x27;s dozens of modules to build, so I wrote this little
 script to take care of it:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import os
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;import subprocess
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;top_level = os.path.expanduser(&amp;quot;~&#x2F;src&#x2F;gnome&amp;quot;)
@@ -424,7 +424,7 @@ script to take care of it:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h1 id=&quot;update&quot;&gt;update&lt;&#x2F;h1&gt;
 &lt;p&gt;Someone very kind guy made &lt;a href=&quot;http:&#x2F;&#x2F;codereview.stackexchange.com&#x2F;questions&#x2F;1476&#x2F;cleansing-multiple-build-directories&#x2F;1477#1477&quot;&gt;a bunch of suggestions&lt;&#x2F;a&gt;, making my code much
 better:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import os
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;import subprocess
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;top_level = os.path.expanduser(&amp;quot;~&#x2F;src&#x2F;gnome&amp;quot;)
@@ -450,7 +450,7 @@ takes some getting used to in terms of set-up, but this &lt;a href=&quot;http:&#
 quite gentle, and it details how to get the code running on your
 machine.&lt;&#x2F;p&gt;
 &lt;p&gt;If you use Debian (or Ubuntu), you can use run this command:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;wajig --norecommends install build-essential docbook-xsl flex
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;bison cvs gperf cmake  {uuid,ppp}-dev
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;libx{composite,randr,damage,ft2,i,t}-dev
@@ -464,7 +464,7 @@ process. The &lt;code&gt;--no-recommends&lt;&#x2F;code&gt; option means I want t
 installation to packages I really need, avoiding the extra stuff deemed
 by the packager to be useful for me.&lt;&#x2F;p&gt;
 &lt;p&gt;My &amp;quot;~&#x2F;.jhbuilrc&amp;quot; contains the following:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;# build directory
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;checkoutroot = os.path.expanduser(&amp;quot;~&#x2F;src&#x2F;gnome&amp;quot;)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
@@ -526,7 +526,7 @@ the original except for an extra directory named rdiff-backup-data,
 which contains all that&#x27;s needed to roll-back, restore, check stats,
 ...).&lt;&#x2F;p&gt;
 &lt;p&gt;My usage:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ rdiff-backup --include-globbing-filelist rdiff-backup ~&#x2F; &#x2F;media&#x2F;backup
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;There, &lt;code&gt;~&#x2F;conf&#x2F;rdiff-backup&lt;&#x2F;code&gt; is a file that has a list of directories I

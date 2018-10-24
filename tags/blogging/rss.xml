@@ -125,7 +125,7 @@ scroll that far before presenting such a key piece of info.&lt;&#x2F;li&gt;
 ugly look. It does not fit with the general general theme, so should
 be grey really, which would match with that of &lt;code&gt;&amp;lt;pre&amp;gt;&lt;&#x2F;code&gt; text. I fixed
 it myself with the following patch:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;diff --git a&#x2F;liquidluck&#x2F;_themes&#x2F;default&#x2F;static&#x2F;style.css b&#x2F;liquidluck&#x2F;_themes&#x2F;default&#x2F;static&#x2F;style.css
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;index e90de80..94fa7e8 100644
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+++ a&#x2F;liquidluck&#x2F;_themes&#x2F;default&#x2F;static&#x2F;style.css
@@ -163,7 +163,7 @@ to html (Pelican supports &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2
 resulting site is complete with an index (Archives view), Tags,
 Categories, and Pages (for non-bloggy stuff like a CV or About Me file).&lt;&#x2F;p&gt;
 &lt;p&gt;As for my blog, its tree structure looks like this (&lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;blog&#x2F;src&quot;&gt;repo&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;build&#x2F;...
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pages&#x2F;about-me.rst
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;posts&#x2F;{arts&#x2F;, computing&#x2F;, misc&#x2F;}
@@ -199,11 +199,11 @@ license.&lt;&#x2F;li&gt;
 stuff like title, date, and tags. It can be tedious to create all such
 mundate stuff, especially the date. That&#x27;s why I wrote &lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;blog&#x2F;src&#x2F;tip&#x2F;new-post.py&quot;&gt;a script&lt;&#x2F;a&gt; that
 generates that file and populates it with the given metadata:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ python new-post.py &amp;#39;my blogging setup&amp;#39; misc --tags blogging
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;This is the metadata, and also the beginning of the file:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;my blogging setup
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;=================
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
@@ -214,7 +214,7 @@ generates that file and populates it with the given metadata:&lt;&#x2F;p&gt;
 adding content.&lt;&#x2F;p&gt;
 &lt;p&gt;When I&#x27;m done with the changes, I ensure I&#x27;m in the root directory of
 my blog, commit (&lt;code&gt;hg commit --message &#x27;new post&#x27;&lt;&#x2F;code&gt;) and run:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ fab
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;That&#x27;s a &lt;a href=&quot;http:&#x2F;&#x2F;fabfile.org&quot;&gt;fabric&lt;&#x2F;a&gt; command that uses the instructions found in
@@ -370,7 +370,7 @@ manner:&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;When building, it fails with:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;[E 130413 20:53:48 base:42] &amp;#39;None&amp;#39; has no attribute &amp;#39;strftime&amp;#39;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
@@ -380,7 +380,7 @@ manner:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;When building, I get 2 of these messages:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;[E 130413 23:40:19 base:42] &amp;#39;dict object&amp;#39; has no attribute &amp;#39;package&amp;#39;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
@@ -390,7 +390,7 @@ manner:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;When building, I get 4 of these messages:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;[E 130413 23:33:53 base:42] list index out of range
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;

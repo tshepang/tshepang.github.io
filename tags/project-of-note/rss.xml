@@ -91,7 +91,7 @@ each line of code in the CPU. This is useful when tuning programs for
 performance.&lt;&#x2F;p&gt;
 &lt;p&gt;Following is example code; it accepts 2 arguments, a filename and text
 that will be written to that file:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#b48ead;&quot;&gt;#include &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;string.h&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;#include &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;errno.h&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;#include &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;stdio.h&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;gt;
@@ -129,11 +129,11 @@ that will be written to that file:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Build command (using GCC 4.8.1):&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;gcc -Wall -pedantic -g play.c -o play
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;System details:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ uname --all
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Linux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU&#x2F;Linux
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ sudo lshw -class processor
@@ -162,7 +162,7 @@ that will be written to that file:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;configuration: cores=2 enabledcores=1 threads=2
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Running the resulting binary with &lt;strong&gt;Callgrind&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ valgrind --tool=callgrind --callgrind-out-file=out .&#x2F;play filename
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;filecontent
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;==5308== Callgrind, a call-graph generating cache profiler
@@ -185,7 +185,7 @@ that will be written to that file:&lt;&#x2F;p&gt;
 stands for &lt;strong&gt;Instruction cache reads&lt;&#x2F;strong&gt;, which you can read as &lt;em&gt;number of
 CPU instructions&lt;&#x2F;em&gt;. I have used &lt;code&gt;tree=calling&lt;&#x2F;code&gt; option so that I can see
 the cost of all operations called by a parent (marked with a &lt;code&gt;*&lt;&#x2F;code&gt;) :&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ callgrind_annotate --tree=calling out play.c
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Profile data file &amp;#39;out&amp;#39; (creator: callgrind-3.8.1)
@@ -234,7 +234,7 @@ the cost of all operations called by a parent (marked with a &lt;code&gt;*&lt;&#
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;I have trimmed the output to bring focus to the most interesting output
 of all, which is the total cost for each line of my code:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;[continued]
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-- User-annotated source: play.c
@@ -398,7 +398,7 @@ subset of the official repository of a specific arch, but only of
 packages that I ever install.&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;p&gt;Every once in a while, I run this command:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ reprepro -vv --basedir ~&#x2F;.custom_repo&#x2F; includedeb tshepang
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;var&#x2F;cache&#x2F;apt&#x2F;archives&#x2F;*deb
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
@@ -409,7 +409,7 @@ packages that matter to me for any later install.&lt;&#x2F;p&gt;
 &lt;p&gt;Note that &lt;code&gt;tshepang&lt;&#x2F;code&gt; is the name of the repository. It&#x27;s an unofficial
 equivalent of &lt;code&gt;testing&lt;&#x2F;code&gt; and &lt;code&gt;unstable&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;Another command that I sometimes run, though less frequently, is:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ reprepro -vv --basedir ~&#x2F;.custom_repo&#x2F; includedeb tshepang
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;var&#x2F;cache&#x2F;apt&#x2F;archives&#x2F;*deb
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
@@ -418,11 +418,11 @@ post&lt;&#x2F;a&gt; for an explanation.&lt;&#x2F;p&gt;
 &lt;p&gt;Even less frequently, it happens that some package files are no longer
 referenced (i.e. not found in &lt;code&gt;Package.gz&lt;&#x2F;code&gt;) for some reason. Here&#x27;s
 handy command to display them:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ reprepro --basedir ~&#x2F;.custom_repo dumpunreferenced
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;And here&#x27;s another that actually gets rid of them:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ reprepro --basedir ~&#x2F;.custom_repo deleteunreferenced
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
             </item>
@@ -435,14 +435,14 @@ handy command to display them:&lt;&#x2F;p&gt;
                 <description>&lt;p&gt;Requests is a Python module that makes it real easy to deal with HTTP.
 As an example, something as scary as fetching a web page that needs
 authentication requires only a single line of code:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;requests.get(&amp;quot;https:&#x2F;&#x2F;example.com&amp;quot;, auth=(&amp;quot;user&amp;quot;, &amp;quot;pass&amp;quot;))
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;It&#x27;s capable of &lt;a href=&quot;http:&#x2F;&#x2F;docs.python-requests.org&#x2F;en&#x2F;latest&#x2F;index.html#feature-support&quot;&gt;a lot more&lt;&#x2F;a&gt; of course (&lt;a href=&quot;http:&#x2F;&#x2F;docs.python-requests.org&#x2F;en&#x2F;latest&#x2F;user&#x2F;quickstart&#x2F;&quot;&gt;tutorial&lt;&#x2F;a&gt;), and it&#x27;s weird
 that something this nice hasn&#x27;t been around for ages. There is another
 that is much simpler to use and more advanced than Python&#x27;s standard
 library named &lt;a href=&quot;http:&#x2F;&#x2F;code.google.com&#x2F;p&#x2F;httplib2&#x2F;&quot;&gt;httplib2&lt;&#x2F;a&gt;, but it&#x27;s not quite as simple&#x2F;elegant:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;h = httplib2.Http(&amp;quot;.cache&amp;quot;)  &#x2F;&#x2F; ugly
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;h.add_credentials(&amp;quot;user&amp;quot;, &amp;quot;pass&amp;quot;)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;resp, content = h.request(&amp;quot;https:&#x2F;&#x2F;example.com&amp;quot;)
@@ -569,7 +569,7 @@ the original except for an extra directory named rdiff-backup-data,
 which contains all that&#x27;s needed to roll-back, restore, check stats,
 ...).&lt;&#x2F;p&gt;
 &lt;p&gt;My usage:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ rdiff-backup --include-globbing-filelist rdiff-backup ~&#x2F; &#x2F;media&#x2F;backup
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;There, &lt;code&gt;~&#x2F;conf&#x2F;rdiff-backup&lt;&#x2F;code&gt; is a file that has a list of directories I

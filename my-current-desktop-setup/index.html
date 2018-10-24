@@ -149,14 +149,14 @@ it's not hard, and there's examples out there. It just takes a while
 since there isn't a comprehensive guide I could find.</p>
 <p>For my login manager, I use <a href="http://www.freedesktop.org/wiki/Software/LightDM">LightDM</a>. I added this line to its
 configuration, in <code>[SeatDefaults]</code> section:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">greeter-hide-users=false
 </span></pre>
 <p>It removes the need to manually enter my username each time I want to
 login.</p>
 <p>Reason I'm not using GDM? I wanted something light, which also
 wouldn't pull in dozens of packages that I won't use. For example:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">$ sudo apt-get install --no-install-recommends gdm3
 </span><span style="color:#c0c5ce;">Reading package lists... Done
 </span><span style="color:#c0c5ce;">Building dependency tree
@@ -213,7 +213,7 @@ well for years, but I'm not interested in all those tools it brings
 with.</p>
 <p>Anyways, enough with that. I added a custom <code>.desktop</code> file which will
 become selectable on LightDM UI:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">$ cat /usr/share/xsessions/custom.desktop
 </span><span style="color:#c0c5ce;">[Desktop Entry]
 </span><span style="color:#c0c5ce;">Name=Custom
@@ -222,7 +222,7 @@ become selectable on LightDM UI:</p>
 </span></pre>
 <p>On selecting the entry labeled <strong>Custom</strong> that appears on LightDM, and
 logging in, the following will get executed (<a href="https://bitbucket.org/tshepang/custom/src/tip/xsession">~/.xsession</a>):</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;"># apps
 </span><span style="color:#c0c5ce;">xfce4-terminal --hide-menubar --tab --tab --tab &amp;
 </span><span style="color:#c0c5ce;">firefox &amp;
@@ -262,7 +262,7 @@ logging in, the following will get executed (<a href="https://bitbucket.org/tshe
 </span><span style="color:#c0c5ce;">exec dwm
 </span></pre>
 <p>Finally, this is what my dwm config changes look like (<a href="https://bitbucket.org/tshepang/custom/src/tip/config.def.h">config.def.h</a>):</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">diff --git a/config.def.h b/config.def.h
 </span><span style="color:#c0c5ce;">index 77ff358..78af5d6 100644
 </span><span style="color:#c0c5ce;">+++ a/config.def.h

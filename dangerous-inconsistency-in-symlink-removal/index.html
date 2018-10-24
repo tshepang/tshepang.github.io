@@ -131,21 +131,21 @@
 
     <div class="post-content">
       <p>Here's how to make a symlink and to delete it:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">mkdir dir
 </span><span style="color:#c0c5ce;">ln -s dir dirlink
 </span><span style="color:#c0c5ce;">rm -r dirlink
 </span></pre>
 <p>Here's another way to delete it:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">rm -r dirlink/
 </span></pre>
 <p>Although it will do the job, it will actually complain with:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">rm: cannot remove `dirlink&#39;: Not a directory
 </span></pre>
 <p>Note that we could have achieved the deletion with just:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">rm dirlink
 </span></pre>
 <p>This is because the symlink is just a single file. So there's no need

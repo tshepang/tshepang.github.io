@@ -118,7 +118,7 @@ oracle-instantclient11.2-basic*.rpm (~40MB).&lt;&#x2F;li&gt;
 specific processor (in my case, 3.1 and i386 respectively).&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;&lt;strong&gt;installation and setup&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;sudo apt-get install libpython3.1 libaio1 alien
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sudo alien --install oracle-instantclient11.2-basic*rpm cx_Oracle*rpm
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sudo ln -s &#x2F;usr&#x2F;lib&#x2F;python3.1&#x2F;site-packages&#x2F;cx_Oracle.so &#x2F;usr&#x2F;lib&#x2F;python3.1&#x2F;lib-dynload

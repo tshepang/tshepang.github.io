@@ -157,7 +157,7 @@ whenever I fetch and install Debian packages (e.g. <code>apt-get upgrade</code>)
 also keep them in a local custom repository. I use a great tool named
 <a href="http://mirrorer.alioth.debian.org/">reprepro</a> for this, and this is the command I use to update that
 repository, given the location of the fresh package files:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang /var/cache/apt/archives/*deb
 </span></pre>
 <p>What's nice about the command is that, if there is an older version of
@@ -181,7 +181,7 @@ using that package, it is just a waste of resources (CPU and disk
 usage).</li>
 </ul>
 <p>To help with the cleanup, I have written the following simple script:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">#!/usr/bin/env python3
 </span><span style="color:#c0c5ce;">
 </span><span style="color:#c0c5ce;">import apt_pkg
@@ -217,7 +217,7 @@ usage).</li>
 </span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">main()
 </span></pre>
 <p>And here's a snippet of its output:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">cx-oracle:
 </span><span style="color:#c0c5ce;">  </span><span style="color:#c0c5ce;">Installed: 5.1.1-2
 </span><span style="color:#c0c5ce;">  </span><span style="color:#c0c5ce;">Candidate: 5.1.1-2

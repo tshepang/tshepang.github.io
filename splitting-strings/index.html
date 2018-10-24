@@ -132,31 +132,31 @@
     <div class="post-content">
       <p>If I have a string with spaces, and wanted to split it into a
 list/array, I would use this:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">split_string = &quot;a b c&quot;.split()
 </span><span style="color:#c0c5ce;">print(split_string)
 </span></pre>
 <p>Output:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]
 </span></pre>
 <p>I can go ahead and specify a delimiter (which character the string must
 split on):</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">split_string = &quot;string with spaces&quot;.split(&quot; &quot;)
 </span><span style="color:#c0c5ce;">print(split_string)
 </span></pre>
 <p>I get the same result:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]
 </span></pre>
 <p>But what if my string wasn't so forgiving?</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">split_string = &quot;a b  c&quot;.split(&quot; &quot;)
 </span><span style="color:#c0c5ce;">print(split_string)
 </span></pre>
 <p>Output:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">[&#39;a&#39;, &#39;b&#39;, &#39;&#39;, &#39;c&#39;]
 </span></pre>
 <p>Not exactly what we want. Leaving the delimiter out gives us the exact
@@ -168,70 +168,70 @@ bit of <a href="http://docs.python.org/library/stdtypes.html#str.split">magic</a
 it's not available in PHP and Java. I'm here only going to show Java
 examples. PHP examples aren't that much different though.</p>
 <p>Here goes:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">import java.util.Arrays;
 </span><span style="color:#c0c5ce;">String[] splitString = &quot;a b  c&quot;.split(&quot; &quot;);
 </span><span style="color:#c0c5ce;">System.out.println(Arrays.asList(splitString));
 </span></pre>
 <p>Output:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">[a, b, , c]
 </span></pre>
 <p>That's not what we want, so in order to cover for my unforgiving
 string, I get to use regular expressions (regexp)?</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">import java.util.Arrays;
 </span><span style="color:#c0c5ce;">String[] splitString = &quot;string with spaces&quot;.split(&quot; +&quot;);
 </span><span style="color:#c0c5ce;">System.out.println(Arrays.asList(splitString));
 </span></pre>
 <p>Output:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">[a, b, c]
 </span></pre>
 <p>The <code>+</code> in the <code>split()</code> method indicates that the match can either be
 one or more consecutive spaces.</p>
 <p>That's not what we want, so in order to cover for my unforgiving
 string, I get to use regular expressions (regexp)?</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">String[] splitString = &quot;string with spaces&quot;.split(&quot; +&quot;);
 </span><span style="color:#c0c5ce;">System.out.println(Arrays.asList(splitString));
 </span></pre>
 <p>Output:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">[a, b, c]
 </span></pre>
 <p>But what if the string was even less forgiving. In this case, having
 tabs as well? We need some more regexp help:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">import java.util.Arrays;
 </span><span style="color:#c0c5ce;">String[] splitString = &quot;a    bnc&quot;.split(&quot;s+&quot;);
 </span><span style="color:#c0c5ce;">System.out.println(Arrays.asList(splitString));
 </span></pre>
 <p>Output:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">[a, b, c]
 </span></pre>
 <p>The <code>s</code> matches any white space.</p>
 <p>With Python, I expected the default way to work but it didn't, but came
 back disappointed:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">split_string = &quot;a    bnc&quot;.split(&quot; &quot;)
 </span><span style="color:#c0c5ce;">print(split_string)
 </span></pre>
 <p>Output:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">[&#39;at&#39;, &#39;bnc&#39;]
 </span></pre>
 <p>Perhaps it's a philosophical difference, but it's harder to do this
 with Python. This is the only thing so that I found easier to achieve in
 Java than in Python:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">import re
 </span><span style="color:#c0c5ce;">split_string = re.split(&quot;s+&quot;, &quot;a    bnc&quot;)
 </span><span style="color:#c0c5ce;">print(split_string)
 </span></pre>
 <p>...and we finally get what we want:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]
 </span></pre>
     </div>

@@ -36,7 +36,7 @@ Valve games; another Debian win&lt;&#x2F;li&gt;
 Investigation into Programming Language Syntax&lt;&#x2F;em&gt;. Now, since I&#x27;m a
 Python sucker, here is what I would change in Python in order to follow
 advice from &lt;a href=&quot;http:&#x2F;&#x2F;dl.acm.org&#x2F;authorize?6968137&quot;&gt;that paper&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;before       after
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;------       -----
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;!=          not=
@@ -54,7 +54,7 @@ advice from &lt;a href=&quot;http:&#x2F;&#x2F;dl.acm.org&#x2F;authorize?6968137&
 found &lt;em&gt;while&lt;&#x2F;em&gt; and &lt;em&gt;for&lt;&#x2F;em&gt; not intuitive for looping constructs. The
 preferred alternatives are &lt;em&gt;repeat&lt;&#x2F;em&gt; and &lt;em&gt;loop&lt;&#x2F;em&gt;. Of these, I prefer
 &lt;em&gt;loop&lt;&#x2F;em&gt;, but it does not read as well as &lt;em&gt;while&lt;&#x2F;em&gt;:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;while count &amp;lt; 3:
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;count = action()
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
@@ -62,14 +62,14 @@ preferred alternatives are &lt;em&gt;repeat&lt;&#x2F;em&gt; and &lt;em&gt;loop&l
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;count = action()
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Quorum, the language by those responsible for this paper, went with:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;repeat while (count &amp;lt; 3)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;count = action()
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;end
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;To mimic that in Python, any of the following two sound fine (I prefer
 &lt;em&gt;if&lt;&#x2F;em&gt; to &lt;em&gt;while&lt;&#x2F;em&gt;; less syntax is better):&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;repeat if count &amp;lt; 3:
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;count = action()
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
@@ -77,36 +77,36 @@ preferred alternatives are &lt;em&gt;repeat&lt;&#x2F;em&gt; and &lt;em&gt;loop&l
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;count = action()
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;That means an infinite loop would be:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop if True:
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;action()
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Or for that special case, a shortcut can just be this simple:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop:
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;action()
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;I wonder what cycling through items in a container would look like. In
 Python, it looks like:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;for item in container:
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;action(item)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;This feels as natural as anything, but then again I been doing Python
 for a number of years, so the bias could be heavy. Following is an
 attempt:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop in range(3):
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;action()
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;It mimics this Python syntax, which I actually don&#x27;t like, since we
 don&#x27;t always need the items of the container:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;for _ in range(3):
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;action()
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Quorum, the academic language mentioned above, does it like:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;repeat 3 times
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;action()
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;end
@@ -114,32 +114,32 @@ don&#x27;t always need the items of the container:&lt;&#x2F;p&gt;
 &lt;p&gt;I don&#x27;t like that either; feels contrived. The Python way strikes me as
 a good compromise, especially given how general it is. I will try again
 with the &lt;em&gt;loop&lt;&#x2F;em&gt; syntax:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop item in container:
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;action(item)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;You have to admit it doesn&#x27;t read as nice as:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;for item in container:
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;action(item)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;It should be flexible to accommodate more than just one value on each
 iteration, so should have an equivalent for this Python code:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;for index, item in enumerate(container):
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;action(index, item)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Here goes:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop index, item in enumerate(container):
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;action(index, item)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Now, for the much-loved Python list comprehensions:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;[procedure(item) for item in container]
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;We would instead have:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;[procedure(item) loop item in container]
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;So, apart from being highly-rated for being intuitive, &lt;em&gt;loop&lt;&#x2F;em&gt; also
@@ -164,7 +164,7 @@ each line of code in the CPU. This is useful when tuning programs for
 performance.&lt;&#x2F;p&gt;
 &lt;p&gt;Following is example code; it accepts 2 arguments, a filename and text
 that will be written to that file:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#b48ead;&quot;&gt;#include &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;string.h&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;#include &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;errno.h&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;#include &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;stdio.h&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;gt;
@@ -202,11 +202,11 @@ that will be written to that file:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Build command (using GCC 4.8.1):&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;gcc -Wall -pedantic -g play.c -o play
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;System details:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ uname --all
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Linux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU&#x2F;Linux
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ sudo lshw -class processor
@@ -235,7 +235,7 @@ that will be written to that file:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;configuration: cores=2 enabledcores=1 threads=2
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Running the resulting binary with &lt;strong&gt;Callgrind&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ valgrind --tool=callgrind --callgrind-out-file=out .&#x2F;play filename
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;filecontent
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;==5308== Callgrind, a call-graph generating cache profiler
@@ -258,7 +258,7 @@ that will be written to that file:&lt;&#x2F;p&gt;
 stands for &lt;strong&gt;Instruction cache reads&lt;&#x2F;strong&gt;, which you can read as &lt;em&gt;number of
 CPU instructions&lt;&#x2F;em&gt;. I have used &lt;code&gt;tree=calling&lt;&#x2F;code&gt; option so that I can see
 the cost of all operations called by a parent (marked with a &lt;code&gt;*&lt;&#x2F;code&gt;) :&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ callgrind_annotate --tree=calling out play.c
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Profile data file &amp;#39;out&amp;#39; (creator: callgrind-3.8.1)
@@ -307,7 +307,7 @@ the cost of all operations called by a parent (marked with a &lt;code&gt;*&lt;&#
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;I have trimmed the output to bring focus to the most interesting output
 of all, which is the total cost for each line of my code:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;[continued]
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-- User-annotated source: play.c
@@ -519,14 +519,14 @@ long on the web trying to find out why, and bumped onto &lt;a href=&quot;http:&#
 answer&lt;&#x2F;a&gt;. Looking at the manpage, I see that this would give the same
 value as EWOULDBLOCK, which is a far more meaningful name in this case.&lt;&#x2F;p&gt;
 &lt;p&gt;This is what will display those errors:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;if (write(fd, buffer, strlen(buffer)) == -1)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;fprintf (stderr, &amp;quot;error writing to file &amp;#39;%s&amp;#39;: %s (errno %d)&amp;quot;,
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;             &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;path, strerror(errno), fd);
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;And here is how to avoid them:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;if ((write(fd, buffer, strlen(buffer)) == -1) &amp;amp;&amp;amp; (errno != EWOULDBLOCK)) {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;fprintf( stderr, &amp;quot;error writing to file &amp;#39;%s&amp;#39;: %s (errno %d)&amp;quot;,
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;             &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;path, strerror(errno), fd);
@@ -614,7 +614,7 @@ pointed to a 3rd party library&lt;&#x2F;a&gt;).&lt;&#x2F;li&gt;
                 <guid>http://tshepang.net/cat-python-and-perl/</guid>
                 <description>&lt;p&gt;I came across &lt;a href=&quot;http:&#x2F;&#x2F;greenteapress.com&#x2F;perl&#x2F;perl.pdf&quot;&gt;a tutorial&lt;&#x2F;a&gt; that showes how to implement a simple cat in
 Perl. I&#x27;ve modified their example for the sake of simplicity:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;sub cat {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;foreach my $filename (@_) {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;open FILE, $filename;
@@ -628,7 +628,7 @@ Perl. I&#x27;ve modified their example for the sake of simplicity:&lt;&#x2F;p&gt
 &lt;p&gt;Running this script (e.g. &lt;code&gt;perl cat.pl file&lt;&#x2F;code&gt;) will display those files
 as if you ran &lt;code&gt;cat file&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;I decided to see how the Python example would look like:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import sys
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;def cat(files):
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for filename in files:
@@ -695,31 +695,31 @@ elegantly.&lt;&#x2F;li&gt;
                 <guid>http://tshepang.net/splitting-strings/</guid>
                 <description>&lt;p&gt;If I have a string with spaces, and wanted to split it into a
 list&#x2F;array, I would use this:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;split_string = &amp;quot;a b c&amp;quot;.split()
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;print(split_string)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;[&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;]
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;I can go ahead and specify a delimiter (which character the string must
 split on):&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;split_string = &amp;quot;string with spaces&amp;quot;.split(&amp;quot; &amp;quot;)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;print(split_string)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;I get the same result:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;[&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;]
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;But what if my string wasn&#x27;t so forgiving?&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;split_string = &amp;quot;a b  c&amp;quot;.split(&amp;quot; &amp;quot;)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;print(split_string)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;[&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;&amp;#39;, &amp;#39;c&amp;#39;]
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Not exactly what we want. Leaving the delimiter out gives us the exact
@@ -731,70 +731,70 @@ bit of &lt;a href=&quot;http:&#x2F;&#x2F;docs.python.org&#x2F;library&#x2F;stdty
 it&#x27;s not available in PHP and Java. I&#x27;m here only going to show Java
 examples. PHP examples aren&#x27;t that much different though.&lt;&#x2F;p&gt;
 &lt;p&gt;Here goes:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import java.util.Arrays;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;String[] splitString = &amp;quot;a b  c&amp;quot;.split(&amp;quot; &amp;quot;);
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;System.out.println(Arrays.asList(splitString));
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;[a, b, , c]
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;That&#x27;s not what we want, so in order to cover for my unforgiving
 string, I get to use regular expressions (regexp)?&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import java.util.Arrays;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;String[] splitString = &amp;quot;string with spaces&amp;quot;.split(&amp;quot; +&amp;quot;);
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;System.out.println(Arrays.asList(splitString));
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;[a, b, c]
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;The &lt;code&gt;+&lt;&#x2F;code&gt; in the &lt;code&gt;split()&lt;&#x2F;code&gt; method indicates that the match can either be
 one or more consecutive spaces.&lt;&#x2F;p&gt;
 &lt;p&gt;That&#x27;s not what we want, so in order to cover for my unforgiving
 string, I get to use regular expressions (regexp)?&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;String[] splitString = &amp;quot;string with spaces&amp;quot;.split(&amp;quot; +&amp;quot;);
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;System.out.println(Arrays.asList(splitString));
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;[a, b, c]
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;But what if the string was even less forgiving. In this case, having
 tabs as well? We need some more regexp help:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import java.util.Arrays;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;String[] splitString = &amp;quot;a    bnc&amp;quot;.split(&amp;quot;s+&amp;quot;);
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;System.out.println(Arrays.asList(splitString));
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;[a, b, c]
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;The &lt;code&gt;s&lt;&#x2F;code&gt; matches any white space.&lt;&#x2F;p&gt;
 &lt;p&gt;With Python, I expected the default way to work but it didn&#x27;t, but came
 back disappointed:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;split_string = &amp;quot;a    bnc&amp;quot;.split(&amp;quot; &amp;quot;)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;print(split_string)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;[&amp;#39;at&amp;#39;, &amp;#39;bnc&amp;#39;]
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Perhaps it&#x27;s a philosophical difference, but it&#x27;s harder to do this
 with Python. This is the only thing so that I found easier to achieve in
 Java than in Python:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import re
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;split_string = re.split(&amp;quot;s+&amp;quot;, &amp;quot;a    bnc&amp;quot;)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;print(split_string)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;...and we finally get what we want:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;[&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;]
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
             </item>

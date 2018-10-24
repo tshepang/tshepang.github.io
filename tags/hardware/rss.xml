@@ -17,7 +17,7 @@
 UX305 got fried).  This one is Asus UX410, with Intel i7-8550U
 processor and 16GB of DDR4 RAM.&lt;&#x2F;p&gt;
 &lt;p&gt;To check performance, I use &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;serde-rs&#x2F;json-benchmark&quot;&gt;Rust JSON Benchmark&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;git clone https:&#x2F;&#x2F;github.com&#x2F;serde-rs&#x2F;json-benchmark
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cd json-benchmark
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;git rev-parse HEAD
@@ -25,7 +25,7 @@ processor and 16GB of DDR4 RAM.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cargo run --release --bin json-benchmark
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Results:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;9eae8499c19ecdf3531d72451e0172b56e570c99
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rustc 1.29.0 (aa3ca1994 2018-09-11)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Finished release [optimized + debuginfo] target(s) in 0.04s
@@ -59,7 +59,7 @@ range, with 4GB RAM, 128GB SSD, an FHD screen, and Intel Core M CPU
 too much of an indulgence, given I still have the &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;sony-vaio-pro-13-svp13212sgbi&quot;&gt;Vaio Pro 13&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;Like the older laptop, I had to change 2 lines in
 &#x2F;usr&#x2F;share&#x2F;alsa&#x2F;alsa.conf:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;defaults.ctl.card 1
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;defaults.pcm.card 1
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
@@ -113,7 +113,7 @@ installation is also insane fast.&lt;&#x2F;p&gt;
 &lt;p&gt;There was much pain trying to get audio to work. Luckily &lt;a href=&quot;https:&#x2F;&#x2F;wiki.archlinux.org&#x2F;index.php&#x2F;Sony_Vaio_Pro_SVP-1x21#Sound&quot;&gt;I got some
 help&lt;&#x2F;a&gt;, where I needed to change two lines in
 &lt;code&gt;&#x2F;usr&#x2F;share&#x2F;alsa&#x2F;alsa.conf&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;defaults.ctl.card 1
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;defaults.pcm.card 1
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
@@ -122,14 +122,14 @@ Output to &lt;strong&gt;OpenGL GLX video output (XCB)&lt;&#x2F;strong&gt;, and a
 &lt;h1 id=&quot;performance&quot;&gt;Performance&lt;&#x2F;h1&gt;
 &lt;p&gt;I am now going to check how this machine compares to &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;a-bit-of-benchmarking&quot;&gt;these others&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;Specs:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ uname --all
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Linux thome 3.12-1-amd64 #1 SMP Debian 3.12.9-1 (2014-02-01) x86_64 GNU&#x2F;Linux
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ cat &#x2F;proc&#x2F;cpuinfo | sed --quiet &amp;#39;5p&amp;#39;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;model name      : Intel(R) Core(TM) i5-4200U CPU @ 1.60GHz
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;CPython build (changeset &lt;code&gt;b6a1a78818fe&lt;&#x2F;code&gt;):&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ make distclean; time (.&#x2F;configure &amp;amp;&amp;amp; make --silent --jobs=4)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[...]
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    1m52.372s
@@ -137,7 +137,7 @@ Output to &lt;strong&gt;OpenGL GLX video output (XCB)&lt;&#x2F;strong&gt;, and a
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     0m6.764s
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;CPython test suite:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ time .&#x2F;python -m test --multiprocess=0
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[...]
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    3m34.582s
@@ -145,7 +145,7 @@ Output to &lt;strong&gt;OpenGL GLX video output (XCB)&lt;&#x2F;strong&gt;, and a
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     0m20.640s
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Linux kernel build (commit &lt;code&gt;6e4664525b1d&lt;&#x2F;code&gt;):&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ make distclean &amp;amp;&amp;amp; make defconfig &amp;amp;&amp;amp; time make
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[...]
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    11m57.220s
@@ -172,12 +172,12 @@ is buggy enough to cause OS hangs and other misbehaviour.&lt;&#x2F;p&gt;
 &lt;p&gt;The fan is too quick to kick in, and easily gets noisy. Running the
 following commands does not help, at least not in a way I could
 notice:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;echo silent | sudo tee  &#x2F;sys&#x2F;devices&#x2F;platform&#x2F;sony-laptop&#x2F;thermal_control
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;I don&#x27;t know why this happens, given that I have never seen the
 temperature rise above 60 °C:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ sensors
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;acpitz-virtual-0
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Adapter: Virtual device

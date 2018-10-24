@@ -134,7 +134,7 @@
 it's real easy. We use <a href="http://cx-oracle.sourceforge.net/html/index.html">cx_Oracle</a>, the most popular Python library to
 read Oracle DBs.</p>
 <p>Let's start by simply reading the DB:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">import cx_Oracle
 </span><span style="color:#c0c5ce;">conn = cx_Oracle.connect(&quot;usr&quot;, &quot;pwd&quot;, &quot;tns&quot;)
 </span><span style="color:#c0c5ce;">cursor = conn.cursor()
@@ -146,7 +146,7 @@ read Oracle DBs.</p>
 <p>The <a href="http://cx-oracle.sourceforge.net/html/index.html">cx_Oracle</a> explain exactly what each of these means.</p>
 <p>If we wanted instead to modify stuff in there, we only add one extra
 line, which is <code>cursor.commit</code>, like this:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">import cx_Oracle
 </span><span style="color:#c0c5ce;">conn = cx_Oracle.connect(&quot;usr&quot;, &quot;pwd&quot;, &quot;tns&quot;)
 </span><span style="color:#c0c5ce;">cursor = conn.cursor()
@@ -156,7 +156,7 @@ line, which is <code>cursor.commit</code>, like this:</p>
 </span></pre>
 <p>For real-world code, you are of course going to add exception handling
 for all this, something like this:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">import cx_Oracle
 </span><span style="color:#c0c5ce;">try:
 </span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">conn = cx_Oracle.connect(&quot;usr&quot;, &quot;pwd&quot;, &quot;tns&quot;)

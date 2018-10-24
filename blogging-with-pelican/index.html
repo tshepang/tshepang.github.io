@@ -144,7 +144,7 @@ to html (Pelican supports <a href="http://en.wikipedia.org/wiki/Markdown">Markdo
 resulting site is complete with an index (Archives view), Tags,
 Categories, and Pages (for non-bloggy stuff like a CV or About Me file).</p>
 <p>As for my blog, its tree structure looks like this (<a href="https://bitbucket.org/tshepang/blog/src">repo</a>):</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">build/...
 </span><span style="color:#c0c5ce;">pages/about-me.rst
 </span><span style="color:#c0c5ce;">posts/{arts/, computing/, misc/}
@@ -180,11 +180,11 @@ license.</li>
 stuff like title, date, and tags. It can be tedious to create all such
 mundate stuff, especially the date. That's why I wrote <a href="https://bitbucket.org/tshepang/blog/src/tip/new-post.py">a script</a> that
 generates that file and populates it with the given metadata:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">$ python new-post.py &#39;my blogging setup&#39; misc --tags blogging
 </span></pre>
 <p>This is the metadata, and also the beginning of the file:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">my blogging setup
 </span><span style="color:#c0c5ce;">=================
 </span><span style="color:#c0c5ce;">
@@ -195,7 +195,7 @@ generates that file and populates it with the given metadata:</p>
 adding content.</p>
 <p>When I'm done with the changes, I ensure I'm in the root directory of
 my blog, commit (<code>hg commit --message 'new post'</code>) and run:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">$ fab
 </span></pre>
 <p>That's a <a href="http://fabfile.org">fabric</a> command that uses the instructions found in

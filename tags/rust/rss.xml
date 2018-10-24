@@ -17,7 +17,7 @@
 UX305 got fried).  This one is Asus UX410, with Intel i7-8550U
 processor and 16GB of DDR4 RAM.&lt;&#x2F;p&gt;
 &lt;p&gt;To check performance, I use &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;serde-rs&#x2F;json-benchmark&quot;&gt;Rust JSON Benchmark&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;git clone https:&#x2F;&#x2F;github.com&#x2F;serde-rs&#x2F;json-benchmark
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cd json-benchmark
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;git rev-parse HEAD
@@ -25,7 +25,7 @@ processor and 16GB of DDR4 RAM.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cargo run --release --bin json-benchmark
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Results:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;9eae8499c19ecdf3531d72451e0172b56e570c99
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rustc 1.29.0 (aa3ca1994 2018-09-11)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Finished release [optimized + debuginfo] target(s) in 0.04s
@@ -235,7 +235,7 @@ externally... it does not feel general enough.&lt;&#x2F;p&gt;
 &lt;li&gt;
 &lt;p&gt;Assigning values to struct bindings should use the equal sign, not
 the colon:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; now
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Shoe { size: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;, style: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;sneaker&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot; };
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; dream
@@ -315,7 +315,7 @@ json! macro:&lt;&#x2F;p&gt;
 rust&lt;&#x2F;p&gt;
 &lt;p&gt;let query = json!({&lt;&#x2F;p&gt;
 &lt;p&gt;:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;sort&amp;quot;: [
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   { &amp;quot;@timestamp&amp;quot;: { &amp;quot;order&amp;quot;: &amp;quot;asc&amp;quot;, } }
@@ -492,7 +492,7 @@ publication.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
                 <link>http://tshepang.net/rust-week-of-2017-07-20/</link>
                 <guid>http://tshepang.net/rust-week-of-2017-07-20/</guid>
                 <description>&lt;p&gt;I am surprised by the ease of changing default Rust toolchain:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;# switch to nightly
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rustup default nightly
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;# switch to stable
@@ -500,7 +500,7 @@ publication.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;This is more easy than remembering how to tell cargo to use to use a
 non-default toolchain, though that approach is not too bad either:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;# build with nightly
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cargo +nightly build
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
@@ -954,7 +954,7 @@ beat me to it.&lt;&#x2F;p&gt;
                 <guid>http://tshepang.net/rust-week-of-2016-11-18/</guid>
                 <description>&lt;p&gt;I was surprised by the ease of use of &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;libflate&quot;&gt;libflate&lt;&#x2F;a&gt; when decompressing a
 gzip&#x27;ed file:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#b48ead;&quot;&gt;extern crate&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; libflate;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let mut&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; file = std::fs::&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;File::&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;open&amp;gt;(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;file.gz&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;();
@@ -1128,7 +1128,7 @@ rust&lt;&#x2F;p&gt;
 &lt;p&gt;extern crate unindent; use unindent::unindent;&lt;&#x2F;p&gt;
 &lt;p&gt;fn main() {&lt;&#x2F;p&gt;
 &lt;p&gt;:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;let text = &amp;quot;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   A long text is beginning here and not in the previous line,
@@ -1259,7 +1259,7 @@ stdout and stderr with the standard library&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
                 <guid>http://tshepang.net/rust-week-of-2016-06-10/</guid>
                 <description>&lt;p&gt;I was made sad by the complexity of involving STDIN when using
 &lt;code&gt;std::process&lt;&#x2F;code&gt; module:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;o_to_0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() -&amp;gt; std::io::Result&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;bool&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;gt; {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let mut&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; p = std::process::Command::new(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;tr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;)
@@ -1303,7 +1303,7 @@ means that we don&#x27;t care about the success return value. On the
 calling side, we have an option to use a &lt;code&gt;match&lt;&#x2F;code&gt; statement to handle
 the result:&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#96;&#96;&#96;rust
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;match foo() {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Ok(_) =&amp;gt; (), Err(error) =&amp;gt; do_something_with(error)
@@ -1345,7 +1345,7 @@ order&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;p&gt;Something I learned about running system commands, imagine you had a
 complex command like:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;ssh some-hostname &amp;quot;uname --all &amp;amp;&amp;amp; free --human&amp;quot;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Running such in Rust would be:&lt;&#x2F;p&gt;
@@ -1643,7 +1643,7 @@ color-coded!&lt;&#x2F;p&gt;
 &lt;p&gt;I love that I don&#x27;t need to add (the tedious) parenthesis around
 the &lt;em&gt;condition expression&lt;&#x2F;em&gt; in an &lt;em&gt;if&lt;&#x2F;em&gt;, &lt;em&gt;while&lt;&#x2F;em&gt;, and &lt;em&gt;match&lt;&#x2F;em&gt;
 statements:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#b48ead;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;{
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; always executes
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
@@ -1692,7 +1692,7 @@ change passes all tests.&lt;&#x2F;li&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;Allows masking of variables, even with different types:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; foo = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; foo = &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;ten&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
@@ -1765,7 +1765,7 @@ rust&lt;&#x2F;p&gt;
 &lt;p&gt;use chrono::{NaiveDate, Duration, Local};&lt;&#x2F;p&gt;
 &lt;p&gt;fn main() {&lt;&#x2F;p&gt;
 &lt;p&gt;:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;for n in 0.. {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   &#x2F;&#x2F; Rust 1.0 release let initial = NaiveDate::from_ymd(2015, 5,
@@ -1827,16 +1827,16 @@ much the same as that of (the more modern) &lt;a href=&quot;https:&#x2F;&#x2F;se
                 <description>&lt;p&gt;Just &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;29651&quot;&gt;one submission&lt;&#x2F;a&gt; this time around. Yep! I did however spend time
 pondering the magical forward type inference that I first experienced
 &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;rust-week-of-2015-05-29&quot;&gt;back in May&lt;&#x2F;a&gt;, this time sparked by &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;carllerche&#x2F;mio&#x2F;blob&#x2F;getting-started&#x2F;doc&#x2F;getting-started.md#writing-the-echo-server&quot;&gt;this example&lt;&#x2F;a&gt;; see this line:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;let address = &amp;quot;0.0.0.0:6567&amp;quot;.parse().unwrap();
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;You actually have to read further to figure the type that URL is going
 to be parsed as:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;let server = TcpListener::bind(&amp;amp;address).unwrap();
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;It would be less surprising if we had the following instead:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;let address = SocketAddr::from_str(&amp;quot;0.0.0.0:6567&amp;quot;.unwrap();
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;let server = TcpListener::bind(&amp;amp;address).unwrap();
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
@@ -2170,7 +2170,7 @@ rust&lt;&#x2F;p&gt;
 &lt;p&gt;use std::thread; use std::sync::mpsc::channel;&lt;&#x2F;p&gt;
 &lt;p&gt;fn main() {&lt;&#x2F;p&gt;
 &lt;p&gt;:   let thread_count = 4; let (tx, rx) = channel();&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;for x in 0..thread_count {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   let tx = tx.clone(); thread::spawn(move || { println!(&amp;quot;t{}
@@ -2189,11 +2189,11 @@ rust&lt;&#x2F;p&gt;
 &lt;p&gt;What I&#x27;m doing there is create 4 child threads, from which I send
 messages that are to be captured by the main thread.&lt;&#x2F;p&gt;
 &lt;p&gt;I built and ran it with:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;rustc --opt-level 0 main.rs &amp;amp;&amp;amp; .&#x2F;main
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Following is output from one sample run:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;t1 tx
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;t0 tx
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;t2 tx
@@ -2204,7 +2204,7 @@ messages that are to be captured by the main thread.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rx from t2
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Following is what I get with another run:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;t0 tx
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;t1 tx
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rx from t1
@@ -2253,7 +2253,7 @@ missing it. I also updated the code to run on modern Rust.&lt;&#x2F;p&gt;
 well-written post, &lt;a href=&quot;http:&#x2F;&#x2F;blog.rust-lang.org&#x2F;2015&#x2F;05&#x2F;11&#x2F;traits.html&quot;&gt;Abstraction without overhead: traits in Rust&lt;&#x2F;a&gt;.
 One feature they have is they allow adding methods to types,
 including upstream ones, example being stdlib types as follows:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#b48ead;&quot;&gt;trait &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Invert {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;invert&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;) -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;f64&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
@@ -2270,7 +2270,7 @@ including upstream ones, example being stdlib types as follows:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Another example is that one can limit the type of arguments accepted
 by a function, though it uses something of an ugly syntax:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;print_inverse&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;lt;T: Invert&amp;gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;foo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;: T) {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;println!(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Inverse: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;{}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, foo.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;invert&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;());
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
@@ -2278,25 +2278,25 @@ by a function, though it uses something of an ugly syntax:&lt;&#x2F;p&gt;
 &lt;p&gt;The &lt;code&gt;&amp;lt;T: Invert&amp;gt;&lt;&#x2F;code&gt; means this function will only accept &lt;code&gt;foo&lt;&#x2F;code&gt; whose
 type implements the &lt;code&gt;Invert&lt;&#x2F;code&gt; trait. You can check by calling it with
 an &lt;code&gt;i32&lt;&#x2F;code&gt; value, in which it will succeed:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#96b5b4;&quot;&gt;print_inverse&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10_&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;i32&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;);
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;Inverse: 0.1
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Any other type will fail:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#96b5b4;&quot;&gt;print_inverse&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10_&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;f64&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;);
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;the trait &#96;Invert&#96; is not implemented for the type &#96;f64&#96; [E0277]
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;This allows for a feature named generics, where one can use multiple
 types for the same function. For example, that error will disappear
 if you got this:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#b48ead;&quot;&gt;impl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Invert &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;f64 {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;invert&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;) -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;f64 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;{
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1.0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;(*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;)
@@ -2313,7 +2313,7 @@ if you got this:&lt;&#x2F;p&gt;
                 <link>http://tshepang.net/various-rust-ways-of-displaying-stuff-to-the-screen/</link>
                 <guid>http://tshepang.net/various-rust-ways-of-displaying-stuff-to-the-screen/</guid>
                 <description>&lt;p&gt;Here is a simple way of doing it:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#b48ead;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;std::io::{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;, Write};
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
@@ -2321,14 +2321,14 @@ if you got this:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;I do however get this warning when I build it:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ rustc main.rs
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;main.rs:4:5: 4:42 warning: unused result which must be used, #[warn(unused_must_use)] on by default
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;main.rs:4     io::stdout().write_ln(b&amp;quot;some output&amp;quot;);
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;              &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Let&#x27;s kill it:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#b48ead;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;std::io::{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;, Write};
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
@@ -2337,7 +2337,7 @@ if you got this:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;What I did is is call &lt;code&gt;unwrap&lt;&#x2F;code&gt; which basically asks our operation to
 &lt;code&gt;panic!&lt;&#x2F;code&gt; in case of some error. Think of it as a shortcut of:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#b48ead;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;std::io::{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;, Write};
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;match &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;io::stdout().&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;write_all&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;some outputn&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;) {
@@ -2353,7 +2353,7 @@ if you got this:&lt;&#x2F;p&gt;
 &lt;&#x2F;ul&gt;
 &lt;hr &#x2F;&gt;
 &lt;p&gt;What if we wanted to do some string formatting:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#b48ead;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;std::io::{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;, Write};
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
@@ -2362,7 +2362,7 @@ if you got this:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;But there is a shortcut for the code above:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#b48ead;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;std::io::{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;, Write};
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
@@ -2371,7 +2371,7 @@ if you got this:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;There is an even shorter shortcut:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; second_word = &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;output&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;; println!(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;some &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;{}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, second_word);
@@ -2390,7 +2390,7 @@ if you got this:&lt;&#x2F;p&gt;
 stderr. There is no simple macro for that (&lt;code&gt;println!&lt;&#x2F;code&gt; is for stdout).
 Short of implementing &lt;a href=&quot;http:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;27590832&#x2F;321731&quot;&gt;our own macro&lt;&#x2F;a&gt;, We&#x27;d have to do something like
 the following:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#b48ead;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;std::io;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
@@ -2398,7 +2398,7 @@ the following:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;You can test that it really goes to stderr by running it like:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ .&#x2F;main &amp;gt; &#x2F;dev&#x2F;null
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;some output
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
@@ -2422,7 +2422,7 @@ learned quite a bit going through it, like the meaning of
 &lt;code&gt;#[derive(Clone, Copy)]&lt;&#x2F;code&gt;, which I see a lot but never knew what it
 meant. I also learned that there are 7 ways to introduce a variable
 binding (taking &lt;code&gt;foo&lt;&#x2F;code&gt; as the name of that binding):&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;let foo ...
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for foo in ... (for loop)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;foo =&amp;gt; ... (match block)
@@ -2469,7 +2469,7 @@ mut vector = Vec::new(); for n in (0..COUNT) { vector.push(n); }; vector
 }); }
 :::&lt;&#x2F;p&gt;
 &lt;p&gt;Here is the output of &lt;code&gt;cargo bench&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;test collect    ... bench:       164 ns&#x2F;iter (+&#x2F;- 7)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;test no_collect ... bench:       346 ns&#x2F;iter (+&#x2F;- 8)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
@@ -2526,14 +2526,14 @@ use than C:&lt;&#x2F;p&gt;
 rust&lt;&#x2F;p&gt;
 &lt;p&gt;fn main() {&lt;&#x2F;p&gt;
 &lt;p&gt;:   let a = 0i8; let b = 0i8; let c = 0i8;&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;println!(&amp;quot;{:p}&amp;quot;, &amp;amp;a); println!(&amp;quot;{:p}&amp;quot;, &amp;amp;b); println!(&amp;quot;{:p}&amp;quot;,
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;amp;c);
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;}
 :::&lt;&#x2F;p&gt;
 &lt;p&gt;We build and run it like this:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ rustc main.rs &amp;amp;&amp;amp; .&#x2F;main
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7fff0c8d16d7
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7fff0c8d16d6
@@ -2550,14 +2550,14 @@ address:&lt;&#x2F;p&gt;
 rust&lt;&#x2F;p&gt;
 &lt;p&gt;fn main() {&lt;&#x2F;p&gt;
 &lt;p&gt;:   let a = 0i16; let b = 0i16; let c = 0i16;&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;println!(&amp;quot;{:p}&amp;quot;, &amp;amp;a); println!(&amp;quot;{:p}&amp;quot;, &amp;amp;b); println!(&amp;quot;{:p}&amp;quot;,
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;amp;c);
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;}
 :::&lt;&#x2F;p&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ rustc main.rs &amp;amp;&amp;amp; .&#x2F;main
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7fff2462aed6
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7fff2462aed4
@@ -2565,7 +2565,7 @@ rust&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;In this case, each of the variables take 2 addresses (&lt;code&gt;i16&lt;&#x2F;code&gt; means 16-bit
 integer). Using &lt;code&gt;i32&lt;&#x2F;code&gt; results in each taking 4 addresses:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ rustc main.rs &amp;amp;&amp;amp; .&#x2F;main
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7ffff7706024
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7ffff7706020
@@ -2573,7 +2573,7 @@ integer). Using &lt;code&gt;i32&lt;&#x2F;code&gt; results in each taking 4 addre
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;And then, finally, &lt;code&gt;i64&lt;&#x2F;code&gt; results in each variable taking 8 addresses (64
 bits) of space:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ rustc main.rs &amp;amp;&amp;amp; .&#x2F;main
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7fffd27383b0
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7fffd27383a8

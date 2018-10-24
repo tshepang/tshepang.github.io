@@ -65,7 +65,7 @@ one while on another&#x27;s repository... error. I therefore decided to
 ease the pain my creating &lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;scripts&#x2F;src&#x2F;tip&#x2F;vcs.py&quot;&gt;a script&lt;&#x2F;a&gt; which checks which VCS system I&#x27;m
 on, and displays the relevant command.&lt;&#x2F;p&gt;
 &lt;p&gt;Some examples of usage:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ cd &amp;lt;hg repo&amp;gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ .&#x2F;vcs.py --log
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;hg log --no-merges --patch --stat --verbose
@@ -74,7 +74,7 @@ on, and displays the relevant command.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;git log --no-merges --patch --stat
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Here are the relevant BASH aliases:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vb=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --branch)&amp;#39;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vd=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --diff)&amp;#39;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vl=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --log)&amp;#39;
@@ -92,7 +92,7 @@ self.&lt;&#x2F;p&gt;
 &lt;p&gt;As a sidenote, if you want to cycle between the changesets (Mercurial
 term) or Commits (Git term), use the following search term on your pager
 (tested with &lt;a href=&quot;http:&#x2F;&#x2F;www.greenwoodsoftware.com&#x2F;less&quot;&gt;less&lt;&#x2F;a&gt;, which is Debian&#x2F;Ubuntu default pager):&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b&quot;&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;(^changeset)|(^commit)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
             </item>

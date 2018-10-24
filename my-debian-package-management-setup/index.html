@@ -142,7 +142,7 @@ use it to create 2 repos:</p>
 </ul>
 <p>How this works is that I'd run the following command (an example for
 the source repo):</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">/usr/bin/debmirror
 </span><span style="color:#c0c5ce;"> </span><span style="color:#c0c5ce;">--verbose
 </span><span style="color:#c0c5ce;"> </span><span style="color:#c0c5ce;">--progress
@@ -175,7 +175,7 @@ debmirror, and I think it can do what debmirror does (but I don't yet
 care to learn how).</p>
 <p>Moving on, here's the relevant entries from my /etc/apt/sources.list
 file:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;"># local repos (debmirror)
 </span><span style="color:#c0c5ce;">deb file:/home/wena/.repo_bin sid main
 </span><span style="color:#c0c5ce;">deb-src file:/home/wena/.repo_src sid main
@@ -187,17 +187,17 @@ file:</p>
 </span><span style="color:#c0c5ce;">deb ftp://ftp.sun.ac.za/ftp/debian/ sid main non-free contrib
 </span></pre>
 <p>So, what I do on a semi-regular basis is run:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">$ wajig update &amp;&amp; wajig upgrade
 </span></pre>
 <p>The newly-updated packages are stored in a cache so that a reinstall
 doesn't have to fetch from network again. After this I run:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">$ reprepro -vv --basedir ~/.repo_local includedeb cache /var/cache/apt/archives/*deb
 </span></pre>
 <p>This updates the local reprepro repo and after which I can then remove
 the cached packages:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">$ wajig clean
 </span></pre>
 <p>I do that because they are now available in my reprepro-managed repo.

@@ -136,7 +136,7 @@ some state to a file, but only when all the functionality in the given
 functions executed successfully. It was a one-line change but I thought
 it was a good excuse to create decorators for the first time in my life.</p>
 <p>Here is an example of a decorator function:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">def checkpoint(function):
 </span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">wrapper(*args, **kwargs):
 </span><span style="color:#c0c5ce;">        </span><span style="color:#c0c5ce;">with open(PATH) as f:
@@ -154,7 +154,7 @@ function will be <em>decorated</em> by it if there is a match in that file.
 This would be an indicator that the function had already been executed
 (in a previous run).</p>
 <p>The following snippet sees the use of this decorator:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">@checkpoint
 </span><span style="color:#c0c5ce;">def do_this(some_argument):
 </span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;"># exit(1) on error
@@ -171,7 +171,7 @@ This would be an indicator that the function had already been executed
 </span></pre>
 <p>Without the decorator syntax, the same functionality would be achieved
 with:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">def do_this(some_argument):
 </span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;"># exit(1) on error
 </span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">...

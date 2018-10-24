@@ -138,7 +138,7 @@ each line of code in the CPU. This is useful when tuning programs for
 performance.</p>
 <p>Following is example code; it accepts 2 arguments, a filename and text
 that will be written to that file:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#b48ead;">#include </span><span style="color:#c0c5ce;">&lt;</span><span style="color:#a3be8c;">string.h</span><span style="color:#c0c5ce;">&gt;
 </span><span style="color:#b48ead;">#include </span><span style="color:#c0c5ce;">&lt;</span><span style="color:#a3be8c;">errno.h</span><span style="color:#c0c5ce;">&gt;
 </span><span style="color:#b48ead;">#include </span><span style="color:#c0c5ce;">&lt;</span><span style="color:#a3be8c;">stdio.h</span><span style="color:#c0c5ce;">&gt;
@@ -176,11 +176,11 @@ that will be written to that file:</p>
 </span><span style="color:#c0c5ce;">}
 </span></pre>
 <p>Build command (using GCC 4.8.1):</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">gcc -Wall -pedantic -g play.c -o play
 </span></pre>
 <p>System details:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">$ uname --all
 </span><span style="color:#c0c5ce;">Linux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU/Linux
 </span><span style="color:#c0c5ce;">$ sudo lshw -class processor
@@ -209,7 +209,7 @@ that will be written to that file:</p>
 </span><span style="color:#c0c5ce;">     </span><span style="color:#c0c5ce;">configuration: cores=2 enabledcores=1 threads=2
 </span></pre>
 <p>Running the resulting binary with <strong>Callgrind</strong>:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">$ valgrind --tool=callgrind --callgrind-out-file=out ./play filename
 </span><span style="color:#c0c5ce;">filecontent
 </span><span style="color:#c0c5ce;">==5308== Callgrind, a call-graph generating cache profiler
@@ -232,7 +232,7 @@ that will be written to that file:</p>
 stands for <strong>Instruction cache reads</strong>, which you can read as <em>number of
 CPU instructions</em>. I have used <code>tree=calling</code> option so that I can see
 the cost of all operations called by a parent (marked with a <code>*</code>) :</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">$ callgrind_annotate --tree=calling out play.c
 </span><span style="color:#c0c5ce;">---++++++--
 </span><span style="color:#c0c5ce;">Profile data file &#39;out&#39; (creator: callgrind-3.8.1)
@@ -281,7 +281,7 @@ the cost of all operations called by a parent (marked with a <code>*</code>) :</
 </span></pre>
 <p>I have trimmed the output to bring focus to the most interesting output
 of all, which is the total cost for each line of my code:</p>
-<pre style="background-color:#2b303b">
+<pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">[continued]
 </span><span style="color:#c0c5ce;">---++++++--
 </span><span style="color:#c0c5ce;">-- User-annotated source: play.c
