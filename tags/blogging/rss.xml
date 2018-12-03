@@ -3,9 +3,9 @@
         <title>Tshepang logs</title>
         <link>http://tshepang.net</link>
         <description></description>
-        <generator>Gutenberg</generator>
+        <generator>Zola</generator>
         <language>en</language>
-        <atom:link href="http://tshepang.net/tags/blogging/rss.xml/" rel="self" type="application/rss+xml"/>
+        <atom:link href="http://tshepang.net/tags/blogging/rss.xml" rel="self" type="application/rss+xml"/>
         <lastBuildDate>Sun, 11 Jan 2015 00:00:00 +0000</lastBuildDate>
         
             <item>
@@ -72,7 +72,7 @@ also still built with liquidluck.&lt;&#x2F;li&gt;
 &lt;li&gt;I have a separate post on &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;what-me-loves-about-static-website-generation&quot;&gt;what I love about static website
 generators&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h1 id=&quot;why&quot;&gt;why &lt;a href=&quot;http:&#x2F;&#x2F;pelican.readthedocs.org&quot;&gt;Pelican&lt;&#x2F;a&gt; rocks&lt;&#x2F;h1&gt;
+&lt;h1 id=&quot;why-pelican-rocks&quot;&gt;why &lt;a href=&quot;http:&#x2F;&#x2F;pelican.readthedocs.org&quot;&gt;Pelican&lt;&#x2F;a&gt; rocks&lt;&#x2F;h1&gt;
 &lt;ul&gt;
 &lt;li&gt;It has categories (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;getnikola&#x2F;nikola&#x2F;issues&#x2F;163&quot;&gt;unlike nikola&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;li&gt;Post metadata:
@@ -280,7 +280,7 @@ page&lt;&#x2F;li&gt;
 &lt;li&gt;too much border space on code snippets (&lt;strong&gt;pre&lt;&#x2F;strong&gt; tag?)&lt;&#x2F;li&gt;
 &lt;li&gt;background for code snippets is not distinctive&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h1 id=&quot;tuxlite&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;getpelican&#x2F;pelican-themes&#x2F;tree&#x2F;master&#x2F;tuxlite_tbs&quot;&gt;tuxlite_tbs&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
+&lt;h1 id=&quot;tuxlite-tbs&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;getpelican&#x2F;pelican-themes&#x2F;tree&#x2F;master&#x2F;tuxlite_tbs&quot;&gt;tuxlite_tbs&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
 &lt;ul&gt;
 &lt;li&gt;[&lt;strong&gt;win&lt;&#x2F;strong&gt;] clean and simple design: nice menu-bar and sidebars&lt;&#x2F;li&gt;
 &lt;li&gt;tags aren&#x27;t shown along-aside posts&lt;&#x2F;li&gt;

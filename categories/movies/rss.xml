@@ -3,9 +3,9 @@
         <title>Tshepang logs</title>
         <link>http://tshepang.net</link>
         <description></description>
-        <generator>Gutenberg</generator>
+        <generator>Zola</generator>
         <language>en</language>
-        <atom:link href="http://tshepang.net/categories/movies/rss.xml/" rel="self" type="application/rss+xml"/>
+        <atom:link href="http://tshepang.net/categories/movies/rss.xml" rel="self" type="application/rss+xml"/>
         <lastBuildDate>Thu, 25 Oct 2018 00:00:00 +0000</lastBuildDate>
         
             <item>
@@ -959,8 +959,7 @@ especially love the performance of &lt;a href=&quot;https:&#x2F;&#x2F;en.wikiped
                 <description>&lt;p&gt;The best &lt;strong&gt;action&lt;&#x2F;strong&gt; can be found in the fight scenes of &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;non-stop&quot;&gt;Non-Stop&lt;&#x2F;a&gt;, but
 the best &lt;strong&gt;visual effects&lt;&#x2F;strong&gt; are in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;dracula-untold&quot;&gt;Dracula Untold&lt;&#x2F;a&gt;. The best
 &lt;strong&gt;animation&lt;&#x2F;strong&gt; is in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;big-hero-6&quot;&gt;Big Hero 6&lt;&#x2F;a&gt;, a movie that also has my &lt;strong&gt;favorite
-character&lt;&#x2F;strong&gt;, the inflatable robot. The best &lt;strong&gt;dialog&lt;&#x2F;strong&gt; is in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;i-origins&quot;&gt;I
-Origins&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+character&lt;&#x2F;strong&gt;, the inflatable robot.&lt;&#x2F;p&gt;
 </description>
             </item>
         
@@ -999,17 +998,6 @@ as it is.&lt;&#x2F;p&gt;
                 <link>http://tshepang.net/2008-review/</link>
                 <guid>http://tshepang.net/2008-review/</guid>
                 <description>&lt;p&gt;The best &lt;strong&gt;visual effects&lt;&#x2F;strong&gt; can be found in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;iron-man&quot;&gt;Iron Man&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-</description>
-            </item>
-        
-            <item>
-                <title>I Origins</title>
-                <pubDate>Sun, 10 May 2015 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/i-origins/</link>
-                <guid>http://tshepang.net/i-origins/</guid>
-                <description>&lt;p&gt;Very smooth direction and editing, with high quality dialog, and some
-nice performances. My favorite of these is the little Indian girl. The
-conclusion is quite intriguing, even though it&#x27;s ridiculous.&lt;&#x2F;p&gt;
 </description>
             </item>
         
@@ -11315,7 +11303,7 @@ followed by &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;the-social-netwo
 the most &lt;strong&gt;bizarre&lt;&#x2F;strong&gt; movie of the year, &lt;em&gt;Sita Sings the Blues&lt;&#x2F;em&gt;. There
 was nothing more &lt;strong&gt;moody&lt;&#x2F;strong&gt; than &lt;em&gt;Anamorph&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;The best &lt;strong&gt;sound&lt;&#x2F;strong&gt; is a tie between &lt;em&gt;Up in the Air&lt;&#x2F;em&gt; and &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;somewhere-2010&quot;&gt;Somewhere&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;acting&quot;&gt;acting &amp; characters&lt;&#x2F;h1&gt;
+&lt;h1 id=&quot;acting-characters&quot;&gt;acting &amp; characters&lt;&#x2F;h1&gt;
 &lt;p&gt;There were so many enjoyable performances this year that I couln&#x27;t
 clearly decide who was better than who, and here&#x27;s an attempt:&lt;&#x2F;p&gt;
 &lt;p&gt;The year&#x27;s most &lt;strong&gt;favorite performance&lt;&#x2F;strong&gt; is that of Jesse Eisenberg in
@@ -11421,7 +11409,7 @@ by &lt;em&gt;Afterwards&lt;&#x2F;em&gt; (no pun intended). The most &lt;strong&g
 live anywhere near the high expectations worthy of animated movies of
 its stature. The most &lt;strong&gt;overrated villain&lt;&#x2F;strong&gt; is Jack Nicholson as The
 Joker in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;many-many-recent-movies&quot;&gt;Batman&lt;&#x2F;a&gt;. WTF!&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;these&quot;&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;tags&#x2F;2010-movie&#x2F;&quot;&gt;these&lt;&#x2F;a&gt; and these:&lt;&#x2F;h1&gt;
+&lt;h1 id=&quot;these-and-these&quot;&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;tags&#x2F;2010-movie&#x2F;&quot;&gt;these&lt;&#x2F;a&gt; and these:&lt;&#x2F;h1&gt;
 &lt;p&gt;100 Girls; Accidental Husband, The; Agora; Alien Hunter; Annie Hall;
 Armored; Asterix at the Olympic Games; Blood and Chocolate; Canadian
 Bacon; Centurion; Code, The; Coraline; Crank; Dirty Dancing; Dog Day

@@ -3,9 +3,9 @@
         <title>Tshepang logs</title>
         <link>http://tshepang.net</link>
         <description></description>
-        <generator>Gutenberg</generator>
+        <generator>Zola</generator>
         <language>en</language>
-        <atom:link href="http://tshepang.net/rss.xml/" rel="self" type="application/rss+xml"/>
+        <atom:link href="http://tshepang.net/rss.xml" rel="self" type="application/rss+xml"/>
         <lastBuildDate>Thu, 25 Oct 2018 00:00:00 +0000</lastBuildDate>
         
             <item>
@@ -3681,8 +3681,7 @@ especially love the performance of &lt;a href=&quot;https:&#x2F;&#x2F;en.wikiped
                 <description>&lt;p&gt;The best &lt;strong&gt;action&lt;&#x2F;strong&gt; can be found in the fight scenes of &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;non-stop&quot;&gt;Non-Stop&lt;&#x2F;a&gt;, but
 the best &lt;strong&gt;visual effects&lt;&#x2F;strong&gt; are in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;dracula-untold&quot;&gt;Dracula Untold&lt;&#x2F;a&gt;. The best
 &lt;strong&gt;animation&lt;&#x2F;strong&gt; is in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;big-hero-6&quot;&gt;Big Hero 6&lt;&#x2F;a&gt;, a movie that also has my &lt;strong&gt;favorite
-character&lt;&#x2F;strong&gt;, the inflatable robot. The best &lt;strong&gt;dialog&lt;&#x2F;strong&gt; is in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;i-origins&quot;&gt;I
-Origins&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+character&lt;&#x2F;strong&gt;, the inflatable robot.&lt;&#x2F;p&gt;
 </description>
             </item>
         
@@ -4074,17 +4073,6 @@ the &lt;code&gt;std::path&lt;&#x2F;code&gt; module. It even led me to bump onto 
                 <link>http://tshepang.net/2008-review/</link>
                 <guid>http://tshepang.net/2008-review/</guid>
                 <description>&lt;p&gt;The best &lt;strong&gt;visual effects&lt;&#x2F;strong&gt; can be found in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;iron-man&quot;&gt;Iron Man&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-</description>
-            </item>
-        
-            <item>
-                <title>I Origins</title>
-                <pubDate>Sun, 10 May 2015 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/i-origins/</link>
-                <guid>http://tshepang.net/i-origins/</guid>
-                <description>&lt;p&gt;Very smooth direction and editing, with high quality dialog, and some
-nice performances. My favorite of these is the little Indian girl. The
-conclusion is quite intriguing, even though it&#x27;s ridiculous.&lt;&#x2F;p&gt;
 </description>
             </item>
         
@@ -8650,7 +8638,7 @@ also still built with liquidluck.&lt;&#x2F;li&gt;
 &lt;li&gt;I have a separate post on &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;what-me-loves-about-static-website-generation&quot;&gt;what I love about static website
 generators&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h1 id=&quot;why&quot;&gt;why &lt;a href=&quot;http:&#x2F;&#x2F;pelican.readthedocs.org&quot;&gt;Pelican&lt;&#x2F;a&gt; rocks&lt;&#x2F;h1&gt;
+&lt;h1 id=&quot;why-pelican-rocks&quot;&gt;why &lt;a href=&quot;http:&#x2F;&#x2F;pelican.readthedocs.org&quot;&gt;Pelican&lt;&#x2F;a&gt; rocks&lt;&#x2F;h1&gt;
 &lt;ul&gt;
 &lt;li&gt;It has categories (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;getnikola&#x2F;nikola&#x2F;issues&#x2F;163&quot;&gt;unlike nikola&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;li&gt;Post metadata:
@@ -8893,7 +8881,7 @@ page&lt;&#x2F;li&gt;
 &lt;li&gt;too much border space on code snippets (&lt;strong&gt;pre&lt;&#x2F;strong&gt; tag?)&lt;&#x2F;li&gt;
 &lt;li&gt;background for code snippets is not distinctive&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h1 id=&quot;tuxlite&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;getpelican&#x2F;pelican-themes&#x2F;tree&#x2F;master&#x2F;tuxlite_tbs&quot;&gt;tuxlite_tbs&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
+&lt;h1 id=&quot;tuxlite-tbs&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;getpelican&#x2F;pelican-themes&#x2F;tree&#x2F;master&#x2F;tuxlite_tbs&quot;&gt;tuxlite_tbs&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
 &lt;ul&gt;
 &lt;li&gt;[&lt;strong&gt;win&lt;&#x2F;strong&gt;] clean and simple design: nice menu-bar and sidebars&lt;&#x2F;li&gt;
 &lt;li&gt;tags aren&#x27;t shown along-aside posts&lt;&#x2F;li&gt;
@@ -12477,7 +12465,7 @@ semi-automate the setup process with the help of this script:&lt;&#x2F;p&gt;
 &lt;p&gt;::: {.sourcecode}
 sh&lt;&#x2F;p&gt;
 &lt;p&gt;#!&#x2F;bin&#x2F;bash&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;some-convenience-shopt-s-expand&quot;&gt;some convenience shopt -s expand_aliases source&lt;&#x2F;h1&gt;
+&lt;h1 id=&quot;some-convenience-shopt-s-expand-aliases-source&quot;&gt;some convenience shopt -s expand_aliases source&lt;&#x2F;h1&gt;
 &lt;p&gt;~&#x2F;nna&#x2F;conf&#x2F;bash_aliases&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;config-files-sudo-cp-nna-conf-sources-list-etc-apt-sudo-cp&quot;&gt;config files sudo cp ~&#x2F;nna&#x2F;conf&#x2F;sources.list &#x2F;etc&#x2F;apt sudo cp&lt;&#x2F;h1&gt;
 &lt;p&gt;~&#x2F;nna&#x2F;conf&#x2F;sudoers &#x2F;etc&lt;&#x2F;p&gt;
@@ -12485,7 +12473,7 @@ sh&lt;&#x2F;p&gt;
 &lt;p&gt;sudo apt-get --allow-unauthenticated dist-upgrade sudo apt-get
 --allow-unauthenticated install devscripts debhelper build-essential
 python3-apt gpm&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;wajig-cd-src-wajig&quot;&gt;wajig (cd ~&#x2F;src&#x2F;wajig &amp;&amp; iiwajig) ibase &amp;&amp; inondebian &amp;&amp; itracker &amp;&amp;&lt;&#x2F;h1&gt;
+&lt;h1 id=&quot;wajig-cd-src-wajig-iiwajig-ibase-inondebian-itracker&quot;&gt;wajig (cd ~&#x2F;src&#x2F;wajig &amp;&amp; iiwajig) ibase &amp;&amp; inondebian &amp;&amp; itracker &amp;&amp;&lt;&#x2F;h1&gt;
 &lt;p&gt;icpython &amp;amp;&amp;amp; ipurge&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;for-tracker-sudo-sh-c-echo&quot;&gt;for Tracker sudo sh -c &quot;echo&lt;&#x2F;h1&gt;
 &lt;p&gt;&#x27;fs.inotify.max_user_watches=100000&#x27; &amp;gt;&amp;gt; &#x2F;etc&#x2F;sysctl.conf&amp;quot;&lt;&#x2F;p&gt;
@@ -20573,7 +20561,7 @@ been running for a few years now, and is now defunct:&lt;&#x2F;p&gt;
                 <pubDate>Fri, 14 Jan 2011 00:00:00 +0000</pubDate>
                 <link>http://tshepang.net/barry-white-s-top-tracks/</link>
                 <guid>http://tshepang.net/barry-white-s-top-tracks/</guid>
-                <description>&lt;h1 id=&quot;6&quot;&gt;6 &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;simple-rating-system-for-music&quot;&gt;points&lt;&#x2F;a&gt;:&lt;&#x2F;h1&gt;
+                <description>&lt;h1 id=&quot;6-points&quot;&gt;6 &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;simple-rating-system-for-music&quot;&gt;points&lt;&#x2F;a&gt;:&lt;&#x2F;h1&gt;
 &lt;ul&gt;
 &lt;li&gt;1 landmark (&lt;em&gt;Bring Back My Yesterday&lt;&#x2F;em&gt;)&lt;&#x2F;li&gt;
 &lt;li&gt;1 masterpiece (&lt;em&gt;Let Me Live My Life Lovin&#x27; You Babe&lt;&#x2F;em&gt;)&lt;&#x2F;li&gt;
@@ -20947,7 +20935,7 @@ followed by &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;the-social-netwo
 the most &lt;strong&gt;bizarre&lt;&#x2F;strong&gt; movie of the year, &lt;em&gt;Sita Sings the Blues&lt;&#x2F;em&gt;. There
 was nothing more &lt;strong&gt;moody&lt;&#x2F;strong&gt; than &lt;em&gt;Anamorph&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;The best &lt;strong&gt;sound&lt;&#x2F;strong&gt; is a tie between &lt;em&gt;Up in the Air&lt;&#x2F;em&gt; and &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;somewhere-2010&quot;&gt;Somewhere&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;acting&quot;&gt;acting &amp; characters&lt;&#x2F;h1&gt;
+&lt;h1 id=&quot;acting-characters&quot;&gt;acting &amp; characters&lt;&#x2F;h1&gt;
 &lt;p&gt;There were so many enjoyable performances this year that I couln&#x27;t
 clearly decide who was better than who, and here&#x27;s an attempt:&lt;&#x2F;p&gt;
 &lt;p&gt;The year&#x27;s most &lt;strong&gt;favorite performance&lt;&#x2F;strong&gt; is that of Jesse Eisenberg in
@@ -21053,7 +21041,7 @@ by &lt;em&gt;Afterwards&lt;&#x2F;em&gt; (no pun intended). The most &lt;strong&g
 live anywhere near the high expectations worthy of animated movies of
 its stature. The most &lt;strong&gt;overrated villain&lt;&#x2F;strong&gt; is Jack Nicholson as The
 Joker in &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;many-many-recent-movies&quot;&gt;Batman&lt;&#x2F;a&gt;. WTF!&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;these&quot;&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;tags&#x2F;2010-movie&#x2F;&quot;&gt;these&lt;&#x2F;a&gt; and these:&lt;&#x2F;h1&gt;
+&lt;h1 id=&quot;these-and-these&quot;&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;tags&#x2F;2010-movie&#x2F;&quot;&gt;these&lt;&#x2F;a&gt; and these:&lt;&#x2F;h1&gt;
 &lt;p&gt;100 Girls; Accidental Husband, The; Agora; Alien Hunter; Annie Hall;
 Armored; Asterix at the Olympic Games; Blood and Chocolate; Canadian
 Bacon; Centurion; Code, The; Coraline; Crank; Dirty Dancing; Dog Day

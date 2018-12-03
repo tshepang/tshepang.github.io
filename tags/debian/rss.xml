@@ -3,9 +3,9 @@
         <title>Tshepang logs</title>
         <link>http://tshepang.net</link>
         <description></description>
-        <generator>Gutenberg</generator>
+        <generator>Zola</generator>
         <language>en</language>
-        <atom:link href="http://tshepang.net/tags/debian/rss.xml/" rel="self" type="application/rss+xml"/>
+        <atom:link href="http://tshepang.net/tags/debian/rss.xml" rel="self" type="application/rss+xml"/>
         <lastBuildDate>Fri, 16 Jan 2015 00:00:00 +0000</lastBuildDate>
         
             <item>
@@ -508,7 +508,7 @@ semi-automate the setup process with the help of this script:&lt;&#x2F;p&gt;
 &lt;p&gt;::: {.sourcecode}
 sh&lt;&#x2F;p&gt;
 &lt;p&gt;#!&#x2F;bin&#x2F;bash&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;some-convenience-shopt-s-expand&quot;&gt;some convenience shopt -s expand_aliases source&lt;&#x2F;h1&gt;
+&lt;h1 id=&quot;some-convenience-shopt-s-expand-aliases-source&quot;&gt;some convenience shopt -s expand_aliases source&lt;&#x2F;h1&gt;
 &lt;p&gt;~&#x2F;nna&#x2F;conf&#x2F;bash_aliases&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;config-files-sudo-cp-nna-conf-sources-list-etc-apt-sudo-cp&quot;&gt;config files sudo cp ~&#x2F;nna&#x2F;conf&#x2F;sources.list &#x2F;etc&#x2F;apt sudo cp&lt;&#x2F;h1&gt;
 &lt;p&gt;~&#x2F;nna&#x2F;conf&#x2F;sudoers &#x2F;etc&lt;&#x2F;p&gt;
@@ -516,7 +516,7 @@ sh&lt;&#x2F;p&gt;
 &lt;p&gt;sudo apt-get --allow-unauthenticated dist-upgrade sudo apt-get
 --allow-unauthenticated install devscripts debhelper build-essential
 python3-apt gpm&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;wajig-cd-src-wajig&quot;&gt;wajig (cd ~&#x2F;src&#x2F;wajig &amp;&amp; iiwajig) ibase &amp;&amp; inondebian &amp;&amp; itracker &amp;&amp;&lt;&#x2F;h1&gt;
+&lt;h1 id=&quot;wajig-cd-src-wajig-iiwajig-ibase-inondebian-itracker&quot;&gt;wajig (cd ~&#x2F;src&#x2F;wajig &amp;&amp; iiwajig) ibase &amp;&amp; inondebian &amp;&amp; itracker &amp;&amp;&lt;&#x2F;h1&gt;
 &lt;p&gt;icpython &amp;amp;&amp;amp; ipurge&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;for-tracker-sudo-sh-c-echo&quot;&gt;for Tracker sudo sh -c &quot;echo&lt;&#x2F;h1&gt;
 &lt;p&gt;&#x27;fs.inotify.max_user_watches=100000&#x27; &amp;gt;&amp;gt; &#x2F;etc&#x2F;sysctl.conf&amp;quot;&lt;&#x2F;p&gt;
