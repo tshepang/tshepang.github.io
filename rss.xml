@@ -9,6 +9,23 @@
         <lastBuildDate>Wed, 20 Feb 2019 00:00:00 +0000</lastBuildDate>
         
             <item>
+                <title>favorite FLOSS</title>
+                <pubDate>Wed, 20 Feb 2019 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/favorite-floss/</link>
+                <guid>http://tshepang.net/favorite-floss/</guid>
+                <description>&lt;p&gt;For a piece of &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Free_and_open-source_software&quot;&gt;FLOSS&lt;&#x2F;a&gt; (free&#x2F;libre and open source software) to be here,
+it has to both be personally useful and I have to like it a-lot:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;desktop&lt;&#x2F;strong&gt;: &lt;a href=&quot;http:&#x2F;&#x2F;dwm.suckless.org&quot;&gt;dwm&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;web browser&lt;&#x2F;strong&gt;: Firefox&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;development&lt;&#x2F;strong&gt;: Emacs, Meld&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;file manager&lt;&#x2F;strong&gt;: Emacs (Dired mode)&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;misc utilities:&lt;&#x2F;strong&gt; &lt;a href=&quot;http:&#x2F;&#x2F;blog.burntsushi.net&#x2F;ripgrep&quot;&gt;ripgrep&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;project-of-note-sudo&quot;&gt;Sudo&lt;&#x2F;a&gt;, Lsof, &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;bat&quot;&gt;bat&lt;&#x2F;a&gt;, procps (top, watch),
+Ex Falso, coreutils (head, tail),
+&lt;a href=&quot;http:&#x2F;&#x2F;guichaz.free.fr&#x2F;iotop&quot;&gt;Iotop&lt;&#x2F;a&gt;, OpenSSH, &lt;a href=&quot;http:&#x2F;&#x2F;humdi.net&#x2F;vnstat&quot;&gt;vnstat&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;tmux.sourceforge.net&quot;&gt;tmux&lt;&#x2F;a&gt;, youtube-dl&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
                 <title>FLOSS I use a-lot</title>
                 <pubDate>Wed, 20 Feb 2019 00:00:00 +0000</pubDate>
                 <link>http://tshepang.net/floss-i-use-a-lot/</link>
@@ -187,24 +204,6 @@ It is the first ever FLOSS contribution I ever made:&lt;&#x2F;p&gt;
 I went on to make some more minor code patches,
 learning a few things along the way,
 like &lt;a href=&quot;http:&#x2F;&#x2F;developer.gnome.org&#x2F;gtk2&#x2F;stable&#x2F;&quot;&gt;GTK+&lt;&#x2F;a&gt; and &lt;a href=&quot;http:&#x2F;&#x2F;developer.gnome.org&#x2F;glib&#x2F;stable&#x2F;&quot;&gt;GLib&lt;&#x2F;a&gt; APIs.&lt;&#x2F;p&gt;
-</description>
-            </item>
-        
-            <item>
-                <title>favorite FLOSS</title>
-                <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/favorite-floss/</link>
-                <guid>http://tshepang.net/favorite-floss/</guid>
-                <description>&lt;p&gt;For a piece of &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Free_and_open-source_software&quot;&gt;FLOSS&lt;&#x2F;a&gt; (free&#x2F;libre and open source software) to be here,
-it has to both be personally useful and I have to like it a-lot:&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;desktop&lt;&#x2F;strong&gt;: &lt;a href=&quot;http:&#x2F;&#x2F;dwm.suckless.org&quot;&gt;dwm&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;web browser&lt;&#x2F;strong&gt;: Firefox&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;development&lt;&#x2F;strong&gt;: Emacs, Meld&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;file manager&lt;&#x2F;strong&gt;: Emacs (Dired mode)&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;misc utilities:&lt;&#x2F;strong&gt; &lt;a href=&quot;http:&#x2F;&#x2F;blog.burntsushi.net&#x2F;ripgrep&quot;&gt;ripgrep&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;project-of-note-sudo&quot;&gt;Sudo&lt;&#x2F;a&gt;, Lsof, less, procps (top, watch),
-Ex Falso, gnumeric, coreutils (head, tail),
-&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;project-of-note-linkchecker&quot;&gt;LinkChecker&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;guichaz.free.fr&#x2F;iotop&quot;&gt;Iotop&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;project-of-note-rdiff-backup&quot;&gt;rdiff-backup&lt;&#x2F;a&gt;, OpenSSH, &lt;a href=&quot;http:&#x2F;&#x2F;humdi.net&#x2F;vnstat&quot;&gt;vnstat&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;tmux.sourceforge.net&quot;&gt;tmux&lt;&#x2F;a&gt;, File
-Roller, youtube-dl&lt;&#x2F;p&gt;
 </description>
             </item>
         
