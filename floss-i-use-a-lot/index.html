@@ -18,6 +18,7 @@
       
           <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
           
+          
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-16685250-3"></script>
           <script>
             window.dataLayer = window.dataLayer || [];
@@ -32,6 +33,7 @@
 
       
           <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.net&#x2F;site.css">
+          
       
 
       
@@ -124,7 +126,7 @@
             <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;floss-i-use-a-lot&#x2F;">FLOSS I use a-lot</a>
         </h1>
         <div class="post__meta">
-            <span class="post__time">2018-10-25</span>
+            <span class="post__time">2019-02-20</span>
             
         </div>
     </header>
@@ -139,9 +141,8 @@ There is <a href="http://tshepang.net/favorite-floss">a separate post</a> for th
 <li><a href="http://tshepang.net/my-current-desktop-setup">dwm</a>: simple and clean window management</li>
 <li><a href="http://tmux.sourceforge.net">tmux</a>: amazingly powerful, though I wish it had less rendering bugs</li>
 <li><strong>Emacs</strong>: pleasant text editing and file management</li>
-<li><strong>bash</strong>, and <strong>fish</strong>: the latter is new to me, and likely here to stay...
-it's a far more pretty ui, with a fancy completion
-system, which sadly gets in the way rather often</li>
+<li><strong>fish</strong>: compared to mighty Bash, it is far more pretty,
+and has a far better command completion system</li>
 </ul>
 <p><em>software development</em></p>
 <ul>
@@ -153,12 +154,13 @@ system, which sadly gets in the way rather often</li>
 <p>Out infrastructure is made up of remote machines that ferry data to
 central servers</p>
 <ul>
-<li><strong>Docker</strong>: each component of the server runs in a container</li>
-<li><strong>salt</strong>: administers the remote machines</li>
+<li><strong>Docker</strong> &amp; <strong>Docker Compose</strong>: each component of the server runs in a container</li>
+<li><strong>SaltStack</strong>: administers the remote machines</li>
 <li><strong>VirtualBox</strong>: these remotes can be virtual... great for testing</li>
-<li><strong>journalctl</strong> &amp; <strong>sysmtemctl</strong>: these remotes run systemd</li>
+<li><strong>journalctl</strong> &amp; <strong>systemctl</strong>: these remotes run systemd</li>
 <li><strong>Elasticsearch</strong>: the data store</li>
-<li><strong>Ubuntu</strong>: the OS running these remotes, and the server (<a href="http://tshepang.net/i-am-a-very-jealous-person">I jealous</a>)</li>
+<li><strong>Ubuntu</strong>: the OS running these remotes, and the server</li>
+<li><strong>Bash</strong>: default shell on Ubuntu, this one can hardly be avoided</li>
 </ul>
 <p><em>GUI applications</em></p>
 <ul>
@@ -189,15 +191,13 @@ package that makes me a Debian Maintainer (I got upload access
 for it)</li>
 <li><strong>apt</strong>: Debian package management</li>
 <li><strong>head</strong> and <strong>tail</strong>: included in GNU coreutils suite of tools</li>
-<li><a href="http://www.greenwoodsoftware.com/less">less</a>: indispensable!</li>
 <li><strong>OpenSSH</strong>: duh!</li>
 <li><a href="http://tshepang.net/project-of-note-sudo">Sudo</a>: another duh!</li>
-<li><a href="http://fabfile.org">Fabric</a>: I use it to build and deploy my blogs... it's some
-sort of replacement for shell scripting</li>
 <li><a href="http://rg3.github.io/youtube-dl">youtube-dl</a>: I prefer watching videos locally, with VLC</li>
-<li><a href="http://blog.burntsushi.net/ripgrep">ripgrep</a>: grep replacement (better speed and ux),
-and the most important non-dev tool written in Rust</li>
 <li><a href="http://tshepang.net/project-of-note-sudo">Iotop</a>: nifty I/O usage viewer</li>
+<li><a href="http://blog.burntsushi.net/ripgrep">ripgrep</a>: a more pleasant <code>grep</code></li>
+<li><a href="https://the.exa.website">exa</a>: a more pleasant, more pretty <code>ls</code></li>
+<li><a href="https://crates.io/crates/bat">bat</a>: a more pleasant, more fancy <code>cat</code>, which also supplants <code>less</code></li>
 </ul>
 
     </div>
@@ -208,10 +208,29 @@ and the most important non-dev tool written in Rust</li>
     <div class="post-footer">
         
             
+                <div class="post-tags">
+                    
+                        <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;tags&#x2F;list&#x2F;">#list</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                        <a class="previous" href="http:&#x2F;&#x2F;tshepang.net&#x2F;2018-review&#x2F;">‹ 2018 review</a>
+                    
+                    
+                    
+                    
+                </div>
             
 
         
+
     </div>
+
+    
+    
 </article>
 
 

@@ -6,27 +6,11 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="http://tshepang.net/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Thu, 25 Oct 2018 00:00:00 +0000</lastBuildDate>
-        
-            <item>
-                <title>2018 review</title>
-                <pubDate>Thu, 25 Oct 2018 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/2018-review/</link>
-                <guid>http://tshepang.net/2018-review/</guid>
-                <description>&lt;p&gt;The greatest &lt;strong&gt;spectable&lt;&#x2F;strong&gt; is &lt;em&gt;Ready Player One&lt;&#x2F;em&gt; (great supply of
-iconic fictional characters, fantastic environment, and story concept).
-The movie also has the best &lt;strong&gt;animation&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;The best &lt;strong&gt;humor&lt;&#x2F;strong&gt; is found in &lt;em&gt;Deadpool 2&lt;&#x2F;em&gt;,
-a sequel that also happens to be better than the delightful original.&lt;&#x2F;p&gt;
-&lt;p&gt;The best &lt;strong&gt;thriller&lt;&#x2F;strong&gt; is the intense &lt;em&gt;Mile 22&lt;&#x2F;em&gt;,
-and its &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Iko_Uwais&quot;&gt;Iko Uwais&lt;&#x2F;a&gt; gives the year&#x27;s &lt;strong&gt;favorite performance&lt;&#x2F;strong&gt;.
-The movie also has best &lt;strong&gt;action direction&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
-</description>
-            </item>
+        <lastBuildDate>Wed, 20 Feb 2019 00:00:00 +0000</lastBuildDate>
         
             <item>
                 <title>FLOSS I use a-lot</title>
-                <pubDate>Thu, 25 Oct 2018 00:00:00 +0000</pubDate>
+                <pubDate>Wed, 20 Feb 2019 00:00:00 +0000</pubDate>
                 <link>http://tshepang.net/floss-i-use-a-lot/</link>
                 <guid>http://tshepang.net/floss-i-use-a-lot/</guid>
                 <description>&lt;p&gt;Following are tools I use a lot, but am not necessarily loving...
@@ -38,9 +22,8 @@ There is &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;favorite-floss&quot
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;my-current-desktop-setup&quot;&gt;dwm&lt;&#x2F;a&gt;: simple and clean window management&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tmux.sourceforge.net&quot;&gt;tmux&lt;&#x2F;a&gt;: amazingly powerful, though I wish it had less rendering bugs&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;Emacs&lt;&#x2F;strong&gt;: pleasant text editing and file management&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;bash&lt;&#x2F;strong&gt;, and &lt;strong&gt;fish&lt;&#x2F;strong&gt;: the latter is new to me, and likely here to stay...
-it&#x27;s a far more pretty ui, with a fancy completion
-system, which sadly gets in the way rather often&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;fish&lt;&#x2F;strong&gt;: compared to mighty Bash, it is far more pretty,
+and has a far better command completion system&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;&lt;em&gt;software development&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;ul&gt;
@@ -52,12 +35,13 @@ system, which sadly gets in the way rather often&lt;&#x2F;li&gt;
 &lt;p&gt;Out infrastructure is made up of remote machines that ferry data to
 central servers&lt;&#x2F;p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Docker&lt;&#x2F;strong&gt;: each component of the server runs in a container&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;salt&lt;&#x2F;strong&gt;: administers the remote machines&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Docker&lt;&#x2F;strong&gt; &amp;amp; &lt;strong&gt;Docker Compose&lt;&#x2F;strong&gt;: each component of the server runs in a container&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;SaltStack&lt;&#x2F;strong&gt;: administers the remote machines&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;VirtualBox&lt;&#x2F;strong&gt;: these remotes can be virtual... great for testing&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;journalctl&lt;&#x2F;strong&gt; &amp;amp; &lt;strong&gt;sysmtemctl&lt;&#x2F;strong&gt;: these remotes run systemd&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;journalctl&lt;&#x2F;strong&gt; &amp;amp; &lt;strong&gt;systemctl&lt;&#x2F;strong&gt;: these remotes run systemd&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;Elasticsearch&lt;&#x2F;strong&gt;: the data store&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Ubuntu&lt;&#x2F;strong&gt;: the OS running these remotes, and the server (&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;i-am-a-very-jealous-person&quot;&gt;I jealous&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Ubuntu&lt;&#x2F;strong&gt;: the OS running these remotes, and the server&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Bash&lt;&#x2F;strong&gt;: default shell on Ubuntu, this one can hardly be avoided&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;&lt;em&gt;GUI applications&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;ul&gt;
@@ -88,16 +72,30 @@ package that makes me a Debian Maintainer (I got upload access
 for it)&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;apt&lt;&#x2F;strong&gt;: Debian package management&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;head&lt;&#x2F;strong&gt; and &lt;strong&gt;tail&lt;&#x2F;strong&gt;: included in GNU coreutils suite of tools&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.greenwoodsoftware.com&#x2F;less&quot;&gt;less&lt;&#x2F;a&gt;: indispensable!&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;OpenSSH&lt;&#x2F;strong&gt;: duh!&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;project-of-note-sudo&quot;&gt;Sudo&lt;&#x2F;a&gt;: another duh!&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;fabfile.org&quot;&gt;Fabric&lt;&#x2F;a&gt;: I use it to build and deploy my blogs... it&#x27;s some
-sort of replacement for shell scripting&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;rg3.github.io&#x2F;youtube-dl&quot;&gt;youtube-dl&lt;&#x2F;a&gt;: I prefer watching videos locally, with VLC&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;blog.burntsushi.net&#x2F;ripgrep&quot;&gt;ripgrep&lt;&#x2F;a&gt;: grep replacement (better speed and ux),
-and the most important non-dev tool written in Rust&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;project-of-note-sudo&quot;&gt;Iotop&lt;&#x2F;a&gt;: nifty I&#x2F;O usage viewer&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;blog.burntsushi.net&#x2F;ripgrep&quot;&gt;ripgrep&lt;&#x2F;a&gt;: a more pleasant &lt;code&gt;grep&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;the.exa.website&quot;&gt;exa&lt;&#x2F;a&gt;: a more pleasant, more pretty &lt;code&gt;ls&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;bat&quot;&gt;bat&lt;&#x2F;a&gt;: a more pleasant, more fancy &lt;code&gt;cat&lt;&#x2F;code&gt;, which also supplants &lt;code&gt;less&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>2018 review</title>
+                <pubDate>Thu, 25 Oct 2018 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/2018-review/</link>
+                <guid>http://tshepang.net/2018-review/</guid>
+                <description>&lt;p&gt;The greatest &lt;strong&gt;spectable&lt;&#x2F;strong&gt; is &lt;em&gt;Ready Player One&lt;&#x2F;em&gt; (great supply of
+iconic fictional characters, fantastic environment, and story concept).
+The movie also has the best &lt;strong&gt;animation&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The best &lt;strong&gt;humor&lt;&#x2F;strong&gt; is found in &lt;em&gt;Deadpool 2&lt;&#x2F;em&gt;,
+a sequel that also happens to be better than the delightful original.&lt;&#x2F;p&gt;
+&lt;p&gt;The best &lt;strong&gt;thriller&lt;&#x2F;strong&gt; is the intense &lt;em&gt;Mile 22&lt;&#x2F;em&gt;,
+and its &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Iko_Uwais&quot;&gt;Iko Uwais&lt;&#x2F;a&gt; gives the year&#x27;s &lt;strong&gt;favorite performance&lt;&#x2F;strong&gt;.
+The movie also has best &lt;strong&gt;action direction&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
 </description>
             </item>
         
@@ -266,28 +264,6 @@ which helps reduce noise. Another attribute that reduces noise is
 and letting it support usage of ssh-agent. This was inspired by a friend
 pushing me to make &lt;a href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;rust&#x2F;comments&#x2F;7vb3u7&#x2F;announcing_mrh_the_multigitrepo_helper&quot;&gt;an announcement&lt;&#x2F;a&gt;, which I promised would happen
 before &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev&#x2F;status&#x2F;960955091296702466&quot;&gt;2018-02-06 meetup&lt;&#x2F;a&gt;, and something I haven&#x27;t done before.&lt;&#x2F;p&gt;
-</description>
-            </item>
-        
-            <item>
-                <title>I am a very jealous person</title>
-                <pubDate>Fri, 02 Feb 2018 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/i-am-a-very-jealous-person/</link>
-                <guid>http://tshepang.net/i-am-a-very-jealous-person/</guid>
-                <description>&lt;p&gt;Following is some of the cases where competing software won this or that
-battle, and I am jealous since I want everyone to use what I like:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;kubernetes&#x2F;kubernetes&quot;&gt;Kurbenetes&lt;&#x2F;a&gt; is written in Go, and not Rust. It appears to be the
-most popular container orchestration system, and is among the
-hottest of new software projects, while having lots of momentum.&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;grafana&#x2F;grafana&quot;&gt;Grafana&lt;&#x2F;a&gt; is also written in Go, and not Rust. It produces the most
-pretty graphs I&#x27;ve seen yet, and is very featureful, while also boasting
-hundreds of contributers.&lt;&#x2F;li&gt;
-&lt;li&gt;Markdown is a far more popular light-weight markup language than the
-far more advanced &lt;a href=&quot;http:&#x2F;&#x2F;docutils.sourceforge.net&#x2F;docs&#x2F;ref&#x2F;rst&#x2F;restructuredtext.html&quot;&gt;reStructuredText&lt;&#x2F;a&gt;. It&#x27;s particularly sad when
-it&#x27;s not used where it&#x27;s needed most... documenting large
-projects (&lt;a href=&quot;http:&#x2F;&#x2F;doc.rust-lang.org&quot;&gt;example&lt;&#x2F;a&gt;).&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
 </description>
             </item>
         
