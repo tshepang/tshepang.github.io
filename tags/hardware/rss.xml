@@ -6,11 +6,11 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="http://tshepang.net/tags/hardware/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Thu, 20 Sep 2018 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Fri, 01 Mar 2019 00:00:00 +0000</lastBuildDate>
         
             <item>
                 <title>speed of current laptop</title>
-                <pubDate>Thu, 20 Sep 2018 00:00:00 +0000</pubDate>
+                <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
                 <link>http://tshepang.net/speed-of-current-laptop/</link>
                 <guid>http://tshepang.net/speed-of-current-laptop/</guid>
                 <description>&lt;p&gt;Few weeks ago I got me a new laptop (battery circuitry of my old Asus
@@ -20,31 +20,28 @@ processor and 16GB of DDR4 RAM.&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;git clone https:&#x2F;&#x2F;github.com&#x2F;serde-rs&#x2F;json-benchmark
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cd json-benchmark
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;git rev-parse HEAD
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rustc --version
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;git checkout ac6076683bb73e1e82181e4928d7bc520db9aaa7
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rustup default 1.33.0
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cargo run --release --bin json-benchmark
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Results:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;9eae8499c19ecdf3531d72451e0172b56e570c99
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rustc 1.29.0 (aa3ca1994 2018-09-11)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Finished release [optimized + debuginfo] target(s) in 0.04s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Running &#96;target&#x2F;release&#x2F;json-benchmark&#96;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;                                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;DOM                STRUCT
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;======= serde_json ======= parse|stringify === parse|stringify ===
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;data&#x2F;canada.json           9.3ms     5.3ms     3.3ms     4.2ms
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;data&#x2F;citm_catalog.json     5.5ms     1.5ms     1.7ms     1.2ms
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;data&#x2F;twitter.json          2.1ms     0.9ms     0.9ms     0.8ms
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;ac6076683bb73e1e82181e4928d7bc520db9aaa7
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;DOM                  STRUCT
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;======= serde_json ======= parse|stringify ===== parse|stringify ====
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;data&#x2F;canada.json         260 MB&#x2F;s   430 MB&#x2F;s   620 MB&#x2F;s   330 MB&#x2F;s
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;data&#x2F;citm_catalog.json   410 MB&#x2F;s   410 MB&#x2F;s   950 MB&#x2F;s   600 MB&#x2F;s
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;data&#x2F;twitter.json        270 MB&#x2F;s   640 MB&#x2F;s   590 MB&#x2F;s   740 MB&#x2F;s
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;======= json-rust ======== parse|stringify === parse|stringify ===
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;data&#x2F;canada.json           6.1ms     3.0ms
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;data&#x2F;citm_catalog.json     2.8ms     0.7ms
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;data&#x2F;twitter.json          1.2ms     0.5ms
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;======= json-rust ======== parse|stringify ===== parse|stringify ====
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;data&#x2F;canada.json         430 MB&#x2F;s   810 MB&#x2F;s
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;data&#x2F;citm_catalog.json   710 MB&#x2F;s   520 MB&#x2F;s
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;data&#x2F;twitter.json        470 MB&#x2F;s   700 MB&#x2F;s
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;==== rustc_serialize ===== parse|stringify === parse|stringify ===
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;data&#x2F;canada.json          14.6ms    33.4ms    19.3ms    48.5ms
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;data&#x2F;citm_catalog.json    11.6ms     3.1ms    15.4ms     2.9ms
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;data&#x2F;twitter.json          6.3ms     1.5ms     7.9ms     1.4ms
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;==== rustc_serialize ===== parse|stringify ===== parse|stringify ====
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;data&#x2F;canada.json         180 MB&#x2F;s    70 MB&#x2F;s   130 MB&#x2F;s    53 MB&#x2F;s
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;data&#x2F;citm_catalog.json   200 MB&#x2F;s   200 MB&#x2F;s   140 MB&#x2F;s   230 MB&#x2F;s
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;data&#x2F;twitter.json        110 MB&#x2F;s   390 MB&#x2F;s    94 MB&#x2F;s   420 MB&#x2F;s
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
             </item>
         
