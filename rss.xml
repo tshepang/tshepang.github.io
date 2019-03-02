@@ -435,7 +435,7 @@ of the question_mark (&lt;code&gt;?&lt;&#x2F;code&gt;) operator.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;Remove &lt;code&gt;std::sync::mpsc&lt;&#x2F;code&gt; from stdlib, making it available
-externally... it does not feel general enough.&lt;&#x2F;p&gt;
+externally... it does not feel general enough. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;42397#issuecomment-315867774&quot;&gt;more issues&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;Assigning values to struct bindings should use the equal sign, not
