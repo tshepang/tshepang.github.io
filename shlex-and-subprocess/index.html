@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -58,19 +56,19 @@
               <ul class="mobile-menu-list">
                 
                     <li class="mobile-menu-item">
-                        <a href="http://tshepang.net&#x2F;tags">
+                        <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;tags">
                             tags
                         </a>
                     </li>
                 
                     <li class="mobile-menu-item">
-                        <a href="http://tshepang.net&#x2F;about-me">
+                        <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;about-me">
                             about
                         </a>
                     </li>
                 
                     <li class="mobile-menu-item">
-                        <a href="http://tshepang.net&#x2F;categories&#x2F;movies">
+                        <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;categories&#x2F;movies">
                             movies
                         </a>
                     </li>
@@ -84,19 +82,19 @@
                     <ul>
                         
                             <li>
-                                <a href="http://tshepang.net&#x2F;tags">
+                                <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;tags">
                                     tags
                                 </a>
                             </li>
                         
                             <li>
-                                <a href="http://tshepang.net&#x2F;about-me">
+                                <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;about-me">
                                     about
                                 </a>
                             </li>
                         
                             <li>
-                                <a href="http://tshepang.net&#x2F;categories&#x2F;movies">
+                                <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;categories&#x2F;movies">
                                     movies
                                 </a>
                             </li>
@@ -146,22 +144,22 @@ space as a delimiter (by default). To test, I will create a file named
 <p>And here's the code, using the normal split method:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">import subprocess
-</span><span style="color:#c0c5ce;">cmd = &quot;/bin/cat &#39;file with spaces&#39;&quot;
-</span><span style="color:#c0c5ce;">formatted_cmd = cmd.split()
-</span><span style="color:#c0c5ce;">subprocess.Popen(formatted_cmd)
+cmd = &quot;/bin/cat &#39;file with spaces&#39;&quot;
+formatted_cmd = cmd.split()
+subprocess.Popen(formatted_cmd)
 </span></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">/bin/cat: &#39;file: No such file or directory
-</span><span style="color:#c0c5ce;">/bin/cat: with: No such file or directory
-</span><span style="color:#c0c5ce;">/bin/cat: spaces&#39;: No such file or directory
+/bin/cat: with: No such file or directory
+/bin/cat: spaces&#39;: No such file or directory
 </span></pre>
 <p>That's when <code>shlex</code> module gets to be useful.</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">import shlex, subprocess
-</span><span style="color:#c0c5ce;">cmd = &quot;/bin/cat &#39;file with spaces&#39;&quot;
-</span><span style="color:#c0c5ce;">formatted_cmd = shlex.split(cmd)
-</span><span style="color:#c0c5ce;">subprocess.Popen(formatted_cmd)
+cmd = &quot;/bin/cat &#39;file with spaces&#39;&quot;
+formatted_cmd = shlex.split(cmd)
+subprocess.Popen(formatted_cmd)
 </span></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b;">

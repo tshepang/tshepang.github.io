@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Tshepang logs</title>
@@ -19,25 +20,25 @@ a project that is meant to be a data indexer (like &lt;a href=&quot;http:&#x2F;&
 It is the first ever FLOSS contribution I ever made:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;--- &#x2F;home&#x2F;wena&#x2F;FLOSS&#x2F;src&#x2F;tracker-0.5.3&#x2F;ChangeLog
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+++ &#x2F;home&#x2F;wena&#x2F;FLOSS&#x2F;src&#x2F;tracker-0.5.3-note-on-threadsafety&#x2F;ChangeLog
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;@@ -1,3 +1,6 @@
++++ &#x2F;home&#x2F;wena&#x2F;FLOSS&#x2F;src&#x2F;tracker-0.5.3-note-on-threadsafety&#x2F;ChangeLog
+@@ -1,3 +1,6 @@
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;+2007-01-03  Tshepang Lekhonkhobe &amp;lt;tshepang@gmail.com&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;+
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;+	* Added a note on the reason why SQLite is statically-linked
++
++	* Added a note on the reason why SQLite is statically-linked
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;2006-12-23  Jamie McCracken &amp;lt;jamiemcc at gnome org&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;--- &#x2F;home&#x2F;wena&#x2F;FLOSS&#x2F;src&#x2F;tracker-0.5.3&#x2F;README
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+++ &#x2F;home&#x2F;wena&#x2F;FLOSS&#x2F;src&#x2F;tracker-0.5.3-note-on-threadsafety&#x2F;README
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;@@ -90,7 +90,7 @@
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Run time dependencies (also needed for build) :
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+ 2006-12-23  Jamie McCracken &amp;lt;jamiemcc at gnome org&amp;gt;
+
+--- &#x2F;home&#x2F;wena&#x2F;FLOSS&#x2F;src&#x2F;tracker-0.5.3&#x2F;README
++++ &#x2F;home&#x2F;wena&#x2F;FLOSS&#x2F;src&#x2F;tracker-0.5.3-note-on-threadsafety&#x2F;README
+@@ -90,7 +90,7 @@
+
+ Run time dependencies (also needed for build) :
+
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-Sqlite 3.2+
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;+Sqlite 3.2+ (this is statically-linked due to the lack of guarantee of threadsafety in distro versions)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;libdbus (0.50 +)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;dbus-glib bndings (0.50 +)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;glib (2.6+)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; libdbus (0.50 +)
+ dbus-glib bndings (0.50 +)
+ glib (2.6+)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;That year,
 I went on to make some more minor code patches,
@@ -83,44 +84,44 @@ wouldn&#x27;t pull in dozens of packages that I won&#x27;t use. For example:&lt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Building dependency tree
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Reading state information... Done
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;The following extra packages will be installed:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;bluez dconf-cli evolution-data-server evolution-data-server-common
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-gck-1 gir1.2-gcr-3
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;gir1.2-gdesktopenums-3.0 gir1.2-gdm3 gir1.2-gkbd-3.0 gir1.2-gmenu-3.0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0 gir1.2-ibus-1.0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;gir1.2-mutter-3.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0 gir1.2-soup-2.4
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2 gir1.2-xkl-1.0 gjs
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;gnome-bluetooth gnome-settings-daemon gnome-shell gnome-shell-common
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;gnome-themes-standard gnome-themes-standard-data libbluetooth3 libcamel-1.2-43
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;libcaribou-common libcaribou0 libebackend-1.2-6 libebook-1.2-14
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;libebook-contacts-1.2-0 libecal-1.2-15 libedata-book-1.2-17 libedata-cal-1.2-20
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;libedataserver-1.2-17 libgdata-common libgdata13 libgdm1 libgnome-menu-3-0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;libgoa-1.0-0 libgoa-1.0-common libgweather-3-3 libgweather-common libibus-1.0-5
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;libical0 libmission-control-plugins0 libmutter0b liboauth0 libopenobex1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;libpackagekit-glib2-16 libpulse-mainloop-glib0 librest-0.7-0 libsoup-gnome2.4-1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;libtelepathy-glib0 libtelepathy-logger3 libwacom-common libwacom2 mutter-common
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;obex-data-server obexd-client telepathy-mission-control-5
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  bluez dconf-cli evolution-data-server evolution-data-server-common
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-gck-1 gir1.2-gcr-3
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-gdesktopenums-3.0 gir1.2-gdm3 gir1.2-gkbd-3.0 gir1.2-gmenu-3.0
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0 gir1.2-ibus-1.0
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-mutter-3.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0 gir1.2-soup-2.4
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2 gir1.2-xkl-1.0 gjs
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gnome-bluetooth gnome-settings-daemon gnome-shell gnome-shell-common
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gnome-themes-standard gnome-themes-standard-data libbluetooth3 libcamel-1.2-43
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libcaribou-common libcaribou0 libebackend-1.2-6 libebook-1.2-14
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libebook-contacts-1.2-0 libecal-1.2-15 libedata-book-1.2-17 libedata-cal-1.2-20
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libedataserver-1.2-17 libgdata-common libgdata13 libgdm1 libgnome-menu-3-0
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libgoa-1.0-0 libgoa-1.0-common libgweather-3-3 libgweather-common libibus-1.0-5
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libical0 libmission-control-plugins0 libmutter0b liboauth0 libopenobex1
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libpackagekit-glib2-16 libpulse-mainloop-glib0 librest-0.7-0 libsoup-gnome2.4-1
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libtelepathy-glib0 libtelepathy-logger3 libwacom-common libwacom2 mutter-common
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  obex-data-server obexd-client telepathy-mission-control-5
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Suggested packages:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;evolution evolution-data-server-dbg gnome-orca gnome-user-share telepathy-haze
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  evolution evolution-data-server-dbg gnome-orca gnome-user-share telepathy-haze
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Recommended packages:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;zenity gvfs-backends gnome-control-center pulseaudio gkbd-capplet gnome-contacts
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;gnome-user-guide gtk2-engines-pixbuf gnome-accessibility-themes packagekit
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  zenity gvfs-backends gnome-control-center pulseaudio gkbd-capplet gnome-contacts
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gnome-user-guide gtk2-engines-pixbuf gnome-accessibility-themes packagekit
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;The following NEW packages will be installed:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;bluez dconf-cli evolution-data-server evolution-data-server-common gdm3
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-gck-1 gir1.2-gcr-3
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;gir1.2-gdesktopenums-3.0 gir1.2-gdm3 gir1.2-gkbd-3.0 gir1.2-gmenu-3.0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0 gir1.2-ibus-1.0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;gir1.2-mutter-3.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0 gir1.2-soup-2.4
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2 gir1.2-xkl-1.0 gjs
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;gnome-bluetooth gnome-settings-daemon gnome-shell gnome-shell-common
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;gnome-themes-standard gnome-themes-standard-data libbluetooth3 libcamel-1.2-43
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;libcaribou-common libcaribou0 libebackend-1.2-6 libebook-1.2-14
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;libebook-contacts-1.2-0 libecal-1.2-15 libedata-book-1.2-17 libedata-cal-1.2-20
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;libedataserver-1.2-17 libgdata-common libgdata13 libgdm1 libgnome-menu-3-0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;libgoa-1.0-0 libgoa-1.0-common libgweather-3-3 libgweather-common libibus-1.0-5
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;libical0 libmission-control-plugins0 libmutter0b liboauth0 libopenobex1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;libpackagekit-glib2-16 libpulse-mainloop-glib0 librest-0.7-0 libsoup-gnome2.4-1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;libtelepathy-glib0 libtelepathy-logger3 libwacom-common libwacom2 mutter-common
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;obex-data-server obexd-client telepathy-mission-control-5
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  bluez dconf-cli evolution-data-server evolution-data-server-common gdm3
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-gck-1 gir1.2-gcr-3
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-gdesktopenums-3.0 gir1.2-gdm3 gir1.2-gkbd-3.0 gir1.2-gmenu-3.0
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0 gir1.2-ibus-1.0
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-mutter-3.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0 gir1.2-soup-2.4
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2 gir1.2-xkl-1.0 gjs
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gnome-bluetooth gnome-settings-daemon gnome-shell gnome-shell-common
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gnome-themes-standard gnome-themes-standard-data libbluetooth3 libcamel-1.2-43
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libcaribou-common libcaribou0 libebackend-1.2-6 libebook-1.2-14
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libebook-contacts-1.2-0 libecal-1.2-15 libedata-book-1.2-17 libedata-cal-1.2-20
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libedataserver-1.2-17 libgdata-common libgdata13 libgdm1 libgnome-menu-3-0
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libgoa-1.0-0 libgoa-1.0-common libgweather-3-3 libgweather-common libibus-1.0-5
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libical0 libmission-control-plugins0 libmutter0b liboauth0 libopenobex1
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libpackagekit-glib2-16 libpulse-mainloop-glib0 librest-0.7-0 libsoup-gnome2.4-1
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libtelepathy-glib0 libtelepathy-logger3 libwacom-common libwacom2 mutter-common
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  obex-data-server obexd-client telepathy-mission-control-5
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0 upgraded, 67 newly installed, 0 to remove and 45 not upgraded.
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Need to get 0 B&#x2F;31.0 MB of archives.
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;After this operation, 90.8 MB of additional disk space will be used.
@@ -145,42 +146,42 @@ become selectable on LightDM UI:&lt;&#x2F;p&gt;
 logging in, the following will get executed (&lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;custom&#x2F;src&#x2F;tip&#x2F;xsession&quot;&gt;~&#x2F;.xsession&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;# apps
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;xfce4-terminal --hide-menubar --tab --tab --tab &amp;amp;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;firefox &amp;amp;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;nautilus --no-desktop &amp;amp;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;nm-applet &amp;amp;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;trayer --edge top --align right --widthtype request --distance 15 &amp;amp;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;quodlibet &amp;amp;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if [ $HOSTNAME == &amp;#39;twork&amp;#39; ]; then
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;icedove &amp;amp;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;fi
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;# settings
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;xset b off
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;xmodmap -e &amp;quot;clear Lock&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;xmodmap -e &amp;quot;keycode 66 = Super_L&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;# host-specific settings
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if [ $HOSTNAME == &amp;#39;twork&amp;#39; ]; then
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;xrandr --output VGA-0 --output DVI-0 --right-of VGA-0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;else
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;synclient TapButton1=1 TapButton2=3 TapButton3=2 MaxDoubleTapTime=100
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;syndaemon -dti 1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;fi
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;# clock
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;while true; do
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;datetime=$( date +&amp;quot;%F %R&amp;quot; )
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if acpi -a | grep off-line &amp;gt; &#x2F;dev&#x2F;null; then
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;battery=$( python -c &amp;quot;print(&amp;quot;$(acpi)&amp;quot;.split(&amp;#39;,&amp;#39;)[1].strip())&amp;quot; )
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;xsetroot -name &amp;quot;$battery&amp;quot;&amp;quot; | &amp;quot;&amp;quot;$datetime&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;else
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;xsetroot -name &amp;quot;$datetime&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;fi
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sleep 1m
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;done &amp;amp;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;exec dwm
+xfce4-terminal --hide-menubar --tab --tab --tab &amp;amp;
+firefox &amp;amp;
+nautilus --no-desktop &amp;amp;
+nm-applet &amp;amp;
+trayer --edge top --align right --widthtype request --distance 15 &amp;amp;
+quodlibet &amp;amp;
+if [ $HOSTNAME == &amp;#39;twork&amp;#39; ]; then
+   icedove &amp;amp;
+fi
+
+# settings
+xset b off
+xmodmap -e &amp;quot;clear Lock&amp;quot;
+xmodmap -e &amp;quot;keycode 66 = Super_L&amp;quot;
+
+# host-specific settings
+if [ $HOSTNAME == &amp;#39;twork&amp;#39; ]; then
+    xrandr --output VGA-0 --output DVI-0 --right-of VGA-0
+else
+    synclient TapButton1=1 TapButton2=3 TapButton3=2 MaxDoubleTapTime=100
+    syndaemon -dti 1
+fi
+
+# clock
+while true; do
+    datetime=$( date +&amp;quot;%F %R&amp;quot; )
+    if acpi -a | grep off-line &amp;gt; &#x2F;dev&#x2F;null; then
+        battery=$( python -c &amp;quot;print(&amp;quot;$(acpi)&amp;quot;.split(&amp;#39;,&amp;#39;)[1].strip())&amp;quot; )
+        xsetroot -name &amp;quot;$battery&amp;quot;&amp;quot; | &amp;quot;&amp;quot;$datetime&amp;quot;
+    else
+        xsetroot -name &amp;quot;$datetime&amp;quot;
+    fi
+    sleep 1m
+done &amp;amp;
+
+exec dwm
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Finally, this is what my dwm config changes look like (&lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;custom&#x2F;src&#x2F;tip&#x2F;config.def.h&quot;&gt;config.def.h&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -190,55 +191,55 @@ logging in, the following will get executed (&lt;a href=&quot;https:&#x2F;&#x2F;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+++ b&#x2F;config.def.h
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;@@ -14,12 +14,15 @@ static const Bool showbar           = True;     &#x2F;*
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;False means no bar *&#x2F;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;static const Bool topbar            = True;     &#x2F;* False means bottom
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;bar *&#x2F;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;* tagging *&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; static const Bool topbar            = True;     &#x2F;* False means bottom
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; bar *&#x2F;
+
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &#x2F;* tagging *&#x2F;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-static const char *tags[] = { &amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;,
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;9&amp;quot; };
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+static const char *tags[] = { &amp;quot;web&amp;quot;, &amp;quot;files&amp;quot;, &amp;quot;terminal&amp;quot;, &amp;quot;misc&amp;quot; };
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;static const Rule rules[] = {
+
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; static const Rule rules[] = {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-       &#x2F;* class      instance    title       tags mask     isfloating
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;monitor *&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        monitor *&#x2F;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-       { &amp;quot;Gimp&amp;quot;,     NULL,       NULL,       0,
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;True,        -1 },
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        True,        -1 },
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-       { &amp;quot;Firefox&amp;quot;,  NULL,       NULL,       1 &amp;lt;&amp;lt; 8,
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;False,       -1 },
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        False,       -1 },
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+  &#x2F;* class             instance  title  tags mask  isfloating
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;monitor *&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;   monitor *&#x2F;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+  { &amp;quot;Iceweasel&amp;quot;,       NULL,     NULL,  1 &amp;lt;&amp;lt; 0,    False,       -1 },
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+  { &amp;quot;trayer&amp;quot;,          NULL,     NULL,  1 &amp;lt;&amp;lt; 0,    False,       -1 },
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+  { &amp;quot;Nautilus&amp;quot;,        NULL,     NULL,  1 &amp;lt;&amp;lt; 1,    False,       -1 },
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+  { &amp;quot;Xfce4-terminal&amp;quot;,  NULL,     NULL,  1 &amp;lt;&amp;lt; 2,    False,       -1 },
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+  { &amp;quot;Quodlibet&amp;quot;,       NULL,     NULL,  1 &amp;lt;&amp;lt; 3,    False,       -1 },
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;};
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;* layout(s) *&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; };
+
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &#x2F;* layout(s) *&#x2F;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;@@ -35,7 +38,7 @@ static const Layout layouts[] = {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;};
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;* key definitions *&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; };
+
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &#x2F;* key definitions *&#x2F;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-#define MODKEY Mod1Mask
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+#define MODKEY Mod4Mask
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;#define TAGKEYS(KEY,TAG)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;{ MODKEY,                       KEY,      view,           {.ui
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= 1 &amp;lt;&amp;lt; TAG} },
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= 1 &amp;lt;&amp;lt; TAG} },
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; #define TAGKEYS(KEY,TAG)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        { MODKEY,                       KEY,      view,           {.ui
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        = 1 &amp;lt;&amp;lt; TAG} },
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        { MODKEY|ControlMask,           KEY,      toggleview,     {.ui
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        = 1 &amp;lt;&amp;lt; TAG} },
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;@@ -47,7 +50,7 @@ static const Layout layouts[] = {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;* commands *&#x2F;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;static const char *dmenucmd[] = { &amp;quot;dmenu_run&amp;quot;, &amp;quot;-fn&amp;quot;, font, &amp;quot;-nb&amp;quot;,
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;normbgcolor, &amp;quot;-nf&amp;quot;, normfgcolor, &amp;quot;-sb&amp;quot;, selbgcolor, &amp;quot;-sf&amp;quot;,
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;selfgcolor, NULL };
+
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &#x2F;* commands *&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; static const char *dmenucmd[] = { &amp;quot;dmenu_run&amp;quot;, &amp;quot;-fn&amp;quot;, font, &amp;quot;-nb&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; normbgcolor, &amp;quot;-nf&amp;quot;, normfgcolor, &amp;quot;-sb&amp;quot;, selbgcolor, &amp;quot;-sf&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; selfgcolor, NULL };
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-static const char *termcmd[]  = { &amp;quot;uxterm&amp;quot;, NULL };
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+static const char *termcmd[]  = { &amp;quot;xfce4-terminal&amp;quot;, &amp;quot;--hide-menubar&amp;quot;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;};
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;static Key keys[] = {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;* modifier                     key        function
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;argument *&#x2F;
+
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; static Key keys[] = {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &#x2F;* modifier                     key        function
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        argument *&#x2F;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Note that this diff is against the Debian package (version &lt;strong&gt;6.0-6&lt;&#x2F;strong&gt;). I
 could not change the modifier key with the upstream version of dwm.&lt;&#x2F;p&gt;
@@ -410,31 +411,31 @@ just wipe out the entire installation.&lt;&#x2F;p&gt;
 script to take care of it:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import os
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;import subprocess
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;top_level = os.path.expanduser(&amp;quot;~&#x2F;src&#x2F;gnome&amp;quot;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for filename in os.listdir(top_level):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;full_path = &amp;quot;{}&#x2F;{}&amp;quot;.format(top_level, filename)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if os.path.isdir(full_path):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cmd = &amp;quot;cd ~&#x2F;src&#x2F;gnome&#x2F;{} &amp;amp;&amp;amp; git clean -dfx&amp;quot;.format(filename)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if subprocess.call(cmd, shell=True) != 0:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cmd = &amp;quot;cd ~&#x2F;src&#x2F;gnome&#x2F;{} &amp;amp;&amp;amp; make distclean&amp;quot;.format(filename)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if subprocess.call(cmd, shell=True) != 0:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cmd = &amp;quot;cd ~&#x2F;src&#x2F;gnome&#x2F;{} &amp;amp;&amp;amp; make clean&amp;quot;.format(filename)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;subprocess.call(cmd, shell=True)
+import subprocess
+top_level = os.path.expanduser(&amp;quot;~&#x2F;src&#x2F;gnome&amp;quot;)
+for filename in os.listdir(top_level):
+    full_path = &amp;quot;{}&#x2F;{}&amp;quot;.format(top_level, filename)
+    if os.path.isdir(full_path):
+        cmd = &amp;quot;cd ~&#x2F;src&#x2F;gnome&#x2F;{} &amp;amp;&amp;amp; git clean -dfx&amp;quot;.format(filename)
+        if subprocess.call(cmd, shell=True) != 0:
+            cmd = &amp;quot;cd ~&#x2F;src&#x2F;gnome&#x2F;{} &amp;amp;&amp;amp; make distclean&amp;quot;.format(filename)
+            if subprocess.call(cmd, shell=True) != 0:
+                cmd = &amp;quot;cd ~&#x2F;src&#x2F;gnome&#x2F;{} &amp;amp;&amp;amp; make clean&amp;quot;.format(filename)
+                subprocess.call(cmd, shell=True)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h1 id=&quot;update&quot;&gt;update&lt;&#x2F;h1&gt;
 &lt;p&gt;Someone very kind guy made &lt;a href=&quot;http:&#x2F;&#x2F;codereview.stackexchange.com&#x2F;questions&#x2F;1476&#x2F;cleansing-multiple-build-directories&#x2F;1477#1477&quot;&gt;a bunch of suggestions&lt;&#x2F;a&gt;, making my code much
 better:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import os
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;import subprocess
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;top_level = os.path.expanduser(&amp;quot;~&#x2F;src&#x2F;gnome&amp;quot;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for filename in os.listdir(top_level):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;full_path = os.path.join(top_level, filename)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if os.path.isdir(full_path):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;os.chdir(full_path)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if subprocess.call(&amp;quot;git clean -dfx&amp;quot;.split()) != 0:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if subprocess.call(&amp;quot;make distclean&amp;quot;.split()) != 0:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;subprocess.call(&amp;quot;make clean&amp;quot;.split())
+import subprocess
+top_level = os.path.expanduser(&amp;quot;~&#x2F;src&#x2F;gnome&amp;quot;)
+for filename in os.listdir(top_level):
+    full_path = os.path.join(top_level, filename)
+    if os.path.isdir(full_path):
+        os.chdir(full_path)
+        if subprocess.call(&amp;quot;git clean -dfx&amp;quot;.split()) != 0:
+            if subprocess.call(&amp;quot;make distclean&amp;quot;.split()) != 0:
+                subprocess.call(&amp;quot;make clean&amp;quot;.split())
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h1 id=&quot;further-reading&quot;&gt;further reading&lt;&#x2F;h1&gt;
 &lt;p&gt;modules: &lt;a href=&quot;http:&#x2F;&#x2F;docs.python.org&#x2F;&#x2F;library&#x2F;os&quot;&gt;os&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;docs.python.org&#x2F;&#x2F;library&#x2F;os.path&quot;&gt;os.path&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;docs.python.org&#x2F;&#x2F;library&#x2F;subprocess&quot;&gt;subprocess&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </description>
@@ -452,12 +453,12 @@ machine.&lt;&#x2F;p&gt;
 &lt;p&gt;If you use Debian (or Ubuntu), you can use run this command:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;wajig --norecommends install build-essential docbook-xsl flex
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;bison cvs gperf cmake  {uuid,ppp}-dev
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;libx{composite,randr,damage,ft2,i,t}-dev
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;libxcb-{event1,aux0,atom1}-dev
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;lib{pam0g,iw,db,gdbm,png12,ffi,tiff,vorbis,gl1-mesa,unistring}
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;lib{quvi,icu,neon27,usb-1.0-0,asound2,ncurses5,udev,usb,acl1}
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;lib{boost-signals,ldap2,sasl2}-dev
+bison cvs gperf cmake  {uuid,ppp}-dev
+libx{composite,randr,damage,ft2,i,t}-dev
+libxcb-{event1,aux0,atom1}-dev
+lib{pam0g,iw,db,gdbm,png12,ffi,tiff,vorbis,gl1-mesa,unistring}
+lib{quvi,icu,neon27,usb-1.0-0,asound2,ncurses5,udev,usb,acl1}
+lib{boost-signals,ldap2,sasl2}-dev
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;It&#x27;s installs the development packages that will be needed by the build
 process. The &lt;code&gt;--no-recommends&lt;&#x2F;code&gt; option means I want to limit the
@@ -466,22 +467,22 @@ by the packager to be useful for me.&lt;&#x2F;p&gt;
 &lt;p&gt;My &amp;quot;~&#x2F;.jhbuilrc&amp;quot; contains the following:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;# build directory
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;checkoutroot = os.path.expanduser(&amp;quot;~&#x2F;src&#x2F;gnome&amp;quot;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;# don&amp;#39;t spew lots of distracting status messages
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;notrayicon = True
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;# attempt to build modules even if their dependencies weren&amp;#39;t successfully built
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;nopoison = True
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;# don&amp;#39;t build these since they have issues; this implies that I must install my distro&amp;#39;s development versions
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;skip = [&amp;#39;nss&amp;#39;, &amp;#39;nspr&amp;#39;]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;# dont fetch moduleset xml files from the web; use ones that are installed locally
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;use_local_modulesets = True
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;# where html-formatted logs are kept
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;tinderbox_outputdir = os.path.expanduser(&amp;quot;~&#x2F;temp&#x2F;tinderbox&amp;quot;)
+checkoutroot = os.path.expanduser(&amp;quot;~&#x2F;src&#x2F;gnome&amp;quot;)
+
+# don&amp;#39;t spew lots of distracting status messages
+notrayicon = True
+
+# attempt to build modules even if their dependencies weren&amp;#39;t successfully built
+nopoison = True
+
+# don&amp;#39;t build these since they have issues; this implies that I must install my distro&amp;#39;s development versions
+skip = [&amp;#39;nss&amp;#39;, &amp;#39;nspr&amp;#39;]
+
+# dont fetch moduleset xml files from the web; use ones that are installed locally
+use_local_modulesets = True
+
+# where html-formatted logs are kept
+tinderbox_outputdir = os.path.expanduser(&amp;quot;~&#x2F;temp&#x2F;tinderbox&amp;quot;)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;See &lt;a href=&quot;http:&#x2F;&#x2F;library.gnome.org&#x2F;devel&#x2F;jhbuild&#x2F;unstable&#x2F;config-reference.html.en&quot;&gt;Configuration File Reference&lt;&#x2F;a&gt; for a detailed explanation
 of these options.&lt;&#x2F;p&gt;

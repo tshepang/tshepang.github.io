@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Tshepang logs</title>
@@ -46,23 +47,23 @@ on, and displays the relevant command.&lt;&#x2F;p&gt;
 &lt;p&gt;Some examples of usage:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ cd &amp;lt;hg repo&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ .&#x2F;vcs.py --log
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;hg log --no-merges --patch --stat --verbose
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ cd &amp;lt;git repo&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ .&#x2F;vcs.py --log
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;git log --no-merges --patch --stat
+$ .&#x2F;vcs.py --log
+hg log --no-merges --patch --stat --verbose
+$ cd &amp;lt;git repo&amp;gt;
+$ .&#x2F;vcs.py --log
+git log --no-merges --patch --stat
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Here are the relevant BASH aliases:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vb=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --branch)&amp;#39;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vd=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --diff)&amp;#39;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vl=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --log)&amp;#39;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vp=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --push)&amp;#39;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vs=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --status)&amp;#39;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vu=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --pull)&amp;#39;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vc=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --commit)&amp;#39;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vo=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --checkout)&amp;#39;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vr=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --revert)&amp;#39;
+alias vd=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --diff)&amp;#39;
+alias vl=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --log)&amp;#39;
+alias vp=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --push)&amp;#39;
+alias vs=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --status)&amp;#39;
+alias vu=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --pull)&amp;#39;
+alias vc=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --commit)&amp;#39;
+alias vo=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --checkout)&amp;#39;
+alias vr=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --revert)&amp;#39;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;This makes my life so much easier, since I no longer have to care which
 VCS I&#x27;m on, at least for the most common of commands. I am pleased with

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -58,19 +56,19 @@
               <ul class="mobile-menu-list">
                 
                     <li class="mobile-menu-item">
-                        <a href="http://tshepang.net&#x2F;tags">
+                        <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;tags">
                             tags
                         </a>
                     </li>
                 
                     <li class="mobile-menu-item">
-                        <a href="http://tshepang.net&#x2F;about-me">
+                        <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;about-me">
                             about
                         </a>
                     </li>
                 
                     <li class="mobile-menu-item">
-                        <a href="http://tshepang.net&#x2F;categories&#x2F;movies">
+                        <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;categories&#x2F;movies">
                             movies
                         </a>
                     </li>
@@ -84,19 +82,19 @@
                     <ul>
                         
                             <li>
-                                <a href="http://tshepang.net&#x2F;tags">
+                                <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;tags">
                                     tags
                                 </a>
                             </li>
                         
                             <li>
-                                <a href="http://tshepang.net&#x2F;about-me">
+                                <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;about-me">
                                     about
                                 </a>
                             </li>
                         
                             <li>
-                                <a href="http://tshepang.net&#x2F;categories&#x2F;movies">
+                                <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;categories&#x2F;movies">
                                     movies
                                 </a>
                             </li>
@@ -117,22 +115,6 @@
                 <div class="content" id="mobile-panel">
                     
 
-
-<div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">Contents</h2>
-    <div class="post-toc-content always-active">
-        <nav id="TableOfContents">
-            <ul>
-                
-                <li>
-                    <a href="http://tshepang.net/basic-configparser-usage/#further-reading" class="toc-link">further reading</a>
-                    
-                </li>
-                
-            </ul>
-        </nav>
-    </div>
-</div>
 
 
 <article class="post">
@@ -158,10 +140,10 @@
 <p>The code to read that content is:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">import configparser
-</span><span style="color:#c0c5ce;">conf = configparser.ConfigParser()
-</span><span style="color:#c0c5ce;">conf.read(&quot;config.cfg&quot;)
-</span><span style="color:#c0c5ce;">items = conf.items(&quot;numbers&quot;)
-</span><span style="color:#c0c5ce;">print(items)
+conf = configparser.ConfigParser()
+conf.read(&quot;config.cfg&quot;)
+items = conf.items(&quot;numbers&quot;)
+print(items)
 </span></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b;">
@@ -172,10 +154,10 @@
 suitable data type? Here goes:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">import configparser
-</span><span style="color:#c0c5ce;">conf = configparser.ConfigParser()
-</span><span style="color:#c0c5ce;">conf.read(&quot;config.cfg&quot;)
-</span><span style="color:#c0c5ce;">items = dict(conf.items(&quot;numbers&quot;))
-</span><span style="color:#c0c5ce;">print(items)
+conf = configparser.ConfigParser()
+conf.read(&quot;config.cfg&quot;)
+items = dict(conf.items(&quot;numbers&quot;))
+print(items)
 </span></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b;">
@@ -188,12 +170,12 @@ about ordering. Remember that in order to access dictionary content, you
 use a key and not an index:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">&gt;&gt;&gt; d = {1: &#39;one&#39;}
-</span><span style="color:#c0c5ce;">&gt;&gt;&gt; d[0]
-</span><span style="color:#c0c5ce;">Traceback (most recent call last):
-</span><span style="color:#c0c5ce;">  </span><span style="color:#c0c5ce;">File &quot;&quot;, line 1, in
-</span><span style="color:#c0c5ce;">KeyError: 0
-</span><span style="color:#c0c5ce;">&gt;&gt;&gt; d[1]
-</span><span style="color:#c0c5ce;">&#39;one&#39;
+&gt;&gt;&gt; d[0]
+Traceback (most recent call last):
+  File &quot;&quot;, line 1, in
+KeyError: 0
+&gt;&gt;&gt; d[1]
+&#39;one&#39;
 </span></pre><h1 id="further-reading">further reading</h1>
 <ul>
 <li><a href="http://docs.python.org/library/configparser">configparser module</a></li>

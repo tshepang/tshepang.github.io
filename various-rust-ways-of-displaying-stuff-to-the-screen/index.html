@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -58,19 +56,19 @@
               <ul class="mobile-menu-list">
                 
                     <li class="mobile-menu-item">
-                        <a href="http://tshepang.net&#x2F;tags">
+                        <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;tags">
                             tags
                         </a>
                     </li>
                 
                     <li class="mobile-menu-item">
-                        <a href="http://tshepang.net&#x2F;about-me">
+                        <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;about-me">
                             about
                         </a>
                     </li>
                 
                     <li class="mobile-menu-item">
-                        <a href="http://tshepang.net&#x2F;categories&#x2F;movies">
+                        <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;categories&#x2F;movies">
                             movies
                         </a>
                     </li>
@@ -84,19 +82,19 @@
                     <ul>
                         
                             <li>
-                                <a href="http://tshepang.net&#x2F;tags">
+                                <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;tags">
                                     tags
                                 </a>
                             </li>
                         
                             <li>
-                                <a href="http://tshepang.net&#x2F;about-me">
+                                <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;about-me">
                                     about
                                 </a>
                             </li>
                         
                             <li>
-                                <a href="http://tshepang.net&#x2F;categories&#x2F;movies">
+                                <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;categories&#x2F;movies">
                                     movies
                                 </a>
                             </li>
@@ -135,35 +133,35 @@
       <p>Here is a simple way of doing it:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#b48ead;">use </span><span style="color:#c0c5ce;">std::io::{</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">, Write};
-</span><span style="color:#c0c5ce;">
+
 </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">io::stdout().</span><span style="color:#96b5b4;">write_all</span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">b</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">some outputn</span><span style="color:#c0c5ce;">&quot;);
-</span><span style="color:#c0c5ce;">}
+    io::stdout().</span><span style="color:#96b5b4;">write_all</span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">b</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">some outputn</span><span style="color:#c0c5ce;">&quot;);
+}
 </span></pre>
 <p>I do however get this warning when I build it:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">$ rustc main.rs
 </span><span style="color:#c0c5ce;">main.rs:4:5: 4:42 warning: unused result which must be used, #[warn(unused_must_use)] on by default
 </span><span style="color:#c0c5ce;">main.rs:4     io::stdout().write_ln(b&quot;some output&quot;);
-</span><span style="color:#c0c5ce;">              </span><span style="color:#c0c5ce;">^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+</span><span style="color:#c0c5ce;">              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 </span></pre>
 <p>Let's kill it:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#b48ead;">use </span><span style="color:#c0c5ce;">std::io::{</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">, Write};
-</span><span style="color:#c0c5ce;">
+
 </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">io::stdout().</span><span style="color:#96b5b4;">write_all</span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">b</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">some output</span><span style="color:#c0c5ce;">&quot;).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
-</span><span style="color:#c0c5ce;">}
+    io::stdout().</span><span style="color:#96b5b4;">write_all</span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">b</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">some output</span><span style="color:#c0c5ce;">&quot;).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+}
 </span></pre>
 <p>What I did is is call <code>unwrap</code> which basically asks our operation to
 <code>panic!</code> in case of some error. Think of it as a shortcut of:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#b48ead;">use </span><span style="color:#c0c5ce;">std::io::{</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">, Write};
 </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
-</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">match </span><span style="color:#c0c5ce;">io::stdout().</span><span style="color:#96b5b4;">write_all</span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">b</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">some outputn</span><span style="color:#c0c5ce;">&quot;) {
-</span><span style="color:#c0c5ce;">        </span><span style="color:#c0c5ce;">Ok(_) =&gt; (), Err(_) =&gt; panic!(),
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">}
-</span><span style="color:#c0c5ce;">}
+    </span><span style="color:#b48ead;">match </span><span style="color:#c0c5ce;">io::stdout().</span><span style="color:#96b5b4;">write_all</span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">b</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">some outputn</span><span style="color:#c0c5ce;">&quot;) {
+        Ok(_) =&gt; (), Err(_) =&gt; panic!(),
+    }
+}
 </span></pre>
 <p>Some docs:</p>
 <ul>
@@ -175,27 +173,27 @@
 <p>What if we wanted to do some string formatting:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#b48ead;">use </span><span style="color:#c0c5ce;">std::io::{</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">, Write};
-</span><span style="color:#c0c5ce;">
+
 </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
-</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> second_word = &quot;</span><span style="color:#a3be8c;">output</span><span style="color:#c0c5ce;">&quot;; </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> text = format!(&quot;</span><span style="color:#a3be8c;">some </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">n</span><span style="color:#c0c5ce;">&quot;,
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">second_word); io::stdout().</span><span style="color:#96b5b4;">write_all</span><span style="color:#c0c5ce;">(text.</span><span style="color:#96b5b4;">as_bytes</span><span style="color:#c0c5ce;">()).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
-</span><span style="color:#c0c5ce;">}
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> second_word = &quot;</span><span style="color:#a3be8c;">output</span><span style="color:#c0c5ce;">&quot;; </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> text = format!(&quot;</span><span style="color:#a3be8c;">some </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">n</span><span style="color:#c0c5ce;">&quot;,
+    second_word); io::stdout().</span><span style="color:#96b5b4;">write_all</span><span style="color:#c0c5ce;">(text.</span><span style="color:#96b5b4;">as_bytes</span><span style="color:#c0c5ce;">()).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+}
 </span></pre>
 <p>But there is a shortcut for the code above:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#b48ead;">use </span><span style="color:#c0c5ce;">std::io::{</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">, Write};
-</span><span style="color:#c0c5ce;">
+
 </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
-</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> second_word = &quot;</span><span style="color:#a3be8c;">output</span><span style="color:#c0c5ce;">&quot;;
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">writeln!(&amp;mut io::stdout(), &quot;</span><span style="color:#a3be8c;">some </span><span style="color:#d08770;">{}</span><span style="color:#c0c5ce;">&quot;, second_word).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
-</span><span style="color:#c0c5ce;">}
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> second_word = &quot;</span><span style="color:#a3be8c;">output</span><span style="color:#c0c5ce;">&quot;;
+    writeln!(&amp;mut io::stdout(), &quot;</span><span style="color:#a3be8c;">some </span><span style="color:#d08770;">{}</span><span style="color:#c0c5ce;">&quot;, second_word).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+}
 </span></pre>
 <p>There is an even shorter shortcut:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
-</span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> second_word = &quot;</span><span style="color:#a3be8c;">output</span><span style="color:#c0c5ce;">&quot;; println!(&quot;</span><span style="color:#a3be8c;">some </span><span style="color:#d08770;">{}</span><span style="color:#c0c5ce;">&quot;, second_word);
-</span><span style="color:#c0c5ce;">}
+
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> second_word = &quot;</span><span style="color:#a3be8c;">output</span><span style="color:#c0c5ce;">&quot;; println!(&quot;</span><span style="color:#a3be8c;">some </span><span style="color:#d08770;">{}</span><span style="color:#c0c5ce;">&quot;, second_word);
+}
 </span></pre>
 <p>Question to self: do we get a <code>panic!</code> if <code>println</code> gets an I/O error?</p>
 <p>Some docs:</p>
@@ -212,10 +210,10 @@ Short of implementing <a href="http://stackoverflow.com/a/27590832/321731">our o
 the following:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#b48ead;">use </span><span style="color:#c0c5ce;">std::io;
-</span><span style="color:#c0c5ce;">
+
 </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">writeln!(&amp;mut io::stderr(), &quot;</span><span style="color:#a3be8c;">some output</span><span style="color:#c0c5ce;">&quot;);
-</span><span style="color:#c0c5ce;">}
+    writeln!(&amp;mut io::stderr(), &quot;</span><span style="color:#a3be8c;">some output</span><span style="color:#c0c5ce;">&quot;);
+}
 </span></pre>
 <p>You can test that it really goes to stderr by running it like:</p>
 <pre style="background-color:#2b303b;">

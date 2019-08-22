@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Tshepang logs</title>
@@ -131,14 +132,14 @@ it myself with the following patch:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+++ a&#x2F;liquidluck&#x2F;_themes&#x2F;default&#x2F;static&#x2F;style.css
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+++ b&#x2F;liquidluck&#x2F;_themes&#x2F;default&#x2F;static&#x2F;style.css
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;@@ -112,7 +112,7 @@ pre {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;border-radius: 3px;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;code, tt {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     border-radius: 3px;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; }
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; code, tt {
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-    background-color: #fee9cc;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+    background-color: #eee;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;color: rgba(0, 0, 0, 0.75);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;padding: 1px 3px;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;font-size: 12px;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     color: rgba(0, 0, 0, 0.75);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     padding: 1px 3px;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     font-size: 12px;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </description>
@@ -206,7 +207,7 @@ generates that file and populates it with the given metadata:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;my blogging setup
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;=================
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:date: 2012-04-12
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:tags: blogging
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
@@ -344,26 +345,13 @@ manner:&lt;&#x2F;p&gt;
 &lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;blog&#x2F;src&quot;&gt;this source&lt;&#x2F;a&gt;, but each slightly modified to change theme name
 (&lt;code&gt;settings.py&lt;&#x2F;code&gt;).&lt;&#x2F;p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lepture&#x2F;liquidluck-theme-moment&quot;&gt;moment&lt;&#x2F;a&gt; (the default theme; &lt;a href=&quot;http:&#x2F;&#x2F;demo-moment.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bingdian&#x2F;liquidluck-theme-responsive&quot;&gt;responsive&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;demo-responsive.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;popomore&#x2F;liquidluck-theme-reveal&quot;&gt;reveal&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;demo-reveal.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;leandromouta&#x2F;liquidluck-theme-thegrey&quot;&gt;thegrey&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;demo-thegrey.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;microjo&#x2F;liquidluck-theme-lovelymod&quot;&gt;lovelymod&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;demo-lovelymod.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bcho&#x2F;liquidluck-theme-cb3f20&quot;&gt;cb3f20&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;demo-cb3f20.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lepture&#x2F;liquidluck-theme-chiang&quot;&gt;chiang&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;demo-chiang.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lepture&#x2F;liquidluck-theme-moment&quot;&gt;moment&lt;&#x2F;a&gt; (the default theme; &lt;a href=&quot;http:&#x2F;&#x2F;demo-moment.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bingdian&#x2F;liquidluck-theme-responsive&quot;&gt;responsive&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;demo-responsive.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;popomore&#x2F;liquidluck-theme-reveal&quot;&gt;reveal&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;demo-reveal.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;leandromouta&#x2F;liquidluck-theme-thegrey&quot;&gt;thegrey&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;demo-thegrey.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;microjo&#x2F;liquidluck-theme-lovelymod&quot;&gt;lovelymod&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;demo-lovelymod.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bcho&#x2F;liquidluck-theme-cb3f20&quot;&gt;cb3f20&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;demo-cb3f20.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lepture&#x2F;liquidluck-theme-chiang&quot;&gt;chiang&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;demo-chiang.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;):
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;I get a blank page&lt;&#x2F;p&gt;
@@ -375,8 +363,7 @@ manner:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lianqin7&#x2F;liquidluck-theme-icbu&quot;&gt;icbu&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;demo-icbu.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lianqin7&#x2F;liquidluck-theme-icbu&quot;&gt;icbu&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;demo-icbu.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;):
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;When building, I get 2 of these messages:&lt;&#x2F;p&gt;
@@ -385,8 +372,7 @@ manner:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lepture&#x2F;liquidluck-theme-octopress&quot;&gt;octopress&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;demo-octopress.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lepture&#x2F;liquidluck-theme-octopress&quot;&gt;octopress&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;demo-octopress.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;):
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;When building, I get 4 of these messages:&lt;&#x2F;p&gt;
@@ -395,9 +381,7 @@ manner:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lepture&#x2F;liquidluck-theme-bootstrap&quot;&gt;bootstrap&lt;&#x2F;a&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lepture&#x2F;liquidluck-theme-bootstrap&#x2F;issues&#x2F;1&quot;&gt;broken&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lepture&#x2F;liquidluck-theme-bootstrap&quot;&gt;bootstrap&lt;&#x2F;a&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lepture&#x2F;liquidluck-theme-bootstrap&#x2F;issues&#x2F;1&quot;&gt;broken&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </description>
             </item>
@@ -438,15 +422,19 @@ through the entire blog.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h1 id=&quot;cons&quot;&gt;cons&lt;&#x2F;h1&gt;
 &lt;ul&gt;
-&lt;li&gt;The complexity of &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;blogging-with-pelican&quot;&gt;the setup&lt;&#x2F;a&gt; is going to scare many people away.&lt;&#x2F;li&gt;
-&lt;li&gt;It can take a lot of time to setup; For me, this was made worse by
+&lt;li&gt;
+&lt;p&gt;The complexity of &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;blogging-with-pelican&quot;&gt;the setup&lt;&#x2F;a&gt; is going to scare many people away.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;It can take a lot of time to setup; For me, this was made worse by
 having a lot of posts, as well as &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;favorite-pelican-themes&quot;&gt;being rather particular&lt;&#x2F;a&gt; about
-the look and functionality of the output.&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
+the look and functionality of the output.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
 &lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
 &lt;p&gt;I used to run a command like &lt;code&gt;wget --mirror http:&#x2F;&#x2F;tshepang.net&lt;&#x2F;code&gt;
 once in a while, just in case!&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;
+&lt;&#x2F;ul&gt;
 </description>
             </item>
         

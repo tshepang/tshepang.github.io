@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -58,19 +56,19 @@
               <ul class="mobile-menu-list">
                 
                     <li class="mobile-menu-item">
-                        <a href="http://tshepang.net&#x2F;tags">
+                        <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;tags">
                             tags
                         </a>
                     </li>
                 
                     <li class="mobile-menu-item">
-                        <a href="http://tshepang.net&#x2F;about-me">
+                        <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;about-me">
                             about
                         </a>
                     </li>
                 
                     <li class="mobile-menu-item">
-                        <a href="http://tshepang.net&#x2F;categories&#x2F;movies">
+                        <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;categories&#x2F;movies">
                             movies
                         </a>
                     </li>
@@ -84,19 +82,19 @@
                     <ul>
                         
                             <li>
-                                <a href="http://tshepang.net&#x2F;tags">
+                                <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;tags">
                                     tags
                                 </a>
                             </li>
                         
                             <li>
-                                <a href="http://tshepang.net&#x2F;about-me">
+                                <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;about-me">
                                     about
                                 </a>
                             </li>
                         
                             <li>
-                                <a href="http://tshepang.net&#x2F;categories&#x2F;movies">
+                                <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;categories&#x2F;movies">
                                     movies
                                 </a>
                             </li>
@@ -146,36 +144,36 @@ that will be written to that file:</p>
 </span><span style="color:#b48ead;">#include </span><span style="color:#c0c5ce;">&lt;</span><span style="color:#a3be8c;">stdio.h</span><span style="color:#c0c5ce;">&gt;
 </span><span style="color:#b48ead;">#include </span><span style="color:#c0c5ce;">&lt;</span><span style="color:#a3be8c;">fcntl.h</span><span style="color:#c0c5ce;">&gt;
 </span><span style="color:#b48ead;">#include </span><span style="color:#c0c5ce;">&lt;</span><span style="color:#a3be8c;">unistd.h</span><span style="color:#c0c5ce;">&gt;
-</span><span style="color:#c0c5ce;">
+
 </span><span style="color:#b48ead;">int
 </span><span style="color:#8fa1b3;">main </span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">argc</span><span style="color:#c0c5ce;">, </span><span style="color:#b48ead;">char </span><span style="color:#c0c5ce;">**</span><span style="color:#bf616a;">argv</span><span style="color:#c0c5ce;">)
-</span><span style="color:#c0c5ce;">{
-</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">char</span><span style="color:#c0c5ce;"> path[</span><span style="color:#d08770;">0xFF</span><span style="color:#c0c5ce;">];
-</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">char</span><span style="color:#c0c5ce;"> content[</span><span style="color:#d08770;">0xFF</span><span style="color:#c0c5ce;">];
-</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">int</span><span style="color:#c0c5ce;"> fd;
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">ssize_t written;
-</span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(argc &lt; </span><span style="color:#d08770;">3</span><span style="color:#c0c5ce;">) {
-</span><span style="color:#c0c5ce;">        </span><span style="color:#96b5b4;">fprintf </span><span style="color:#c0c5ce;">(stderr, &quot;</span><span style="color:#a3be8c;">usage: </span><span style="color:#d08770;">%s</span><span style="color:#a3be8c;"> &lt;filename&gt; &lt;content&gt;n</span><span style="color:#c0c5ce;">&quot;, argv[</span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">]);
-</span><span style="color:#c0c5ce;">        </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">;
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">}
-</span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">    </span><span style="color:#96b5b4;">strcpy </span><span style="color:#c0c5ce;">(path, argv[</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">]);
-</span><span style="color:#c0c5ce;">    </span><span style="color:#96b5b4;">sprintf </span><span style="color:#c0c5ce;">(content, &quot;</span><span style="color:#d08770;">%s</span><span style="color:#a3be8c;">n</span><span style="color:#c0c5ce;">&quot;, argv[</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">]);
-</span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">fd = </span><span style="color:#bf616a;">creat </span><span style="color:#c0c5ce;">(path, S_IRWXU);
-</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(fd == -</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">) {
-</span><span style="color:#c0c5ce;">        </span><span style="color:#96b5b4;">fprintf </span><span style="color:#c0c5ce;">(stderr, &quot;</span><span style="color:#a3be8c;">open error: </span><span style="color:#d08770;">%s</span><span style="color:#a3be8c;"> (&#39;</span><span style="color:#d08770;">%s</span><span style="color:#a3be8c;">&#39;)n</span><span style="color:#c0c5ce;">&quot;, </span><span style="color:#96b5b4;">strerror </span><span style="color:#c0c5ce;">(errno), path);
-</span><span style="color:#c0c5ce;">        </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">;
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">}
-</span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">written = </span><span style="color:#bf616a;">write </span><span style="color:#c0c5ce;">(fd, content, </span><span style="color:#96b5b4;">strlen </span><span style="color:#c0c5ce;">(content));
-</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(written == -</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">) {
-</span><span style="color:#c0c5ce;">        </span><span style="color:#96b5b4;">fprintf </span><span style="color:#c0c5ce;">(stderr, &quot;</span><span style="color:#a3be8c;">write error: </span><span style="color:#d08770;">%s</span><span style="color:#a3be8c;"> (&#39;</span><span style="color:#d08770;">%s</span><span style="color:#a3be8c;">&#39;)n</span><span style="color:#c0c5ce;">&quot;, </span><span style="color:#96b5b4;">strerror </span><span style="color:#c0c5ce;">(errno), path);
-</span><span style="color:#c0c5ce;">        </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">;
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">}
-</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">;
-</span><span style="color:#c0c5ce;">}
+{
+    </span><span style="color:#b48ead;">char</span><span style="color:#c0c5ce;"> path[</span><span style="color:#d08770;">0xFF</span><span style="color:#c0c5ce;">];
+    </span><span style="color:#b48ead;">char</span><span style="color:#c0c5ce;"> content[</span><span style="color:#d08770;">0xFF</span><span style="color:#c0c5ce;">];
+    </span><span style="color:#b48ead;">int</span><span style="color:#c0c5ce;"> fd;
+    ssize_t written;
+
+    </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(argc &lt; </span><span style="color:#d08770;">3</span><span style="color:#c0c5ce;">) {
+        </span><span style="color:#96b5b4;">fprintf </span><span style="color:#c0c5ce;">(stderr, &quot;</span><span style="color:#a3be8c;">usage: </span><span style="color:#d08770;">%s</span><span style="color:#a3be8c;"> &lt;filename&gt; &lt;content&gt;n</span><span style="color:#c0c5ce;">&quot;, argv[</span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">]);
+        </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">;
+    }
+
+    </span><span style="color:#96b5b4;">strcpy </span><span style="color:#c0c5ce;">(path, argv[</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">]);
+    </span><span style="color:#96b5b4;">sprintf </span><span style="color:#c0c5ce;">(content, &quot;</span><span style="color:#d08770;">%s</span><span style="color:#a3be8c;">n</span><span style="color:#c0c5ce;">&quot;, argv[</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">]);
+
+    fd = </span><span style="color:#bf616a;">creat </span><span style="color:#c0c5ce;">(path, S_IRWXU);
+    </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(fd == -</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">) {
+        </span><span style="color:#96b5b4;">fprintf </span><span style="color:#c0c5ce;">(stderr, &quot;</span><span style="color:#a3be8c;">open error: </span><span style="color:#d08770;">%s</span><span style="color:#a3be8c;"> (&#39;</span><span style="color:#d08770;">%s</span><span style="color:#a3be8c;">&#39;)n</span><span style="color:#c0c5ce;">&quot;, </span><span style="color:#96b5b4;">strerror </span><span style="color:#c0c5ce;">(errno), path);
+        </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">;
+    }
+
+    written = </span><span style="color:#bf616a;">write </span><span style="color:#c0c5ce;">(fd, content, </span><span style="color:#96b5b4;">strlen </span><span style="color:#c0c5ce;">(content));
+    </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(written == -</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">) {
+        </span><span style="color:#96b5b4;">fprintf </span><span style="color:#c0c5ce;">(stderr, &quot;</span><span style="color:#a3be8c;">write error: </span><span style="color:#d08770;">%s</span><span style="color:#a3be8c;"> (&#39;</span><span style="color:#d08770;">%s</span><span style="color:#a3be8c;">&#39;)n</span><span style="color:#c0c5ce;">&quot;, </span><span style="color:#96b5b4;">strerror </span><span style="color:#c0c5ce;">(errno), path);
+        </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">;
+    }
+    </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">;
+}
 </span></pre>
 <p>Build command (using GCC 4.8.1):</p>
 <pre style="background-color:#2b303b;">
@@ -187,28 +185,28 @@ that will be written to that file:</p>
 </span><span style="color:#c0c5ce;">Linux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU/Linux
 </span><span style="color:#c0c5ce;">$ sudo lshw -class processor
 </span><span style="color:#c0c5ce;">*-cpu
-</span><span style="color:#c0c5ce;">     </span><span style="color:#c0c5ce;">description: CPU
-</span><span style="color:#c0c5ce;">     </span><span style="color:#c0c5ce;">product: Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz
-</span><span style="color:#c0c5ce;">     </span><span style="color:#c0c5ce;">vendor: Intel Corp.
-</span><span style="color:#c0c5ce;">     </span><span style="color:#c0c5ce;">physical id: 4
-</span><span style="color:#c0c5ce;">     </span><span style="color:#c0c5ce;">bus info: cpu@0
-</span><span style="color:#c0c5ce;">     </span><span style="color:#c0c5ce;">version: Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz
-</span><span style="color:#c0c5ce;">     </span><span style="color:#c0c5ce;">serial: To Be Filled By O.E.M.
-</span><span style="color:#c0c5ce;">     </span><span style="color:#c0c5ce;">slot: CPU 1
-</span><span style="color:#c0c5ce;">     </span><span style="color:#c0c5ce;">size: 2300MHz
-</span><span style="color:#c0c5ce;">     </span><span style="color:#c0c5ce;">capacity: 4GHz
-</span><span style="color:#c0c5ce;">     </span><span style="color:#c0c5ce;">width: 64 bits
-</span><span style="color:#c0c5ce;">     </span><span style="color:#c0c5ce;">clock: 100MHz
-</span><span style="color:#c0c5ce;">     </span><span style="color:#c0c5ce;">capabilities: x86-64 fpu fpu_exception wp vme de pse tsc msr
-</span><span style="color:#c0c5ce;">     </span><span style="color:#c0c5ce;">pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts
-</span><span style="color:#c0c5ce;">     </span><span style="color:#c0c5ce;">acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp
-</span><span style="color:#c0c5ce;">     </span><span style="color:#c0c5ce;">constant_tsc arch_perfmon pebs bts rep_good nopl xtopology
-</span><span style="color:#c0c5ce;">     </span><span style="color:#c0c5ce;">nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor
-</span><span style="color:#c0c5ce;">     </span><span style="color:#c0c5ce;">ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2
-</span><span style="color:#c0c5ce;">     </span><span style="color:#c0c5ce;">x2apic popcnt tsc_deadline_timer xsave avx lahf_lm ida arat epb
-</span><span style="color:#c0c5ce;">     </span><span style="color:#c0c5ce;">xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid
-</span><span style="color:#c0c5ce;">     </span><span style="color:#c0c5ce;">aes cpufreq
-</span><span style="color:#c0c5ce;">     </span><span style="color:#c0c5ce;">configuration: cores=2 enabledcores=1 threads=2
+</span><span style="color:#c0c5ce;">     description: CPU
+</span><span style="color:#c0c5ce;">     product: Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz
+</span><span style="color:#c0c5ce;">     vendor: Intel Corp.
+</span><span style="color:#c0c5ce;">     physical id: 4
+</span><span style="color:#c0c5ce;">     bus info: cpu@0
+</span><span style="color:#c0c5ce;">     version: Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz
+</span><span style="color:#c0c5ce;">     serial: To Be Filled By O.E.M.
+</span><span style="color:#c0c5ce;">     slot: CPU 1
+</span><span style="color:#c0c5ce;">     size: 2300MHz
+</span><span style="color:#c0c5ce;">     capacity: 4GHz
+</span><span style="color:#c0c5ce;">     width: 64 bits
+</span><span style="color:#c0c5ce;">     clock: 100MHz
+</span><span style="color:#c0c5ce;">     capabilities: x86-64 fpu fpu_exception wp vme de pse tsc msr
+</span><span style="color:#c0c5ce;">     pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts
+</span><span style="color:#c0c5ce;">     acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp
+</span><span style="color:#c0c5ce;">     constant_tsc arch_perfmon pebs bts rep_good nopl xtopology
+</span><span style="color:#c0c5ce;">     nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor
+</span><span style="color:#c0c5ce;">     ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2
+</span><span style="color:#c0c5ce;">     x2apic popcnt tsc_deadline_timer xsave avx lahf_lm ida arat epb
+</span><span style="color:#c0c5ce;">     xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid
+</span><span style="color:#c0c5ce;">     aes cpufreq
+</span><span style="color:#c0c5ce;">     configuration: cores=2 enabledcores=1 threads=2
 </span></pre>
 <p>Running the resulting binary with <strong>Callgrind</strong>:</p>
 <pre style="background-color:#2b303b;">
@@ -252,23 +250,23 @@ the cost of all operations called by a parent (marked with a <code>*</code>) :</
 </span><span style="color:#c0c5ce;">Include dirs:
 </span><span style="color:#c0c5ce;">User annotated:   play.c
 </span><span style="color:#c0c5ce;">Auto-annotation:  off
-</span><span style="color:#c0c5ce;">
+
 </span><span style="color:#c0c5ce;">---++++++--
 </span><span style="color:#c0c5ce;">Ir
 </span><span style="color:#c0c5ce;">---++++++--
 </span><span style="color:#c0c5ce;">107,520  PROGRAM TOTALS
-</span><span style="color:#c0c5ce;">
+
 </span><span style="color:#c0c5ce;">---++++++--
 </span><span style="color:#c0c5ce;">Ir  file:function
 </span><span style="color:#c0c5ce;">---++++++--
-</span><span style="color:#c0c5ce;">
+
 </span><span style="color:#c0c5ce;">24,113  *  /build/eglibc-TepTGA/eglibc-2.17/elf/dl-lookup.c:do_lookup_x [/lib/x86_64-linux-gnu/ld-2.17.so]
 </span><span style="color:#c0c5ce;">1,053  &gt;   /build/eglibc-TepTGA/eglibc-2.17/elf/dl-misc.c:_dl_name_match_p (25x) [/lib/x86_64-linux-gnu/ld-2.17.so]
 </span><span style="color:#c0c5ce;">13,423  &gt;   /build/eglibc-TepTGA/eglibc-2.17/elf/dl-lookup.c:check_match.9345 (88x) [/lib/x86_64-linux-gnu/ld-2.17.so]
-</span><span style="color:#c0c5ce;">
+
 </span><span style="color:#c0c5ce;">18,264  *  /build/eglibc-TepTGA/eglibc-2.17/elf/dl-lookup.c:_dl_lookup_symbol_x [/lib/x86_64-linux-gnu/ld-2.17.so]
 </span><span style="color:#c0c5ce;">38,589  &gt;   /build/eglibc-TepTGA/eglibc-2.17/elf/dl-lookup.c:do_lookup_x (94x) [/lib/x86_64-linux-gnu/ld-2.17.so]
-</span><span style="color:#c0c5ce;">
+
 </span><span style="color:#c0c5ce;">15,836  *  /build/eglibc-TepTGA/eglibc-2.17/elf/../sysdeps/x86_64/dl-machine.h:_dl_relocate_object
 </span><span style="color:#c0c5ce;">13  &gt;   /build/eglibc-TepTGA/eglibc-2.17/string/../sysdeps/x86_64/multiarch/memmove.c:memcpy@GLIBC_2.2.5 (1x) [/lib/x86_64-linux-gnu/libc-2.17.so]
 </span><span style="color:#c0c5ce;">81  &gt;   /build/eglibc-TepTGA/eglibc-2.17/string/../sysdeps/x86_64/multiarch/strcmp.S:strcasecmp (1x) [/lib/x86_64-linux-gnu/libc-2.17.so]
@@ -289,7 +287,7 @@ of all, which is the total cost for each line of my code:</p>
 </span><span style="color:#c0c5ce;">-- User-annotated source: play.c
 </span><span style="color:#c0c5ce;">---++++++--
 </span><span style="color:#c0c5ce;">Ir
-</span><span style="color:#c0c5ce;">
+
 </span><span style="color:#c0c5ce;">.  #include &lt;string.h&gt;
 </span><span style="color:#c0c5ce;">.  #include &lt;errno.h&gt;
 </span><span style="color:#c0c5ce;">.  #include &lt;stdio.h&gt;
@@ -334,7 +332,7 @@ of all, which is the total cost for each line of my code:</p>
 </span><span style="color:#c0c5ce;">.      }
 </span><span style="color:#c0c5ce;">1      return 0;
 </span><span style="color:#c0c5ce;">2  }
-</span><span style="color:#c0c5ce;">
+
 </span><span style="color:#c0c5ce;">---++++++--
 </span><span style="color:#c0c5ce;">Ir
 </span><span style="color:#c0c5ce;">---++++++--

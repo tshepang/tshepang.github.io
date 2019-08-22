@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -58,19 +56,19 @@
               <ul class="mobile-menu-list">
                 
                     <li class="mobile-menu-item">
-                        <a href="http://tshepang.net&#x2F;tags">
+                        <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;tags">
                             tags
                         </a>
                     </li>
                 
                     <li class="mobile-menu-item">
-                        <a href="http://tshepang.net&#x2F;about-me">
+                        <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;about-me">
                             about
                         </a>
                     </li>
                 
                     <li class="mobile-menu-item">
-                        <a href="http://tshepang.net&#x2F;categories&#x2F;movies">
+                        <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;categories&#x2F;movies">
                             movies
                         </a>
                     </li>
@@ -84,19 +82,19 @@
                     <ul>
                         
                             <li>
-                                <a href="http://tshepang.net&#x2F;tags">
+                                <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;tags">
                                     tags
                                 </a>
                             </li>
                         
                             <li>
-                                <a href="http://tshepang.net&#x2F;about-me">
+                                <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;about-me">
                                     about
                                 </a>
                             </li>
                         
                             <li>
-                                <a href="http://tshepang.net&#x2F;categories&#x2F;movies">
+                                <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;categories&#x2F;movies">
                                     movies
                                 </a>
                             </li>
@@ -140,16 +138,16 @@ value as EWOULDBLOCK, which is a far more meaningful name in this case.</p>
 <p>This is what will display those errors:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">if (write(fd, buffer, strlen(buffer)) == -1)
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">fprintf (stderr, &quot;error writing to file &#39;%s&#39;: %s (errno %d)&quot;,
-</span><span style="color:#c0c5ce;">             </span><span style="color:#c0c5ce;">path, strerror(errno), fd);
-</span><span style="color:#c0c5ce;">}
+    fprintf (stderr, &quot;error writing to file &#39;%s&#39;: %s (errno %d)&quot;,
+             path, strerror(errno), fd);
+}
 </span></pre>
 <p>And here is how to avoid them:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">if ((write(fd, buffer, strlen(buffer)) == -1) &amp;&amp; (errno != EWOULDBLOCK)) {
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">fprintf( stderr, &quot;error writing to file &#39;%s&#39;: %s (errno %d)&quot;,
-</span><span style="color:#c0c5ce;">             </span><span style="color:#c0c5ce;">path, strerror(errno), fd);
-</span><span style="color:#c0c5ce;">}
+    fprintf( stderr, &quot;error writing to file &#39;%s&#39;: %s (errno %d)&quot;,
+             path, strerror(errno), fd);
+}
 </span></pre>
 <p>To avoid this kind of confusion, I just wish these two variables did not
 refer to the same errno value.</p>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Tshepang logs</title>
@@ -51,16 +52,16 @@ it was a good excuse to create decorators for the first time in my life.&lt;&#x2
 &lt;p&gt;Here is an example of a decorator function:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;def checkpoint(function):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;wrapper(*args, **kwargs):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;with open(PATH) as f:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for line in f:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if function.__name__ in line:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;                    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;return
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;value = function(*args, **kwargs)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;with open(PATH, &amp;#39;a+&amp;#39;) as f:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;f.write(function.__name__)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;return value
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;return wrapper
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    wrapper(*args, **kwargs):
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        with open(PATH) as f:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;            for line in f:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;                if function.__name__ in line:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;                    return
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        value = function(*args, **kwargs)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        with open(PATH, &amp;#39;a+&amp;#39;) as f:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;            f.write(function.__name__)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        return value
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    return wrapper
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;All it does is write some text to a file, and avoid running whatever
 function will be &lt;em&gt;decorated&lt;&#x2F;em&gt; by it if there is a match in that file.
@@ -70,34 +71,34 @@ This would be an indicator that the function had already been executed
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;@checkpoint
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;def do_this(some_argument):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;# exit(1) on error
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;...
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    # exit(1) on error
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    ...
+
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;@checkpoint
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;def do_that(some_other_argument, some_optional_argument=None):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;# exit(1) on error
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;...
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    # exit(1) on error
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    ...
+
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if __name__ == &amp;#39;__main__&amp;#39;:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;do_this(&amp;#39;some value&amp;#39;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;do_that(&amp;#39;some other value&amp;#39;)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    do_this(&amp;#39;some value&amp;#39;)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    do_that(&amp;#39;some other value&amp;#39;)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Without the decorator syntax, the same functionality would be achieved
 with:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;def do_this(some_argument):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;# exit(1) on error
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;...
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    # exit(1) on error
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    ...
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;do_this = checkpoint(do_this)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;def do_that(some_other_argument, some_optional_argument=None):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;# exit(1) on error
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;...
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    # exit(1) on error
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    ...
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;do_that = checkpoint(do_that)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if __name__ == &amp;#39;__main__&amp;#39;:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;do_this(&amp;#39;some value&amp;#39;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;do_that(&amp;#39;some other value&amp;#39;)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    do_this(&amp;#39;some value&amp;#39;)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    do_that(&amp;#39;some other value&amp;#39;)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;The latter format, though it presents less of a cognitive burden, feels
 less of an obvious solution, and it&#x27;s a bit uglier as well. &lt;a href=&quot;http:&#x2F;&#x2F;legacy.python.org&#x2F;dev&#x2F;peps&#x2F;pep-0318&quot;&gt;PEP 380&lt;&#x2F;a&gt;
@@ -116,18 +117,18 @@ Investigation into Programming Language Syntax&lt;&#x2F;em&gt;. Now, since I&#x2
 Python sucker, here is what I would change in Python in order to follow
 advice from &lt;a href=&quot;http:&#x2F;&#x2F;dl.acm.org&#x2F;authorize?6968137&quot;&gt;that paper&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;before       after
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;------       -----
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;!=          not=
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;%          mod
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;string        text
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;try-except  check-error
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;finally       always
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;raise        alert
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;def       procedure
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;print       output
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;import        use
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;int&#x2F;float     number
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    before       after
+    ------       -----
+     !=          not=
+      %          mod
+   string        text
+  try-except  check-error
+   finally       always
+    raise        alert
+     def       procedure
+    print       output
+   import        use
+  int&#x2F;float     number
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;The most surprising finding is that both programmers and non-programmers
 found &lt;em&gt;while&lt;&#x2F;em&gt; and &lt;em&gt;for&lt;&#x2F;em&gt; not intuitive for looping constructs. The
@@ -135,59 +136,59 @@ preferred alternatives are &lt;em&gt;repeat&lt;&#x2F;em&gt; and &lt;em&gt;loop&l
 &lt;em&gt;loop&lt;&#x2F;em&gt;, but it does not read as well as &lt;em&gt;while&lt;&#x2F;em&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;while count &amp;lt; 3:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;count = action()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    count = action()
+
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop count &amp;lt; 3:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;count = action()
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    count = action()
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Quorum, the language by those responsible for this paper, went with:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;repeat while (count &amp;lt; 3)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;count = action()
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    count = action()
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;end
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;To mimic that in Python, any of the following two sound fine (I prefer
 &lt;em&gt;if&lt;&#x2F;em&gt; to &lt;em&gt;while&lt;&#x2F;em&gt;; less syntax is better):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;repeat if count &amp;lt; 3:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;count = action()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    count = action()
+
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop if count &amp;lt; 3:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;count = action()
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    count = action()
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;That means an infinite loop would be:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop if True:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;action()
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action()
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Or for that special case, a shortcut can just be this simple:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;action()
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action()
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;I wonder what cycling through items in a container would look like. In
 Python, it looks like:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;for item in container:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;action(item)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action(item)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;This feels as natural as anything, but then again I been doing Python
 for a number of years, so the bias could be heavy. Following is an
 attempt:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop in range(3):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;action()
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action()
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;It mimics this Python syntax, which I actually don&#x27;t like, since we
 don&#x27;t always need the items of the container:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;for _ in range(3):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;action()
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action()
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Quorum, the academic language mentioned above, does it like:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;repeat 3 times
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;action()
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action()
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;end
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;I don&#x27;t like that either; feels contrived. The Python way strikes me as
@@ -195,23 +196,23 @@ a good compromise, especially given how general it is. I will try again
 with the &lt;em&gt;loop&lt;&#x2F;em&gt; syntax:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop item in container:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;action(item)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action(item)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;You have to admit it doesn&#x27;t read as nice as:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;for item in container:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;action(item)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action(item)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;It should be flexible to accommodate more than just one value on each
 iteration, so should have an equivalent for this Python code:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;for index, item in enumerate(container):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;action(index, item)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action(index, item)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Here goes:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop index, item in enumerate(container):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;action(index, item)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action(index, item)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Now, for the much-loved Python list comprehensions:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -386,7 +387,7 @@ for this, I used latest &#x27;final&#x27; release from Linus&#x27; git tree:&lt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;commit 6e4664525b1db28f8c4e1130957f70a94c19213e
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Author: Linus Torvalds &amp;lt;torvalds@linux-foundation.org&amp;gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Date:   Mon Sep 2 13:46:10 2013 -0700
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Linux 3.11
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Here&#x27;s the commands I used:&lt;&#x2F;p&gt;
@@ -465,23 +466,23 @@ on, and displays the relevant command.&lt;&#x2F;p&gt;
 &lt;p&gt;Some examples of usage:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ cd &amp;lt;hg repo&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ .&#x2F;vcs.py --log
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;hg log --no-merges --patch --stat --verbose
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ cd &amp;lt;git repo&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ .&#x2F;vcs.py --log
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;git log --no-merges --patch --stat
+$ .&#x2F;vcs.py --log
+hg log --no-merges --patch --stat --verbose
+$ cd &amp;lt;git repo&amp;gt;
+$ .&#x2F;vcs.py --log
+git log --no-merges --patch --stat
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Here are the relevant BASH aliases:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vb=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --branch)&amp;#39;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vd=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --diff)&amp;#39;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vl=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --log)&amp;#39;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vp=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --push)&amp;#39;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vs=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --status)&amp;#39;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vu=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --pull)&amp;#39;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vc=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --commit)&amp;#39;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vo=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --checkout)&amp;#39;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;alias vr=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --revert)&amp;#39;
+alias vd=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --diff)&amp;#39;
+alias vl=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --log)&amp;#39;
+alias vp=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --push)&amp;#39;
+alias vs=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --status)&amp;#39;
+alias vu=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --pull)&amp;#39;
+alias vc=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --commit)&amp;#39;
+alias vo=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --checkout)&amp;#39;
+alias vr=&amp;#39;$(~&#x2F;scripts&#x2F;vcs.py --revert)&amp;#39;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;This makes my life so much easier, since I no longer have to care which
 VCS I&#x27;m on, at least for the most common of commands. I am pleased with
@@ -1002,11 +1003,11 @@ takes an interesting direction.&lt;&#x2F;li&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#b48ead;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;matplotlib &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pyplot
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;random
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;x_axis = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;range&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pyplot.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;plot&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(x_axis, random.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sample&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;range&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;), &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;))
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pyplot.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;plot&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(x_axis, random.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sample&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;range&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;), &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;))
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pyplot.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;show&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;()
+
+x_axis = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;range&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;)
+pyplot.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;plot&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(x_axis, random.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sample&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;range&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;), &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;))
+pyplot.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;plot&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(x_axis, random.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sample&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;range&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;), &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;))
+pyplot.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;show&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;()
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;With &lt;a href=&quot;http:&#x2F;&#x2F;matplotlib.org&quot;&gt;matplolib&lt;&#x2F;a&gt; installed, running the code above should resulted in
 the following image:&lt;&#x2F;p&gt;
@@ -1024,15 +1025,15 @@ uglier.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;matplotlib &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pyplot
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;argparse
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;random
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;parser = argparse.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;ArgumentParser&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;parser.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;add_argument&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;number_of_graphs&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;#39;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;type&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;=int)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;args = parser.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;parse_args&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;x_axis = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;range&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;n &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;range&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(args.number_of_graphs):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pyplot.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;plot&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(x_axis, random.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sample&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;range&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;), &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;), &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;label&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;str&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(n))
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pyplot.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;legend&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pyplot.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;show&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;()
+
+parser = argparse.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;ArgumentParser&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;()
+parser.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;add_argument&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;number_of_graphs&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;#39;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;type&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;=int)
+args = parser.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;parse_args&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;()
+
+x_axis = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;range&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;n &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;range&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(args.number_of_graphs):
+pyplot.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;plot&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(x_axis, random.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sample&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;range&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;), &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;), &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;label&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;str&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(n))
+pyplot.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;legend&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;()
+pyplot.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;show&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;()
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;If I provide 3 as command line argument, I get this:&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;matplotlib-2.png&quot; alt=&quot;image resulting from running the code above&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
@@ -1048,13 +1049,13 @@ uglier.&lt;&#x2F;p&gt;
                 <description>&lt;p&gt;Following should be self-explanatory:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ python
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;gt;&amp;gt;&amp;gt; numbers = dict(zero=0, one=1, two=2, three=3)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;gt;&amp;gt;&amp;gt; numbers
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;{&amp;#39;three&amp;#39;: 3, &amp;#39;zero&amp;#39;: 0, &amp;#39;two&amp;#39;: 2, &amp;#39;one&amp;#39;: 1}
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;gt;&amp;gt;&amp;gt; sorted(numbers)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[&amp;#39;one&amp;#39;, &amp;#39;three&amp;#39;, &amp;#39;two&amp;#39;, &amp;#39;zero&amp;#39;]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;gt;&amp;gt;&amp;gt; sorted(numbers, key=numbers.get)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[&amp;#39;zero&amp;#39;, &amp;#39;one&amp;#39;, &amp;#39;two&amp;#39;, &amp;#39;three&amp;#39;]
+&amp;gt;&amp;gt;&amp;gt; numbers = dict(zero=0, one=1, two=2, three=3)
+&amp;gt;&amp;gt;&amp;gt; numbers
+{&amp;#39;three&amp;#39;: 3, &amp;#39;zero&amp;#39;: 0, &amp;#39;two&amp;#39;: 2, &amp;#39;one&amp;#39;: 1}
+&amp;gt;&amp;gt;&amp;gt; sorted(numbers)
+[&amp;#39;one&amp;#39;, &amp;#39;three&amp;#39;, &amp;#39;two&amp;#39;, &amp;#39;zero&amp;#39;]
+&amp;gt;&amp;gt;&amp;gt; sorted(numbers, key=numbers.get)
+[&amp;#39;zero&amp;#39;, &amp;#39;one&amp;#39;, &amp;#39;two&amp;#39;, &amp;#39;three&amp;#39;]
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;The second-last command sorts by keys, but that&#x27;s easy. Sorting by
 value, as shown by the last command above, is what trips many novices,
@@ -1296,8 +1297,8 @@ that is much simpler to use and more advanced than Python&#x27;s standard
 library named &lt;a href=&quot;http:&#x2F;&#x2F;code.google.com&#x2F;p&#x2F;httplib2&#x2F;&quot;&gt;httplib2&lt;&#x2F;a&gt;, but it&#x27;s not quite as simple&#x2F;elegant:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;h = httplib2.Http(&amp;quot;.cache&amp;quot;)  &#x2F;&#x2F; ugly
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;h.add_credentials(&amp;quot;user&amp;quot;, &amp;quot;pass&amp;quot;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;resp, content = h.request(&amp;quot;https:&#x2F;&#x2F;example.com&amp;quot;)
+h.add_credentials(&amp;quot;user&amp;quot;, &amp;quot;pass&amp;quot;)
+resp, content = h.request(&amp;quot;https:&#x2F;&#x2F;example.com&amp;quot;)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;An example for achieving the same with only the standard library is far
 messier.&lt;&#x2F;p&gt;
@@ -1385,31 +1386,31 @@ just wipe out the entire installation.&lt;&#x2F;p&gt;
 script to take care of it:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import os
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;import subprocess
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;top_level = os.path.expanduser(&amp;quot;~&#x2F;src&#x2F;gnome&amp;quot;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for filename in os.listdir(top_level):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;full_path = &amp;quot;{}&#x2F;{}&amp;quot;.format(top_level, filename)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if os.path.isdir(full_path):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cmd = &amp;quot;cd ~&#x2F;src&#x2F;gnome&#x2F;{} &amp;amp;&amp;amp; git clean -dfx&amp;quot;.format(filename)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if subprocess.call(cmd, shell=True) != 0:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cmd = &amp;quot;cd ~&#x2F;src&#x2F;gnome&#x2F;{} &amp;amp;&amp;amp; make distclean&amp;quot;.format(filename)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if subprocess.call(cmd, shell=True) != 0:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cmd = &amp;quot;cd ~&#x2F;src&#x2F;gnome&#x2F;{} &amp;amp;&amp;amp; make clean&amp;quot;.format(filename)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;subprocess.call(cmd, shell=True)
+import subprocess
+top_level = os.path.expanduser(&amp;quot;~&#x2F;src&#x2F;gnome&amp;quot;)
+for filename in os.listdir(top_level):
+    full_path = &amp;quot;{}&#x2F;{}&amp;quot;.format(top_level, filename)
+    if os.path.isdir(full_path):
+        cmd = &amp;quot;cd ~&#x2F;src&#x2F;gnome&#x2F;{} &amp;amp;&amp;amp; git clean -dfx&amp;quot;.format(filename)
+        if subprocess.call(cmd, shell=True) != 0:
+            cmd = &amp;quot;cd ~&#x2F;src&#x2F;gnome&#x2F;{} &amp;amp;&amp;amp; make distclean&amp;quot;.format(filename)
+            if subprocess.call(cmd, shell=True) != 0:
+                cmd = &amp;quot;cd ~&#x2F;src&#x2F;gnome&#x2F;{} &amp;amp;&amp;amp; make clean&amp;quot;.format(filename)
+                subprocess.call(cmd, shell=True)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h1 id=&quot;update&quot;&gt;update&lt;&#x2F;h1&gt;
 &lt;p&gt;Someone very kind guy made &lt;a href=&quot;http:&#x2F;&#x2F;codereview.stackexchange.com&#x2F;questions&#x2F;1476&#x2F;cleansing-multiple-build-directories&#x2F;1477#1477&quot;&gt;a bunch of suggestions&lt;&#x2F;a&gt;, making my code much
 better:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import os
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;import subprocess
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;top_level = os.path.expanduser(&amp;quot;~&#x2F;src&#x2F;gnome&amp;quot;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for filename in os.listdir(top_level):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;full_path = os.path.join(top_level, filename)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if os.path.isdir(full_path):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;os.chdir(full_path)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if subprocess.call(&amp;quot;git clean -dfx&amp;quot;.split()) != 0:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if subprocess.call(&amp;quot;make distclean&amp;quot;.split()) != 0:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;subprocess.call(&amp;quot;make clean&amp;quot;.split())
+import subprocess
+top_level = os.path.expanduser(&amp;quot;~&#x2F;src&#x2F;gnome&amp;quot;)
+for filename in os.listdir(top_level):
+    full_path = os.path.join(top_level, filename)
+    if os.path.isdir(full_path):
+        os.chdir(full_path)
+        if subprocess.call(&amp;quot;git clean -dfx&amp;quot;.split()) != 0:
+            if subprocess.call(&amp;quot;make distclean&amp;quot;.split()) != 0:
+                subprocess.call(&amp;quot;make clean&amp;quot;.split())
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h1 id=&quot;further-reading&quot;&gt;further reading&lt;&#x2F;h1&gt;
 &lt;p&gt;modules: &lt;a href=&quot;http:&#x2F;&#x2F;docs.python.org&#x2F;&#x2F;library&#x2F;os&quot;&gt;os&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;docs.python.org&#x2F;&#x2F;library&#x2F;os.path&quot;&gt;os.path&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;docs.python.org&#x2F;&#x2F;library&#x2F;subprocess&quot;&gt;subprocess&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </description>
@@ -1424,26 +1425,26 @@ better:&lt;&#x2F;p&gt;
 Perl. I&#x27;ve modified their example for the sake of simplicity:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;sub cat {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;foreach my $filename (@_) {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;open FILE, $filename;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;while (my $line = &amp;lt;FILE&amp;gt;) {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;print $line;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cat @ARGV;
+    foreach my $filename (@_) {
+        open FILE, $filename;
+        while (my $line = &amp;lt;FILE&amp;gt;) {
+            print $line;
+        }
+    }
+}
+cat @ARGV;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Running this script (e.g. &lt;code&gt;perl cat.pl file&lt;&#x2F;code&gt;) will display those files
 as if you ran &lt;code&gt;cat file&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;I decided to see how the Python example would look like:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import sys
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;def cat(files):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for filename in files:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;with open(filename) as FILE:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for line in FILE:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;print(line, end=&amp;quot;&amp;quot;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cat(sys.argv[1:])
+def cat(files):
+    for filename in files:
+        with open(filename) as FILE:
+            for line in FILE:
+                print(line, end=&amp;quot;&amp;quot;)
+cat(sys.argv[1:])
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Running this script (e.g. &lt;code&gt;python3 cat.py file1 file2&lt;&#x2F;code&gt;) will give
 exactly the same result as above.&lt;&#x2F;p&gt;
@@ -1504,67 +1505,67 @@ elegantly.&lt;&#x2F;li&gt;
                 <description>&lt;p&gt;Here&#x27;s drawing a simple graph:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;from matplotlib import pyplot
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;x = range(10)  # a list of 10 integers, 0-9
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;y = range(10)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pyplot.plot(x, y)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pyplot.show()
+x = range(10)  # a list of 10 integers, 0-9
+y = range(10)
+pyplot.plot(x, y)
+pyplot.show()
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;And now for something a little more interesting:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import random
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;from matplotlib import pyplot
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;x = range(10)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;y = random.sample(range(10), 10)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pyplot.plot(x, y)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pyplot.show()
+from matplotlib import pyplot
+x = range(10)
+y = random.sample(range(10), 10)
+pyplot.plot(x, y)
+pyplot.show()
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;We can have more than one graph on a single figure:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import random
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;from matplotlib import pyplot
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;x = range(10)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;y1 = random.sample(range(10), 10)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;y2 = random.sample(range(10), 10)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pyplot.plot(x, y1, x, y2)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pyplot.show()
+from matplotlib import pyplot
+x = range(10)
+y1 = random.sample(range(10), 10)
+y2 = random.sample(range(10), 10)
+pyplot.plot(x, y1, x, y2)
+pyplot.show()
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;What if the two graphs have much differing ranges:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import random
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;from matplotlib import pyplot
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;x = range(10)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;y1 = random.sample(range(10), 10)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;y2 = random.sample(range(100, 110), 10)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pyplot.plot(x, y1, x, y2)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pyplot.show()
+from matplotlib import pyplot
+x = range(10)
+y1 = random.sample(range(10), 10)
+y2 = random.sample(range(100, 110), 10)
+pyplot.plot(x, y1, x, y2)
+pyplot.show()
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Depending on need, that might not be ideal. So let&#x27;s create two
 separate y-axes:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import random
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;from matplotlib import pyplot
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;x = range(10)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;y1 = random.sample(range(10), 10)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;y2 = random.sample(range(100, 110), 10)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pyplot.plot(x, y1)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pyplot.twinx()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pyplot.plot(x, y2)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pyplot.show()
+from matplotlib import pyplot
+x = range(10)
+y1 = random.sample(range(10), 10)
+y2 = random.sample(range(100, 110), 10)
+pyplot.plot(x, y1)
+pyplot.twinx()
+pyplot.plot(x, y2)
+pyplot.show()
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Yeah, not exactly ideal. We lost the automatic coloring, and we don&#x27;t
 even know which graph is which. Let&#x27;s do better:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import random
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;from matplotlib import pyplot
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;x = range(10)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;y1 = random.sample(range(10), 10)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;y2 = random.sample(range(100, 110), 10)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pyplot.plot(x, y1, &amp;quot;red&amp;quot;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pyplot.ylabel(&amp;quot;y1&amp;quot;, color=&amp;quot;red&amp;quot;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pyplot.twinx()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pyplot.plot(x, y2, &amp;quot;blue&amp;quot;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pyplot.ylabel(&amp;quot;y2&amp;quot;, color=&amp;quot;blue&amp;quot;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pyplot.show()
+from matplotlib import pyplot
+x = range(10)
+y1 = random.sample(range(10), 10)
+y2 = random.sample(range(100, 110), 10)
+pyplot.plot(x, y1, &amp;quot;red&amp;quot;)
+pyplot.ylabel(&amp;quot;y1&amp;quot;, color=&amp;quot;red&amp;quot;)
+pyplot.twinx()
+pyplot.plot(x, y2, &amp;quot;blue&amp;quot;)
+pyplot.ylabel(&amp;quot;y2&amp;quot;, color=&amp;quot;blue&amp;quot;)
+pyplot.show()
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;This was done with the help of &lt;a href=&quot;http:&#x2F;&#x2F;matplotlib.sourceforge.net&#x2F;examples&#x2F;api&#x2F;two_scales.html&quot;&gt;this example&lt;&#x2F;a&gt;. There&#x27;s a heck of a
 &lt;a href=&quot;http:&#x2F;&#x2F;matplotlib.sourceforge.net&#x2F;examples&#x2F;index.html&quot;&gt;lot&lt;&#x2F;a&gt; &lt;a href=&quot;http:&#x2F;&#x2F;matplotlib.sourceforge.net&#x2F;gallery.html&quot;&gt;more&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
@@ -1601,25 +1602,25 @@ versatility&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 differences in package versions between them:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import os
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;import gzip
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;import apt_pkg
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;repo1 = &amp;quot;~&#x2F;.repo_custom&#x2F;dists&#x2F;cache&#x2F;main&#x2F;binary-i386&#x2F;Packages.gz&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;repo1 = os.path.expanduser(repo1)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;repo1 = apt_pkg.TagFile(gzip.open(repo1, &amp;quot;rb&amp;quot;))
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;repo1 = dict([(pkg[&amp;quot;Package&amp;quot;], pkg[&amp;quot;Version&amp;quot;]) for pkg in repo1])
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;repo2 = &amp;quot;~&#x2F;.repo_bin&#x2F;dists&#x2F;squeeze&#x2F;main&#x2F;binary-i386&#x2F;Packages.gz&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;repo2 = os.path.expanduser(repo2)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;repo2 = apt_pkg.TagFile(gzip.open(repo2, &amp;quot;rb&amp;quot;))
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;repo2 = dict([(pkg[&amp;quot;Package&amp;quot;], pkg[&amp;quot;Version&amp;quot;]) for pkg in repo2])
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;apt_pkg.init_system()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for pkg in repo1:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if pkg in repo2:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;vc = apt_pkg.version_compare(repo1[pkg], repo2[pkg])
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if vc &amp;gt; 0:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;print(&amp;quot;{0}t{1}t({2})&amp;quot;.format(repo1[pkg], repo2[pkg], pkg))
+import gzip
+import apt_pkg
+
+repo1 = &amp;quot;~&#x2F;.repo_custom&#x2F;dists&#x2F;cache&#x2F;main&#x2F;binary-i386&#x2F;Packages.gz&amp;quot;
+repo1 = os.path.expanduser(repo1)
+repo1 = apt_pkg.TagFile(gzip.open(repo1, &amp;quot;rb&amp;quot;))
+repo1 = dict([(pkg[&amp;quot;Package&amp;quot;], pkg[&amp;quot;Version&amp;quot;]) for pkg in repo1])
+
+repo2 = &amp;quot;~&#x2F;.repo_bin&#x2F;dists&#x2F;squeeze&#x2F;main&#x2F;binary-i386&#x2F;Packages.gz&amp;quot;
+repo2 = os.path.expanduser(repo2)
+repo2 = apt_pkg.TagFile(gzip.open(repo2, &amp;quot;rb&amp;quot;))
+repo2 = dict([(pkg[&amp;quot;Package&amp;quot;], pkg[&amp;quot;Version&amp;quot;]) for pkg in repo2])
+
+apt_pkg.init_system()
+for pkg in repo1:
+    if pkg in repo2:
+        vc = apt_pkg.version_compare(repo1[pkg], repo2[pkg])
+        if vc &amp;gt; 0:
+            print(&amp;quot;{0}t{1}t({2})&amp;quot;.format(repo1[pkg], repo2[pkg], pkg))
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;The line &lt;code&gt;import apt_pkg&lt;&#x2F;code&gt; implies that &lt;strong&gt;python3-apt&lt;&#x2F;strong&gt; is installed.&lt;&#x2F;p&gt;
 &lt;p&gt;Here&#x27;s a snippet of what the output will look like:&lt;&#x2F;p&gt;
@@ -1668,7 +1669,7 @@ splitting?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 list&#x2F;array, I would use this:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;split_string = &amp;quot;a b c&amp;quot;.split()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;print(split_string)
+print(split_string)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -1678,7 +1679,7 @@ list&#x2F;array, I would use this:&lt;&#x2F;p&gt;
 split on):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;split_string = &amp;quot;string with spaces&amp;quot;.split(&amp;quot; &amp;quot;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;print(split_string)
+print(split_string)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;I get the same result:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -1687,7 +1688,7 @@ split on):&lt;&#x2F;p&gt;
 &lt;p&gt;But what if my string wasn&#x27;t so forgiving?&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;split_string = &amp;quot;a b  c&amp;quot;.split(&amp;quot; &amp;quot;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;print(split_string)
+print(split_string)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -1704,8 +1705,8 @@ examples. PHP examples aren&#x27;t that much different though.&lt;&#x2F;p&gt;
 &lt;p&gt;Here goes:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import java.util.Arrays;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;String[] splitString = &amp;quot;a b  c&amp;quot;.split(&amp;quot; &amp;quot;);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;System.out.println(Arrays.asList(splitString));
+String[] splitString = &amp;quot;a b  c&amp;quot;.split(&amp;quot; &amp;quot;);
+System.out.println(Arrays.asList(splitString));
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -1715,8 +1716,8 @@ examples. PHP examples aren&#x27;t that much different though.&lt;&#x2F;p&gt;
 string, I get to use regular expressions (regexp)?&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import java.util.Arrays;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;String[] splitString = &amp;quot;string with spaces&amp;quot;.split(&amp;quot; +&amp;quot;);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;System.out.println(Arrays.asList(splitString));
+String[] splitString = &amp;quot;string with spaces&amp;quot;.split(&amp;quot; +&amp;quot;);
+System.out.println(Arrays.asList(splitString));
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -1728,7 +1729,7 @@ one or more consecutive spaces.&lt;&#x2F;p&gt;
 string, I get to use regular expressions (regexp)?&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;String[] splitString = &amp;quot;string with spaces&amp;quot;.split(&amp;quot; +&amp;quot;);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;System.out.println(Arrays.asList(splitString));
+System.out.println(Arrays.asList(splitString));
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -1738,8 +1739,8 @@ string, I get to use regular expressions (regexp)?&lt;&#x2F;p&gt;
 tabs as well? We need some more regexp help:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import java.util.Arrays;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;String[] splitString = &amp;quot;a    bnc&amp;quot;.split(&amp;quot;s+&amp;quot;);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;System.out.println(Arrays.asList(splitString));
+String[] splitString = &amp;quot;a    bnc&amp;quot;.split(&amp;quot;s+&amp;quot;);
+System.out.println(Arrays.asList(splitString));
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -1750,7 +1751,7 @@ tabs as well? We need some more regexp help:&lt;&#x2F;p&gt;
 back disappointed:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;split_string = &amp;quot;a    bnc&amp;quot;.split(&amp;quot; &amp;quot;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;print(split_string)
+print(split_string)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -1761,8 +1762,8 @@ with Python. This is the only thing so that I found easier to achieve in
 Java than in Python:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import re
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;split_string = re.split(&amp;quot;s+&amp;quot;, &amp;quot;a    bnc&amp;quot;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;print(split_string)
+split_string = re.split(&amp;quot;s+&amp;quot;, &amp;quot;a    bnc&amp;quot;)
+print(split_string)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;...and we finally get what we want:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -1785,10 +1786,10 @@ Java than in Python:&lt;&#x2F;p&gt;
 &lt;p&gt;The code to read that content is:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import configparser
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;conf = configparser.ConfigParser()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;conf.read(&amp;quot;config.cfg&amp;quot;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;items = conf.items(&amp;quot;numbers&amp;quot;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;print(items)
+conf = configparser.ConfigParser()
+conf.read(&amp;quot;config.cfg&amp;quot;)
+items = conf.items(&amp;quot;numbers&amp;quot;)
+print(items)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -1799,10 +1800,10 @@ Java than in Python:&lt;&#x2F;p&gt;
 suitable data type? Here goes:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import configparser
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;conf = configparser.ConfigParser()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;conf.read(&amp;quot;config.cfg&amp;quot;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;items = dict(conf.items(&amp;quot;numbers&amp;quot;))
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;print(items)
+conf = configparser.ConfigParser()
+conf.read(&amp;quot;config.cfg&amp;quot;)
+items = dict(conf.items(&amp;quot;numbers&amp;quot;))
+print(items)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -1815,12 +1816,12 @@ about ordering. Remember that in order to access dictionary content, you
 use a key and not an index:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;gt;&amp;gt;&amp;gt; d = {1: &amp;#39;one&amp;#39;}
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;gt;&amp;gt;&amp;gt; d[0]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Traceback (most recent call last):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;File &amp;quot;&amp;quot;, line 1, in
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;KeyError: 0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;gt;&amp;gt;&amp;gt; d[1]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;#39;one&amp;#39;
+&amp;gt;&amp;gt;&amp;gt; d[0]
+Traceback (most recent call last):
+  File &amp;quot;&amp;quot;, line 1, in
+KeyError: 0
+&amp;gt;&amp;gt;&amp;gt; d[1]
+&amp;#39;one&amp;#39;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h1 id=&quot;further-reading&quot;&gt;further reading&lt;&#x2F;h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;docs.python.org&#x2F;library&#x2F;configparser&quot;&gt;configparser module&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -1840,37 +1841,37 @@ read Oracle DBs.&lt;&#x2F;p&gt;
 &lt;p&gt;Let&#x27;s start by simply reading the DB:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import cx_Oracle
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;conn = cx_Oracle.connect(&amp;quot;usr&amp;quot;, &amp;quot;pwd&amp;quot;, &amp;quot;tns&amp;quot;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cursor = conn.cursor()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cursor.execute(&amp;quot;SELECT * TABLE_NAME&amp;quot;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for item in cursor.fetchall()[0]:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;print(item)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;conn.close()
+conn = cx_Oracle.connect(&amp;quot;usr&amp;quot;, &amp;quot;pwd&amp;quot;, &amp;quot;tns&amp;quot;)
+cursor = conn.cursor()
+cursor.execute(&amp;quot;SELECT * TABLE_NAME&amp;quot;)
+for item in cursor.fetchall()[0]:
+    print(item)
+conn.close()
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;The &lt;a href=&quot;http:&#x2F;&#x2F;cx-oracle.sourceforge.net&#x2F;html&#x2F;index.html&quot;&gt;cx_Oracle&lt;&#x2F;a&gt; explain exactly what each of these means.&lt;&#x2F;p&gt;
 &lt;p&gt;If we wanted instead to modify stuff in there, we only add one extra
 line, which is &lt;code&gt;cursor.commit&lt;&#x2F;code&gt;, like this:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import cx_Oracle
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;conn = cx_Oracle.connect(&amp;quot;usr&amp;quot;, &amp;quot;pwd&amp;quot;, &amp;quot;tns&amp;quot;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cursor = conn.cursor()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cursor.execute(&amp;quot;SELECT * TABLE_NAME&amp;quot;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cursor.commit()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;conn.close()
+conn = cx_Oracle.connect(&amp;quot;usr&amp;quot;, &amp;quot;pwd&amp;quot;, &amp;quot;tns&amp;quot;)
+cursor = conn.cursor()
+cursor.execute(&amp;quot;SELECT * TABLE_NAME&amp;quot;)
+cursor.commit()
+conn.close()
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;For real-world code, you are of course going to add exception handling
 for all this, something like this:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import cx_Oracle
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;try:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;conn = cx_Oracle.connect(&amp;quot;usr&amp;quot;, &amp;quot;pwd&amp;quot;, &amp;quot;tns&amp;quot;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cursor = conn.cursor()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cursor.execute(&amp;quot;SELECT * TABLE_NAME&amp;quot;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for item in cursor.fetchall()[0]:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;print(item)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;conn.close()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;except Exception as e:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;print(e)
+try:
+    conn = cx_Oracle.connect(&amp;quot;usr&amp;quot;, &amp;quot;pwd&amp;quot;, &amp;quot;tns&amp;quot;)
+    cursor = conn.cursor()
+    cursor.execute(&amp;quot;SELECT * TABLE_NAME&amp;quot;)
+    for item in cursor.fetchall()[0]:
+        print(item)
+    conn.close()
+except Exception as e:
+    print(e)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;That exception handling is rather oversimplified though, but is good
 enough for illustrative purposes. Also, note that there is no timeout
@@ -1889,7 +1890,7 @@ Python: via the shell, or directly (via the kernel).&lt;&#x2F;p&gt;
 &lt;p&gt;This is via the shell:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import subprocess
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;subprocess.Popen(&amp;quot;echo test&amp;quot;, shell=True)
+subprocess.Popen(&amp;quot;echo test&amp;quot;, shell=True)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -1898,9 +1899,9 @@ Python: via the shell, or directly (via the kernel).&lt;&#x2F;p&gt;
 &lt;p&gt;This is via the kernel:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import subprocess
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;p = subprocess.Popen([&amp;quot;echo&amp;quot;, &amp;quot;test&amp;quot;], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;output = p.communicate()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;print(output)
+p = subprocess.Popen([&amp;quot;echo&amp;quot;, &amp;quot;test&amp;quot;], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+output = p.communicate()
+print(output)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -1913,9 +1914,9 @@ not stated here.&lt;&#x2F;p&gt;
 do a bit more work:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import subprocess
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;p = subprocess.Popen([&amp;quot;echo&amp;quot;, &amp;quot;test&amp;quot;], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;output = p.communicate()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;print(output[0].decode(), end=&amp;quot;&amp;quot;)
+p = subprocess.Popen([&amp;quot;echo&amp;quot;, &amp;quot;test&amp;quot;], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+output = p.communicate()
+print(output[0].decode(), end=&amp;quot;&amp;quot;)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -1962,22 +1963,22 @@ space as a delimiter (by default). To test, I will create a file named
 &lt;p&gt;And here&#x27;s the code, using the normal split method:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import subprocess
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cmd = &amp;quot;&#x2F;bin&#x2F;cat &amp;#39;file with spaces&amp;#39;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;formatted_cmd = cmd.split()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;subprocess.Popen(formatted_cmd)
+cmd = &amp;quot;&#x2F;bin&#x2F;cat &amp;#39;file with spaces&amp;#39;&amp;quot;
+formatted_cmd = cmd.split()
+subprocess.Popen(formatted_cmd)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;bin&#x2F;cat: &amp;#39;file: No such file or directory
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;bin&#x2F;cat: with: No such file or directory
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;bin&#x2F;cat: spaces&amp;#39;: No such file or directory
+&#x2F;bin&#x2F;cat: with: No such file or directory
+&#x2F;bin&#x2F;cat: spaces&amp;#39;: No such file or directory
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;That&#x27;s when &lt;code&gt;shlex&lt;&#x2F;code&gt; module gets to be useful.&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import shlex, subprocess
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cmd = &amp;quot;&#x2F;bin&#x2F;cat &amp;#39;file with spaces&amp;#39;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;formatted_cmd = shlex.split(cmd)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;subprocess.Popen(formatted_cmd)
+cmd = &amp;quot;&#x2F;bin&#x2F;cat &amp;#39;file with spaces&amp;#39;&amp;quot;
+formatted_cmd = shlex.split(cmd)
+subprocess.Popen(formatted_cmd)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -2003,13 +2004,13 @@ specific processor (in my case, 3.1 and i386 respectively).&lt;&#x2F;li&gt;
 &lt;p&gt;&lt;strong&gt;installation and setup&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;sudo apt-get install libpython3.1 libaio1 alien
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sudo alien --install oracle-instantclient11.2-basic*rpm cx_Oracle*rpm
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sudo ln -s &#x2F;usr&#x2F;lib&#x2F;python3.1&#x2F;site-packages&#x2F;cx_Oracle.so &#x2F;usr&#x2F;lib&#x2F;python3.1&#x2F;lib-dynload
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sudo ln -s &#x2F;usr&#x2F;lib&#x2F;oracle&#x2F;11.2&#x2F;client&#x2F;lib&#x2F;libnnz11.so &#x2F;usr&#x2F;lib
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sudo ln -s &#x2F;usr&#x2F;lib&#x2F;oracle&#x2F;11.2&#x2F;client&#x2F;lib&#x2F;libclntsh.so.11.1 &#x2F;usr&#x2F;lib
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;echo export LD_LIBRARY_PATH=&#x2F;usr&#x2F;lib&#x2F;oracle&#x2F;11.2&#x2F;client&#x2F;lib &amp;gt;&amp;gt; ~&#x2F;.bashrc
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;source ~&#x2F;.bashrc
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;python3 -c &amp;#39;import cx_Oracle&amp;#39;
+sudo alien --install oracle-instantclient11.2-basic*rpm cx_Oracle*rpm
+sudo ln -s &#x2F;usr&#x2F;lib&#x2F;python3.1&#x2F;site-packages&#x2F;cx_Oracle.so &#x2F;usr&#x2F;lib&#x2F;python3.1&#x2F;lib-dynload
+sudo ln -s &#x2F;usr&#x2F;lib&#x2F;oracle&#x2F;11.2&#x2F;client&#x2F;lib&#x2F;libnnz11.so &#x2F;usr&#x2F;lib
+sudo ln -s &#x2F;usr&#x2F;lib&#x2F;oracle&#x2F;11.2&#x2F;client&#x2F;lib&#x2F;libclntsh.so.11.1 &#x2F;usr&#x2F;lib
+echo export LD_LIBRARY_PATH=&#x2F;usr&#x2F;lib&#x2F;oracle&#x2F;11.2&#x2F;client&#x2F;lib &amp;gt;&amp;gt; ~&#x2F;.bashrc
+source ~&#x2F;.bashrc
+python3 -c &amp;#39;import cx_Oracle&amp;#39;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;If that last line executes without printing a message to the screen, the
 install is most likely successful.&lt;&#x2F;p&gt;

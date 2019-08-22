@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -58,19 +56,19 @@
               <ul class="mobile-menu-list">
                 
                     <li class="mobile-menu-item">
-                        <a href="http://tshepang.net&#x2F;tags">
+                        <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;tags">
                             tags
                         </a>
                     </li>
                 
                     <li class="mobile-menu-item">
-                        <a href="http://tshepang.net&#x2F;about-me">
+                        <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;about-me">
                             about
                         </a>
                     </li>
                 
                     <li class="mobile-menu-item">
-                        <a href="http://tshepang.net&#x2F;categories&#x2F;movies">
+                        <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;categories&#x2F;movies">
                             movies
                         </a>
                     </li>
@@ -84,19 +82,19 @@
                     <ul>
                         
                             <li>
-                                <a href="http://tshepang.net&#x2F;tags">
+                                <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;tags">
                                     tags
                                 </a>
                             </li>
                         
                             <li>
-                                <a href="http://tshepang.net&#x2F;about-me">
+                                <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;about-me">
                                     about
                                 </a>
                             </li>
                         
                             <li>
-                                <a href="http://tshepang.net&#x2F;categories&#x2F;movies">
+                                <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;categories&#x2F;movies">
                                     movies
                                 </a>
                             </li>
@@ -137,12 +135,12 @@
 <pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">
 </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">o_to_0</span><span style="color:#c0c5ce;">() -&gt; std::io::Result&lt;</span><span style="color:#b48ead;">bool</span><span style="color:#c0c5ce;">&gt; {
-</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">let mut</span><span style="color:#c0c5ce;"> p = std::process::Command::new(&quot;</span><span style="color:#a3be8c;">tr</span><span style="color:#c0c5ce;">&quot;)
-</span><span style="color:#c0c5ce;">        </span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">arg</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">o</span><span style="color:#c0c5ce;">&quot;) .</span><span style="color:#96b5b4;">arg</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">0</span><span style="color:#c0c5ce;">&quot;) .</span><span style="color:#96b5b4;">stdin</span><span style="color:#c0c5ce;">(std::process::Stdio::piped())
-</span><span style="color:#c0c5ce;">        </span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">spawn</span><span style="color:#c0c5ce;">()?;
-</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> input = &quot;</span><span style="color:#a3be8c;">foo</span><span style="color:#c0c5ce;">&quot;; </span><span style="color:#b48ead;">if let </span><span style="color:#c0c5ce;">Some(stdin) = p.stdin.</span><span style="color:#96b5b4;">as_mut</span><span style="color:#c0c5ce;">() {
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">stdin.</span><span style="color:#96b5b4;">write_all</span><span style="color:#c0c5ce;">(input.</span><span style="color:#96b5b4;">as_bytes</span><span style="color:#c0c5ce;">())?; } Ok(p.</span><span style="color:#96b5b4;">wait</span><span style="color:#c0c5ce;">()?.</span><span style="color:#96b5b4;">success</span><span style="color:#c0c5ce;">())
-</span><span style="color:#c0c5ce;">}
+    </span><span style="color:#b48ead;">let mut</span><span style="color:#c0c5ce;"> p = std::process::Command::new(&quot;</span><span style="color:#a3be8c;">tr</span><span style="color:#c0c5ce;">&quot;)
+        .</span><span style="color:#96b5b4;">arg</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">o</span><span style="color:#c0c5ce;">&quot;) .</span><span style="color:#96b5b4;">arg</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">0</span><span style="color:#c0c5ce;">&quot;) .</span><span style="color:#96b5b4;">stdin</span><span style="color:#c0c5ce;">(std::process::Stdio::piped())
+        .</span><span style="color:#96b5b4;">spawn</span><span style="color:#c0c5ce;">()?;
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> input = &quot;</span><span style="color:#a3be8c;">foo</span><span style="color:#c0c5ce;">&quot;; </span><span style="color:#b48ead;">if let </span><span style="color:#c0c5ce;">Some(stdin) = p.stdin.</span><span style="color:#96b5b4;">as_mut</span><span style="color:#c0c5ce;">() {
+    stdin.</span><span style="color:#96b5b4;">write_all</span><span style="color:#c0c5ce;">(input.</span><span style="color:#96b5b4;">as_bytes</span><span style="color:#c0c5ce;">())?; } Ok(p.</span><span style="color:#96b5b4;">wait</span><span style="color:#c0c5ce;">()?.</span><span style="color:#96b5b4;">success</span><span style="color:#c0c5ce;">())
+}
 </span></pre>
 <p>I wonder if this can be more easy, in other languages and/or libraries.</p>
 <hr />

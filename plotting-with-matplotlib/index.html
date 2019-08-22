@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -58,19 +56,19 @@
               <ul class="mobile-menu-list">
                 
                     <li class="mobile-menu-item">
-                        <a href="http://tshepang.net&#x2F;tags">
+                        <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;tags">
                             tags
                         </a>
                     </li>
                 
                     <li class="mobile-menu-item">
-                        <a href="http://tshepang.net&#x2F;about-me">
+                        <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;about-me">
                             about
                         </a>
                     </li>
                 
                     <li class="mobile-menu-item">
-                        <a href="http://tshepang.net&#x2F;categories&#x2F;movies">
+                        <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;categories&#x2F;movies">
                             movies
                         </a>
                     </li>
@@ -84,19 +82,19 @@
                     <ul>
                         
                             <li>
-                                <a href="http://tshepang.net&#x2F;tags">
+                                <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;tags">
                                     tags
                                 </a>
                             </li>
                         
                             <li>
-                                <a href="http://tshepang.net&#x2F;about-me">
+                                <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;about-me">
                                     about
                                 </a>
                             </li>
                         
                             <li>
-                                <a href="http://tshepang.net&#x2F;categories&#x2F;movies">
+                                <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;categories&#x2F;movies">
                                     movies
                                 </a>
                             </li>
@@ -118,22 +116,6 @@
                     
 
 
-<div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">Contents</h2>
-    <div class="post-toc-content always-active">
-        <nav id="TableOfContents">
-            <ul>
-                
-                <li>
-                    <a href="http://tshepang.net/plotting-with-matplotlib/#further-reading" class="toc-link">further reading</a>
-                    
-                </li>
-                
-            </ul>
-        </nav>
-    </div>
-</div>
-
 
 <article class="post">
     
@@ -151,67 +133,67 @@
       <p>Here's drawing a simple graph:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">from matplotlib import pyplot
-</span><span style="color:#c0c5ce;">x = range(10)  # a list of 10 integers, 0-9
-</span><span style="color:#c0c5ce;">y = range(10)
-</span><span style="color:#c0c5ce;">pyplot.plot(x, y)
-</span><span style="color:#c0c5ce;">pyplot.show()
+x = range(10)  # a list of 10 integers, 0-9
+y = range(10)
+pyplot.plot(x, y)
+pyplot.show()
 </span></pre>
 <p>And now for something a little more interesting:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">import random
-</span><span style="color:#c0c5ce;">from matplotlib import pyplot
-</span><span style="color:#c0c5ce;">x = range(10)
-</span><span style="color:#c0c5ce;">y = random.sample(range(10), 10)
-</span><span style="color:#c0c5ce;">pyplot.plot(x, y)
-</span><span style="color:#c0c5ce;">pyplot.show()
+from matplotlib import pyplot
+x = range(10)
+y = random.sample(range(10), 10)
+pyplot.plot(x, y)
+pyplot.show()
 </span></pre>
 <p>We can have more than one graph on a single figure:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">import random
-</span><span style="color:#c0c5ce;">from matplotlib import pyplot
-</span><span style="color:#c0c5ce;">x = range(10)
-</span><span style="color:#c0c5ce;">y1 = random.sample(range(10), 10)
-</span><span style="color:#c0c5ce;">y2 = random.sample(range(10), 10)
-</span><span style="color:#c0c5ce;">pyplot.plot(x, y1, x, y2)
-</span><span style="color:#c0c5ce;">pyplot.show()
+from matplotlib import pyplot
+x = range(10)
+y1 = random.sample(range(10), 10)
+y2 = random.sample(range(10), 10)
+pyplot.plot(x, y1, x, y2)
+pyplot.show()
 </span></pre>
 <p>What if the two graphs have much differing ranges:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">import random
-</span><span style="color:#c0c5ce;">from matplotlib import pyplot
-</span><span style="color:#c0c5ce;">x = range(10)
-</span><span style="color:#c0c5ce;">y1 = random.sample(range(10), 10)
-</span><span style="color:#c0c5ce;">y2 = random.sample(range(100, 110), 10)
-</span><span style="color:#c0c5ce;">pyplot.plot(x, y1, x, y2)
-</span><span style="color:#c0c5ce;">pyplot.show()
+from matplotlib import pyplot
+x = range(10)
+y1 = random.sample(range(10), 10)
+y2 = random.sample(range(100, 110), 10)
+pyplot.plot(x, y1, x, y2)
+pyplot.show()
 </span></pre>
 <p>Depending on need, that might not be ideal. So let's create two
 separate y-axes:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">import random
-</span><span style="color:#c0c5ce;">from matplotlib import pyplot
-</span><span style="color:#c0c5ce;">x = range(10)
-</span><span style="color:#c0c5ce;">y1 = random.sample(range(10), 10)
-</span><span style="color:#c0c5ce;">y2 = random.sample(range(100, 110), 10)
-</span><span style="color:#c0c5ce;">pyplot.plot(x, y1)
-</span><span style="color:#c0c5ce;">pyplot.twinx()
-</span><span style="color:#c0c5ce;">pyplot.plot(x, y2)
-</span><span style="color:#c0c5ce;">pyplot.show()
+from matplotlib import pyplot
+x = range(10)
+y1 = random.sample(range(10), 10)
+y2 = random.sample(range(100, 110), 10)
+pyplot.plot(x, y1)
+pyplot.twinx()
+pyplot.plot(x, y2)
+pyplot.show()
 </span></pre>
 <p>Yeah, not exactly ideal. We lost the automatic coloring, and we don't
 even know which graph is which. Let's do better:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">import random
-</span><span style="color:#c0c5ce;">from matplotlib import pyplot
-</span><span style="color:#c0c5ce;">x = range(10)
-</span><span style="color:#c0c5ce;">y1 = random.sample(range(10), 10)
-</span><span style="color:#c0c5ce;">y2 = random.sample(range(100, 110), 10)
-</span><span style="color:#c0c5ce;">pyplot.plot(x, y1, &quot;red&quot;)
-</span><span style="color:#c0c5ce;">pyplot.ylabel(&quot;y1&quot;, color=&quot;red&quot;)
-</span><span style="color:#c0c5ce;">pyplot.twinx()
-</span><span style="color:#c0c5ce;">pyplot.plot(x, y2, &quot;blue&quot;)
-</span><span style="color:#c0c5ce;">pyplot.ylabel(&quot;y2&quot;, color=&quot;blue&quot;)
-</span><span style="color:#c0c5ce;">pyplot.show()
+from matplotlib import pyplot
+x = range(10)
+y1 = random.sample(range(10), 10)
+y2 = random.sample(range(100, 110), 10)
+pyplot.plot(x, y1, &quot;red&quot;)
+pyplot.ylabel(&quot;y1&quot;, color=&quot;red&quot;)
+pyplot.twinx()
+pyplot.plot(x, y2, &quot;blue&quot;)
+pyplot.ylabel(&quot;y2&quot;, color=&quot;blue&quot;)
+pyplot.show()
 </span></pre>
 <p>This was done with the help of <a href="http://matplotlib.sourceforge.net/examples/api/two_scales.html">this example</a>. There's a heck of a
 <a href="http://matplotlib.sourceforge.net/examples/index.html">lot</a> <a href="http://matplotlib.sourceforge.net/gallery.html">more</a>.</p>

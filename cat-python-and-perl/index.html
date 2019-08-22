@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -58,19 +56,19 @@
               <ul class="mobile-menu-list">
                 
                     <li class="mobile-menu-item">
-                        <a href="http://tshepang.net&#x2F;tags">
+                        <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;tags">
                             tags
                         </a>
                     </li>
                 
                     <li class="mobile-menu-item">
-                        <a href="http://tshepang.net&#x2F;about-me">
+                        <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;about-me">
                             about
                         </a>
                     </li>
                 
                     <li class="mobile-menu-item">
-                        <a href="http://tshepang.net&#x2F;categories&#x2F;movies">
+                        <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;categories&#x2F;movies">
                             movies
                         </a>
                     </li>
@@ -84,19 +82,19 @@
                     <ul>
                         
                             <li>
-                                <a href="http://tshepang.net&#x2F;tags">
+                                <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;tags">
                                     tags
                                 </a>
                             </li>
                         
                             <li>
-                                <a href="http://tshepang.net&#x2F;about-me">
+                                <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;about-me">
                                     about
                                 </a>
                             </li>
                         
                             <li>
-                                <a href="http://tshepang.net&#x2F;categories&#x2F;movies">
+                                <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;categories&#x2F;movies">
                                     movies
                                 </a>
                             </li>
@@ -118,27 +116,6 @@
                     
 
 
-<div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">Contents</h2>
-    <div class="post-toc-content always-active">
-        <nav id="TableOfContents">
-            <ul>
-                
-                <li>
-                    <a href="http://tshepang.net/cat-python-and-perl/#notes" class="toc-link">notes</a>
-                    
-                </li>
-                
-                <li>
-                    <a href="http://tshepang.net/cat-python-and-perl/#further-reading" class="toc-link">further reading</a>
-                    
-                </li>
-                
-            </ul>
-        </nav>
-    </div>
-</div>
-
 
 <article class="post">
     
@@ -157,26 +134,26 @@
 Perl. I've modified their example for the sake of simplicity:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">sub cat {
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">foreach my $filename (@_) {
-</span><span style="color:#c0c5ce;">        </span><span style="color:#c0c5ce;">open FILE, $filename;
-</span><span style="color:#c0c5ce;">        </span><span style="color:#c0c5ce;">while (my $line = &lt;FILE&gt;) {
-</span><span style="color:#c0c5ce;">            </span><span style="color:#c0c5ce;">print $line;
-</span><span style="color:#c0c5ce;">        </span><span style="color:#c0c5ce;">}
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">}
-</span><span style="color:#c0c5ce;">}
-</span><span style="color:#c0c5ce;">cat @ARGV;
+    foreach my $filename (@_) {
+        open FILE, $filename;
+        while (my $line = &lt;FILE&gt;) {
+            print $line;
+        }
+    }
+}
+cat @ARGV;
 </span></pre>
 <p>Running this script (e.g. <code>perl cat.pl file</code>) will display those files
 as if you ran <code>cat file</code>.</p>
 <p>I decided to see how the Python example would look like:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">import sys
-</span><span style="color:#c0c5ce;">def cat(files):
-</span><span style="color:#c0c5ce;">    </span><span style="color:#c0c5ce;">for filename in files:
-</span><span style="color:#c0c5ce;">        </span><span style="color:#c0c5ce;">with open(filename) as FILE:
-</span><span style="color:#c0c5ce;">            </span><span style="color:#c0c5ce;">for line in FILE:
-</span><span style="color:#c0c5ce;">                </span><span style="color:#c0c5ce;">print(line, end=&quot;&quot;)
-</span><span style="color:#c0c5ce;">cat(sys.argv[1:])
+def cat(files):
+    for filename in files:
+        with open(filename) as FILE:
+            for line in FILE:
+                print(line, end=&quot;&quot;)
+cat(sys.argv[1:])
 </span></pre>
 <p>Running this script (e.g. <code>python3 cat.py file1 file2</code>) will give
 exactly the same result as above.</p>
