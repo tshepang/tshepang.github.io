@@ -7,7 +7,47 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="http://tshepang.net/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Fri, 01 Mar 2019 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Sat, 07 Sep 2019 00:00:00 +0000</lastBuildDate>
+        
+            <item>
+                <title>Rust 2.0 wishlist</title>
+                <pubDate>Sat, 07 Sep 2019 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/rust-2-0-wishlist/</link>
+                <guid>http://tshepang.net/rust-2-0-wishlist/</guid>
+                <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Do not allow crate names with underscores, because taste...&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;less_pretty&lt;&#x2F;code&gt; (example &lt;code&gt;lazy_static&lt;&#x2F;code&gt;)&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;more-pretty&lt;&#x2F;code&gt; ( example &lt;code&gt;regex-syntax&lt;&#x2F;code&gt;)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Remove the &lt;code&gt;try!&lt;&#x2F;code&gt; macro... it has a better replacement in the form
+of the question_mark (&lt;code&gt;?&lt;&#x2F;code&gt;) operator.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Remove &lt;code&gt;std::sync::mpsc&lt;&#x2F;code&gt; from stdlib, making it available
+externally... it does not feel general enough. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;42397#issuecomment-315867774&quot;&gt;more issues&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Assigning values to struct bindings should use the equal sign, not
+the colon:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; now
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Shoe { size: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;, style: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;sneaker&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot; };
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; dream
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Shoe { size = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;, style = &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;sneaker&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot; };
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This would be consistent with the rest of the language.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;All collections types removed, except these basic ones: Vec,
+HashMap, and HashSet. Also, they would also be available from
+top-level (i.e. &lt;code&gt;std::{Vec, HashMap, HashSet}&lt;&#x2F;code&gt;), resulting in
+&lt;code&gt;std::collections&lt;&#x2F;code&gt; removal.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+            </item>
         
             <item>
                 <title>speed of current laptop</title>
@@ -420,41 +460,6 @@ to do a better design).&lt;&#x2F;li&gt;
 replace termcolor in clap&lt;&#x2F;a&gt;), but found it too hard to use... API
 not as pleasant&lt;&#x2F;li&gt;
 &lt;li&gt;I also failed to turn output into an iterator (instead of Vec)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</description>
-            </item>
-        
-            <item>
-                <title>Rust 2.0 wishlist</title>
-                <pubDate>Sat, 09 Dec 2017 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/rust-2-0-wishlist/</link>
-                <guid>http://tshepang.net/rust-2-0-wishlist/</guid>
-                <description>&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Remove the &lt;code&gt;try!&lt;&#x2F;code&gt; macro... it has a better replacement in the form
-of the question_mark (&lt;code&gt;?&lt;&#x2F;code&gt;) operator.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Remove &lt;code&gt;std::sync::mpsc&lt;&#x2F;code&gt; from stdlib, making it available
-externally... it does not feel general enough. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;42397#issuecomment-315867774&quot;&gt;more issues&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Assigning values to struct bindings should use the equal sign, not
-the colon:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; now
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Shoe { size: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;, style: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;sneaker&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot; };
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; dream
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Shoe { size = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;, style = &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;sneaker&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot; };
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;This would be consistent with the rest of the language.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;All collections types removed, except these basic ones: Vec,
-HashMap, and HashSet. Also, they would also be available from
-top-level (i.e. &lt;code&gt;std::{Vec, HashMap, HashSet}&lt;&#x2F;code&gt;), resulting in
-&lt;code&gt;std::collections&lt;&#x2F;code&gt; removal.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </description>
             </item>
