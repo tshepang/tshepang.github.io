@@ -139,20 +139,20 @@ was an easy way of doing queries without having to resort to using the
 json! macro:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> query = json!({
-  &quot;</span><span style="color:#a3be8c;">sort</span><span style="color:#c0c5ce;">&quot;: [
-      { &quot;</span><span style="color:#a3be8c;">@timestamp</span><span style="color:#c0c5ce;">&quot;: { &quot;</span><span style="color:#a3be8c;">order</span><span style="color:#c0c5ce;">&quot;: &quot;</span><span style="color:#a3be8c;">asc</span><span style="color:#c0c5ce;">&quot;, } }
-  ],
-  &quot;</span><span style="color:#a3be8c;">query</span><span style="color:#c0c5ce;">&quot;: {
-      &quot;</span><span style="color:#a3be8c;">bool</span><span style="color:#c0c5ce;">&quot;: {
-          &quot;</span><span style="color:#a3be8c;">must</span><span style="color:#c0c5ce;">&quot;: [
-              { &quot;</span><span style="color:#a3be8c;">term</span><span style="color:#c0c5ce;">&quot;: { &quot;</span><span style="color:#a3be8c;">marker</span><span style="color:#c0c5ce;">&quot;: &quot;</span><span style="color:#a3be8c;">test0</span><span style="color:#c0c5ce;">&quot; } },
-              { &quot;</span><span style="color:#a3be8c;">range</span><span style="color:#c0c5ce;">&quot;: { &quot;</span><span style="color:#a3be8c;">@timestamp</span><span style="color:#c0c5ce;">&quot;: {
-                  &quot;</span><span style="color:#a3be8c;">gte</span><span style="color:#c0c5ce;">&quot;: &quot;</span><span style="color:#a3be8c;">now-100s</span><span style="color:#c0c5ce;">&quot;,
-                  &quot;</span><span style="color:#a3be8c;">lte</span><span style="color:#c0c5ce;">&quot;: &quot;</span><span style="color:#a3be8c;">now</span><span style="color:#c0c5ce;">&quot;,
-              }}},
-          ]
-      }
-  }
+    &quot;</span><span style="color:#a3be8c;">sort</span><span style="color:#c0c5ce;">&quot;: [
+        { &quot;</span><span style="color:#a3be8c;">@timestamp</span><span style="color:#c0c5ce;">&quot;: { &quot;</span><span style="color:#a3be8c;">order</span><span style="color:#c0c5ce;">&quot;: &quot;</span><span style="color:#a3be8c;">asc</span><span style="color:#c0c5ce;">&quot;, } }
+    ],
+    &quot;</span><span style="color:#a3be8c;">query</span><span style="color:#c0c5ce;">&quot;: {
+        &quot;</span><span style="color:#a3be8c;">bool</span><span style="color:#c0c5ce;">&quot;: {
+            &quot;</span><span style="color:#a3be8c;">must</span><span style="color:#c0c5ce;">&quot;: [
+                { &quot;</span><span style="color:#a3be8c;">term</span><span style="color:#c0c5ce;">&quot;: { &quot;</span><span style="color:#a3be8c;">marker</span><span style="color:#c0c5ce;">&quot;: &quot;</span><span style="color:#a3be8c;">test0</span><span style="color:#c0c5ce;">&quot; } },
+                { &quot;</span><span style="color:#a3be8c;">range</span><span style="color:#c0c5ce;">&quot;: { &quot;</span><span style="color:#a3be8c;">@timestamp</span><span style="color:#c0c5ce;">&quot;: {
+                    &quot;</span><span style="color:#a3be8c;">gte</span><span style="color:#c0c5ce;">&quot;: &quot;</span><span style="color:#a3be8c;">now-100s</span><span style="color:#c0c5ce;">&quot;,
+                    &quot;</span><span style="color:#a3be8c;">lte</span><span style="color:#c0c5ce;">&quot;: &quot;</span><span style="color:#a3be8c;">now</span><span style="color:#c0c5ce;">&quot;,
+                }}},
+            ]
+        }
+    }
 });
 </span></pre>
 <p>The <a href="https://github.com/elastic-rs/elastic/tree/master/src/queries">crate that allows such typed queries</a> happens to be incomplete and
