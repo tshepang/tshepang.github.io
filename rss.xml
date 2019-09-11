@@ -218,44 +218,6 @@ This couple is probably the best I&#x27;ve yet seen.&lt;&#x2F;p&gt;
             </item>
         
             <item>
-                <title>1st FLOSS patch contribution</title>
-                <pubDate>Fri, 14 Sep 2018 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/1st-floss-patch-contribution/</link>
-                <guid>http://tshepang.net/1st-floss-patch-contribution/</guid>
-                <description>&lt;p&gt;Back in 2007,
-I sent a patch that slightly improved the README of &lt;a href=&quot;http:&#x2F;&#x2F;projects.gnome.org&#x2F;tracker&#x2F;&quot;&gt;Tracker&lt;&#x2F;a&gt;,
-a project that is meant to be a data indexer (like &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Google_Desktop&quot;&gt;Google  Desktop&lt;&#x2F;a&gt;) and much more.
-It is the first ever FLOSS contribution I ever made:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;--- &#x2F;home&#x2F;wena&#x2F;FLOSS&#x2F;src&#x2F;tracker-0.5.3&#x2F;ChangeLog
-+++ &#x2F;home&#x2F;wena&#x2F;FLOSS&#x2F;src&#x2F;tracker-0.5.3-note-on-threadsafety&#x2F;ChangeLog
-@@ -1,3 +1,6 @@
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;+2007-01-03  Tshepang Lekhonkhobe &amp;lt;tshepang@gmail.com&amp;gt;
-+
-+	* Added a note on the reason why SQLite is statically-linked
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
- 2006-12-23  Jamie McCracken &amp;lt;jamiemcc at gnome org&amp;gt;
-
---- &#x2F;home&#x2F;wena&#x2F;FLOSS&#x2F;src&#x2F;tracker-0.5.3&#x2F;README
-+++ &#x2F;home&#x2F;wena&#x2F;FLOSS&#x2F;src&#x2F;tracker-0.5.3-note-on-threadsafety&#x2F;README
-@@ -90,7 +90,7 @@
-
- Run time dependencies (also needed for build) :
-
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-Sqlite 3.2+
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;+Sqlite 3.2+ (this is statically-linked due to the lack of guarantee of threadsafety in distro versions)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; libdbus (0.50 +)
- dbus-glib bndings (0.50 +)
- glib (2.6+)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;That year,
-I went on to make some more minor code patches,
-learning a few things along the way,
-like &lt;a href=&quot;http:&#x2F;&#x2F;developer.gnome.org&#x2F;gtk2&#x2F;stable&#x2F;&quot;&gt;GTK+&lt;&#x2F;a&gt; and &lt;a href=&quot;http:&#x2F;&#x2F;developer.gnome.org&#x2F;glib&#x2F;stable&#x2F;&quot;&gt;GLib&lt;&#x2F;a&gt; APIs.&lt;&#x2F;p&gt;
-</description>
-            </item>
-        
-            <item>
                 <title>key movie posts</title>
                 <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
                 <link>http://tshepang.net/key-posts/</link>
@@ -24099,6 +24061,18 @@ absolutely!&lt;&#x2F;p&gt;
             </item>
         
             <item>
+                <title>Jumper</title>
+                <pubDate>Mon, 25 Feb 2008 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/jumper/</link>
+                <guid>http://tshepang.net/jumper/</guid>
+                <description>&lt;p&gt;The history and origin of the jumpers of &lt;em&gt;Jumper&lt;&#x2F;em&gt; would have been fun,
+but instead some seemingly hurried producers&#x2F;editors decided to reduce
+it to mere passing mention... I could have done with a better villain,
+fearsome as Jackson was.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
                 <title>recent movies 2008-02-25</title>
                 <pubDate>Mon, 25 Feb 2008 00:00:00 +0000</pubDate>
                 <link>http://tshepang.net/recent-movies-2008-02-25/</link>
@@ -24108,9 +24082,9 @@ watching &lt;em&gt;The Lake House&lt;&#x2F;em&gt; accidental, and what I would h
 enjoyable and laid-back romance whose star is its wonderful play on the
 concept of time, all this while refraining from shitty-ass formula
 typical of Hollywood romance.&lt;&#x2F;p&gt;
-&lt;p&gt;The history and origin of the &lt;em&gt;Jumper&lt;&#x2F;em&gt;&#x27;s jumpers would have been fun,
+&lt;p&gt;The history and origin of the jumpers of &lt;em&gt;Jumper&lt;&#x2F;em&gt; would have been fun,
 but instead some seemingly hurried producers&#x2F;editors decided to reduce
-it to mere passing mention; I could have done with a better villain,
+it to mere passing mention... I could have done with a better villain,
 fearsome as Jackson was.&lt;&#x2F;p&gt;
 </description>
             </item>
@@ -25102,6 +25076,44 @@ all-time Top 3 movies. I found Rosanna Arquette&#x27;s a superior
 performance to all others while Samuel L. Jackson&#x27;s happened to have
 more dramatic impact; the rest of the cast is pretty competent and the
 script (and especially the dialogue) remains interesting.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>1st FLOSS patch contribution</title>
+                <pubDate>Tue, 03 Apr 2007 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/1st-floss-patch-contribution/</link>
+                <guid>http://tshepang.net/1st-floss-patch-contribution/</guid>
+                <description>&lt;p&gt;A few months ago,
+I sent a patch that slightly improved the README of &lt;a href=&quot;http:&#x2F;&#x2F;projects.gnome.org&#x2F;tracker&#x2F;&quot;&gt;Tracker&lt;&#x2F;a&gt;,
+a project that is meant to be a data indexer (like &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Google_Desktop&quot;&gt;Google  Desktop&lt;&#x2F;a&gt;) and much more.
+It is the first FLOSS contribution I ever made:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;--- &#x2F;home&#x2F;wena&#x2F;FLOSS&#x2F;src&#x2F;tracker-0.5.3&#x2F;ChangeLog
++++ &#x2F;home&#x2F;wena&#x2F;FLOSS&#x2F;src&#x2F;tracker-0.5.3-note-on-threadsafety&#x2F;ChangeLog
+@@ -1,3 +1,6 @@
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;+2007-01-03  Tshepang Lekhonkhobe &amp;lt;tshepang@gmail.com&amp;gt;
++
++	* Added a note on the reason why SQLite is statically-linked
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+ 2006-12-23  Jamie McCracken &amp;lt;jamiemcc at gnome org&amp;gt;
+
+--- &#x2F;home&#x2F;wena&#x2F;FLOSS&#x2F;src&#x2F;tracker-0.5.3&#x2F;README
++++ &#x2F;home&#x2F;wena&#x2F;FLOSS&#x2F;src&#x2F;tracker-0.5.3-note-on-threadsafety&#x2F;README
+@@ -90,7 +90,7 @@
+
+ Run time dependencies (also needed for build) :
+
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-Sqlite 3.2+
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;+Sqlite 3.2+ (this is statically-linked due to the lack of guarantee of threadsafety in distro versions)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; libdbus (0.50 +)
+ dbus-glib bndings (0.50 +)
+ glib (2.6+)
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;That year,
+I went on to make some more minor code patches,
+learning a few things along the way,
+like &lt;a href=&quot;http:&#x2F;&#x2F;developer.gnome.org&#x2F;gtk2&#x2F;stable&#x2F;&quot;&gt;GTK+&lt;&#x2F;a&gt; and &lt;a href=&quot;http:&#x2F;&#x2F;developer.gnome.org&#x2F;glib&#x2F;stable&#x2F;&quot;&gt;GLib&lt;&#x2F;a&gt; APIs.&lt;&#x2F;p&gt;
 </description>
             </item>
         
