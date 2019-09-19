@@ -30,42 +30,5 @@ paragraph as if it was typed while in Auto Fill Mode. Is gorgeous!&lt;&#x2F;p&gt
 </description>
             </item>
         
-            <item>
-                <title>discarding Scribes for Geany</title>
-                <pubDate>Fri, 23 Jan 2009 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/discarding-scribes-for-geany/</link>
-                <guid>http://tshepang.net/discarding-scribes-for-geany/</guid>
-                <description>&lt;p&gt;The &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;scribes-satisfies-some-more&quot;&gt;version of Scribes in development&lt;&#x2F;a&gt; didn&#x27;t prove too satisfactory
-after a while (black background which I didn&#x27;t care to investigate how
-to revert to normal, among whatever other trouble I don&#x27;t remember) and
-there was me also unloving the idea of switching text editors, so
-decided to get &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;project-of-note-geany&quot;&gt;stuck with Geany&lt;&#x2F;a&gt;, and am not complaining much. It&#x27;s
-been a year-and-a-half of pleasure and pain and it was well worth it.&lt;&#x2F;p&gt;
-</description>
-            </item>
-        
-            <item>
-                <title>Scribes satisfies some more</title>
-                <pubDate>Wed, 26 Nov 2008 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/scribes-satisfies-some-more/</link>
-                <guid>http://tshepang.net/scribes-satisfies-some-more/</guid>
-                <description>&lt;p&gt;I&#x27;m currently running development version of Scribes (from bzr repo)
-and it got fixes for two very annoying bugs:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;On opening a non-UTF8 file you&#x27;d get a message asking you to open
-it via the app&#x27;s file-selector, an uncomfortably long way around
-it; the version from bzr offers a choice of the encoding and then we
-live happily ever after.&lt;&#x2F;li&gt;
-&lt;li&gt;A worse problem that occurred when opening the file described above
-is that on closing the error dialogue, all other open Scribes
-windows would also close.&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;All what this means is that Scribes remains installed on my machine(s).&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;&lt;strong&gt;sidenote&lt;&#x2F;strong&gt;: Code-folding is still absent although I won&#x27;t need to use
-it since &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;project-of-note-geany&quot;&gt;Geany&lt;&#x2F;a&gt; does a nice job already.&lt;&#x2F;p&gt;
-</description>
-            </item>
-        
     </channel>
 </rss>
