@@ -7,7 +7,31 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="http://tshepang.net/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Sun, 08 Sep 2019 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 19 Sep 2019 00:00:00 +0000</lastBuildDate>
+        
+            <item>
+                <title>about me</title>
+                <pubDate>Thu, 19 Sep 2019 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/about-me/</link>
+                <guid>http://tshepang.net/about-me/</guid>
+                <description>&lt;ul&gt;
+&lt;li&gt;Tshepang Lekhonkhobe&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;mailto:tshepang@gmail.com&quot;&gt;tshepang@gmail.com&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Johannesburg, &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;South_Africa&quot;&gt;South Africa&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;I do software development &lt;a href=&quot;https:&#x2F;&#x2F;panoptix.co.za&quot;&gt;for a living&lt;&#x2F;a&gt; and as a hobby.
+My favorite language (and ecosystem) is &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.org&quot;&gt;Rust&lt;&#x2F;a&gt;, and my OS of choice is
+&lt;a href=&quot;https:&#x2F;&#x2F;debian.org&quot;&gt;Debian&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Among my profiles on the web:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev&quot;&gt;Twitter&lt;&#x2F;a&gt; (social)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tshepang&quot;&gt;GitHub&lt;&#x2F;a&gt; (software)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackexchange.com&#x2F;users&#x2F;125744&quot;&gt;Stack Exchange&lt;&#x2F;a&gt; (help)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;The sources for this blog can be found &lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;blog&quot;&gt;on Bitbucket&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</description>
+            </item>
         
             <item>
                 <title>FLOSS I use a-lot</title>
@@ -232,30 +256,6 @@ This couple is probably the best I&#x27;ve yet seen.&lt;&#x2F;p&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;best-of-career-performances&quot;&gt;best-of-career performances&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;favorite-of-career-performances&quot;&gt;favorite-of-career performances&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-</description>
-            </item>
-        
-            <item>
-                <title>about me</title>
-                <pubDate>Tue, 11 Sep 2018 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/about-me/</link>
-                <guid>http://tshepang.net/about-me/</guid>
-                <description>&lt;ul&gt;
-&lt;li&gt;Tshepang Lekhonkhobe&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;mailto:tshepang@gmail.com&quot;&gt;tshepang@gmail.com&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;Johannesburg, &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;South_Africa&quot;&gt;South Africa&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;I do software development &lt;a href=&quot;https:&#x2F;&#x2F;panoptix.co.za&quot;&gt;for a living&lt;&#x2F;a&gt; and as a hobby.
-My favorite language (and ecosystem) is &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.org&quot;&gt;Rust&lt;&#x2F;a&gt;, and my OS of choice is
-&lt;a href=&quot;https:&#x2F;&#x2F;debian.org&quot;&gt;Debian&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;Among my profiles on the web:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev&quot;&gt;Twitter&lt;&#x2F;a&gt; (social)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tshepang&quot;&gt;GitHub&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&quot;&gt;Bitbucket&lt;&#x2F;a&gt; (software)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackexchange.com&#x2F;users&#x2F;125744&quot;&gt;Stack Exchange&lt;&#x2F;a&gt; (help)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;The sources for this blog can be found &lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;blog&quot;&gt;on Bitbucket&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
             </item>
         
