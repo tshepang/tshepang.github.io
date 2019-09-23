@@ -334,10 +334,12 @@ before &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev&#x2F;sta
                 <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
                 <link>http://tshepang.net/rust-week-of-2018-01-25/</link>
                 <guid>http://tshepang.net/rust-week-of-2018-01-25/</guid>
-                <description>&lt;p&gt;Continuing on &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;rust-week-of-2017-10-05&quot;&gt;a work project&lt;&#x2F;a&gt; I mentioned months ago, I had &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;libpnet&#x2F;libpnet&#x2F;issues&#x2F;309&quot;&gt;a failure
-related to cross-building pnet&lt;&#x2F;a&gt;, a library I was using to get network
-interfaces. As a side note, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;japaric&#x2F;cross&#x2F;issues&#x2F;39&quot;&gt;the fault was in the build process&lt;&#x2F;a&gt;, not
-the crate itself. I tried a few others as replacement:&lt;&#x2F;p&gt;
+                <description>&lt;p&gt;Continuing on &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;rust-week-of-2017-10-05&quot;&gt;a work project&lt;&#x2F;a&gt; I mentioned months ago,
+I had &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;libpnet&#x2F;libpnet&#x2F;issues&#x2F;309&quot;&gt;a failure related to cross-building pnet&lt;&#x2F;a&gt;,
+a library I was using to get network interfaces.
+As a side note, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;japaric&#x2F;cross&#x2F;issues&#x2F;39&quot;&gt;the fault was in the build process&lt;&#x2F;a&gt;,
+not the crate itself.
+I tried a few others as replacement:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;getaddrs&quot;&gt;getaddrs&lt;&#x2F;a&gt; can&#x27;t find ip address, and it&#x27;s abandoned according to
