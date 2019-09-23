@@ -340,23 +340,23 @@ interfaces. As a side note, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;j
 the crate itself. I tried a few others as replacement:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;getaddrs can&#x27;t find ip address, and it&#x27;s abandoned according to
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;getaddrs&quot;&gt;getaddrs&lt;&#x2F;a&gt; can&#x27;t find ip address, and it&#x27;s abandoned according to
 the author, in favor of &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;nix&quot;&gt;nix crate&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;interfaces also fails to cross build, and I forgot that I actually
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;interfaces&quot;&gt;interfaces&lt;&#x2F;a&gt; also fails to cross build, and I forgot that I actually
 tried it before, and was the reason I moved to pnet in the first
 place&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;systemstat works, and I already use it for a few things:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;systemstat&quot;&gt;systemstat&lt;&#x2F;a&gt; works, and I already use it for a few things:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;load average&lt;&#x2F;li&gt;
 &lt;li&gt;memory usage&lt;&#x2F;li&gt;
 &lt;li&gt;uptime&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;So, that&#x27;s one less dependency, though I do wish this functionality
-was available from a more pleasant API... systemstat is ugly.&lt;&#x2F;p&gt;
+was available from a more pleasant API... &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;systemstat&quot;&gt;systemstat&lt;&#x2F;a&gt; is ugly.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;As a general note, I wish more people took the effort to state in the
