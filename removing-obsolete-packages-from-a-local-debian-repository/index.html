@@ -182,39 +182,39 @@ usage).</li>
 </ul>
 <p>To help with the cleanup, I have written the following simple script:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">#!/usr/bin/env python3
+<span style="color:#65737e;">#!/usr/bin/env python3
 
-import apt_pkg
-import gzip
-import subprocess
+</span><span style="color:#b48ead;">import </span><span style="color:#c0c5ce;">apt_pkg
+</span><span style="color:#b48ead;">import </span><span style="color:#c0c5ce;">gzip
+</span><span style="color:#b48ead;">import </span><span style="color:#c0c5ce;">subprocess
 
-CUSTOM_REPO = (&quot;/home/wena/.custom_repo/dists/tshepang/main/&quot;
-               &quot;binary-i386/Packages.gz&quot;)
-WHEEZY_REPO = (&quot;/var/lib/apt/lists/ftp.de.debian.org_debian_dists_testing_{}_&quot;
-               &quot;binary-i386_Packages&quot;)
+</span><span style="color:#bf616a;">CUSTOM_REPO </span><span style="color:#c0c5ce;">= (&quot;</span><span style="color:#a3be8c;">/home/wena/.custom_repo/dists/tshepang/main/</span><span style="color:#c0c5ce;">&quot;
+               &quot;</span><span style="color:#a3be8c;">binary-i386/Packages.gz</span><span style="color:#c0c5ce;">&quot;)
+</span><span style="color:#bf616a;">WHEEZY_REPO </span><span style="color:#c0c5ce;">= (&quot;</span><span style="color:#a3be8c;">/var/lib/apt/lists/ftp.de.debian.org_debian_dists_testing_</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">_</span><span style="color:#c0c5ce;">&quot;
+               &quot;</span><span style="color:#a3be8c;">binary-i386_Packages</span><span style="color:#c0c5ce;">&quot;)
 
 
-def main():
-    custom_repo = apt_pkg.TagFile(gzip.open(CUSTOM_REPO, &quot;rb&quot;))
-    archive_areas = &quot;main contrib non-free&quot;.split()
-    wheezy_packages = list()
-    for archive_area in archive_areas:
-        repo = WHEEZY_REPO.format(archive_area)
-        repo = apt_pkg.TagFile(gzip.open(repo, &quot;rb&quot;))
-        wheezy_packages.extend([pkg[&quot;Package&quot;] for pkg in repo])
-    for package in custom_repo:
-        package_name = package[&quot;Package&quot;]
-        if package_name not in wheezy_packages:
-            cmd = &quot;apt-cache policy &quot; + package_name
-            subprocess.call(cmd.split())
-            choice = input(&quot;remove from cache [Y/n]? &quot;)
-            if not choice or choice.lower().startswith(&quot;y&quot;):
-                cmd = (&quot;reprepro -vv --basedir /home/wena/.custom_repo/ &quot;
-                       &quot;remove tshepang &quot; + package_name)
-                subprocess.call(cmd.split())
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">():
+    custom_repo = apt_pkg.</span><span style="color:#bf616a;">TagFile</span><span style="color:#c0c5ce;">(gzip.</span><span style="color:#bf616a;">open</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">CUSTOM_REPO</span><span style="color:#c0c5ce;">, &quot;</span><span style="color:#a3be8c;">rb</span><span style="color:#c0c5ce;">&quot;))
+    archive_areas = &quot;</span><span style="color:#a3be8c;">main contrib non-free</span><span style="color:#c0c5ce;">&quot;.</span><span style="color:#bf616a;">split</span><span style="color:#c0c5ce;">()
+    wheezy_packages = </span><span style="color:#bf616a;">list</span><span style="color:#c0c5ce;">()
+    </span><span style="color:#b48ead;">for </span><span style="color:#c0c5ce;">archive_area </span><span style="color:#b48ead;">in </span><span style="color:#c0c5ce;">archive_areas:
+        repo = WHEEZY_REPO.</span><span style="color:#bf616a;">format</span><span style="color:#c0c5ce;">(archive_area)
+        repo = apt_pkg.</span><span style="color:#bf616a;">TagFile</span><span style="color:#c0c5ce;">(gzip.</span><span style="color:#bf616a;">open</span><span style="color:#c0c5ce;">(repo, &quot;</span><span style="color:#a3be8c;">rb</span><span style="color:#c0c5ce;">&quot;))
+        wheezy_packages.</span><span style="color:#bf616a;">extend</span><span style="color:#c0c5ce;">([pkg[&quot;</span><span style="color:#a3be8c;">Package</span><span style="color:#c0c5ce;">&quot;] </span><span style="color:#b48ead;">for </span><span style="color:#c0c5ce;">pkg </span><span style="color:#b48ead;">in </span><span style="color:#c0c5ce;">repo])
+    </span><span style="color:#b48ead;">for </span><span style="color:#c0c5ce;">package </span><span style="color:#b48ead;">in </span><span style="color:#c0c5ce;">custom_repo:
+        package_name = package[&quot;</span><span style="color:#a3be8c;">Package</span><span style="color:#c0c5ce;">&quot;]
+        </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">package_name not in wheezy_packages:
+            cmd = &quot;</span><span style="color:#a3be8c;">apt-cache policy </span><span style="color:#c0c5ce;">&quot; + package_name
+            subprocess.</span><span style="color:#bf616a;">call</span><span style="color:#c0c5ce;">(cmd.</span><span style="color:#bf616a;">split</span><span style="color:#c0c5ce;">())
+            choice = </span><span style="color:#96b5b4;">input</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">remove from cache [Y/n]? </span><span style="color:#c0c5ce;">&quot;)
+            </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">not choice or choice.</span><span style="color:#bf616a;">lower</span><span style="color:#c0c5ce;">().</span><span style="color:#bf616a;">startswith</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">y</span><span style="color:#c0c5ce;">&quot;):
+                cmd = (&quot;</span><span style="color:#a3be8c;">reprepro -vv --basedir /home/wena/.custom_repo/ </span><span style="color:#c0c5ce;">&quot;
+                       &quot;</span><span style="color:#a3be8c;">remove tshepang </span><span style="color:#c0c5ce;">&quot; + package_name)
+                subprocess.</span><span style="color:#bf616a;">call</span><span style="color:#c0c5ce;">(cmd.</span><span style="color:#bf616a;">split</span><span style="color:#c0c5ce;">())
 
-if __name__ == &quot;__main__&quot;:
-    main()
+</span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">__name__ == &quot;</span><span style="color:#a3be8c;">__main__</span><span style="color:#c0c5ce;">&quot;:
+    </span><span style="color:#bf616a;">main</span><span style="color:#c0c5ce;">()
 </span></pre>
 <p>And here's a snippet of its output:</p>
 <pre style="background-color:#2b303b;">
@@ -228,7 +228,7 @@ if __name__ == &quot;__main__&quot;:
 </span><span style="color:#c0c5ce;">remove from cache [Y/n]?
 </span></pre>
 <p>What it does is look for packages which are only available in my custom
-reposity, as compared with the one in Wheezy (soon to be Debian 7). It
+repository, as compared with the one in Wheezy (soon to be Debian 7). It
 then prompts me on whether or not to remove it from that custom
 repository. Today, it helped me get rid of dozens of junk.</p>
 
