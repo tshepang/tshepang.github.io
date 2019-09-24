@@ -14487,7 +14487,7 @@ convince.&lt;&#x2F;p&gt;
                 <pubDate>Tue, 21 Feb 2012 00:00:00 +0000</pubDate>
                 <link>http://tshepang.net/removing-obsolete-packages-from-a-local-debian-repository/</link>
                 <guid>http://tshepang.net/removing-obsolete-packages-from-a-local-debian-repository/</guid>
-                <description>&lt;h1 id=&quot;background-info&quot;&gt;background info&lt;&#x2F;h1&gt;
+                <description>&lt;h2 id=&quot;background-info&quot;&gt;background info&lt;&#x2F;h2&gt;
 &lt;p&gt;Bandwidth in South Africa is neither readily-available nor cheap, so
 whenever I fetch and install Debian packages (e.g. &lt;code&gt;apt-get upgrade&lt;&#x2F;code&gt;), I
 also keep them in a local custom repository. I use a great tool named
@@ -14499,7 +14499,7 @@ repository, given the location of the fresh package files:&lt;&#x2F;p&gt;
 &lt;p&gt;What&#x27;s nice about the command is that, if there is an older version of
 the package I&#x27;m adding, it gets replaced, and the package index is
 updated accordingly.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;and-now-to-the-topic-at-hand&quot;&gt;and now to the topic at hand&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;and-now-to-the-topic-at-hand&quot;&gt;and now to the topic at hand&lt;&#x2F;h2&gt;
 &lt;p&gt;I run that command more or less regularly, but very often the repository
 accumulates some junk:&lt;&#x2F;p&gt;
 &lt;ul&gt;
