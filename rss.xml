@@ -14491,14 +14491,14 @@ convince.&lt;&#x2F;p&gt;
 &lt;p&gt;Bandwidth in South Africa is neither readily-available nor cheap, so
 whenever I fetch and install Debian packages (e.g. &lt;code&gt;apt-get upgrade&lt;&#x2F;code&gt;), I
 also keep them in a local custom repository. I use a great tool named
-&lt;a href=&quot;http:&#x2F;&#x2F;mirrorer.alioth.debian.org&#x2F;&quot;&gt;reprepro&lt;&#x2F;a&gt; for this, and this is the command I use to update that
+&lt;a href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;brlink&#x2F;reprepro&quot;&gt;reprepro&lt;&#x2F;a&gt; for this, and this is the command I use to update that
 repository, given the location of the fresh package files:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ reprepro -vv --basedir ~&#x2F;.custom_repo&#x2F; includedeb tshepang &#x2F;var&#x2F;cache&#x2F;apt&#x2F;archives&#x2F;*deb
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;What&#x27;s nice about the command is that, if there is an older version of
-the pacakge I&#x27;m adding, it gets replaced, and the package index is
-update accordingly.&lt;&#x2F;p&gt;
+the package I&#x27;m adding, it gets replaced, and the package index is
+updated accordingly.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;and-now-to-the-topic-at-hand&quot;&gt;and now to the topic at hand&lt;&#x2F;h1&gt;
 &lt;p&gt;I run that command more or less regularly, but very often the repository
 accumulates some junk:&lt;&#x2F;p&gt;

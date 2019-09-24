@@ -155,14 +155,14 @@
 <p>Bandwidth in South Africa is neither readily-available nor cheap, so
 whenever I fetch and install Debian packages (e.g. <code>apt-get upgrade</code>), I
 also keep them in a local custom repository. I use a great tool named
-<a href="http://mirrorer.alioth.debian.org/">reprepro</a> for this, and this is the command I use to update that
+<a href="https://salsa.debian.org/brlink/reprepro">reprepro</a> for this, and this is the command I use to update that
 repository, given the location of the fresh package files:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang /var/cache/apt/archives/*deb
 </span></pre>
 <p>What's nice about the command is that, if there is an older version of
-the pacakge I'm adding, it gets replaced, and the package index is
-update accordingly.</p>
+the package I'm adding, it gets replaced, and the package index is
+updated accordingly.</p>
 <h1 id="and-now-to-the-topic-at-hand">and now to the topic at hand</h1>
 <p>I run that command more or less regularly, but very often the repository
 accumulates some junk:</p>
