@@ -389,46 +389,6 @@ appreciate.&lt;&#x2F;p&gt;
             </item>
         
             <item>
-                <title>project of note: reprepro</title>
-                <pubDate>Fri, 11 May 2012 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/project-of-note-reprepro/</link>
-                <guid>http://tshepang.net/project-of-note-reprepro/</guid>
-                <description>&lt;p&gt;I have given kudos to &lt;a href=&quot;http:&#x2F;&#x2F;mirrorer.alioth.debian.org&#x2F;&quot;&gt;reprepro&lt;&#x2F;a&gt; &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;reprepro-saved-my-live&quot;&gt;twice&lt;&#x2F;a&gt; &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;what-i-do-after-debian-installation&quot;&gt;before&lt;&#x2F;a&gt;, and though those
-2 posts are actually outdated, I still keep a custom repository, a
-subset of the official repository of a specific arch, but only of
-packages that I ever install.&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;Every once in a while, I run this command:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ reprepro -vv --basedir ~&#x2F;.custom_repo&#x2F; includedeb tshepang
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;var&#x2F;cache&#x2F;apt&#x2F;archives&#x2F;*deb
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;What it does is add packages that are stored by the Debian package
-management system (located in &lt;code&gt;&#x2F;var&#x2F;cache&#x2F;apt&#x2F;archives&lt;&#x2F;code&gt;) to the custom
-repository (located in &lt;code&gt;~&#x2F;.custom_repo&lt;&#x2F;code&gt;). That ensures that I only keep
-packages that matter to me for any later install.&lt;&#x2F;p&gt;
-&lt;p&gt;Note that &lt;code&gt;tshepang&lt;&#x2F;code&gt; is the name of the repository. It&#x27;s an unofficial
-equivalent of &lt;code&gt;testing&lt;&#x2F;code&gt; and &lt;code&gt;unstable&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;Another command that I sometimes run, though less frequently, is:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ reprepro -vv --basedir ~&#x2F;.custom_repo&#x2F; includedeb tshepang
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;var&#x2F;cache&#x2F;apt&#x2F;archives&#x2F;*deb
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;This one is used to help keep the repository fresh. Check out &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;removing-obsolete-packages-from-a-local-debian-repository&quot;&gt;this
-post&lt;&#x2F;a&gt; for an explanation.&lt;&#x2F;p&gt;
-&lt;p&gt;Even less frequently, it happens that some package files are no longer
-referenced (i.e. not found in &lt;code&gt;Package.gz&lt;&#x2F;code&gt;) for some reason. Here&#x27;s
-handy command to display them:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ reprepro --basedir ~&#x2F;.custom_repo dumpunreferenced
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;And here&#x27;s another that actually gets rid of them:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ reprepro --basedir ~&#x2F;.custom_repo deleteunreferenced
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
-            </item>
-        
-            <item>
                 <title>project of note: Requests</title>
                 <pubDate>Sat, 31 Dec 2011 00:00:00 +0000</pubDate>
                 <link>http://tshepang.net/project-of-note-requests/</link>
