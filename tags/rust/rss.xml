@@ -243,7 +243,7 @@ not as pleasant&lt;&#x2F;li&gt;
                 <guid>http://tshepang.net/rust-week-of-2017-11-30/</guid>
                 <description>&lt;p&gt;Like last week, I did some more work on &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;mrh&quot;&gt;mrh&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
 &lt;ul&gt;
-&lt;li&gt;Replace colored with ansi_term (I prefer the API, and the latter
+&lt;li&gt;Replace &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;colored&quot;&gt;colored&lt;&#x2F;a&gt; with &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;ansi_term&quot;&gt;ansi_term&lt;&#x2F;a&gt; (I prefer the API, and the latter
 was already a dependency of something else)&lt;&#x2F;li&gt;
 &lt;li&gt;Remove &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;walkdir&#x2F;2.0.1&#x2F;walkdir&#x2F;struct.WalkDir.html#method.follow_links&quot;&gt;follow_symlinks&lt;&#x2F;a&gt; feature (caused weird behavior)&lt;&#x2F;li&gt;
 &lt;li&gt;Use &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;path&#x2F;struct.Path.html#method.strip_prefix&quot;&gt;Path.strip_prefix&lt;&#x2F;a&gt; instead of a custom solution&lt;&#x2F;li&gt;
