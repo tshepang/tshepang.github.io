@@ -228,7 +228,7 @@ to do a better design).&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;I experienced some failures too:&lt;&#x2F;p&gt;
 &lt;ul&gt;
-&lt;li&gt;I looked to using termcolor (used by ripgrep and cargo, and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;kbknapp&#x2F;clap-rs&#x2F;issues&#x2F;836&quot;&gt;may
+&lt;li&gt;I looked to using &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;termcolor&quot;&gt;termcolor&lt;&#x2F;a&gt; (used by ripgrep and cargo, and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;kbknapp&#x2F;clap-rs&#x2F;issues&#x2F;836&quot;&gt;may
 replace termcolor in clap&lt;&#x2F;a&gt;), but found it too hard to use... API
 not as pleasant&lt;&#x2F;li&gt;
 &lt;li&gt;I also failed to turn output into an iterator (instead of Vec)&lt;&#x2F;li&gt;
