@@ -639,7 +639,7 @@ writing).&lt;&#x2F;p&gt;
 previously&lt;&#x2F;a&gt;, a CLI UI for work. In addition to dependencies mentioned
 there, I used &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zonyitoo&#x2F;rust-ini&quot;&gt;rust-ini&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;dtolnay&#x2F;serde-yaml&quot;&gt;serde_yaml&lt;&#x2F;a&gt;. I mostly enjoyed the
 experience, though not too happy with the code, which feels messy... I
-use [termion::AsyncReader], which means I have to loop all over the place
+use &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;termion&#x2F;1.5.1&#x2F;termion&#x2F;struct.AsyncReader.html&quot;&gt;termion::AsyncReader&lt;&#x2F;a&gt;, which means I have to loop all over the place
 while waiting for stdin (keyboard input). I imagine there is a better
 way.&lt;&#x2F;p&gt;
 </description>
