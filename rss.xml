@@ -675,7 +675,7 @@ of multiple git repos, to avoid the tedium of navigating to each to
 check. The feature I added is checking if committed changes were pushed
 upstream. On the way there, I encountered these git2 APIS:&lt;&#x2F;p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;git2&#x2F;0.6.8&#x2F;git2&#x2F;struct.Branch.html#method.wrap&quot;&gt;Branch::wrap&lt;&#x2F;a&gt; (submitted &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alexcrichton&#x2F;git2-rs&#x2F;pull&#x2F;246&quot;&gt;improvement to make doc less misleading&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;git2&#x2F;0.6.8&#x2F;git2&#x2F;struct.Branch.html#method.wrap&quot;&gt;Branch::wrap&lt;&#x2F;a&gt; (submitted &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;git2-rs&#x2F;pull&#x2F;246&quot;&gt;improvement to make doc less misleading&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;git2&#x2F;0.6.8&#x2F;git2&#x2F;struct.Branch.html#method.upstream&quot;&gt;Branch::upstream&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;git2&#x2F;0.6.8&#x2F;git2&#x2F;struct.Repository.html#method.head&quot;&gt;Repositoty::head&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
