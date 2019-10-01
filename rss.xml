@@ -961,7 +961,7 @@ as impressive dialog and direction. The visuals are also wonderful
                 <guid>http://tshepang.net/rust-week-of-2017-04-06/</guid>
                 <description>&lt;p&gt;I enjoyed working with &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tailhook&#x2F;probor&quot;&gt;probor&lt;&#x2F;a&gt;, which is a protocol built on top of
 CBOR data format. I made &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tailhook&#x2F;probor&#x2F;pull&#x2F;6&quot;&gt;a submission&lt;&#x2F;a&gt; to fix the example in the
-README, using the code in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tailhook&#x2F;probor&#x2F;tree&#x2F;master&#x2F;rust&#x2F;examples&quot;&gt;examples&#x2F; directory&lt;&#x2F;a&gt;. I managed to turn JSON
+README, using the code in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tailhook&#x2F;probor&#x2F;tree&#x2F;master&#x2F;rust&#x2F;examples&quot;&gt;examples&#x2F;directory&lt;&#x2F;a&gt;. I managed to turn JSON
 to CBOR on one side of a TCP socket, and decode it back to JSON on the
 other side (using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;serde-rs&#x2F;json&quot;&gt;serde_json&lt;&#x2F;a&gt;). I failed, however, transporting that
 CBOR data over MQTT (using the oh-so-complex &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zonyitoo&#x2F;mqtt-rs&quot;&gt;mqtt-rs&lt;&#x2F;a&gt;).&lt;&#x2F;p&gt;
