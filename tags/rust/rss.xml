@@ -726,7 +726,7 @@ one to avoid the pain experienced by naively doing the following:&lt;&#x2F;p&gt;
 process::command::new(command.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;next&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;().&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;())
     .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;args&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(command.collect::&amp;lt;Vec&amp;lt;_&amp;gt;&amp;gt;)
     .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;spawn&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;()
-  ...
+...
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;If the command is something like &lt;code&gt;hg commit --message &#x27;git eat world&#x27;&lt;&#x2F;code&gt;,
 then the iterator would expand to:&lt;&#x2F;p&gt;
@@ -745,7 +745,7 @@ shlex, instead:&lt;&#x2F;p&gt;
 process::command::new(command.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;remove&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;())
     .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;args&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(command)
     .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;spawn&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;()
-    ...
+ ...
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output should then be like:&lt;&#x2F;p&gt;
 &lt;ul&gt;
