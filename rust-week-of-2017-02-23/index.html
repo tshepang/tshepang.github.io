@@ -136,8 +136,8 @@ into what's suitable to send to <code>process::Command::args</code>. This allows
 one to avoid the pain experienced by naively doing the following:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#b48ead;">let mut</span><span style="color:#c0c5ce;"> command = command.</span><span style="color:#96b5b4;">split</span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">char</span><span style="color:#c0c5ce;">::is_whitespace);
-process::command::new(command.</span><span style="color:#96b5b4;">next</span><span style="color:#c0c5ce;">().</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">())
-    .</span><span style="color:#96b5b4;">args</span><span style="color:#c0c5ce;">(command.collect::&lt;Vec&lt;_&gt;&gt;)
+std::process::Command::new(command.</span><span style="color:#96b5b4;">next</span><span style="color:#c0c5ce;">().</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">())
+    .</span><span style="color:#96b5b4;">args</span><span style="color:#c0c5ce;">(command)
     .</span><span style="color:#96b5b4;">spawn</span><span style="color:#c0c5ce;">()
 ...
 </span></pre>
@@ -154,8 +154,8 @@ then the iterator would expand to:</p>
 <p>That will not run, and will fail with a not-obvious error message. Using
 shlex, instead:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">let mut</span><span style="color:#c0c5ce;"> command = shlex::split(args).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">());
-process::command::new(command.</span><span style="color:#96b5b4;">remove</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">())
+<span style="color:#b48ead;">let mut</span><span style="color:#c0c5ce;"> command = shlex::split(command).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">());
+std::process::Command::new(command.</span><span style="color:#96b5b4;">remove</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">())
     .</span><span style="color:#96b5b4;">args</span><span style="color:#c0c5ce;">(command)
     .</span><span style="color:#96b5b4;">spawn</span><span style="color:#c0c5ce;">()
  ...
