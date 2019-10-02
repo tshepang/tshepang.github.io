@@ -721,12 +721,13 @@ which is strange for a project this small.&lt;&#x2F;p&gt;
 understands shell quoting, helping in transforming command arguments
 into what&#x27;s suitable to send to &lt;code&gt;process::Command::args&lt;&#x2F;code&gt;. This allows
 one to avoid the pain experienced by naively doing the following:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;let mut command = command.split(char::is_whitespace); let
-process::command::new(command.next().unwrap())
-.args(command.collect::&amp;lt;Vec&amp;lt;_&amp;gt;&amp;gt;) .spawn() ...
-:::&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;span style=&quot;color:#b48ead;&quot;&gt;let mut&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; command = command.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;split&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;char&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;::is_whitespace);
+process::command::new(command.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;next&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;().&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;())
+    .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;args&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(command.collect::&amp;lt;Vec&amp;lt;_&amp;gt;&amp;gt;)
+    .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;spawn&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;()
+  ...
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;If the command is something like &lt;code&gt;hg commit --message &#x27;git eat world&#x27;&lt;&#x2F;code&gt;,
 then the iterator would expand to:&lt;&#x2F;p&gt;
 &lt;ul&gt;
@@ -739,12 +740,13 @@ then the iterator would expand to:&lt;&#x2F;p&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;That will not run, and will fail with a not-obvious error message. Using
 shlex, instead:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;let mut command = shlex::split(args).unwrap()); let
-process::command::new(command.remove(1).unwrap()) .args(command)
-.spawn() ...
-:::&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;span style=&quot;color:#b48ead;&quot;&gt;let mut&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; command = shlex::split(args).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;());
+process::command::new(command.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;remove&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;())
+    .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;args&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(command)
+    .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;spawn&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;()
+    ...
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output should then be like:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;hg&lt;&#x2F;li&gt;

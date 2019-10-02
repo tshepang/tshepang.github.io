@@ -134,12 +134,13 @@
 understands shell quoting, helping in transforming command arguments
 into what's suitable to send to <code>process::Command::args</code>. This allows
 one to avoid the pain experienced by naively doing the following:</p>
-<p>::: {.sourcecode}
-rust</p>
-<p>let mut command = command.split(char::is_whitespace); let
-process::command::new(command.next().unwrap())
-.args(command.collect::&lt;Vec&lt;_&gt;&gt;) .spawn() ...
-:::</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">let mut</span><span style="color:#c0c5ce;"> command = command.</span><span style="color:#96b5b4;">split</span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">char</span><span style="color:#c0c5ce;">::is_whitespace);
+process::command::new(command.</span><span style="color:#96b5b4;">next</span><span style="color:#c0c5ce;">().</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">())
+    .</span><span style="color:#96b5b4;">args</span><span style="color:#c0c5ce;">(command.collect::&lt;Vec&lt;_&gt;&gt;)
+    .</span><span style="color:#96b5b4;">spawn</span><span style="color:#c0c5ce;">()
+  ...
+</span></pre>
 <p>If the command is something like <code>hg commit --message 'git eat world'</code>,
 then the iterator would expand to:</p>
 <ul>
@@ -152,12 +153,13 @@ then the iterator would expand to:</p>
 </ul>
 <p>That will not run, and will fail with a not-obvious error message. Using
 shlex, instead:</p>
-<p>::: {.sourcecode}
-rust</p>
-<p>let mut command = shlex::split(args).unwrap()); let
-process::command::new(command.remove(1).unwrap()) .args(command)
-.spawn() ...
-:::</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">let mut</span><span style="color:#c0c5ce;"> command = shlex::split(args).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">());
+process::command::new(command.</span><span style="color:#96b5b4;">remove</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">())
+    .</span><span style="color:#96b5b4;">args</span><span style="color:#c0c5ce;">(command)
+    .</span><span style="color:#96b5b4;">spawn</span><span style="color:#c0c5ce;">()
+    ...
+</span></pre>
 <p>Output should then be like:</p>
 <ul>
 <li>hg</li>
