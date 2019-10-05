@@ -1295,20 +1295,24 @@ and made just &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alexcrichton&#x
 &lt;p&gt;I used &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;reqwest&quot;&gt;reqwest&lt;&#x2F;a&gt; for the first time, and was made sad because using HTTP
 headers is as hard as doing the same for &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;hyper&quot;&gt;hyper&lt;&#x2F;a&gt;, especially given that
 this is supposed to be a more easy library:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-Rust&lt;&#x2F;p&gt;
-&lt;p&gt;let mut auth_bearer = Headers::new(); headers.set( Authorization (
-Bearer { token: &amp;quot;some token&amp;quot;, } ) ); let mut client =
-reqwest::Client::new();
-client.get(&amp;quot;example.com&amp;quot;).headers(auth_bearer).send();
-:::&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;span style=&quot;color:#b48ead;&quot;&gt;let mut&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; auth_bearer = Headers::new();
+headers.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;set&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(
+    Authorization (
+        Bearer {
+            token: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;some token&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;,
+        }
+    )
+);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let mut&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; client = reqwest::Client::new();
+client.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;get&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;example.com&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;headers&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(auth_bearer).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;send&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;();
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;It can imagine a more nice API:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-Rust&lt;&#x2F;p&gt;
-&lt;p&gt;let client = reqwest::Client::new(); let auth_bearer =
-reqwest::Header::Bearer::new(&amp;quot;some token&amp;quot;);
-client.get(&amp;quot;example.com&amp;quot;).header(auth_bearer).send();
-:::&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; client = reqwest::Client::new();
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; auth_bearer = reqwest::Header::Bearer::new(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;some token&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;);
+client.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;get&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;example.com&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;header&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(auth_bearer).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;send&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;();
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;I did not think much about this, so maybe there are issues with the
 desired.&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;

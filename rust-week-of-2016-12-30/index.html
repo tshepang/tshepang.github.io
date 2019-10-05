@@ -135,20 +135,24 @@
 <p>I used <a href="https://docs.rs/reqwest">reqwest</a> for the first time, and was made sad because using HTTP
 headers is as hard as doing the same for <a href="https://docs.rs/hyper">hyper</a>, especially given that
 this is supposed to be a more easy library:</p>
-<p>::: {.sourcecode}
-Rust</p>
-<p>let mut auth_bearer = Headers::new(); headers.set( Authorization (
-Bearer { token: &quot;some token&quot;, } ) ); let mut client =
-reqwest::Client::new();
-client.get(&quot;example.com&quot;).headers(auth_bearer).send();
-:::</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">let mut</span><span style="color:#c0c5ce;"> auth_bearer = Headers::new();
+headers.</span><span style="color:#96b5b4;">set</span><span style="color:#c0c5ce;">(
+    Authorization (
+        Bearer {
+            token: &quot;</span><span style="color:#a3be8c;">some token</span><span style="color:#c0c5ce;">&quot;,
+        }
+    )
+);
+</span><span style="color:#b48ead;">let mut</span><span style="color:#c0c5ce;"> client = reqwest::Client::new();
+client.</span><span style="color:#96b5b4;">get</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">example.com</span><span style="color:#c0c5ce;">&quot;).</span><span style="color:#96b5b4;">headers</span><span style="color:#c0c5ce;">(auth_bearer).</span><span style="color:#96b5b4;">send</span><span style="color:#c0c5ce;">();
+</span></pre>
 <p>It can imagine a more nice API:</p>
-<p>::: {.sourcecode}
-Rust</p>
-<p>let client = reqwest::Client::new(); let auth_bearer =
-reqwest::Header::Bearer::new(&quot;some token&quot;);
-client.get(&quot;example.com&quot;).header(auth_bearer).send();
-:::</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> client = reqwest::Client::new();
+</span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> auth_bearer = reqwest::Header::Bearer::new(&quot;</span><span style="color:#a3be8c;">some token</span><span style="color:#c0c5ce;">&quot;);
+client.</span><span style="color:#96b5b4;">get</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">example.com</span><span style="color:#c0c5ce;">&quot;).</span><span style="color:#96b5b4;">header</span><span style="color:#c0c5ce;">(auth_bearer).</span><span style="color:#96b5b4;">send</span><span style="color:#c0c5ce;">();
+</span></pre>
 <p>I did not think much about this, so maybe there are issues with the
 desired.</p>
 <hr />
