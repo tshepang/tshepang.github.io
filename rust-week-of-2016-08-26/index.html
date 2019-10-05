@@ -132,13 +132,14 @@
     <div class="post-content">
       <p>I did learn how to use a TCP socket to communicate between 2 processes.
 I found the API quite pleasing:</p>
-<p>::: {.sourcecode}
-rust</p>
-<p>let listener = TcpListener::bind(&quot;localhost:80&quot;)? for stream in
-listener.incoming() { let content = Vec::new();
-stream?.read_to_end(&amp;mut content); // do stuff with content }
-:::</p>
-
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> listener = TcpListener::bind(&quot;</span><span style="color:#a3be8c;">localhost:80</span><span style="color:#c0c5ce;">&quot;)?;
+</span><span style="color:#b48ead;">for</span><span style="color:#c0c5ce;"> stream in listener.</span><span style="color:#96b5b4;">incoming</span><span style="color:#c0c5ce;">() {
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> content = Vec::new();
+    stream?.</span><span style="color:#96b5b4;">read_to_end</span><span style="color:#c0c5ce;">(&amp;</span><span style="color:#b48ead;">mut</span><span style="color:#c0c5ce;"> content);
+    </span><span style="color:#65737e;">// do stuff with content
+</span><span style="color:#c0c5ce;">}
+</span></pre>
     </div>
 
     
