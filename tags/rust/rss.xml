@@ -1040,8 +1040,6 @@ rust&lt;&#x2F;p&gt;
 listener.incoming() { let content = Vec::new();
 stream?.read_to_end(&amp;amp;mut content); &#x2F;&#x2F; do stuff with content }
 :::&lt;&#x2F;p&gt;
-&lt;p&gt;I also submitted &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;36134&quot;&gt;a change&lt;&#x2F;a&gt; that makes the example in the docs more
-simple.&lt;&#x2F;p&gt;
 </description>
             </item>
         
