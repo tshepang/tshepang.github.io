@@ -132,22 +132,18 @@
     <div class="post-content">
       <p>I enjoyed a useful (and tiny) library that helps align text nicely.
 Following is an example of its usage:</p>
-<p>::: {.sourcecode}
-rust</p>
-<p>extern crate unindent; use unindent::unindent;</p>
-<p>fn main() {</p>
-<p>:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">let text = &quot;
+<span style="color:#b48ead;">extern crate</span><span style="color:#c0c5ce;"> unindent;
+</span><span style="color:#b48ead;">use </span><span style="color:#c0c5ce;">unindent::unindent;
 
-</span><span style="color:#c0c5ce;">:   A long text is beginning here and not in the previous line,
-</span><span style="color:#c0c5ce;">    because it wouldn&#39;t fit in comfort.
-
-</span><span style="color:#c0c5ce;">&quot; println!(&quot;{}&quot;, unindent(text));
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> text = &quot;</span><span style="color:#a3be8c;">
+        A long text is beginning here and not in the previous line,
+        because it wouldn&#39;t fit in comfort.
+    </span><span style="color:#c0c5ce;">&quot;;
+    println!(&quot;</span><span style="color:#d08770;">{}</span><span style="color:#c0c5ce;">&quot;, </span><span style="color:#96b5b4;">unindent</span><span style="color:#c0c5ce;">(text));
+}
 </span></pre>
-<p>}
-:::</p>
-
     </div>
 
     
