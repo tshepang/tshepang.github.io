@@ -988,7 +988,7 @@ quite understand how it works, but I&#x27;ve seen that it prevents
 brute-force attacks... there is lots of CPU usage during hashing and
 verification.&lt;&#x2F;p&gt;
 &lt;p&gt;I continued playing with Nickel (&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;rust-week-of-2016-09-02&quot;&gt;started few weeks ago&lt;&#x2F;a&gt;), and am liking
-it more, largely due discovering a less-magical way of doing things
+it more, largely due to discovering a less-magical way of doing things
 where you&#x27;d use functions instead of a macro named &lt;code&gt;middleware&lt;&#x2F;code&gt;. I&#x27;ve
 also been playing with &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;kaj&#x2F;nickel-jwt-session&quot;&gt;nickel-jwt-session&lt;&#x2F;a&gt;, which offers such a
 convenient API to use for working with &lt;a href=&quot;https:&#x2F;&#x2F;jwt.io&quot;&gt;JSON Web Tokens&lt;&#x2F;a&gt;. I even made
