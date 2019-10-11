@@ -1114,7 +1114,7 @@ code. As an example, when you doing any I&#x2F;O, you mostly want to do
 that in a separate function so that you can return a &lt;code&gt;Result&lt;&#x2F;code&gt; type,
 something like &lt;code&gt;Result&amp;lt;(), std::io::Error&amp;gt;&lt;&#x2F;code&gt;. This forces you to
 isolate just the I&#x2F;O handling part from the other parts of the
-logic, where you&#x27;d for maybe just want to return a &lt;code&gt;bool&lt;&#x2F;code&gt; type. In
+logic, where you&#x27;d maybe just want to return a &lt;code&gt;bool&lt;&#x2F;code&gt; type. In
 my case, I would not get any I&#x2F;O error, but I would get failure from
 running an external process (see &lt;code&gt;std::process&lt;&#x2F;code&gt; module) where the
 exit status was not 0. That meant I&#x2F;O error failure case and the
