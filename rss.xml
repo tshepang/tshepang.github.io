@@ -1589,7 +1589,7 @@ bit of refactoring. It was fun.&lt;&#x2F;p&gt;
                 <link>http://tshepang.net/rust-week-of-2016-06-10/</link>
                 <guid>http://tshepang.net/rust-week-of-2016-06-10/</guid>
                 <description>&lt;p&gt;I was made sad by the complexity of involving STDIN when using
-&lt;code&gt;std::process&lt;&#x2F;code&gt; module:&lt;&#x2F;p&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;process&quot;&gt;std::process&lt;&#x2F;a&gt; module:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;o_to_0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() -&amp;gt; std::io::Result&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;bool&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;gt; {
     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let mut&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; p = std::process::Command::new(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;tr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;)
