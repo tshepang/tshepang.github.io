@@ -440,33 +440,12 @@ matter how tiny, and this has been going on for over a 100 weeks (i.e.
 &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;rust-week-of-2015-05-15&quot;&gt;since 2015-05-15&lt;&#x2F;a&gt;, the Rust 1.0 release date).&lt;&#x2F;p&gt;
 &lt;p&gt;The problem is I felt silly recording the tiny parts, stuff like a typo
 fixes, just to keep this going. Well, it&#x27;s time to stop that. I intend
-to avoid recording such, and if it means no blog post for that week, so
-be it.&lt;&#x2F;p&gt;
+to avoid recording such, even if it means no blog post for that week.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;em&gt;This was inspired by having a laptop failure, with a draft that wasn&#x27;t
 backed up anywhere. That draft only consisted of a list of those tiny
 contributions, and it felt extra silly trying to recreate it for
 publication.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 </description>
-            </item>
-        
-            <item>
-                <title>Rust week of 2017-07-20</title>
-                <pubDate>Mon, 24 Jul 2017 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/rust-week-of-2017-07-20/</link>
-                <guid>http://tshepang.net/rust-week-of-2017-07-20/</guid>
-                <description>&lt;p&gt;I am surprised by the ease of changing default Rust toolchain:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;# switch to nightly
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rustup default nightly
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;# switch to stable
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rustup default stable
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;This is more easy than remembering how to tell cargo to use a
-non-default toolchain, though that approach is not too bad either:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;# build with nightly
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cargo +nightly build
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
             </item>
         
             <item>
@@ -483,26 +462,6 @@ It was the one important missing piece to &lt;a href=&quot;https:&#x2F;&#x2F;git
             </item>
         
             <item>
-                <title>Rust week of 2017-07-06</title>
-                <pubDate>Wed, 12 Jul 2017 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/rust-week-of-2017-07-06/</link>
-                <guid>http://tshepang.net/rust-week-of-2017-07-06/</guid>
-                <description>&lt;p&gt;Very little Rust this week, but I did make &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;brson&#x2F;stdx&#x2F;issues&#x2F;53&quot;&gt;one complaint&lt;&#x2F;a&gt;, and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;brson&#x2F;stdx&#x2F;pull&#x2F;54&quot;&gt;one
-contribution&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-</description>
-            </item>
-        
-            <item>
-                <title>Rust week of 2017-06-29</title>
-                <pubDate>Wed, 05 Jul 2017 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/rust-week-of-2017-06-29/</link>
-                <guid>http://tshepang.net/rust-week-of-2017-06-29/</guid>
-                <description>&lt;p&gt;Almost not Rust this week, but with &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;stevedonovan&#x2F;gentle-intro&#x2F;pull&#x2F;45&quot;&gt;one embarassingly tiny
-contribution&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-</description>
-            </item>
-        
-            <item>
                 <title>Rust week of 2017-06-22</title>
                 <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
                 <link>http://tshepang.net/rust-week-of-2017-06-22/</link>
@@ -510,7 +469,6 @@ contribution&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
                 <description>&lt;p&gt;I wrote a tool that helps with &lt;a href=&quot;http:&#x2F;&#x2F;semver.org&quot;&gt;semver&lt;&#x2F;a&gt; git tagging, which made me
 explore the rather large (and unfriendly) API of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alexcrichton&#x2F;git2-rs&quot;&gt;git2-rs library&lt;&#x2F;a&gt;. It
 needs lots of love, or at least a more idiomatic replacement.&lt;&#x2F;p&gt;
-&lt;p&gt;Regarding contributions, I made &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;chyh1990&#x2F;yaml-rust&#x2F;pull&#x2F;79&quot;&gt;just one&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
             </item>
         
@@ -522,75 +480,6 @@ needs lots of love, or at least a more idiomatic replacement.&lt;&#x2F;p&gt;
                 <description>&lt;p&gt;I used &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;TeXitoi&#x2F;structopt&quot;&gt;structopt&lt;&#x2F;a&gt; for the first time, and found it reduces the pain of
 CLI parsing (via &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;kbknapp&#x2F;clap-rs&quot;&gt;clap&lt;&#x2F;a&gt;). Its main shortcoming is &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;TeXitoi&#x2F;structopt&#x2F;issues&#x2F;1&quot;&gt;lack of subcommand
 support&lt;&#x2F;a&gt;, whose implementation would make it a go-to for me.&lt;&#x2F;p&gt;
-&lt;p&gt;Regarding contributions, I made &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;stevedonovan&#x2F;to_vec&#x2F;pull&#x2F;1&quot;&gt;one tiny one&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-</description>
-            </item>
-        
-            <item>
-                <title>Rust week of 2017-06-08</title>
-                <pubDate>Thu, 08 Jun 2017 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/rust-week-of-2017-06-08/</link>
-                <guid>http://tshepang.net/rust-week-of-2017-06-08/</guid>
-                <description>&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;stevedonovan&#x2F;gentle-intro&#x2F;issues&#x2F;39&quot;&gt;I&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;stevedonovan&#x2F;gentle-intro&#x2F;issues&#x2F;41&quot;&gt;submitted&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;stevedonovan&#x2F;gentle-intro&#x2F;issues&#x2F;43&quot;&gt;four&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;stevedonovan&#x2F;gentle-intro&#x2F;issues&#x2F;44&quot;&gt;complaints&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;stevedonovan&#x2F;gentle-intro&#x2F;pull&#x2F;40&quot;&gt;made&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;stevedonovan&#x2F;gentle-intro&#x2F;pull&#x2F;42&quot;&gt;three&lt;&#x2F;a&gt;
-&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;42551&quot;&gt;contributions&lt;&#x2F;a&gt; this week.&lt;&#x2F;p&gt;
-</description>
-            </item>
-        
-            <item>
-                <title>Rust week of 2017-06-01</title>
-                <pubDate>Wed, 07 Jun 2017 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/rust-week-of-2017-06-01/</link>
-                <guid>http://tshepang.net/rust-week-of-2017-06-01/</guid>
-                <description>&lt;p&gt;Very little Rust this week, with just &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;cargo&#x2F;pull&#x2F;4137&quot;&gt;one contribution&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-</description>
-            </item>
-        
-            <item>
-                <title>Rust week of 2017-05-18</title>
-                <pubDate>Sun, 21 May 2017 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/rust-week-of-2017-05-18/</link>
-                <guid>http://tshepang.net/rust-week-of-2017-05-18/</guid>
-                <description>&lt;p&gt;I opened &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;biluohc&#x2F;app&#x2F;issues&#x2F;2&quot;&gt;one issue&lt;&#x2F;a&gt; and made &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;biluohc&#x2F;app&#x2F;pull&#x2F;1&quot;&gt;one contribution&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-</description>
-            </item>
-        
-            <item>
-                <title>Rust week of 2017-05-11</title>
-                <pubDate>Wed, 17 May 2017 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/rust-week-of-2017-05-11/</link>
-                <guid>http://tshepang.net/rust-week-of-2017-05-11/</guid>
-                <description>&lt;p&gt;Like &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;rust-week-of-2017-05-04&quot;&gt;last week&lt;&#x2F;a&gt; (and the one before it), very little Rust this week,
-and again I made just &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;42070&quot;&gt;one tiny contribution&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-</description>
-            </item>
-        
-            <item>
-                <title>Rust week of 2017-05-04</title>
-                <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/rust-week-of-2017-05-04/</link>
-                <guid>http://tshepang.net/rust-week-of-2017-05-04/</guid>
-                <description>&lt;p&gt;Like &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;rust-week-of-2017-04-27&quot;&gt;last week&lt;&#x2F;a&gt;, very little Rust this week, and again with &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;41896&quot;&gt;just one
-tiny contribution&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-</description>
-            </item>
-        
-            <item>
-                <title>Rust week of 2017-04-27</title>
-                <pubDate>Wed, 03 May 2017 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/rust-week-of-2017-04-27/</link>
-                <guid>http://tshepang.net/rust-week-of-2017-04-27/</guid>
-                <description>&lt;p&gt;Very little Rust work this week, with just &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;andrew-d&#x2F;interfaces-rs&#x2F;pull&#x2F;5&quot;&gt;one tiny contribution&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-</description>
-            </item>
-        
-            <item>
-                <title>Rust week of 2017-04-20</title>
-                <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/rust-week-of-2017-04-20/</link>
-                <guid>http://tshepang.net/rust-week-of-2017-04-20/</guid>
-                <description>&lt;p&gt;The MQTT client library I mentioned &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;rust-week-of-2017-04-13&quot;&gt;last week&lt;&#x2F;a&gt; is in serious need of
-documentation, so I did &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;inre&#x2F;rust-mq&#x2F;issues&#x2F;19&quot;&gt;a tiny bit&lt;&#x2F;a&gt;. I also made &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;inre&#x2F;rust-mq&#x2F;pull&#x2F;18&quot;&gt;a small
-request&#x2F;suggestion&lt;&#x2F;a&gt; to the same library.&lt;&#x2F;p&gt;
 </description>
             </item>
         
@@ -601,8 +490,7 @@ request&#x2F;suggestion&lt;&#x2F;a&gt; to the same library.&lt;&#x2F;p&gt;
                 <guid>http://tshepang.net/rust-week-of-2017-04-13/</guid>
                 <description>&lt;p&gt;Continuing on the work from &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;rust-week-of-2017-04-06&quot;&gt;last week&lt;&#x2F;a&gt;, I found a far more pleasant
 MQTT client library, &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;mqttc&quot;&gt;mqttc&lt;&#x2F;a&gt;, and managed to send &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tailhook&#x2F;probor&quot;&gt;probor&lt;&#x2F;a&gt; messages
-across. I also submitted &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tailhook&#x2F;probor&#x2F;issues&#x2F;8&quot;&gt;a small note for the README&lt;&#x2F;a&gt; regarding payload
-size.&lt;&#x2F;p&gt;
+across.&lt;&#x2F;p&gt;
 </description>
             </item>
         
@@ -612,8 +500,8 @@ size.&lt;&#x2F;p&gt;
                 <link>http://tshepang.net/rust-week-of-2017-04-06/</link>
                 <guid>http://tshepang.net/rust-week-of-2017-04-06/</guid>
                 <description>&lt;p&gt;I enjoyed working with &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tailhook&#x2F;probor&quot;&gt;probor&lt;&#x2F;a&gt;, which is a protocol built on top of
-CBOR data format. I made &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tailhook&#x2F;probor&#x2F;pull&#x2F;6&quot;&gt;a submission&lt;&#x2F;a&gt; to fix the example in the
-README, using the code in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tailhook&#x2F;probor&#x2F;tree&#x2F;master&#x2F;rust&#x2F;examples&quot;&gt;examples&#x2F;directory&lt;&#x2F;a&gt;. I managed to turn JSON
+CBOR data format.
+I managed to turn JSON
 to CBOR on one side of a TCP socket, and decode it back to JSON on the
 other side (using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;serde-rs&#x2F;json&quot;&gt;serde_json&lt;&#x2F;a&gt;). I failed, however, transporting that
 CBOR data over MQTT (using the oh-so-complex &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zonyitoo&#x2F;mqtt-rs&quot;&gt;mqtt-rs&lt;&#x2F;a&gt;).&lt;&#x2F;p&gt;
