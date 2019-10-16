@@ -10001,25 +10001,17 @@ blog sources locally:&lt;&#x2F;p&gt;
 quality of web-based editors in general.&lt;&#x2F;li&gt;
 &lt;li&gt;What this implies is that I can now put the blog in a &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Revision_control&quot;&gt;VCS&lt;&#x2F;a&gt;. This
 acts as some sort of backup too, since I place my sources on &lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;blog&quot;&gt;a
-remote server&lt;&#x2F;a&gt;.&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;li&gt;
+remote server&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
 &lt;li&gt;This also means that I can do a heck of a lot of edits without being
 connected to the web, or deeper changes like playing search-replace
 through the entire blog.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h1 id=&quot;cons&quot;&gt;cons&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;cons&quot;&gt;cons&lt;&#x2F;h2&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;The complexity of &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;blogging-with-pelican&quot;&gt;the setup&lt;&#x2F;a&gt; is going to scare many people away.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;It can take a lot of time to setup; For me, this was made worse by
+&lt;li&gt;The complexity of &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;blogging-with-pelican&quot;&gt;the setup&lt;&#x2F;a&gt; is going to scare many people away.&lt;&#x2F;li&gt;
+&lt;li&gt;It can take a lot of time to setup; For me, this was made worse by
 having a lot of posts, as well as &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;favorite-pelican-themes&quot;&gt;being rather particular&lt;&#x2F;a&gt; about
-the look and functionality of the output.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
-&lt;p&gt;I used to run a command like &lt;code&gt;wget --mirror http:&#x2F;&#x2F;tshepang.net&lt;&#x2F;code&gt;
-once in a while, just in case!&lt;&#x2F;p&gt;
-&lt;&#x2F;div&gt;
+the look and functionality of the output.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </description>
             </item>
