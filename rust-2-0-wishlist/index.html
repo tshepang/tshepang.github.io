@@ -116,6 +116,32 @@
                     
 
 
+<div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content always-active">
+        <nav id="TableOfContents">
+            <ul>
+                
+                <li>
+                    <a href="http://tshepang.net/rust-2-0-wishlist/#lang" class="toc-link">lang</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="http://tshepang.net/rust-2-0-wishlist/#std" class="toc-link">std</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="http://tshepang.net/rust-2-0-wishlist/#cargo" class="toc-link">cargo</a>
+                    
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
 
 <article class="post">
     
@@ -124,26 +150,14 @@
             <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;rust-2-0-wishlist&#x2F;">Rust 2.0 wishlist</a>
         </h1>
         <div class="post__meta">
-            <span class="post__time">2019-09-07</span>
+            <span class="post__time">2019-10-18</span>
             
         </div>
     </header>
 
     <div class="post-content">
-      <ul>
-<li>
-<p>Do not allow crate names with underscores, because taste...</p>
-<p><code>less_pretty</code> (example <code>lazy_static</code>)</p>
-<p><code>more-pretty</code> ( example <code>regex-syntax</code>)</p>
-</li>
-<li>
-<p>Remove the <code>try!</code> macro... it has a better replacement in the form
-of the question_mark (<code>?</code>) operator.</p>
-</li>
-<li>
-<p>Remove <code>std::sync::mpsc</code> from stdlib, making it available
-externally... it does not feel general enough. (<a href="https://github.com/rust-lang/rust/pull/42397#issuecomment-315867774">more issues</a>)</p>
-</li>
+      <h3 id="lang">lang</h3>
+<ul>
 <li>
 <p>Assigning values to struct bindings should use the equal sign, not
 the colon:</p>
@@ -155,11 +169,45 @@ the colon:</p>
 </span></pre>
 <p>This would be consistent with the rest of the language.</p>
 </li>
+</ul>
+<h3 id="std">std</h3>
+<ul>
 <li>
 <p>All collections types removed, except these basic ones: Vec,
 HashMap, and HashSet. Also, they would also be available from
 top-level (i.e. <code>std::{Vec, HashMap, HashSet}</code>), resulting in
 <code>std::collections</code> removal.</p>
+</li>
+<li>
+<p>Rename Vec to Array, a more clear/obvious name</p>
+</li>
+<li>
+<p>Consistent names for string-y types:</p>
+<table><thead><tr><th></th><th>current</th><th>wish</th></tr></thead><tbody>
+<tr><td>string</td><td>str</td><td>Str</td></tr>
+<tr><td></td><td>String</td><td>StrOwned</td></tr>
+<tr><td>os string</td><td>OsStr</td><td>OsStr (same)</td></tr>
+<tr><td></td><td>OsString</td><td>OsStrOwned</td></tr>
+<tr><td>fs path</td><td>Path</td><td>Path (same)</td></tr>
+<tr><td></td><td>PathBuf</td><td>PathOwned</td></tr>
+</tbody></table>
+<p>Not exactly happy with above, but much better than the current 'mess'</p>
+</li>
+<li>
+<p>Remove <code>std::sync::mpsc</code> from stdlib, making it available
+externally... it does not feel general enough. (<a href="https://github.com/rust-lang/rust/pull/42397#issuecomment-315867774">more issues</a>)</p>
+</li>
+<li>
+<p>Remove the <code>try!</code> macro... it has a better replacement in the form
+of the question_mark (<code>?</code>) operator.</p>
+</li>
+</ul>
+<h3 id="cargo">cargo</h3>
+<ul>
+<li>
+<p>Do not allow crate names with underscores, because taste...</p>
+<p><code>lazy_static</code> (bad)</p>
+<p><code>regex-syntax</code> (good)</p>
 </li>
 </ul>
 
@@ -180,10 +228,8 @@ top-level (i.e. <code>std::{Vec, HashMap, HashSet}</code>), resulting in
             
                 <div class="post-nav">
                     
-                        <a class="previous" href="http:&#x2F;&#x2F;tshepang.net&#x2F;speed-of-current-laptop&#x2F;">‹ speed of current laptop</a>
+                        <a class="previous" href="http:&#x2F;&#x2F;tshepang.net&#x2F;top-movie-performances&#x2F;">‹ top movie performances</a>
                     
-                    
-                        <a class="next" href="http:&#x2F;&#x2F;tshepang.net&#x2F;about-me&#x2F;">about me ›</a>
                     
                     
                     

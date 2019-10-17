@@ -7,27 +7,15 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="http://tshepang.net/tags/rust/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Sat, 07 Sep 2019 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Fri, 18 Oct 2019 00:00:00 +0000</lastBuildDate>
         
             <item>
                 <title>Rust 2.0 wishlist</title>
-                <pubDate>Sat, 07 Sep 2019 00:00:00 +0000</pubDate>
+                <pubDate>Fri, 18 Oct 2019 00:00:00 +0000</pubDate>
                 <link>http://tshepang.net/rust-2-0-wishlist/</link>
                 <guid>http://tshepang.net/rust-2-0-wishlist/</guid>
-                <description>&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Do not allow crate names with underscores, because taste...&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;code&gt;less_pretty&lt;&#x2F;code&gt; (example &lt;code&gt;lazy_static&lt;&#x2F;code&gt;)&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;code&gt;more-pretty&lt;&#x2F;code&gt; ( example &lt;code&gt;regex-syntax&lt;&#x2F;code&gt;)&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Remove the &lt;code&gt;try!&lt;&#x2F;code&gt; macro... it has a better replacement in the form
-of the question_mark (&lt;code&gt;?&lt;&#x2F;code&gt;) operator.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Remove &lt;code&gt;std::sync::mpsc&lt;&#x2F;code&gt; from stdlib, making it available
-externally... it does not feel general enough. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;42397#issuecomment-315867774&quot;&gt;more issues&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
+                <description>&lt;h3 id=&quot;lang&quot;&gt;lang&lt;&#x2F;h3&gt;
+&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Assigning values to struct bindings should use the equal sign, not
 the colon:&lt;&#x2F;p&gt;
@@ -39,11 +27,45 @@ the colon:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;This would be consistent with the rest of the language.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;std&quot;&gt;std&lt;&#x2F;h3&gt;
+&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;All collections types removed, except these basic ones: Vec,
 HashMap, and HashSet. Also, they would also be available from
 top-level (i.e. &lt;code&gt;std::{Vec, HashMap, HashSet}&lt;&#x2F;code&gt;), resulting in
 &lt;code&gt;std::collections&lt;&#x2F;code&gt; removal.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Rename Vec to Array, a more clear&#x2F;obvious name&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Consistent names for string-y types:&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;&lt;&#x2F;th&gt;&lt;th&gt;current&lt;&#x2F;th&gt;&lt;th&gt;wish&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;string&lt;&#x2F;td&gt;&lt;td&gt;str&lt;&#x2F;td&gt;&lt;td&gt;Str&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;&#x2F;td&gt;&lt;td&gt;String&lt;&#x2F;td&gt;&lt;td&gt;StrOwned&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;os string&lt;&#x2F;td&gt;&lt;td&gt;OsStr&lt;&#x2F;td&gt;&lt;td&gt;OsStr (same)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;&#x2F;td&gt;&lt;td&gt;OsString&lt;&#x2F;td&gt;&lt;td&gt;OsStrOwned&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;fs path&lt;&#x2F;td&gt;&lt;td&gt;Path&lt;&#x2F;td&gt;&lt;td&gt;Path (same)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;&#x2F;td&gt;&lt;td&gt;PathBuf&lt;&#x2F;td&gt;&lt;td&gt;PathOwned&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;Not exactly happy with above, but much better than the current &#x27;mess&#x27;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Remove &lt;code&gt;std::sync::mpsc&lt;&#x2F;code&gt; from stdlib, making it available
+externally... it does not feel general enough. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;42397#issuecomment-315867774&quot;&gt;more issues&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Remove the &lt;code&gt;try!&lt;&#x2F;code&gt; macro... it has a better replacement in the form
+of the question_mark (&lt;code&gt;?&lt;&#x2F;code&gt;) operator.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;cargo&quot;&gt;cargo&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Do not allow crate names with underscores, because taste...&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;lazy_static&lt;&#x2F;code&gt; (bad)&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;regex-syntax&lt;&#x2F;code&gt; (good)&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </description>
