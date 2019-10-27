@@ -30,24 +30,24 @@ cargo run --release --bin json-benchmark
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;                                DOM                  STRUCT
 ======= serde_json ======= parse|stringify ===== parse|stringify ====
-data&#x2F;canada.json         140 MB&#x2F;s   310 MB&#x2F;s   390 MB&#x2F;s   230 MB&#x2F;s
-data&#x2F;citm_catalog.json   240 MB&#x2F;s   400 MB&#x2F;s   560 MB&#x2F;s   520 MB&#x2F;s
-data&#x2F;twitter.json        170 MB&#x2F;s   530 MB&#x2F;s   360 MB&#x2F;s   520 MB&#x2F;s
+data&#x2F;canada.json         140 MB&#x2F;s   290 MB&#x2F;s   340 MB&#x2F;s   230 MB&#x2F;s
+data&#x2F;citm_catalog.json   240 MB&#x2F;s   390 MB&#x2F;s   560 MB&#x2F;s   530 MB&#x2F;s
+data&#x2F;twitter.json        170 MB&#x2F;s   530 MB&#x2F;s   380 MB&#x2F;s   540 MB&#x2F;s
 
 ======= json-rust ======== parse|stringify ===== parse|stringify ====
-data&#x2F;canada.json         250 MB&#x2F;s   600 MB&#x2F;s
-data&#x2F;citm_catalog.json   340 MB&#x2F;s   510 MB&#x2F;s
-data&#x2F;twitter.json        290 MB&#x2F;s   600 MB&#x2F;s
+data&#x2F;canada.json         310 MB&#x2F;s   600 MB&#x2F;s
+data&#x2F;citm_catalog.json   440 MB&#x2F;s   500 MB&#x2F;s
+data&#x2F;twitter.json        310 MB&#x2F;s   620 MB&#x2F;s
 
 ==== rustc_serialize ===== parse|stringify ===== parse|stringify ====
-data&#x2F;canada.json          94 MB&#x2F;s    40 MB&#x2F;s    69 MB&#x2F;s    29 MB&#x2F;s
-data&#x2F;citm_catalog.json   100 MB&#x2F;s   120 MB&#x2F;s    76 MB&#x2F;s   140 MB&#x2F;s
-data&#x2F;twitter.json         59 MB&#x2F;s   240 MB&#x2F;s    47 MB&#x2F;s   260 MB&#x2F;s
+data&#x2F;canada.json          98 MB&#x2F;s    39 MB&#x2F;s    71 MB&#x2F;s    30 MB&#x2F;s
+data&#x2F;citm_catalog.json   110 MB&#x2F;s   130 MB&#x2F;s    81 MB&#x2F;s   140 MB&#x2F;s
+data&#x2F;twitter.json         61 MB&#x2F;s   250 MB&#x2F;s    49 MB&#x2F;s   260 MB&#x2F;s
 
 ======= simd-json ======== parse|stringify ===== parse|stringify ====
-data&#x2F;canada.json         240 MB&#x2F;s   310 MB&#x2F;s   400 MB&#x2F;s
-data&#x2F;citm_catalog.json   610 MB&#x2F;s   430 MB&#x2F;s   900 MB&#x2F;s
-data&#x2F;twitter.json        470 MB&#x2F;s   510 MB&#x2F;s   620 MB&#x2F;s
+data&#x2F;canada.json         250 MB&#x2F;s   320 MB&#x2F;s   420 MB&#x2F;s
+data&#x2F;citm_catalog.json   650 MB&#x2F;s   470 MB&#x2F;s   920 MB&#x2F;s
+data&#x2F;twitter.json        520 MB&#x2F;s   530 MB&#x2F;s   620 MB&#x2F;s
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Results for the UX305:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
