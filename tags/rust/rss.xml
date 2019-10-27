@@ -7,7 +7,72 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="http://tshepang.net/tags/rust/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Fri, 18 Oct 2019 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Sun, 27 Oct 2019 00:00:00 +0000</lastBuildDate>
+        
+            <item>
+                <title>speed of current laptops</title>
+                <pubDate>Sun, 27 Oct 2019 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/speed-of-current-laptops/</link>
+                <guid>http://tshepang.net/speed-of-current-laptops/</guid>
+                <description>&lt;p&gt;I decided to get me my dream laptop, a Lenovo X1 Carbon (code 20KGS3X910).
+It has amazing keyboard (as promised) as well as amazing touchpad.
+The performance is sad though, less than my work laptop,
+an Asus UX410 (itself a replacement of &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;asus-zenbook-ux305fa&quot;&gt;the UX305&lt;&#x2F;a&gt; whose battery circuitry got fried).&lt;&#x2F;p&gt;
+&lt;p&gt;To check performance, I used &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;serde-rs&#x2F;json-benchmark&quot;&gt;Rust JSON Benchmark&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;git clone https:&#x2F;&#x2F;github.com&#x2F;serde-rs&#x2F;json-benchmark
+cd json-benchmark
+git checkout 1d4986c2083c8f164f86116f19d70dd32b7519bf
+rustup default 1.38.0
+cargo run --release --bin json-benchmark
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Results for the X1 Carbon:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;                                DOM                  STRUCT
+======= serde_json ======= parse|stringify ===== parse|stringify ====
+data&#x2F;canada.json         140 MB&#x2F;s   310 MB&#x2F;s   390 MB&#x2F;s   230 MB&#x2F;s
+data&#x2F;citm_catalog.json   240 MB&#x2F;s   400 MB&#x2F;s   560 MB&#x2F;s   520 MB&#x2F;s
+data&#x2F;twitter.json        170 MB&#x2F;s   530 MB&#x2F;s   360 MB&#x2F;s   520 MB&#x2F;s
+
+======= json-rust ======== parse|stringify ===== parse|stringify ====
+data&#x2F;canada.json         250 MB&#x2F;s   600 MB&#x2F;s
+data&#x2F;citm_catalog.json   340 MB&#x2F;s   510 MB&#x2F;s
+data&#x2F;twitter.json        290 MB&#x2F;s   600 MB&#x2F;s
+
+==== rustc_serialize ===== parse|stringify ===== parse|stringify ====
+data&#x2F;canada.json          94 MB&#x2F;s    40 MB&#x2F;s    69 MB&#x2F;s    29 MB&#x2F;s
+data&#x2F;citm_catalog.json   100 MB&#x2F;s   120 MB&#x2F;s    76 MB&#x2F;s   140 MB&#x2F;s
+data&#x2F;twitter.json         59 MB&#x2F;s   240 MB&#x2F;s    47 MB&#x2F;s   260 MB&#x2F;s
+
+======= simd-json ======== parse|stringify ===== parse|stringify ====
+data&#x2F;canada.json         240 MB&#x2F;s   310 MB&#x2F;s   400 MB&#x2F;s
+data&#x2F;citm_catalog.json   610 MB&#x2F;s   430 MB&#x2F;s   900 MB&#x2F;s
+data&#x2F;twitter.json        470 MB&#x2F;s   510 MB&#x2F;s   620 MB&#x2F;s
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Results for the UX305:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;                                DOM                  STRUCT
+======= serde_json ======= parse|stringify ===== parse|stringify ====
+data&#x2F;canada.json         240 MB&#x2F;s   510 MB&#x2F;s   570 MB&#x2F;s   390 MB&#x2F;s
+data&#x2F;citm_catalog.json   370 MB&#x2F;s   680 MB&#x2F;s   920 MB&#x2F;s   890 MB&#x2F;s
+data&#x2F;twitter.json        290 MB&#x2F;s   900 MB&#x2F;s   640 MB&#x2F;s   920 MB&#x2F;s
+
+======= json-rust ======== parse|stringify ===== parse|stringify ====
+data&#x2F;canada.json         500 MB&#x2F;s   990 MB&#x2F;s
+data&#x2F;citm_catalog.json   700 MB&#x2F;s   860 MB&#x2F;s
+data&#x2F;twitter.json        520 MB&#x2F;s  1030 MB&#x2F;s
+
+==== rustc_serialize ===== parse|stringify ===== parse|stringify ====
+data&#x2F;canada.json         160 MB&#x2F;s    65 MB&#x2F;s   120 MB&#x2F;s    51 MB&#x2F;s
+data&#x2F;citm_catalog.json   170 MB&#x2F;s   210 MB&#x2F;s   120 MB&#x2F;s   240 MB&#x2F;s
+data&#x2F;twitter.json        100 MB&#x2F;s   410 MB&#x2F;s    80 MB&#x2F;s   440 MB&#x2F;s
+
+======= simd-json ======== parse|stringify ===== parse|stringify ====
+data&#x2F;canada.json         380 MB&#x2F;s   490 MB&#x2F;s   650 MB&#x2F;s
+data&#x2F;citm_catalog.json  1000 MB&#x2F;s   790 MB&#x2F;s  1540 MB&#x2F;s
+data&#x2F;twitter.json        870 MB&#x2F;s   900 MB&#x2F;s  1030 MB&#x2F;s
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
+            </item>
         
             <item>
                 <title>Rust 2.0 wishlist</title>
@@ -69,43 +134,6 @@ of the question_mark (&lt;code&gt;?&lt;&#x2F;code&gt;) operator.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </description>
-            </item>
-        
-            <item>
-                <title>speed of current laptop</title>
-                <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/speed-of-current-laptop/</link>
-                <guid>http://tshepang.net/speed-of-current-laptop/</guid>
-                <description>&lt;p&gt;Last year I got me a new laptop (battery circuitry of my old Asus
-UX305 got fried).  This one is Asus UX410, with Intel i7-8550U
-processor and 16GB of DDR4 RAM.&lt;&#x2F;p&gt;
-&lt;p&gt;To check performance, I used &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;serde-rs&#x2F;json-benchmark&quot;&gt;Rust JSON Benchmark&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;git clone https:&#x2F;&#x2F;github.com&#x2F;serde-rs&#x2F;json-benchmark
-cd json-benchmark
-git checkout ac6076683bb73e1e82181e4928d7bc520db9aaa7
-rustup default 1.33.0
-cargo run --release --bin json-benchmark
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Results:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;ac6076683bb73e1e82181e4928d7bc520db9aaa7
-DOM                  STRUCT
-======= serde_json ======= parse|stringify ===== parse|stringify ====
-data&#x2F;canada.json         260 MB&#x2F;s   430 MB&#x2F;s   620 MB&#x2F;s   330 MB&#x2F;s
-data&#x2F;citm_catalog.json   410 MB&#x2F;s   410 MB&#x2F;s   950 MB&#x2F;s   600 MB&#x2F;s
-data&#x2F;twitter.json        270 MB&#x2F;s   640 MB&#x2F;s   590 MB&#x2F;s   740 MB&#x2F;s
-
-======= json-rust ======== parse|stringify ===== parse|stringify ====
-data&#x2F;canada.json         430 MB&#x2F;s   810 MB&#x2F;s
-data&#x2F;citm_catalog.json   710 MB&#x2F;s   520 MB&#x2F;s
-data&#x2F;twitter.json        470 MB&#x2F;s   700 MB&#x2F;s
-
-==== rustc_serialize ===== parse|stringify ===== parse|stringify ====
-data&#x2F;canada.json         180 MB&#x2F;s    70 MB&#x2F;s   130 MB&#x2F;s    53 MB&#x2F;s
-data&#x2F;citm_catalog.json   200 MB&#x2F;s   200 MB&#x2F;s   140 MB&#x2F;s   230 MB&#x2F;s
-data&#x2F;twitter.json        110 MB&#x2F;s   390 MB&#x2F;s    94 MB&#x2F;s   420 MB&#x2F;s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
             </item>
         
             <item>

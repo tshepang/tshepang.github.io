@@ -7,7 +7,7 @@
       <!-- Enable responsiveness on mobile devices-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-      <title>Tshepang logs - speed of current laptop</title>
+      <title>Tshepang logs - speed of current laptops</title>
 
       
         <link rel="alternate" type="application/rss+xml" title="RSS" href="http:&#x2F;&#x2F;tshepang.net&#x2F;rss.xml">
@@ -121,44 +121,72 @@
     
     <header class="post__header">
         <h1 class="post__title">
-            <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;speed-of-current-laptop&#x2F;">speed of current laptop</a>
+            <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;speed-of-current-laptops&#x2F;">speed of current laptops</a>
         </h1>
         <div class="post__meta">
-            <span class="post__time">2019-03-01</span>
+            <span class="post__time">2019-10-27</span>
             
         </div>
     </header>
 
     <div class="post-content">
-      <p>Last year I got me a new laptop (battery circuitry of my old Asus
-UX305 got fried).  This one is Asus UX410, with Intel i7-8550U
-processor and 16GB of DDR4 RAM.</p>
+      <p>I decided to get me my dream laptop, a Lenovo X1 Carbon (code 20KGS3X910).
+It has amazing keyboard (as promised) as well as amazing touchpad.
+The performance is sad though, less than my work laptop,
+an Asus UX410 (itself a replacement of <a href="http://tshepang.net/asus-zenbook-ux305fa">the UX305</a> whose battery circuitry got fried).</p>
 <p>To check performance, I used <a href="https://github.com/serde-rs/json-benchmark">Rust JSON Benchmark</a>:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">git clone https://github.com/serde-rs/json-benchmark
 cd json-benchmark
-git checkout ac6076683bb73e1e82181e4928d7bc520db9aaa7
-rustup default 1.33.0
+git checkout 1d4986c2083c8f164f86116f19d70dd32b7519bf
+rustup default 1.38.0
 cargo run --release --bin json-benchmark
 </span></pre>
-<p>Results:</p>
+<p>Results for the X1 Carbon:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">ac6076683bb73e1e82181e4928d7bc520db9aaa7
-DOM                  STRUCT
+<span style="color:#c0c5ce;">                                DOM                  STRUCT
 ======= serde_json ======= parse|stringify ===== parse|stringify ====
-data/canada.json         260 MB/s   430 MB/s   620 MB/s   330 MB/s
-data/citm_catalog.json   410 MB/s   410 MB/s   950 MB/s   600 MB/s
-data/twitter.json        270 MB/s   640 MB/s   590 MB/s   740 MB/s
+data/canada.json         140 MB/s   310 MB/s   390 MB/s   230 MB/s
+data/citm_catalog.json   240 MB/s   400 MB/s   560 MB/s   520 MB/s
+data/twitter.json        170 MB/s   530 MB/s   360 MB/s   520 MB/s
 
 ======= json-rust ======== parse|stringify ===== parse|stringify ====
-data/canada.json         430 MB/s   810 MB/s
-data/citm_catalog.json   710 MB/s   520 MB/s
-data/twitter.json        470 MB/s   700 MB/s
+data/canada.json         250 MB/s   600 MB/s
+data/citm_catalog.json   340 MB/s   510 MB/s
+data/twitter.json        290 MB/s   600 MB/s
 
 ==== rustc_serialize ===== parse|stringify ===== parse|stringify ====
-data/canada.json         180 MB/s    70 MB/s   130 MB/s    53 MB/s
-data/citm_catalog.json   200 MB/s   200 MB/s   140 MB/s   230 MB/s
-data/twitter.json        110 MB/s   390 MB/s    94 MB/s   420 MB/s
+data/canada.json          94 MB/s    40 MB/s    69 MB/s    29 MB/s
+data/citm_catalog.json   100 MB/s   120 MB/s    76 MB/s   140 MB/s
+data/twitter.json         59 MB/s   240 MB/s    47 MB/s   260 MB/s
+
+======= simd-json ======== parse|stringify ===== parse|stringify ====
+data/canada.json         240 MB/s   310 MB/s   400 MB/s
+data/citm_catalog.json   610 MB/s   430 MB/s   900 MB/s
+data/twitter.json        470 MB/s   510 MB/s   620 MB/s
+</span></pre>
+<p>Results for the UX305:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">                                DOM                  STRUCT
+======= serde_json ======= parse|stringify ===== parse|stringify ====
+data/canada.json         240 MB/s   510 MB/s   570 MB/s   390 MB/s
+data/citm_catalog.json   370 MB/s   680 MB/s   920 MB/s   890 MB/s
+data/twitter.json        290 MB/s   900 MB/s   640 MB/s   920 MB/s
+
+======= json-rust ======== parse|stringify ===== parse|stringify ====
+data/canada.json         500 MB/s   990 MB/s
+data/citm_catalog.json   700 MB/s   860 MB/s
+data/twitter.json        520 MB/s  1030 MB/s
+
+==== rustc_serialize ===== parse|stringify ===== parse|stringify ====
+data/canada.json         160 MB/s    65 MB/s   120 MB/s    51 MB/s
+data/citm_catalog.json   170 MB/s   210 MB/s   120 MB/s   240 MB/s
+data/twitter.json        100 MB/s   410 MB/s    80 MB/s   440 MB/s
+
+======= simd-json ======== parse|stringify ===== parse|stringify ====
+data/canada.json         380 MB/s   490 MB/s   650 MB/s
+data/citm_catalog.json  1000 MB/s   790 MB/s  1540 MB/s
+data/twitter.json        870 MB/s   900 MB/s  1030 MB/s
 </span></pre>
     </div>
 
@@ -179,10 +207,8 @@ data/twitter.json        110 MB/s   390 MB/s    94 MB/s   420 MB/s
             
                 <div class="post-nav">
                     
-                        <a class="previous" href="http:&#x2F;&#x2F;tshepang.net&#x2F;2018-review&#x2F;">‹ 2018 review</a>
+                        <a class="previous" href="http:&#x2F;&#x2F;tshepang.net&#x2F;rust-2-0-wishlist&#x2F;">‹ Rust 2.0 wishlist</a>
                     
-                    
-                        <a class="next" href="http:&#x2F;&#x2F;tshepang.net&#x2F;about-me&#x2F;">about me ›</a>
                     
                     
                     
