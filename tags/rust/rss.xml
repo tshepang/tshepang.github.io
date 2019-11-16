@@ -1771,13 +1771,7 @@ the following:&lt;&#x2F;p&gt;
                 <pubDate>Sat, 23 May 2015 00:00:00 +0000</pubDate>
                 <link>http://tshepang.net/rust-week-of-2015-05-15/</link>
                 <guid>http://tshepang.net/rust-week-of-2015-05-15/</guid>
-                <description>&lt;p&gt;This is the first of what I intend to be a weekly series of posts
-related to my favorite programming language. I here take Rust weeks to
-begin each Friday, since Stable releases of the Rust distribution
-(language and included libraries) are to be released on that week day.
-This is also a great excuse to write more regularly.&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;ul&gt;
+                <description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;I read a high quality post titled &lt;a href=&quot;http:&#x2F;&#x2F;chrismorgan.info&#x2F;blog&#x2F;rust-ownership-the-hard-way.html&quot;&gt;Rust ownership, the hard way&lt;&#x2F;a&gt;. I
 learned quite a bit going through it, like the meaning of
@@ -1793,11 +1787,6 @@ binding (taking &lt;code&gt;foo&lt;&#x2F;code&gt; as the name of that binding):&
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;fn func(foo: ... (function argument)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;| foo | ... (closure argument)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;I &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;25629&quot;&gt;submitted&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;25656&quot;&gt;some&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;25659&quot;&gt;documentation&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;25666&quot;&gt;improvements&lt;&#x2F;a&gt;. The
-latter one was especially time-consuming, but it helped me explore
-the &lt;code&gt;std::path&lt;&#x2F;code&gt; module. It even led me to bump onto &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;issues&#x2F;25673&quot;&gt;a rustdoc bug&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </description>
             </item>
