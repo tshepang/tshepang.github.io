@@ -153,13 +153,14 @@
     io::stdout().</span><span style="color:#96b5b4;">write_all</span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">b</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">some output</span><span style="color:#c0c5ce;">&quot;).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
 }
 </span></pre>
-<p>What I did is is call <code>unwrap</code> which basically asks our operation to
+<p>What I did is call <code>unwrap</code> which basically asks our operation to
 <code>panic!</code> in case of some error. Think of it as a shortcut of:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#b48ead;">use </span><span style="color:#c0c5ce;">std::io::{</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">, Write};
 </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
-    </span><span style="color:#b48ead;">match </span><span style="color:#c0c5ce;">io::stdout().</span><span style="color:#96b5b4;">write_all</span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">b</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">some outputn</span><span style="color:#c0c5ce;">&quot;) {
-        Ok(_) =&gt; (), Err(_) =&gt; panic!(),
+    </span><span style="color:#b48ead;">match </span><span style="color:#c0c5ce;">io::stdout().</span><span style="color:#96b5b4;">write_all</span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">b</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">some output</span><span style="color:#c0c5ce;">&quot;) {
+        Ok(_) =&gt; (),
+        Err(_) =&gt; panic!(),
     }
 }
 </span></pre>

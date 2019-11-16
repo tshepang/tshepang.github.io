@@ -3202,13 +3202,14 @@ if you got this:&lt;&#x2F;p&gt;
     io::stdout().&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;write_all&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;some output&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;();
 }
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;What I did is is call &lt;code&gt;unwrap&lt;&#x2F;code&gt; which basically asks our operation to
+&lt;p&gt;What I did is call &lt;code&gt;unwrap&lt;&#x2F;code&gt; which basically asks our operation to
 &lt;code&gt;panic!&lt;&#x2F;code&gt; in case of some error. Think of it as a shortcut of:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#b48ead;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;std::io::{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;, Write};
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
-    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;match &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;io::stdout().&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;write_all&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;some outputn&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;) {
-        Ok(_) =&amp;gt; (), Err(_) =&amp;gt; panic!(),
+    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;match &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;io::stdout().&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;write_all&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;some output&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;) {
+        Ok(_) =&amp;gt; (),
+        Err(_) =&amp;gt; panic!(),
     }
 }
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
