@@ -1837,24 +1837,6 @@ test no_collect ... bench:       346 ns&#x2F;iter (+&#x2F;- 8)
             </item>
         
             <item>
-                <title>what makes Rust unique</title>
-                <pubDate>Sat, 24 Jan 2015 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/what-makes-rust-unique/</link>
-                <guid>http://tshepang.net/what-makes-rust-unique/</guid>
-                <description>&lt;p&gt;An interesting expansion of &amp;quot;safety without garbage collection&amp;quot;:&lt;&#x2F;p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;It&#x27;s easy to write (a) an unsafe language that has no GC, or (b) a
-safe language that relies on GC for safety. It&#x27;s also easy to write a
-language that is in category (b) but lets you drop down to category
-(a) in an unsafe dialect. It&#x27;s a very difficult problem to write a
-safe language that does not rely on GC, and I know of no other
-industry language that has done it.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;Part of &lt;a href=&quot;https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=8936061&quot;&gt;a response&lt;&#x2F;a&gt; by a member of Rust core team.&lt;&#x2F;p&gt;
-</description>
-            </item>
-        
-            <item>
                 <title>links 2015-01-16</title>
                 <pubDate>Fri, 16 Jan 2015 00:00:00 +0000</pubDate>
                 <link>http://tshepang.net/links-2015-01-16/</link>
