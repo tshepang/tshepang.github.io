@@ -3241,7 +3241,6 @@ if you got this:&lt;&#x2F;p&gt;
 &lt;p&gt;There is an even shorter shortcut:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;() {
-
     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; second_word = &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;output&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;; println!(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;some &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;{}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, second_word);
 }
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
@@ -3253,6 +3252,7 @@ if you got this:&lt;&#x2F;p&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;macro.println!.html&quot;&gt;std::println!&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;hr &#x2F;&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;update&lt;&#x2F;strong&gt;: there is now &lt;code&gt;eprintln!&lt;&#x2F;code&gt;, for sending output to stderr&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;So, why bother with all these many ways when there&#x27;s a simple
 &lt;code&gt;println!&lt;&#x2F;code&gt;? Flexibility. One example I can think of is writing to
 stderr. There is no simple macro for that (&lt;code&gt;println!&lt;&#x2F;code&gt; is for stdout).

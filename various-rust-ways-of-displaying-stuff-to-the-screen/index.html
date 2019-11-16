@@ -192,7 +192,6 @@
 <p>There is an even shorter shortcut:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
-
     </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> second_word = &quot;</span><span style="color:#a3be8c;">output</span><span style="color:#c0c5ce;">&quot;; println!(&quot;</span><span style="color:#a3be8c;">some </span><span style="color:#d08770;">{}</span><span style="color:#c0c5ce;">&quot;, second_word);
 }
 </span></pre>
@@ -204,6 +203,7 @@
 <li><a href="http://doc.rust-lang.org/std/macro.println!.html">std::println!</a></li>
 </ul>
 <hr />
+<p><em><strong>update</strong>: there is now <code>eprintln!</code>, for sending output to stderr</em></p>
 <p>So, why bother with all these many ways when there's a simple
 <code>println!</code>? Flexibility. One example I can think of is writing to
 stderr. There is no simple macro for that (<code>println!</code> is for stdout).
