@@ -1771,24 +1771,22 @@ the following:&lt;&#x2F;p&gt;
                 <pubDate>Sat, 23 May 2015 00:00:00 +0000</pubDate>
                 <link>http://tshepang.net/rust-week-of-2015-05-15/</link>
                 <guid>http://tshepang.net/rust-week-of-2015-05-15/</guid>
-                <description>&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;I read a high quality post titled &lt;a href=&quot;http:&#x2F;&#x2F;chrismorgan.info&#x2F;blog&#x2F;rust-ownership-the-hard-way.html&quot;&gt;Rust ownership, the hard way&lt;&#x2F;a&gt;. I
+                <description>&lt;p&gt;I read a high quality post titled [Rust ownership, the hard way]. I
 learned quite a bit going through it, like the meaning of
 &lt;code&gt;#[derive(Clone, Copy)]&lt;&#x2F;code&gt;, which I see a lot but never knew what it
 meant. I also learned that there are 7 ways to introduce a variable
 binding (taking &lt;code&gt;foo&lt;&#x2F;code&gt; as the name of that binding):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;let foo ...
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for foo in ... (for loop)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;foo =&amp;gt; ... (match block)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if let foo = ... (if block)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;while let foo = ... (while loop)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;fn func(foo: ... (function argument)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;| foo | ... (closure argument)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</description>
+&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; foo ...
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;for&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; foo in ... (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;for loop&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;)
+foo =&amp;gt; ... (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;match&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; block)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;if let&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; foo = ... (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;if&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; block)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;while let&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; foo = ... (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;while loop&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;func&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;foo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;: ... (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;function argument&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;)
+| foo | ... (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;closure argument&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;)
+
+[Rust ownership, the hard way]: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;http&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F;chrismorgan.info&#x2F;blog&#x2F;rust-ownership-the-hard-way.html
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
             </item>
         
             <item>

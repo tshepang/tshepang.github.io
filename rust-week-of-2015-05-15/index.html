@@ -130,24 +130,22 @@
     </header>
 
     <div class="post-content">
-      <ul>
-<li>
-<p>I read a high quality post titled <a href="http://chrismorgan.info/blog/rust-ownership-the-hard-way.html">Rust ownership, the hard way</a>. I
+      <p>I read a high quality post titled [Rust ownership, the hard way]. I
 learned quite a bit going through it, like the meaning of
 <code>#[derive(Clone, Copy)]</code>, which I see a lot but never knew what it
 meant. I also learned that there are 7 ways to introduce a variable
 binding (taking <code>foo</code> as the name of that binding):</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">let foo ...
-</span><span style="color:#c0c5ce;">for foo in ... (for loop)
-</span><span style="color:#c0c5ce;">foo =&gt; ... (match block)
-</span><span style="color:#c0c5ce;">if let foo = ... (if block)
-</span><span style="color:#c0c5ce;">while let foo = ... (while loop)
-</span><span style="color:#c0c5ce;">fn func(foo: ... (function argument)
-</span><span style="color:#c0c5ce;">| foo | ... (closure argument)
-</span></pre></li>
-</ul>
+<span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> foo ...
+</span><span style="color:#b48ead;">for</span><span style="color:#c0c5ce;"> foo in ... (</span><span style="color:#b48ead;">for loop</span><span style="color:#c0c5ce;">)
+foo =&gt; ... (</span><span style="color:#b48ead;">match</span><span style="color:#c0c5ce;"> block)
+</span><span style="color:#b48ead;">if let</span><span style="color:#c0c5ce;"> foo = ... (</span><span style="color:#b48ead;">if</span><span style="color:#c0c5ce;"> block)
+</span><span style="color:#b48ead;">while let</span><span style="color:#c0c5ce;"> foo = ... (</span><span style="color:#b48ead;">while loop</span><span style="color:#c0c5ce;">)
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">func</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">foo</span><span style="color:#c0c5ce;">: ... (</span><span style="color:#bf616a;">function argument</span><span style="color:#c0c5ce;">)
+| foo | ... (</span><span style="color:#bf616a;">closure argument</span><span style="color:#c0c5ce;">)
 
+[Rust ownership, the hard way]: </span><span style="color:#bf616a;">http</span><span style="color:#c0c5ce;">:</span><span style="color:#65737e;">//chrismorgan.info/blog/rust-ownership-the-hard-way.html
+</span></pre>
     </div>
 
     
