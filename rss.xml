@@ -3106,12 +3106,10 @@ fallback.&lt;&#x2F;p&gt;
 obvious as I hoped&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;I read some of &lt;code&gt;std::path&lt;&#x2F;code&gt; code which resulted in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;25736&quot;&gt;some small
-changes&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I read some of &lt;code&gt;std::path&lt;&#x2F;code&gt; code&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;I re-discovered the convenience function, &lt;code&gt;Iterator::cloned&lt;&#x2F;code&gt;, and
-submitted two related &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;25756&quot;&gt;documentation&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;25758&quot;&gt;improvements&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I re-discovered the convenience function, &lt;code&gt;Iterator::cloned&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;I added syntax highlighting to the &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;tags&#x2F;rust&quot;&gt;Rust posts on my blog&lt;&#x2F;a&gt; that were
