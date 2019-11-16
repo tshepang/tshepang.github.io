@@ -1793,32 +1793,46 @@ foo =&amp;gt; ... (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&g
                 <link>http://tshepang.net/rust-collect-function-rocks/</link>
                 <guid>http://tshepang.net/rust-collect-function-rocks/</guid>
                 <description>&lt;p&gt;Here is one way to populate a Vec with some data:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;let mut vector = Vec::new(); for n in 0..COUNT { vector.push(n); };
-:::&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;span style=&quot;color:#b48ead;&quot;&gt;let mut&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; vector = Vec::new();
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;for&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; n in &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;..&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;COUNT &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;{
+    vector.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;push&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(n);
+};
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Alternatively, one can simply do this:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;let vector = (0..COUNT).collect::&amp;lt;Vec&amp;lt;_&amp;gt;&amp;gt;()
-:::&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; vector = (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;..&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;COUNT&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;).collect::&amp;lt;Vec&amp;lt;_&amp;gt;&amp;gt;()
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;The function is also about twice as fast, according to the following
 benchmark:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;#![feature(test)]&lt;&#x2F;p&gt;
-&lt;p&gt;extern crate test;&lt;&#x2F;p&gt;
-&lt;p&gt;static COUNT: i32 = 100;&lt;&#x2F;p&gt;
-&lt;p&gt;#[bench] fn collect(b: &amp;amp;mut test::Bencher) { b.iter(|| {
-(0..COUNT).collect::&amp;lt;Vec&amp;lt;_&amp;gt;&amp;gt;() }); }&lt;&#x2F;p&gt;
-&lt;p&gt;#[bench] fn no_collect(b: &amp;amp;mut test::Bencher) { b.iter(|| { let
-mut vector = Vec::new(); for n in (0..COUNT) { vector.push(n); }; vector
-}); }
-:::&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;#![&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;feature&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(test)]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;extern crate&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; test;
+
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;static &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;COUNT&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;i32 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;100&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;;
+
+#[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;bench&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;collect&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;: &amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;mut &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;test::Bencher) {
+    b.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;iter&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(|| {
+        (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;..&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;COUNT&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;).collect::&amp;lt;Vec&amp;lt;_&amp;gt;&amp;gt;()
+    });
+}
+
+#[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;bench&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;no_collect&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;: &amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;mut &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;test::Bencher) {
+    b.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;iter&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(|| {
+        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let mut&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; vector = Vec::new();
+        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;for&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; n in (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;..&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;COUNT&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;) {
+            vector.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;push&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(n);
+        };
+        vector
+    });
+}
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Here is the output of &lt;code&gt;cargo bench&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;test collect    ... bench:       164 ns&#x2F;iter (+&#x2F;- 7)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;test no_collect ... bench:       346 ns&#x2F;iter (+&#x2F;- 8)
+test no_collect ... bench:       346 ns&#x2F;iter (+&#x2F;- 8)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
             </item>
         
