@@ -7,49 +7,7 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="http://tshepang.net/tags/blogging/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Sun, 11 Jan 2015 00:00:00 +0000</lastBuildDate>
-        
-            <item>
-                <title>ideal static blog generator</title>
-                <pubDate>Sun, 11 Jan 2015 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/ideal-static-blog-generator/</link>
-                <guid>http://tshepang.net/ideal-static-blog-generator/</guid>
-                <description>&lt;p&gt;Anything not listed below is either stuff I take for granted or simply
-missed:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;docutils.sourceforge.net&#x2F;docs&#x2F;ref&#x2F;rst&#x2F;restructuredtext.html&quot;&gt;reStructuredText&lt;&#x2F;a&gt; support is mandatory. It&#x27;s the only markup
-language I like.&lt;&#x2F;li&gt;
-&lt;li&gt;Landing Page should be an Archives View (Post title and date) or a
-subset (i.e. Recent Posts). I would not mind if the latest Post or
-the About Page were displayed, so long as they are followed by this
-Archives View.&lt;&#x2F;li&gt;
-&lt;li&gt;Categories should be determined by directory into which a file (the
-raw material for a Post) is placed. Specifying this in the metadata
-section of the file should of course take precedence.&lt;&#x2F;li&gt;
-&lt;li&gt;Publish date should never be placed at the bottom of a Post. It is
-too important a piece metadata to treat this way.&lt;&#x2F;li&gt;
-&lt;li&gt;An option to have clean URLs (i.e. trailing &lt;code&gt;.html&lt;&#x2F;code&gt; removed).&lt;&#x2F;li&gt;
-&lt;li&gt;Date-based directory structure should not be mandatory (unlike with
-Tinkerer).&lt;&#x2F;li&gt;
-&lt;li&gt;Inline literals and literal blocks (for code) should be
-distinguished by background colour; using a different font is just
-not good enough.&lt;&#x2F;li&gt;
-&lt;li&gt;Tags (and maybe Categories) should be displayed on each post.&lt;&#x2F;li&gt;
-&lt;li&gt;Blogofile has a strange requirement of having &lt;a href=&quot;http:&#x2F;&#x2F;docs.blogofile.com&#x2F;en&#x2F;latest&#x2F;posts.html&quot;&gt;post headers be YAML
-format&lt;&#x2F;a&gt;. Maybe there&#x27;s a good reason, but I want my generator to
-not require anything special in file contents.&lt;&#x2F;li&gt;
-&lt;li&gt;Ability to determine Publish date from file mtime.&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;strong&gt;nice-to-have&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Ability to combine multiple tags.&lt;&#x2F;li&gt;
-&lt;li&gt;Ability to show posts linking to current one, but I&#x27;m not sure how
-useful this would be though.&lt;&#x2F;li&gt;
-&lt;li&gt;A feed icon that is visible from the main page (and maybe Category
-pages).&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</description>
-            </item>
+        <lastBuildDate>Thu, 03 Oct 2013 00:00:00 +0000</lastBuildDate>
         
             <item>
                 <title>from Pelican to liquidluck</title>
