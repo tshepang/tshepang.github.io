@@ -14,7 +14,9 @@
                 <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
                 <link>http://tshepang.net/what-to-use-rust-for-according-to-mazdak-farrokhzad/</link>
                 <guid>http://tshepang.net/what-to-use-rust-for-according-to-mazdak-farrokhzad/</guid>
-                <description>&lt;blockquote&gt;
+                <description>&lt;p&gt;Farrokhzad is among the most active of Rust project members,
+and that gives the following some weight:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;I do think Rust is, and should be, an excellent programming language
 for writing maintainable large scale concurrent high-performance &amp;amp;
 low-latency applications in particular. That is, Rust is great for
@@ -22,9 +24,11 @@ writing a Firefox. Rust is also particularly suited for &amp;quot;symbolics&amp;
 processing due to pattern matching, like e.g., OCaml and Haskell
 are. Whether Rust is the best language for application development
 seems like it would depend on the application. An application that
-doesn&#x27;t have high-perf low-latency requirements seems like it might be
-well served by Idris.&lt;&#x2F;p&gt;
+doesn&#x27;t have high-perf low-latency requirements seems like it might
+be well served by Idris.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
+&lt;p&gt;-- &lt;a href=&quot;https:&#x2F;&#x2F;internals.rust-lang.org&#x2F;t&#x2F;12031&#x2F;5&quot;&gt;source&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;As a sidenote, I do not agree... I is a fanboi.&lt;&#x2F;p&gt;
 </description>
             </item>
         
@@ -99,16 +103,6 @@ intelligent person involved with programming I&#x27;ve met who seemed
 genuinely happy about life (and not grumpy at all).&lt;&#x2F;p&gt;
 &lt;p&gt;-- &lt;a href=&quot;http:&#x2F;&#x2F;ashfall.github.io&#x2F;blog&#x2F;2013&#x2F;03&#x2F;23&#x2F;pycon-2013-down-the-rabbit-hole&quot;&gt;source&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-</description>
-            </item>
-        
-            <item>
-                <title>the not grateful</title>
-                <pubDate>Wed, 24 Apr 2013 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/the-not-grateful/</link>
-                <guid>http://tshepang.net/the-not-grateful/</guid>
-                <description>&lt;p&gt;This is sad, but the author should have probably used the term &lt;em&gt;Free
-software&lt;&#x2F;em&gt;, instead of &lt;em&gt;open source&lt;&#x2F;em&gt;... politics vs. convenience.&lt;&#x2F;p&gt;
 </description>
             </item>
         
