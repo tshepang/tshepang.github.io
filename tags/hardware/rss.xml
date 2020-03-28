@@ -86,9 +86,9 @@ too much of an indulgence, given I still have the &lt;a href=&quot;http:&#x2F;&#
 &lt;p&gt;Like the older laptop, I had to change 2 lines in
 &#x2F;usr&#x2F;share&#x2F;alsa&#x2F;alsa.conf:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;defaults.ctl.card 1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;defaults.pcm.card 1
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+defaults.ctl.card 1
+defaults.pcm.card 1
+&lt;&#x2F;pre&gt;
 &lt;p&gt;What makes the Vaio Pro 13 better:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;The charger does not have a USB charging port&lt;&#x2F;li&gt;
@@ -140,44 +140,44 @@ installation is also insane fast.&lt;&#x2F;p&gt;
 help&lt;&#x2F;a&gt;, where I needed to change two lines in
 &lt;code&gt;&#x2F;usr&#x2F;share&#x2F;alsa&#x2F;alsa.conf&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;defaults.ctl.card 1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;defaults.pcm.card 1
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+defaults.ctl.card 1
+defaults.pcm.card 1
+&lt;&#x2F;pre&gt;
 &lt;p&gt;VLC video didn&#x27;t work well either, but I needed only change Video
 Output to &lt;strong&gt;OpenGL GLX video output (XCB)&lt;&#x2F;strong&gt;, and all was well.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;performance&quot;&gt;Performance&lt;&#x2F;h1&gt;
 &lt;p&gt;I am now going to check how this machine compares to &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;a-bit-of-benchmarking&quot;&gt;these others&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;Specs:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ uname --all
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Linux thome 3.12-1-amd64 #1 SMP Debian 3.12.9-1 (2014-02-01) x86_64 GNU&#x2F;Linux
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ cat &#x2F;proc&#x2F;cpuinfo | sed --quiet &amp;#39;5p&amp;#39;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;model name      : Intel(R) Core(TM) i5-4200U CPU @ 1.60GHz
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ uname --all
+Linux thome 3.12-1-amd64 #1 SMP Debian 3.12.9-1 (2014-02-01) x86_64 GNU&#x2F;Linux
+$ cat &#x2F;proc&#x2F;cpuinfo | sed --quiet &#x27;5p&#x27;
+model name      : Intel(R) Core(TM) i5-4200U CPU @ 1.60GHz
+&lt;&#x2F;pre&gt;
 &lt;p&gt;CPython build (changeset &lt;code&gt;b6a1a78818fe&lt;&#x2F;code&gt;):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ make distclean; time (.&#x2F;configure &amp;amp;&amp;amp; make --silent --jobs=4)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[...]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    1m52.372s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;user    3m12.460s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     0m6.764s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ make distclean; time (.&#x2F;configure &amp;amp;&amp;amp; make --silent --jobs=4)
+[...]
+real    1m52.372s
+user    3m12.460s
+sys     0m6.764s
+&lt;&#x2F;pre&gt;
 &lt;p&gt;CPython test suite:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ time .&#x2F;python -m test --multiprocess=0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[...]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    3m34.582s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;user    5m12.260s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     0m20.640s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ time .&#x2F;python -m test --multiprocess=0
+[...]
+real    3m34.582s
+user    5m12.260s
+sys     0m20.640s
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Linux kernel build (commit &lt;code&gt;6e4664525b1d&lt;&#x2F;code&gt;):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ make distclean &amp;amp;&amp;amp; make defconfig &amp;amp;&amp;amp; time make
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[...]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    11m57.220s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;user    11m1.544s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     0m38.260s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ make distclean &amp;amp;&amp;amp; make defconfig &amp;amp;&amp;amp; time make
+[...]
+real    11m57.220s
+user    11m1.544s
+sys     0m38.260s
+&lt;&#x2F;pre&gt;
 &lt;p&gt;So the machine still doesn&#x27;t compare with my work machine, a ~2
 year-old desktop. It is faster than my old laptop as expected, and
 comparable to the DigitalOcean VPS, no surprises there. The storage is a
@@ -199,22 +199,22 @@ is buggy enough to cause OS hangs and other misbehaviour.&lt;&#x2F;p&gt;
 following commands does not help, at least not in a way I could
 notice:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;echo silent | sudo tee  &#x2F;sys&#x2F;devices&#x2F;platform&#x2F;sony-laptop&#x2F;thermal_control
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+echo silent | sudo tee  &#x2F;sys&#x2F;devices&#x2F;platform&#x2F;sony-laptop&#x2F;thermal_control
+&lt;&#x2F;pre&gt;
 &lt;p&gt;I don&#x27;t know why this happens, given that I have never seen the
 temperature rise above 60 °C:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ sensors
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;acpitz-virtual-0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Adapter: Virtual device
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;temp1:        +48.0°C  (crit = +97.0°C)
+$ sensors
+acpitz-virtual-0
+Adapter: Virtual device
+temp1:        +48.0°C  (crit = +97.0°C)
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;coretemp-isa-0000
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Adapter: ISA adapter
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Physical id 0:  +48.0°C  (high = +100.0°C, crit = +100.0°C)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Core 0:         +46.0°C  (high = +100.0°C, crit = +100.0°C)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Core 1:         +45.0°C  (high = +100.0°C, crit = +100.0°C)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
+coretemp-isa-0000
+Adapter: ISA adapter
+Physical id 0:  +48.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 0:         +46.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 1:         +45.0°C  (high = +100.0°C, crit = +100.0°C)
+&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;The screen brightness control is painful. It requires one to press
 the combination of the &lt;strong&gt;Fn&lt;&#x2F;strong&gt; key and &lt;strong&gt;F5&lt;&#x2F;strong&gt; (dim) and &lt;strong&gt;F6&lt;&#x2F;strong&gt;

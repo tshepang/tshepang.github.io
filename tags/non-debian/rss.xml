@@ -20,10 +20,10 @@ boots, and because I&#x27;m horrified by sysvinit scripts (which Upstart
 supports), I decided to give creating an Upstart job a try. I was
 surprised how easy it was:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;exec &#x2F;usr&#x2F;local&#x2F;bin&#x2F;executable
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;start on startup
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;respawn
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+exec &#x2F;usr&#x2F;local&#x2F;bin&#x2F;executable
+start on startup
+respawn
+&lt;&#x2F;pre&gt;
 &lt;p&gt;I placed a file with above contents in &lt;code&gt;&#x2F;etc&#x2F;init&#x2F;executable.conf&lt;&#x2F;code&gt;, and
 that&#x27;s pretty much it. Impressive.&lt;&#x2F;p&gt;
 &lt;p&gt;Here&#x27;s what happens:&lt;&#x2F;p&gt;

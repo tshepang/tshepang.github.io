@@ -1860,9 +1860,9 @@ too much of an indulgence, given I still have the &lt;a href=&quot;http:&#x2F;&#
 &lt;p&gt;Like the older laptop, I had to change 2 lines in
 &#x2F;usr&#x2F;share&#x2F;alsa&#x2F;alsa.conf:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;defaults.ctl.card 1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;defaults.pcm.card 1
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+defaults.ctl.card 1
+defaults.pcm.card 1
+&lt;&#x2F;pre&gt;
 &lt;p&gt;What makes the Vaio Pro 13 better:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;The charger does not have a USB charging port&lt;&#x2F;li&gt;
@@ -2211,18 +2211,18 @@ rust&lt;&#x2F;p&gt;
 &lt;p&gt;fn main() {&lt;&#x2F;p&gt;
 &lt;p&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for n in 0.. {
+for n in 0.. {
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   &#x2F;&#x2F; Rust 1.0 release let initial = NaiveDate::from_ymd(2015, 5,
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    15); &#x2F;&#x2F; 1.0 was released on a Friday, but nowadays they happen
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    Thursdays let release_date =
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    initial.checked_add(Duration::weeks(6 * n)).unwrap() -
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    Duration::days(1); if release_date &amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    Local::today().naive_local() { println!(&amp;quot;{}&amp;quot;, release_date);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    break; }
+:   &#x2F;&#x2F; Rust 1.0 release let initial = NaiveDate::from_ymd(2015, 5,
+    15); &#x2F;&#x2F; 1.0 was released on a Friday, but nowadays they happen
+    Thursdays let release_date =
+    initial.checked_add(Duration::weeks(6 * n)).unwrap() -
+    Duration::days(1); if release_date &amp;gt;
+    Local::today().naive_local() { println!(&amp;quot;{}&amp;quot;, release_date);
+    break; }
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+}
+&lt;&#x2F;pre&gt;
 &lt;p&gt;}
 :::&lt;&#x2F;p&gt;
 </description>
@@ -2305,18 +2305,18 @@ much the same as that of (the more modern) &lt;a href=&quot;https:&#x2F;&#x2F;se
 pondering the magical forward type inference that I first experienced
 &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;rust-week-of-2015-05-29&quot;&gt;back in May&lt;&#x2F;a&gt;, this time sparked by &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;carllerche&#x2F;mio&#x2F;blob&#x2F;getting-started&#x2F;doc&#x2F;getting-started.md#writing-the-echo-server&quot;&gt;this example&lt;&#x2F;a&gt;; see this line:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;let address = &amp;quot;0.0.0.0:6567&amp;quot;.parse().unwrap();
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+let address = &amp;quot;0.0.0.0:6567&amp;quot;.parse().unwrap();
+&lt;&#x2F;pre&gt;
 &lt;p&gt;You actually have to read further to figure the type that URL is going
 to be parsed as:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;let server = TcpListener::bind(&amp;amp;address).unwrap();
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+let server = TcpListener::bind(&amp;amp;address).unwrap();
+&lt;&#x2F;pre&gt;
 &lt;p&gt;It would be less surprising if we had the following instead:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;let address = SocketAddr::from_str(&amp;quot;0.0.0.0:6567&amp;quot;.unwrap();
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;let server = TcpListener::bind(&amp;amp;address).unwrap();
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
+let address = SocketAddr::from_str(&amp;quot;0.0.0.0:6567&amp;quot;.unwrap();
+let server = TcpListener::bind(&amp;amp;address).unwrap();
+&lt;&#x2F;pre&gt;</description>
             </item>
         
             <item>
@@ -3159,49 +3159,49 @@ rust&lt;&#x2F;p&gt;
 &lt;p&gt;fn main() {&lt;&#x2F;p&gt;
 &lt;p&gt;:   let thread_count = 4; let (tx, rx) = channel();&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for x in 0..thread_count {
+for x in 0..thread_count {
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   let tx = tx.clone(); thread::spawn(move || { println!(&amp;quot;t{}
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    tx&amp;quot;, x); tx.send(x).unwrap(); });
+:   let tx = tx.clone(); thread::spawn(move || { println!(&amp;quot;t{}
+    tx&amp;quot;, x); tx.send(x).unwrap(); });
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
+}
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for _ in 0..thread_count {
+for _ in 0..thread_count {
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   println!(&amp;quot;rx from t{}&amp;quot;, rx.recv().unwrap());
+:   println!(&amp;quot;rx from t{}&amp;quot;, rx.recv().unwrap());
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+}
+&lt;&#x2F;pre&gt;
 &lt;p&gt;}
 :::&lt;&#x2F;p&gt;
 &lt;p&gt;What I&#x27;m doing there is create 4 child threads, from which I send
 messages that are to be captured by the main thread.&lt;&#x2F;p&gt;
 &lt;p&gt;I built and ran it with:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rustc --opt-level 0 main.rs &amp;amp;&amp;amp; .&#x2F;main
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+rustc --opt-level 0 main.rs &amp;amp;&amp;amp; .&#x2F;main
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Following is output from one sample run:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;t1 tx
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;t0 tx
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;t2 tx
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;t3 tx
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rx from t1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rx from t0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rx from t3
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rx from t2
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+t1 tx
+t0 tx
+t2 tx
+t3 tx
+rx from t1
+rx from t0
+rx from t3
+rx from t2
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Following is what I get with another run:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;t0 tx
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;t1 tx
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rx from t1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;t2 tx
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rx from t2
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;t3 tx
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rx from t3
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rx from t0
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+t0 tx
+t1 tx
+rx from t1
+t2 tx
+rx from t2
+t3 tx
+rx from t3
+rx from t0
+&lt;&#x2F;pre&gt;
 &lt;p&gt;If it was all deterministic (i.e. predictable), &lt;code&gt;t0 tx&lt;&#x2F;code&gt; would always
 come before &lt;code&gt;t1 tx&lt;&#x2F;code&gt;, and &lt;code&gt;rx from t0&lt;&#x2F;code&gt; before &lt;code&gt;rx from t1&lt;&#x2F;code&gt;, and so on.&lt;&#x2F;p&gt;
 &lt;p&gt;I think this is done for performance reasons, where the kernel just
@@ -3269,16 +3269,16 @@ an &lt;code&gt;i32&lt;&#x2F;code&gt; value, in which it will succeed:&lt;&#x2F;p
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Inverse: 0.1
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+Inverse: 0.1
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Any other type will fail:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#96b5b4;&quot;&gt;print_inverse&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10_&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;f64&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;);
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;the trait `Invert` is not implemented for the type `f64` [E0277]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+the trait `Invert` is not implemented for the type `f64` [E0277]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;This allows for a feature named generics, where one can use multiple
 types for the same function. For example, that error will disappear
 if you got this:&lt;&#x2F;p&gt;
@@ -3308,11 +3308,11 @@ if you got this:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;I do however get this warning when I build it:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ rustc main.rs
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;main.rs:4:5: 4:42 warning: unused result which must be used, #[warn(unused_must_use)] on by default
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;main.rs:4     io::stdout().write_ln(b&amp;quot;some output&amp;quot;);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ rustc main.rs
+main.rs:4:5: 4:42 warning: unused result which must be used, #[warn(unused_must_use)] on by default
+main.rs:4     io::stdout().write_ln(b&amp;quot;some output&amp;quot;);
+              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Let&#x27;s kill it:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#b48ead;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;std::io::{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;, Write};
@@ -3386,9 +3386,9 @@ the following:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;You can test that it really goes to stderr by running it like:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ .&#x2F;main &amp;gt; &#x2F;dev&#x2F;null
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;some output
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
+$ .&#x2F;main &amp;gt; &#x2F;dev&#x2F;null
+some output
+&lt;&#x2F;pre&gt;</description>
             </item>
         
             <item>
@@ -4325,10 +4325,10 @@ boots, and because I&#x27;m horrified by sysvinit scripts (which Upstart
 supports), I decided to give creating an Upstart job a try. I was
 surprised how easy it was:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;exec &#x2F;usr&#x2F;local&#x2F;bin&#x2F;executable
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;start on startup
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;respawn
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+exec &#x2F;usr&#x2F;local&#x2F;bin&#x2F;executable
+start on startup
+respawn
+&lt;&#x2F;pre&gt;
 &lt;p&gt;I placed a file with above contents in &lt;code&gt;&#x2F;etc&#x2F;init&#x2F;executable.conf&lt;&#x2F;code&gt;, and
 that&#x27;s pretty much it. Impressive.&lt;&#x2F;p&gt;
 &lt;p&gt;Here&#x27;s what happens:&lt;&#x2F;p&gt;
@@ -4658,8 +4658,8 @@ know how to set VPN up and sshfs feels rather clunky (I first have to
 have some directory I&#x27;m going to mount the thing, and have to remember
 the command line syntax). With Emacs, I run the following command:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;C-x C-f &#x2F;ssh:work|ssh:10.0.0.107|ssh:10.0.0.148:~&#x2F;some&#x2F;files&#x2F;
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+C-x C-f &#x2F;ssh:work|ssh:10.0.0.107|ssh:10.0.0.148:~&#x2F;some&#x2F;files&#x2F;
+&lt;&#x2F;pre&gt;
 &lt;p&gt;What happens there is I ask Emacs to run &lt;code&gt;find-file&lt;&#x2F;code&gt;, which opens its
 file manager, &lt;strong&gt;Dired&lt;&#x2F;strong&gt;. It first accesses the server at work, then my
 work desktop (&lt;code&gt;10.0.0.107&lt;&#x2F;code&gt;), and then some machine (&lt;code&gt;10.0.0.148&lt;&#x2F;code&gt;) which
@@ -4670,12 +4670,12 @@ was surprised such a feature exists, thinking I&#x27;d have to do ugly
 things like port forwarding. I do use the single hop a lot (if that&#x27;s
 even the right name):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;C-x C-f &#x2F;ssh:work:~&#x2F;some&#x2F;files&#x2F;
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+C-x C-f &#x2F;ssh:work:~&#x2F;some&#x2F;files&#x2F;
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Shortcut for that is:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;C-x C-f &#x2F;work:~&#x2F;some&#x2F;files&#x2F;
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+C-x C-f &#x2F;work:~&#x2F;some&#x2F;files&#x2F;
+&lt;&#x2F;pre&gt;
 &lt;p&gt;&lt;strong&gt;sidenotes&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -4686,12 +4686,12 @@ even the right name):&lt;&#x2F;p&gt;
 instead of specifying the whole &lt;a href=&quot;mailto:username@host&quot;&gt;username@host&lt;&#x2F;a&gt;, it accepts the
 aliases in &lt;code&gt;~&#x2F;.ssh&#x2F;config&lt;&#x2F;code&gt;, such that I only have to run:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;ssh work
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+ssh work
+&lt;&#x2F;pre&gt;
 &lt;p&gt;instead of:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;ssh tshepang@hostname
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
+ssh tshepang@hostname
+&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </description>
             </item>
@@ -4775,18 +4775,18 @@ rust&lt;&#x2F;p&gt;
 &lt;p&gt;fn main() {&lt;&#x2F;p&gt;
 &lt;p&gt;:   let a = 0i8; let b = 0i8; let c = 0i8;&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;println!(&amp;quot;{:p}&amp;quot;, &amp;amp;a); println!(&amp;quot;{:p}&amp;quot;, &amp;amp;b); println!(&amp;quot;{:p}&amp;quot;,
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;amp;c);
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+println!(&amp;quot;{:p}&amp;quot;, &amp;amp;a); println!(&amp;quot;{:p}&amp;quot;, &amp;amp;b); println!(&amp;quot;{:p}&amp;quot;,
+&amp;amp;c);
+&lt;&#x2F;pre&gt;
 &lt;p&gt;}
 :::&lt;&#x2F;p&gt;
 &lt;p&gt;We build and run it like this:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ rustc main.rs &amp;amp;&amp;amp; .&#x2F;main
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7fff0c8d16d7
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7fff0c8d16d6
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7fff0c8d16d5
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ rustc main.rs &amp;amp;&amp;amp; .&#x2F;main
+0x7fff0c8d16d7
+0x7fff0c8d16d6
+0x7fff0c8d16d5
+&lt;&#x2F;pre&gt;
 &lt;p&gt;In our code, the three variables are each given 1 byte of memory (&lt;code&gt;i8&lt;&#x2F;code&gt;
 means 8-bit integer). The addresses are given in reverse order. An
 explanation I heard is so that the heap grows the opposite direction to
@@ -4799,34 +4799,34 @@ rust&lt;&#x2F;p&gt;
 &lt;p&gt;fn main() {&lt;&#x2F;p&gt;
 &lt;p&gt;:   let a = 0i16; let b = 0i16; let c = 0i16;&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;println!(&amp;quot;{:p}&amp;quot;, &amp;amp;a); println!(&amp;quot;{:p}&amp;quot;, &amp;amp;b); println!(&amp;quot;{:p}&amp;quot;,
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;amp;c);
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+println!(&amp;quot;{:p}&amp;quot;, &amp;amp;a); println!(&amp;quot;{:p}&amp;quot;, &amp;amp;b); println!(&amp;quot;{:p}&amp;quot;,
+&amp;amp;c);
+&lt;&#x2F;pre&gt;
 &lt;p&gt;}
 :::&lt;&#x2F;p&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ rustc main.rs &amp;amp;&amp;amp; .&#x2F;main
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7fff2462aed6
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7fff2462aed4
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7fff2462aed2
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ rustc main.rs &amp;amp;&amp;amp; .&#x2F;main
+0x7fff2462aed6
+0x7fff2462aed4
+0x7fff2462aed2
+&lt;&#x2F;pre&gt;
 &lt;p&gt;In this case, each of the variables take 2 addresses (&lt;code&gt;i16&lt;&#x2F;code&gt; means 16-bit
 integer). Using &lt;code&gt;i32&lt;&#x2F;code&gt; results in each taking 4 addresses:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ rustc main.rs &amp;amp;&amp;amp; .&#x2F;main
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7ffff7706024
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7ffff7706020
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7ffff770601c
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ rustc main.rs &amp;amp;&amp;amp; .&#x2F;main
+0x7ffff7706024
+0x7ffff7706020
+0x7ffff770601c
+&lt;&#x2F;pre&gt;
 &lt;p&gt;And then, finally, &lt;code&gt;i64&lt;&#x2F;code&gt; results in each variable taking 8 addresses (64
 bits) of space:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ rustc main.rs &amp;amp;&amp;amp; .&#x2F;main
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7fffd27383b0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7fffd27383a8
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7fffd27383a0
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
+$ rustc main.rs &amp;amp;&amp;amp; .&#x2F;main
+0x7fffd27383b0
+0x7fffd27383a8
+0x7fffd27383a0
+&lt;&#x2F;pre&gt;</description>
             </item>
         
             <item>
@@ -4939,55 +4939,55 @@ functions executed successfully. It was a one-line change but I thought
 it was a good excuse to create decorators for the first time in my life.&lt;&#x2F;p&gt;
 &lt;p&gt;Here is an example of a decorator function:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;def checkpoint(function):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    wrapper(*args, **kwargs):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        with open(PATH) as f:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;            for line in f:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;                if function.__name__ in line:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;                    return
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        value = function(*args, **kwargs)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        with open(PATH, &amp;#39;a+&amp;#39;) as f:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;            f.write(function.__name__)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        return value
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    return wrapper
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+def checkpoint(function):
+    wrapper(*args, **kwargs):
+        with open(PATH) as f:
+            for line in f:
+                if function.__name__ in line:
+                    return
+        value = function(*args, **kwargs)
+        with open(PATH, &#x27;a+&#x27;) as f:
+            f.write(function.__name__)
+        return value
+    return wrapper
+&lt;&#x2F;pre&gt;
 &lt;p&gt;All it does is write some text to a file, and avoid running whatever
 function will be &lt;em&gt;decorated&lt;&#x2F;em&gt; by it if there is a match in that file.
 This would be an indicator that the function had already been executed
 (in a previous run).&lt;&#x2F;p&gt;
 &lt;p&gt;The following snippet sees the use of this decorator:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;@checkpoint
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;def do_this(some_argument):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    # exit(1) on error
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    ...
+@checkpoint
+def do_this(some_argument):
+    # exit(1) on error
+    ...
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;@checkpoint
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;def do_that(some_other_argument, some_optional_argument=None):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    # exit(1) on error
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    ...
+@checkpoint
+def do_that(some_other_argument, some_optional_argument=None):
+    # exit(1) on error
+    ...
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if __name__ == &amp;#39;__main__&amp;#39;:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    do_this(&amp;#39;some value&amp;#39;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    do_that(&amp;#39;some other value&amp;#39;)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+if __name__ == &#x27;__main__&#x27;:
+    do_this(&#x27;some value&#x27;)
+    do_that(&#x27;some other value&#x27;)
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Without the decorator syntax, the same functionality would be achieved
 with:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;def do_this(some_argument):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    # exit(1) on error
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    ...
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;do_this = checkpoint(do_this)
+def do_this(some_argument):
+    # exit(1) on error
+    ...
+do_this = checkpoint(do_this)
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;def do_that(some_other_argument, some_optional_argument=None):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    # exit(1) on error
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    ...
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;do_that = checkpoint(do_that)
+def do_that(some_other_argument, some_optional_argument=None):
+    # exit(1) on error
+    ...
+do_that = checkpoint(do_that)
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if __name__ == &amp;#39;__main__&amp;#39;:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    do_this(&amp;#39;some value&amp;#39;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    do_that(&amp;#39;some other value&amp;#39;)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+if __name__ == &#x27;__main__&#x27;:
+    do_this(&#x27;some value&#x27;)
+    do_that(&#x27;some other value&#x27;)
+&lt;&#x2F;pre&gt;
 &lt;p&gt;The latter format, though it presents less of a cognitive burden, feels
 less of an obvious solution, and it&#x27;s a bit uglier as well. &lt;a href=&quot;http:&#x2F;&#x2F;legacy.python.org&#x2F;dev&#x2F;peps&#x2F;pep-0318&quot;&gt;PEP 380&lt;&#x2F;a&gt;
 is a detailed discussion written over 10 years ago when the syntax was
@@ -5420,93 +5420,93 @@ found &lt;em&gt;while&lt;&#x2F;em&gt; and &lt;em&gt;for&lt;&#x2F;em&gt; not intu
 preferred alternatives are &lt;em&gt;repeat&lt;&#x2F;em&gt; and &lt;em&gt;loop&lt;&#x2F;em&gt;. Of these, I prefer
 &lt;em&gt;loop&lt;&#x2F;em&gt;, but it does not read as well as &lt;em&gt;while&lt;&#x2F;em&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;while count &amp;lt; 3:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    count = action()
+while count &amp;lt; 3:
+    count = action()
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop count &amp;lt; 3:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    count = action()
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+loop count &amp;lt; 3:
+    count = action()
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Quorum, the language by those responsible for this paper, went with:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;repeat while (count &amp;lt; 3)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    count = action()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;end
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+repeat while (count &amp;lt; 3)
+    count = action()
+end
+&lt;&#x2F;pre&gt;
 &lt;p&gt;To mimic that in Python, any of the following two sound fine (I prefer
 &lt;em&gt;if&lt;&#x2F;em&gt; to &lt;em&gt;while&lt;&#x2F;em&gt;; less syntax is better):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;repeat if count &amp;lt; 3:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    count = action()
+repeat if count &amp;lt; 3:
+    count = action()
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop if count &amp;lt; 3:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    count = action()
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+loop if count &amp;lt; 3:
+    count = action()
+&lt;&#x2F;pre&gt;
 &lt;p&gt;That means an infinite loop would be:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop if True:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action()
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+loop if True:
+    action()
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Or for that special case, a shortcut can just be this simple:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action()
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+loop:
+    action()
+&lt;&#x2F;pre&gt;
 &lt;p&gt;I wonder what cycling through items in a container would look like. In
 Python, it looks like:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for item in container:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action(item)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+for item in container:
+    action(item)
+&lt;&#x2F;pre&gt;
 &lt;p&gt;This feels as natural as anything, but then again I been doing Python
 for a number of years, so the bias could be heavy. Following is an
 attempt:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop in range(3):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action()
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+loop in range(3):
+    action()
+&lt;&#x2F;pre&gt;
 &lt;p&gt;It mimics this Python syntax, which I actually don&#x27;t like, since we
 don&#x27;t always need the items of the container:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for _ in range(3):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action()
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+for _ in range(3):
+    action()
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Quorum, the academic language mentioned above, does it like:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;repeat 3 times
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;end
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+repeat 3 times
+    action()
+end
+&lt;&#x2F;pre&gt;
 &lt;p&gt;I don&#x27;t like that either; feels contrived. The Python way strikes me as
 a good compromise, especially given how general it is. I will try again
 with the &lt;em&gt;loop&lt;&#x2F;em&gt; syntax:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop item in container:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action(item)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+loop item in container:
+    action(item)
+&lt;&#x2F;pre&gt;
 &lt;p&gt;You have to admit it doesn&#x27;t read as nice as:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for item in container:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action(item)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+for item in container:
+    action(item)
+&lt;&#x2F;pre&gt;
 &lt;p&gt;It should be flexible to accommodate more than just one value on each
 iteration, so should have an equivalent for this Python code:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for index, item in enumerate(container):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action(index, item)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+for index, item in enumerate(container):
+    action(index, item)
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Here goes:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop index, item in enumerate(container):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action(index, item)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+loop index, item in enumerate(container):
+    action(index, item)
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Now, for the much-loved Python list comprehensions:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[procedure(item) for item in container]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[procedure(item) for item in container]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;We would instead have:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[procedure(item) loop item in container]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[procedure(item) loop item in container]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;So, apart from being highly-rated for being intuitive, &lt;em&gt;loop&lt;&#x2F;em&gt; also
 provides a consistent looping construct, whereas Python has 2, &lt;em&gt;while&lt;&#x2F;em&gt;
 and &lt;em&gt;for&lt;&#x2F;em&gt;, both of which received low points in the study. Interesting.&lt;&#x2F;p&gt;
@@ -5742,44 +5742,44 @@ installation is also insane fast.&lt;&#x2F;p&gt;
 help&lt;&#x2F;a&gt;, where I needed to change two lines in
 &lt;code&gt;&#x2F;usr&#x2F;share&#x2F;alsa&#x2F;alsa.conf&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;defaults.ctl.card 1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;defaults.pcm.card 1
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+defaults.ctl.card 1
+defaults.pcm.card 1
+&lt;&#x2F;pre&gt;
 &lt;p&gt;VLC video didn&#x27;t work well either, but I needed only change Video
 Output to &lt;strong&gt;OpenGL GLX video output (XCB)&lt;&#x2F;strong&gt;, and all was well.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;performance&quot;&gt;Performance&lt;&#x2F;h1&gt;
 &lt;p&gt;I am now going to check how this machine compares to &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;a-bit-of-benchmarking&quot;&gt;these others&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;Specs:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ uname --all
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Linux thome 3.12-1-amd64 #1 SMP Debian 3.12.9-1 (2014-02-01) x86_64 GNU&#x2F;Linux
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ cat &#x2F;proc&#x2F;cpuinfo | sed --quiet &amp;#39;5p&amp;#39;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;model name      : Intel(R) Core(TM) i5-4200U CPU @ 1.60GHz
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ uname --all
+Linux thome 3.12-1-amd64 #1 SMP Debian 3.12.9-1 (2014-02-01) x86_64 GNU&#x2F;Linux
+$ cat &#x2F;proc&#x2F;cpuinfo | sed --quiet &#x27;5p&#x27;
+model name      : Intel(R) Core(TM) i5-4200U CPU @ 1.60GHz
+&lt;&#x2F;pre&gt;
 &lt;p&gt;CPython build (changeset &lt;code&gt;b6a1a78818fe&lt;&#x2F;code&gt;):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ make distclean; time (.&#x2F;configure &amp;amp;&amp;amp; make --silent --jobs=4)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[...]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    1m52.372s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;user    3m12.460s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     0m6.764s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ make distclean; time (.&#x2F;configure &amp;amp;&amp;amp; make --silent --jobs=4)
+[...]
+real    1m52.372s
+user    3m12.460s
+sys     0m6.764s
+&lt;&#x2F;pre&gt;
 &lt;p&gt;CPython test suite:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ time .&#x2F;python -m test --multiprocess=0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[...]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    3m34.582s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;user    5m12.260s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     0m20.640s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ time .&#x2F;python -m test --multiprocess=0
+[...]
+real    3m34.582s
+user    5m12.260s
+sys     0m20.640s
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Linux kernel build (commit &lt;code&gt;6e4664525b1d&lt;&#x2F;code&gt;):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ make distclean &amp;amp;&amp;amp; make defconfig &amp;amp;&amp;amp; time make
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[...]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    11m57.220s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;user    11m1.544s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     0m38.260s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ make distclean &amp;amp;&amp;amp; make defconfig &amp;amp;&amp;amp; time make
+[...]
+real    11m57.220s
+user    11m1.544s
+sys     0m38.260s
+&lt;&#x2F;pre&gt;
 &lt;p&gt;So the machine still doesn&#x27;t compare with my work machine, a ~2
 year-old desktop. It is faster than my old laptop as expected, and
 comparable to the DigitalOcean VPS, no surprises there. The storage is a
@@ -5801,22 +5801,22 @@ is buggy enough to cause OS hangs and other misbehaviour.&lt;&#x2F;p&gt;
 following commands does not help, at least not in a way I could
 notice:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;echo silent | sudo tee  &#x2F;sys&#x2F;devices&#x2F;platform&#x2F;sony-laptop&#x2F;thermal_control
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+echo silent | sudo tee  &#x2F;sys&#x2F;devices&#x2F;platform&#x2F;sony-laptop&#x2F;thermal_control
+&lt;&#x2F;pre&gt;
 &lt;p&gt;I don&#x27;t know why this happens, given that I have never seen the
 temperature rise above 60 °C:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ sensors
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;acpitz-virtual-0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Adapter: Virtual device
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;temp1:        +48.0°C  (crit = +97.0°C)
+$ sensors
+acpitz-virtual-0
+Adapter: Virtual device
+temp1:        +48.0°C  (crit = +97.0°C)
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;coretemp-isa-0000
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Adapter: ISA adapter
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Physical id 0:  +48.0°C  (high = +100.0°C, crit = +100.0°C)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Core 0:         +46.0°C  (high = +100.0°C, crit = +100.0°C)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Core 1:         +45.0°C  (high = +100.0°C, crit = +100.0°C)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
+coretemp-isa-0000
+Adapter: ISA adapter
+Physical id 0:  +48.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 0:         +46.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 1:         +45.0°C  (high = +100.0°C, crit = +100.0°C)
+&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;The screen brightness control is painful. It requires one to press
 the combination of the &lt;strong&gt;Fn&lt;&#x2F;strong&gt; key and &lt;strong&gt;F5&lt;&#x2F;strong&gt; (dim) and &lt;strong&gt;F6&lt;&#x2F;strong&gt;
@@ -6036,8 +6036,6 @@ because I only watched them once, but the impact they had on me is still
 vivid, so they stay, at least for now.&lt;&#x2F;p&gt;
 &lt;p&gt;Here&#x27;s the rest (ranked alphabetically):&lt;&#x2F;p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;the-cat-in-the-hat-2003&quot;&gt;The Cat In The Hat&lt;&#x2F;a&gt; (a case where I drastically differ with general
-critical approval)&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;downfall-2004&quot;&gt;Downfall&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;kung-fu-panda-2-2011&quot;&gt;Kung Fu Panda 2&lt;&#x2F;a&gt; (also happens to be the year&#x27;s &lt;strong&gt;greatest
 spectacle&lt;&#x2F;strong&gt;)&lt;&#x2F;li&gt;
@@ -6148,9 +6146,8 @@ movie on a revisit. Not that it was trash. It was just not very good.
 The runner-up is &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;the-warriors-way-2010&quot;&gt;The Warrior&#x27;s Way&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;As for the year&#x27;s &lt;strong&gt;best script&#x2F;dialog&lt;&#x2F;strong&gt;, we have &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;sex-lies-and-videotape-1989&quot;&gt;Sex, Lies, and Videotape&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;The year&#x27;s &lt;strong&gt;funniest movie&lt;&#x2F;strong&gt; is &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;bill-teds-bogus-journey-1991&quot;&gt;Bill &amp;amp; Ted&#x27;s Bogus Journey&lt;&#x2F;a&gt;. The
-first runner-up is &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;being-there-1979&quot;&gt;Being There&lt;&#x2F;a&gt;, while its three 2nd runner-ups are a
-tie: &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;brewsters-millions-1985&quot;&gt;Brewster&#x27;s Millions&lt;&#x2F;a&gt; (surprising entrant), &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;the-cat-in-the-hat-2003&quot;&gt;The Cat In The Hat&lt;&#x2F;a&gt;,
-and &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;semi-pro-2008&quot;&gt;Semi-Pro&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+first runner-up is &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;being-there-1979&quot;&gt;Being There&lt;&#x2F;a&gt;, while its two 2nd runner-ups are a
+tie: &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;brewsters-millions-1985&quot;&gt;Brewster&#x27;s Millions&lt;&#x2F;a&gt; (surprising entrant) and &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;semi-pro-2008&quot;&gt;Semi-Pro&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;The year&#x27;s &lt;strong&gt;most enchanting&lt;&#x2F;strong&gt; movie is &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;megamind-2010&quot;&gt;Megamind&lt;&#x2F;a&gt;, followed by
 &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;tangled-2010&quot;&gt;Tangled&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;The year&#x27;s &lt;strong&gt;most original story&lt;&#x2F;strong&gt; is that of &lt;strong&gt;The Idiots&lt;&#x2F;strong&gt; (the
@@ -6667,60 +6664,60 @@ since there isn&#x27;t a comprehensive guide I could find.&lt;&#x2F;p&gt;
 &lt;p&gt;For my login manager, I use &lt;a href=&quot;http:&#x2F;&#x2F;www.freedesktop.org&#x2F;wiki&#x2F;Software&#x2F;LightDM&quot;&gt;LightDM&lt;&#x2F;a&gt;. I added this line to its
 configuration, in &lt;code&gt;[SeatDefaults]&lt;&#x2F;code&gt; section:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;greeter-hide-users=false
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+greeter-hide-users=false
+&lt;&#x2F;pre&gt;
 &lt;p&gt;It removes the need to manually enter my username each time I want to
 login.&lt;&#x2F;p&gt;
 &lt;p&gt;Reason I&#x27;m not using GDM? I wanted something light, which also
 wouldn&#x27;t pull in dozens of packages that I won&#x27;t use. For example:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ sudo apt-get install --no-install-recommends gdm3
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Reading package lists... Done
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Building dependency tree
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Reading state information... Done
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;The following extra packages will be installed:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  bluez dconf-cli evolution-data-server evolution-data-server-common
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-gck-1 gir1.2-gcr-3
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-gdesktopenums-3.0 gir1.2-gdm3 gir1.2-gkbd-3.0 gir1.2-gmenu-3.0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0 gir1.2-ibus-1.0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-mutter-3.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0 gir1.2-soup-2.4
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2 gir1.2-xkl-1.0 gjs
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gnome-bluetooth gnome-settings-daemon gnome-shell gnome-shell-common
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gnome-themes-standard gnome-themes-standard-data libbluetooth3 libcamel-1.2-43
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libcaribou-common libcaribou0 libebackend-1.2-6 libebook-1.2-14
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libebook-contacts-1.2-0 libecal-1.2-15 libedata-book-1.2-17 libedata-cal-1.2-20
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libedataserver-1.2-17 libgdata-common libgdata13 libgdm1 libgnome-menu-3-0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libgoa-1.0-0 libgoa-1.0-common libgweather-3-3 libgweather-common libibus-1.0-5
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libical0 libmission-control-plugins0 libmutter0b liboauth0 libopenobex1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libpackagekit-glib2-16 libpulse-mainloop-glib0 librest-0.7-0 libsoup-gnome2.4-1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libtelepathy-glib0 libtelepathy-logger3 libwacom-common libwacom2 mutter-common
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  obex-data-server obexd-client telepathy-mission-control-5
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Suggested packages:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  evolution evolution-data-server-dbg gnome-orca gnome-user-share telepathy-haze
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Recommended packages:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  zenity gvfs-backends gnome-control-center pulseaudio gkbd-capplet gnome-contacts
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gnome-user-guide gtk2-engines-pixbuf gnome-accessibility-themes packagekit
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;The following NEW packages will be installed:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  bluez dconf-cli evolution-data-server evolution-data-server-common gdm3
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-gck-1 gir1.2-gcr-3
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-gdesktopenums-3.0 gir1.2-gdm3 gir1.2-gkbd-3.0 gir1.2-gmenu-3.0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0 gir1.2-ibus-1.0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-mutter-3.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0 gir1.2-soup-2.4
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2 gir1.2-xkl-1.0 gjs
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gnome-bluetooth gnome-settings-daemon gnome-shell gnome-shell-common
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gnome-themes-standard gnome-themes-standard-data libbluetooth3 libcamel-1.2-43
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libcaribou-common libcaribou0 libebackend-1.2-6 libebook-1.2-14
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libebook-contacts-1.2-0 libecal-1.2-15 libedata-book-1.2-17 libedata-cal-1.2-20
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libedataserver-1.2-17 libgdata-common libgdata13 libgdm1 libgnome-menu-3-0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libgoa-1.0-0 libgoa-1.0-common libgweather-3-3 libgweather-common libibus-1.0-5
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libical0 libmission-control-plugins0 libmutter0b liboauth0 libopenobex1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libpackagekit-glib2-16 libpulse-mainloop-glib0 librest-0.7-0 libsoup-gnome2.4-1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libtelepathy-glib0 libtelepathy-logger3 libwacom-common libwacom2 mutter-common
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  obex-data-server obexd-client telepathy-mission-control-5
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0 upgraded, 67 newly installed, 0 to remove and 45 not upgraded.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Need to get 0 B&#x2F;31.0 MB of archives.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;After this operation, 90.8 MB of additional disk space will be used.
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ sudo apt-get install --no-install-recommends gdm3
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+  bluez dconf-cli evolution-data-server evolution-data-server-common
+  gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-gck-1 gir1.2-gcr-3
+  gir1.2-gdesktopenums-3.0 gir1.2-gdm3 gir1.2-gkbd-3.0 gir1.2-gmenu-3.0
+  gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0 gir1.2-ibus-1.0
+  gir1.2-mutter-3.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0 gir1.2-soup-2.4
+  gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2 gir1.2-xkl-1.0 gjs
+  gnome-bluetooth gnome-settings-daemon gnome-shell gnome-shell-common
+  gnome-themes-standard gnome-themes-standard-data libbluetooth3 libcamel-1.2-43
+  libcaribou-common libcaribou0 libebackend-1.2-6 libebook-1.2-14
+  libebook-contacts-1.2-0 libecal-1.2-15 libedata-book-1.2-17 libedata-cal-1.2-20
+  libedataserver-1.2-17 libgdata-common libgdata13 libgdm1 libgnome-menu-3-0
+  libgoa-1.0-0 libgoa-1.0-common libgweather-3-3 libgweather-common libibus-1.0-5
+  libical0 libmission-control-plugins0 libmutter0b liboauth0 libopenobex1
+  libpackagekit-glib2-16 libpulse-mainloop-glib0 librest-0.7-0 libsoup-gnome2.4-1
+  libtelepathy-glib0 libtelepathy-logger3 libwacom-common libwacom2 mutter-common
+  obex-data-server obexd-client telepathy-mission-control-5
+Suggested packages:
+  evolution evolution-data-server-dbg gnome-orca gnome-user-share telepathy-haze
+Recommended packages:
+  zenity gvfs-backends gnome-control-center pulseaudio gkbd-capplet gnome-contacts
+  gnome-user-guide gtk2-engines-pixbuf gnome-accessibility-themes packagekit
+The following NEW packages will be installed:
+  bluez dconf-cli evolution-data-server evolution-data-server-common gdm3
+  gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-gck-1 gir1.2-gcr-3
+  gir1.2-gdesktopenums-3.0 gir1.2-gdm3 gir1.2-gkbd-3.0 gir1.2-gmenu-3.0
+  gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0 gir1.2-ibus-1.0
+  gir1.2-mutter-3.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0 gir1.2-soup-2.4
+  gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2 gir1.2-xkl-1.0 gjs
+  gnome-bluetooth gnome-settings-daemon gnome-shell gnome-shell-common
+  gnome-themes-standard gnome-themes-standard-data libbluetooth3 libcamel-1.2-43
+  libcaribou-common libcaribou0 libebackend-1.2-6 libebook-1.2-14
+  libebook-contacts-1.2-0 libecal-1.2-15 libedata-book-1.2-17 libedata-cal-1.2-20
+  libedataserver-1.2-17 libgdata-common libgdata13 libgdm1 libgnome-menu-3-0
+  libgoa-1.0-0 libgoa-1.0-common libgweather-3-3 libgweather-common libibus-1.0-5
+  libical0 libmission-control-plugins0 libmutter0b liboauth0 libopenobex1
+  libpackagekit-glib2-16 libpulse-mainloop-glib0 librest-0.7-0 libsoup-gnome2.4-1
+  libtelepathy-glib0 libtelepathy-logger3 libwacom-common libwacom2 mutter-common
+  obex-data-server obexd-client telepathy-mission-control-5
+0 upgraded, 67 newly installed, 0 to remove and 45 not upgraded.
+Need to get 0 B&#x2F;31.0 MB of archives.
+After this operation, 90.8 MB of additional disk space will be used.
+&lt;&#x2F;pre&gt;
 &lt;p&gt;GNOME philosophy tends towards tight integration, leading to things
 being not as modular as I would like: how could a display manager end up
 depending on a Contacts tool, or the Bluetooth stack. It may be just how
@@ -6731,12 +6728,12 @@ with.&lt;&#x2F;p&gt;
 &lt;p&gt;Anyways, enough with that. I added a custom &lt;code&gt;.desktop&lt;&#x2F;code&gt; file which will
 become selectable on LightDM UI:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ cat &#x2F;usr&#x2F;share&#x2F;xsessions&#x2F;custom.desktop
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[Desktop Entry]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Name=Custom
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Exec=&#x2F;etc&#x2F;X11&#x2F;Xsession
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Type=XSession
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ cat &#x2F;usr&#x2F;share&#x2F;xsessions&#x2F;custom.desktop
+[Desktop Entry]
+Name=Custom
+Exec=&#x2F;etc&#x2F;X11&#x2F;Xsession
+Type=XSession
+&lt;&#x2F;pre&gt;
 &lt;p&gt;On selecting the entry labeled &lt;strong&gt;Custom&lt;&#x2F;strong&gt; that appears on LightDM, and
 logging in, the following will get executed (&lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;custom&#x2F;src&#x2F;tip&#x2F;xsession&quot;&gt;~&#x2F;.xsession&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -6780,62 +6777,62 @@ exec dwm
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Finally, this is what my dwm config changes look like (&lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;custom&#x2F;src&#x2F;tip&#x2F;config.def.h&quot;&gt;config.def.h&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;diff --git a&#x2F;config.def.h b&#x2F;config.def.h
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;index 77ff358..78af5d6 100644
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+++ a&#x2F;config.def.h
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+++ b&#x2F;config.def.h
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;@@ -14,12 +14,15 @@ static const Bool showbar           = True;     &#x2F;*
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;False means no bar *&#x2F;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; static const Bool topbar            = True;     &#x2F;* False means bottom
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; bar *&#x2F;
+diff --git a&#x2F;config.def.h b&#x2F;config.def.h
+index 77ff358..78af5d6 100644
++++ a&#x2F;config.def.h
++++ b&#x2F;config.def.h
+@@ -14,12 +14,15 @@ static const Bool showbar           = True;     &#x2F;*
+False means no bar *&#x2F;
+ static const Bool topbar            = True;     &#x2F;* False means bottom
+ bar *&#x2F;
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &#x2F;* tagging *&#x2F;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-static const char *tags[] = { &amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;,
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;9&amp;quot; };
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+static const char *tags[] = { &amp;quot;web&amp;quot;, &amp;quot;files&amp;quot;, &amp;quot;terminal&amp;quot;, &amp;quot;misc&amp;quot; };
+ &#x2F;* tagging *&#x2F;
+-static const char *tags[] = { &amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;,
+&amp;quot;9&amp;quot; };
++static const char *tags[] = { &amp;quot;web&amp;quot;, &amp;quot;files&amp;quot;, &amp;quot;terminal&amp;quot;, &amp;quot;misc&amp;quot; };
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; static const Rule rules[] = {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-       &#x2F;* class      instance    title       tags mask     isfloating
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        monitor *&#x2F;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-       { &amp;quot;Gimp&amp;quot;,     NULL,       NULL,       0,
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        True,        -1 },
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-       { &amp;quot;Firefox&amp;quot;,  NULL,       NULL,       1 &amp;lt;&amp;lt; 8,
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        False,       -1 },
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+  &#x2F;* class             instance  title  tags mask  isfloating
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;   monitor *&#x2F;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+  { &amp;quot;Iceweasel&amp;quot;,       NULL,     NULL,  1 &amp;lt;&amp;lt; 0,    False,       -1 },
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+  { &amp;quot;trayer&amp;quot;,          NULL,     NULL,  1 &amp;lt;&amp;lt; 0,    False,       -1 },
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+  { &amp;quot;Nautilus&amp;quot;,        NULL,     NULL,  1 &amp;lt;&amp;lt; 1,    False,       -1 },
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+  { &amp;quot;Xfce4-terminal&amp;quot;,  NULL,     NULL,  1 &amp;lt;&amp;lt; 2,    False,       -1 },
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+  { &amp;quot;Quodlibet&amp;quot;,       NULL,     NULL,  1 &amp;lt;&amp;lt; 3,    False,       -1 },
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; };
+ static const Rule rules[] = {
+-       &#x2F;* class      instance    title       tags mask     isfloating
+        monitor *&#x2F;
+-       { &amp;quot;Gimp&amp;quot;,     NULL,       NULL,       0,
+        True,        -1 },
+-       { &amp;quot;Firefox&amp;quot;,  NULL,       NULL,       1 &amp;lt;&amp;lt; 8,
+        False,       -1 },
++  &#x2F;* class             instance  title  tags mask  isfloating
+   monitor *&#x2F;
++  { &amp;quot;Iceweasel&amp;quot;,       NULL,     NULL,  1 &amp;lt;&amp;lt; 0,    False,       -1 },
++  { &amp;quot;trayer&amp;quot;,          NULL,     NULL,  1 &amp;lt;&amp;lt; 0,    False,       -1 },
++  { &amp;quot;Nautilus&amp;quot;,        NULL,     NULL,  1 &amp;lt;&amp;lt; 1,    False,       -1 },
++  { &amp;quot;Xfce4-terminal&amp;quot;,  NULL,     NULL,  1 &amp;lt;&amp;lt; 2,    False,       -1 },
++  { &amp;quot;Quodlibet&amp;quot;,       NULL,     NULL,  1 &amp;lt;&amp;lt; 3,    False,       -1 },
+ };
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &#x2F;* layout(s) *&#x2F;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;@@ -35,7 +38,7 @@ static const Layout layouts[] = {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; };
+ &#x2F;* layout(s) *&#x2F;
+@@ -35,7 +38,7 @@ static const Layout layouts[] = {
+ };
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &#x2F;* key definitions *&#x2F;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-#define MODKEY Mod1Mask
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+#define MODKEY Mod4Mask
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; #define TAGKEYS(KEY,TAG)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        { MODKEY,                       KEY,      view,           {.ui
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        = 1 &amp;lt;&amp;lt; TAG} },
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        { MODKEY|ControlMask,           KEY,      toggleview,     {.ui
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        = 1 &amp;lt;&amp;lt; TAG} },
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;@@ -47,7 +50,7 @@ static const Layout layouts[] = {
+ &#x2F;* key definitions *&#x2F;
+-#define MODKEY Mod1Mask
++#define MODKEY Mod4Mask
+ #define TAGKEYS(KEY,TAG)
+        { MODKEY,                       KEY,      view,           {.ui
+        = 1 &amp;lt;&amp;lt; TAG} },
+        { MODKEY|ControlMask,           KEY,      toggleview,     {.ui
+        = 1 &amp;lt;&amp;lt; TAG} },
+@@ -47,7 +50,7 @@ static const Layout layouts[] = {
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &#x2F;* commands *&#x2F;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; static const char *dmenucmd[] = { &amp;quot;dmenu_run&amp;quot;, &amp;quot;-fn&amp;quot;, font, &amp;quot;-nb&amp;quot;,
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; normbgcolor, &amp;quot;-nf&amp;quot;, normfgcolor, &amp;quot;-sb&amp;quot;, selbgcolor, &amp;quot;-sf&amp;quot;,
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; selfgcolor, NULL };
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-static const char *termcmd[]  = { &amp;quot;uxterm&amp;quot;, NULL };
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+static const char *termcmd[]  = { &amp;quot;xfce4-terminal&amp;quot;, &amp;quot;--hide-menubar&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;};
+ &#x2F;* commands *&#x2F;
+ static const char *dmenucmd[] = { &amp;quot;dmenu_run&amp;quot;, &amp;quot;-fn&amp;quot;, font, &amp;quot;-nb&amp;quot;,
+ normbgcolor, &amp;quot;-nf&amp;quot;, normfgcolor, &amp;quot;-sb&amp;quot;, selbgcolor, &amp;quot;-sf&amp;quot;,
+ selfgcolor, NULL };
+-static const char *termcmd[]  = { &amp;quot;uxterm&amp;quot;, NULL };
++static const char *termcmd[]  = { &amp;quot;xfce4-terminal&amp;quot;, &amp;quot;--hide-menubar&amp;quot;
+};
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; static Key keys[] = {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &#x2F;* modifier                     key        function
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        argument *&#x2F;
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+ static Key keys[] = {
+        &#x2F;* modifier                     key        function
+        argument *&#x2F;
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Note that this diff is against the Debian package (version &lt;strong&gt;6.0-6&lt;&#x2F;strong&gt;). I
 could not change the modifier key with the upstream version of dwm.&lt;&#x2F;p&gt;
 &lt;p&gt;You will notice that I&#x27;m still using one major GNOME package, Nautilus,
@@ -7356,110 +7353,110 @@ comparable. I also added the &lt;a href=&quot;https:&#x2F;&#x2F;www.digitalocean
 &lt;p&gt;Each machine runs Debian testing (codename &amp;quot;jessie&amp;quot;). Following is the
 output of these commands for each machine:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;uname --all
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cat &#x2F;proc&#x2F;cpuinfo | sed --quiet &amp;#39;5p&amp;#39;
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+uname --all
+cat &#x2F;proc&#x2F;cpuinfo | sed --quiet &#x27;5p&#x27;
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Home machine:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Linux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU&#x2F;Linux
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;model name      : Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+Linux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU&#x2F;Linux
+model name      : Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Work machine:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Linux twork 3.10-3-amd64 #1 SMP Debian 3.10.11-1 (2013-09-10) x86_64 GNU&#x2F;Linux
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;model name      : AMD Phenom(tm) II X4 970 Processor
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+Linux twork 3.10-3-amd64 #1 SMP Debian 3.10.11-1 (2013-09-10) x86_64 GNU&#x2F;Linux
+model name      : AMD Phenom(tm) II X4 970 Processor
+&lt;&#x2F;pre&gt;
 &lt;p&gt;DigitalOcean VPS:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Linux tcloud 3.11-1-amd64 #1 SMP Debian 3.11.5-1 (2013-10-17) x86_64 GNU&#x2F;Linux
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;model name      : QEMU Virtual CPU version 1.0
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;cpython-benchmarks&quot;&gt;CPython benchmarks&lt;&#x2F;h2&gt;
+Linux tcloud 3.11-1-amd64 #1 SMP Debian 3.11.5-1 (2013-10-17) x86_64 GNU&#x2F;Linux
+model name      : QEMU Virtual CPU version 1.0
+&lt;&#x2F;pre&gt;&lt;h2 id=&quot;cpython-benchmarks&quot;&gt;CPython benchmarks&lt;&#x2F;h2&gt;
 &lt;p&gt;I ran two benchmarks, both from the latest VCS version of CPython,
 development branch:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ hg identify --id --branch
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;b6a1a78818fe default
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;build&quot;&gt;Build&lt;&#x2F;h3&gt;
+$ hg identify --id --branch
+b6a1a78818fe default
+&lt;&#x2F;pre&gt;&lt;h3 id=&quot;build&quot;&gt;Build&lt;&#x2F;h3&gt;
 &lt;p&gt;Here&#x27;s the command I used:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;make distclean; time (.&#x2F;configure &amp;amp;&amp;amp; make --silent --jobs=4)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;results&quot;&gt;Results&lt;&#x2F;h3&gt;
+make distclean; time (.&#x2F;configure &amp;amp;&amp;amp; make --silent --jobs=4)
+&lt;&#x2F;pre&gt;&lt;h3 id=&quot;results&quot;&gt;Results&lt;&#x2F;h3&gt;
 &lt;p&gt;Home machine:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    2m11.687s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;user    3m18.104s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     0m9.964s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+real    2m11.687s
+user    3m18.104s
+sys     0m9.964s
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Work machine:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    2m2.707s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;user    2m24.200s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     0m12.280s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+real    2m2.707s
+user    2m24.200s
+sys     0m12.280s
+&lt;&#x2F;pre&gt;
 &lt;p&gt;VPS:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    2m30.931s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;user    3m7.272s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     0m16.592s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;test-suite&quot;&gt;Test suite&lt;&#x2F;h3&gt;
+real    2m30.931s
+user    3m7.272s
+sys     0m16.592s
+&lt;&#x2F;pre&gt;&lt;h3 id=&quot;test-suite&quot;&gt;Test suite&lt;&#x2F;h3&gt;
 &lt;p&gt;Here&#x27;s the command I used:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;time .&#x2F;python -m test --multiprocess=0
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+time .&#x2F;python -m test --multiprocess=0
+&lt;&#x2F;pre&gt;
 &lt;p&gt;&lt;strong&gt;--multiprocess=0&lt;&#x2F;strong&gt; means that there will be 6 tests run in parallel;
 that is the number logical cores (4 in my case) + 2 (to avoid waiting
 too long for tests which are largely idle)&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;results-1&quot;&gt;Results&lt;&#x2F;h3&gt;
 &lt;p&gt;Home machine:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    3m42.571s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;user    7m13.124s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     0m33.320s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+real    3m42.571s
+user    7m13.124s
+sys     0m33.320s
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Work machine:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    2m29.957s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;user    4m9.052s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     0m27.364s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+real    2m29.957s
+user    4m9.052s
+sys     0m27.364s
+&lt;&#x2F;pre&gt;
 &lt;p&gt;VPS:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    2m19.174s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;user    5m5.444s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     0m40.008s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;linux-kernel-build&quot;&gt;Linux kernel build&lt;&#x2F;h2&gt;
+real    2m19.174s
+user    5m5.444s
+sys     0m40.008s
+&lt;&#x2F;pre&gt;&lt;h2 id=&quot;linux-kernel-build&quot;&gt;Linux kernel build&lt;&#x2F;h2&gt;
 &lt;p&gt;Just for kicks, I decided to check how long building Linux would take;
 for this, I used latest &#x27;final&#x27; release from Linus&#x27; git tree:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ git log -1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;commit 6e4664525b1db28f8c4e1130957f70a94c19213e
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Author: Linus Torvalds &amp;lt;torvalds@linux-foundation.org&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Date:   Mon Sep 2 13:46:10 2013 -0700
+$ git log -1
+commit 6e4664525b1db28f8c4e1130957f70a94c19213e
+Author: Linus Torvalds &amp;lt;torvalds@linux-foundation.org&amp;gt;
+Date:   Mon Sep 2 13:46:10 2013 -0700
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Linux 3.11
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+Linux 3.11
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Here&#x27;s the commands I used:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;make distclean &amp;amp;&amp;amp; make defconfig &amp;amp;&amp;amp; time make
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;results-2&quot;&gt;Results&lt;&#x2F;h3&gt;
+make distclean &amp;amp;&amp;amp; make defconfig &amp;amp;&amp;amp; time make
+&lt;&#x2F;pre&gt;&lt;h3 id=&quot;results-2&quot;&gt;Results&lt;&#x2F;h3&gt;
 &lt;p&gt;Home machine:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    6m11.622s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;user    21m2.664s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     1m15.324s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+real    6m11.622s
+user    21m2.664s
+sys     1m15.324s
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Work machine:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    2m40.275s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;user    8m55.624s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     0m42.860s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+real    2m40.275s
+user    8m55.624s
+sys     0m42.860s
+&lt;&#x2F;pre&gt;
 &lt;p&gt;VPS:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    3m41.240s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;user    12m21.120s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     1m17.844s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
+real    3m41.240s
+user    12m21.120s
+sys     1m17.844s
+&lt;&#x2F;pre&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
 &lt;p&gt;My work machine is faster than the DigitalOcean offering of comparable
 specs, and much faster than my home machine, a laptop.&lt;&#x2F;p&gt;
 &lt;p&gt;(&lt;a href=&quot;http:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;556411&#x2F;321731&quot;&gt;detailed explanation of the output&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
@@ -7564,8 +7561,8 @@ self.&lt;&#x2F;p&gt;
 term) or Commits (Git term), use the following search term on your pager
 (tested with &lt;a href=&quot;http:&#x2F;&#x2F;www.greenwoodsoftware.com&#x2F;less&quot;&gt;less&lt;&#x2F;a&gt;, which is Debian&#x2F;Ubuntu default pager):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(^changeset)|(^commit)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
+(^changeset)|(^commit)
+&lt;&#x2F;pre&gt;</description>
             </item>
         
             <item>
@@ -7599,22 +7596,22 @@ genuinely happy about life (and not grumpy at all).&lt;&#x2F;p&gt;
                 <guid>http://tshepang.net/my-first-debian-upload/</guid>
                 <description>&lt;p&gt;Output of my first ever upload to Debian (using &lt;a href=&quot;http:&#x2F;&#x2F;packages.debian.org&#x2F;dput&quot;&gt;dput&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Trying to upload package to ftp-master (ftp.upload.debian.org)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Checking signature on .changes
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;gpg: Signature made Sun 13 Oct 2013 09:21:35 SAST using RSA key ID 500BF4A2
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;gpg: Good signature from &amp;quot;Tshepang Lekhonkhobe &amp;lt;tshepang@gmail.com&amp;gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Good signature on ..&#x2F;wajig_2.10_amd64.changes.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Checking signature on .dsc
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;gpg: Signature made Sun 13 Oct 2013 09:21:31 SAST using RSA key ID 500BF4A2
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;gpg: Good signature from &amp;quot;Tshepang Lekhonkhobe &amp;lt;tshepang@gmail.com&amp;gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Good signature on ..&#x2F;wajig_2.10.dsc.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Uploading to ftp-master (via ftp to ftp.upload.debian.org):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  Uploading wajig_2.10.dsc: done.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  Uploading wajig_2.10.tar.gz: done.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  Uploading wajig_2.10_all.deb: done.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  Uploading wajig_2.10_amd64.changes: done.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Successfully uploaded packages.
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+Trying to upload package to ftp-master (ftp.upload.debian.org)
+Checking signature on .changes
+gpg: Signature made Sun 13 Oct 2013 09:21:35 SAST using RSA key ID 500BF4A2
+gpg: Good signature from &amp;quot;Tshepang Lekhonkhobe &amp;lt;tshepang@gmail.com&amp;gt;&amp;quot;
+Good signature on ..&#x2F;wajig_2.10_amd64.changes.
+Checking signature on .dsc
+gpg: Signature made Sun 13 Oct 2013 09:21:31 SAST using RSA key ID 500BF4A2
+gpg: Good signature from &amp;quot;Tshepang Lekhonkhobe &amp;lt;tshepang@gmail.com&amp;gt;&amp;quot;
+Good signature on ..&#x2F;wajig_2.10.dsc.
+Uploading to ftp-master (via ftp to ftp.upload.debian.org):
+  Uploading wajig_2.10.dsc: done.
+  Uploading wajig_2.10.tar.gz: done.
+  Uploading wajig_2.10_all.deb: done.
+  Uploading wajig_2.10_amd64.changes: done.
+Successfully uploaded packages.
+&lt;&#x2F;pre&gt;
 &lt;p&gt;(&lt;a href=&quot;http:&#x2F;&#x2F;packages.qa.debian.org&#x2F;w&#x2F;wajig&#x2F;news&#x2F;20131013T074831Z.html&quot;&gt;the package was accepted within 30 minutes&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;p&gt;And, yeah, that means &lt;a href=&quot;http:&#x2F;&#x2F;bugs.debian.org&#x2F;cgi-bin&#x2F;bugreport.cgi?msg=12;bug=723802&quot;&gt;I am now Debian Maintainer&lt;&#x2F;a&gt;. Other than giving me
@@ -7674,8 +7671,8 @@ for recovery in case of issues. It was painful to use since it&#x27;s so
 slow, and kept inserting wrong characters in place of the username. It
 also tends to fail with the message:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Failed to establish a connection to the console. Please reload.
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+Failed to establish a connection to the console. Please reload.
+&lt;&#x2F;pre&gt;
 &lt;p&gt;It&#x27;s not a big issue anyways, since this will be a rarely-used feature.&lt;&#x2F;p&gt;
 &lt;p&gt;And no, I still don&#x27;t know yet what I&#x27;ll use this for. Maybe I&#x27;ll
 host my blog there, moving it from the GitHub service. Regardless, it&#x27;s
@@ -7813,20 +7810,20 @@ ugly look. It does not fit with the general general theme, so should
 be grey really, which would match with that of &lt;code&gt;&amp;lt;pre&amp;gt;&lt;&#x2F;code&gt; text. I fixed
 it myself with the following patch:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;diff --git a&#x2F;liquidluck&#x2F;_themes&#x2F;default&#x2F;static&#x2F;style.css b&#x2F;liquidluck&#x2F;_themes&#x2F;default&#x2F;static&#x2F;style.css
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;index e90de80..94fa7e8 100644
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+++ a&#x2F;liquidluck&#x2F;_themes&#x2F;default&#x2F;static&#x2F;style.css
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+++ b&#x2F;liquidluck&#x2F;_themes&#x2F;default&#x2F;static&#x2F;style.css
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;@@ -112,7 +112,7 @@ pre {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     border-radius: 3px;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; }
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; code, tt {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-    background-color: #fee9cc;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+    background-color: #eee;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     color: rgba(0, 0, 0, 0.75);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     padding: 1px 3px;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     font-size: 12px;
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
+diff --git a&#x2F;liquidluck&#x2F;_themes&#x2F;default&#x2F;static&#x2F;style.css b&#x2F;liquidluck&#x2F;_themes&#x2F;default&#x2F;static&#x2F;style.css
+index e90de80..94fa7e8 100644
++++ a&#x2F;liquidluck&#x2F;_themes&#x2F;default&#x2F;static&#x2F;style.css
++++ b&#x2F;liquidluck&#x2F;_themes&#x2F;default&#x2F;static&#x2F;style.css
+@@ -112,7 +112,7 @@ pre {
+     border-radius: 3px;
+ }
+ code, tt {
+-    background-color: #fee9cc;
++    background-color: #eee;
+     color: rgba(0, 0, 0, 0.75);
+     padding: 1px 3px;
+     font-size: 12px;
+&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </description>
             </item>
@@ -7851,15 +7848,15 @@ resulting site is complete with an index (Archives view), Tags,
 Categories, and Pages (for non-bloggy stuff like a CV or About Me file).&lt;&#x2F;p&gt;
 &lt;p&gt;As for my blog, its tree structure looks like this (&lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;blog&#x2F;src&quot;&gt;repo&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;build&#x2F;...
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;pages&#x2F;about-me.rst
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;posts&#x2F;{arts&#x2F;, computing&#x2F;, misc&#x2F;}
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;CNAME
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;fabfile.py
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;new-post.py
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;README.rst
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;settings.py
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+build&#x2F;...
+pages&#x2F;about-me.rst
+posts&#x2F;{arts&#x2F;, computing&#x2F;, misc&#x2F;}
+CNAME
+fabfile.py
+new-post.py
+README.rst
+settings.py
+&lt;&#x2F;pre&gt;
 &lt;ul&gt;
 &lt;li&gt;The &lt;code&gt;build&lt;&#x2F;code&gt; directory is where the output of the build process is
 stored.&lt;&#x2F;li&gt;
@@ -7887,23 +7884,23 @@ stuff like title, date, and tags. It can be tedious to create all such
 mundate stuff, especially the date. That&#x27;s why I wrote &lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;blog&#x2F;src&#x2F;tip&#x2F;new-post.py&quot;&gt;a script&lt;&#x2F;a&gt; that
 generates that file and populates it with the given metadata:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ python new-post.py &amp;#39;my blogging setup&amp;#39; misc --tags blogging
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ python new-post.py &#x27;my blogging setup&#x27; misc --tags blogging
+&lt;&#x2F;pre&gt;
 &lt;p&gt;This is the metadata, and also the beginning of the file:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;my blogging setup
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;=================
+my blogging setup
+=================
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:date: 2012-04-12
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:tags: blogging
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+:date: 2012-04-12
+:tags: blogging
+&lt;&#x2F;pre&gt;
 &lt;p&gt;The script also opens the file in my favorite editor, so I can start
 adding content.&lt;&#x2F;p&gt;
 &lt;p&gt;When I&#x27;m done with the changes, I ensure I&#x27;m in the root directory of
 my blog, commit (&lt;code&gt;hg commit --message &#x27;new post&#x27;&lt;&#x2F;code&gt;) and run:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ fab
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ fab
+&lt;&#x2F;pre&gt;
 &lt;p&gt;That&#x27;s a &lt;a href=&quot;http:&#x2F;&#x2F;fabfile.org&quot;&gt;fabric&lt;&#x2F;a&gt; command that uses the instructions found in
 &lt;code&gt;fabfile.py&lt;&#x2F;code&gt;. It builds the site, and then pushes it to GitHub Pages. It
 also pushes the sources to Bitbucket. Within a minute, the blog will be
@@ -8140,167 +8137,167 @@ that will be written to that file:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Build command (using GCC 4.8.1):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;gcc -Wall -pedantic -g play.c -o play
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+gcc -Wall -pedantic -g play.c -o play
+&lt;&#x2F;pre&gt;
 &lt;p&gt;System details:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ uname --all
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Linux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU&#x2F;Linux
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ sudo lshw -class processor
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;*-cpu
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     description: CPU
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     product: Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     vendor: Intel Corp.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     physical id: 4
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     bus info: cpu@0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     version: Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     serial: To Be Filled By O.E.M.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     slot: CPU 1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     size: 2300MHz
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     capacity: 4GHz
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     width: 64 bits
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     clock: 100MHz
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     capabilities: x86-64 fpu fpu_exception wp vme de pse tsc msr
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     constant_tsc arch_perfmon pebs bts rep_good nopl xtopology
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     x2apic popcnt tsc_deadline_timer xsave avx lahf_lm ida arat epb
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     aes cpufreq
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     configuration: cores=2 enabledcores=1 threads=2
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ uname --all
+Linux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU&#x2F;Linux
+$ sudo lshw -class processor
+*-cpu
+     description: CPU
+     product: Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz
+     vendor: Intel Corp.
+     physical id: 4
+     bus info: cpu@0
+     version: Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz
+     serial: To Be Filled By O.E.M.
+     slot: CPU 1
+     size: 2300MHz
+     capacity: 4GHz
+     width: 64 bits
+     clock: 100MHz
+     capabilities: x86-64 fpu fpu_exception wp vme de pse tsc msr
+     pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts
+     acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp
+     constant_tsc arch_perfmon pebs bts rep_good nopl xtopology
+     nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor
+     ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2
+     x2apic popcnt tsc_deadline_timer xsave avx lahf_lm ida arat epb
+     xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid
+     aes cpufreq
+     configuration: cores=2 enabledcores=1 threads=2
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Running the resulting binary with &lt;strong&gt;Callgrind&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ valgrind --tool=callgrind --callgrind-out-file=out .&#x2F;play filename
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;filecontent
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;==5308== Callgrind, a call-graph generating cache profiler
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;==5308== Copyright (C) 2002-2012, and GNU GPL&amp;#39;d, by Josef Weidendorfer
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;et al.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;==5308== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;info
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;==5308== Command: .&#x2F;play filename filecontent
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;==5308==
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;==5308== For interactive control, run &amp;#39;callgrind_control -h&amp;#39;.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;==5308==
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;==5308== Events    : Ir
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;==5308== Collected : 107520
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;==5308==
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;==5308== I   refs:      107,520
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ cat filename
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;filecontent
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ valgrind --tool=callgrind --callgrind-out-file=out .&#x2F;play filename
+filecontent
+==5308== Callgrind, a call-graph generating cache profiler
+==5308== Copyright (C) 2002-2012, and GNU GPL&#x27;d, by Josef Weidendorfer
+et al.
+==5308== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright
+info
+==5308== Command: .&#x2F;play filename filecontent
+==5308==
+==5308== For interactive control, run &#x27;callgrind_control -h&#x27;.
+==5308==
+==5308== Events    : Ir
+==5308== Collected : 107520
+==5308==
+==5308== I   refs:      107,520
+$ cat filename
+filecontent
+&lt;&#x2F;pre&gt;
 &lt;p&gt;And finally, seeing closely the cost of each function call, where &lt;strong&gt;Ir&lt;&#x2F;strong&gt;
 stands for &lt;strong&gt;Instruction cache reads&lt;&#x2F;strong&gt;, which you can read as &lt;em&gt;number of
 CPU instructions&lt;&#x2F;em&gt;. I have used &lt;code&gt;tree=calling&lt;&#x2F;code&gt; option so that I can see
 the cost of all operations called by a parent (marked with a &lt;code&gt;*&lt;&#x2F;code&gt;) :&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ callgrind_annotate --tree=calling out play.c
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Profile data file &amp;#39;out&amp;#39; (creator: callgrind-3.8.1)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;I1 cache:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;D1 cache:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;LL cache:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Timerange: Basic block 0 - 22326
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Trigger: Program termination
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Profiled target:  .&#x2F;play filename filecontent (PID 5308, part 1)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Events recorded:  Ir
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Events shown:     Ir
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Event sort order: Ir
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Thresholds:       99
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Include dirs:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;User annotated:   play.c
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Auto-annotation:  off
+$ callgrind_annotate --tree=calling out play.c
+---++++++--
+Profile data file &#x27;out&#x27; (creator: callgrind-3.8.1)
+---++++++--
+I1 cache:
+D1 cache:
+LL cache:
+Timerange: Basic block 0 - 22326
+Trigger: Program termination
+Profiled target:  .&#x2F;play filename filecontent (PID 5308, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:
+User annotated:   play.c
+Auto-annotation:  off
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Ir
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;107,520  PROGRAM TOTALS
+---++++++--
+Ir
+---++++++--
+107,520  PROGRAM TOTALS
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Ir  file:function
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
+---++++++--
+Ir  file:function
+---++++++--
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;24,113  *  &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;dl-lookup.c:do_lookup_x [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;1,053  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;dl-misc.c:_dl_name_match_p (25x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;13,423  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;dl-lookup.c:check_match.9345 (88x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
+24,113  *  &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;dl-lookup.c:do_lookup_x [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
+1,053  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;dl-misc.c:_dl_name_match_p (25x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
+13,423  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;dl-lookup.c:check_match.9345 (88x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;18,264  *  &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;dl-lookup.c:_dl_lookup_symbol_x [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;38,589  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;dl-lookup.c:do_lookup_x (94x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
+18,264  *  &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;dl-lookup.c:_dl_lookup_symbol_x [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
+38,589  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;dl-lookup.c:do_lookup_x (94x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;15,836  *  &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;dl-machine.h:_dl_relocate_object
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;13  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;memmove.c:memcpy@GLIBC_2.2.5 (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;81  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;strcmp.S:strcasecmp (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;6  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;strcmp.S:strncasecmp (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;7  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;memset.S:memset (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;51,501  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;dl-lookup.c:_dl_lookup_symbol_x (86x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;18  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;..&#x2F;memcpy.S:memcpy (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;67  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;time&#x2F;..&#x2F;sysdeps&#x2F;unix&#x2F;sysv&#x2F;linux&#x2F;x86_64&#x2F;time.c:time (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;67  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;time&#x2F;..&#x2F;sysdeps&#x2F;unix&#x2F;sysv&#x2F;linux&#x2F;x86_64&#x2F;gettimeofday.c:gettimeofday (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;6  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;strnlen.S:strnlen (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[snip; to be continued]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+15,836  *  &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;dl-machine.h:_dl_relocate_object
+13  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;memmove.c:memcpy@GLIBC_2.2.5 (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
+81  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;strcmp.S:strcasecmp (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
+6  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;strcmp.S:strncasecmp (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
+7  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;memset.S:memset (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
+51,501  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;dl-lookup.c:_dl_lookup_symbol_x (86x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
+18  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;..&#x2F;memcpy.S:memcpy (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
+67  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;time&#x2F;..&#x2F;sysdeps&#x2F;unix&#x2F;sysv&#x2F;linux&#x2F;x86_64&#x2F;time.c:time (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
+67  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;time&#x2F;..&#x2F;sysdeps&#x2F;unix&#x2F;sysv&#x2F;linux&#x2F;x86_64&#x2F;gettimeofday.c:gettimeofday (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
+6  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;strnlen.S:strnlen (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
+[snip; to be continued]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;I have trimmed the output to bring focus to the most interesting output
 of all, which is the total cost for each line of my code:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[continued]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-- User-annotated source: play.c
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Ir
+[continued]
+---++++++--
+-- User-annotated source: play.c
+---++++++--
+Ir
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.  #include &amp;lt;string.h&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.  #include &amp;lt;errno.h&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.  #include &amp;lt;stdio.h&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.  #include &amp;lt;fcntl.h&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.  #include &amp;lt;unistd.h&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.  int
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.  main (int argc, char **argv)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;5  {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.      char path[0xFF];
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.      char content[0xFF];
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.      int fd;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.      ssize_t written;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;2      if (argc &amp;lt; 3) {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.     fprintf (stderr, &amp;quot;usage: %s &amp;lt;filename&amp;gt; &amp;lt;content&amp;gt;n&amp;quot;, argv[0]);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.     return 1;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.      }
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;7      strcpy (path, argv[1]);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;21  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;strcpy-sse2-unaligned.S:__strcpy_sse2_unaligned (1x)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;799  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;dl-trampoline.S:_dl_runtime_resolve (1x)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;8      sprintf (content, &amp;quot;%sn&amp;quot;, argv[2]);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;1,188  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;stdio-common&#x2F;sprintf.c:sprintf (1x)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;805  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;dl-trampoline.S:_dl_runtime_resolve (1x)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;5      fd = creat (path, S_IRWXU);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;766  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;dl-trampoline.S:_dl_runtime_resolve (1x)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;7  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;io&#x2F;..&#x2F;sysdeps&#x2F;unix&#x2F;syscall-template.S:creat (1x)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;2      if (fd == -1) {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.     fprintf (stderr, &amp;quot;open error: %s (&amp;#39;%s&amp;#39;)n&amp;quot;, strerror (errno), path);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.     return 1;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.      }
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;10      written = write (fd, content, strlen (content));
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;7  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;io&#x2F;..&#x2F;sysdeps&#x2F;unix&#x2F;syscall-template.S:write (1x)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;14  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;strlen-sse2-pminub.S:__strlen_sse2_pminub (1x)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;1,567  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;dl-trampoline.S:_dl_runtime_resolve (2x)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;2      if (written == -1) {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.     fprintf (stderr, &amp;quot;write error: %s (&amp;#39;%s&amp;#39;)n&amp;quot;, strerror (errno), path);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.     return 1;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.      }
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;1      return 0;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;2  }
+.  #include &amp;lt;string.h&amp;gt;
+.  #include &amp;lt;errno.h&amp;gt;
+.  #include &amp;lt;stdio.h&amp;gt;
+.  #include &amp;lt;fcntl.h&amp;gt;
+.  #include &amp;lt;unistd.h&amp;gt;
+.
+.  int
+.  main (int argc, char **argv)
+5  {
+.      char path[0xFF];
+.      char content[0xFF];
+.      int fd;
+.      ssize_t written;
+.
+2      if (argc &amp;lt; 3) {
+.     fprintf (stderr, &amp;quot;usage: %s &amp;lt;filename&amp;gt; &amp;lt;content&amp;gt;n&amp;quot;, argv[0]);
+.     return 1;
+.      }
+.
+7      strcpy (path, argv[1]);
+21  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;strcpy-sse2-unaligned.S:__strcpy_sse2_unaligned (1x)
+799  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;dl-trampoline.S:_dl_runtime_resolve (1x)
+8      sprintf (content, &amp;quot;%sn&amp;quot;, argv[2]);
+1,188  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;stdio-common&#x2F;sprintf.c:sprintf (1x)
+805  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;dl-trampoline.S:_dl_runtime_resolve (1x)
+.
+5      fd = creat (path, S_IRWXU);
+766  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;dl-trampoline.S:_dl_runtime_resolve (1x)
+7  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;io&#x2F;..&#x2F;sysdeps&#x2F;unix&#x2F;syscall-template.S:creat (1x)
+2      if (fd == -1) {
+.     fprintf (stderr, &amp;quot;open error: %s (&#x27;%s&#x27;)n&amp;quot;, strerror (errno), path);
+.     return 1;
+.      }
+.
+10      written = write (fd, content, strlen (content));
+7  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;io&#x2F;..&#x2F;sysdeps&#x2F;unix&#x2F;syscall-template.S:write (1x)
+14  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;strlen-sse2-pminub.S:__strlen_sse2_pminub (1x)
+1,567  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;dl-trampoline.S:_dl_runtime_resolve (2x)
+2      if (written == -1) {
+.     fprintf (stderr, &amp;quot;write error: %s (&#x27;%s&#x27;)n&amp;quot;, strerror (errno), path);
+.     return 1;
+.      }
+1      return 0;
+2  }
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Ir
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0  percentage of events annotated
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+---++++++--
+Ir
+---++++++--
+0  percentage of events annotated
+&lt;&#x2F;pre&gt;
 &lt;p&gt;As an aside, note that the indentation is messed up a bit.&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;p&gt;Since I normally work at too high a level to care about CPU instructions
@@ -9520,8 +9517,8 @@ how long this one relationship lasts.&lt;&#x2F;p&gt;
 &lt;li&gt;
 &lt;p&gt;When building, it fails with:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[E 130413 20:53:48 base:42] &amp;#39;None&amp;#39; has no attribute &amp;#39;strftime&amp;#39;
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
+[E 130413 20:53:48 base:42] &#x27;None&#x27; has no attribute &#x27;strftime&#x27;
+&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lianqin7&#x2F;liquidluck-theme-icbu&quot;&gt;icbu&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;demo-icbu.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;):
@@ -9529,8 +9526,8 @@ how long this one relationship lasts.&lt;&#x2F;p&gt;
 &lt;li&gt;
 &lt;p&gt;When building, I get 2 of these messages:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[E 130413 23:40:19 base:42] &amp;#39;dict object&amp;#39; has no attribute &amp;#39;package&amp;#39;
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
+[E 130413 23:40:19 base:42] &#x27;dict object&#x27; has no attribute &#x27;package&#x27;
+&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lepture&#x2F;liquidluck-theme-octopress&quot;&gt;octopress&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;demo-octopress.tshepang.net&quot;&gt;demo&lt;&#x2F;a&gt;):
@@ -9538,8 +9535,8 @@ how long this one relationship lasts.&lt;&#x2F;p&gt;
 &lt;li&gt;
 &lt;p&gt;When building, I get 4 of these messages:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[E 130413 23:33:53 base:42] list index out of range
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
+[E 130413 23:33:53 base:42] list index out of range
+&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lepture&#x2F;liquidluck-theme-bootstrap&quot;&gt;bootstrap&lt;&#x2F;a&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lepture&#x2F;liquidluck-theme-bootstrap&#x2F;issues&#x2F;1&quot;&gt;broken&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -13671,10 +13668,10 @@ next user-visible change.&lt;&#x2F;p&gt;
 &lt;p&gt;There is less magic and more strictness. Previously, these commands
 resulted in the same outcome:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;wajig REMOVEORPHANS
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;wajig REMOVE-ORPHANS
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;wajig R-____EMOVE-ORPH+++-___AN_S
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+wajig REMOVEORPHANS
+wajig REMOVE-ORPHANS
+wajig R-____EMOVE-ORPH+++-___AN_S
+&lt;&#x2F;pre&gt;
 &lt;p&gt;What wajig did was simply sanitise the commands, getting rid of the
 junk. Well, I don&#x27;t like that, but since I didn&#x27;t want to break
 people&#x27;s commands&#x2F;aliases&#x2F;scripts I actually tried to preserve that
@@ -13746,8 +13743,8 @@ also keep them in a local custom repository. I use a great tool named
 &lt;a href=&quot;https:&#x2F;&#x2F;salsa.debian.org&#x2F;brlink&#x2F;reprepro&quot;&gt;reprepro&lt;&#x2F;a&gt; for this, and this is the command I use to update that
 repository, given the location of the fresh package files:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ reprepro -vv --basedir ~&#x2F;.custom_repo&#x2F; includedeb tshepang &#x2F;var&#x2F;cache&#x2F;apt&#x2F;archives&#x2F;*deb
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ reprepro -vv --basedir ~&#x2F;.custom_repo&#x2F; includedeb tshepang &#x2F;var&#x2F;cache&#x2F;apt&#x2F;archives&#x2F;*deb
+&lt;&#x2F;pre&gt;
 &lt;p&gt;What&#x27;s nice about the command is that, if there is an older version of
 the package I&#x27;m adding, it gets replaced, and the package index is
 updated accordingly.&lt;&#x2F;p&gt;
@@ -13806,15 +13803,15 @@ usage).&lt;&#x2F;li&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;And here&#x27;s a snippet of its output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cx-oracle:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  Installed: 5.1.1-2
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  Candidate: 5.1.1-2
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  Version table:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; *** 5.1.1-2 0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        500 file:&#x2F;home&#x2F;wena&#x2F;.custom_repo&#x2F; tshepang&#x2F;main i386 Packages
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        100 &#x2F;var&#x2F;lib&#x2F;dpkg&#x2F;status
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;remove from cache [Y&#x2F;n]?
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+cx-oracle:
+  Installed: 5.1.1-2
+  Candidate: 5.1.1-2
+  Version table:
+ *** 5.1.1-2 0
+        500 file:&#x2F;home&#x2F;wena&#x2F;.custom_repo&#x2F; tshepang&#x2F;main i386 Packages
+        100 &#x2F;var&#x2F;lib&#x2F;dpkg&#x2F;status
+remove from cache [Y&#x2F;n]?
+&lt;&#x2F;pre&gt;
 &lt;p&gt;What it does is look for packages which are only available in my custom
 repository, as compared with the one in Wheezy (soon to be Debian 7). It
 then prompts me on whether or not to remove it from that custom
@@ -18086,20 +18083,6 @@ Good ole cheap action-comedy.&lt;&#x2F;p&gt;
             </item>
         
             <item>
-                <title>The Cat In The Hat (2003)</title>
-                <pubDate>Sun, 20 Feb 2011 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/the-cat-in-the-hat-2003/</link>
-                <guid>http://tshepang.net/the-cat-in-the-hat-2003/</guid>
-                <description>&lt;p&gt;One of these days I&#x27;m simply going to have to admit the world&#x27;s movie
-critics are quite strange, and I really can&#x27;t rely on them for what
-they consider excellent. Take for example their thoughts on &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;The_Cat_in_the_Hat_(film)#Reception&quot;&gt;&lt;em&gt;The Cat
-in the Hat&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;. This is because I find it really great family
-entertainment. It&#x27;s great fantasy and very funny, with great production
-design.&lt;&#x2F;p&gt;
-</description>
-            </item>
-        
-            <item>
                 <title>The Ministers (2009)</title>
                 <pubDate>Sun, 20 Feb 2011 00:00:00 +0000</pubDate>
                 <link>http://tshepang.net/the-ministers-2009/</link>
@@ -18563,13 +18546,13 @@ for pkg in repo1:
 &lt;p&gt;The line &lt;code&gt;import apt_pkg&lt;&#x2F;code&gt; implies that &lt;strong&gt;python3-apt&lt;&#x2F;strong&gt; is installed.&lt;&#x2F;p&gt;
 &lt;p&gt;Here&#x27;s a snippet of what the output will look like:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;2.32.1-2    2.28.1-6    (gconf-defaults-service)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0.23.0-1    0.21.1-1    (pylint)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;2.91.5-2    2.30.2-2    (libgnomekbd-common)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0.21.2-1    0.16.4-1    (libpixman-1-dev)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;2.91.7-1    2.30.1-2    (nautilus)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0.9.22-1    0.9.21-3    (pulseaudio-utils)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+2.32.1-2    2.28.1-6    (gconf-defaults-service)
+0.23.0-1    0.21.1-1    (pylint)
+2.91.5-2    2.30.2-2    (libgnomekbd-common)
+0.21.2-1    0.16.4-1    (libpixman-1-dev)
+2.91.7-1    2.30.1-2    (nautilus)
+0.9.22-1    0.9.21-3    (pulseaudio-utils)
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Here, we get a display of package versions where the repo1 (custom repo
 in this case) is greater than repo2 version. To do it the other way
 around, use the &lt;code&gt;&amp;lt;&lt;&#x2F;code&gt; character in the comparison line, &lt;code&gt;if vc &amp;gt; 0&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
@@ -18771,8 +18754,8 @@ print(split_string)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;I can go ahead and specify a delimiter (which character the string must
 split on):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -18781,8 +18764,8 @@ print(split_string)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;I get the same result:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;But what if my string wasn&#x27;t so forgiving?&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;split_string = &amp;quot;a b  c&amp;quot;.split(&amp;quot; &amp;quot;)
@@ -18790,8 +18773,8 @@ print(split_string)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;&amp;#39;, &amp;#39;c&amp;#39;]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[&#x27;a&#x27;, &#x27;b&#x27;, &#x27;&#x27;, &#x27;c&#x27;]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Not exactly what we want. Leaving the delimiter out gives us the exact
 same list as when we had this with a forgiving string.&lt;&#x2F;p&gt;
 &lt;p&gt;Anyways, the point is that for a lot of cases, probably a majority, when
@@ -18808,8 +18791,8 @@ System.out.println(Arrays.asList(splitString));
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[a, b, , c]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[a, b, , c]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;That&#x27;s not what we want, so in order to cover for my unforgiving
 string, I get to use regular expressions (regexp)?&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -18819,8 +18802,8 @@ System.out.println(Arrays.asList(splitString));
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[a, b, c]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[a, b, c]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;The &lt;code&gt;+&lt;&#x2F;code&gt; in the &lt;code&gt;split()&lt;&#x2F;code&gt; method indicates that the match can either be
 one or more consecutive spaces.&lt;&#x2F;p&gt;
 &lt;p&gt;That&#x27;s not what we want, so in order to cover for my unforgiving
@@ -18831,8 +18814,8 @@ System.out.println(Arrays.asList(splitString));
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[a, b, c]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[a, b, c]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;But what if the string was even less forgiving. In this case, having
 tabs as well? We need some more regexp help:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -18842,8 +18825,8 @@ System.out.println(Arrays.asList(splitString));
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[a, b, c]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[a, b, c]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;The &lt;code&gt;s&lt;&#x2F;code&gt; matches any white space.&lt;&#x2F;p&gt;
 &lt;p&gt;With Python, I expected the default way to work but it didn&#x27;t, but came
 back disappointed:&lt;&#x2F;p&gt;
@@ -18853,8 +18836,8 @@ print(split_string)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[&amp;#39;at&amp;#39;, &amp;#39;bnc&amp;#39;]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[&#x27;at&#x27;, &#x27;bnc&#x27;]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Perhaps it&#x27;s a philosophical difference, but it&#x27;s harder to do this
 with Python. This is the only thing so that I found easier to achieve in
 Java than in Python:&lt;&#x2F;p&gt;
@@ -18865,8 +18848,8 @@ print(split_string)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;...and we finally get what we want:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
+[&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;]
+&lt;&#x2F;pre&gt;</description>
             </item>
         
             <item>
@@ -18943,10 +18926,10 @@ and is neither explanied nor justified. The movie remains excellent.&lt;&#x2F;p&
                 <description>&lt;p&gt;Reading &lt;code&gt;.INI&lt;&#x2F;code&gt; files is very easy with Python. Say you had a file,
 &amp;quot;&lt;em&gt;config.cfg&lt;&#x2F;em&gt;&amp;quot;, with this content:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[numbers]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;one: 1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;two: 2
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[numbers]
+one: 1
+two: 2
+&lt;&#x2F;pre&gt;
 &lt;p&gt;The code to read that content is:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import configparser
@@ -18957,8 +18940,8 @@ print(items)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[(&amp;#39;one&amp;#39;, &amp;#39;1&amp;#39;), (&amp;#39;two&amp;#39;, &amp;#39;2&amp;#39;)]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[(&#x27;one&#x27;, &#x27;1&#x27;), (&#x27;two&#x27;, &#x27;2&#x27;)]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;That&#x27;s a list of tuples, each tuple a key-value pair.&lt;&#x2F;p&gt;
 &lt;p&gt;Even better, since these are key-value pairs, why not use a more
 suitable data type? Here goes:&lt;&#x2F;p&gt;
@@ -18971,8 +18954,8 @@ print(items)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;{&amp;#39;two&amp;#39;: &amp;#39;2&amp;#39;, &amp;#39;one&amp;#39;: &amp;#39;1&amp;#39;}
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+{&#x27;two&#x27;: &#x27;2&#x27;, &#x27;one&#x27;: &#x27;1&#x27;}
+&lt;&#x2F;pre&gt;
 &lt;p&gt;That&#x27;s the &lt;strong&gt;dict&lt;&#x2F;strong&gt; function, which takes a list of tuples, and
 converts them to a dictionary. You might also have noticed that the
 ordering is now a bit off. That&#x27;s because the dict type doesn&#x27;t care
@@ -19092,8 +19075,8 @@ subprocess.Popen(&amp;quot;echo test&amp;quot;, shell=True)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;test
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+test
+&lt;&#x2F;pre&gt;
 &lt;p&gt;This is via the kernel:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import subprocess
@@ -19103,8 +19086,8 @@ print(output)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(b&amp;#39;testn&amp;#39;, b&amp;#39;&amp;#39;)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+(b&#x27;testn&#x27;, b&#x27;&#x27;)
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Not exactly what we want. The output is actually a tuple (&lt;strong&gt;stdout&lt;&#x2F;strong&gt;,
 &lt;strong&gt;stderr&lt;&#x2F;strong&gt;). Note that by default, &lt;code&gt;shell=False&lt;&#x2F;code&gt;, and that&#x27;s why it&#x27;s
 not stated here.&lt;&#x2F;p&gt;
@@ -19118,8 +19101,8 @@ print(output[0].decode(), end=&amp;quot;&amp;quot;)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;test
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+test
+&lt;&#x2F;pre&gt;
 &lt;p&gt;The &lt;code&gt;b&lt;&#x2F;code&gt; thing indicates that the string is in bytes format. To get a
 normal string from that, just run the string&#x27;s &lt;a href=&quot;http:&#x2F;&#x2F;docs.python.org&#x2F;library&#x2F;stdtypes.html?highlight=encode#str.decode&quot;&gt;decode method&lt;&#x2F;a&gt;. Also,
 that I had to use the &lt;code&gt;end&lt;&#x2F;code&gt; argument on the &lt;a href=&quot;http:&#x2F;&#x2F;docs.python.org&#x2F;library&#x2F;functions.html#print&quot;&gt;print function&lt;&#x2F;a&gt;, was to
@@ -19180,8 +19163,8 @@ subprocess.Popen(formatted_cmd)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;content of &amp;#39;file with spaces&amp;#39;
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
+content of &#x27;file with spaces&#x27;
+&lt;&#x2F;pre&gt;</description>
             </item>
         
             <item>
@@ -19357,8 +19340,8 @@ which contains all that&#x27;s needed to roll-back, restore, check stats,
 ...).&lt;&#x2F;p&gt;
 &lt;p&gt;My usage:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ rdiff-backup --include-globbing-filelist rdiff-backup ~&#x2F; &#x2F;media&#x2F;backup
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ rdiff-backup --include-globbing-filelist rdiff-backup ~&#x2F; &#x2F;media&#x2F;backup
+&lt;&#x2F;pre&gt;
 &lt;p&gt;There, &lt;code&gt;~&#x2F;conf&#x2F;rdiff-backup&lt;&#x2F;code&gt; is a file that has a list of directories I
 want to exclude in the backup, and &lt;code&gt;&#x2F;media&#x2F;backup&lt;&#x2F;code&gt; is the backup
 destination.&lt;&#x2F;p&gt;
@@ -20480,18 +20463,18 @@ use it to create 2 repos:&lt;&#x2F;p&gt;
 &lt;p&gt;How this works is that I&#x27;d run the following command (an example for
 the source repo):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&#x2F;usr&#x2F;bin&#x2F;debmirror
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; --verbose
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; --progress
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; --host=ftp.sun.ac.za
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; --passive
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; --dist=squeeze
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; --root=ftp&#x2F;debian
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; --section=main
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; --method=ftp
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; --arch=none
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &#x2F;home&#x2F;wena&#x2F;.repo_src
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&#x2F;usr&#x2F;bin&#x2F;debmirror
+ --verbose
+ --progress
+ --host=ftp.sun.ac.za
+ --passive
+ --dist=squeeze
+ --root=ftp&#x2F;debian
+ --section=main
+ --method=ftp
+ --arch=none
+ &#x2F;home&#x2F;wena&#x2F;.repo_src
+&lt;&#x2F;pre&gt;
 &lt;p&gt;(look at debmirror&#x27;s manpage to see what all those options mean)&lt;&#x2F;p&gt;
 &lt;p&gt;The result is that I&#x27;ll be having ~30GB of Debian locally (for a
 comparison, see &lt;a href=&quot;http:&#x2F;&#x2F;www.debian.org&#x2F;mirror&#x2F;size&quot;&gt;total Debian archive size&lt;&#x2F;a&gt;).&lt;&#x2F;p&gt;
@@ -20525,18 +20508,18 @@ deb ftp:&#x2F;&#x2F;ftp.sun.ac.za&#x2F;ftp&#x2F;debian&#x2F; sid main non-free c
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;So, what I do on a semi-regular basis is run:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ wajig update &amp;amp;&amp;amp; wajig upgrade
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ wajig update &amp;amp;&amp;amp; wajig upgrade
+&lt;&#x2F;pre&gt;
 &lt;p&gt;The newly-updated packages are stored in a cache so that a reinstall
 doesn&#x27;t have to fetch from network again. After this I run:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ reprepro -vv --basedir ~&#x2F;.repo_local includedeb cache &#x2F;var&#x2F;cache&#x2F;apt&#x2F;archives&#x2F;*deb
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ reprepro -vv --basedir ~&#x2F;.repo_local includedeb cache &#x2F;var&#x2F;cache&#x2F;apt&#x2F;archives&#x2F;*deb
+&lt;&#x2F;pre&gt;
 &lt;p&gt;This updates the local reprepro repo and after which I can then remove
 the cached packages:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ wajig clean
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ wajig clean
+&lt;&#x2F;pre&gt;
 &lt;p&gt;I do that because they are now available in my reprepro-managed repo.
 That now means that I got a massive mirror managed by debmirror and a
 smaller one managed by reprepro, and I have these on an external drive

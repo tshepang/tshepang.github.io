@@ -1162,18 +1162,18 @@ rust&lt;&#x2F;p&gt;
 &lt;p&gt;fn main() {&lt;&#x2F;p&gt;
 &lt;p&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for n in 0.. {
+for n in 0.. {
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   &#x2F;&#x2F; Rust 1.0 release let initial = NaiveDate::from_ymd(2015, 5,
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    15); &#x2F;&#x2F; 1.0 was released on a Friday, but nowadays they happen
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    Thursdays let release_date =
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    initial.checked_add(Duration::weeks(6 * n)).unwrap() -
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    Duration::days(1); if release_date &amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    Local::today().naive_local() { println!(&amp;quot;{}&amp;quot;, release_date);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    break; }
+:   &#x2F;&#x2F; Rust 1.0 release let initial = NaiveDate::from_ymd(2015, 5,
+    15); &#x2F;&#x2F; 1.0 was released on a Friday, but nowadays they happen
+    Thursdays let release_date =
+    initial.checked_add(Duration::weeks(6 * n)).unwrap() -
+    Duration::days(1); if release_date &amp;gt;
+    Local::today().naive_local() { println!(&amp;quot;{}&amp;quot;, release_date);
+    break; }
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+}
+&lt;&#x2F;pre&gt;
 &lt;p&gt;}
 :::&lt;&#x2F;p&gt;
 </description>
@@ -1224,18 +1224,18 @@ much the same as that of (the more modern) &lt;a href=&quot;https:&#x2F;&#x2F;se
 pondering the magical forward type inference that I first experienced
 &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;rust-week-of-2015-05-29&quot;&gt;back in May&lt;&#x2F;a&gt;, this time sparked by &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;carllerche&#x2F;mio&#x2F;blob&#x2F;getting-started&#x2F;doc&#x2F;getting-started.md#writing-the-echo-server&quot;&gt;this example&lt;&#x2F;a&gt;; see this line:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;let address = &amp;quot;0.0.0.0:6567&amp;quot;.parse().unwrap();
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+let address = &amp;quot;0.0.0.0:6567&amp;quot;.parse().unwrap();
+&lt;&#x2F;pre&gt;
 &lt;p&gt;You actually have to read further to figure the type that URL is going
 to be parsed as:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;let server = TcpListener::bind(&amp;amp;address).unwrap();
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+let server = TcpListener::bind(&amp;amp;address).unwrap();
+&lt;&#x2F;pre&gt;
 &lt;p&gt;It would be less surprising if we had the following instead:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;let address = SocketAddr::from_str(&amp;quot;0.0.0.0:6567&amp;quot;.unwrap();
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;let server = TcpListener::bind(&amp;amp;address).unwrap();
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
+let address = SocketAddr::from_str(&amp;quot;0.0.0.0:6567&amp;quot;.unwrap();
+let server = TcpListener::bind(&amp;amp;address).unwrap();
+&lt;&#x2F;pre&gt;</description>
             </item>
         
             <item>
@@ -1567,49 +1567,49 @@ rust&lt;&#x2F;p&gt;
 &lt;p&gt;fn main() {&lt;&#x2F;p&gt;
 &lt;p&gt;:   let thread_count = 4; let (tx, rx) = channel();&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for x in 0..thread_count {
+for x in 0..thread_count {
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   let tx = tx.clone(); thread::spawn(move || { println!(&amp;quot;t{}
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    tx&amp;quot;, x); tx.send(x).unwrap(); });
+:   let tx = tx.clone(); thread::spawn(move || { println!(&amp;quot;t{}
+    tx&amp;quot;, x); tx.send(x).unwrap(); });
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
+}
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for _ in 0..thread_count {
+for _ in 0..thread_count {
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;:   println!(&amp;quot;rx from t{}&amp;quot;, rx.recv().unwrap());
+:   println!(&amp;quot;rx from t{}&amp;quot;, rx.recv().unwrap());
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+}
+&lt;&#x2F;pre&gt;
 &lt;p&gt;}
 :::&lt;&#x2F;p&gt;
 &lt;p&gt;What I&#x27;m doing there is create 4 child threads, from which I send
 messages that are to be captured by the main thread.&lt;&#x2F;p&gt;
 &lt;p&gt;I built and ran it with:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rustc --opt-level 0 main.rs &amp;amp;&amp;amp; .&#x2F;main
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+rustc --opt-level 0 main.rs &amp;amp;&amp;amp; .&#x2F;main
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Following is output from one sample run:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;t1 tx
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;t0 tx
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;t2 tx
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;t3 tx
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rx from t1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rx from t0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rx from t3
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rx from t2
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+t1 tx
+t0 tx
+t2 tx
+t3 tx
+rx from t1
+rx from t0
+rx from t3
+rx from t2
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Following is what I get with another run:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;t0 tx
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;t1 tx
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rx from t1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;t2 tx
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rx from t2
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;t3 tx
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rx from t3
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;rx from t0
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+t0 tx
+t1 tx
+rx from t1
+t2 tx
+rx from t2
+t3 tx
+rx from t3
+rx from t0
+&lt;&#x2F;pre&gt;
 &lt;p&gt;If it was all deterministic (i.e. predictable), &lt;code&gt;t0 tx&lt;&#x2F;code&gt; would always
 come before &lt;code&gt;t1 tx&lt;&#x2F;code&gt;, and &lt;code&gt;rx from t0&lt;&#x2F;code&gt; before &lt;code&gt;rx from t1&lt;&#x2F;code&gt;, and so on.&lt;&#x2F;p&gt;
 &lt;p&gt;I think this is done for performance reasons, where the kernel just
@@ -1677,16 +1677,16 @@ an &lt;code&gt;i32&lt;&#x2F;code&gt; value, in which it will succeed:&lt;&#x2F;p
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Inverse: 0.1
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+Inverse: 0.1
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Any other type will fail:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#96b5b4;&quot;&gt;print_inverse&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10_&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;f64&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;);
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;the trait `Invert` is not implemented for the type `f64` [E0277]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+the trait `Invert` is not implemented for the type `f64` [E0277]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;This allows for a feature named generics, where one can use multiple
 types for the same function. For example, that error will disappear
 if you got this:&lt;&#x2F;p&gt;
@@ -1716,11 +1716,11 @@ if you got this:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;I do however get this warning when I build it:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ rustc main.rs
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;main.rs:4:5: 4:42 warning: unused result which must be used, #[warn(unused_must_use)] on by default
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;main.rs:4     io::stdout().write_ln(b&amp;quot;some output&amp;quot;);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ rustc main.rs
+main.rs:4:5: 4:42 warning: unused result which must be used, #[warn(unused_must_use)] on by default
+main.rs:4     io::stdout().write_ln(b&amp;quot;some output&amp;quot;);
+              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Let&#x27;s kill it:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#b48ead;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;std::io::{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;, Write};
@@ -1794,9 +1794,9 @@ the following:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;You can test that it really goes to stderr by running it like:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ .&#x2F;main &amp;gt; &#x2F;dev&#x2F;null
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;some output
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
+$ .&#x2F;main &amp;gt; &#x2F;dev&#x2F;null
+some output
+&lt;&#x2F;pre&gt;</description>
             </item>
         
             <item>
@@ -1902,18 +1902,18 @@ rust&lt;&#x2F;p&gt;
 &lt;p&gt;fn main() {&lt;&#x2F;p&gt;
 &lt;p&gt;:   let a = 0i8; let b = 0i8; let c = 0i8;&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;println!(&amp;quot;{:p}&amp;quot;, &amp;amp;a); println!(&amp;quot;{:p}&amp;quot;, &amp;amp;b); println!(&amp;quot;{:p}&amp;quot;,
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;amp;c);
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+println!(&amp;quot;{:p}&amp;quot;, &amp;amp;a); println!(&amp;quot;{:p}&amp;quot;, &amp;amp;b); println!(&amp;quot;{:p}&amp;quot;,
+&amp;amp;c);
+&lt;&#x2F;pre&gt;
 &lt;p&gt;}
 :::&lt;&#x2F;p&gt;
 &lt;p&gt;We build and run it like this:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ rustc main.rs &amp;amp;&amp;amp; .&#x2F;main
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7fff0c8d16d7
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7fff0c8d16d6
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7fff0c8d16d5
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ rustc main.rs &amp;amp;&amp;amp; .&#x2F;main
+0x7fff0c8d16d7
+0x7fff0c8d16d6
+0x7fff0c8d16d5
+&lt;&#x2F;pre&gt;
 &lt;p&gt;In our code, the three variables are each given 1 byte of memory (&lt;code&gt;i8&lt;&#x2F;code&gt;
 means 8-bit integer). The addresses are given in reverse order. An
 explanation I heard is so that the heap grows the opposite direction to
@@ -1926,34 +1926,34 @@ rust&lt;&#x2F;p&gt;
 &lt;p&gt;fn main() {&lt;&#x2F;p&gt;
 &lt;p&gt;:   let a = 0i16; let b = 0i16; let c = 0i16;&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;println!(&amp;quot;{:p}&amp;quot;, &amp;amp;a); println!(&amp;quot;{:p}&amp;quot;, &amp;amp;b); println!(&amp;quot;{:p}&amp;quot;,
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;amp;c);
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+println!(&amp;quot;{:p}&amp;quot;, &amp;amp;a); println!(&amp;quot;{:p}&amp;quot;, &amp;amp;b); println!(&amp;quot;{:p}&amp;quot;,
+&amp;amp;c);
+&lt;&#x2F;pre&gt;
 &lt;p&gt;}
 :::&lt;&#x2F;p&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ rustc main.rs &amp;amp;&amp;amp; .&#x2F;main
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7fff2462aed6
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7fff2462aed4
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7fff2462aed2
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ rustc main.rs &amp;amp;&amp;amp; .&#x2F;main
+0x7fff2462aed6
+0x7fff2462aed4
+0x7fff2462aed2
+&lt;&#x2F;pre&gt;
 &lt;p&gt;In this case, each of the variables take 2 addresses (&lt;code&gt;i16&lt;&#x2F;code&gt; means 16-bit
 integer). Using &lt;code&gt;i32&lt;&#x2F;code&gt; results in each taking 4 addresses:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ rustc main.rs &amp;amp;&amp;amp; .&#x2F;main
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7ffff7706024
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7ffff7706020
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7ffff770601c
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ rustc main.rs &amp;amp;&amp;amp; .&#x2F;main
+0x7ffff7706024
+0x7ffff7706020
+0x7ffff770601c
+&lt;&#x2F;pre&gt;
 &lt;p&gt;And then, finally, &lt;code&gt;i64&lt;&#x2F;code&gt; results in each variable taking 8 addresses (64
 bits) of space:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ rustc main.rs &amp;amp;&amp;amp; .&#x2F;main
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7fffd27383b0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7fffd27383a8
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0x7fffd27383a0
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
+$ rustc main.rs &amp;amp;&amp;amp; .&#x2F;main
+0x7fffd27383b0
+0x7fffd27383a8
+0x7fffd27383a0
+&lt;&#x2F;pre&gt;</description>
             </item>
         
     </channel>

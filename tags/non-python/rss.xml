@@ -56,93 +56,93 @@ found &lt;em&gt;while&lt;&#x2F;em&gt; and &lt;em&gt;for&lt;&#x2F;em&gt; not intu
 preferred alternatives are &lt;em&gt;repeat&lt;&#x2F;em&gt; and &lt;em&gt;loop&lt;&#x2F;em&gt;. Of these, I prefer
 &lt;em&gt;loop&lt;&#x2F;em&gt;, but it does not read as well as &lt;em&gt;while&lt;&#x2F;em&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;while count &amp;lt; 3:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    count = action()
+while count &amp;lt; 3:
+    count = action()
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop count &amp;lt; 3:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    count = action()
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+loop count &amp;lt; 3:
+    count = action()
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Quorum, the language by those responsible for this paper, went with:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;repeat while (count &amp;lt; 3)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    count = action()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;end
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+repeat while (count &amp;lt; 3)
+    count = action()
+end
+&lt;&#x2F;pre&gt;
 &lt;p&gt;To mimic that in Python, any of the following two sound fine (I prefer
 &lt;em&gt;if&lt;&#x2F;em&gt; to &lt;em&gt;while&lt;&#x2F;em&gt;; less syntax is better):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;repeat if count &amp;lt; 3:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    count = action()
+repeat if count &amp;lt; 3:
+    count = action()
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop if count &amp;lt; 3:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    count = action()
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+loop if count &amp;lt; 3:
+    count = action()
+&lt;&#x2F;pre&gt;
 &lt;p&gt;That means an infinite loop would be:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop if True:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action()
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+loop if True:
+    action()
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Or for that special case, a shortcut can just be this simple:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action()
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+loop:
+    action()
+&lt;&#x2F;pre&gt;
 &lt;p&gt;I wonder what cycling through items in a container would look like. In
 Python, it looks like:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for item in container:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action(item)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+for item in container:
+    action(item)
+&lt;&#x2F;pre&gt;
 &lt;p&gt;This feels as natural as anything, but then again I been doing Python
 for a number of years, so the bias could be heavy. Following is an
 attempt:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop in range(3):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action()
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+loop in range(3):
+    action()
+&lt;&#x2F;pre&gt;
 &lt;p&gt;It mimics this Python syntax, which I actually don&#x27;t like, since we
 don&#x27;t always need the items of the container:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for _ in range(3):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action()
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+for _ in range(3):
+    action()
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Quorum, the academic language mentioned above, does it like:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;repeat 3 times
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;end
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+repeat 3 times
+    action()
+end
+&lt;&#x2F;pre&gt;
 &lt;p&gt;I don&#x27;t like that either; feels contrived. The Python way strikes me as
 a good compromise, especially given how general it is. I will try again
 with the &lt;em&gt;loop&lt;&#x2F;em&gt; syntax:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop item in container:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action(item)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+loop item in container:
+    action(item)
+&lt;&#x2F;pre&gt;
 &lt;p&gt;You have to admit it doesn&#x27;t read as nice as:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for item in container:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action(item)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+for item in container:
+    action(item)
+&lt;&#x2F;pre&gt;
 &lt;p&gt;It should be flexible to accommodate more than just one value on each
 iteration, so should have an equivalent for this Python code:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for index, item in enumerate(container):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action(index, item)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+for index, item in enumerate(container):
+    action(index, item)
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Here goes:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop index, item in enumerate(container):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action(index, item)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+loop index, item in enumerate(container):
+    action(index, item)
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Now, for the much-loved Python list comprehensions:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[procedure(item) for item in container]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[procedure(item) for item in container]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;We would instead have:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[procedure(item) loop item in container]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[procedure(item) loop item in container]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;So, apart from being highly-rated for being intuitive, &lt;em&gt;loop&lt;&#x2F;em&gt; also
 provides a consistent looping construct, whereas Python has 2, &lt;em&gt;while&lt;&#x2F;em&gt;
 and &lt;em&gt;for&lt;&#x2F;em&gt;, both of which received low points in the study. Interesting.&lt;&#x2F;p&gt;
@@ -204,167 +204,167 @@ that will be written to that file:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Build command (using GCC 4.8.1):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;gcc -Wall -pedantic -g play.c -o play
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+gcc -Wall -pedantic -g play.c -o play
+&lt;&#x2F;pre&gt;
 &lt;p&gt;System details:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ uname --all
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Linux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU&#x2F;Linux
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ sudo lshw -class processor
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;*-cpu
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     description: CPU
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     product: Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     vendor: Intel Corp.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     physical id: 4
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     bus info: cpu@0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     version: Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     serial: To Be Filled By O.E.M.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     slot: CPU 1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     size: 2300MHz
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     capacity: 4GHz
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     width: 64 bits
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     clock: 100MHz
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     capabilities: x86-64 fpu fpu_exception wp vme de pse tsc msr
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     constant_tsc arch_perfmon pebs bts rep_good nopl xtopology
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     x2apic popcnt tsc_deadline_timer xsave avx lahf_lm ida arat epb
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     aes cpufreq
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;     configuration: cores=2 enabledcores=1 threads=2
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ uname --all
+Linux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU&#x2F;Linux
+$ sudo lshw -class processor
+*-cpu
+     description: CPU
+     product: Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz
+     vendor: Intel Corp.
+     physical id: 4
+     bus info: cpu@0
+     version: Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz
+     serial: To Be Filled By O.E.M.
+     slot: CPU 1
+     size: 2300MHz
+     capacity: 4GHz
+     width: 64 bits
+     clock: 100MHz
+     capabilities: x86-64 fpu fpu_exception wp vme de pse tsc msr
+     pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts
+     acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp
+     constant_tsc arch_perfmon pebs bts rep_good nopl xtopology
+     nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor
+     ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2
+     x2apic popcnt tsc_deadline_timer xsave avx lahf_lm ida arat epb
+     xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid
+     aes cpufreq
+     configuration: cores=2 enabledcores=1 threads=2
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Running the resulting binary with &lt;strong&gt;Callgrind&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ valgrind --tool=callgrind --callgrind-out-file=out .&#x2F;play filename
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;filecontent
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;==5308== Callgrind, a call-graph generating cache profiler
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;==5308== Copyright (C) 2002-2012, and GNU GPL&amp;#39;d, by Josef Weidendorfer
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;et al.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;==5308== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;info
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;==5308== Command: .&#x2F;play filename filecontent
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;==5308==
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;==5308== For interactive control, run &amp;#39;callgrind_control -h&amp;#39;.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;==5308==
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;==5308== Events    : Ir
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;==5308== Collected : 107520
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;==5308==
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;==5308== I   refs:      107,520
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ cat filename
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;filecontent
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ valgrind --tool=callgrind --callgrind-out-file=out .&#x2F;play filename
+filecontent
+==5308== Callgrind, a call-graph generating cache profiler
+==5308== Copyright (C) 2002-2012, and GNU GPL&#x27;d, by Josef Weidendorfer
+et al.
+==5308== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright
+info
+==5308== Command: .&#x2F;play filename filecontent
+==5308==
+==5308== For interactive control, run &#x27;callgrind_control -h&#x27;.
+==5308==
+==5308== Events    : Ir
+==5308== Collected : 107520
+==5308==
+==5308== I   refs:      107,520
+$ cat filename
+filecontent
+&lt;&#x2F;pre&gt;
 &lt;p&gt;And finally, seeing closely the cost of each function call, where &lt;strong&gt;Ir&lt;&#x2F;strong&gt;
 stands for &lt;strong&gt;Instruction cache reads&lt;&#x2F;strong&gt;, which you can read as &lt;em&gt;number of
 CPU instructions&lt;&#x2F;em&gt;. I have used &lt;code&gt;tree=calling&lt;&#x2F;code&gt; option so that I can see
 the cost of all operations called by a parent (marked with a &lt;code&gt;*&lt;&#x2F;code&gt;) :&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ callgrind_annotate --tree=calling out play.c
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Profile data file &amp;#39;out&amp;#39; (creator: callgrind-3.8.1)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;I1 cache:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;D1 cache:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;LL cache:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Timerange: Basic block 0 - 22326
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Trigger: Program termination
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Profiled target:  .&#x2F;play filename filecontent (PID 5308, part 1)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Events recorded:  Ir
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Events shown:     Ir
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Event sort order: Ir
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Thresholds:       99
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Include dirs:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;User annotated:   play.c
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Auto-annotation:  off
+$ callgrind_annotate --tree=calling out play.c
+---++++++--
+Profile data file &#x27;out&#x27; (creator: callgrind-3.8.1)
+---++++++--
+I1 cache:
+D1 cache:
+LL cache:
+Timerange: Basic block 0 - 22326
+Trigger: Program termination
+Profiled target:  .&#x2F;play filename filecontent (PID 5308, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:
+User annotated:   play.c
+Auto-annotation:  off
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Ir
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;107,520  PROGRAM TOTALS
+---++++++--
+Ir
+---++++++--
+107,520  PROGRAM TOTALS
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Ir  file:function
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
+---++++++--
+Ir  file:function
+---++++++--
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;24,113  *  &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;dl-lookup.c:do_lookup_x [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;1,053  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;dl-misc.c:_dl_name_match_p (25x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;13,423  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;dl-lookup.c:check_match.9345 (88x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
+24,113  *  &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;dl-lookup.c:do_lookup_x [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
+1,053  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;dl-misc.c:_dl_name_match_p (25x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
+13,423  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;dl-lookup.c:check_match.9345 (88x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;18,264  *  &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;dl-lookup.c:_dl_lookup_symbol_x [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;38,589  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;dl-lookup.c:do_lookup_x (94x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
+18,264  *  &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;dl-lookup.c:_dl_lookup_symbol_x [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
+38,589  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;dl-lookup.c:do_lookup_x (94x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;15,836  *  &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;dl-machine.h:_dl_relocate_object
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;13  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;memmove.c:memcpy@GLIBC_2.2.5 (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;81  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;strcmp.S:strcasecmp (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;6  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;strcmp.S:strncasecmp (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;7  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;memset.S:memset (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;51,501  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;dl-lookup.c:_dl_lookup_symbol_x (86x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;18  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;..&#x2F;memcpy.S:memcpy (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;67  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;time&#x2F;..&#x2F;sysdeps&#x2F;unix&#x2F;sysv&#x2F;linux&#x2F;x86_64&#x2F;time.c:time (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;67  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;time&#x2F;..&#x2F;sysdeps&#x2F;unix&#x2F;sysv&#x2F;linux&#x2F;x86_64&#x2F;gettimeofday.c:gettimeofday (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;6  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;strnlen.S:strnlen (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[snip; to be continued]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+15,836  *  &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;dl-machine.h:_dl_relocate_object
+13  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;memmove.c:memcpy@GLIBC_2.2.5 (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
+81  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;strcmp.S:strcasecmp (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
+6  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;strcmp.S:strncasecmp (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
+7  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;memset.S:memset (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
+51,501  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;dl-lookup.c:_dl_lookup_symbol_x (86x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
+18  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;..&#x2F;memcpy.S:memcpy (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;ld-2.17.so]
+67  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;time&#x2F;..&#x2F;sysdeps&#x2F;unix&#x2F;sysv&#x2F;linux&#x2F;x86_64&#x2F;time.c:time (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
+67  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;time&#x2F;..&#x2F;sysdeps&#x2F;unix&#x2F;sysv&#x2F;linux&#x2F;x86_64&#x2F;gettimeofday.c:gettimeofday (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
+6  &amp;gt;   &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;strnlen.S:strnlen (1x) [&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libc-2.17.so]
+[snip; to be continued]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;I have trimmed the output to bring focus to the most interesting output
 of all, which is the total cost for each line of my code:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[continued]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-- User-annotated source: play.c
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Ir
+[continued]
+---++++++--
+-- User-annotated source: play.c
+---++++++--
+Ir
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.  #include &amp;lt;string.h&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.  #include &amp;lt;errno.h&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.  #include &amp;lt;stdio.h&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.  #include &amp;lt;fcntl.h&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.  #include &amp;lt;unistd.h&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.  int
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.  main (int argc, char **argv)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;5  {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.      char path[0xFF];
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.      char content[0xFF];
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.      int fd;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.      ssize_t written;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;2      if (argc &amp;lt; 3) {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.     fprintf (stderr, &amp;quot;usage: %s &amp;lt;filename&amp;gt; &amp;lt;content&amp;gt;n&amp;quot;, argv[0]);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.     return 1;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.      }
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;7      strcpy (path, argv[1]);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;21  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;strcpy-sse2-unaligned.S:__strcpy_sse2_unaligned (1x)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;799  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;dl-trampoline.S:_dl_runtime_resolve (1x)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;8      sprintf (content, &amp;quot;%sn&amp;quot;, argv[2]);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;1,188  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;stdio-common&#x2F;sprintf.c:sprintf (1x)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;805  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;dl-trampoline.S:_dl_runtime_resolve (1x)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;5      fd = creat (path, S_IRWXU);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;766  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;dl-trampoline.S:_dl_runtime_resolve (1x)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;7  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;io&#x2F;..&#x2F;sysdeps&#x2F;unix&#x2F;syscall-template.S:creat (1x)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;2      if (fd == -1) {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.     fprintf (stderr, &amp;quot;open error: %s (&amp;#39;%s&amp;#39;)n&amp;quot;, strerror (errno), path);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.     return 1;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.      }
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;10      written = write (fd, content, strlen (content));
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;7  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;io&#x2F;..&#x2F;sysdeps&#x2F;unix&#x2F;syscall-template.S:write (1x)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;14  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;strlen-sse2-pminub.S:__strlen_sse2_pminub (1x)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;1,567  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;dl-trampoline.S:_dl_runtime_resolve (2x)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;2      if (written == -1) {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.     fprintf (stderr, &amp;quot;write error: %s (&amp;#39;%s&amp;#39;)n&amp;quot;, strerror (errno), path);
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.     return 1;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;.      }
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;1      return 0;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;2  }
+.  #include &amp;lt;string.h&amp;gt;
+.  #include &amp;lt;errno.h&amp;gt;
+.  #include &amp;lt;stdio.h&amp;gt;
+.  #include &amp;lt;fcntl.h&amp;gt;
+.  #include &amp;lt;unistd.h&amp;gt;
+.
+.  int
+.  main (int argc, char **argv)
+5  {
+.      char path[0xFF];
+.      char content[0xFF];
+.      int fd;
+.      ssize_t written;
+.
+2      if (argc &amp;lt; 3) {
+.     fprintf (stderr, &amp;quot;usage: %s &amp;lt;filename&amp;gt; &amp;lt;content&amp;gt;n&amp;quot;, argv[0]);
+.     return 1;
+.      }
+.
+7      strcpy (path, argv[1]);
+21  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;strcpy-sse2-unaligned.S:__strcpy_sse2_unaligned (1x)
+799  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;dl-trampoline.S:_dl_runtime_resolve (1x)
+8      sprintf (content, &amp;quot;%sn&amp;quot;, argv[2]);
+1,188  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;stdio-common&#x2F;sprintf.c:sprintf (1x)
+805  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;dl-trampoline.S:_dl_runtime_resolve (1x)
+.
+5      fd = creat (path, S_IRWXU);
+766  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;dl-trampoline.S:_dl_runtime_resolve (1x)
+7  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;io&#x2F;..&#x2F;sysdeps&#x2F;unix&#x2F;syscall-template.S:creat (1x)
+2      if (fd == -1) {
+.     fprintf (stderr, &amp;quot;open error: %s (&#x27;%s&#x27;)n&amp;quot;, strerror (errno), path);
+.     return 1;
+.      }
+.
+10      written = write (fd, content, strlen (content));
+7  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;io&#x2F;..&#x2F;sysdeps&#x2F;unix&#x2F;syscall-template.S:write (1x)
+14  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;string&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;multiarch&#x2F;strlen-sse2-pminub.S:__strlen_sse2_pminub (1x)
+1,567  =&amp;gt; &#x2F;build&#x2F;eglibc-TepTGA&#x2F;eglibc-2.17&#x2F;elf&#x2F;..&#x2F;sysdeps&#x2F;x86_64&#x2F;dl-trampoline.S:_dl_runtime_resolve (2x)
+2      if (written == -1) {
+.     fprintf (stderr, &amp;quot;write error: %s (&#x27;%s&#x27;)n&amp;quot;, strerror (errno), path);
+.     return 1;
+.      }
+1      return 0;
+2  }
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Ir
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;---++++++--
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0  percentage of events annotated
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+---++++++--
+Ir
+---++++++--
+0  percentage of events annotated
+&lt;&#x2F;pre&gt;
 &lt;p&gt;As an aside, note that the indentation is messed up a bit.&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;p&gt;Since I normally work at too high a level to care about CPU instructions
@@ -702,8 +702,8 @@ print(split_string)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;I can go ahead and specify a delimiter (which character the string must
 split on):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -712,8 +712,8 @@ print(split_string)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;I get the same result:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;But what if my string wasn&#x27;t so forgiving?&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;split_string = &amp;quot;a b  c&amp;quot;.split(&amp;quot; &amp;quot;)
@@ -721,8 +721,8 @@ print(split_string)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;&amp;#39;, &amp;#39;c&amp;#39;]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[&#x27;a&#x27;, &#x27;b&#x27;, &#x27;&#x27;, &#x27;c&#x27;]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Not exactly what we want. Leaving the delimiter out gives us the exact
 same list as when we had this with a forgiving string.&lt;&#x2F;p&gt;
 &lt;p&gt;Anyways, the point is that for a lot of cases, probably a majority, when
@@ -739,8 +739,8 @@ System.out.println(Arrays.asList(splitString));
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[a, b, , c]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[a, b, , c]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;That&#x27;s not what we want, so in order to cover for my unforgiving
 string, I get to use regular expressions (regexp)?&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -750,8 +750,8 @@ System.out.println(Arrays.asList(splitString));
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[a, b, c]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[a, b, c]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;The &lt;code&gt;+&lt;&#x2F;code&gt; in the &lt;code&gt;split()&lt;&#x2F;code&gt; method indicates that the match can either be
 one or more consecutive spaces.&lt;&#x2F;p&gt;
 &lt;p&gt;That&#x27;s not what we want, so in order to cover for my unforgiving
@@ -762,8 +762,8 @@ System.out.println(Arrays.asList(splitString));
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[a, b, c]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[a, b, c]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;But what if the string was even less forgiving. In this case, having
 tabs as well? We need some more regexp help:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -773,8 +773,8 @@ System.out.println(Arrays.asList(splitString));
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[a, b, c]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[a, b, c]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;The &lt;code&gt;s&lt;&#x2F;code&gt; matches any white space.&lt;&#x2F;p&gt;
 &lt;p&gt;With Python, I expected the default way to work but it didn&#x27;t, but came
 back disappointed:&lt;&#x2F;p&gt;
@@ -784,8 +784,8 @@ print(split_string)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[&amp;#39;at&amp;#39;, &amp;#39;bnc&amp;#39;]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[&#x27;at&#x27;, &#x27;bnc&#x27;]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Perhaps it&#x27;s a philosophical difference, but it&#x27;s harder to do this
 with Python. This is the only thing so that I found easier to achieve in
 Java than in Python:&lt;&#x2F;p&gt;
@@ -796,8 +796,8 @@ print(split_string)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;...and we finally get what we want:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
+[&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;]
+&lt;&#x2F;pre&gt;</description>
             </item>
         
             <item>

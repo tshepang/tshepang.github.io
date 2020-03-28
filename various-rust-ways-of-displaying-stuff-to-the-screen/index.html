@@ -140,11 +140,11 @@
 </span></pre>
 <p>I do however get this warning when I build it:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">$ rustc main.rs
-</span><span style="color:#c0c5ce;">main.rs:4:5: 4:42 warning: unused result which must be used, #[warn(unused_must_use)] on by default
-</span><span style="color:#c0c5ce;">main.rs:4     io::stdout().write_ln(b&quot;some output&quot;);
-</span><span style="color:#c0c5ce;">              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-</span></pre>
+$ rustc main.rs
+main.rs:4:5: 4:42 warning: unused result which must be used, #[warn(unused_must_use)] on by default
+main.rs:4     io::stdout().write_ln(b&quot;some output&quot;);
+              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+</pre>
 <p>Let's kill it:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#b48ead;">use </span><span style="color:#c0c5ce;">std::io::{</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">, Write};
@@ -218,9 +218,9 @@ the following:</p>
 </span></pre>
 <p>You can test that it really goes to stderr by running it like:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">$ ./main &gt; /dev/null
-</span><span style="color:#c0c5ce;">some output
-</span></pre>
+$ ./main &gt; /dev/null
+some output
+</pre>
     </div>
 
     

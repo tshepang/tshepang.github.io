@@ -138,8 +138,8 @@ print(split_string)
 </span></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]
-</span></pre>
+['a', 'b', 'c']
+</pre>
 <p>I can go ahead and specify a delimiter (which character the string must
 split on):</p>
 <pre style="background-color:#2b303b;">
@@ -148,8 +148,8 @@ print(split_string)
 </span></pre>
 <p>I get the same result:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]
-</span></pre>
+['a', 'b', 'c']
+</pre>
 <p>But what if my string wasn't so forgiving?</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">split_string = &quot;a b  c&quot;.split(&quot; &quot;)
@@ -157,8 +157,8 @@ print(split_string)
 </span></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">[&#39;a&#39;, &#39;b&#39;, &#39;&#39;, &#39;c&#39;]
-</span></pre>
+['a', 'b', '', 'c']
+</pre>
 <p>Not exactly what we want. Leaving the delimiter out gives us the exact
 same list as when we had this with a forgiving string.</p>
 <p>Anyways, the point is that for a lot of cases, probably a majority, when
@@ -175,8 +175,8 @@ System.out.println(Arrays.asList(splitString));
 </span></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">[a, b, , c]
-</span></pre>
+[a, b, , c]
+</pre>
 <p>That's not what we want, so in order to cover for my unforgiving
 string, I get to use regular expressions (regexp)?</p>
 <pre style="background-color:#2b303b;">
@@ -186,8 +186,8 @@ System.out.println(Arrays.asList(splitString));
 </span></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">[a, b, c]
-</span></pre>
+[a, b, c]
+</pre>
 <p>The <code>+</code> in the <code>split()</code> method indicates that the match can either be
 one or more consecutive spaces.</p>
 <p>That's not what we want, so in order to cover for my unforgiving
@@ -198,8 +198,8 @@ System.out.println(Arrays.asList(splitString));
 </span></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">[a, b, c]
-</span></pre>
+[a, b, c]
+</pre>
 <p>But what if the string was even less forgiving. In this case, having
 tabs as well? We need some more regexp help:</p>
 <pre style="background-color:#2b303b;">
@@ -209,8 +209,8 @@ System.out.println(Arrays.asList(splitString));
 </span></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">[a, b, c]
-</span></pre>
+[a, b, c]
+</pre>
 <p>The <code>s</code> matches any white space.</p>
 <p>With Python, I expected the default way to work but it didn't, but came
 back disappointed:</p>
@@ -220,8 +220,8 @@ print(split_string)
 </span></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">[&#39;at&#39;, &#39;bnc&#39;]
-</span></pre>
+['at', 'bnc']
+</pre>
 <p>Perhaps it's a philosophical difference, but it's harder to do this
 with Python. This is the only thing so that I found easier to achieve in
 Java than in Python:</p>
@@ -232,8 +232,8 @@ print(split_string)
 </span></pre>
 <p>...and we finally get what we want:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]
-</span></pre>
+['a', 'b', 'c']
+</pre>
     </div>
 
     

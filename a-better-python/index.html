@@ -153,93 +153,93 @@ found <em>while</em> and <em>for</em> not intuitive for looping constructs. The
 preferred alternatives are <em>repeat</em> and <em>loop</em>. Of these, I prefer
 <em>loop</em>, but it does not read as well as <em>while</em>:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">while count &lt; 3:
-</span><span style="color:#c0c5ce;">    count = action()
+while count &lt; 3:
+    count = action()
 
-</span><span style="color:#c0c5ce;">loop count &lt; 3:
-</span><span style="color:#c0c5ce;">    count = action()
-</span></pre>
+loop count &lt; 3:
+    count = action()
+</pre>
 <p>Quorum, the language by those responsible for this paper, went with:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">repeat while (count &lt; 3)
-</span><span style="color:#c0c5ce;">    count = action()
-</span><span style="color:#c0c5ce;">end
-</span></pre>
+repeat while (count &lt; 3)
+    count = action()
+end
+</pre>
 <p>To mimic that in Python, any of the following two sound fine (I prefer
 <em>if</em> to <em>while</em>; less syntax is better):</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">repeat if count &lt; 3:
-</span><span style="color:#c0c5ce;">    count = action()
+repeat if count &lt; 3:
+    count = action()
 
-</span><span style="color:#c0c5ce;">loop if count &lt; 3:
-</span><span style="color:#c0c5ce;">    count = action()
-</span></pre>
+loop if count &lt; 3:
+    count = action()
+</pre>
 <p>That means an infinite loop would be:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">loop if True:
-</span><span style="color:#c0c5ce;">    action()
-</span></pre>
+loop if True:
+    action()
+</pre>
 <p>Or for that special case, a shortcut can just be this simple:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">loop:
-</span><span style="color:#c0c5ce;">    action()
-</span></pre>
+loop:
+    action()
+</pre>
 <p>I wonder what cycling through items in a container would look like. In
 Python, it looks like:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">for item in container:
-</span><span style="color:#c0c5ce;">    action(item)
-</span></pre>
+for item in container:
+    action(item)
+</pre>
 <p>This feels as natural as anything, but then again I been doing Python
 for a number of years, so the bias could be heavy. Following is an
 attempt:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">loop in range(3):
-</span><span style="color:#c0c5ce;">    action()
-</span></pre>
+loop in range(3):
+    action()
+</pre>
 <p>It mimics this Python syntax, which I actually don't like, since we
 don't always need the items of the container:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">for _ in range(3):
-</span><span style="color:#c0c5ce;">    action()
-</span></pre>
+for _ in range(3):
+    action()
+</pre>
 <p>Quorum, the academic language mentioned above, does it like:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">repeat 3 times
-</span><span style="color:#c0c5ce;">    action()
-</span><span style="color:#c0c5ce;">end
-</span></pre>
+repeat 3 times
+    action()
+end
+</pre>
 <p>I don't like that either; feels contrived. The Python way strikes me as
 a good compromise, especially given how general it is. I will try again
 with the <em>loop</em> syntax:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">loop item in container:
-</span><span style="color:#c0c5ce;">    action(item)
-</span></pre>
+loop item in container:
+    action(item)
+</pre>
 <p>You have to admit it doesn't read as nice as:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">for item in container:
-</span><span style="color:#c0c5ce;">    action(item)
-</span></pre>
+for item in container:
+    action(item)
+</pre>
 <p>It should be flexible to accommodate more than just one value on each
 iteration, so should have an equivalent for this Python code:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">for index, item in enumerate(container):
-</span><span style="color:#c0c5ce;">    action(index, item)
-</span></pre>
+for index, item in enumerate(container):
+    action(index, item)
+</pre>
 <p>Here goes:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">loop index, item in enumerate(container):
-</span><span style="color:#c0c5ce;">    action(index, item)
-</span></pre>
+loop index, item in enumerate(container):
+    action(index, item)
+</pre>
 <p>Now, for the much-loved Python list comprehensions:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">[procedure(item) for item in container]
-</span></pre>
+[procedure(item) for item in container]
+</pre>
 <p>We would instead have:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">[procedure(item) loop item in container]
-</span></pre>
+[procedure(item) loop item in container]
+</pre>
 <p>So, apart from being highly-rated for being intuitive, <em>loop</em> also
 provides a consistent looping construct, whereas Python has 2, <em>while</em>
 and <em>for</em>, both of which received low points in the study. Interesting.</p>

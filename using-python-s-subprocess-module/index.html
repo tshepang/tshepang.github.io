@@ -116,22 +116,6 @@
                     
 
 
-<div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">Contents</h2>
-    <div class="post-toc-content always-active">
-        <nav id="TableOfContents">
-            <ul>
-                
-                <li>
-                    <a href="http://tshepang.net/using-python-s-subprocess-module/#further-reading" class="toc-link">further reading</a>
-                    
-                </li>
-                
-            </ul>
-        </nav>
-    </div>
-</div>
-
 
 <article class="post">
     
@@ -155,8 +139,8 @@ subprocess.Popen(&quot;echo test&quot;, shell=True)
 </span></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">test
-</span></pre>
+test
+</pre>
 <p>This is via the kernel:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">import subprocess
@@ -166,8 +150,8 @@ print(output)
 </span></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">(b&#39;testn&#39;, b&#39;&#39;)
-</span></pre>
+(b'testn', b'')
+</pre>
 <p>Not exactly what we want. The output is actually a tuple (<strong>stdout</strong>,
 <strong>stderr</strong>). Note that by default, <code>shell=False</code>, and that's why it's
 not stated here.</p>
@@ -181,8 +165,8 @@ print(output[0].decode(), end=&quot;&quot;)
 </span></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">test
-</span></pre>
+test
+</pre>
 <p>The <code>b</code> thing indicates that the string is in bytes format. To get a
 normal string from that, just run the string's <a href="http://docs.python.org/library/stdtypes.html?highlight=encode#str.decode">decode method</a>. Also,
 that I had to use the <code>end</code> argument on the <a href="http://docs.python.org/library/functions.html#print">print function</a>, was to

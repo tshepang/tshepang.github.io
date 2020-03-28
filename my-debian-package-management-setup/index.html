@@ -143,18 +143,18 @@ use it to create 2 repos:</p>
 <p>How this works is that I'd run the following command (an example for
 the source repo):</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">/usr/bin/debmirror
-</span><span style="color:#c0c5ce;"> --verbose
-</span><span style="color:#c0c5ce;"> --progress
-</span><span style="color:#c0c5ce;"> --host=ftp.sun.ac.za
-</span><span style="color:#c0c5ce;"> --passive
-</span><span style="color:#c0c5ce;"> --dist=squeeze
-</span><span style="color:#c0c5ce;"> --root=ftp/debian
-</span><span style="color:#c0c5ce;"> --section=main
-</span><span style="color:#c0c5ce;"> --method=ftp
-</span><span style="color:#c0c5ce;"> --arch=none
-</span><span style="color:#c0c5ce;"> /home/wena/.repo_src
-</span></pre>
+/usr/bin/debmirror
+ --verbose
+ --progress
+ --host=ftp.sun.ac.za
+ --passive
+ --dist=squeeze
+ --root=ftp/debian
+ --section=main
+ --method=ftp
+ --arch=none
+ /home/wena/.repo_src
+</pre>
 <p>(look at debmirror's manpage to see what all those options mean)</p>
 <p>The result is that I'll be having ~30GB of Debian locally (for a
 comparison, see <a href="http://www.debian.org/mirror/size">total Debian archive size</a>).</p>
@@ -188,18 +188,18 @@ deb ftp://ftp.sun.ac.za/ftp/debian/ sid main non-free contrib
 </span></pre>
 <p>So, what I do on a semi-regular basis is run:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">$ wajig update &amp;&amp; wajig upgrade
-</span></pre>
+$ wajig update &amp;&amp; wajig upgrade
+</pre>
 <p>The newly-updated packages are stored in a cache so that a reinstall
 doesn't have to fetch from network again. After this I run:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">$ reprepro -vv --basedir ~/.repo_local includedeb cache /var/cache/apt/archives/*deb
-</span></pre>
+$ reprepro -vv --basedir ~/.repo_local includedeb cache /var/cache/apt/archives/*deb
+</pre>
 <p>This updates the local reprepro repo and after which I can then remove
 the cached packages:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">$ wajig clean
-</span></pre>
+$ wajig clean
+</pre>
 <p>I do that because they are now available in my reprepro-managed repo.
 That now means that I got a massive mirror managed by debmirror and a
 smaller one managed by reprepro, and I have these on an external drive

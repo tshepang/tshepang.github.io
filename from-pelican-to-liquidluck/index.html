@@ -116,37 +116,6 @@
                     
 
 
-<div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">Contents</h2>
-    <div class="post-toc-content always-active">
-        <nav id="TableOfContents">
-            <ul>
-                
-                <li>
-                    <a href="http://tshepang.net/from-pelican-to-liquidluck/#why-pelican-rocks" class="toc-link">why Pelican rocks</a>
-                    
-                </li>
-                
-                <li>
-                    <a href="http://tshepang.net/from-pelican-to-liquidluck/#why-pelican-rocks-not" class="toc-link">why Pelican rocks not</a>
-                    
-                </li>
-                
-                <li>
-                    <a href="http://tshepang.net/from-pelican-to-liquidluck/#why-liquidluck" class="toc-link">why liquidluck</a>
-                    
-                </li>
-                
-                <li>
-                    <a href="http://tshepang.net/from-pelican-to-liquidluck/#issues" class="toc-link">issues</a>
-                    
-                </li>
-                
-            </ul>
-        </nav>
-    </div>
-</div>
-
 
 <article class="post">
     
@@ -232,20 +201,20 @@ ugly look. It does not fit with the general general theme, so should
 be grey really, which would match with that of <code>&lt;pre&gt;</code> text. I fixed
 it myself with the following patch:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">diff --git a/liquidluck/_themes/default/static/style.css b/liquidluck/_themes/default/static/style.css
-</span><span style="color:#c0c5ce;">index e90de80..94fa7e8 100644
-</span><span style="color:#c0c5ce;">+++ a/liquidluck/_themes/default/static/style.css
-</span><span style="color:#c0c5ce;">+++ b/liquidluck/_themes/default/static/style.css
-</span><span style="color:#c0c5ce;">@@ -112,7 +112,7 @@ pre {
-</span><span style="color:#c0c5ce;">     border-radius: 3px;
-</span><span style="color:#c0c5ce;"> }
-</span><span style="color:#c0c5ce;"> code, tt {
-</span><span style="color:#c0c5ce;">-    background-color: #fee9cc;
-</span><span style="color:#c0c5ce;">+    background-color: #eee;
-</span><span style="color:#c0c5ce;">     color: rgba(0, 0, 0, 0.75);
-</span><span style="color:#c0c5ce;">     padding: 1px 3px;
-</span><span style="color:#c0c5ce;">     font-size: 12px;
-</span></pre></li>
+diff --git a/liquidluck/_themes/default/static/style.css b/liquidluck/_themes/default/static/style.css
+index e90de80..94fa7e8 100644
++++ a/liquidluck/_themes/default/static/style.css
++++ b/liquidluck/_themes/default/static/style.css
+@@ -112,7 +112,7 @@ pre {
+     border-radius: 3px;
+ }
+ code, tt {
+-    background-color: #fee9cc;
++    background-color: #eee;
+     color: rgba(0, 0, 0, 0.75);
+     padding: 1px 3px;
+     font-size: 12px;
+</pre></li>
 </ul>
 
     </div>

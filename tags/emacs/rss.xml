@@ -20,8 +20,8 @@ know how to set VPN up and sshfs feels rather clunky (I first have to
 have some directory I&#x27;m going to mount the thing, and have to remember
 the command line syntax). With Emacs, I run the following command:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;C-x C-f &#x2F;ssh:work|ssh:10.0.0.107|ssh:10.0.0.148:~&#x2F;some&#x2F;files&#x2F;
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+C-x C-f &#x2F;ssh:work|ssh:10.0.0.107|ssh:10.0.0.148:~&#x2F;some&#x2F;files&#x2F;
+&lt;&#x2F;pre&gt;
 &lt;p&gt;What happens there is I ask Emacs to run &lt;code&gt;find-file&lt;&#x2F;code&gt;, which opens its
 file manager, &lt;strong&gt;Dired&lt;&#x2F;strong&gt;. It first accesses the server at work, then my
 work desktop (&lt;code&gt;10.0.0.107&lt;&#x2F;code&gt;), and then some machine (&lt;code&gt;10.0.0.148&lt;&#x2F;code&gt;) which
@@ -32,12 +32,12 @@ was surprised such a feature exists, thinking I&#x27;d have to do ugly
 things like port forwarding. I do use the single hop a lot (if that&#x27;s
 even the right name):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;C-x C-f &#x2F;ssh:work:~&#x2F;some&#x2F;files&#x2F;
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+C-x C-f &#x2F;ssh:work:~&#x2F;some&#x2F;files&#x2F;
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Shortcut for that is:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;C-x C-f &#x2F;work:~&#x2F;some&#x2F;files&#x2F;
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+C-x C-f &#x2F;work:~&#x2F;some&#x2F;files&#x2F;
+&lt;&#x2F;pre&gt;
 &lt;p&gt;&lt;strong&gt;sidenotes&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -48,12 +48,12 @@ even the right name):&lt;&#x2F;p&gt;
 instead of specifying the whole &lt;a href=&quot;mailto:username@host&quot;&gt;username@host&lt;&#x2F;a&gt;, it accepts the
 aliases in &lt;code&gt;~&#x2F;.ssh&#x2F;config&lt;&#x2F;code&gt;, such that I only have to run:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;ssh work
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+ssh work
+&lt;&#x2F;pre&gt;
 &lt;p&gt;instead of:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;ssh tshepang@hostname
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
+ssh tshepang@hostname
+&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </description>
             </item>

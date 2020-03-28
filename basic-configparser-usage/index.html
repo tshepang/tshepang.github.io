@@ -116,22 +116,6 @@
                     
 
 
-<div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">Contents</h2>
-    <div class="post-toc-content always-active">
-        <nav id="TableOfContents">
-            <ul>
-                
-                <li>
-                    <a href="http://tshepang.net/basic-configparser-usage/#further-reading" class="toc-link">further reading</a>
-                    
-                </li>
-                
-            </ul>
-        </nav>
-    </div>
-</div>
-
 
 <article class="post">
     
@@ -149,10 +133,10 @@
       <p>Reading <code>.INI</code> files is very easy with Python. Say you had a file,
 &quot;<em>config.cfg</em>&quot;, with this content:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">[numbers]
-</span><span style="color:#c0c5ce;">one: 1
-</span><span style="color:#c0c5ce;">two: 2
-</span></pre>
+[numbers]
+one: 1
+two: 2
+</pre>
 <p>The code to read that content is:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">import configparser
@@ -163,8 +147,8 @@ print(items)
 </span></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">[(&#39;one&#39;, &#39;1&#39;), (&#39;two&#39;, &#39;2&#39;)]
-</span></pre>
+[('one', '1'), ('two', '2')]
+</pre>
 <p>That's a list of tuples, each tuple a key-value pair.</p>
 <p>Even better, since these are key-value pairs, why not use a more
 suitable data type? Here goes:</p>
@@ -177,8 +161,8 @@ print(items)
 </span></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">{&#39;two&#39;: &#39;2&#39;, &#39;one&#39;: &#39;1&#39;}
-</span></pre>
+{'two': '2', 'one': '1'}
+</pre>
 <p>That's the <strong>dict</strong> function, which takes a list of tuples, and
 converts them to a dictionary. You might also have noticed that the
 ordering is now a bit off. That's because the dict type doesn't care

@@ -16,22 +16,22 @@
                 <guid>http://tshepang.net/my-first-debian-upload/</guid>
                 <description>&lt;p&gt;Output of my first ever upload to Debian (using &lt;a href=&quot;http:&#x2F;&#x2F;packages.debian.org&#x2F;dput&quot;&gt;dput&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Trying to upload package to ftp-master (ftp.upload.debian.org)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Checking signature on .changes
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;gpg: Signature made Sun 13 Oct 2013 09:21:35 SAST using RSA key ID 500BF4A2
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;gpg: Good signature from &amp;quot;Tshepang Lekhonkhobe &amp;lt;tshepang@gmail.com&amp;gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Good signature on ..&#x2F;wajig_2.10_amd64.changes.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Checking signature on .dsc
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;gpg: Signature made Sun 13 Oct 2013 09:21:31 SAST using RSA key ID 500BF4A2
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;gpg: Good signature from &amp;quot;Tshepang Lekhonkhobe &amp;lt;tshepang@gmail.com&amp;gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Good signature on ..&#x2F;wajig_2.10.dsc.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Uploading to ftp-master (via ftp to ftp.upload.debian.org):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  Uploading wajig_2.10.dsc: done.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  Uploading wajig_2.10.tar.gz: done.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  Uploading wajig_2.10_all.deb: done.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  Uploading wajig_2.10_amd64.changes: done.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Successfully uploaded packages.
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+Trying to upload package to ftp-master (ftp.upload.debian.org)
+Checking signature on .changes
+gpg: Signature made Sun 13 Oct 2013 09:21:35 SAST using RSA key ID 500BF4A2
+gpg: Good signature from &amp;quot;Tshepang Lekhonkhobe &amp;lt;tshepang@gmail.com&amp;gt;&amp;quot;
+Good signature on ..&#x2F;wajig_2.10_amd64.changes.
+Checking signature on .dsc
+gpg: Signature made Sun 13 Oct 2013 09:21:31 SAST using RSA key ID 500BF4A2
+gpg: Good signature from &amp;quot;Tshepang Lekhonkhobe &amp;lt;tshepang@gmail.com&amp;gt;&amp;quot;
+Good signature on ..&#x2F;wajig_2.10.dsc.
+Uploading to ftp-master (via ftp to ftp.upload.debian.org):
+  Uploading wajig_2.10.dsc: done.
+  Uploading wajig_2.10.tar.gz: done.
+  Uploading wajig_2.10_all.deb: done.
+  Uploading wajig_2.10_amd64.changes: done.
+Successfully uploaded packages.
+&lt;&#x2F;pre&gt;
 &lt;p&gt;(&lt;a href=&quot;http:&#x2F;&#x2F;packages.qa.debian.org&#x2F;w&#x2F;wajig&#x2F;news&#x2F;20131013T074831Z.html&quot;&gt;the package was accepted within 30 minutes&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;p&gt;And, yeah, that means &lt;a href=&quot;http:&#x2F;&#x2F;bugs.debian.org&#x2F;cgi-bin&#x2F;bugreport.cgi?msg=12;bug=723802&quot;&gt;I am now Debian Maintainer&lt;&#x2F;a&gt;. Other than giving me
@@ -212,10 +212,10 @@ next user-visible change.&lt;&#x2F;p&gt;
 &lt;p&gt;There is less magic and more strictness. Previously, these commands
 resulted in the same outcome:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;wajig REMOVEORPHANS
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;wajig REMOVE-ORPHANS
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;wajig R-____EMOVE-ORPH+++-___AN_S
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+wajig REMOVEORPHANS
+wajig REMOVE-ORPHANS
+wajig R-____EMOVE-ORPH+++-___AN_S
+&lt;&#x2F;pre&gt;
 &lt;p&gt;What wajig did was simply sanitise the commands, getting rid of the
 junk. Well, I don&#x27;t like that, but since I didn&#x27;t want to break
 people&#x27;s commands&#x2F;aliases&#x2F;scripts I actually tried to preserve that

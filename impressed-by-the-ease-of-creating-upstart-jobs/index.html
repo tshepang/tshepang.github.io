@@ -136,10 +136,10 @@ boots, and because I'm horrified by sysvinit scripts (which Upstart
 supports), I decided to give creating an Upstart job a try. I was
 surprised how easy it was:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">exec /usr/local/bin/executable
-</span><span style="color:#c0c5ce;">start on startup
-</span><span style="color:#c0c5ce;">respawn
-</span></pre>
+exec /usr/local/bin/executable
+start on startup
+respawn
+</pre>
 <p>I placed a file with above contents in <code>/etc/init/executable.conf</code>, and
 that's pretty much it. Impressive.</p>
 <p>Here's what happens:</p>

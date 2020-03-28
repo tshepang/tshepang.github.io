@@ -116,27 +116,6 @@
                     
 
 
-<div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">Contents</h2>
-    <div class="post-toc-content always-active">
-        <nav id="TableOfContents">
-            <ul>
-                
-                <li>
-                    <a href="http://tshepang.net/sony-vaio-pro-13-svp13212sgbi/#performance" class="toc-link">Performance</a>
-                    
-                </li>
-                
-                <li>
-                    <a href="http://tshepang.net/sony-vaio-pro-13-svp13212sgbi/#issues" class="toc-link">Issues</a>
-                    
-                </li>
-                
-            </ul>
-        </nav>
-    </div>
-</div>
-
 
 <article class="post">
     
@@ -165,44 +144,44 @@ installation is also insane fast.</p>
 help</a>, where I needed to change two lines in
 <code>/usr/share/alsa/alsa.conf</code>:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">defaults.ctl.card 1
-</span><span style="color:#c0c5ce;">defaults.pcm.card 1
-</span></pre>
+defaults.ctl.card 1
+defaults.pcm.card 1
+</pre>
 <p>VLC video didn't work well either, but I needed only change Video
 Output to <strong>OpenGL GLX video output (XCB)</strong>, and all was well.</p>
 <h1 id="performance">Performance</h1>
 <p>I am now going to check how this machine compares to <a href="http://tshepang.net/a-bit-of-benchmarking">these others</a>.</p>
 <p>Specs:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">$ uname --all
-</span><span style="color:#c0c5ce;">Linux thome 3.12-1-amd64 #1 SMP Debian 3.12.9-1 (2014-02-01) x86_64 GNU/Linux
-</span><span style="color:#c0c5ce;">$ cat /proc/cpuinfo | sed --quiet &#39;5p&#39;
-</span><span style="color:#c0c5ce;">model name      : Intel(R) Core(TM) i5-4200U CPU @ 1.60GHz
-</span></pre>
+$ uname --all
+Linux thome 3.12-1-amd64 #1 SMP Debian 3.12.9-1 (2014-02-01) x86_64 GNU/Linux
+$ cat /proc/cpuinfo | sed --quiet '5p'
+model name      : Intel(R) Core(TM) i5-4200U CPU @ 1.60GHz
+</pre>
 <p>CPython build (changeset <code>b6a1a78818fe</code>):</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">$ make distclean; time (./configure &amp;&amp; make --silent --jobs=4)
-</span><span style="color:#c0c5ce;">[...]
-</span><span style="color:#c0c5ce;">real    1m52.372s
-</span><span style="color:#c0c5ce;">user    3m12.460s
-</span><span style="color:#c0c5ce;">sys     0m6.764s
-</span></pre>
+$ make distclean; time (./configure &amp;&amp; make --silent --jobs=4)
+[...]
+real    1m52.372s
+user    3m12.460s
+sys     0m6.764s
+</pre>
 <p>CPython test suite:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">$ time ./python -m test --multiprocess=0
-</span><span style="color:#c0c5ce;">[...]
-</span><span style="color:#c0c5ce;">real    3m34.582s
-</span><span style="color:#c0c5ce;">user    5m12.260s
-</span><span style="color:#c0c5ce;">sys     0m20.640s
-</span></pre>
+$ time ./python -m test --multiprocess=0
+[...]
+real    3m34.582s
+user    5m12.260s
+sys     0m20.640s
+</pre>
 <p>Linux kernel build (commit <code>6e4664525b1d</code>):</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">$ make distclean &amp;&amp; make defconfig &amp;&amp; time make
-</span><span style="color:#c0c5ce;">[...]
-</span><span style="color:#c0c5ce;">real    11m57.220s
-</span><span style="color:#c0c5ce;">user    11m1.544s
-</span><span style="color:#c0c5ce;">sys     0m38.260s
-</span></pre>
+$ make distclean &amp;&amp; make defconfig &amp;&amp; time make
+[...]
+real    11m57.220s
+user    11m1.544s
+sys     0m38.260s
+</pre>
 <p>So the machine still doesn't compare with my work machine, a ~2
 year-old desktop. It is faster than my old laptop as expected, and
 comparable to the DigitalOcean VPS, no surprises there. The storage is a
@@ -224,22 +203,22 @@ is buggy enough to cause OS hangs and other misbehaviour.</p>
 following commands does not help, at least not in a way I could
 notice:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">echo silent | sudo tee  /sys/devices/platform/sony-laptop/thermal_control
-</span></pre>
+echo silent | sudo tee  /sys/devices/platform/sony-laptop/thermal_control
+</pre>
 <p>I don't know why this happens, given that I have never seen the
 temperature rise above 60 °C:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">$ sensors
-</span><span style="color:#c0c5ce;">acpitz-virtual-0
-</span><span style="color:#c0c5ce;">Adapter: Virtual device
-</span><span style="color:#c0c5ce;">temp1:        +48.0°C  (crit = +97.0°C)
+$ sensors
+acpitz-virtual-0
+Adapter: Virtual device
+temp1:        +48.0°C  (crit = +97.0°C)
 
-</span><span style="color:#c0c5ce;">coretemp-isa-0000
-</span><span style="color:#c0c5ce;">Adapter: ISA adapter
-</span><span style="color:#c0c5ce;">Physical id 0:  +48.0°C  (high = +100.0°C, crit = +100.0°C)
-</span><span style="color:#c0c5ce;">Core 0:         +46.0°C  (high = +100.0°C, crit = +100.0°C)
-</span><span style="color:#c0c5ce;">Core 1:         +45.0°C  (high = +100.0°C, crit = +100.0°C)
-</span></pre></li>
+coretemp-isa-0000
+Adapter: ISA adapter
+Physical id 0:  +48.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 0:         +46.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 1:         +45.0°C  (high = +100.0°C, crit = +100.0°C)
+</pre></li>
 <li>
 <p>The screen brightness control is painful. It requires one to press
 the combination of the <strong>Fn</strong> key and <strong>F5</strong> (dim) and <strong>F6</strong>

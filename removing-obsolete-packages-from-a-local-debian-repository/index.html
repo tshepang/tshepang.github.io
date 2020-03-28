@@ -116,27 +116,6 @@
                     
 
 
-<div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">Contents</h2>
-    <div class="post-toc-content always-active">
-        <nav id="TableOfContents">
-            <ul>
-                
-                <li>
-                    <a href="http://tshepang.net/removing-obsolete-packages-from-a-local-debian-repository/#background-info" class="toc-link">background info</a>
-                    
-                </li>
-                
-                <li>
-                    <a href="http://tshepang.net/removing-obsolete-packages-from-a-local-debian-repository/#and-now-to-the-topic-at-hand" class="toc-link">and now to the topic at hand</a>
-                    
-                </li>
-                
-            </ul>
-        </nav>
-    </div>
-</div>
-
 
 <article class="post">
     
@@ -158,8 +137,8 @@ also keep them in a local custom repository. I use a great tool named
 <a href="https://salsa.debian.org/brlink/reprepro">reprepro</a> for this, and this is the command I use to update that
 repository, given the location of the fresh package files:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang /var/cache/apt/archives/*deb
-</span></pre>
+$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang /var/cache/apt/archives/*deb
+</pre>
 <p>What's nice about the command is that, if there is an older version of
 the package I'm adding, it gets replaced, and the package index is
 updated accordingly.</p>
@@ -218,15 +197,15 @@ usage).</li>
 </span></pre>
 <p>And here's a snippet of its output:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">cx-oracle:
-</span><span style="color:#c0c5ce;">  Installed: 5.1.1-2
-</span><span style="color:#c0c5ce;">  Candidate: 5.1.1-2
-</span><span style="color:#c0c5ce;">  Version table:
-</span><span style="color:#c0c5ce;"> *** 5.1.1-2 0
-</span><span style="color:#c0c5ce;">        500 file:/home/wena/.custom_repo/ tshepang/main i386 Packages
-</span><span style="color:#c0c5ce;">        100 /var/lib/dpkg/status
-</span><span style="color:#c0c5ce;">remove from cache [Y/n]?
-</span></pre>
+cx-oracle:
+  Installed: 5.1.1-2
+  Candidate: 5.1.1-2
+  Version table:
+ *** 5.1.1-2 0
+        500 file:/home/wena/.custom_repo/ tshepang/main i386 Packages
+        100 /var/lib/dpkg/status
+remove from cache [Y/n]?
+</pre>
 <p>What it does is look for packages which are only available in my custom
 repository, as compared with the one in Wheezy (soon to be Debian 7). It
 then prompts me on whether or not to remove it from that custom

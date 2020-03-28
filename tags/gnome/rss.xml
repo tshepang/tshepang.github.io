@@ -34,60 +34,60 @@ since there isn&#x27;t a comprehensive guide I could find.&lt;&#x2F;p&gt;
 &lt;p&gt;For my login manager, I use &lt;a href=&quot;http:&#x2F;&#x2F;www.freedesktop.org&#x2F;wiki&#x2F;Software&#x2F;LightDM&quot;&gt;LightDM&lt;&#x2F;a&gt;. I added this line to its
 configuration, in &lt;code&gt;[SeatDefaults]&lt;&#x2F;code&gt; section:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;greeter-hide-users=false
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+greeter-hide-users=false
+&lt;&#x2F;pre&gt;
 &lt;p&gt;It removes the need to manually enter my username each time I want to
 login.&lt;&#x2F;p&gt;
 &lt;p&gt;Reason I&#x27;m not using GDM? I wanted something light, which also
 wouldn&#x27;t pull in dozens of packages that I won&#x27;t use. For example:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ sudo apt-get install --no-install-recommends gdm3
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Reading package lists... Done
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Building dependency tree
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Reading state information... Done
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;The following extra packages will be installed:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  bluez dconf-cli evolution-data-server evolution-data-server-common
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-gck-1 gir1.2-gcr-3
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-gdesktopenums-3.0 gir1.2-gdm3 gir1.2-gkbd-3.0 gir1.2-gmenu-3.0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0 gir1.2-ibus-1.0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-mutter-3.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0 gir1.2-soup-2.4
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2 gir1.2-xkl-1.0 gjs
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gnome-bluetooth gnome-settings-daemon gnome-shell gnome-shell-common
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gnome-themes-standard gnome-themes-standard-data libbluetooth3 libcamel-1.2-43
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libcaribou-common libcaribou0 libebackend-1.2-6 libebook-1.2-14
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libebook-contacts-1.2-0 libecal-1.2-15 libedata-book-1.2-17 libedata-cal-1.2-20
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libedataserver-1.2-17 libgdata-common libgdata13 libgdm1 libgnome-menu-3-0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libgoa-1.0-0 libgoa-1.0-common libgweather-3-3 libgweather-common libibus-1.0-5
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libical0 libmission-control-plugins0 libmutter0b liboauth0 libopenobex1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libpackagekit-glib2-16 libpulse-mainloop-glib0 librest-0.7-0 libsoup-gnome2.4-1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libtelepathy-glib0 libtelepathy-logger3 libwacom-common libwacom2 mutter-common
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  obex-data-server obexd-client telepathy-mission-control-5
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Suggested packages:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  evolution evolution-data-server-dbg gnome-orca gnome-user-share telepathy-haze
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Recommended packages:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  zenity gvfs-backends gnome-control-center pulseaudio gkbd-capplet gnome-contacts
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gnome-user-guide gtk2-engines-pixbuf gnome-accessibility-themes packagekit
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;The following NEW packages will be installed:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  bluez dconf-cli evolution-data-server evolution-data-server-common gdm3
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-gck-1 gir1.2-gcr-3
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-gdesktopenums-3.0 gir1.2-gdm3 gir1.2-gkbd-3.0 gir1.2-gmenu-3.0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0 gir1.2-ibus-1.0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-mutter-3.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0 gir1.2-soup-2.4
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2 gir1.2-xkl-1.0 gjs
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gnome-bluetooth gnome-settings-daemon gnome-shell gnome-shell-common
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  gnome-themes-standard gnome-themes-standard-data libbluetooth3 libcamel-1.2-43
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libcaribou-common libcaribou0 libebackend-1.2-6 libebook-1.2-14
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libebook-contacts-1.2-0 libecal-1.2-15 libedata-book-1.2-17 libedata-cal-1.2-20
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libedataserver-1.2-17 libgdata-common libgdata13 libgdm1 libgnome-menu-3-0
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libgoa-1.0-0 libgoa-1.0-common libgweather-3-3 libgweather-common libibus-1.0-5
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libical0 libmission-control-plugins0 libmutter0b liboauth0 libopenobex1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libpackagekit-glib2-16 libpulse-mainloop-glib0 librest-0.7-0 libsoup-gnome2.4-1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  libtelepathy-glib0 libtelepathy-logger3 libwacom-common libwacom2 mutter-common
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;  obex-data-server obexd-client telepathy-mission-control-5
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0 upgraded, 67 newly installed, 0 to remove and 45 not upgraded.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Need to get 0 B&#x2F;31.0 MB of archives.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;After this operation, 90.8 MB of additional disk space will be used.
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ sudo apt-get install --no-install-recommends gdm3
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+  bluez dconf-cli evolution-data-server evolution-data-server-common
+  gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-gck-1 gir1.2-gcr-3
+  gir1.2-gdesktopenums-3.0 gir1.2-gdm3 gir1.2-gkbd-3.0 gir1.2-gmenu-3.0
+  gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0 gir1.2-ibus-1.0
+  gir1.2-mutter-3.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0 gir1.2-soup-2.4
+  gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2 gir1.2-xkl-1.0 gjs
+  gnome-bluetooth gnome-settings-daemon gnome-shell gnome-shell-common
+  gnome-themes-standard gnome-themes-standard-data libbluetooth3 libcamel-1.2-43
+  libcaribou-common libcaribou0 libebackend-1.2-6 libebook-1.2-14
+  libebook-contacts-1.2-0 libecal-1.2-15 libedata-book-1.2-17 libedata-cal-1.2-20
+  libedataserver-1.2-17 libgdata-common libgdata13 libgdm1 libgnome-menu-3-0
+  libgoa-1.0-0 libgoa-1.0-common libgweather-3-3 libgweather-common libibus-1.0-5
+  libical0 libmission-control-plugins0 libmutter0b liboauth0 libopenobex1
+  libpackagekit-glib2-16 libpulse-mainloop-glib0 librest-0.7-0 libsoup-gnome2.4-1
+  libtelepathy-glib0 libtelepathy-logger3 libwacom-common libwacom2 mutter-common
+  obex-data-server obexd-client telepathy-mission-control-5
+Suggested packages:
+  evolution evolution-data-server-dbg gnome-orca gnome-user-share telepathy-haze
+Recommended packages:
+  zenity gvfs-backends gnome-control-center pulseaudio gkbd-capplet gnome-contacts
+  gnome-user-guide gtk2-engines-pixbuf gnome-accessibility-themes packagekit
+The following NEW packages will be installed:
+  bluez dconf-cli evolution-data-server evolution-data-server-common gdm3
+  gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-gck-1 gir1.2-gcr-3
+  gir1.2-gdesktopenums-3.0 gir1.2-gdm3 gir1.2-gkbd-3.0 gir1.2-gmenu-3.0
+  gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0 gir1.2-ibus-1.0
+  gir1.2-mutter-3.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0 gir1.2-soup-2.4
+  gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2 gir1.2-xkl-1.0 gjs
+  gnome-bluetooth gnome-settings-daemon gnome-shell gnome-shell-common
+  gnome-themes-standard gnome-themes-standard-data libbluetooth3 libcamel-1.2-43
+  libcaribou-common libcaribou0 libebackend-1.2-6 libebook-1.2-14
+  libebook-contacts-1.2-0 libecal-1.2-15 libedata-book-1.2-17 libedata-cal-1.2-20
+  libedataserver-1.2-17 libgdata-common libgdata13 libgdm1 libgnome-menu-3-0
+  libgoa-1.0-0 libgoa-1.0-common libgweather-3-3 libgweather-common libibus-1.0-5
+  libical0 libmission-control-plugins0 libmutter0b liboauth0 libopenobex1
+  libpackagekit-glib2-16 libpulse-mainloop-glib0 librest-0.7-0 libsoup-gnome2.4-1
+  libtelepathy-glib0 libtelepathy-logger3 libwacom-common libwacom2 mutter-common
+  obex-data-server obexd-client telepathy-mission-control-5
+0 upgraded, 67 newly installed, 0 to remove and 45 not upgraded.
+Need to get 0 B&#x2F;31.0 MB of archives.
+After this operation, 90.8 MB of additional disk space will be used.
+&lt;&#x2F;pre&gt;
 &lt;p&gt;GNOME philosophy tends towards tight integration, leading to things
 being not as modular as I would like: how could a display manager end up
 depending on a Contacts tool, or the Bluetooth stack. It may be just how
@@ -98,12 +98,12 @@ with.&lt;&#x2F;p&gt;
 &lt;p&gt;Anyways, enough with that. I added a custom &lt;code&gt;.desktop&lt;&#x2F;code&gt; file which will
 become selectable on LightDM UI:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ cat &#x2F;usr&#x2F;share&#x2F;xsessions&#x2F;custom.desktop
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[Desktop Entry]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Name=Custom
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Exec=&#x2F;etc&#x2F;X11&#x2F;Xsession
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Type=XSession
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ cat &#x2F;usr&#x2F;share&#x2F;xsessions&#x2F;custom.desktop
+[Desktop Entry]
+Name=Custom
+Exec=&#x2F;etc&#x2F;X11&#x2F;Xsession
+Type=XSession
+&lt;&#x2F;pre&gt;
 &lt;p&gt;On selecting the entry labeled &lt;strong&gt;Custom&lt;&#x2F;strong&gt; that appears on LightDM, and
 logging in, the following will get executed (&lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;custom&#x2F;src&#x2F;tip&#x2F;xsession&quot;&gt;~&#x2F;.xsession&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -147,62 +147,62 @@ exec dwm
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Finally, this is what my dwm config changes look like (&lt;a href=&quot;https:&#x2F;&#x2F;bitbucket.org&#x2F;tshepang&#x2F;custom&#x2F;src&#x2F;tip&#x2F;config.def.h&quot;&gt;config.def.h&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;diff --git a&#x2F;config.def.h b&#x2F;config.def.h
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;index 77ff358..78af5d6 100644
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+++ a&#x2F;config.def.h
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+++ b&#x2F;config.def.h
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;@@ -14,12 +14,15 @@ static const Bool showbar           = True;     &#x2F;*
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;False means no bar *&#x2F;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; static const Bool topbar            = True;     &#x2F;* False means bottom
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; bar *&#x2F;
+diff --git a&#x2F;config.def.h b&#x2F;config.def.h
+index 77ff358..78af5d6 100644
++++ a&#x2F;config.def.h
++++ b&#x2F;config.def.h
+@@ -14,12 +14,15 @@ static const Bool showbar           = True;     &#x2F;*
+False means no bar *&#x2F;
+ static const Bool topbar            = True;     &#x2F;* False means bottom
+ bar *&#x2F;
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &#x2F;* tagging *&#x2F;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-static const char *tags[] = { &amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;,
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;9&amp;quot; };
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+static const char *tags[] = { &amp;quot;web&amp;quot;, &amp;quot;files&amp;quot;, &amp;quot;terminal&amp;quot;, &amp;quot;misc&amp;quot; };
+ &#x2F;* tagging *&#x2F;
+-static const char *tags[] = { &amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;,
+&amp;quot;9&amp;quot; };
++static const char *tags[] = { &amp;quot;web&amp;quot;, &amp;quot;files&amp;quot;, &amp;quot;terminal&amp;quot;, &amp;quot;misc&amp;quot; };
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; static const Rule rules[] = {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-       &#x2F;* class      instance    title       tags mask     isfloating
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        monitor *&#x2F;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-       { &amp;quot;Gimp&amp;quot;,     NULL,       NULL,       0,
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        True,        -1 },
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-       { &amp;quot;Firefox&amp;quot;,  NULL,       NULL,       1 &amp;lt;&amp;lt; 8,
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        False,       -1 },
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+  &#x2F;* class             instance  title  tags mask  isfloating
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;   monitor *&#x2F;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+  { &amp;quot;Iceweasel&amp;quot;,       NULL,     NULL,  1 &amp;lt;&amp;lt; 0,    False,       -1 },
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+  { &amp;quot;trayer&amp;quot;,          NULL,     NULL,  1 &amp;lt;&amp;lt; 0,    False,       -1 },
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+  { &amp;quot;Nautilus&amp;quot;,        NULL,     NULL,  1 &amp;lt;&amp;lt; 1,    False,       -1 },
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+  { &amp;quot;Xfce4-terminal&amp;quot;,  NULL,     NULL,  1 &amp;lt;&amp;lt; 2,    False,       -1 },
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+  { &amp;quot;Quodlibet&amp;quot;,       NULL,     NULL,  1 &amp;lt;&amp;lt; 3,    False,       -1 },
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; };
+ static const Rule rules[] = {
+-       &#x2F;* class      instance    title       tags mask     isfloating
+        monitor *&#x2F;
+-       { &amp;quot;Gimp&amp;quot;,     NULL,       NULL,       0,
+        True,        -1 },
+-       { &amp;quot;Firefox&amp;quot;,  NULL,       NULL,       1 &amp;lt;&amp;lt; 8,
+        False,       -1 },
++  &#x2F;* class             instance  title  tags mask  isfloating
+   monitor *&#x2F;
++  { &amp;quot;Iceweasel&amp;quot;,       NULL,     NULL,  1 &amp;lt;&amp;lt; 0,    False,       -1 },
++  { &amp;quot;trayer&amp;quot;,          NULL,     NULL,  1 &amp;lt;&amp;lt; 0,    False,       -1 },
++  { &amp;quot;Nautilus&amp;quot;,        NULL,     NULL,  1 &amp;lt;&amp;lt; 1,    False,       -1 },
++  { &amp;quot;Xfce4-terminal&amp;quot;,  NULL,     NULL,  1 &amp;lt;&amp;lt; 2,    False,       -1 },
++  { &amp;quot;Quodlibet&amp;quot;,       NULL,     NULL,  1 &amp;lt;&amp;lt; 3,    False,       -1 },
+ };
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &#x2F;* layout(s) *&#x2F;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;@@ -35,7 +38,7 @@ static const Layout layouts[] = {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; };
+ &#x2F;* layout(s) *&#x2F;
+@@ -35,7 +38,7 @@ static const Layout layouts[] = {
+ };
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &#x2F;* key definitions *&#x2F;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-#define MODKEY Mod1Mask
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+#define MODKEY Mod4Mask
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; #define TAGKEYS(KEY,TAG)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        { MODKEY,                       KEY,      view,           {.ui
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        = 1 &amp;lt;&amp;lt; TAG} },
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        { MODKEY|ControlMask,           KEY,      toggleview,     {.ui
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        = 1 &amp;lt;&amp;lt; TAG} },
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;@@ -47,7 +50,7 @@ static const Layout layouts[] = {
+ &#x2F;* key definitions *&#x2F;
+-#define MODKEY Mod1Mask
++#define MODKEY Mod4Mask
+ #define TAGKEYS(KEY,TAG)
+        { MODKEY,                       KEY,      view,           {.ui
+        = 1 &amp;lt;&amp;lt; TAG} },
+        { MODKEY|ControlMask,           KEY,      toggleview,     {.ui
+        = 1 &amp;lt;&amp;lt; TAG} },
+@@ -47,7 +50,7 @@ static const Layout layouts[] = {
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; &#x2F;* commands *&#x2F;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; static const char *dmenucmd[] = { &amp;quot;dmenu_run&amp;quot;, &amp;quot;-fn&amp;quot;, font, &amp;quot;-nb&amp;quot;,
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; normbgcolor, &amp;quot;-nf&amp;quot;, normfgcolor, &amp;quot;-sb&amp;quot;, selbgcolor, &amp;quot;-sf&amp;quot;,
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; selfgcolor, NULL };
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;-static const char *termcmd[]  = { &amp;quot;uxterm&amp;quot;, NULL };
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;+static const char *termcmd[]  = { &amp;quot;xfce4-terminal&amp;quot;, &amp;quot;--hide-menubar&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;};
+ &#x2F;* commands *&#x2F;
+ static const char *dmenucmd[] = { &amp;quot;dmenu_run&amp;quot;, &amp;quot;-fn&amp;quot;, font, &amp;quot;-nb&amp;quot;,
+ normbgcolor, &amp;quot;-nf&amp;quot;, normfgcolor, &amp;quot;-sb&amp;quot;, selbgcolor, &amp;quot;-sf&amp;quot;,
+ selfgcolor, NULL };
+-static const char *termcmd[]  = { &amp;quot;uxterm&amp;quot;, NULL };
++static const char *termcmd[]  = { &amp;quot;xfce4-terminal&amp;quot;, &amp;quot;--hide-menubar&amp;quot;
+};
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; static Key keys[] = {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        &#x2F;* modifier                     key        function
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        argument *&#x2F;
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+ static Key keys[] = {
+        &#x2F;* modifier                     key        function
+        argument *&#x2F;
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Note that this diff is against the Debian package (version &lt;strong&gt;6.0-6&lt;&#x2F;strong&gt;). I
 could not change the modifier key with the upstream version of dwm.&lt;&#x2F;p&gt;
 &lt;p&gt;You will notice that I&#x27;m still using one major GNOME package, Nautilus,
@@ -490,8 +490,8 @@ which contains all that&#x27;s needed to roll-back, restore, check stats,
 ...).&lt;&#x2F;p&gt;
 &lt;p&gt;My usage:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ rdiff-backup --include-globbing-filelist rdiff-backup ~&#x2F; &#x2F;media&#x2F;backup
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+$ rdiff-backup --include-globbing-filelist rdiff-backup ~&#x2F; &#x2F;media&#x2F;backup
+&lt;&#x2F;pre&gt;
 &lt;p&gt;There, &lt;code&gt;~&#x2F;conf&#x2F;rdiff-backup&lt;&#x2F;code&gt; is a file that has a list of directories I
 want to exclude in the backup, and &lt;code&gt;&#x2F;media&#x2F;backup&lt;&#x2F;code&gt; is the backup
 destination.&lt;&#x2F;p&gt;

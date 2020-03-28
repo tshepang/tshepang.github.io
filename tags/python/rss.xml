@@ -40,55 +40,55 @@ functions executed successfully. It was a one-line change but I thought
 it was a good excuse to create decorators for the first time in my life.&lt;&#x2F;p&gt;
 &lt;p&gt;Here is an example of a decorator function:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;def checkpoint(function):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    wrapper(*args, **kwargs):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        with open(PATH) as f:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;            for line in f:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;                if function.__name__ in line:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;                    return
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        value = function(*args, **kwargs)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        with open(PATH, &amp;#39;a+&amp;#39;) as f:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;            f.write(function.__name__)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;        return value
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    return wrapper
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+def checkpoint(function):
+    wrapper(*args, **kwargs):
+        with open(PATH) as f:
+            for line in f:
+                if function.__name__ in line:
+                    return
+        value = function(*args, **kwargs)
+        with open(PATH, &#x27;a+&#x27;) as f:
+            f.write(function.__name__)
+        return value
+    return wrapper
+&lt;&#x2F;pre&gt;
 &lt;p&gt;All it does is write some text to a file, and avoid running whatever
 function will be &lt;em&gt;decorated&lt;&#x2F;em&gt; by it if there is a match in that file.
 This would be an indicator that the function had already been executed
 (in a previous run).&lt;&#x2F;p&gt;
 &lt;p&gt;The following snippet sees the use of this decorator:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;@checkpoint
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;def do_this(some_argument):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    # exit(1) on error
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    ...
+@checkpoint
+def do_this(some_argument):
+    # exit(1) on error
+    ...
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;@checkpoint
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;def do_that(some_other_argument, some_optional_argument=None):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    # exit(1) on error
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    ...
+@checkpoint
+def do_that(some_other_argument, some_optional_argument=None):
+    # exit(1) on error
+    ...
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if __name__ == &amp;#39;__main__&amp;#39;:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    do_this(&amp;#39;some value&amp;#39;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    do_that(&amp;#39;some other value&amp;#39;)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+if __name__ == &#x27;__main__&#x27;:
+    do_this(&#x27;some value&#x27;)
+    do_that(&#x27;some other value&#x27;)
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Without the decorator syntax, the same functionality would be achieved
 with:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;def do_this(some_argument):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    # exit(1) on error
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    ...
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;do_this = checkpoint(do_this)
+def do_this(some_argument):
+    # exit(1) on error
+    ...
+do_this = checkpoint(do_this)
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;def do_that(some_other_argument, some_optional_argument=None):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    # exit(1) on error
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    ...
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;do_that = checkpoint(do_that)
+def do_that(some_other_argument, some_optional_argument=None):
+    # exit(1) on error
+    ...
+do_that = checkpoint(do_that)
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;if __name__ == &amp;#39;__main__&amp;#39;:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    do_this(&amp;#39;some value&amp;#39;)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    do_that(&amp;#39;some other value&amp;#39;)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+if __name__ == &#x27;__main__&#x27;:
+    do_this(&#x27;some value&#x27;)
+    do_that(&#x27;some other value&#x27;)
+&lt;&#x2F;pre&gt;
 &lt;p&gt;The latter format, though it presents less of a cognitive burden, feels
 less of an obvious solution, and it&#x27;s a bit uglier as well. &lt;a href=&quot;http:&#x2F;&#x2F;legacy.python.org&#x2F;dev&#x2F;peps&#x2F;pep-0318&quot;&gt;PEP 380&lt;&#x2F;a&gt;
 is a detailed discussion written over 10 years ago when the syntax was
@@ -124,93 +124,93 @@ found &lt;em&gt;while&lt;&#x2F;em&gt; and &lt;em&gt;for&lt;&#x2F;em&gt; not intu
 preferred alternatives are &lt;em&gt;repeat&lt;&#x2F;em&gt; and &lt;em&gt;loop&lt;&#x2F;em&gt;. Of these, I prefer
 &lt;em&gt;loop&lt;&#x2F;em&gt;, but it does not read as well as &lt;em&gt;while&lt;&#x2F;em&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;while count &amp;lt; 3:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    count = action()
+while count &amp;lt; 3:
+    count = action()
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop count &amp;lt; 3:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    count = action()
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+loop count &amp;lt; 3:
+    count = action()
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Quorum, the language by those responsible for this paper, went with:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;repeat while (count &amp;lt; 3)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    count = action()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;end
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+repeat while (count &amp;lt; 3)
+    count = action()
+end
+&lt;&#x2F;pre&gt;
 &lt;p&gt;To mimic that in Python, any of the following two sound fine (I prefer
 &lt;em&gt;if&lt;&#x2F;em&gt; to &lt;em&gt;while&lt;&#x2F;em&gt;; less syntax is better):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;repeat if count &amp;lt; 3:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    count = action()
+repeat if count &amp;lt; 3:
+    count = action()
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop if count &amp;lt; 3:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    count = action()
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+loop if count &amp;lt; 3:
+    count = action()
+&lt;&#x2F;pre&gt;
 &lt;p&gt;That means an infinite loop would be:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop if True:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action()
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+loop if True:
+    action()
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Or for that special case, a shortcut can just be this simple:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action()
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+loop:
+    action()
+&lt;&#x2F;pre&gt;
 &lt;p&gt;I wonder what cycling through items in a container would look like. In
 Python, it looks like:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for item in container:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action(item)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+for item in container:
+    action(item)
+&lt;&#x2F;pre&gt;
 &lt;p&gt;This feels as natural as anything, but then again I been doing Python
 for a number of years, so the bias could be heavy. Following is an
 attempt:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop in range(3):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action()
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+loop in range(3):
+    action()
+&lt;&#x2F;pre&gt;
 &lt;p&gt;It mimics this Python syntax, which I actually don&#x27;t like, since we
 don&#x27;t always need the items of the container:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for _ in range(3):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action()
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+for _ in range(3):
+    action()
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Quorum, the academic language mentioned above, does it like:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;repeat 3 times
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;end
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+repeat 3 times
+    action()
+end
+&lt;&#x2F;pre&gt;
 &lt;p&gt;I don&#x27;t like that either; feels contrived. The Python way strikes me as
 a good compromise, especially given how general it is. I will try again
 with the &lt;em&gt;loop&lt;&#x2F;em&gt; syntax:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop item in container:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action(item)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+loop item in container:
+    action(item)
+&lt;&#x2F;pre&gt;
 &lt;p&gt;You have to admit it doesn&#x27;t read as nice as:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for item in container:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action(item)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+for item in container:
+    action(item)
+&lt;&#x2F;pre&gt;
 &lt;p&gt;It should be flexible to accommodate more than just one value on each
 iteration, so should have an equivalent for this Python code:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;for index, item in enumerate(container):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action(index, item)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+for index, item in enumerate(container):
+    action(index, item)
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Here goes:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;loop index, item in enumerate(container):
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    action(index, item)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+loop index, item in enumerate(container):
+    action(index, item)
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Now, for the much-loved Python list comprehensions:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[procedure(item) for item in container]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[procedure(item) for item in container]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;We would instead have:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[procedure(item) loop item in container]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[procedure(item) loop item in container]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;So, apart from being highly-rated for being intuitive, &lt;em&gt;loop&lt;&#x2F;em&gt; also
 provides a consistent looping construct, whereas Python has 2, &lt;em&gt;while&lt;&#x2F;em&gt;
 and &lt;em&gt;for&lt;&#x2F;em&gt;, both of which received low points in the study. Interesting.&lt;&#x2F;p&gt;
@@ -284,110 +284,110 @@ comparable. I also added the &lt;a href=&quot;https:&#x2F;&#x2F;www.digitalocean
 &lt;p&gt;Each machine runs Debian testing (codename &amp;quot;jessie&amp;quot;). Following is the
 output of these commands for each machine:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;uname --all
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;cat &#x2F;proc&#x2F;cpuinfo | sed --quiet &amp;#39;5p&amp;#39;
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+uname --all
+cat &#x2F;proc&#x2F;cpuinfo | sed --quiet &#x27;5p&#x27;
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Home machine:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Linux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU&#x2F;Linux
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;model name      : Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+Linux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU&#x2F;Linux
+model name      : Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Work machine:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Linux twork 3.10-3-amd64 #1 SMP Debian 3.10.11-1 (2013-09-10) x86_64 GNU&#x2F;Linux
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;model name      : AMD Phenom(tm) II X4 970 Processor
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+Linux twork 3.10-3-amd64 #1 SMP Debian 3.10.11-1 (2013-09-10) x86_64 GNU&#x2F;Linux
+model name      : AMD Phenom(tm) II X4 970 Processor
+&lt;&#x2F;pre&gt;
 &lt;p&gt;DigitalOcean VPS:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Linux tcloud 3.11-1-amd64 #1 SMP Debian 3.11.5-1 (2013-10-17) x86_64 GNU&#x2F;Linux
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;model name      : QEMU Virtual CPU version 1.0
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;cpython-benchmarks&quot;&gt;CPython benchmarks&lt;&#x2F;h2&gt;
+Linux tcloud 3.11-1-amd64 #1 SMP Debian 3.11.5-1 (2013-10-17) x86_64 GNU&#x2F;Linux
+model name      : QEMU Virtual CPU version 1.0
+&lt;&#x2F;pre&gt;&lt;h2 id=&quot;cpython-benchmarks&quot;&gt;CPython benchmarks&lt;&#x2F;h2&gt;
 &lt;p&gt;I ran two benchmarks, both from the latest VCS version of CPython,
 development branch:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ hg identify --id --branch
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;b6a1a78818fe default
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;build&quot;&gt;Build&lt;&#x2F;h3&gt;
+$ hg identify --id --branch
+b6a1a78818fe default
+&lt;&#x2F;pre&gt;&lt;h3 id=&quot;build&quot;&gt;Build&lt;&#x2F;h3&gt;
 &lt;p&gt;Here&#x27;s the command I used:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;make distclean; time (.&#x2F;configure &amp;amp;&amp;amp; make --silent --jobs=4)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;results&quot;&gt;Results&lt;&#x2F;h3&gt;
+make distclean; time (.&#x2F;configure &amp;amp;&amp;amp; make --silent --jobs=4)
+&lt;&#x2F;pre&gt;&lt;h3 id=&quot;results&quot;&gt;Results&lt;&#x2F;h3&gt;
 &lt;p&gt;Home machine:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    2m11.687s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;user    3m18.104s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     0m9.964s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+real    2m11.687s
+user    3m18.104s
+sys     0m9.964s
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Work machine:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    2m2.707s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;user    2m24.200s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     0m12.280s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+real    2m2.707s
+user    2m24.200s
+sys     0m12.280s
+&lt;&#x2F;pre&gt;
 &lt;p&gt;VPS:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    2m30.931s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;user    3m7.272s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     0m16.592s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;test-suite&quot;&gt;Test suite&lt;&#x2F;h3&gt;
+real    2m30.931s
+user    3m7.272s
+sys     0m16.592s
+&lt;&#x2F;pre&gt;&lt;h3 id=&quot;test-suite&quot;&gt;Test suite&lt;&#x2F;h3&gt;
 &lt;p&gt;Here&#x27;s the command I used:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;time .&#x2F;python -m test --multiprocess=0
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+time .&#x2F;python -m test --multiprocess=0
+&lt;&#x2F;pre&gt;
 &lt;p&gt;&lt;strong&gt;--multiprocess=0&lt;&#x2F;strong&gt; means that there will be 6 tests run in parallel;
 that is the number logical cores (4 in my case) + 2 (to avoid waiting
 too long for tests which are largely idle)&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;results-1&quot;&gt;Results&lt;&#x2F;h3&gt;
 &lt;p&gt;Home machine:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    3m42.571s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;user    7m13.124s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     0m33.320s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+real    3m42.571s
+user    7m13.124s
+sys     0m33.320s
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Work machine:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    2m29.957s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;user    4m9.052s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     0m27.364s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+real    2m29.957s
+user    4m9.052s
+sys     0m27.364s
+&lt;&#x2F;pre&gt;
 &lt;p&gt;VPS:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    2m19.174s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;user    5m5.444s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     0m40.008s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;linux-kernel-build&quot;&gt;Linux kernel build&lt;&#x2F;h2&gt;
+real    2m19.174s
+user    5m5.444s
+sys     0m40.008s
+&lt;&#x2F;pre&gt;&lt;h2 id=&quot;linux-kernel-build&quot;&gt;Linux kernel build&lt;&#x2F;h2&gt;
 &lt;p&gt;Just for kicks, I decided to check how long building Linux would take;
 for this, I used latest &#x27;final&#x27; release from Linus&#x27; git tree:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ git log -1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;commit 6e4664525b1db28f8c4e1130957f70a94c19213e
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Author: Linus Torvalds &amp;lt;torvalds@linux-foundation.org&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Date:   Mon Sep 2 13:46:10 2013 -0700
+$ git log -1
+commit 6e4664525b1db28f8c4e1130957f70a94c19213e
+Author: Linus Torvalds &amp;lt;torvalds@linux-foundation.org&amp;gt;
+Date:   Mon Sep 2 13:46:10 2013 -0700
 
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Linux 3.11
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+Linux 3.11
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Here&#x27;s the commands I used:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;make distclean &amp;amp;&amp;amp; make defconfig &amp;amp;&amp;amp; time make
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;results-2&quot;&gt;Results&lt;&#x2F;h3&gt;
+make distclean &amp;amp;&amp;amp; make defconfig &amp;amp;&amp;amp; time make
+&lt;&#x2F;pre&gt;&lt;h3 id=&quot;results-2&quot;&gt;Results&lt;&#x2F;h3&gt;
 &lt;p&gt;Home machine:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    6m11.622s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;user    21m2.664s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     1m15.324s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+real    6m11.622s
+user    21m2.664s
+sys     1m15.324s
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Work machine:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    2m40.275s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;user    8m55.624s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     0m42.860s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+real    2m40.275s
+user    8m55.624s
+sys     0m42.860s
+&lt;&#x2F;pre&gt;
 &lt;p&gt;VPS:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;real    3m41.240s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;user    12m21.120s
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;sys     1m17.844s
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
+real    3m41.240s
+user    12m21.120s
+sys     1m17.844s
+&lt;&#x2F;pre&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
 &lt;p&gt;My work machine is faster than the DigitalOcean offering of comparable
 specs, and much faster than my home machine, a laptop.&lt;&#x2F;p&gt;
 &lt;p&gt;(&lt;a href=&quot;http:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;556411&#x2F;321731&quot;&gt;detailed explanation of the output&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
@@ -468,8 +468,8 @@ self.&lt;&#x2F;p&gt;
 term) or Commits (Git term), use the following search term on your pager
 (tested with &lt;a href=&quot;http:&#x2F;&#x2F;www.greenwoodsoftware.com&#x2F;less&quot;&gt;less&lt;&#x2F;a&gt;, which is Debian&#x2F;Ubuntu default pager):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(^changeset)|(^commit)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
+(^changeset)|(^commit)
+&lt;&#x2F;pre&gt;</description>
             </item>
         
             <item>
@@ -1174,10 +1174,10 @@ next user-visible change.&lt;&#x2F;p&gt;
 &lt;p&gt;There is less magic and more strictness. Previously, these commands
 resulted in the same outcome:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;wajig REMOVEORPHANS
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;wajig REMOVE-ORPHANS
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;wajig R-____EMOVE-ORPH+++-___AN_S
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+wajig REMOVEORPHANS
+wajig REMOVE-ORPHANS
+wajig R-____EMOVE-ORPH+++-___AN_S
+&lt;&#x2F;pre&gt;
 &lt;p&gt;What wajig did was simply sanitise the commands, getting rid of the
 junk. Well, I don&#x27;t like that, but since I didn&#x27;t want to break
 people&#x27;s commands&#x2F;aliases&#x2F;scripts I actually tried to preserve that
@@ -1583,13 +1583,13 @@ for pkg in repo1:
 &lt;p&gt;The line &lt;code&gt;import apt_pkg&lt;&#x2F;code&gt; implies that &lt;strong&gt;python3-apt&lt;&#x2F;strong&gt; is installed.&lt;&#x2F;p&gt;
 &lt;p&gt;Here&#x27;s a snippet of what the output will look like:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;2.32.1-2    2.28.1-6    (gconf-defaults-service)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0.23.0-1    0.21.1-1    (pylint)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;2.91.5-2    2.30.2-2    (libgnomekbd-common)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0.21.2-1    0.16.4-1    (libpixman-1-dev)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;2.91.7-1    2.30.1-2    (nautilus)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;0.9.22-1    0.9.21-3    (pulseaudio-utils)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+2.32.1-2    2.28.1-6    (gconf-defaults-service)
+0.23.0-1    0.21.1-1    (pylint)
+2.91.5-2    2.30.2-2    (libgnomekbd-common)
+0.21.2-1    0.16.4-1    (libpixman-1-dev)
+2.91.7-1    2.30.1-2    (nautilus)
+0.9.22-1    0.9.21-3    (pulseaudio-utils)
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Here, we get a display of package versions where the repo1 (custom repo
 in this case) is greater than repo2 version. To do it the other way
 around, use the &lt;code&gt;&amp;lt;&lt;&#x2F;code&gt; character in the comparison line, &lt;code&gt;if vc &amp;gt; 0&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
@@ -1631,8 +1631,8 @@ print(split_string)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;I can go ahead and specify a delimiter (which character the string must
 split on):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -1641,8 +1641,8 @@ print(split_string)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;I get the same result:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;But what if my string wasn&#x27;t so forgiving?&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;split_string = &amp;quot;a b  c&amp;quot;.split(&amp;quot; &amp;quot;)
@@ -1650,8 +1650,8 @@ print(split_string)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;&amp;#39;, &amp;#39;c&amp;#39;]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[&#x27;a&#x27;, &#x27;b&#x27;, &#x27;&#x27;, &#x27;c&#x27;]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Not exactly what we want. Leaving the delimiter out gives us the exact
 same list as when we had this with a forgiving string.&lt;&#x2F;p&gt;
 &lt;p&gt;Anyways, the point is that for a lot of cases, probably a majority, when
@@ -1668,8 +1668,8 @@ System.out.println(Arrays.asList(splitString));
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[a, b, , c]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[a, b, , c]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;That&#x27;s not what we want, so in order to cover for my unforgiving
 string, I get to use regular expressions (regexp)?&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -1679,8 +1679,8 @@ System.out.println(Arrays.asList(splitString));
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[a, b, c]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[a, b, c]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;The &lt;code&gt;+&lt;&#x2F;code&gt; in the &lt;code&gt;split()&lt;&#x2F;code&gt; method indicates that the match can either be
 one or more consecutive spaces.&lt;&#x2F;p&gt;
 &lt;p&gt;That&#x27;s not what we want, so in order to cover for my unforgiving
@@ -1691,8 +1691,8 @@ System.out.println(Arrays.asList(splitString));
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[a, b, c]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[a, b, c]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;But what if the string was even less forgiving. In this case, having
 tabs as well? We need some more regexp help:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
@@ -1702,8 +1702,8 @@ System.out.println(Arrays.asList(splitString));
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[a, b, c]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[a, b, c]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;The &lt;code&gt;s&lt;&#x2F;code&gt; matches any white space.&lt;&#x2F;p&gt;
 &lt;p&gt;With Python, I expected the default way to work but it didn&#x27;t, but came
 back disappointed:&lt;&#x2F;p&gt;
@@ -1713,8 +1713,8 @@ print(split_string)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[&amp;#39;at&amp;#39;, &amp;#39;bnc&amp;#39;]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[&#x27;at&#x27;, &#x27;bnc&#x27;]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Perhaps it&#x27;s a philosophical difference, but it&#x27;s harder to do this
 with Python. This is the only thing so that I found easier to achieve in
 Java than in Python:&lt;&#x2F;p&gt;
@@ -1725,8 +1725,8 @@ print(split_string)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;...and we finally get what we want:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
+[&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;]
+&lt;&#x2F;pre&gt;</description>
             </item>
         
             <item>
@@ -1737,10 +1737,10 @@ print(split_string)
                 <description>&lt;p&gt;Reading &lt;code&gt;.INI&lt;&#x2F;code&gt; files is very easy with Python. Say you had a file,
 &amp;quot;&lt;em&gt;config.cfg&lt;&#x2F;em&gt;&amp;quot;, with this content:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[numbers]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;one: 1
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;two: 2
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[numbers]
+one: 1
+two: 2
+&lt;&#x2F;pre&gt;
 &lt;p&gt;The code to read that content is:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import configparser
@@ -1751,8 +1751,8 @@ print(items)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[(&amp;#39;one&amp;#39;, &amp;#39;1&amp;#39;), (&amp;#39;two&amp;#39;, &amp;#39;2&amp;#39;)]
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+[(&#x27;one&#x27;, &#x27;1&#x27;), (&#x27;two&#x27;, &#x27;2&#x27;)]
+&lt;&#x2F;pre&gt;
 &lt;p&gt;That&#x27;s a list of tuples, each tuple a key-value pair.&lt;&#x2F;p&gt;
 &lt;p&gt;Even better, since these are key-value pairs, why not use a more
 suitable data type? Here goes:&lt;&#x2F;p&gt;
@@ -1765,8 +1765,8 @@ print(items)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;{&amp;#39;two&amp;#39;: &amp;#39;2&amp;#39;, &amp;#39;one&amp;#39;: &amp;#39;1&amp;#39;}
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+{&#x27;two&#x27;: &#x27;2&#x27;, &#x27;one&#x27;: &#x27;1&#x27;}
+&lt;&#x2F;pre&gt;
 &lt;p&gt;That&#x27;s the &lt;strong&gt;dict&lt;&#x2F;strong&gt; function, which takes a list of tuples, and
 converts them to a dictionary. You might also have noticed that the
 ordering is now a bit off. That&#x27;s because the dict type doesn&#x27;t care
@@ -1852,8 +1852,8 @@ subprocess.Popen(&amp;quot;echo test&amp;quot;, shell=True)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;test
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+test
+&lt;&#x2F;pre&gt;
 &lt;p&gt;This is via the kernel:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;import subprocess
@@ -1863,8 +1863,8 @@ print(output)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(b&amp;#39;testn&amp;#39;, b&amp;#39;&amp;#39;)
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+(b&#x27;testn&#x27;, b&#x27;&#x27;)
+&lt;&#x2F;pre&gt;
 &lt;p&gt;Not exactly what we want. The output is actually a tuple (&lt;strong&gt;stdout&lt;&#x2F;strong&gt;,
 &lt;strong&gt;stderr&lt;&#x2F;strong&gt;). Note that by default, &lt;code&gt;shell=False&lt;&#x2F;code&gt;, and that&#x27;s why it&#x27;s
 not stated here.&lt;&#x2F;p&gt;
@@ -1878,8 +1878,8 @@ print(output[0].decode(), end=&amp;quot;&amp;quot;)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;test
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+test
+&lt;&#x2F;pre&gt;
 &lt;p&gt;The &lt;code&gt;b&lt;&#x2F;code&gt; thing indicates that the string is in bytes format. To get a
 normal string from that, just run the string&#x27;s &lt;a href=&quot;http:&#x2F;&#x2F;docs.python.org&#x2F;library&#x2F;stdtypes.html?highlight=encode#str.decode&quot;&gt;decode method&lt;&#x2F;a&gt;. Also,
 that I had to use the &lt;code&gt;end&lt;&#x2F;code&gt; argument on the &lt;a href=&quot;http:&#x2F;&#x2F;docs.python.org&#x2F;library&#x2F;functions.html#print&quot;&gt;print function&lt;&#x2F;a&gt;, was to
@@ -1940,8 +1940,8 @@ subprocess.Popen(formatted_cmd)
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Output:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;content of &amp;#39;file with spaces&amp;#39;
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
+content of &#x27;file with spaces&#x27;
+&lt;&#x2F;pre&gt;</description>
             </item>
         
             <item>
