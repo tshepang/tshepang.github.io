@@ -7,7 +7,7 @@
       <!-- Enable responsiveness on mobile devices-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-      <title>Tshepang logs - top movies</title>
+      <title>Tshepang logs - rustc compile times</title>
 
       
         <link rel="alternate" type="application/rss+xml" title="RSS" href="http:&#x2F;&#x2F;tshepang.net&#x2F;rss.xml">
@@ -121,23 +121,30 @@
     
     <header class="post__header">
         <h1 class="post__title">
-            <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;top-movies&#x2F;">top movies</a>
+            <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;rustc-compile-times&#x2F;">rustc compile times</a>
         </h1>
         <div class="post__meta">
-            <span class="post__time">2020-05-13</span>
+            <span class="post__time">2020-05-18</span>
             
         </div>
     </header>
 
     <div class="post-content">
-      <ol>
-<li><a href="http://tshepang.net/fight-club-1999">Fight Club</a></li>
-<li><a href="http://tshepang.net/requiem-for-a-dream-2000">Requiem for A Dream</a></li>
-<li><a href="http://tshepang.net/children-of-men-2006">Children of Men</a></li>
-<li><a href="http://tshepang.net/smokin-aces-2006">Smokin' Aces</a></li>
-<li><a href="http://tshepang.net/being-john-malkovich-1999">Being John Malkovich</a></li>
-</ol>
+      <p>Running <code>./x.py build --stage 1</code> on a codebase that already has LLVM
+built results in the following as the last line:</p>
+<blockquote>
+<p>Build completed successfully in 0:33:06</p>
+</blockquote>
+<p>Following is my <em>config.toml</em>:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">[build]
+</span><span style="color:#bf616a;">compiler-docs </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">true
+</span><span style="color:#bf616a;">extended </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">true
+</span><span style="color:#bf616a;">tools </span><span style="color:#c0c5ce;">= [ &quot;</span><span style="color:#a3be8c;">clippy</span><span style="color:#c0c5ce;">&quot; ]
 
+[rust]
+</span><span style="color:#bf616a;">incremental </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">true
+</span></pre>
     </div>
 
     
@@ -146,13 +153,17 @@
     <div class="post-footer">
         
             
+                <div class="post-tags">
+                    
+                        <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;tags&#x2F;rust&#x2F;">#Rust</a>
+                    
+                </div>
+            
             
                 <div class="post-nav">
                     
-                        <a class="previous" href="http:&#x2F;&#x2F;tshepang.net&#x2F;2009-review&#x2F;">‹ 2009 review</a>
+                        <a class="previous" href="http:&#x2F;&#x2F;tshepang.net&#x2F;top-movies&#x2F;">‹ top movies</a>
                     
-                    
-                        <a class="next" href="http:&#x2F;&#x2F;tshepang.net&#x2F;rustc-compile-times&#x2F;">rustc compile times ›</a>
                     
                     
                     

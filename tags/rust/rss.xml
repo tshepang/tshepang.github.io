@@ -7,7 +7,29 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="http://tshepang.net/tags/rust/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Fri, 21 Feb 2020 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 18 May 2020 00:00:00 +0000</lastBuildDate>
+        
+            <item>
+                <title>rustc compile times</title>
+                <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/rustc-compile-times/</link>
+                <guid>http://tshepang.net/rustc-compile-times/</guid>
+                <description>&lt;p&gt;Running &lt;code&gt;.&#x2F;x.py build --stage 1&lt;&#x2F;code&gt; on a codebase that already has LLVM
+built results in the following as the last line:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Build completed successfully in 0:33:06&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Following is my &lt;em&gt;config.toml&lt;&#x2F;em&gt;:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[build]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;compiler-docs &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;extended &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;tools &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= [ &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;clippy&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot; ]
+
+[rust]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;incremental &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
+            </item>
         
             <item>
                 <title>most used Rust software</title>
