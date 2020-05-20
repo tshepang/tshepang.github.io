@@ -124,7 +124,7 @@
             <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;rustc-compile-times&#x2F;">rustc compile times</a>
         </h1>
         <div class="post__meta">
-            <span class="post__time">2020-05-18</span>
+            <span class="post__time">2020-05-20</span>
             
         </div>
     </header>
@@ -133,7 +133,7 @@
       <p>Running <code>./x.py build --stage 1</code> on a codebase that already has LLVM
 built results in the following as the last line:</p>
 <blockquote>
-<p>Build completed successfully in 0:33:06</p>
+<p>Build completed successfully in 0:33:47</p>
 </blockquote>
 <p>Following is my <em>config.toml</em>:</p>
 <pre style="background-color:#2b303b;">
@@ -144,6 +144,18 @@ built results in the following as the last line:</p>
 
 [rust]
 </span><span style="color:#bf616a;">incremental </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">true
+</span></pre>
+<p>Following is output of latest commit:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">❯ git show
+commit 8858a435f3eef655df3e4fb6bec15d33e44a374e (HEAD -&gt; master, origin/master, origin/HEAD)
+Merge: f182c4af8a2 2d4d0dbaa72
+Author: bors &lt;bors@rust-lang.org&gt;
+Date:   Wed May 20 15:55:59 2020 +0000
+
+    Auto merge of #72384 - mati865:ci-fix, r=pietroalbini
+
+    Workaround MSYS2/chocolatey issue again
 </span></pre>
     </div>
 
