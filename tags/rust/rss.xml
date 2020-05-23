@@ -7,7 +7,31 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="http://tshepang.net/tags/rust/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Wed, 20 May 2020 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Sat, 23 May 2020 00:00:00 +0000</lastBuildDate>
+        
+            <item>
+                <title>mouth-watering Rust posts</title>
+                <pubDate>Sat, 23 May 2020 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/mouth-watering-rust-posts/</link>
+                <guid>http://tshepang.net/mouth-watering-rust-posts/</guid>
+                <description>&lt;p&gt;These posts got me excited for this or that Rust creation:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stjepang.github.io&#x2F;2020&#x2F;04&#x2F;03&#x2F;why-im-building-a-new-async-runtime&quot;&gt;Why I&#x27;m building a new async runtime&lt;&#x2F;a&gt; (early 2020)&lt;&#x2F;p&gt;
+&lt;p&gt;Announcement of &lt;strong&gt;smol&lt;&#x2F;strong&gt;, an async runtime.
+Made me want to finally make use of async.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;seanmonstar.com&#x2F;post&#x2F;176530511587&quot;&gt;warp&lt;&#x2F;a&gt; (mid 2018)&lt;&#x2F;p&gt;
+&lt;p&gt;Announcement of &lt;strong&gt;warp&lt;&#x2F;strong&gt;, a web framework.
+Made me seriously wanna dabble with Rust web landscape.
+The design looked novel.
+Last I remember being any excited by a web framework was years before,
+with the &lt;a href=&quot;https:&#x2F;&#x2F;trypyramid.com&quot;&gt;Pyramid&lt;&#x2F;a&gt;, back in my Python days.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+            </item>
         
             <item>
                 <title>rustc compile times</title>
