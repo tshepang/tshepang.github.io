@@ -7,7 +7,51 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="http://tshepang.net/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Sat, 23 May 2020 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Fri, 29 May 2020 00:00:00 +0000</lastBuildDate>
+        
+            <item>
+                <title>rustc compile times</title>
+                <pubDate>Fri, 29 May 2020 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/rustc-compile-times/</link>
+                <guid>http://tshepang.net/rustc-compile-times/</guid>
+                <description>&lt;p&gt;Running &lt;code&gt;.&#x2F;x.py build --stage 1&lt;&#x2F;code&gt; on a codebase that already has LLVM
+built results in the following as the last line:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Build completed successfully in 0:47:06&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Following is my &lt;em&gt;config.toml&lt;&#x2F;em&gt;:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[build]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;compiler-docs &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;extended &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;tools &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= [ &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;clippy&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;rustfmt&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot; ]
+
+[rust]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;incremental &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;parallel-compiler &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Following is output of latest commit:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;❯ git show
+commit 96dd4690c3aa70ec312448c3f2d50e6dc6fb87df (HEAD -&amp;gt; master, origin&#x2F;master, origin&#x2F;HEAD)
+Merge: 77f95a89a10 3f3e0ee4b04
+Author: bors &amp;lt;bors@rust-lang.org&amp;gt;
+Date:   Fri May 29 11:16:45 2020 +0000
+
+    Auto merge of #72671 - flip1995:clippyup, r=Xanewok
+
+    Update Clippy, RLS, and rustfmt
+
+    r? @Dylan-DPC
+
+    This makes Clippy test-pass again: 3089c3b
+
+    Otherwise this includes bugfixes and a few new lints.
+
+    Fixes #72231
+    Fixes #72232
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
+            </item>
         
             <item>
                 <title>mouth-watering Rust posts</title>
@@ -31,40 +75,6 @@ with the &lt;a href=&quot;https:&#x2F;&#x2F;trypyramid.com&quot;&gt;Pyramid&lt;&
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </description>
-            </item>
-        
-            <item>
-                <title>rustc compile times</title>
-                <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/rustc-compile-times/</link>
-                <guid>http://tshepang.net/rustc-compile-times/</guid>
-                <description>&lt;p&gt;Running &lt;code&gt;.&#x2F;x.py build --stage 1&lt;&#x2F;code&gt; on a codebase that already has LLVM
-built results in the following as the last line:&lt;&#x2F;p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Build completed successfully in 0:33:47&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;Following is my &lt;em&gt;config.toml&lt;&#x2F;em&gt;:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[build]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;compiler-docs &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;extended &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;tools &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= [ &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;clippy&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot; ]
-
-[rust]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;incremental &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Following is output of latest commit:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;span style=&quot;color:#c0c5ce;&quot;&gt;❯ git show
-commit 8858a435f3eef655df3e4fb6bec15d33e44a374e (HEAD -&amp;gt; master, origin&#x2F;master, origin&#x2F;HEAD)
-Merge: f182c4af8a2 2d4d0dbaa72
-Author: bors &amp;lt;bors@rust-lang.org&amp;gt;
-Date:   Wed May 20 15:55:59 2020 +0000
-
-    Auto merge of #72384 - mati865:ci-fix, r=pietroalbini
-
-    Workaround MSYS2&#x2F;chocolatey issue again
-&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;</description>
             </item>
         
             <item>

@@ -124,7 +124,7 @@
             <a href="http:&#x2F;&#x2F;tshepang.net&#x2F;rustc-compile-times&#x2F;">rustc compile times</a>
         </h1>
         <div class="post__meta">
-            <span class="post__time">2020-05-20</span>
+            <span class="post__time">2020-05-29</span>
             
         </div>
     </header>
@@ -133,29 +133,39 @@
       <p>Running <code>./x.py build --stage 1</code> on a codebase that already has LLVM
 built results in the following as the last line:</p>
 <blockquote>
-<p>Build completed successfully in 0:33:47</p>
+<p>Build completed successfully in 0:47:06</p>
 </blockquote>
 <p>Following is my <em>config.toml</em>:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">[build]
 </span><span style="color:#bf616a;">compiler-docs </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">true
 </span><span style="color:#bf616a;">extended </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">true
-</span><span style="color:#bf616a;">tools </span><span style="color:#c0c5ce;">= [ &quot;</span><span style="color:#a3be8c;">clippy</span><span style="color:#c0c5ce;">&quot; ]
+</span><span style="color:#bf616a;">tools </span><span style="color:#c0c5ce;">= [ &quot;</span><span style="color:#a3be8c;">clippy</span><span style="color:#c0c5ce;">&quot;, &quot;</span><span style="color:#a3be8c;">rustfmt</span><span style="color:#c0c5ce;">&quot; ]
 
 [rust]
 </span><span style="color:#bf616a;">incremental </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">true
+</span><span style="color:#bf616a;">parallel-compiler </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">true
 </span></pre>
 <p>Following is output of latest commit:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">❯ git show
-commit 8858a435f3eef655df3e4fb6bec15d33e44a374e (HEAD -&gt; master, origin/master, origin/HEAD)
-Merge: f182c4af8a2 2d4d0dbaa72
+commit 96dd4690c3aa70ec312448c3f2d50e6dc6fb87df (HEAD -&gt; master, origin/master, origin/HEAD)
+Merge: 77f95a89a10 3f3e0ee4b04
 Author: bors &lt;bors@rust-lang.org&gt;
-Date:   Wed May 20 15:55:59 2020 +0000
+Date:   Fri May 29 11:16:45 2020 +0000
 
-    Auto merge of #72384 - mati865:ci-fix, r=pietroalbini
+    Auto merge of #72671 - flip1995:clippyup, r=Xanewok
 
-    Workaround MSYS2/chocolatey issue again
+    Update Clippy, RLS, and rustfmt
+
+    r? @Dylan-DPC
+
+    This makes Clippy test-pass again: 3089c3b
+
+    Otherwise this includes bugfixes and a few new lints.
+
+    Fixes #72231
+    Fixes #72232
 </span></pre>
     </div>
 
@@ -174,10 +184,8 @@ Date:   Wed May 20 15:55:59 2020 +0000
             
                 <div class="post-nav">
                     
-                        <a class="previous" href="http:&#x2F;&#x2F;tshepang.net&#x2F;top-movies&#x2F;">‹ top movies</a>
+                        <a class="previous" href="http:&#x2F;&#x2F;tshepang.net&#x2F;mouth-watering-rust-posts&#x2F;">‹ mouth-watering Rust posts</a>
                     
-                    
-                        <a class="next" href="http:&#x2F;&#x2F;tshepang.net&#x2F;mouth-watering-rust-posts&#x2F;">mouth-watering Rust posts ›</a>
                     
                     
                     
