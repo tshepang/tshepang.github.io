@@ -19,6 +19,13 @@ built results in the following as the last line:&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Build completed successfully in 0:47:06&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
+&lt;p&gt;The tools themselves, which get built last, take about 10m to built,
+adding to the total above:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;cargo&lt;&#x2F;li&gt;
+&lt;li&gt;clippy&lt;&#x2F;li&gt;
+&lt;li&gt;rustfmt&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
 &lt;p&gt;Following is my &lt;em&gt;config.toml&lt;&#x2F;em&gt;:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;[build]
@@ -30,7 +37,7 @@ built results in the following as the last line:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;incremental &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;parallel-compiler &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Following is output of latest commit:&lt;&#x2F;p&gt;
+&lt;p&gt;Following is the commit I built:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;❯ git show
 commit 96dd4690c3aa70ec312448c3f2d50e6dc6fb87df (HEAD -&amp;gt; master, origin&#x2F;master, origin&#x2F;HEAD)

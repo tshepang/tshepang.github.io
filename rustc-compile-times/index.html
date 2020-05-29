@@ -135,6 +135,13 @@ built results in the following as the last line:</p>
 <blockquote>
 <p>Build completed successfully in 0:47:06</p>
 </blockquote>
+<p>The tools themselves, which get built last, take about 10m to built,
+adding to the total above:</p>
+<ul>
+<li>cargo</li>
+<li>clippy</li>
+<li>rustfmt</li>
+</ul>
 <p>Following is my <em>config.toml</em>:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">[build]
@@ -146,7 +153,7 @@ built results in the following as the last line:</p>
 </span><span style="color:#bf616a;">incremental </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">true
 </span><span style="color:#bf616a;">parallel-compiler </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">true
 </span></pre>
-<p>Following is output of latest commit:</p>
+<p>Following is the commit I built:</p>
 <pre style="background-color:#2b303b;">
 <span style="color:#c0c5ce;">❯ git show
 commit 96dd4690c3aa70ec312448c3f2d50e6dc6fb87df (HEAD -&gt; master, origin/master, origin/HEAD)
