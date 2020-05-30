@@ -7,7 +7,77 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="http://tshepang.net/tags/list/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Tue, 12 May 2020 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Sat, 30 May 2020 00:00:00 +0000</lastBuildDate>
+        
+            <item>
+                <title>FLOSS I use a-lot</title>
+                <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
+                <link>http://tshepang.net/floss-i-use-a-lot/</link>
+                <guid>http://tshepang.net/floss-i-use-a-lot/</guid>
+                <description>&lt;p&gt;&lt;em&gt;environment&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Debian&lt;&#x2F;strong&gt;: my primary OS, and also my favorite&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;my-current-desktop-setup&quot;&gt;dwm&lt;&#x2F;a&gt;: simple and clean window management&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tmux&#x2F;tmux&#x2F;wiki&quot;&gt;tmux&lt;&#x2F;a&gt;: amazingly powerful terminal multiplexer&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Emacs&lt;&#x2F;strong&gt;: pleasant text editing and file management&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;fish&lt;&#x2F;strong&gt;: compared to mighty Bash, it is far more pretty,
+and has a far better command completion system&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;em&gt;software development&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;cargo&lt;&#x2F;strong&gt;: central tool for Rust development&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Git&lt;&#x2F;strong&gt;: this one has won the mindshare&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;em&gt;work&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Our infrastructure is made up of remote machines that ferry data to
+central servers&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Docker&lt;&#x2F;strong&gt; &amp;amp; &lt;strong&gt;Docker Compose&lt;&#x2F;strong&gt;: each component of the server runs in a container&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;SaltStack&lt;&#x2F;strong&gt;: administers the remote machines&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;journalctl&lt;&#x2F;strong&gt; &amp;amp; &lt;strong&gt;systemctl&lt;&#x2F;strong&gt;: these remote machines run systemd&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Elasticsearch&lt;&#x2F;strong&gt;: the data store&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Ubuntu&lt;&#x2F;strong&gt;: the OS running these remotes, and the server&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Bash&lt;&#x2F;strong&gt;: default shell on Ubuntu&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;em&gt;GUI applications&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Xfce Terminal&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Firefox&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.transmissionbt.com&quot;&gt;Transmission&lt;&#x2F;a&gt;: the only torrent client I have ever used&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Nautilus&lt;&#x2F;strong&gt;: decent GUI file manager&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;em&gt;network diagnosis&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;humdi.net&#x2F;vnstat&quot;&gt;vnstat&lt;&#x2F;a&gt;: nifty network usage viewer&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;ping&lt;&#x2F;strong&gt;: checks general reachability&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;mtr&lt;&#x2F;strong&gt;: interactive traceroute tool&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;netcat&lt;&#x2F;strong&gt;: for checking if tcp ports are reachable&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;em&gt;entertainment&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;quodlibet.readthedocs.io&quot;&gt;Quod Libet&lt;&#x2F;a&gt;: audio player&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;VLC&lt;&#x2F;strong&gt;: user interface could be a lot better&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;em&gt;miscellaneous tools&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;wajig&lt;&#x2F;strong&gt;: acts as pleasant front-end to &lt;code&gt;apt&lt;&#x2F;code&gt; and other
+package management tools;
+&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;tags&#x2F;wajig&quot;&gt;I used to maintain it&lt;&#x2F;a&gt;, and it happens to be the one Debian
+package that makes me a Debian Maintainer (I got upload access
+for it)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;apt&lt;&#x2F;strong&gt;: Debian package management&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;head&lt;&#x2F;strong&gt; and &lt;strong&gt;tail&lt;&#x2F;strong&gt;: included in GNU coreutils suite of tools&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;OpenSSH&lt;&#x2F;strong&gt;: duh!&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;project-of-note-sudo&quot;&gt;Sudo&lt;&#x2F;a&gt;: another duh!&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;rg3.github.io&#x2F;youtube-dl&quot;&gt;youtube-dl&lt;&#x2F;a&gt;: I prefer watching videos locally, with VLC&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;project-of-note-sudo&quot;&gt;Iotop&lt;&#x2F;a&gt;: nifty I&#x2F;O usage viewer&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;blog.burntsushi.net&#x2F;ripgrep&quot;&gt;ripgrep&lt;&#x2F;a&gt;: a more pleasant &lt;code&gt;grep&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;the.exa.website&quot;&gt;exa&lt;&#x2F;a&gt;: a more pleasant, more pretty &lt;code&gt;ls&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;bat&quot;&gt;bat&lt;&#x2F;a&gt;: a more pleasant, more fancy &lt;code&gt;cat&lt;&#x2F;code&gt;, which also supplants &lt;code&gt;less&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;top&lt;&#x2F;strong&gt;: a powerful and flexible process viewer, part of &lt;a href=&quot;https:&#x2F;&#x2F;gitlab.com&#x2F;procps-ng&#x2F;procps&quot;&gt;procps suite&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+            </item>
         
             <item>
                 <title>best topic treatment</title>
@@ -225,78 +295,6 @@ presentation, and North Pole environment (&lt;em&gt;The Polar Express&lt;&#x2F;e
 &lt;p&gt;Naomi Harris (&lt;em&gt;Pirates of the Caribbean: Dead Man&#x27;s Chest&lt;&#x2F;em&gt;)&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;airport-checkpoint-officer&quot;&gt;airport checkpoint officer&lt;&#x2F;h2&gt;
 &lt;p&gt;The humorless guy at airport checkpoint (&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;the-next-three-days-2010&quot;&gt;The Next Three Days&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
-</description>
-            </item>
-        
-            <item>
-                <title>FLOSS I use a-lot</title>
-                <pubDate>Fri, 20 Sep 2019 00:00:00 +0000</pubDate>
-                <link>http://tshepang.net/floss-i-use-a-lot/</link>
-                <guid>http://tshepang.net/floss-i-use-a-lot/</guid>
-                <description>&lt;p&gt;&lt;em&gt;environment&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Debian&lt;&#x2F;strong&gt;: my primary OS, and also my favorite&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;my-current-desktop-setup&quot;&gt;dwm&lt;&#x2F;a&gt;: simple and clean window management&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tmux&#x2F;tmux&#x2F;wiki&quot;&gt;tmux&lt;&#x2F;a&gt;: amazingly powerful terminal multiplexer,
-though I am yet to figure out how mouse integration works&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Emacs&lt;&#x2F;strong&gt;: pleasant text editing and file management&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;fish&lt;&#x2F;strong&gt;: compared to mighty Bash, it is far more pretty,
-and has a far better command completion system&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;em&gt;software development&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;cargo&lt;&#x2F;strong&gt;: primary tool for Rust development&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Git&lt;&#x2F;strong&gt;: this one has won the mindshare&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Mercurial&lt;&#x2F;strong&gt;: slight preference over Git&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;em&gt;work&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;Our infrastructure is made up of remote machines that ferry data to
-central servers&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Docker&lt;&#x2F;strong&gt; &amp;amp; &lt;strong&gt;Docker Compose&lt;&#x2F;strong&gt;: each component of the server runs in a container&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;SaltStack&lt;&#x2F;strong&gt;: administers the remote machines&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;journalctl&lt;&#x2F;strong&gt; &amp;amp; &lt;strong&gt;systemctl&lt;&#x2F;strong&gt;: these remotes run systemd&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Elasticsearch&lt;&#x2F;strong&gt;: the data store&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Ubuntu&lt;&#x2F;strong&gt;: the OS running these remotes, and the server&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Bash&lt;&#x2F;strong&gt;: default shell on Ubuntu&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;em&gt;GUI applications&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Xfce Terminal&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Firefox&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.transmissionbt.com&quot;&gt;Transmission&lt;&#x2F;a&gt;: the only torrent client I have ever used&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Nautilus&lt;&#x2F;strong&gt;: decent GUI file manager&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;em&gt;network diagnosis&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;humdi.net&#x2F;vnstat&quot;&gt;vnstat&lt;&#x2F;a&gt;: nifty network usage viewer&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;ping&lt;&#x2F;strong&gt;: checks general reachability&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;mtr&lt;&#x2F;strong&gt;: interactive traceroute tool&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;netcat&lt;&#x2F;strong&gt;: for checking if tcp ports are reachable&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;em&gt;entertainment&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;quodlibet.readthedocs.io&quot;&gt;Quod Libet&lt;&#x2F;a&gt;: audio player&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;VLC&lt;&#x2F;strong&gt;: user interface could be a lot better&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;em&gt;miscellaneous tools&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;wajig&lt;&#x2F;strong&gt;: acts as pleasant front-end to apt and other
-package management tools;
-&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;tags&#x2F;wajig&quot;&gt;I used to maintain it&lt;&#x2F;a&gt;, and it happens to be the one Debian
-package that makes me a Debian Maintainer (I got upload access
-for it)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;apt&lt;&#x2F;strong&gt;: Debian package management&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;head&lt;&#x2F;strong&gt; and &lt;strong&gt;tail&lt;&#x2F;strong&gt;: included in GNU coreutils suite of tools&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;OpenSSH&lt;&#x2F;strong&gt;: duh!&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;project-of-note-sudo&quot;&gt;Sudo&lt;&#x2F;a&gt;: another duh!&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;rg3.github.io&#x2F;youtube-dl&quot;&gt;youtube-dl&lt;&#x2F;a&gt;: I prefer watching videos locally, with VLC&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.net&#x2F;project-of-note-sudo&quot;&gt;Iotop&lt;&#x2F;a&gt;: nifty I&#x2F;O usage viewer&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;blog.burntsushi.net&#x2F;ripgrep&quot;&gt;ripgrep&lt;&#x2F;a&gt;: a more pleasant &lt;code&gt;grep&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;the.exa.website&quot;&gt;exa&lt;&#x2F;a&gt;: a more pleasant, more pretty &lt;code&gt;ls&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;bat&quot;&gt;bat&lt;&#x2F;a&gt;: a more pleasant, more fancy &lt;code&gt;cat&lt;&#x2F;code&gt;, which also supplants &lt;code&gt;less&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;top&lt;&#x2F;strong&gt;: a powerful and flexible process viewer, part of &lt;a href=&quot;https:&#x2F;&#x2F;gitlab.com&#x2F;procps-ng&#x2F;procps&quot;&gt;procps suite&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
 </description>
             </item>
         
