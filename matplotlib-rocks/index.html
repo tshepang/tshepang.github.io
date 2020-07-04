@@ -10,8 +10,6 @@
       <title>Tshepang logs - matplotlib rocks</title>
 
       
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http:&#x2F;&#x2F;tshepang.net&#x2F;rss.xml">
-      
 
       
           <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
@@ -132,14 +130,14 @@
     <div class="post-content">
       <p>Have a look at this code:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">from </span><span style="color:#c0c5ce;">matplotlib </span><span style="color:#b48ead;">import </span><span style="color:#c0c5ce;">pyplot
+<code><span style="color:#b48ead;">from </span><span style="color:#c0c5ce;">matplotlib </span><span style="color:#b48ead;">import </span><span style="color:#c0c5ce;">pyplot
 </span><span style="color:#b48ead;">import </span><span style="color:#c0c5ce;">random
 
 x_axis = </span><span style="color:#96b5b4;">range</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">)
 pyplot.</span><span style="color:#bf616a;">plot</span><span style="color:#c0c5ce;">(x_axis, random.</span><span style="color:#bf616a;">sample</span><span style="color:#c0c5ce;">(</span><span style="color:#96b5b4;">range</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">), </span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">))
 pyplot.</span><span style="color:#bf616a;">plot</span><span style="color:#c0c5ce;">(x_axis, random.</span><span style="color:#bf616a;">sample</span><span style="color:#c0c5ce;">(</span><span style="color:#96b5b4;">range</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">), </span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">))
 pyplot.</span><span style="color:#bf616a;">show</span><span style="color:#c0c5ce;">()
-</span></pre>
+</span></code></pre>
 <p>With <a href="http://matplotlib.org">matplolib</a> installed, running the code above should resulted in
 the following image:</p>
 <p><img src="/images/matplotlib-1.png" alt="image resulting from running the code above" /></p>
@@ -152,7 +150,7 @@ number of graphs. Without this magical feature, the code would be a lot
 uglier.</p>
 <p>Here goes:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">
+<code><span style="color:#c0c5ce;">
 </span><span style="color:#b48ead;">from </span><span style="color:#c0c5ce;">matplotlib </span><span style="color:#b48ead;">import </span><span style="color:#c0c5ce;">pyplot
 </span><span style="color:#b48ead;">import </span><span style="color:#c0c5ce;">argparse
 </span><span style="color:#b48ead;">import </span><span style="color:#c0c5ce;">random
@@ -165,7 +163,7 @@ x_axis = </span><span style="color:#96b5b4;">range</span><span style="color:#c0c
 pyplot.</span><span style="color:#bf616a;">plot</span><span style="color:#c0c5ce;">(x_axis, random.</span><span style="color:#bf616a;">sample</span><span style="color:#c0c5ce;">(</span><span style="color:#96b5b4;">range</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">), </span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">), </span><span style="color:#bf616a;">label</span><span style="color:#c0c5ce;">=</span><span style="color:#bf616a;">str</span><span style="color:#c0c5ce;">(n))
 pyplot.</span><span style="color:#bf616a;">legend</span><span style="color:#c0c5ce;">()
 pyplot.</span><span style="color:#bf616a;">show</span><span style="color:#c0c5ce;">()
-</span></pre>
+</span></code></pre>
 <p>If I provide 3 as command line argument, I get this:</p>
 <p><img src="/images/matplotlib-2.png" alt="image resulting from running the code above" /></p>
 <p>This feature left me pleasantly surprised.</p>

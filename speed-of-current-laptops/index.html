@@ -10,8 +10,6 @@
       <title>Tshepang logs - speed of current laptops</title>
 
       
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http:&#x2F;&#x2F;tshepang.net&#x2F;rss.xml">
-      
 
       
           <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
@@ -136,15 +134,15 @@ The performance is sad though, less than my work laptop,
 an Asus UX410 (itself a replacement of <a href="http://tshepang.net/asus-zenbook-ux305fa">the UX305</a> whose battery circuitry got fried).</p>
 <p>To check performance, I used <a href="https://github.com/serde-rs/json-benchmark">Rust JSON Benchmark</a>:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">git clone https://github.com/serde-rs/json-benchmark
+<code><span style="color:#c0c5ce;">git clone https://github.com/serde-rs/json-benchmark
 cd json-benchmark
 git checkout 1d4986c2083c8f164f86116f19d70dd32b7519bf
 rustup default 1.38.0
 cargo run --release --bin json-benchmark
-</span></pre>
+</span></code></pre>
 <p>Results for the X1 Carbon:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">                                DOM                  STRUCT
+<code><span style="color:#c0c5ce;">                                DOM                  STRUCT
 ======= serde_json ======= parse|stringify ===== parse|stringify ====
 data/canada.json         140 MB/s   290 MB/s   340 MB/s   230 MB/s
 data/citm_catalog.json   240 MB/s   390 MB/s   560 MB/s   530 MB/s
@@ -164,10 +162,10 @@ data/twitter.json         61 MB/s   250 MB/s    49 MB/s   260 MB/s
 data/canada.json         250 MB/s   320 MB/s   420 MB/s
 data/citm_catalog.json   650 MB/s   470 MB/s   920 MB/s
 data/twitter.json        520 MB/s   530 MB/s   620 MB/s
-</span></pre>
+</span></code></pre>
 <p>Results for the UX305:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">                                DOM                  STRUCT
+<code><span style="color:#c0c5ce;">                                DOM                  STRUCT
 ======= serde_json ======= parse|stringify ===== parse|stringify ====
 data/canada.json         240 MB/s   510 MB/s   570 MB/s   390 MB/s
 data/citm_catalog.json   370 MB/s   680 MB/s   920 MB/s   890 MB/s
@@ -187,7 +185,7 @@ data/twitter.json        100 MB/s   410 MB/s    80 MB/s   440 MB/s
 data/canada.json         380 MB/s   490 MB/s   650 MB/s
 data/citm_catalog.json  1000 MB/s   790 MB/s  1540 MB/s
 data/twitter.json        870 MB/s   900 MB/s  1030 MB/s
-</span></pre>
+</span></code></pre>
     </div>
 
     

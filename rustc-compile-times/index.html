@@ -10,8 +10,6 @@
       <title>Tshepang logs - rustc compile times</title>
 
       
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http:&#x2F;&#x2F;tshepang.net&#x2F;rss.xml">
-      
 
       
           <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
@@ -144,7 +142,7 @@ and are part of the above total:</p>
 </ul>
 <p>Following is my <em>config.toml</em>:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">[build]
+<code><span style="color:#c0c5ce;">[build]
 </span><span style="color:#bf616a;">compiler-docs </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">true
 </span><span style="color:#bf616a;">extended </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">true
 </span><span style="color:#bf616a;">tools </span><span style="color:#c0c5ce;">= [ &quot;</span><span style="color:#a3be8c;">clippy</span><span style="color:#c0c5ce;">&quot;, &quot;</span><span style="color:#a3be8c;">rustfmt</span><span style="color:#c0c5ce;">&quot; ]
@@ -152,10 +150,10 @@ and are part of the above total:</p>
 [rust]
 </span><span style="color:#bf616a;">incremental </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">true
 </span><span style="color:#bf616a;">parallel-compiler </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">true
-</span></pre>
+</span></code></pre>
 <p>Following is the commit I built:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">❯ git show
+<code><span style="color:#c0c5ce;">❯ git show
 commit 96dd4690c3aa70ec312448c3f2d50e6dc6fb87df (HEAD -&gt; master, origin/master, origin/HEAD)
 Merge: 77f95a89a10 3f3e0ee4b04
 Author: bors &lt;bors@rust-lang.org&gt;
@@ -173,7 +171,7 @@ Date:   Fri May 29 11:16:45 2020 +0000
 
     Fixes #72231
     Fixes #72232
-</span></pre>
+</span></code></pre>
     </div>
 
     

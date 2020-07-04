@@ -10,8 +10,6 @@
       <title>Tshepang logs - cat, Python, and Perl</title>
 
       
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http:&#x2F;&#x2F;tshepang.net&#x2F;rss.xml">
-      
 
       
           <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
@@ -133,7 +131,7 @@
       <p>I came across <a href="http://greenteapress.com/perl/perl.pdf">a tutorial</a> that showes how to implement a simple cat in
 Perl. I've modified their example for the sake of simplicity:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">sub cat {
+<code><span style="color:#c0c5ce;">sub cat {
     foreach my $filename (@_) {
         open FILE, $filename;
         while (my $line = &lt;FILE&gt;) {
@@ -142,19 +140,19 @@ Perl. I've modified their example for the sake of simplicity:</p>
     }
 }
 cat @ARGV;
-</span></pre>
+</span></code></pre>
 <p>Running this script (e.g. <code>perl cat.pl file</code>) will display those files
 as if you ran <code>cat file</code>.</p>
 <p>I decided to see how the Python example would look like:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">import sys
+<code><span style="color:#c0c5ce;">import sys
 def cat(files):
     for filename in files:
         with open(filename) as FILE:
             for line in FILE:
                 print(line, end=&quot;&quot;)
 cat(sys.argv[1:])
-</span></pre>
+</span></code></pre>
 <p>Running this script (e.g. <code>python3 cat.py file1 file2</code>) will give
 exactly the same result as above.</p>
 <h1 id="notes">notes</h1>

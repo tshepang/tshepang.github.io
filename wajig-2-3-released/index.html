@@ -10,8 +10,6 @@
       <title>Tshepang logs - wajig 2.3 released</title>
 
       
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http:&#x2F;&#x2F;tshepang.net&#x2F;rss.xml">
-      
 
       
           <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
@@ -141,11 +139,11 @@ citizens. Let me give an example of user wanting to install a
 package named nautilus, but avoid installing its Recommends
 depencencies:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;"># ole
+<code><span style="color:#c0c5ce;"># ole
 </span><span style="color:#c0c5ce;">wajig —norecommends INSTALL nautilus
 </span><span style="color:#c0c5ce;"># new
 </span><span style="color:#c0c5ce;">wajig INSTALL —norecommends nautilus
-</span></pre>
+</span></code></pre>
 <p>I call this natural because it makes more sense to have the
 <code>--norecommends</code> command line option to be specified <em>after</em> the
 (wajig) subcommand it modifies. Also, the way it was implemented
@@ -157,10 +155,10 @@ next user-visible change.</p>
 <p>There is less magic and more strictness. Previously, these commands
 resulted in the same outcome:</p>
 <pre style="background-color:#2b303b;">
-wajig REMOVEORPHANS
+<code>wajig REMOVEORPHANS
 wajig REMOVE-ORPHANS
 wajig R-____EMOVE-ORPH+++-___AN_S
-</pre>
+</code></pre>
 <p>What wajig did was simply sanitise the commands, getting rid of the
 junk. Well, I don't like that, but since I didn't want to break
 people's commands/aliases/scripts I actually tried to preserve that

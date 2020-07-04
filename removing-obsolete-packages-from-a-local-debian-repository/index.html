@@ -10,8 +10,6 @@
       <title>Tshepang logs - removing obsolete packages from a local Debian repository</title>
 
       
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http:&#x2F;&#x2F;tshepang.net&#x2F;rss.xml">
-      
 
       
           <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
@@ -137,8 +135,8 @@ also keep them in a local custom repository. I use a great tool named
 <a href="https://salsa.debian.org/brlink/reprepro">reprepro</a> for this, and this is the command I use to update that
 repository, given the location of the fresh package files:</p>
 <pre style="background-color:#2b303b;">
-$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang /var/cache/apt/archives/*deb
-</pre>
+<code>$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang /var/cache/apt/archives/*deb
+</code></pre>
 <p>What's nice about the command is that, if there is an older version of
 the package I'm adding, it gets replaced, and the package index is
 updated accordingly.</p>
@@ -161,7 +159,7 @@ usage).</li>
 </ul>
 <p>To help with the cleanup, I have written the following simple script:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#65737e;">#!/usr/bin/env python3
+<code><span style="color:#65737e;">#!/usr/bin/env python3
 
 </span><span style="color:#b48ead;">import </span><span style="color:#c0c5ce;">apt_pkg
 </span><span style="color:#b48ead;">import </span><span style="color:#c0c5ce;">gzip
@@ -194,10 +192,10 @@ usage).</li>
 
 </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">__name__ == &quot;</span><span style="color:#a3be8c;">__main__</span><span style="color:#c0c5ce;">&quot;:
     </span><span style="color:#bf616a;">main</span><span style="color:#c0c5ce;">()
-</span></pre>
+</span></code></pre>
 <p>And here's a snippet of its output:</p>
 <pre style="background-color:#2b303b;">
-cx-oracle:
+<code>cx-oracle:
   Installed: 5.1.1-2
   Candidate: 5.1.1-2
   Version table:
@@ -205,7 +203,7 @@ cx-oracle:
         500 file:/home/wena/.custom_repo/ tshepang/main i386 Packages
         100 /var/lib/dpkg/status
 remove from cache [Y/n]?
-</pre>
+</code></pre>
 <p>What it does is look for packages which are only available in my custom
 repository, as compared with the one in Wheezy (soon to be Debian 7). It
 then prompts me on whether or not to remove it from that custom

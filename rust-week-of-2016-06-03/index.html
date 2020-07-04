@@ -10,8 +10,6 @@
       <title>Tshepang logs - Rust week of 2016-06-03</title>
 
       
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http:&#x2F;&#x2F;tshepang.net&#x2F;rss.xml">
-      
 
       
           <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
@@ -158,17 +156,17 @@ means that we don't care about the success return value. On the
 calling side, we have an option to use a <code>match</code> statement to handle
 the result:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">match </span><span style="color:#96b5b4;">foo</span><span style="color:#c0c5ce;">() {
+<code><span style="color:#b48ead;">match </span><span style="color:#96b5b4;">foo</span><span style="color:#c0c5ce;">() {
 </span><span style="color:#c0c5ce;">    Ok(_) =&gt; (), Err(error) =&gt; </span><span style="color:#96b5b4;">do_something_with</span><span style="color:#c0c5ce;">(error)
 </span><span style="color:#c0c5ce;">}
-</span></pre>
+</span></code></pre>
 <p>There is a convenient syntax to deal with such case, where you
 don't care about one of values... <code>if let</code>:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">if let </span><span style="color:#c0c5ce;">Err(error) = </span><span style="color:#96b5b4;">foo</span><span style="color:#c0c5ce;">() {
+<code><span style="color:#b48ead;">if let </span><span style="color:#c0c5ce;">Err(error) = </span><span style="color:#96b5b4;">foo</span><span style="color:#c0c5ce;">() {
 </span><span style="color:#c0c5ce;">    </span><span style="color:#96b5b4;">do_something_with</span><span style="color:#c0c5ce;">(error)
 </span><span style="color:#c0c5ce;">}
-</span></pre>
+</span></code></pre>
 <p>So elegant!</p>
 </li>
 </ul>

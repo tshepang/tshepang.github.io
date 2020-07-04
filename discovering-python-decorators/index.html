@@ -10,8 +10,6 @@
       <title>Tshepang logs - discovering Python @decorators</title>
 
       
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http:&#x2F;&#x2F;tshepang.net&#x2F;rss.xml">
-      
 
       
           <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
@@ -137,7 +135,7 @@ functions executed successfully. It was a one-line change but I thought
 it was a good excuse to create decorators for the first time in my life.</p>
 <p>Here is an example of a decorator function:</p>
 <pre style="background-color:#2b303b;">
-def checkpoint(function):
+<code>def checkpoint(function):
     wrapper(*args, **kwargs):
         with open(PATH) as f:
             for line in f:
@@ -148,14 +146,14 @@ def checkpoint(function):
             f.write(function.__name__)
         return value
     return wrapper
-</pre>
+</code></pre>
 <p>All it does is write some text to a file, and avoid running whatever
 function will be <em>decorated</em> by it if there is a match in that file.
 This would be an indicator that the function had already been executed
 (in a previous run).</p>
 <p>The following snippet sees the use of this decorator:</p>
 <pre style="background-color:#2b303b;">
-@checkpoint
+<code>@checkpoint
 def do_this(some_argument):
     # exit(1) on error
     ...
@@ -168,11 +166,11 @@ def do_that(some_other_argument, some_optional_argument=None):
 if __name__ == '__main__':
     do_this('some value')
     do_that('some other value')
-</pre>
+</code></pre>
 <p>Without the decorator syntax, the same functionality would be achieved
 with:</p>
 <pre style="background-color:#2b303b;">
-def do_this(some_argument):
+<code>def do_this(some_argument):
     # exit(1) on error
     ...
 do_this = checkpoint(do_this)
@@ -185,7 +183,7 @@ do_that = checkpoint(do_that)
 if __name__ == '__main__':
     do_this('some value')
     do_that('some other value')
-</pre>
+</code></pre>
 <p>The latter format, though it presents less of a cognitive burden, feels
 less of an obvious solution, and it's a bit uglier as well. <a href="http://legacy.python.org/dev/peps/pep-0318">PEP 380</a>
 is a detailed discussion written over 10 years ago when the syntax was

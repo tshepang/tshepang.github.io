@@ -10,8 +10,6 @@
       <title>Tshepang logs - loving the SSH multi-hop feature of Emacs</title>
 
       
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http:&#x2F;&#x2F;tshepang.net&#x2F;rss.xml">
-      
 
       
           <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
@@ -136,8 +134,8 @@ know how to set VPN up and sshfs feels rather clunky (I first have to
 have some directory I'm going to mount the thing, and have to remember
 the command line syntax). With Emacs, I run the following command:</p>
 <pre style="background-color:#2b303b;">
-C-x C-f /ssh:work|ssh:10.0.0.107|ssh:10.0.0.148:~/some/files/
-</pre>
+<code>C-x C-f /ssh:work|ssh:10.0.0.107|ssh:10.0.0.148:~/some/files/
+</code></pre>
 <p>What happens there is I ask Emacs to run <code>find-file</code>, which opens its
 file manager, <strong>Dired</strong>. It first accesses the server at work, then my
 work desktop (<code>10.0.0.107</code>), and then some machine (<code>10.0.0.148</code>) which
@@ -148,12 +146,12 @@ was surprised such a feature exists, thinking I'd have to do ugly
 things like port forwarding. I do use the single hop a lot (if that's
 even the right name):</p>
 <pre style="background-color:#2b303b;">
-C-x C-f /ssh:work:~/some/files/
-</pre>
+<code>C-x C-f /ssh:work:~/some/files/
+</code></pre>
 <p>Shortcut for that is:</p>
 <pre style="background-color:#2b303b;">
-C-x C-f /work:~/some/files/
-</pre>
+<code>C-x C-f /work:~/some/files/
+</code></pre>
 <p><strong>sidenotes</strong>:</p>
 <ul>
 <li>
@@ -164,12 +162,12 @@ C-x C-f /work:~/some/files/
 instead of specifying the whole <a href="mailto:username@host">username@host</a>, it accepts the
 aliases in <code>~/.ssh/config</code>, such that I only have to run:</p>
 <pre style="background-color:#2b303b;">
-ssh work
-</pre>
+<code>ssh work
+</code></pre>
 <p>instead of:</p>
 <pre style="background-color:#2b303b;">
-ssh tshepang@hostname
-</pre></li>
+<code>ssh tshepang@hostname
+</code></pre></li>
 </ul>
 
     </div>

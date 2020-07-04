@@ -10,8 +10,6 @@
       <title>Tshepang logs - blogging with Pelican</title>
 
       
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http:&#x2F;&#x2F;tshepang.net&#x2F;rss.xml">
-      
 
       
           <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
@@ -145,7 +143,7 @@ resulting site is complete with an index (Archives view), Tags,
 Categories, and Pages (for non-bloggy stuff like a CV or About Me file).</p>
 <p>As for my blog, its tree structure looks like this (<a href="https://bitbucket.org/tshepang/blog/src">repo</a>):</p>
 <pre style="background-color:#2b303b;">
-build/...
+<code>build/...
 pages/about-me.rst
 posts/{arts/, computing/, misc/}
 CNAME
@@ -153,7 +151,7 @@ fabfile.py
 new-post.py
 README.rst
 settings.py
-</pre>
+</code></pre>
 <ul>
 <li>The <code>build</code> directory is where the output of the build process is
 stored.</li>
@@ -181,23 +179,23 @@ stuff like title, date, and tags. It can be tedious to create all such
 mundate stuff, especially the date. That's why I wrote <a href="https://bitbucket.org/tshepang/blog/src/tip/new-post.py">a script</a> that
 generates that file and populates it with the given metadata:</p>
 <pre style="background-color:#2b303b;">
-$ python new-post.py 'my blogging setup' misc --tags blogging
-</pre>
+<code>$ python new-post.py 'my blogging setup' misc --tags blogging
+</code></pre>
 <p>This is the metadata, and also the beginning of the file:</p>
 <pre style="background-color:#2b303b;">
-my blogging setup
+<code>my blogging setup
 =================
 
 :date: 2012-04-12
 :tags: blogging
-</pre>
+</code></pre>
 <p>The script also opens the file in my favorite editor, so I can start
 adding content.</p>
 <p>When I'm done with the changes, I ensure I'm in the root directory of
 my blog, commit (<code>hg commit --message 'new post'</code>) and run:</p>
 <pre style="background-color:#2b303b;">
-$ fab
-</pre>
+<code>$ fab
+</code></pre>
 <p>That's a <a href="http://fabfile.org">fabric</a> command that uses the instructions found in
 <code>fabfile.py</code>. It builds the site, and then pushes it to GitHub Pages. It
 also pushes the sources to Bitbucket. Within a minute, the blog will be

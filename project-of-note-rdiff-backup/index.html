@@ -10,8 +10,6 @@
       <title>Tshepang logs - project of note: rdiff-backup</title>
 
       
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http:&#x2F;&#x2F;tshepang.net&#x2F;rss.xml">
-      
 
       
           <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
@@ -141,8 +139,8 @@ which contains all that's needed to roll-back, restore, check stats,
 ...).</p>
 <p>My usage:</p>
 <pre style="background-color:#2b303b;">
-$ rdiff-backup --include-globbing-filelist rdiff-backup ~/ /media/backup
-</pre>
+<code>$ rdiff-backup --include-globbing-filelist rdiff-backup ~/ /media/backup
+</code></pre>
 <p>There, <code>~/conf/rdiff-backup</code> is a file that has a list of directories I
 want to exclude in the backup, and <code>/media/backup</code> is the backup
 destination.</p>

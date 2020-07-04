@@ -10,8 +10,6 @@
       <title>Tshepang logs - Rust week of 2016-06-10</title>
 
       
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http:&#x2F;&#x2F;tshepang.net&#x2F;rss.xml">
-      
 
       
           <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
@@ -133,7 +131,7 @@
       <p>I was made sad by the complexity of involving STDIN when using
 <a href="https://doc.rust-lang.org/std/process">std::process</a> module:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">o_to_0</span><span style="color:#c0c5ce;">() -&gt; std::io::Result&lt;</span><span style="color:#b48ead;">bool</span><span style="color:#c0c5ce;">&gt; {
+<code><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">o_to_0</span><span style="color:#c0c5ce;">() -&gt; std::io::Result&lt;</span><span style="color:#b48ead;">bool</span><span style="color:#c0c5ce;">&gt; {
     </span><span style="color:#b48ead;">let mut</span><span style="color:#c0c5ce;"> p = std::process::Command::new(&quot;</span><span style="color:#a3be8c;">tr</span><span style="color:#c0c5ce;">&quot;)
         .</span><span style="color:#96b5b4;">arg</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">o</span><span style="color:#c0c5ce;">&quot;)
         .</span><span style="color:#96b5b4;">arg</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">0</span><span style="color:#c0c5ce;">&quot;)
@@ -145,7 +143,7 @@
     }
     Ok(p.</span><span style="color:#96b5b4;">wait</span><span style="color:#c0c5ce;">()?.</span><span style="color:#96b5b4;">success</span><span style="color:#c0c5ce;">())
 }
-</span></pre>
+</span></code></pre>
 <p>I wonder if this can be more easy, in other languages and/or libraries.</p>
 
     </div>

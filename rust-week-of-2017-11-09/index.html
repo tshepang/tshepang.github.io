@@ -10,8 +10,6 @@
       <title>Tshepang logs - Rust week of 2017-11-09</title>
 
       
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http:&#x2F;&#x2F;tshepang.net&#x2F;rss.xml">
-      
 
       
           <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
@@ -138,7 +136,7 @@ queries the DB and checks if certain injected data appears. I wish there
 was an easy way of doing queries without having to resort to using the
 json! macro:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> query = json!({
+<code><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> query = json!({
     &quot;</span><span style="color:#a3be8c;">sort</span><span style="color:#c0c5ce;">&quot;: [
         { &quot;</span><span style="color:#a3be8c;">@timestamp</span><span style="color:#c0c5ce;">&quot;: { &quot;</span><span style="color:#a3be8c;">order</span><span style="color:#c0c5ce;">&quot;: &quot;</span><span style="color:#a3be8c;">asc</span><span style="color:#c0c5ce;">&quot;, } }
     ],
@@ -154,7 +152,7 @@ json! macro:</p>
         }
     }
 });
-</span></pre>
+</span></code></pre>
 <p>The <a href="https://github.com/elastic-rs/elastic/tree/master/src/queries">crate that allows such typed queries</a> happens to be incomplete and
 undocumented, so will ignore it for now.</p>
 

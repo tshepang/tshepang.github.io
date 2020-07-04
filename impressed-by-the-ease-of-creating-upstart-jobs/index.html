@@ -10,8 +10,6 @@
       <title>Tshepang logs - impressed by the ease of creating Upstart jobs</title>
 
       
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http:&#x2F;&#x2F;tshepang.net&#x2F;rss.xml">
-      
 
       
           <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
@@ -136,10 +134,10 @@ boots, and because I'm horrified by sysvinit scripts (which Upstart
 supports), I decided to give creating an Upstart job a try. I was
 surprised how easy it was:</p>
 <pre style="background-color:#2b303b;">
-exec /usr/local/bin/executable
+<code>exec /usr/local/bin/executable
 start on startup
 respawn
-</pre>
+</code></pre>
 <p>I placed a file with above contents in <code>/etc/init/executable.conf</code>, and
 that's pretty much it. Impressive.</p>
 <p>Here's what happens:</p>

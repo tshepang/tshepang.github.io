@@ -10,8 +10,6 @@
       <title>Tshepang logs - project of note: Valgrind</title>
 
       
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http:&#x2F;&#x2F;tshepang.net&#x2F;rss.xml">
-      
 
       
           <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
@@ -139,7 +137,7 @@ performance.</p>
 <p>Following is example code; it accepts 2 arguments, a filename and text
 that will be written to that file:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">#include </span><span style="color:#c0c5ce;">&lt;</span><span style="color:#a3be8c;">string.h</span><span style="color:#c0c5ce;">&gt;
+<code><span style="color:#b48ead;">#include </span><span style="color:#c0c5ce;">&lt;</span><span style="color:#a3be8c;">string.h</span><span style="color:#c0c5ce;">&gt;
 </span><span style="color:#b48ead;">#include </span><span style="color:#c0c5ce;">&lt;</span><span style="color:#a3be8c;">errno.h</span><span style="color:#c0c5ce;">&gt;
 </span><span style="color:#b48ead;">#include </span><span style="color:#c0c5ce;">&lt;</span><span style="color:#a3be8c;">stdio.h</span><span style="color:#c0c5ce;">&gt;
 </span><span style="color:#b48ead;">#include </span><span style="color:#c0c5ce;">&lt;</span><span style="color:#a3be8c;">fcntl.h</span><span style="color:#c0c5ce;">&gt;
@@ -174,14 +172,14 @@ that will be written to that file:</p>
     }
     </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">;
 }
-</span></pre>
+</span></code></pre>
 <p>Build command (using GCC 4.8.1):</p>
 <pre style="background-color:#2b303b;">
-gcc -Wall -pedantic -g play.c -o play
-</pre>
+<code>gcc -Wall -pedantic -g play.c -o play
+</code></pre>
 <p>System details:</p>
 <pre style="background-color:#2b303b;">
-$ uname --all
+<code>$ uname --all
 Linux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU/Linux
 $ sudo lshw -class processor
 *-cpu
@@ -207,10 +205,10 @@ $ sudo lshw -class processor
      xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid
      aes cpufreq
      configuration: cores=2 enabledcores=1 threads=2
-</pre>
+</code></pre>
 <p>Running the resulting binary with <strong>Callgrind</strong>:</p>
 <pre style="background-color:#2b303b;">
-$ valgrind --tool=callgrind --callgrind-out-file=out ./play filename
+<code>$ valgrind --tool=callgrind --callgrind-out-file=out ./play filename
 filecontent
 ==5308== Callgrind, a call-graph generating cache profiler
 ==5308== Copyright (C) 2002-2012, and GNU GPL'd, by Josef Weidendorfer
@@ -227,13 +225,13 @@ info
 ==5308== I   refs:      107,520
 $ cat filename
 filecontent
-</pre>
+</code></pre>
 <p>And finally, seeing closely the cost of each function call, where <strong>Ir</strong>
 stands for <strong>Instruction cache reads</strong>, which you can read as <em>number of
 CPU instructions</em>. I have used <code>tree=calling</code> option so that I can see
 the cost of all operations called by a parent (marked with a <code>*</code>) :</p>
 <pre style="background-color:#2b303b;">
-$ callgrind_annotate --tree=calling out play.c
+<code>$ callgrind_annotate --tree=calling out play.c
 ---++++++--
 Profile data file 'out' (creator: callgrind-3.8.1)
 ---++++++--
@@ -278,11 +276,11 @@ Ir  file:function
 67  &gt;   /build/eglibc-TepTGA/eglibc-2.17/time/../sysdeps/unix/sysv/linux/x86_64/gettimeofday.c:gettimeofday (1x) [/lib/x86_64-linux-gnu/libc-2.17.so]
 6  &gt;   /build/eglibc-TepTGA/eglibc-2.17/string/../sysdeps/x86_64/multiarch/strnlen.S:strnlen (1x) [/lib/x86_64-linux-gnu/libc-2.17.so]
 [snip; to be continued]
-</pre>
+</code></pre>
 <p>I have trimmed the output to bring focus to the most interesting output
 of all, which is the total cost for each line of my code:</p>
 <pre style="background-color:#2b303b;">
-[continued]
+<code>[continued]
 ---++++++--
 -- User-annotated source: play.c
 ---++++++--
@@ -337,7 +335,7 @@ Ir
 Ir
 ---++++++--
 0  percentage of events annotated
-</pre>
+</code></pre>
 <p>As an aside, note that the indentation is messed up a bit.</p>
 <hr />
 <p>Since I normally work at too high a level to care about CPU instructions

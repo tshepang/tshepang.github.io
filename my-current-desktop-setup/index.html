@@ -10,8 +10,6 @@
       <title>Tshepang logs - my current desktop setup</title>
 
       
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http:&#x2F;&#x2F;tshepang.net&#x2F;rss.xml">
-      
 
       
           <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
@@ -150,14 +148,14 @@ since there isn't a comprehensive guide I could find.</p>
 <p>For my login manager, I use <a href="http://www.freedesktop.org/wiki/Software/LightDM">LightDM</a>. I added this line to its
 configuration, in <code>[SeatDefaults]</code> section:</p>
 <pre style="background-color:#2b303b;">
-greeter-hide-users=false
-</pre>
+<code>greeter-hide-users=false
+</code></pre>
 <p>It removes the need to manually enter my username each time I want to
 login.</p>
 <p>Reason I'm not using GDM? I wanted something light, which also
 wouldn't pull in dozens of packages that I won't use. For example:</p>
 <pre style="background-color:#2b303b;">
-$ sudo apt-get install --no-install-recommends gdm3
+<code>$ sudo apt-get install --no-install-recommends gdm3
 Reading package lists... Done
 Building dependency tree
 Reading state information... Done
@@ -203,7 +201,7 @@ The following NEW packages will be installed:
 0 upgraded, 67 newly installed, 0 to remove and 45 not upgraded.
 Need to get 0 B/31.0 MB of archives.
 After this operation, 90.8 MB of additional disk space will be used.
-</pre>
+</code></pre>
 <p>GNOME philosophy tends towards tight integration, leading to things
 being not as modular as I would like: how could a display manager end up
 depending on a Contacts tool, or the Bluetooth stack. It may be just how
@@ -214,16 +212,16 @@ with.</p>
 <p>Anyways, enough with that. I added a custom <code>.desktop</code> file which will
 become selectable on LightDM UI:</p>
 <pre style="background-color:#2b303b;">
-$ cat /usr/share/xsessions/custom.desktop
+<code>$ cat /usr/share/xsessions/custom.desktop
 [Desktop Entry]
 Name=Custom
 Exec=/etc/X11/Xsession
 Type=XSession
-</pre>
+</code></pre>
 <p>On selecting the entry labeled <strong>Custom</strong> that appears on LightDM, and
 logging in, the following will get executed (<a href="https://bitbucket.org/tshepang/custom/src/tip/xsession">~/.xsession</a>):</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;"># apps
+<code><span style="color:#c0c5ce;"># apps
 xfce4-terminal --hide-menubar --tab --tab --tab &amp;
 firefox &amp;
 nautilus --no-desktop &amp;
@@ -260,10 +258,10 @@ while true; do
 done &amp;
 
 exec dwm
-</span></pre>
+</span></code></pre>
 <p>Finally, this is what my dwm config changes look like (<a href="https://bitbucket.org/tshepang/custom/src/tip/config.def.h">config.def.h</a>):</p>
 <pre style="background-color:#2b303b;">
-diff --git a/config.def.h b/config.def.h
+<code>diff --git a/config.def.h b/config.def.h
 index 77ff358..78af5d6 100644
 +++ a/config.def.h
 +++ b/config.def.h
@@ -318,7 +316,7 @@ False means no bar */
  static Key keys[] = {
         /* modifier                     key        function
         argument */
-</pre>
+</code></pre>
 <p>Note that this diff is against the Debian package (version <strong>6.0-6</strong>). I
 could not change the modifier key with the upstream version of dwm.</p>
 <p>You will notice that I'm still using one major GNOME package, Nautilus,

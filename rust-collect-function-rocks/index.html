@@ -10,8 +10,6 @@
       <title>Tshepang logs - Rust &#x27;collect&#x27; function rocks!</title>
 
       
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http:&#x2F;&#x2F;tshepang.net&#x2F;rss.xml">
-      
 
       
           <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
@@ -132,19 +130,19 @@
     <div class="post-content">
       <p>Here is one way to populate a Vec with some data:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">let mut</span><span style="color:#c0c5ce;"> vector = Vec::new();
+<code><span style="color:#b48ead;">let mut</span><span style="color:#c0c5ce;"> vector = Vec::new();
 </span><span style="color:#b48ead;">for</span><span style="color:#c0c5ce;"> n in </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">..</span><span style="color:#d08770;">COUNT </span><span style="color:#c0c5ce;">{
     vector.</span><span style="color:#96b5b4;">push</span><span style="color:#c0c5ce;">(n);
 };
-</span></pre>
+</span></code></pre>
 <p>Alternatively, one can simply do this:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> vector = (</span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">..</span><span style="color:#d08770;">COUNT</span><span style="color:#c0c5ce;">).collect::&lt;Vec&lt;_&gt;&gt;()
-</span></pre>
+<code><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> vector = (</span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">..</span><span style="color:#d08770;">COUNT</span><span style="color:#c0c5ce;">).collect::&lt;Vec&lt;_&gt;&gt;()
+</span></code></pre>
 <p>The function is also about twice as fast, according to the following
 benchmark:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">#![</span><span style="color:#bf616a;">feature</span><span style="color:#c0c5ce;">(test)]
+<code><span style="color:#c0c5ce;">#![</span><span style="color:#bf616a;">feature</span><span style="color:#c0c5ce;">(test)]
 </span><span style="color:#b48ead;">extern crate</span><span style="color:#c0c5ce;"> test;
 
 </span><span style="color:#b48ead;">static </span><span style="color:#d08770;">COUNT</span><span style="color:#c0c5ce;">: </span><span style="color:#b48ead;">i32 </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">100</span><span style="color:#c0c5ce;">;
@@ -166,12 +164,12 @@ benchmark:</p>
         vector
     });
 }
-</span></pre>
+</span></code></pre>
 <p>Here is the output of <code>cargo bench</code>:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">test collect    ... bench:       164 ns/iter (+/- 7)
+<code><span style="color:#c0c5ce;">test collect    ... bench:       164 ns/iter (+/- 7)
 test no_collect ... bench:       346 ns/iter (+/- 8)
-</span></pre>
+</span></code></pre>
     </div>
 
     

@@ -10,8 +10,6 @@
       <title>Tshepang logs - easing switching between Git and Mercurial</title>
 
       
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http:&#x2F;&#x2F;tshepang.net&#x2F;rss.xml">
-      
 
       
           <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
@@ -138,16 +136,16 @@ ease the pain my creating <a href="https://bitbucket.org/tshepang/scripts/src/ti
 on, and displays the relevant command.</p>
 <p>Some examples of usage:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">$ cd &lt;hg repo&gt;
+<code><span style="color:#c0c5ce;">$ cd &lt;hg repo&gt;
 $ ./vcs.py --log
 hg log --no-merges --patch --stat --verbose
 $ cd &lt;git repo&gt;
 $ ./vcs.py --log
 git log --no-merges --patch --stat
-</span></pre>
+</span></code></pre>
 <p>Here are the relevant BASH aliases:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">alias vb=&#39;$(~/scripts/vcs.py --branch)&#39;
+<code><span style="color:#c0c5ce;">alias vb=&#39;$(~/scripts/vcs.py --branch)&#39;
 alias vd=&#39;$(~/scripts/vcs.py --diff)&#39;
 alias vl=&#39;$(~/scripts/vcs.py --log)&#39;
 alias vp=&#39;$(~/scripts/vcs.py --push)&#39;
@@ -156,7 +154,7 @@ alias vu=&#39;$(~/scripts/vcs.py --pull)&#39;
 alias vc=&#39;$(~/scripts/vcs.py --commit)&#39;
 alias vo=&#39;$(~/scripts/vcs.py --checkout)&#39;
 alias vr=&#39;$(~/scripts/vcs.py --revert)&#39;
-</span></pre>
+</span></code></pre>
 <p>This makes my life so much easier, since I no longer have to care which
 VCS I'm on, at least for the most common of commands. I am pleased with
 self.</p>
@@ -165,8 +163,8 @@ self.</p>
 term) or Commits (Git term), use the following search term on your pager
 (tested with <a href="http://www.greenwoodsoftware.com/less">less</a>, which is Debian/Ubuntu default pager):</p>
 <pre style="background-color:#2b303b;">
-(^changeset)|(^commit)
-</pre>
+<code>(^changeset)|(^commit)
+</code></pre>
     </div>
 
     

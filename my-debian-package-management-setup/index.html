@@ -10,8 +10,6 @@
       <title>Tshepang logs - my Debian package management setup</title>
 
       
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http:&#x2F;&#x2F;tshepang.net&#x2F;rss.xml">
-      
 
       
           <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
@@ -143,7 +141,7 @@ use it to create 2 repos:</p>
 <p>How this works is that I'd run the following command (an example for
 the source repo):</p>
 <pre style="background-color:#2b303b;">
-/usr/bin/debmirror
+<code>/usr/bin/debmirror
  --verbose
  --progress
  --host=ftp.sun.ac.za
@@ -154,7 +152,7 @@ the source repo):</p>
  --method=ftp
  --arch=none
  /home/wena/.repo_src
-</pre>
+</code></pre>
 <p>(look at debmirror's manpage to see what all those options mean)</p>
 <p>The result is that I'll be having ~30GB of Debian locally (for a
 comparison, see <a href="http://www.debian.org/mirror/size">total Debian archive size</a>).</p>
@@ -176,7 +174,7 @@ care to learn how).</p>
 <p>Moving on, here's the relevant entries from my /etc/apt/sources.list
 file:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;"># local repos (debmirror)
+<code><span style="color:#c0c5ce;"># local repos (debmirror)
 deb file:/home/wena/.repo_bin sid main
 deb-src file:/home/wena/.repo_src sid main
 
@@ -185,21 +183,21 @@ deb file:/home/wena/.repo_local cache main
 
 # remote repo
 deb ftp://ftp.sun.ac.za/ftp/debian/ sid main non-free contrib
-</span></pre>
+</span></code></pre>
 <p>So, what I do on a semi-regular basis is run:</p>
 <pre style="background-color:#2b303b;">
-$ wajig update &amp;&amp; wajig upgrade
-</pre>
+<code>$ wajig update &amp;&amp; wajig upgrade
+</code></pre>
 <p>The newly-updated packages are stored in a cache so that a reinstall
 doesn't have to fetch from network again. After this I run:</p>
 <pre style="background-color:#2b303b;">
-$ reprepro -vv --basedir ~/.repo_local includedeb cache /var/cache/apt/archives/*deb
-</pre>
+<code>$ reprepro -vv --basedir ~/.repo_local includedeb cache /var/cache/apt/archives/*deb
+</code></pre>
 <p>This updates the local reprepro repo and after which I can then remove
 the cached packages:</p>
 <pre style="background-color:#2b303b;">
-$ wajig clean
-</pre>
+<code>$ wajig clean
+</code></pre>
 <p>I do that because they are now available in my reprepro-managed repo.
 That now means that I got a massive mirror managed by debmirror and a
 smaller one managed by reprepro, and I have these on an external drive

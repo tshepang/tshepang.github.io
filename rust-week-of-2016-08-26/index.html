@@ -10,8 +10,6 @@
       <title>Tshepang logs - Rust week of 2016-08-26</title>
 
       
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http:&#x2F;&#x2F;tshepang.net&#x2F;rss.xml">
-      
 
       
           <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
@@ -133,13 +131,13 @@
       <p>I did learn how to use a TCP socket to communicate between 2 processes.
 I found the API quite pleasing:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> listener = std::net::TcpListener::bind(&quot;</span><span style="color:#a3be8c;">localhost:80</span><span style="color:#c0c5ce;">&quot;)?;
+<code><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> listener = std::net::TcpListener::bind(&quot;</span><span style="color:#a3be8c;">localhost:80</span><span style="color:#c0c5ce;">&quot;)?;
 </span><span style="color:#b48ead;">for</span><span style="color:#c0c5ce;"> stream in listener.</span><span style="color:#96b5b4;">incoming</span><span style="color:#c0c5ce;">() {
     </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> content = Vec::new();
     stream?.</span><span style="color:#96b5b4;">read_to_end</span><span style="color:#c0c5ce;">(&amp;</span><span style="color:#b48ead;">mut</span><span style="color:#c0c5ce;"> content);
     </span><span style="color:#65737e;">// do stuff with content
 </span><span style="color:#c0c5ce;">}
-</span></pre>
+</span></code></pre>
     </div>
 
     

@@ -10,8 +10,6 @@
       <title>Tshepang logs - dangerous inconsistency in symlink removal</title>
 
       
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http:&#x2F;&#x2F;tshepang.net&#x2F;rss.xml">
-      
 
       
           <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
@@ -132,22 +130,22 @@
     <div class="post-content">
       <p>Here's how to make a symlink and to delete it:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">mkdir dir
+<code><span style="color:#c0c5ce;">mkdir dir
 ln -s dir dirlink
 rm -r dirlink
-</span></pre>
+</span></code></pre>
 <p>Here's another way to delete it:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">rm -r dirlink/
-</span></pre>
+<code><span style="color:#c0c5ce;">rm -r dirlink/
+</span></code></pre>
 <p>Although it will do the job, it will actually complain with:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">rm: cannot remove `dirlink&#39;: Not a directory
-</span></pre>
+<code><span style="color:#c0c5ce;">rm: cannot remove `dirlink&#39;: Not a directory
+</span></code></pre>
 <p>Note that we could have achieved the deletion with just:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">rm dirlink
-</span></pre>
+<code><span style="color:#c0c5ce;">rm dirlink
+</span></code></pre>
 <p>This is because the symlink is just a single file. So there's no need
 to treat it like a directory when deleting.</p>
 <p>Sadly, this behaviour is inconsistent when there is a mounted voulem.

@@ -10,8 +10,6 @@
       <title>Tshepang logs - my JHBuild setup</title>
 
       
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http:&#x2F;&#x2F;tshepang.net&#x2F;rss.xml">
-      
 
       
           <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
@@ -136,21 +134,21 @@ quite gentle, and it details how to get the code running on your
 machine.</p>
 <p>If you use Debian (or Ubuntu), you can use run this command:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">wajig --norecommends install build-essential docbook-xsl flex
+<code><span style="color:#c0c5ce;">wajig --norecommends install build-essential docbook-xsl flex
 bison cvs gperf cmake  {uuid,ppp}-dev
 libx{composite,randr,damage,ft2,i,t}-dev
 libxcb-{event1,aux0,atom1}-dev
 lib{pam0g,iw,db,gdbm,png12,ffi,tiff,vorbis,gl1-mesa,unistring}
 lib{quvi,icu,neon27,usb-1.0-0,asound2,ncurses5,udev,usb,acl1}
 lib{boost-signals,ldap2,sasl2}-dev
-</span></pre>
+</span></code></pre>
 <p>It's installs the development packages that will be needed by the build
 process. The <code>--no-recommends</code> option means I want to limit the
 installation to packages I really need, avoiding the extra stuff deemed
 by the packager to be useful for me.</p>
 <p>My &quot;~/.jhbuilrc&quot; contains the following:</p>
 <pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;"># build directory
+<code><span style="color:#c0c5ce;"># build directory
 checkoutroot = os.path.expanduser(&quot;~/src/gnome&quot;)
 
 # don&#39;t spew lots of distracting status messages
@@ -167,7 +165,7 @@ use_local_modulesets = True
 
 # where html-formatted logs are kept
 tinderbox_outputdir = os.path.expanduser(&quot;~/temp/tinderbox&quot;)
-</span></pre>
+</span></code></pre>
 <p>See <a href="http://library.gnome.org/devel/jhbuild/unstable/config-reference.html.en">Configuration File Reference</a> for a detailed explanation
 of these options.</p>
 <p>After this, I run <code>jhbuild bootstrap --ignore-system</code>. This downloads,
