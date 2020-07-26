@@ -135,67 +135,53 @@ directory that isn't version-controlled by <a href="http://mercurial.selenic.com
 <ol>
 <li>
 <p>So, we don't want to see this ugliness:</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>from subprocess import call &gt;&gt;&gt; call('hg
-status'.split()) abort: no repository found in
-'/home/tshepang/projects/pyramid' (.hg not found)! 255</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#c0c5ce;">&gt;&gt;&gt; from subprocess import call
+</span><span style="color:#c0c5ce;">&gt;&gt;&gt; call(&#39;hg status&#39;.split())
+</span><span style="color:#c0c5ce;">abort: no repository found in &#39;/home/tshepang/projects/pyramid&#39; (.hg not found)!
+</span><span style="color:#c0c5ce;">255
+</span></code></pre></li>
 <li>
 <p>So, here's the simplest solution:</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>import os &gt;&gt;&gt; from subprocess import call &gt;&gt;&gt; call('hg
-status'.split(), stderr=open(os.devnull)) 255</p>
-</blockquote>
-</blockquote>
-</blockquote>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#c0c5ce;">&gt;&gt;&gt; import os
+</span><span style="color:#c0c5ce;">&gt;&gt;&gt; from subprocess import call
+</span><span style="color:#c0c5ce;">&gt;&gt;&gt; call(&#39;hg status&#39;.split(), stderr=open(os.devnull))
+</span><span style="color:#c0c5ce;">255
+</span></code></pre>
 <p>Problem: it leaves the file descriptor open... not good.</p>
 </li>
 <li>
 <p>We fix:</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>import os &gt;&gt;&gt; from subprocess import call &gt;&gt;&gt; DEVNULL =
-open(os.devnull) &gt;&gt;&gt; call('hg status'.split(), stderr=DEVNULL)
-255 &gt;&gt;&gt; DEVNULL.close()</p>
-</blockquote>
-</blockquote>
-</blockquote>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#c0c5ce;">&gt;&gt;&gt; import os
+</span><span style="color:#c0c5ce;">&gt;&gt;&gt; from subprocess import call
+</span><span style="color:#c0c5ce;">&gt;&gt;&gt; DEVNULL = open(os.devnull) &gt;&gt;&gt; call(&#39;hg status&#39;.split(), stderr=DEVNULL)
+</span><span style="color:#c0c5ce;">255
+</span><span style="color:#c0c5ce;">&gt;&gt;&gt; DEVNULL.close()
+</span></code></pre>
 <p>Much better, much uglier. (<a href="https://bitbucket.org/tshepang/scripts/src/tip/vcs.py">example usage</a>)</p>
 </li>
 <li>
 <p>Something better:</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>import os &gt;&gt;&gt; from subprocess import call &gt;&gt;&gt; with
-open(os.devnull) as DEVNULL: ... call('hg status'.split(),
-stderr=DEVNULL) 255</p>
-</blockquote>
-</blockquote>
-</blockquote>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#c0c5ce;">&gt;&gt;&gt; import os
+</span><span style="color:#c0c5ce;">&gt;&gt;&gt; from subprocess import call
+</span><span style="color:#c0c5ce;">&gt;&gt;&gt; with open(os.devnull) as DEVNULL:
+</span><span style="color:#c0c5ce;">...     call(&#39;hg status&#39;.split(), stderr=DEVNULL)
+</span><span style="color:#c0c5ce;">255
+</span></code></pre>
 <p>Looks much nicer, and is more convenient, unless we wanted to do
 something similar multiple times, in which case the previous example
 would be preferable.</p>
 </li>
 <li>
 <p>Best solution:</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>import os &gt;&gt;&gt; from subprocess import call, DEVNULL &gt;&gt;&gt;
-call('hg status'.split(), stderr=DEVNULL) 255</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#c0c5ce;">&gt;&gt;&gt; import os &gt;&gt;&gt; from subprocess import call, DEVNULL
+</span><span style="color:#c0c5ce;">&gt;&gt;&gt; call(&#39;hg status&#39;.split(), stderr=DEVNULL)
+</span><span style="color:#c0c5ce;">255
+</span></code></pre></li>
 </ol>
 <p>This <a href="http://hg.python.org/cpython/rev/eaf93e156dff">small and wonderful feature</a> is <a href="http://docs.python.org/3/whatsnew/3.3.html#subprocess">new as of Python 3.3</a>.</p>
 
