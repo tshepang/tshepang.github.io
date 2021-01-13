@@ -156,14 +156,14 @@ means that we don't care about the success return value. On the
 calling side, we have an option to use a <code>match</code> statement to handle
 the result:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#b48ead;">match </span><span style="color:#96b5b4;">foo</span><span style="color:#c0c5ce;">() {
+<code class="language-rust" data-lang="rust"><span style="color:#b48ead;">match </span><span style="color:#96b5b4;">foo</span><span style="color:#c0c5ce;">() {
 </span><span style="color:#c0c5ce;">    Ok(_) =&gt; (), Err(error) =&gt; </span><span style="color:#96b5b4;">do_something_with</span><span style="color:#c0c5ce;">(error)
 </span><span style="color:#c0c5ce;">}
 </span></code></pre>
 <p>There is a convenient syntax to deal with such case, where you
 don't care about one of values... <code>if let</code>:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#b48ead;">if let </span><span style="color:#c0c5ce;">Err(error) = </span><span style="color:#96b5b4;">foo</span><span style="color:#c0c5ce;">() {
+<code class="language-rust" data-lang="rust"><span style="color:#b48ead;">if let </span><span style="color:#c0c5ce;">Err(error) = </span><span style="color:#96b5b4;">foo</span><span style="color:#c0c5ce;">() {
 </span><span style="color:#c0c5ce;">    </span><span style="color:#96b5b4;">do_something_with</span><span style="color:#c0c5ce;">(error)
 </span><span style="color:#c0c5ce;">}
 </span></code></pre>

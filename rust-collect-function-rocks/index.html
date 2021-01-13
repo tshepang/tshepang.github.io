@@ -130,19 +130,19 @@
     <div class="post-content">
       <p>Here is one way to populate a Vec with some data:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#b48ead;">let mut</span><span style="color:#c0c5ce;"> vector = Vec::new();
+<code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let mut</span><span style="color:#c0c5ce;"> vector = Vec::new();
 </span><span style="color:#b48ead;">for</span><span style="color:#c0c5ce;"> n in </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">..</span><span style="color:#d08770;">COUNT </span><span style="color:#c0c5ce;">{
     vector.</span><span style="color:#96b5b4;">push</span><span style="color:#c0c5ce;">(n);
 };
 </span></code></pre>
 <p>Alternatively, one can simply do this:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> vector = (</span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">..</span><span style="color:#d08770;">COUNT</span><span style="color:#c0c5ce;">).collect::&lt;Vec&lt;_&gt;&gt;()
+<code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> vector = (</span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">..</span><span style="color:#d08770;">COUNT</span><span style="color:#c0c5ce;">).collect::&lt;Vec&lt;_&gt;&gt;()
 </span></code></pre>
 <p>The function is also about twice as fast, according to the following
 benchmark:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">#![</span><span style="color:#bf616a;">feature</span><span style="color:#c0c5ce;">(test)]
+<code class="language-rust" data-lang="rust"><span style="color:#c0c5ce;">#![</span><span style="color:#bf616a;">feature</span><span style="color:#c0c5ce;">(test)]
 </span><span style="color:#b48ead;">extern crate</span><span style="color:#c0c5ce;"> test;
 
 </span><span style="color:#b48ead;">static </span><span style="color:#d08770;">COUNT</span><span style="color:#c0c5ce;">: </span><span style="color:#b48ead;">i32 </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">100</span><span style="color:#c0c5ce;">;

@@ -131,7 +131,7 @@
       <p>I did learn how to use a TCP socket to communicate between 2 processes.
 I found the API quite pleasing:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> listener = std::net::TcpListener::bind(&quot;</span><span style="color:#a3be8c;">localhost:80</span><span style="color:#c0c5ce;">&quot;)?;
+<code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> listener = std::net::TcpListener::bind(&quot;</span><span style="color:#a3be8c;">localhost:80</span><span style="color:#c0c5ce;">&quot;)?;
 </span><span style="color:#b48ead;">for</span><span style="color:#c0c5ce;"> stream in listener.</span><span style="color:#96b5b4;">incoming</span><span style="color:#c0c5ce;">() {
     </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> content = Vec::new();
     stream?.</span><span style="color:#96b5b4;">read_to_end</span><span style="color:#c0c5ce;">(&amp;</span><span style="color:#b48ead;">mut</span><span style="color:#c0c5ce;"> content);

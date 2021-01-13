@@ -114,6 +114,27 @@
                     
 
 
+<div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content always-active">
+        <nav id="TableOfContents">
+            <ul>
+                
+                <li>
+                    <a href="http://tshepang.net/cleansing-multiple-build-directories/#update" class="toc-link">update</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="http://tshepang.net/cleansing-multiple-build-directories/#further-reading" class="toc-link">further reading</a>
+                    
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
 
 <article class="post">
     
@@ -142,7 +163,7 @@ just wipe out the entire installation.</p>
 <p>Note that there's dozens of modules to build, so I wrote this little
 script to take care of it:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">import os
+<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">import os
 import subprocess
 top_level = os.path.expanduser(&quot;~/src/gnome&quot;)
 for filename in os.listdir(top_level):
@@ -158,7 +179,7 @@ for filename in os.listdir(top_level):
 <p>Someone very kind guy made <a href="http://codereview.stackexchange.com/questions/1476/cleansing-multiple-build-directories/1477#1477">a bunch of suggestions</a>, making my code much
 better:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">import os
+<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">import os
 import subprocess
 top_level = os.path.expanduser(&quot;~/src/gnome&quot;)
 for filename in os.listdir(top_level):

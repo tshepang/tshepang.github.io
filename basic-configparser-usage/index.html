@@ -114,6 +114,22 @@
                     
 
 
+<div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content always-active">
+        <nav id="TableOfContents">
+            <ul>
+                
+                <li>
+                    <a href="http://tshepang.net/basic-configparser-usage/#further-reading" class="toc-link">further reading</a>
+                    
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
 
 <article class="post">
     
@@ -137,7 +153,7 @@ two: 2
 </code></pre>
 <p>The code to read that content is:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">import configparser
+<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">import configparser
 conf = configparser.ConfigParser()
 conf.read(&quot;config.cfg&quot;)
 items = conf.items(&quot;numbers&quot;)
@@ -151,7 +167,7 @@ print(items)
 <p>Even better, since these are key-value pairs, why not use a more
 suitable data type? Here goes:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">import configparser
+<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">import configparser
 conf = configparser.ConfigParser()
 conf.read(&quot;config.cfg&quot;)
 items = dict(conf.items(&quot;numbers&quot;))
@@ -167,7 +183,7 @@ ordering is now a bit off. That's because the dict type doesn't care
 about ordering. Remember that in order to access dictionary content, you
 use a key and not an index:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">&gt;&gt;&gt; d = {1: &#39;one&#39;}
+<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">&gt;&gt;&gt; d = {1: &#39;one&#39;}
 &gt;&gt;&gt; d[0]
 Traceback (most recent call last):
   File &quot;&quot;, line 1, in

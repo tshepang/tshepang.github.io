@@ -114,6 +114,22 @@
                     
 
 
+<div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content always-active">
+        <nav id="TableOfContents">
+            <ul>
+                
+                <li>
+                    <a href="http://tshepang.net/plotting-with-matplotlib/#further-reading" class="toc-link">further reading</a>
+                    
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
 
 <article class="post">
     
@@ -130,7 +146,7 @@
     <div class="post-content">
       <p>Here's drawing a simple graph:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">from matplotlib import pyplot
+<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">from matplotlib import pyplot
 x = range(10)  # a list of 10 integers, 0-9
 y = range(10)
 pyplot.plot(x, y)
@@ -138,7 +154,7 @@ pyplot.show()
 </span></code></pre>
 <p>And now for something a little more interesting:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">import random
+<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">import random
 from matplotlib import pyplot
 x = range(10)
 y = random.sample(range(10), 10)
@@ -147,7 +163,7 @@ pyplot.show()
 </span></code></pre>
 <p>We can have more than one graph on a single figure:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">import random
+<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">import random
 from matplotlib import pyplot
 x = range(10)
 y1 = random.sample(range(10), 10)
@@ -157,7 +173,7 @@ pyplot.show()
 </span></code></pre>
 <p>What if the two graphs have much differing ranges:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">import random
+<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">import random
 from matplotlib import pyplot
 x = range(10)
 y1 = random.sample(range(10), 10)
@@ -168,7 +184,7 @@ pyplot.show()
 <p>Depending on need, that might not be ideal. So let's create two
 separate y-axes:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">import random
+<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">import random
 from matplotlib import pyplot
 x = range(10)
 y1 = random.sample(range(10), 10)
@@ -181,7 +197,7 @@ pyplot.show()
 <p>Yeah, not exactly ideal. We lost the automatic coloring, and we don't
 even know which graph is which. Let's do better:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">import random
+<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">import random
 from matplotlib import pyplot
 x = range(10)
 y1 = random.sample(range(10), 10)

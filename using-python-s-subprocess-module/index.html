@@ -114,6 +114,22 @@
                     
 
 
+<div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content always-active">
+        <nav id="TableOfContents">
+            <ul>
+                
+                <li>
+                    <a href="http://tshepang.net/using-python-s-subprocess-module/#further-reading" class="toc-link">further reading</a>
+                    
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
 
 <article class="post">
     
@@ -132,7 +148,7 @@
 Python: via the shell, or directly (via the kernel).</p>
 <p>This is via the shell:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">import subprocess
+<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">import subprocess
 subprocess.Popen(&quot;echo test&quot;, shell=True)
 </span></code></pre>
 <p>Output:</p>
@@ -141,7 +157,7 @@ subprocess.Popen(&quot;echo test&quot;, shell=True)
 </code></pre>
 <p>This is via the kernel:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">import subprocess
+<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">import subprocess
 p = subprocess.Popen([&quot;echo&quot;, &quot;test&quot;], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 output = p.communicate()
 print(output)
@@ -156,7 +172,7 @@ not stated here.</p>
 <p>To get the equivalent of what we get from the first example, we have to
 do a bit more work:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">import subprocess
+<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">import subprocess
 p = subprocess.Popen([&quot;echo&quot;, &quot;test&quot;], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 output = p.communicate()
 print(output[0].decode(), end=&quot;&quot;)

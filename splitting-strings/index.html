@@ -131,7 +131,7 @@
       <p>If I have a string with spaces, and wanted to split it into a
 list/array, I would use this:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">split_string = &quot;a b c&quot;.split()
+<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">split_string = &quot;a b c&quot;.split()
 print(split_string)
 </span></code></pre>
 <p>Output:</p>
@@ -141,7 +141,7 @@ print(split_string)
 <p>I can go ahead and specify a delimiter (which character the string must
 split on):</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">split_string = &quot;string with spaces&quot;.split(&quot; &quot;)
+<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">split_string = &quot;string with spaces&quot;.split(&quot; &quot;)
 print(split_string)
 </span></code></pre>
 <p>I get the same result:</p>
@@ -150,7 +150,7 @@ print(split_string)
 </code></pre>
 <p>But what if my string wasn't so forgiving?</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">split_string = &quot;a b  c&quot;.split(&quot; &quot;)
+<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">split_string = &quot;a b  c&quot;.split(&quot; &quot;)
 print(split_string)
 </span></code></pre>
 <p>Output:</p>
@@ -167,7 +167,7 @@ it's not available in PHP and Java. I'm here only going to show Java
 examples. PHP examples aren't that much different though.</p>
 <p>Here goes:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">import java.util.Arrays;
+<code class="language-{.sourceCode .java}" data-lang="{.sourceCode .java}"><span style="color:#c0c5ce;">import java.util.Arrays;
 String[] splitString = &quot;a b  c&quot;.split(&quot; &quot;);
 System.out.println(Arrays.asList(splitString));
 </span></code></pre>
@@ -178,7 +178,7 @@ System.out.println(Arrays.asList(splitString));
 <p>That's not what we want, so in order to cover for my unforgiving
 string, I get to use regular expressions (regexp)?</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">import java.util.Arrays;
+<code class="language-{.sourceCode .java}" data-lang="{.sourceCode .java}"><span style="color:#c0c5ce;">import java.util.Arrays;
 String[] splitString = &quot;string with spaces&quot;.split(&quot; +&quot;);
 System.out.println(Arrays.asList(splitString));
 </span></code></pre>
@@ -191,7 +191,7 @@ one or more consecutive spaces.</p>
 <p>That's not what we want, so in order to cover for my unforgiving
 string, I get to use regular expressions (regexp)?</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">String[] splitString = &quot;string with spaces&quot;.split(&quot; +&quot;);
+<code class="language-{.sourceCode .java}" data-lang="{.sourceCode .java}"><span style="color:#c0c5ce;">String[] splitString = &quot;string with spaces&quot;.split(&quot; +&quot;);
 System.out.println(Arrays.asList(splitString));
 </span></code></pre>
 <p>Output:</p>
@@ -201,7 +201,7 @@ System.out.println(Arrays.asList(splitString));
 <p>But what if the string was even less forgiving. In this case, having
 tabs as well? We need some more regexp help:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">import java.util.Arrays;
+<code class="language-{.sourceCode .java}" data-lang="{.sourceCode .java}"><span style="color:#c0c5ce;">import java.util.Arrays;
 String[] splitString = &quot;a    bnc&quot;.split(&quot;s+&quot;);
 System.out.println(Arrays.asList(splitString));
 </span></code></pre>
@@ -213,7 +213,7 @@ System.out.println(Arrays.asList(splitString));
 <p>With Python, I expected the default way to work but it didn't, but came
 back disappointed:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">split_string = &quot;a    bnc&quot;.split(&quot; &quot;)
+<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">split_string = &quot;a    bnc&quot;.split(&quot; &quot;)
 print(split_string)
 </span></code></pre>
 <p>Output:</p>
@@ -224,7 +224,7 @@ print(split_string)
 with Python. This is the only thing so that I found easier to achieve in
 Java than in Python:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">import re
+<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">import re
 split_string = re.split(&quot;s+&quot;, &quot;a    bnc&quot;)
 print(split_string)
 </span></code></pre>

@@ -137,24 +137,24 @@ within <code>python</code>. A normal <code>split</code> won't work, because it u
 space as a delimiter (by default). To test, I will create a file named
 &quot;<strong>file with spaces</strong>&quot; and add text (<code>content of 'file with spaces'</code>).</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">$ echo &#39;content of file with spaces&#39; &gt; &#39;file with spaces&#39;
+<code class="language-{.sourceCode .sh}" data-lang="{.sourceCode .sh}"><span style="color:#c0c5ce;">$ echo &#39;content of file with spaces&#39; &gt; &#39;file with spaces&#39;
 </span></code></pre>
 <p>And here's the code, using the normal split method:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">import subprocess
+<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">import subprocess
 cmd = &quot;/bin/cat &#39;file with spaces&#39;&quot;
 formatted_cmd = cmd.split()
 subprocess.Popen(formatted_cmd)
 </span></code></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">/bin/cat: &#39;file: No such file or directory
+<code class="language-{.sourceCode .sh}" data-lang="{.sourceCode .sh}"><span style="color:#c0c5ce;">/bin/cat: &#39;file: No such file or directory
 /bin/cat: with: No such file or directory
 /bin/cat: spaces&#39;: No such file or directory
 </span></code></pre>
 <p>That's when <code>shlex</code> module gets to be useful.</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">import shlex, subprocess
+<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">import shlex, subprocess
 cmd = &quot;/bin/cat &#39;file with spaces&#39;&quot;
 formatted_cmd = shlex.split(cmd)
 subprocess.Popen(formatted_cmd)
