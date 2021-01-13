@@ -156,11 +156,12 @@ directory that isn't version-controlled by <a href="http://mercurial.selenic.com
 <pre style="background-color:#2b303b;">
 <code><span style="color:#c0c5ce;">&gt;&gt;&gt; import os
 </span><span style="color:#c0c5ce;">&gt;&gt;&gt; from subprocess import call
-</span><span style="color:#c0c5ce;">&gt;&gt;&gt; DEVNULL = open(os.devnull) &gt;&gt;&gt; call(&#39;hg status&#39;.split(), stderr=DEVNULL)
+</span><span style="color:#c0c5ce;">&gt;&gt;&gt; DEVNULL = open(os.devnull)
+</span><span style="color:#c0c5ce;">&gt;&gt;&gt; call(&#39;hg status&#39;.split(), stderr=DEVNULL)
 </span><span style="color:#c0c5ce;">255
 </span><span style="color:#c0c5ce;">&gt;&gt;&gt; DEVNULL.close()
 </span></code></pre>
-<p>Much better, much uglier. (<a href="https://bitbucket.org/tshepang/scripts/src/tip/vcs.py">example usage</a>)</p>
+<p>Much better, much uglier.</p>
 </li>
 <li>
 <p>Something better:</p>
@@ -178,7 +179,8 @@ would be preferable.</p>
 <li>
 <p>Best solution:</p>
 <pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">&gt;&gt;&gt; import os &gt;&gt;&gt; from subprocess import call, DEVNULL
+<code><span style="color:#c0c5ce;">&gt;&gt;&gt; import os
+</span><span style="color:#c0c5ce;">&gt;&gt;&gt; from subprocess import call, DEVNULL
 </span><span style="color:#c0c5ce;">&gt;&gt;&gt; call(&#39;hg status&#39;.split(), stderr=DEVNULL)
 </span><span style="color:#c0c5ce;">255
 </span></code></pre></li>
