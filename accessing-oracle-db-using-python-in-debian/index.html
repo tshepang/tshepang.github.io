@@ -139,14 +139,14 @@ oracle-instantclient11.2-basic*.rpm (~40MB).</li>
 specific processor (in my case, 3.1 and i386 respectively).</li>
 </ul>
 <p><strong>installation and setup</strong>:</p>
-<pre data-lang="{.sourceCode .bash}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .bash} "><code class="language-{.sourceCode .bash}" data-lang="{.sourceCode .bash}"><span>sudo apt-get install libpython3.1 libaio1 alien
-</span><span>sudo alien --install oracle-instantclient11.2-basic*rpm cx_Oracle*rpm
-</span><span>sudo ln -s /usr/lib/python3.1/site-packages/cx_Oracle.so /usr/lib/python3.1/lib-dynload
-</span><span>sudo ln -s /usr/lib/oracle/11.2/client/lib/libnnz11.so /usr/lib
-</span><span>sudo ln -s /usr/lib/oracle/11.2/client/lib/libclntsh.so.11.1 /usr/lib
-</span><span>echo export LD_LIBRARY_PATH=/usr/lib/oracle/11.2/client/lib &gt;&gt; ~/.bashrc
-</span><span>source ~/.bashrc
-</span><span>python3 -c &#39;import cx_Oracle&#39;
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> apt-get install libpython3.1 libaio1 alien
+</span><span style="color:#bf616a;">sudo</span><span> alien</span><span style="color:#bf616a;"> --install</span><span> oracle-instantclient11.2-basic*rpm cx_Oracle*rpm
+</span><span style="color:#bf616a;">sudo</span><span> ln</span><span style="color:#bf616a;"> -s</span><span> /usr/lib/python3.1/site-packages/cx_Oracle.so /usr/lib/python3.1/lib-dynload
+</span><span style="color:#bf616a;">sudo</span><span> ln</span><span style="color:#bf616a;"> -s</span><span> /usr/lib/oracle/11.2/client/lib/libnnz11.so /usr/lib
+</span><span style="color:#bf616a;">sudo</span><span> ln</span><span style="color:#bf616a;"> -s</span><span> /usr/lib/oracle/11.2/client/lib/libclntsh.so.11.1 /usr/lib
+</span><span style="color:#96b5b4;">echo</span><span> export LD_LIBRARY_PATH=/usr/lib/oracle/11.2/client/lib &gt;&gt; </span><span style="color:#bf616a;">~</span><span>/.bashrc
+</span><span style="color:#96b5b4;">source </span><span style="color:#bf616a;">~</span><span>/.bashrc
+</span><span style="color:#bf616a;">python3 -c </span><span>&#39;</span><span style="color:#a3be8c;">import cx_Oracle</span><span>&#39;
 </span></code></pre>
 <p>If that last line executes without printing a message to the screen, the
 install is most likely successful.</p>
