@@ -28,7 +28,7 @@
       
 
       
-          <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;site.css">
+          <link rel="stylesheet" href="http://tshepang.github.io/site.css">
           
       
 
@@ -135,50 +135,46 @@ rust</p>
 <p>use std::thread; use std::sync::mpsc::channel;</p>
 <p>fn main() {</p>
 <p>:   let thread_count = 4; let (tx, rx) = channel();</p>
-<pre style="background-color:#2b303b;">
-<code>for x in 0..thread_count {
-
-:   let tx = tx.clone(); thread::spawn(move || { println!(&quot;t{}
-    tx&quot;, x); tx.send(x).unwrap(); });
-
-}
-
-for _ in 0..thread_count {
-
-:   println!(&quot;rx from t{}&quot;, rx.recv().unwrap());
-
-}
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>for x in 0..thread_count {
+</span><span>
+</span><span>:   let tx = tx.clone(); thread::spawn(move || { println!(&quot;t{}
+</span><span>    tx&quot;, x); tx.send(x).unwrap(); });
+</span><span>
+</span><span>}
+</span><span>
+</span><span>for _ in 0..thread_count {
+</span><span>
+</span><span>:   println!(&quot;rx from t{}&quot;, rx.recv().unwrap());
+</span><span>
+</span><span>}
+</span></code></pre>
 <p>}
 :::</p>
 <p>What I'm doing there is create 4 child threads, from which I send
 messages that are to be captured by the main thread.</p>
 <p>I built and ran it with:</p>
-<pre style="background-color:#2b303b;">
-<code>rustc --opt-level 0 main.rs &amp;&amp; ./main
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>rustc --opt-level 0 main.rs &amp;&amp; ./main
+</span></code></pre>
 <p>Following is output from one sample run:</p>
-<pre style="background-color:#2b303b;">
-<code>t1 tx
-t0 tx
-t2 tx
-t3 tx
-rx from t1
-rx from t0
-rx from t3
-rx from t2
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>t1 tx
+</span><span>t0 tx
+</span><span>t2 tx
+</span><span>t3 tx
+</span><span>rx from t1
+</span><span>rx from t0
+</span><span>rx from t3
+</span><span>rx from t2
+</span></code></pre>
 <p>Following is what I get with another run:</p>
-<pre style="background-color:#2b303b;">
-<code>t0 tx
-t1 tx
-rx from t1
-t2 tx
-rx from t2
-t3 tx
-rx from t3
-rx from t0
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>t0 tx
+</span><span>t1 tx
+</span><span>rx from t1
+</span><span>t2 tx
+</span><span>rx from t2
+</span><span>t3 tx
+</span><span>rx from t3
+</span><span>rx from t0
+</span></code></pre>
 <p>If it was all deterministic (i.e. predictable), <code>t0 tx</code> would always
 come before <code>t1 tx</code>, and <code>rx from t0</code> before <code>rx from t1</code>, and so on.</p>
 <p>I think this is done for performance reasons, where the kernel just
@@ -195,7 +191,7 @@ My guess is that a more real-time kernel would be more predictable.</p>
             
                 <div class="post-tags">
                     
-                        <a href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;tags&#x2F;rust&#x2F;">#Rust</a>
+                        <a href="http://tshepang.github.io/tags/rust/">#Rust</a>
                     
                 </div>
             
@@ -229,11 +225,11 @@ My guess is that a more real-time kernel would be more predictable.</p>
         </div>
 
       
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;even.js" ></script>
+          <script type="text/javascript" src="http://tshepang.github.io/even.js" ></script>
           
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;elasticlunr.min.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search_index.en.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search_index.en.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search.js"></script>
           
       
     </body>

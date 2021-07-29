@@ -28,7 +28,7 @@
       
 
       
-          <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;site.css">
+          <link rel="stylesheet" href="http://tshepang.github.io/site.css">
           
       
 
@@ -151,28 +151,26 @@
     <div class="post-content">
       <p>I came across <a href="http://greenteapress.com/perl/perl.pdf">a tutorial</a> that showes how to implement a simple cat in
 Perl. I've modified their example for the sake of simplicity:</p>
-<pre style="background-color:#2b303b;">
-<code class="language-{.sourceCode .perl}" data-lang="{.sourceCode .perl}"><span style="color:#c0c5ce;">sub cat {
-    foreach my $filename (@_) {
-        open FILE, $filename;
-        while (my $line = &lt;FILE&gt;) {
-            print $line;
-        }
-    }
-}
-cat @ARGV;
+<pre data-lang="{.sourceCode .perl}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .perl} "><code class="language-{.sourceCode .perl}" data-lang="{.sourceCode .perl}"><span>sub cat {
+</span><span>    foreach my $filename (@_) {
+</span><span>        open FILE, $filename;
+</span><span>        while (my $line = &lt;FILE&gt;) {
+</span><span>            print $line;
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>cat @ARGV;
 </span></code></pre>
 <p>Running this script (e.g. <code>perl cat.pl file</code>) will display those files
 as if you ran <code>cat file</code>.</p>
 <p>I decided to see how the Python example would look like:</p>
-<pre style="background-color:#2b303b;">
-<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">import sys
-def cat(files):
-    for filename in files:
-        with open(filename) as FILE:
-            for line in FILE:
-                print(line, end=&quot;&quot;)
-cat(sys.argv[1:])
+<pre data-lang="{.sourceCode .python}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .python} "><code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span>import sys
+</span><span>def cat(files):
+</span><span>    for filename in files:
+</span><span>        with open(filename) as FILE:
+</span><span>            for line in FILE:
+</span><span>                print(line, end=&quot;&quot;)
+</span><span>cat(sys.argv[1:])
 </span></code></pre>
 <p>Running this script (e.g. <code>python3 cat.py file1 file2</code>) will give
 exactly the same result as above.</p>
@@ -233,9 +231,9 @@ elegantly.</li>
             
                 <div class="post-tags">
                     
-                        <a href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;tags&#x2F;non-python&#x2F;">#non-Python</a>
+                        <a href="http://tshepang.github.io/tags/non-python/">#non-Python</a>
                     
-                        <a href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;tags&#x2F;python&#x2F;">#Python</a>
+                        <a href="http://tshepang.github.io/tags/python/">#Python</a>
                     
                 </div>
             
@@ -269,11 +267,11 @@ elegantly.</li>
         </div>
 
       
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;even.js" ></script>
+          <script type="text/javascript" src="http://tshepang.github.io/even.js" ></script>
           
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;elasticlunr.min.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search_index.en.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search_index.en.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search.js"></script>
           
       
     </body>

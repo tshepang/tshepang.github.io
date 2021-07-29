@@ -28,7 +28,7 @@
       
 
       
-          <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;site.css">
+          <link rel="stylesheet" href="http://tshepang.github.io/site.css">
           
       
 
@@ -162,34 +162,34 @@ JHBuild path) to get a build failure fixe
 just wipe out the entire installation.</p>
 <p>Note that there's dozens of modules to build, so I wrote this little
 script to take care of it:</p>
-<pre style="background-color:#2b303b;">
-<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">import os
-import subprocess
-top_level = os.path.expanduser(&quot;~/src/gnome&quot;)
-for filename in os.listdir(top_level):
-    full_path = &quot;{}/{}&quot;.format(top_level, filename)
-    if os.path.isdir(full_path):
-        cmd = &quot;cd ~/src/gnome/{} &amp;&amp; git clean -dfx&quot;.format(filename)
-        if subprocess.call(cmd, shell=True) != 0:
-            cmd = &quot;cd ~/src/gnome/{} &amp;&amp; make distclean&quot;.format(filename)
-            if subprocess.call(cmd, shell=True) != 0:
-                cmd = &quot;cd ~/src/gnome/{} &amp;&amp; make clean&quot;.format(filename)
-                subprocess.call(cmd, shell=True)
-</span></code></pre><h1 id="update">update</h1>
+<pre data-lang="{.sourceCode .python}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .python} "><code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span>import os
+</span><span>import subprocess
+</span><span>top_level = os.path.expanduser(&quot;~/src/gnome&quot;)
+</span><span>for filename in os.listdir(top_level):
+</span><span>    full_path = &quot;{}/{}&quot;.format(top_level, filename)
+</span><span>    if os.path.isdir(full_path):
+</span><span>        cmd = &quot;cd ~/src/gnome/{} &amp;&amp; git clean -dfx&quot;.format(filename)
+</span><span>        if subprocess.call(cmd, shell=True) != 0:
+</span><span>            cmd = &quot;cd ~/src/gnome/{} &amp;&amp; make distclean&quot;.format(filename)
+</span><span>            if subprocess.call(cmd, shell=True) != 0:
+</span><span>                cmd = &quot;cd ~/src/gnome/{} &amp;&amp; make clean&quot;.format(filename)
+</span><span>                subprocess.call(cmd, shell=True)
+</span></code></pre>
+<h1 id="update">update</h1>
 <p>Someone very kind guy made <a href="http://codereview.stackexchange.com/questions/1476/cleansing-multiple-build-directories/1477#1477">a bunch of suggestions</a>, making my code much
 better:</p>
-<pre style="background-color:#2b303b;">
-<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">import os
-import subprocess
-top_level = os.path.expanduser(&quot;~/src/gnome&quot;)
-for filename in os.listdir(top_level):
-    full_path = os.path.join(top_level, filename)
-    if os.path.isdir(full_path):
-        os.chdir(full_path)
-        if subprocess.call(&quot;git clean -dfx&quot;.split()) != 0:
-            if subprocess.call(&quot;make distclean&quot;.split()) != 0:
-                subprocess.call(&quot;make clean&quot;.split())
-</span></code></pre><h1 id="further-reading">further reading</h1>
+<pre data-lang="{.sourceCode .python}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .python} "><code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span>import os
+</span><span>import subprocess
+</span><span>top_level = os.path.expanduser(&quot;~/src/gnome&quot;)
+</span><span>for filename in os.listdir(top_level):
+</span><span>    full_path = os.path.join(top_level, filename)
+</span><span>    if os.path.isdir(full_path):
+</span><span>        os.chdir(full_path)
+</span><span>        if subprocess.call(&quot;git clean -dfx&quot;.split()) != 0:
+</span><span>            if subprocess.call(&quot;make distclean&quot;.split()) != 0:
+</span><span>                subprocess.call(&quot;make clean&quot;.split())
+</span></code></pre>
+<h1 id="further-reading">further reading</h1>
 <p>modules: <a href="http://docs.python.org//library/os">os</a>, <a href="http://docs.python.org//library/os.path">os.path</a>, <a href="http://docs.python.org//library/subprocess">subprocess</a></p>
 
     </div>
@@ -202,9 +202,9 @@ for filename in os.listdir(top_level):
             
                 <div class="post-tags">
                     
-                        <a href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;tags&#x2F;python&#x2F;">#Python</a>
+                        <a href="http://tshepang.github.io/tags/python/">#Python</a>
                     
-                        <a href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;tags&#x2F;gnome&#x2F;">#GNOME</a>
+                        <a href="http://tshepang.github.io/tags/gnome/">#GNOME</a>
                     
                 </div>
             
@@ -238,11 +238,11 @@ for filename in os.listdir(top_level):
         </div>
 
       
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;even.js" ></script>
+          <script type="text/javascript" src="http://tshepang.github.io/even.js" ></script>
           
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;elasticlunr.min.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search_index.en.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search_index.en.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search.js"></script>
           
       
     </body>

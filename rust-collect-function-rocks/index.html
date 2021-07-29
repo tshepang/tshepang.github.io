@@ -28,7 +28,7 @@
       
 
       
-          <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;site.css">
+          <link rel="stylesheet" href="http://tshepang.github.io/site.css">
           
       
 
@@ -129,47 +129,44 @@
 
     <div class="post-content">
       <p>Here is one way to populate a Vec with some data:</p>
-<pre style="background-color:#2b303b;">
-<code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let mut</span><span style="color:#c0c5ce;"> vector = Vec::new();
-</span><span style="color:#b48ead;">for</span><span style="color:#c0c5ce;"> n in </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">..</span><span style="color:#d08770;">COUNT </span><span style="color:#c0c5ce;">{
-    vector.</span><span style="color:#96b5b4;">push</span><span style="color:#c0c5ce;">(n);
-};
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let mut</span><span> vector = Vec::new();
+</span><span style="color:#b48ead;">for</span><span> n in </span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">COUNT </span><span>{
+</span><span>    vector.</span><span style="color:#96b5b4;">push</span><span>(n);
+</span><span>};
 </span></code></pre>
 <p>Alternatively, one can simply do this:</p>
-<pre style="background-color:#2b303b;">
-<code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> vector = (</span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">..</span><span style="color:#d08770;">COUNT</span><span style="color:#c0c5ce;">).collect::&lt;Vec&lt;_&gt;&gt;()
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let</span><span> vector = (</span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">COUNT</span><span>).collect::&lt;Vec&lt;_&gt;&gt;()
 </span></code></pre>
 <p>The function is also about twice as fast, according to the following
 benchmark:</p>
-<pre style="background-color:#2b303b;">
-<code class="language-rust" data-lang="rust"><span style="color:#c0c5ce;">#![</span><span style="color:#bf616a;">feature</span><span style="color:#c0c5ce;">(test)]
-</span><span style="color:#b48ead;">extern crate</span><span style="color:#c0c5ce;"> test;
-
-</span><span style="color:#b48ead;">static </span><span style="color:#d08770;">COUNT</span><span style="color:#c0c5ce;">: </span><span style="color:#b48ead;">i32 </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">100</span><span style="color:#c0c5ce;">;
-
-#[</span><span style="color:#bf616a;">bench</span><span style="color:#c0c5ce;">]
-</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">collect</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">b</span><span style="color:#c0c5ce;">: &amp;</span><span style="color:#b48ead;">mut </span><span style="color:#c0c5ce;">test::Bencher) {
-    b.</span><span style="color:#96b5b4;">iter</span><span style="color:#c0c5ce;">(|| {
-        (</span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">..</span><span style="color:#d08770;">COUNT</span><span style="color:#c0c5ce;">).collect::&lt;Vec&lt;_&gt;&gt;()
-    });
-}
-
-#[</span><span style="color:#bf616a;">bench</span><span style="color:#c0c5ce;">]
-</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">no_collect</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">b</span><span style="color:#c0c5ce;">: &amp;</span><span style="color:#b48ead;">mut </span><span style="color:#c0c5ce;">test::Bencher) {
-    b.</span><span style="color:#96b5b4;">iter</span><span style="color:#c0c5ce;">(|| {
-        </span><span style="color:#b48ead;">let mut</span><span style="color:#c0c5ce;"> vector = Vec::new();
-        </span><span style="color:#b48ead;">for</span><span style="color:#c0c5ce;"> n in (</span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">..</span><span style="color:#d08770;">COUNT</span><span style="color:#c0c5ce;">) {
-            vector.</span><span style="color:#96b5b4;">push</span><span style="color:#c0c5ce;">(n);
-        };
-        vector
-    });
-}
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#![</span><span style="color:#bf616a;">feature</span><span>(test)]
+</span><span style="color:#b48ead;">extern crate</span><span> test;
+</span><span>
+</span><span style="color:#b48ead;">static </span><span style="color:#d08770;">COUNT</span><span>: </span><span style="color:#b48ead;">i32 </span><span>= </span><span style="color:#d08770;">100</span><span>;
+</span><span>
+</span><span>#[</span><span style="color:#bf616a;">bench</span><span>]
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">collect</span><span>(</span><span style="color:#bf616a;">b</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>test::Bencher) {
+</span><span>    b.</span><span style="color:#96b5b4;">iter</span><span>(|| {
+</span><span>        (</span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">COUNT</span><span>).collect::&lt;Vec&lt;_&gt;&gt;()
+</span><span>    });
+</span><span>}
+</span><span>
+</span><span>#[</span><span style="color:#bf616a;">bench</span><span>]
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">no_collect</span><span>(</span><span style="color:#bf616a;">b</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>test::Bencher) {
+</span><span>    b.</span><span style="color:#96b5b4;">iter</span><span>(|| {
+</span><span>        </span><span style="color:#b48ead;">let mut</span><span> vector = Vec::new();
+</span><span>        </span><span style="color:#b48ead;">for</span><span> n in (</span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">COUNT</span><span>) {
+</span><span>            vector.</span><span style="color:#96b5b4;">push</span><span>(n);
+</span><span>        };
+</span><span>        vector
+</span><span>    });
+</span><span>}
 </span></code></pre>
 <p>Here is the output of <code>cargo bench</code>:</p>
-<pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">test collect    ... bench:       164 ns/iter (+/- 7)
-test no_collect ... bench:       346 ns/iter (+/- 8)
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>test collect    ... bench:       164 ns/iter (+/- 7)
+</span><span>test no_collect ... bench:       346 ns/iter (+/- 8)
 </span></code></pre>
+
     </div>
 
     
@@ -180,7 +177,7 @@ test no_collect ... bench:       346 ns/iter (+/- 8)
             
                 <div class="post-tags">
                     
-                        <a href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;tags&#x2F;rust&#x2F;">#Rust</a>
+                        <a href="http://tshepang.github.io/tags/rust/">#Rust</a>
                     
                 </div>
             
@@ -214,11 +211,11 @@ test no_collect ... bench:       346 ns/iter (+/- 8)
         </div>
 
       
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;even.js" ></script>
+          <script type="text/javascript" src="http://tshepang.github.io/even.js" ></script>
           
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;elasticlunr.min.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search_index.en.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search_index.en.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search.js"></script>
           
       
     </body>

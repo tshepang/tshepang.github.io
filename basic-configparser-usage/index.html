@@ -28,7 +28,7 @@
       
 
       
-          <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;site.css">
+          <link rel="stylesheet" href="http://tshepang.github.io/site.css">
           
       
 
@@ -146,51 +146,46 @@
     <div class="post-content">
       <p>Reading <code>.INI</code> files is very easy with Python. Say you had a file,
 &quot;<em>config.cfg</em>&quot;, with this content:</p>
-<pre style="background-color:#2b303b;">
-<code>[numbers]
-one: 1
-two: 2
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>[numbers]
+</span><span>one: 1
+</span><span>two: 2
+</span></code></pre>
 <p>The code to read that content is:</p>
-<pre style="background-color:#2b303b;">
-<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">import configparser
-conf = configparser.ConfigParser()
-conf.read(&quot;config.cfg&quot;)
-items = conf.items(&quot;numbers&quot;)
-print(items)
+<pre data-lang="{.sourceCode .python}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .python} "><code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span>import configparser
+</span><span>conf = configparser.ConfigParser()
+</span><span>conf.read(&quot;config.cfg&quot;)
+</span><span>items = conf.items(&quot;numbers&quot;)
+</span><span>print(items)
 </span></code></pre>
 <p>Output:</p>
-<pre style="background-color:#2b303b;">
-<code>[('one', '1'), ('two', '2')]
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>[(&#39;one&#39;, &#39;1&#39;), (&#39;two&#39;, &#39;2&#39;)]
+</span></code></pre>
 <p>That's a list of tuples, each tuple a key-value pair.</p>
 <p>Even better, since these are key-value pairs, why not use a more
 suitable data type? Here goes:</p>
-<pre style="background-color:#2b303b;">
-<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">import configparser
-conf = configparser.ConfigParser()
-conf.read(&quot;config.cfg&quot;)
-items = dict(conf.items(&quot;numbers&quot;))
-print(items)
+<pre data-lang="{.sourceCode .python}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .python} "><code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span>import configparser
+</span><span>conf = configparser.ConfigParser()
+</span><span>conf.read(&quot;config.cfg&quot;)
+</span><span>items = dict(conf.items(&quot;numbers&quot;))
+</span><span>print(items)
 </span></code></pre>
 <p>Output:</p>
-<pre style="background-color:#2b303b;">
-<code>{'two': '2', 'one': '1'}
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>{&#39;two&#39;: &#39;2&#39;, &#39;one&#39;: &#39;1&#39;}
+</span></code></pre>
 <p>That's the <strong>dict</strong> function, which takes a list of tuples, and
 converts them to a dictionary. You might also have noticed that the
 ordering is now a bit off. That's because the dict type doesn't care
 about ordering. Remember that in order to access dictionary content, you
 use a key and not an index:</p>
-<pre style="background-color:#2b303b;">
-<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">&gt;&gt;&gt; d = {1: &#39;one&#39;}
-&gt;&gt;&gt; d[0]
-Traceback (most recent call last):
-  File &quot;&quot;, line 1, in
-KeyError: 0
-&gt;&gt;&gt; d[1]
-&#39;one&#39;
-</span></code></pre><h1 id="further-reading">further reading</h1>
+<pre data-lang="{.sourceCode .python}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .python} "><code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span>&gt;&gt;&gt; d = {1: &#39;one&#39;}
+</span><span>&gt;&gt;&gt; d[0]
+</span><span>Traceback (most recent call last):
+</span><span>  File &quot;&quot;, line 1, in
+</span><span>KeyError: 0
+</span><span>&gt;&gt;&gt; d[1]
+</span><span>&#39;one&#39;
+</span></code></pre>
+<h1 id="further-reading">further reading</h1>
 <ul>
 <li><a href="http://docs.python.org/library/configparser">configparser module</a></li>
 <li><a href="http://docs.python.org/library/stdtypes#mapping-types-dict">dict mapping type</a></li>
@@ -206,7 +201,7 @@ KeyError: 0
             
                 <div class="post-tags">
                     
-                        <a href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;tags&#x2F;python&#x2F;">#Python</a>
+                        <a href="http://tshepang.github.io/tags/python/">#Python</a>
                     
                 </div>
             
@@ -240,11 +235,11 @@ KeyError: 0
         </div>
 
       
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;even.js" ></script>
+          <script type="text/javascript" src="http://tshepang.github.io/even.js" ></script>
           
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;elasticlunr.min.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search_index.en.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search_index.en.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search.js"></script>
           
       
     </body>

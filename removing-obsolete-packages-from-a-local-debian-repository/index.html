@@ -28,7 +28,7 @@
       
 
       
-          <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;site.css">
+          <link rel="stylesheet" href="http://tshepang.github.io/site.css">
           
       
 
@@ -155,9 +155,8 @@ whenever I fetch and install Debian packages (e.g. <code>apt-get upgrade</code>)
 also keep them in a local custom repository. I use a great tool named
 <a href="https://salsa.debian.org/brlink/reprepro">reprepro</a> for this, and this is the command I use to update that
 repository, given the location of the fresh package files:</p>
-<pre style="background-color:#2b303b;">
-<code>$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang /var/cache/apt/archives/*deb
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang /var/cache/apt/archives/*deb
+</span></code></pre>
 <p>What's nice about the command is that, if there is an older version of
 the package I'm adding, it gets replaced, and the package index is
 updated accordingly.</p>
@@ -179,52 +178,50 @@ using that package, it is just a waste of resources (CPU and disk
 usage).</li>
 </ul>
 <p>To help with the cleanup, I have written the following simple script:</p>
-<pre style="background-color:#2b303b;">
-<code class="language-python" data-lang="python"><span style="color:#65737e;">#!/usr/bin/env python3
-
-</span><span style="color:#b48ead;">import </span><span style="color:#c0c5ce;">apt_pkg
-</span><span style="color:#b48ead;">import </span><span style="color:#c0c5ce;">gzip
-</span><span style="color:#b48ead;">import </span><span style="color:#c0c5ce;">subprocess
-
-</span><span style="color:#bf616a;">CUSTOM_REPO </span><span style="color:#c0c5ce;">= (&quot;</span><span style="color:#a3be8c;">/home/wena/.custom_repo/dists/tshepang/main/</span><span style="color:#c0c5ce;">&quot;
-               &quot;</span><span style="color:#a3be8c;">binary-i386/Packages.gz</span><span style="color:#c0c5ce;">&quot;)
-</span><span style="color:#bf616a;">WHEEZY_REPO </span><span style="color:#c0c5ce;">= (&quot;</span><span style="color:#a3be8c;">/var/lib/apt/lists/ftp.de.debian.org_debian_dists_testing_</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">_</span><span style="color:#c0c5ce;">&quot;
-               &quot;</span><span style="color:#a3be8c;">binary-i386_Packages</span><span style="color:#c0c5ce;">&quot;)
-
-
-</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">():
-    custom_repo = apt_pkg.</span><span style="color:#bf616a;">TagFile</span><span style="color:#c0c5ce;">(gzip.</span><span style="color:#bf616a;">open</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">CUSTOM_REPO</span><span style="color:#c0c5ce;">, &quot;</span><span style="color:#a3be8c;">rb</span><span style="color:#c0c5ce;">&quot;))
-    archive_areas = &quot;</span><span style="color:#a3be8c;">main contrib non-free</span><span style="color:#c0c5ce;">&quot;.</span><span style="color:#bf616a;">split</span><span style="color:#c0c5ce;">()
-    wheezy_packages = </span><span style="color:#bf616a;">list</span><span style="color:#c0c5ce;">()
-    </span><span style="color:#b48ead;">for </span><span style="color:#c0c5ce;">archive_area </span><span style="color:#b48ead;">in </span><span style="color:#c0c5ce;">archive_areas:
-        repo = WHEEZY_REPO.</span><span style="color:#bf616a;">format</span><span style="color:#c0c5ce;">(archive_area)
-        repo = apt_pkg.</span><span style="color:#bf616a;">TagFile</span><span style="color:#c0c5ce;">(gzip.</span><span style="color:#bf616a;">open</span><span style="color:#c0c5ce;">(repo, &quot;</span><span style="color:#a3be8c;">rb</span><span style="color:#c0c5ce;">&quot;))
-        wheezy_packages.</span><span style="color:#bf616a;">extend</span><span style="color:#c0c5ce;">([pkg[&quot;</span><span style="color:#a3be8c;">Package</span><span style="color:#c0c5ce;">&quot;] </span><span style="color:#b48ead;">for </span><span style="color:#c0c5ce;">pkg </span><span style="color:#b48ead;">in </span><span style="color:#c0c5ce;">repo])
-    </span><span style="color:#b48ead;">for </span><span style="color:#c0c5ce;">package </span><span style="color:#b48ead;">in </span><span style="color:#c0c5ce;">custom_repo:
-        package_name = package[&quot;</span><span style="color:#a3be8c;">Package</span><span style="color:#c0c5ce;">&quot;]
-        </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">package_name not in wheezy_packages:
-            cmd = &quot;</span><span style="color:#a3be8c;">apt-cache policy </span><span style="color:#c0c5ce;">&quot; + package_name
-            subprocess.</span><span style="color:#bf616a;">call</span><span style="color:#c0c5ce;">(cmd.</span><span style="color:#bf616a;">split</span><span style="color:#c0c5ce;">())
-            choice = </span><span style="color:#96b5b4;">input</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">remove from cache [Y/n]? </span><span style="color:#c0c5ce;">&quot;)
-            </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">not choice or choice.</span><span style="color:#bf616a;">lower</span><span style="color:#c0c5ce;">().</span><span style="color:#bf616a;">startswith</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">y</span><span style="color:#c0c5ce;">&quot;):
-                cmd = (&quot;</span><span style="color:#a3be8c;">reprepro -vv --basedir /home/wena/.custom_repo/ </span><span style="color:#c0c5ce;">&quot;
-                       &quot;</span><span style="color:#a3be8c;">remove tshepang </span><span style="color:#c0c5ce;">&quot; + package_name)
-                subprocess.</span><span style="color:#bf616a;">call</span><span style="color:#c0c5ce;">(cmd.</span><span style="color:#bf616a;">split</span><span style="color:#c0c5ce;">())
-
-</span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">__name__ == &quot;</span><span style="color:#a3be8c;">__main__</span><span style="color:#c0c5ce;">&quot;:
-    </span><span style="color:#bf616a;">main</span><span style="color:#c0c5ce;">()
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;">#!/usr/bin/env python3
+</span><span>
+</span><span style="color:#b48ead;">import </span><span>apt_pkg
+</span><span style="color:#b48ead;">import </span><span>gzip
+</span><span style="color:#b48ead;">import </span><span>subprocess
+</span><span>
+</span><span style="color:#bf616a;">CUSTOM_REPO </span><span>= (&quot;</span><span style="color:#a3be8c;">/home/wena/.custom_repo/dists/tshepang/main/</span><span>&quot;
+</span><span>               &quot;</span><span style="color:#a3be8c;">binary-i386/Packages.gz</span><span>&quot;)
+</span><span style="color:#bf616a;">WHEEZY_REPO </span><span>= (&quot;</span><span style="color:#a3be8c;">/var/lib/apt/lists/ftp.de.debian.org_debian_dists_testing_</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">_</span><span>&quot;
+</span><span>               &quot;</span><span style="color:#a3be8c;">binary-i386_Packages</span><span>&quot;)
+</span><span>
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">main</span><span>():
+</span><span>    custom_repo = apt_pkg.</span><span style="color:#bf616a;">TagFile</span><span>(gzip.</span><span style="color:#bf616a;">open</span><span>(</span><span style="color:#bf616a;">CUSTOM_REPO</span><span>, &quot;</span><span style="color:#a3be8c;">rb</span><span>&quot;))
+</span><span>    archive_areas = &quot;</span><span style="color:#a3be8c;">main contrib non-free</span><span>&quot;.</span><span style="color:#bf616a;">split</span><span>()
+</span><span>    wheezy_packages = </span><span style="color:#bf616a;">list</span><span>()
+</span><span>    </span><span style="color:#b48ead;">for </span><span>archive_area </span><span style="color:#b48ead;">in </span><span>archive_areas:
+</span><span>        repo = WHEEZY_REPO.</span><span style="color:#bf616a;">format</span><span>(archive_area)
+</span><span>        repo = apt_pkg.</span><span style="color:#bf616a;">TagFile</span><span>(gzip.</span><span style="color:#bf616a;">open</span><span>(repo, &quot;</span><span style="color:#a3be8c;">rb</span><span>&quot;))
+</span><span>        wheezy_packages.</span><span style="color:#bf616a;">extend</span><span>([pkg[&quot;</span><span style="color:#a3be8c;">Package</span><span>&quot;] </span><span style="color:#b48ead;">for </span><span>pkg </span><span style="color:#b48ead;">in </span><span>repo])
+</span><span>    </span><span style="color:#b48ead;">for </span><span>package </span><span style="color:#b48ead;">in </span><span>custom_repo:
+</span><span>        package_name = package[&quot;</span><span style="color:#a3be8c;">Package</span><span>&quot;]
+</span><span>        </span><span style="color:#b48ead;">if </span><span>package_name not in wheezy_packages:
+</span><span>            cmd = &quot;</span><span style="color:#a3be8c;">apt-cache policy </span><span>&quot; + package_name
+</span><span>            subprocess.</span><span style="color:#bf616a;">call</span><span>(cmd.</span><span style="color:#bf616a;">split</span><span>())
+</span><span>            choice = </span><span style="color:#96b5b4;">input</span><span>(&quot;</span><span style="color:#a3be8c;">remove from cache [Y/n]? </span><span>&quot;)
+</span><span>            </span><span style="color:#b48ead;">if </span><span>not choice or choice.</span><span style="color:#bf616a;">lower</span><span>().</span><span style="color:#bf616a;">startswith</span><span>(&quot;</span><span style="color:#a3be8c;">y</span><span>&quot;):
+</span><span>                cmd = (&quot;</span><span style="color:#a3be8c;">reprepro -vv --basedir /home/wena/.custom_repo/ </span><span>&quot;
+</span><span>                       &quot;</span><span style="color:#a3be8c;">remove tshepang </span><span>&quot; + package_name)
+</span><span>                subprocess.</span><span style="color:#bf616a;">call</span><span>(cmd.</span><span style="color:#bf616a;">split</span><span>())
+</span><span>
+</span><span style="color:#b48ead;">if </span><span>__name__ == &quot;</span><span style="color:#a3be8c;">__main__</span><span>&quot;:
+</span><span>    </span><span style="color:#bf616a;">main</span><span>()
 </span></code></pre>
 <p>And here's a snippet of its output:</p>
-<pre style="background-color:#2b303b;">
-<code>cx-oracle:
-  Installed: 5.1.1-2
-  Candidate: 5.1.1-2
-  Version table:
- *** 5.1.1-2 0
-        500 file:/home/wena/.custom_repo/ tshepang/main i386 Packages
-        100 /var/lib/dpkg/status
-remove from cache [Y/n]?
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>cx-oracle:
+</span><span>  Installed: 5.1.1-2
+</span><span>  Candidate: 5.1.1-2
+</span><span>  Version table:
+</span><span> *** 5.1.1-2 0
+</span><span>        500 file:/home/wena/.custom_repo/ tshepang/main i386 Packages
+</span><span>        100 /var/lib/dpkg/status
+</span><span>remove from cache [Y/n]?
+</span></code></pre>
 <p>What it does is look for packages which are only available in my custom
 repository, as compared with the one in Wheezy (soon to be Debian 7). It
 then prompts me on whether or not to remove it from that custom
@@ -240,7 +237,7 @@ repository. Today, it helped me get rid of dozens of junk.</p>
             
                 <div class="post-tags">
                     
-                        <a href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;tags&#x2F;debian&#x2F;">#Debian</a>
+                        <a href="http://tshepang.github.io/tags/debian/">#Debian</a>
                     
                 </div>
             
@@ -274,11 +271,11 @@ repository. Today, it helped me get rid of dozens of junk.</p>
         </div>
 
       
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;even.js" ></script>
+          <script type="text/javascript" src="http://tshepang.github.io/even.js" ></script>
           
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;elasticlunr.min.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search_index.en.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search_index.en.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search.js"></script>
           
       
     </body>

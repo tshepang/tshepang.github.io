@@ -28,7 +28,7 @@
       
 
       
-          <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;site.css">
+          <link rel="stylesheet" href="http://tshepang.github.io/site.css">
           
       
 
@@ -147,61 +147,59 @@ it's not hard, and there's examples out there. It just takes a while
 since there isn't a comprehensive guide I could find.</p>
 <p>For my login manager, I use <a href="http://www.freedesktop.org/wiki/Software/LightDM">LightDM</a>. I added this line to its
 configuration, in <code>[SeatDefaults]</code> section:</p>
-<pre style="background-color:#2b303b;">
-<code>greeter-hide-users=false
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>greeter-hide-users=false
+</span></code></pre>
 <p>It removes the need to manually enter my username each time I want to
 login.</p>
 <p>Reason I'm not using GDM? I wanted something light, which also
 wouldn't pull in dozens of packages that I won't use. For example:</p>
-<pre style="background-color:#2b303b;">
-<code>$ sudo apt-get install --no-install-recommends gdm3
-Reading package lists... Done
-Building dependency tree
-Reading state information... Done
-The following extra packages will be installed:
-  bluez dconf-cli evolution-data-server evolution-data-server-common
-  gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-gck-1 gir1.2-gcr-3
-  gir1.2-gdesktopenums-3.0 gir1.2-gdm3 gir1.2-gkbd-3.0 gir1.2-gmenu-3.0
-  gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0 gir1.2-ibus-1.0
-  gir1.2-mutter-3.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0 gir1.2-soup-2.4
-  gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2 gir1.2-xkl-1.0 gjs
-  gnome-bluetooth gnome-settings-daemon gnome-shell gnome-shell-common
-  gnome-themes-standard gnome-themes-standard-data libbluetooth3 libcamel-1.2-43
-  libcaribou-common libcaribou0 libebackend-1.2-6 libebook-1.2-14
-  libebook-contacts-1.2-0 libecal-1.2-15 libedata-book-1.2-17 libedata-cal-1.2-20
-  libedataserver-1.2-17 libgdata-common libgdata13 libgdm1 libgnome-menu-3-0
-  libgoa-1.0-0 libgoa-1.0-common libgweather-3-3 libgweather-common libibus-1.0-5
-  libical0 libmission-control-plugins0 libmutter0b liboauth0 libopenobex1
-  libpackagekit-glib2-16 libpulse-mainloop-glib0 librest-0.7-0 libsoup-gnome2.4-1
-  libtelepathy-glib0 libtelepathy-logger3 libwacom-common libwacom2 mutter-common
-  obex-data-server obexd-client telepathy-mission-control-5
-Suggested packages:
-  evolution evolution-data-server-dbg gnome-orca gnome-user-share telepathy-haze
-Recommended packages:
-  zenity gvfs-backends gnome-control-center pulseaudio gkbd-capplet gnome-contacts
-  gnome-user-guide gtk2-engines-pixbuf gnome-accessibility-themes packagekit
-The following NEW packages will be installed:
-  bluez dconf-cli evolution-data-server evolution-data-server-common gdm3
-  gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-gck-1 gir1.2-gcr-3
-  gir1.2-gdesktopenums-3.0 gir1.2-gdm3 gir1.2-gkbd-3.0 gir1.2-gmenu-3.0
-  gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0 gir1.2-ibus-1.0
-  gir1.2-mutter-3.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0 gir1.2-soup-2.4
-  gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2 gir1.2-xkl-1.0 gjs
-  gnome-bluetooth gnome-settings-daemon gnome-shell gnome-shell-common
-  gnome-themes-standard gnome-themes-standard-data libbluetooth3 libcamel-1.2-43
-  libcaribou-common libcaribou0 libebackend-1.2-6 libebook-1.2-14
-  libebook-contacts-1.2-0 libecal-1.2-15 libedata-book-1.2-17 libedata-cal-1.2-20
-  libedataserver-1.2-17 libgdata-common libgdata13 libgdm1 libgnome-menu-3-0
-  libgoa-1.0-0 libgoa-1.0-common libgweather-3-3 libgweather-common libibus-1.0-5
-  libical0 libmission-control-plugins0 libmutter0b liboauth0 libopenobex1
-  libpackagekit-glib2-16 libpulse-mainloop-glib0 librest-0.7-0 libsoup-gnome2.4-1
-  libtelepathy-glib0 libtelepathy-logger3 libwacom-common libwacom2 mutter-common
-  obex-data-server obexd-client telepathy-mission-control-5
-0 upgraded, 67 newly installed, 0 to remove and 45 not upgraded.
-Need to get 0 B/31.0 MB of archives.
-After this operation, 90.8 MB of additional disk space will be used.
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ sudo apt-get install --no-install-recommends gdm3
+</span><span>Reading package lists... Done
+</span><span>Building dependency tree
+</span><span>Reading state information... Done
+</span><span>The following extra packages will be installed:
+</span><span>  bluez dconf-cli evolution-data-server evolution-data-server-common
+</span><span>  gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-gck-1 gir1.2-gcr-3
+</span><span>  gir1.2-gdesktopenums-3.0 gir1.2-gdm3 gir1.2-gkbd-3.0 gir1.2-gmenu-3.0
+</span><span>  gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0 gir1.2-ibus-1.0
+</span><span>  gir1.2-mutter-3.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0 gir1.2-soup-2.4
+</span><span>  gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2 gir1.2-xkl-1.0 gjs
+</span><span>  gnome-bluetooth gnome-settings-daemon gnome-shell gnome-shell-common
+</span><span>  gnome-themes-standard gnome-themes-standard-data libbluetooth3 libcamel-1.2-43
+</span><span>  libcaribou-common libcaribou0 libebackend-1.2-6 libebook-1.2-14
+</span><span>  libebook-contacts-1.2-0 libecal-1.2-15 libedata-book-1.2-17 libedata-cal-1.2-20
+</span><span>  libedataserver-1.2-17 libgdata-common libgdata13 libgdm1 libgnome-menu-3-0
+</span><span>  libgoa-1.0-0 libgoa-1.0-common libgweather-3-3 libgweather-common libibus-1.0-5
+</span><span>  libical0 libmission-control-plugins0 libmutter0b liboauth0 libopenobex1
+</span><span>  libpackagekit-glib2-16 libpulse-mainloop-glib0 librest-0.7-0 libsoup-gnome2.4-1
+</span><span>  libtelepathy-glib0 libtelepathy-logger3 libwacom-common libwacom2 mutter-common
+</span><span>  obex-data-server obexd-client telepathy-mission-control-5
+</span><span>Suggested packages:
+</span><span>  evolution evolution-data-server-dbg gnome-orca gnome-user-share telepathy-haze
+</span><span>Recommended packages:
+</span><span>  zenity gvfs-backends gnome-control-center pulseaudio gkbd-capplet gnome-contacts
+</span><span>  gnome-user-guide gtk2-engines-pixbuf gnome-accessibility-themes packagekit
+</span><span>The following NEW packages will be installed:
+</span><span>  bluez dconf-cli evolution-data-server evolution-data-server-common gdm3
+</span><span>  gir1.2-accountsservice-1.0 gir1.2-caribou-1.0 gir1.2-gck-1 gir1.2-gcr-3
+</span><span>  gir1.2-gdesktopenums-3.0 gir1.2-gdm3 gir1.2-gkbd-3.0 gir1.2-gmenu-3.0
+</span><span>  gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0 gir1.2-ibus-1.0
+</span><span>  gir1.2-mutter-3.0 gir1.2-nmgtk-1.0 gir1.2-polkit-1.0 gir1.2-soup-2.4
+</span><span>  gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2 gir1.2-xkl-1.0 gjs
+</span><span>  gnome-bluetooth gnome-settings-daemon gnome-shell gnome-shell-common
+</span><span>  gnome-themes-standard gnome-themes-standard-data libbluetooth3 libcamel-1.2-43
+</span><span>  libcaribou-common libcaribou0 libebackend-1.2-6 libebook-1.2-14
+</span><span>  libebook-contacts-1.2-0 libecal-1.2-15 libedata-book-1.2-17 libedata-cal-1.2-20
+</span><span>  libedataserver-1.2-17 libgdata-common libgdata13 libgdm1 libgnome-menu-3-0
+</span><span>  libgoa-1.0-0 libgoa-1.0-common libgweather-3-3 libgweather-common libibus-1.0-5
+</span><span>  libical0 libmission-control-plugins0 libmutter0b liboauth0 libopenobex1
+</span><span>  libpackagekit-glib2-16 libpulse-mainloop-glib0 librest-0.7-0 libsoup-gnome2.4-1
+</span><span>  libtelepathy-glib0 libtelepathy-logger3 libwacom-common libwacom2 mutter-common
+</span><span>  obex-data-server obexd-client telepathy-mission-control-5
+</span><span>0 upgraded, 67 newly installed, 0 to remove and 45 not upgraded.
+</span><span>Need to get 0 B/31.0 MB of archives.
+</span><span>After this operation, 90.8 MB of additional disk space will be used.
+</span></code></pre>
 <p>GNOME philosophy tends towards tight integration, leading to things
 being not as modular as I would like: how could a display manager end up
 depending on a Contacts tool, or the Bluetooth stack. It may be just how
@@ -211,112 +209,109 @@ well for years, but I'm not interested in all those tools it brings
 with.</p>
 <p>Anyways, enough with that. I added a custom <code>.desktop</code> file which will
 become selectable on LightDM UI:</p>
-<pre style="background-color:#2b303b;">
-<code>$ cat /usr/share/xsessions/custom.desktop
-[Desktop Entry]
-Name=Custom
-Exec=/etc/X11/Xsession
-Type=XSession
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ cat /usr/share/xsessions/custom.desktop
+</span><span>[Desktop Entry]
+</span><span>Name=Custom
+</span><span>Exec=/etc/X11/Xsession
+</span><span>Type=XSession
+</span></code></pre>
 <p>On selecting the entry labeled <strong>Custom</strong> that appears on LightDM, and
 logging in, the following will get executed (<a href="https://github.com/tshepang/custom/blob/master/xsession">~/.xsession</a>):</p>
-<pre style="background-color:#2b303b;">
-<code class="language-{.sourceCode .sh}" data-lang="{.sourceCode .sh}"><span style="color:#c0c5ce;"># apps
-xfce4-terminal --hide-menubar --tab --tab --tab &amp;
-firefox &amp;
-nautilus --no-desktop &amp;
-nm-applet &amp;
-trayer --edge top --align right --widthtype request --distance 15 &amp;
-quodlibet &amp;
-if [ $HOSTNAME == &#39;twork&#39; ]; then
-   icedove &amp;
-fi
-
-# settings
-xset b off
-xmodmap -e &quot;clear Lock&quot;
-xmodmap -e &quot;keycode 66 = Super_L&quot;
-
-# host-specific settings
-if [ $HOSTNAME == &#39;twork&#39; ]; then
-    xrandr --output VGA-0 --output DVI-0 --right-of VGA-0
-else
-    synclient TapButton1=1 TapButton2=3 TapButton3=2 MaxDoubleTapTime=100
-    syndaemon -dti 1
-fi
-
-# clock
-while true; do
-    datetime=$( date +&quot;%F %R&quot; )
-    if acpi -a | grep off-line &gt; /dev/null; then
-        battery=$( python -c &quot;print(&quot;$(acpi)&quot;.split(&#39;,&#39;)[1].strip())&quot; )
-        xsetroot -name &quot;$battery&quot;&quot; | &quot;&quot;$datetime&quot;
-    else
-        xsetroot -name &quot;$datetime&quot;
-    fi
-    sleep 1m
-done &amp;
-
-exec dwm
+<pre data-lang="{.sourceCode .sh}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .sh} "><code class="language-{.sourceCode .sh}" data-lang="{.sourceCode .sh}"><span># apps
+</span><span>xfce4-terminal --hide-menubar --tab --tab --tab &amp;
+</span><span>firefox &amp;
+</span><span>nautilus --no-desktop &amp;
+</span><span>nm-applet &amp;
+</span><span>trayer --edge top --align right --widthtype request --distance 15 &amp;
+</span><span>quodlibet &amp;
+</span><span>if [ $HOSTNAME == &#39;twork&#39; ]; then
+</span><span>   icedove &amp;
+</span><span>fi
+</span><span>
+</span><span># settings
+</span><span>xset b off
+</span><span>xmodmap -e &quot;clear Lock&quot;
+</span><span>xmodmap -e &quot;keycode 66 = Super_L&quot;
+</span><span>
+</span><span># host-specific settings
+</span><span>if [ $HOSTNAME == &#39;twork&#39; ]; then
+</span><span>    xrandr --output VGA-0 --output DVI-0 --right-of VGA-0
+</span><span>else
+</span><span>    synclient TapButton1=1 TapButton2=3 TapButton3=2 MaxDoubleTapTime=100
+</span><span>    syndaemon -dti 1
+</span><span>fi
+</span><span>
+</span><span># clock
+</span><span>while true; do
+</span><span>    datetime=$( date +&quot;%F %R&quot; )
+</span><span>    if acpi -a | grep off-line &gt; /dev/null; then
+</span><span>        battery=$( python -c &quot;print(&quot;$(acpi)&quot;.split(&#39;,&#39;)[1].strip())&quot; )
+</span><span>        xsetroot -name &quot;$battery&quot;&quot; | &quot;&quot;$datetime&quot;
+</span><span>    else
+</span><span>        xsetroot -name &quot;$datetime&quot;
+</span><span>    fi
+</span><span>    sleep 1m
+</span><span>done &amp;
+</span><span>
+</span><span>exec dwm
 </span></code></pre>
 <p>Finally, this is what my dwm config changes look like (<a href="https://github.com/tshepang/custom/blob/master/config.def.h">config.def.h</a>):</p>
-<pre style="background-color:#2b303b;">
-<code>diff --git a/config.def.h b/config.def.h
-index 77ff358..78af5d6 100644
-+++ a/config.def.h
-+++ b/config.def.h
-@@ -14,12 +14,15 @@ static const Bool showbar           = True;     /*
-False means no bar */
- static const Bool topbar            = True;     /* False means bottom
- bar */
-
- /* tagging */
--static const char *tags[] = { &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;,
-&quot;9&quot; };
-+static const char *tags[] = { &quot;web&quot;, &quot;files&quot;, &quot;terminal&quot;, &quot;misc&quot; };
-
- static const Rule rules[] = {
--       /* class      instance    title       tags mask     isfloating
-        monitor */
--       { &quot;Gimp&quot;,     NULL,       NULL,       0,
-        True,        -1 },
--       { &quot;Firefox&quot;,  NULL,       NULL,       1 &lt;&lt; 8,
-        False,       -1 },
-+  /* class             instance  title  tags mask  isfloating
-   monitor */
-+  { &quot;Iceweasel&quot;,       NULL,     NULL,  1 &lt;&lt; 0,    False,       -1 },
-+  { &quot;trayer&quot;,          NULL,     NULL,  1 &lt;&lt; 0,    False,       -1 },
-+  { &quot;Nautilus&quot;,        NULL,     NULL,  1 &lt;&lt; 1,    False,       -1 },
-+  { &quot;Xfce4-terminal&quot;,  NULL,     NULL,  1 &lt;&lt; 2,    False,       -1 },
-+  { &quot;Quodlibet&quot;,       NULL,     NULL,  1 &lt;&lt; 3,    False,       -1 },
- };
-
- /* layout(s) */
-@@ -35,7 +38,7 @@ static const Layout layouts[] = {
- };
-
- /* key definitions */
--#define MODKEY Mod1Mask
-+#define MODKEY Mod4Mask
- #define TAGKEYS(KEY,TAG)
-        { MODKEY,                       KEY,      view,           {.ui
-        = 1 &lt;&lt; TAG} },
-        { MODKEY|ControlMask,           KEY,      toggleview,     {.ui
-        = 1 &lt;&lt; TAG} },
-@@ -47,7 +50,7 @@ static const Layout layouts[] = {
-
- /* commands */
- static const char *dmenucmd[] = { &quot;dmenu_run&quot;, &quot;-fn&quot;, font, &quot;-nb&quot;,
- normbgcolor, &quot;-nf&quot;, normfgcolor, &quot;-sb&quot;, selbgcolor, &quot;-sf&quot;,
- selfgcolor, NULL };
--static const char *termcmd[]  = { &quot;uxterm&quot;, NULL };
-+static const char *termcmd[]  = { &quot;xfce4-terminal&quot;, &quot;--hide-menubar&quot;
-};
-
- static Key keys[] = {
-        /* modifier                     key        function
-        argument */
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>diff --git a/config.def.h b/config.def.h
+</span><span>index 77ff358..78af5d6 100644
+</span><span>+++ a/config.def.h
+</span><span>+++ b/config.def.h
+</span><span>@@ -14,12 +14,15 @@ static const Bool showbar           = True;     /*
+</span><span>False means no bar */
+</span><span> static const Bool topbar            = True;     /* False means bottom
+</span><span> bar */
+</span><span>
+</span><span> /* tagging */
+</span><span>-static const char *tags[] = { &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;,
+</span><span>&quot;9&quot; };
+</span><span>+static const char *tags[] = { &quot;web&quot;, &quot;files&quot;, &quot;terminal&quot;, &quot;misc&quot; };
+</span><span>
+</span><span> static const Rule rules[] = {
+</span><span>-       /* class      instance    title       tags mask     isfloating
+</span><span>        monitor */
+</span><span>-       { &quot;Gimp&quot;,     NULL,       NULL,       0,
+</span><span>        True,        -1 },
+</span><span>-       { &quot;Firefox&quot;,  NULL,       NULL,       1 &lt;&lt; 8,
+</span><span>        False,       -1 },
+</span><span>+  /* class             instance  title  tags mask  isfloating
+</span><span>   monitor */
+</span><span>+  { &quot;Iceweasel&quot;,       NULL,     NULL,  1 &lt;&lt; 0,    False,       -1 },
+</span><span>+  { &quot;trayer&quot;,          NULL,     NULL,  1 &lt;&lt; 0,    False,       -1 },
+</span><span>+  { &quot;Nautilus&quot;,        NULL,     NULL,  1 &lt;&lt; 1,    False,       -1 },
+</span><span>+  { &quot;Xfce4-terminal&quot;,  NULL,     NULL,  1 &lt;&lt; 2,    False,       -1 },
+</span><span>+  { &quot;Quodlibet&quot;,       NULL,     NULL,  1 &lt;&lt; 3,    False,       -1 },
+</span><span> };
+</span><span>
+</span><span> /* layout(s) */
+</span><span>@@ -35,7 +38,7 @@ static const Layout layouts[] = {
+</span><span> };
+</span><span>
+</span><span> /* key definitions */
+</span><span>-#define MODKEY Mod1Mask
+</span><span>+#define MODKEY Mod4Mask
+</span><span> #define TAGKEYS(KEY,TAG)
+</span><span>        { MODKEY,                       KEY,      view,           {.ui
+</span><span>        = 1 &lt;&lt; TAG} },
+</span><span>        { MODKEY|ControlMask,           KEY,      toggleview,     {.ui
+</span><span>        = 1 &lt;&lt; TAG} },
+</span><span>@@ -47,7 +50,7 @@ static const Layout layouts[] = {
+</span><span>
+</span><span> /* commands */
+</span><span> static const char *dmenucmd[] = { &quot;dmenu_run&quot;, &quot;-fn&quot;, font, &quot;-nb&quot;,
+</span><span> normbgcolor, &quot;-nf&quot;, normfgcolor, &quot;-sb&quot;, selbgcolor, &quot;-sf&quot;,
+</span><span> selfgcolor, NULL };
+</span><span>-static const char *termcmd[]  = { &quot;uxterm&quot;, NULL };
+</span><span>+static const char *termcmd[]  = { &quot;xfce4-terminal&quot;, &quot;--hide-menubar&quot;
+</span><span>};
+</span><span>
+</span><span> static Key keys[] = {
+</span><span>        /* modifier                     key        function
+</span><span>        argument */
+</span></code></pre>
 <p>Note that this diff is against the Debian package (version <strong>6.0-6</strong>). I
 could not change the modifier key with the upstream version of dwm.</p>
 <p>You will notice that I'm still using one major GNOME package, Nautilus,
@@ -332,9 +327,9 @@ the file browser. It remains my favorite GUI file manager.</p>
             
                 <div class="post-tags">
                     
-                        <a href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;tags&#x2F;gnome&#x2F;">#GNOME</a>
+                        <a href="http://tshepang.github.io/tags/gnome/">#GNOME</a>
                     
-                        <a href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;tags&#x2F;debian&#x2F;">#Debian</a>
+                        <a href="http://tshepang.github.io/tags/debian/">#Debian</a>
                     
                 </div>
             
@@ -368,11 +363,11 @@ the file browser. It remains my favorite GUI file manager.</p>
         </div>
 
       
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;even.js" ></script>
+          <script type="text/javascript" src="http://tshepang.github.io/even.js" ></script>
           
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;elasticlunr.min.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search_index.en.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search_index.en.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search.js"></script>
           
       
     </body>

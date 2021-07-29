@@ -28,7 +28,7 @@
       
 
       
-          <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;site.css">
+          <link rel="stylesheet" href="http://tshepang.github.io/site.css">
           
       
 
@@ -135,23 +135,22 @@ without a good guide, but eventually ended up with something that
 queries the DB and checks if certain injected data appears. I wish there
 was an easy way of doing queries without having to resort to using the
 json! macro:</p>
-<pre style="background-color:#2b303b;">
-<code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> query = json!({
-    &quot;</span><span style="color:#a3be8c;">sort</span><span style="color:#c0c5ce;">&quot;: [
-        { &quot;</span><span style="color:#a3be8c;">@timestamp</span><span style="color:#c0c5ce;">&quot;: { &quot;</span><span style="color:#a3be8c;">order</span><span style="color:#c0c5ce;">&quot;: &quot;</span><span style="color:#a3be8c;">asc</span><span style="color:#c0c5ce;">&quot;, } }
-    ],
-    &quot;</span><span style="color:#a3be8c;">query</span><span style="color:#c0c5ce;">&quot;: {
-        &quot;</span><span style="color:#a3be8c;">bool</span><span style="color:#c0c5ce;">&quot;: {
-            &quot;</span><span style="color:#a3be8c;">must</span><span style="color:#c0c5ce;">&quot;: [
-                { &quot;</span><span style="color:#a3be8c;">term</span><span style="color:#c0c5ce;">&quot;: { &quot;</span><span style="color:#a3be8c;">marker</span><span style="color:#c0c5ce;">&quot;: &quot;</span><span style="color:#a3be8c;">test0</span><span style="color:#c0c5ce;">&quot; } },
-                { &quot;</span><span style="color:#a3be8c;">range</span><span style="color:#c0c5ce;">&quot;: { &quot;</span><span style="color:#a3be8c;">@timestamp</span><span style="color:#c0c5ce;">&quot;: {
-                    &quot;</span><span style="color:#a3be8c;">gte</span><span style="color:#c0c5ce;">&quot;: &quot;</span><span style="color:#a3be8c;">now-100s</span><span style="color:#c0c5ce;">&quot;,
-                    &quot;</span><span style="color:#a3be8c;">lte</span><span style="color:#c0c5ce;">&quot;: &quot;</span><span style="color:#a3be8c;">now</span><span style="color:#c0c5ce;">&quot;,
-                }}},
-            ]
-        }
-    }
-});
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let</span><span> query = json!({
+</span><span>    &quot;</span><span style="color:#a3be8c;">sort</span><span>&quot;: [
+</span><span>        { &quot;</span><span style="color:#a3be8c;">@timestamp</span><span>&quot;: { &quot;</span><span style="color:#a3be8c;">order</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">asc</span><span>&quot;, } }
+</span><span>    ],
+</span><span>    &quot;</span><span style="color:#a3be8c;">query</span><span>&quot;: {
+</span><span>        &quot;</span><span style="color:#a3be8c;">bool</span><span>&quot;: {
+</span><span>            &quot;</span><span style="color:#a3be8c;">must</span><span>&quot;: [
+</span><span>                { &quot;</span><span style="color:#a3be8c;">term</span><span>&quot;: { &quot;</span><span style="color:#a3be8c;">marker</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">test0</span><span>&quot; } },
+</span><span>                { &quot;</span><span style="color:#a3be8c;">range</span><span>&quot;: { &quot;</span><span style="color:#a3be8c;">@timestamp</span><span>&quot;: {
+</span><span>                    &quot;</span><span style="color:#a3be8c;">gte</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">now-100s</span><span>&quot;,
+</span><span>                    &quot;</span><span style="color:#a3be8c;">lte</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">now</span><span>&quot;,
+</span><span>                }}},
+</span><span>            ]
+</span><span>        }
+</span><span>    }
+</span><span>});
 </span></code></pre>
 <p>The <a href="https://github.com/elastic-rs/elastic/tree/master/src/queries">crate that allows such typed queries</a> happens to be incomplete and
 undocumented, so will ignore it for now.</p>
@@ -166,7 +165,7 @@ undocumented, so will ignore it for now.</p>
             
                 <div class="post-tags">
                     
-                        <a href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;tags&#x2F;rust&#x2F;">#Rust</a>
+                        <a href="http://tshepang.github.io/tags/rust/">#Rust</a>
                     
                 </div>
             
@@ -200,11 +199,11 @@ undocumented, so will ignore it for now.</p>
         </div>
 
       
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;even.js" ></script>
+          <script type="text/javascript" src="http://tshepang.github.io/even.js" ></script>
           
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;elasticlunr.min.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search_index.en.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search_index.en.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search.js"></script>
           
       
     </body>

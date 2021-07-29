@@ -28,7 +28,7 @@
       
 
       
-          <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;site.css">
+          <link rel="stylesheet" href="http://tshepang.github.io/site.css">
           
       
 
@@ -152,56 +152,50 @@ missing it. I also updated the code to run on modern Rust.</p>
 well-written post, <a href="http://blog.rust-lang.org/2015/05/11/traits.html">Abstraction without overhead: traits in Rust</a>.
 One feature they have is they allow adding methods to types,
 including upstream ones, example being stdlib types as follows:</p>
-<pre style="background-color:#2b303b;">
-<code class="language-rust" data-lang="rust"><span style="color:#b48ead;">trait </span><span style="color:#c0c5ce;">Invert {
-</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">invert</span><span style="color:#c0c5ce;">(&amp;</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">) -&gt; </span><span style="color:#b48ead;">f64</span><span style="color:#c0c5ce;">;
-</span><span style="color:#c0c5ce;">}
-
-</span><span style="color:#b48ead;">impl </span><span style="color:#c0c5ce;">Invert </span><span style="color:#b48ead;">for </span><span style="color:#c0c5ce;">i32 {
-</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">invert</span><span style="color:#c0c5ce;">(&amp;</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">) -&gt; </span><span style="color:#b48ead;">f64 </span><span style="color:#c0c5ce;">{
-</span><span style="color:#c0c5ce;">        </span><span style="color:#d08770;">1.0</span><span style="color:#c0c5ce;">/(*</span><span style="color:#bf616a;">self </span><span style="color:#c0c5ce;">as </span><span style="color:#b48ead;">f64</span><span style="color:#c0c5ce;">)
-</span><span style="color:#c0c5ce;">    }
-</span><span style="color:#c0c5ce;">}
-
-</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
-</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> foo = </span><span style="color:#d08770;">10_</span><span style="color:#b48ead;">i32</span><span style="color:#c0c5ce;">; assert_eq!(foo.</span><span style="color:#96b5b4;">invert</span><span style="color:#c0c5ce;">(), </span><span style="color:#d08770;">0.1</span><span style="color:#c0c5ce;">);
-</span><span style="color:#c0c5ce;">}
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">trait </span><span>Invert {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">invert</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; </span><span style="color:#b48ead;">f64</span><span>;
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">impl </span><span>Invert </span><span style="color:#b48ead;">for </span><span>i32 {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">invert</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; </span><span style="color:#b48ead;">f64 </span><span>{
+</span><span>        </span><span style="color:#d08770;">1.0</span><span>/(*</span><span style="color:#bf616a;">self </span><span>as </span><span style="color:#b48ead;">f64</span><span>)
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> foo = </span><span style="color:#d08770;">10_</span><span style="color:#b48ead;">i32</span><span>; assert_eq!(foo.</span><span style="color:#96b5b4;">invert</span><span>(), </span><span style="color:#d08770;">0.1</span><span>);
+</span><span>}
 </span></code></pre>
 <p>Another example is that one can limit the type of arguments accepted
 by a function, though it uses something of an ugly syntax:</p>
-<pre style="background-color:#2b303b;">
-<code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">print_inverse</span><span style="color:#c0c5ce;">&lt;T: Invert&gt;(</span><span style="color:#bf616a;">foo</span><span style="color:#c0c5ce;">: T) {
-</span><span style="color:#c0c5ce;">   println!(&quot;</span><span style="color:#a3be8c;">Inverse: </span><span style="color:#d08770;">{}</span><span style="color:#c0c5ce;">&quot;, foo.</span><span style="color:#96b5b4;">invert</span><span style="color:#c0c5ce;">());
-</span><span style="color:#c0c5ce;">}
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">print_inverse</span><span>&lt;T: Invert&gt;(</span><span style="color:#bf616a;">foo</span><span>: T) {
+</span><span>   println!(&quot;</span><span style="color:#a3be8c;">Inverse: </span><span style="color:#d08770;">{}</span><span>&quot;, foo.</span><span style="color:#96b5b4;">invert</span><span>());
+</span><span>}
 </span></code></pre>
 <p>The <code>&lt;T: Invert&gt;</code> means this function will only accept <code>foo</code> whose
 type implements the <code>Invert</code> trait. You can check by calling it with
 an <code>i32</code> value, in which it will succeed:</p>
-<pre style="background-color:#2b303b;">
-<code class="language-rust" data-lang="rust"><span style="color:#96b5b4;">print_inverse</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">10_</span><span style="color:#b48ead;">i32</span><span style="color:#c0c5ce;">);
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#96b5b4;">print_inverse</span><span>(</span><span style="color:#d08770;">10_</span><span style="color:#b48ead;">i32</span><span>);
 </span></code></pre>
 <p>Output:</p>
-<pre style="background-color:#2b303b;">
-<code>Inverse: 0.1
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>Inverse: 0.1
+</span></code></pre>
 <p>Any other type will fail:</p>
-<pre style="background-color:#2b303b;">
-<code class="language-rust" data-lang="rust"><span style="color:#96b5b4;">print_inverse</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">10_</span><span style="color:#b48ead;">f64</span><span style="color:#c0c5ce;">);
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#96b5b4;">print_inverse</span><span>(</span><span style="color:#d08770;">10_</span><span style="color:#b48ead;">f64</span><span>);
 </span></code></pre>
 <p>Output:</p>
-<pre style="background-color:#2b303b;">
-<code>the trait `Invert` is not implemented for the type `f64` [E0277]
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>the trait `Invert` is not implemented for the type `f64` [E0277]
+</span></code></pre>
 <p>This allows for a feature named generics, where one can use multiple
 types for the same function. For example, that error will disappear
 if you got this:</p>
-<pre style="background-color:#2b303b;">
-<code class="language-rust" data-lang="rust"><span style="color:#b48ead;">impl </span><span style="color:#c0c5ce;">Invert </span><span style="color:#b48ead;">for </span><span style="color:#c0c5ce;">f64 {
-</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">invert</span><span style="color:#c0c5ce;">(&amp;</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">) -&gt; </span><span style="color:#b48ead;">f64 </span><span style="color:#c0c5ce;">{
-</span><span style="color:#c0c5ce;">        </span><span style="color:#d08770;">1.0</span><span style="color:#c0c5ce;">/(*</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">)
-</span><span style="color:#c0c5ce;">    }
-</span><span style="color:#c0c5ce;">}
-</span></code></pre></li>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">impl </span><span>Invert </span><span style="color:#b48ead;">for </span><span>f64 {
+</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">invert</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; </span><span style="color:#b48ead;">f64 </span><span>{
+</span><span>        </span><span style="color:#d08770;">1.0</span><span>/(*</span><span style="color:#bf616a;">self</span><span>)
+</span><span>    }
+</span><span>}
+</span></code></pre>
+</li>
 </ul>
 
     </div>
@@ -214,7 +208,7 @@ if you got this:</p>
             
                 <div class="post-tags">
                     
-                        <a href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;tags&#x2F;rust&#x2F;">#Rust</a>
+                        <a href="http://tshepang.github.io/tags/rust/">#Rust</a>
                     
                 </div>
             
@@ -248,11 +242,11 @@ if you got this:</p>
         </div>
 
       
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;even.js" ></script>
+          <script type="text/javascript" src="http://tshepang.github.io/even.js" ></script>
           
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;elasticlunr.min.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search_index.en.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search_index.en.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search.js"></script>
           
       
     </body>

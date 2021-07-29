@@ -28,7 +28,7 @@
       
 
       
-          <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;site.css">
+          <link rel="stylesheet" href="http://tshepang.github.io/site.css">
           
       
 
@@ -155,17 +155,15 @@ process error case had to be handled in separate places.</p>
 means that we don't care about the success return value. On the
 calling side, we have an option to use a <code>match</code> statement to handle
 the result:</p>
-<pre style="background-color:#2b303b;">
-<code class="language-rust" data-lang="rust"><span style="color:#b48ead;">match </span><span style="color:#96b5b4;">foo</span><span style="color:#c0c5ce;">() {
-</span><span style="color:#c0c5ce;">    Ok(_) =&gt; (), Err(error) =&gt; </span><span style="color:#96b5b4;">do_something_with</span><span style="color:#c0c5ce;">(error)
-</span><span style="color:#c0c5ce;">}
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">match </span><span style="color:#96b5b4;">foo</span><span>() {
+</span><span>    Ok(_) =&gt; (), Err(error) =&gt; </span><span style="color:#96b5b4;">do_something_with</span><span>(error)
+</span><span>}
 </span></code></pre>
 <p>There is a convenient syntax to deal with such case, where you
 don't care about one of values... <code>if let</code>:</p>
-<pre style="background-color:#2b303b;">
-<code class="language-rust" data-lang="rust"><span style="color:#b48ead;">if let </span><span style="color:#c0c5ce;">Err(error) = </span><span style="color:#96b5b4;">foo</span><span style="color:#c0c5ce;">() {
-</span><span style="color:#c0c5ce;">    </span><span style="color:#96b5b4;">do_something_with</span><span style="color:#c0c5ce;">(error)
-</span><span style="color:#c0c5ce;">}
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">if let </span><span>Err(error) = </span><span style="color:#96b5b4;">foo</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">do_something_with</span><span>(error)
+</span><span>}
 </span></code></pre>
 <p>So elegant!</p>
 </li>
@@ -181,7 +179,7 @@ don't care about one of values... <code>if let</code>:</p>
             
                 <div class="post-tags">
                     
-                        <a href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;tags&#x2F;rust&#x2F;">#Rust</a>
+                        <a href="http://tshepang.github.io/tags/rust/">#Rust</a>
                     
                 </div>
             
@@ -215,11 +213,11 @@ don't care about one of values... <code>if let</code>:</p>
         </div>
 
       
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;even.js" ></script>
+          <script type="text/javascript" src="http://tshepang.github.io/even.js" ></script>
           
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;elasticlunr.min.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search_index.en.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search_index.en.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search.js"></script>
           
       
     </body>

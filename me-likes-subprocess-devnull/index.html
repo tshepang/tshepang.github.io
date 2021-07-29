@@ -28,7 +28,7 @@
       
 
       
-          <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;site.css">
+          <link rel="stylesheet" href="http://tshepang.github.io/site.css">
           
       
 
@@ -135,42 +135,39 @@ directory that isn't version-controlled by <a href="http://mercurial.selenic.com
 <ol>
 <li>
 <p>So, we don't want to see this ugliness:</p>
-<pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">&gt;&gt;&gt; from subprocess import call
-</span><span style="color:#c0c5ce;">&gt;&gt;&gt; call(&#39;hg status&#39;.split())
-</span><span style="color:#c0c5ce;">abort: no repository found in &#39;/home/tshepang/projects/pyramid&#39; (.hg not found)!
-</span><span style="color:#c0c5ce;">255
-</span></code></pre></li>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt;&gt; from subprocess import call
+</span><span>&gt;&gt;&gt; call(&#39;hg status&#39;.split())
+</span><span>abort: no repository found in &#39;/home/tshepang/projects/pyramid&#39; (.hg not found)!
+</span><span>255
+</span></code></pre>
+</li>
 <li>
 <p>So, here's the simplest solution:</p>
-<pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">&gt;&gt;&gt; import os
-</span><span style="color:#c0c5ce;">&gt;&gt;&gt; from subprocess import call
-</span><span style="color:#c0c5ce;">&gt;&gt;&gt; call(&#39;hg status&#39;.split(), stderr=open(os.devnull))
-</span><span style="color:#c0c5ce;">255
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt;&gt; import os
+</span><span>&gt;&gt;&gt; from subprocess import call
+</span><span>&gt;&gt;&gt; call(&#39;hg status&#39;.split(), stderr=open(os.devnull))
+</span><span>255
 </span></code></pre>
 <p>Problem: it leaves the file descriptor open... not good.</p>
 </li>
 <li>
 <p>We fix:</p>
-<pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">&gt;&gt;&gt; import os
-</span><span style="color:#c0c5ce;">&gt;&gt;&gt; from subprocess import call
-</span><span style="color:#c0c5ce;">&gt;&gt;&gt; DEVNULL = open(os.devnull)
-</span><span style="color:#c0c5ce;">&gt;&gt;&gt; call(&#39;hg status&#39;.split(), stderr=DEVNULL)
-</span><span style="color:#c0c5ce;">255
-</span><span style="color:#c0c5ce;">&gt;&gt;&gt; DEVNULL.close()
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt;&gt; import os
+</span><span>&gt;&gt;&gt; from subprocess import call
+</span><span>&gt;&gt;&gt; DEVNULL = open(os.devnull)
+</span><span>&gt;&gt;&gt; call(&#39;hg status&#39;.split(), stderr=DEVNULL)
+</span><span>255
+</span><span>&gt;&gt;&gt; DEVNULL.close()
 </span></code></pre>
 <p>Much better, much uglier.</p>
 </li>
 <li>
 <p>Something better:</p>
-<pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">&gt;&gt;&gt; import os
-</span><span style="color:#c0c5ce;">&gt;&gt;&gt; from subprocess import call
-</span><span style="color:#c0c5ce;">&gt;&gt;&gt; with open(os.devnull) as DEVNULL:
-</span><span style="color:#c0c5ce;">...     call(&#39;hg status&#39;.split(), stderr=DEVNULL)
-</span><span style="color:#c0c5ce;">255
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt;&gt; import os
+</span><span>&gt;&gt;&gt; from subprocess import call
+</span><span>&gt;&gt;&gt; with open(os.devnull) as DEVNULL:
+</span><span>...     call(&#39;hg status&#39;.split(), stderr=DEVNULL)
+</span><span>255
 </span></code></pre>
 <p>Looks much nicer, and is more convenient, unless we wanted to do
 something similar multiple times, in which case the previous example
@@ -178,12 +175,12 @@ would be preferable.</p>
 </li>
 <li>
 <p>Best solution:</p>
-<pre style="background-color:#2b303b;">
-<code><span style="color:#c0c5ce;">&gt;&gt;&gt; import os
-</span><span style="color:#c0c5ce;">&gt;&gt;&gt; from subprocess import call, DEVNULL
-</span><span style="color:#c0c5ce;">&gt;&gt;&gt; call(&#39;hg status&#39;.split(), stderr=DEVNULL)
-</span><span style="color:#c0c5ce;">255
-</span></code></pre></li>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt;&gt; import os
+</span><span>&gt;&gt;&gt; from subprocess import call, DEVNULL
+</span><span>&gt;&gt;&gt; call(&#39;hg status&#39;.split(), stderr=DEVNULL)
+</span><span>255
+</span></code></pre>
+</li>
 </ol>
 <p>This <a href="http://hg.python.org/cpython/rev/eaf93e156dff">small and wonderful feature</a> is <a href="http://docs.python.org/3/whatsnew/3.3.html#subprocess">new as of Python 3.3</a>.</p>
 
@@ -197,9 +194,9 @@ would be preferable.</p>
             
                 <div class="post-tags">
                     
-                        <a href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;tags&#x2F;python&#x2F;">#Python</a>
+                        <a href="http://tshepang.github.io/tags/python/">#Python</a>
                     
-                        <a href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;tags&#x2F;vcs&#x2F;">#VCS</a>
+                        <a href="http://tshepang.github.io/tags/vcs/">#VCS</a>
                     
                 </div>
             
@@ -233,11 +230,11 @@ would be preferable.</p>
         </div>
 
       
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;even.js" ></script>
+          <script type="text/javascript" src="http://tshepang.github.io/even.js" ></script>
           
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;elasticlunr.min.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search_index.en.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search_index.en.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search.js"></script>
           
       
     </body>

@@ -28,7 +28,7 @@
       
 
       
-          <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;site.css">
+          <link rel="stylesheet" href="http://tshepang.github.io/site.css">
           
       
 
@@ -129,14 +129,13 @@
 
     <div class="post-content">
       <p>Have a look at this code:</p>
-<pre style="background-color:#2b303b;">
-<code class="language-python" data-lang="python"><span style="color:#b48ead;">from </span><span style="color:#c0c5ce;">matplotlib </span><span style="color:#b48ead;">import </span><span style="color:#c0c5ce;">pyplot
-</span><span style="color:#b48ead;">import </span><span style="color:#c0c5ce;">random
-
-x_axis = </span><span style="color:#96b5b4;">range</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">)
-pyplot.</span><span style="color:#bf616a;">plot</span><span style="color:#c0c5ce;">(x_axis, random.</span><span style="color:#bf616a;">sample</span><span style="color:#c0c5ce;">(</span><span style="color:#96b5b4;">range</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">), </span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">))
-pyplot.</span><span style="color:#bf616a;">plot</span><span style="color:#c0c5ce;">(x_axis, random.</span><span style="color:#bf616a;">sample</span><span style="color:#c0c5ce;">(</span><span style="color:#96b5b4;">range</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">), </span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">))
-pyplot.</span><span style="color:#bf616a;">show</span><span style="color:#c0c5ce;">()
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">from </span><span>matplotlib </span><span style="color:#b48ead;">import </span><span>pyplot
+</span><span style="color:#b48ead;">import </span><span>random
+</span><span>
+</span><span>x_axis = </span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>)
+</span><span>pyplot.</span><span style="color:#bf616a;">plot</span><span>(x_axis, random.</span><span style="color:#bf616a;">sample</span><span>(</span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>), </span><span style="color:#d08770;">10</span><span>))
+</span><span>pyplot.</span><span style="color:#bf616a;">plot</span><span>(x_axis, random.</span><span style="color:#bf616a;">sample</span><span>(</span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>), </span><span style="color:#d08770;">10</span><span>))
+</span><span>pyplot.</span><span style="color:#bf616a;">show</span><span>()
 </span></code></pre>
 <p>With <a href="http://matplotlib.org">matplolib</a> installed, running the code above should resulted in
 the following image:</p>
@@ -149,20 +148,19 @@ especially in my case because I needed a way to specify an arbitrary
 number of graphs. Without this magical feature, the code would be a lot
 uglier.</p>
 <p>Here goes:</p>
-<pre style="background-color:#2b303b;">
-<code class="language-python" data-lang="python"><span style="color:#c0c5ce;">
-</span><span style="color:#b48ead;">from </span><span style="color:#c0c5ce;">matplotlib </span><span style="color:#b48ead;">import </span><span style="color:#c0c5ce;">pyplot
-</span><span style="color:#b48ead;">import </span><span style="color:#c0c5ce;">argparse
-</span><span style="color:#b48ead;">import </span><span style="color:#c0c5ce;">random
-
-parser = argparse.</span><span style="color:#bf616a;">ArgumentParser</span><span style="color:#c0c5ce;">()
-parser.</span><span style="color:#bf616a;">add_argument</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">number_of_graphs</span><span style="color:#c0c5ce;">&#39;, </span><span style="color:#bf616a;">type</span><span style="color:#c0c5ce;">=int)
-args = parser.</span><span style="color:#bf616a;">parse_args</span><span style="color:#c0c5ce;">()
-
-x_axis = </span><span style="color:#96b5b4;">range</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">) </span><span style="color:#b48ead;">for </span><span style="color:#c0c5ce;">n </span><span style="color:#b48ead;">in </span><span style="color:#96b5b4;">range</span><span style="color:#c0c5ce;">(args.number_of_graphs):
-pyplot.</span><span style="color:#bf616a;">plot</span><span style="color:#c0c5ce;">(x_axis, random.</span><span style="color:#bf616a;">sample</span><span style="color:#c0c5ce;">(</span><span style="color:#96b5b4;">range</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">), </span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">), </span><span style="color:#bf616a;">label</span><span style="color:#c0c5ce;">=</span><span style="color:#bf616a;">str</span><span style="color:#c0c5ce;">(n))
-pyplot.</span><span style="color:#bf616a;">legend</span><span style="color:#c0c5ce;">()
-pyplot.</span><span style="color:#bf616a;">show</span><span style="color:#c0c5ce;">()
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>
+</span><span style="color:#b48ead;">from </span><span>matplotlib </span><span style="color:#b48ead;">import </span><span>pyplot
+</span><span style="color:#b48ead;">import </span><span>argparse
+</span><span style="color:#b48ead;">import </span><span>random
+</span><span>
+</span><span>parser = argparse.</span><span style="color:#bf616a;">ArgumentParser</span><span>()
+</span><span>parser.</span><span style="color:#bf616a;">add_argument</span><span>(&#39;</span><span style="color:#a3be8c;">number_of_graphs</span><span>&#39;, </span><span style="color:#bf616a;">type</span><span>=int)
+</span><span>args = parser.</span><span style="color:#bf616a;">parse_args</span><span>()
+</span><span>
+</span><span>x_axis = </span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>) </span><span style="color:#b48ead;">for </span><span>n </span><span style="color:#b48ead;">in </span><span style="color:#96b5b4;">range</span><span>(args.number_of_graphs):
+</span><span>pyplot.</span><span style="color:#bf616a;">plot</span><span>(x_axis, random.</span><span style="color:#bf616a;">sample</span><span>(</span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>), </span><span style="color:#d08770;">10</span><span>), </span><span style="color:#bf616a;">label</span><span>=</span><span style="color:#bf616a;">str</span><span>(n))
+</span><span>pyplot.</span><span style="color:#bf616a;">legend</span><span>()
+</span><span>pyplot.</span><span style="color:#bf616a;">show</span><span>()
 </span></code></pre>
 <p>If I provide 3 as command line argument, I get this:</p>
 <p><img src="/images/matplotlib-2.png" alt="image resulting from running the code above" /></p>
@@ -178,7 +176,7 @@ pyplot.</span><span style="color:#bf616a;">show</span><span style="color:#c0c5ce
             
                 <div class="post-tags">
                     
-                        <a href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;tags&#x2F;python&#x2F;">#Python</a>
+                        <a href="http://tshepang.github.io/tags/python/">#Python</a>
                     
                 </div>
             
@@ -212,11 +210,11 @@ pyplot.</span><span style="color:#bf616a;">show</span><span style="color:#c0c5ce
         </div>
 
       
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;even.js" ></script>
+          <script type="text/javascript" src="http://tshepang.github.io/even.js" ></script>
           
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;elasticlunr.min.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search_index.en.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search_index.en.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search.js"></script>
           
       
     </body>

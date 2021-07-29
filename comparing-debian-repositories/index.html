@@ -28,7 +28,7 @@
       
 
       
-          <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;site.css">
+          <link rel="stylesheet" href="http://tshepang.github.io/site.css">
           
       
 
@@ -146,38 +146,36 @@
     <div class="post-content">
       <p>If you got two Debian repositories, it's quite easy to check the
 differences in package versions between them:</p>
-<pre style="background-color:#2b303b;">
-<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">import os
-import gzip
-import apt_pkg
-
-repo1 = &quot;~/.repo_custom/dists/cache/main/binary-i386/Packages.gz&quot;
-repo1 = os.path.expanduser(repo1)
-repo1 = apt_pkg.TagFile(gzip.open(repo1, &quot;rb&quot;))
-repo1 = dict([(pkg[&quot;Package&quot;], pkg[&quot;Version&quot;]) for pkg in repo1])
-
-repo2 = &quot;~/.repo_bin/dists/squeeze/main/binary-i386/Packages.gz&quot;
-repo2 = os.path.expanduser(repo2)
-repo2 = apt_pkg.TagFile(gzip.open(repo2, &quot;rb&quot;))
-repo2 = dict([(pkg[&quot;Package&quot;], pkg[&quot;Version&quot;]) for pkg in repo2])
-
-apt_pkg.init_system()
-for pkg in repo1:
-    if pkg in repo2:
-        vc = apt_pkg.version_compare(repo1[pkg], repo2[pkg])
-        if vc &gt; 0:
-            print(&quot;{0}t{1}t({2})&quot;.format(repo1[pkg], repo2[pkg], pkg))
+<pre data-lang="{.sourceCode .python}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .python} "><code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span>import os
+</span><span>import gzip
+</span><span>import apt_pkg
+</span><span>
+</span><span>repo1 = &quot;~/.repo_custom/dists/cache/main/binary-i386/Packages.gz&quot;
+</span><span>repo1 = os.path.expanduser(repo1)
+</span><span>repo1 = apt_pkg.TagFile(gzip.open(repo1, &quot;rb&quot;))
+</span><span>repo1 = dict([(pkg[&quot;Package&quot;], pkg[&quot;Version&quot;]) for pkg in repo1])
+</span><span>
+</span><span>repo2 = &quot;~/.repo_bin/dists/squeeze/main/binary-i386/Packages.gz&quot;
+</span><span>repo2 = os.path.expanduser(repo2)
+</span><span>repo2 = apt_pkg.TagFile(gzip.open(repo2, &quot;rb&quot;))
+</span><span>repo2 = dict([(pkg[&quot;Package&quot;], pkg[&quot;Version&quot;]) for pkg in repo2])
+</span><span>
+</span><span>apt_pkg.init_system()
+</span><span>for pkg in repo1:
+</span><span>    if pkg in repo2:
+</span><span>        vc = apt_pkg.version_compare(repo1[pkg], repo2[pkg])
+</span><span>        if vc &gt; 0:
+</span><span>            print(&quot;{0}t{1}t({2})&quot;.format(repo1[pkg], repo2[pkg], pkg))
 </span></code></pre>
 <p>The line <code>import apt_pkg</code> implies that <strong>python3-apt</strong> is installed.</p>
 <p>Here's a snippet of what the output will look like:</p>
-<pre style="background-color:#2b303b;">
-<code>2.32.1-2    2.28.1-6    (gconf-defaults-service)
-0.23.0-1    0.21.1-1    (pylint)
-2.91.5-2    2.30.2-2    (libgnomekbd-common)
-0.21.2-1    0.16.4-1    (libpixman-1-dev)
-2.91.7-1    2.30.1-2    (nautilus)
-0.9.22-1    0.9.21-3    (pulseaudio-utils)
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>2.32.1-2    2.28.1-6    (gconf-defaults-service)
+</span><span>0.23.0-1    0.21.1-1    (pylint)
+</span><span>2.91.5-2    2.30.2-2    (libgnomekbd-common)
+</span><span>0.21.2-1    0.16.4-1    (libpixman-1-dev)
+</span><span>2.91.7-1    2.30.1-2    (nautilus)
+</span><span>0.9.22-1    0.9.21-3    (pulseaudio-utils)
+</span></code></pre>
 <p>Here, we get a display of package versions where the repo1 (custom repo
 in this case) is greater than repo2 version. To do it the other way
 around, use the <code>&lt;</code> character in the comparison line, <code>if vc &gt; 0</code>.</p>
@@ -197,9 +195,9 @@ around, use the <code>&lt;</code> character in the comparison line, <code>if vc 
             
                 <div class="post-tags">
                     
-                        <a href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;tags&#x2F;debian&#x2F;">#Debian</a>
+                        <a href="http://tshepang.github.io/tags/debian/">#Debian</a>
                     
-                        <a href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;tags&#x2F;python&#x2F;">#Python</a>
+                        <a href="http://tshepang.github.io/tags/python/">#Python</a>
                     
                 </div>
             
@@ -233,11 +231,11 @@ around, use the <code>&lt;</code> character in the comparison line, <code>if vc 
         </div>
 
       
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;even.js" ></script>
+          <script type="text/javascript" src="http://tshepang.github.io/even.js" ></script>
           
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;elasticlunr.min.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search_index.en.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search_index.en.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search.js"></script>
           
       
     </body>

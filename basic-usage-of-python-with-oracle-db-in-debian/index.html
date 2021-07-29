@@ -28,7 +28,7 @@
       
 
       
-          <link rel="stylesheet" href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;site.css">
+          <link rel="stylesheet" href="http://tshepang.github.io/site.css">
           
       
 
@@ -132,39 +132,36 @@
 it's real easy. We use <a href="http://cx-oracle.sourceforge.net/html/index.html">cx_Oracle</a>, the most popular Python library to
 read Oracle DBs.</p>
 <p>Let's start by simply reading the DB:</p>
-<pre style="background-color:#2b303b;">
-<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">import cx_Oracle
-conn = cx_Oracle.connect(&quot;usr&quot;, &quot;pwd&quot;, &quot;tns&quot;)
-cursor = conn.cursor()
-cursor.execute(&quot;SELECT * TABLE_NAME&quot;)
-for item in cursor.fetchall()[0]:
-    print(item)
-conn.close()
+<pre data-lang="{.sourceCode .python}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .python} "><code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span>import cx_Oracle
+</span><span>conn = cx_Oracle.connect(&quot;usr&quot;, &quot;pwd&quot;, &quot;tns&quot;)
+</span><span>cursor = conn.cursor()
+</span><span>cursor.execute(&quot;SELECT * TABLE_NAME&quot;)
+</span><span>for item in cursor.fetchall()[0]:
+</span><span>    print(item)
+</span><span>conn.close()
 </span></code></pre>
 <p>The <a href="http://cx-oracle.sourceforge.net/html/index.html">cx_Oracle</a> explain exactly what each of these means.</p>
 <p>If we wanted instead to modify stuff in there, we only add one extra
 line, which is <code>cursor.commit</code>, like this:</p>
-<pre style="background-color:#2b303b;">
-<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">import cx_Oracle
-conn = cx_Oracle.connect(&quot;usr&quot;, &quot;pwd&quot;, &quot;tns&quot;)
-cursor = conn.cursor()
-cursor.execute(&quot;SELECT * TABLE_NAME&quot;)
-cursor.commit()
-conn.close()
+<pre data-lang="{.sourceCode .python}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .python} "><code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span>import cx_Oracle
+</span><span>conn = cx_Oracle.connect(&quot;usr&quot;, &quot;pwd&quot;, &quot;tns&quot;)
+</span><span>cursor = conn.cursor()
+</span><span>cursor.execute(&quot;SELECT * TABLE_NAME&quot;)
+</span><span>cursor.commit()
+</span><span>conn.close()
 </span></code></pre>
 <p>For real-world code, you are of course going to add exception handling
 for all this, something like this:</p>
-<pre style="background-color:#2b303b;">
-<code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span style="color:#c0c5ce;">import cx_Oracle
-try:
-    conn = cx_Oracle.connect(&quot;usr&quot;, &quot;pwd&quot;, &quot;tns&quot;)
-    cursor = conn.cursor()
-    cursor.execute(&quot;SELECT * TABLE_NAME&quot;)
-    for item in cursor.fetchall()[0]:
-        print(item)
-    conn.close()
-except Exception as e:
-    print(e)
+<pre data-lang="{.sourceCode .python}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .python} "><code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span>import cx_Oracle
+</span><span>try:
+</span><span>    conn = cx_Oracle.connect(&quot;usr&quot;, &quot;pwd&quot;, &quot;tns&quot;)
+</span><span>    cursor = conn.cursor()
+</span><span>    cursor.execute(&quot;SELECT * TABLE_NAME&quot;)
+</span><span>    for item in cursor.fetchall()[0]:
+</span><span>        print(item)
+</span><span>    conn.close()
+</span><span>except Exception as e:
+</span><span>    print(e)
 </span></code></pre>
 <p>That exception handling is rather oversimplified though, but is good
 enough for illustrative purposes. Also, note that there is no timeout
@@ -181,7 +178,7 @@ there waiting to connect.</p>
             
                 <div class="post-tags">
                     
-                        <a href="http:&#x2F;&#x2F;tshepang.github.io&#x2F;tags&#x2F;python&#x2F;">#Python</a>
+                        <a href="http://tshepang.github.io/tags/python/">#Python</a>
                     
                 </div>
             
@@ -215,11 +212,11 @@ there waiting to connect.</p>
         </div>
 
       
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;even.js" ></script>
+          <script type="text/javascript" src="http://tshepang.github.io/even.js" ></script>
           
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;elasticlunr.min.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search_index.en.js"></script>
-          <script type="text/javascript" src="http:&#x2F;&#x2F;tshepang.github.io&#x2F;search.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/elasticlunr.min.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search_index.en.js"></script>
+          <script type="text/javascript" src="http://tshepang.github.io/search.js"></script>
           
       
     </body>
