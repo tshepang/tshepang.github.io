@@ -147,17 +147,17 @@
       <p>There are at least 2 ways to run a simple command like <code>echo test</code> in
 Python: via the shell, or directly (via the kernel).</p>
 <p>This is via the shell:</p>
-<pre data-lang="{.sourceCode .python}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .python} "><code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span>import subprocess
-</span><span>subprocess.Popen(&quot;echo test&quot;, shell=True)
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>subprocess
+</span><span>subprocess.</span><span style="color:#bf616a;">Popen</span><span>(&quot;</span><span style="color:#a3be8c;">echo test</span><span>&quot;, </span><span style="color:#bf616a;">shell</span><span>=</span><span style="color:#d08770;">True</span><span>)
 </span></code></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>test
 </span></code></pre>
 <p>This is via the kernel:</p>
-<pre data-lang="{.sourceCode .python}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .python} "><code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span>import subprocess
-</span><span>p = subprocess.Popen([&quot;echo&quot;, &quot;test&quot;], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-</span><span>output = p.communicate()
-</span><span>print(output)
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>subprocess
+</span><span>p = subprocess.</span><span style="color:#bf616a;">Popen</span><span>([&quot;</span><span style="color:#a3be8c;">echo</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">test</span><span>&quot;], </span><span style="color:#bf616a;">stdout</span><span>=subprocess.</span><span style="color:#bf616a;">PIPE</span><span>, </span><span style="color:#bf616a;">stderr</span><span>=subprocess.</span><span style="color:#bf616a;">PIPE</span><span>)
+</span><span>output = p.</span><span style="color:#bf616a;">communicate</span><span>()
+</span><span style="color:#96b5b4;">print</span><span>(output)
 </span></code></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>(b&#39;testn&#39;, b&#39;&#39;)
@@ -167,10 +167,10 @@ Python: via the shell, or directly (via the kernel).</p>
 not stated here.</p>
 <p>To get the equivalent of what we get from the first example, we have to
 do a bit more work:</p>
-<pre data-lang="{.sourceCode .python}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .python} "><code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span>import subprocess
-</span><span>p = subprocess.Popen([&quot;echo&quot;, &quot;test&quot;], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-</span><span>output = p.communicate()
-</span><span>print(output[0].decode(), end=&quot;&quot;)
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>subprocess
+</span><span>p = subprocess.</span><span style="color:#bf616a;">Popen</span><span>([&quot;</span><span style="color:#a3be8c;">echo</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">test</span><span>&quot;], </span><span style="color:#bf616a;">stdout</span><span>=subprocess.</span><span style="color:#bf616a;">PIPE</span><span>, </span><span style="color:#bf616a;">stderr</span><span>=subprocess.</span><span style="color:#bf616a;">PIPE</span><span>)
+</span><span>output = p.</span><span style="color:#bf616a;">communicate</span><span>()
+</span><span style="color:#96b5b4;">print</span><span>(output[</span><span style="color:#d08770;">0</span><span>].</span><span style="color:#bf616a;">decode</span><span>(), </span><span style="color:#bf616a;">end</span><span>=&quot;&quot;)
 </span></code></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>test
@@ -184,7 +184,7 @@ benefit is that we now have finer-grained control (e.g. we get to
 control when to display the output). Another benefit is that it is more
 secure to do it this way (I don't know the details, so see <a href="http://en.wikipedia.org/wiki/Shell_injection#Shell_injection">shell
 injection</a> for the argument).</p>
-<h1 id="further-reading">further reading</h1>
+<h3 id="further-reading">further reading</h3>
 <ul>
 <li>There is a whole wealth of info on this from <a href="http://jimmyg.org/blog/2009/working-with-python-subprocess.html">a gentle tutorial</a>
 where I learned this stuff. It also explains what pipes are

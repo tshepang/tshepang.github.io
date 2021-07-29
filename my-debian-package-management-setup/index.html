@@ -172,26 +172,26 @@ debmirror, and I think it can do what debmirror does (but I don't yet
 care to learn how).</p>
 <p>Moving on, here's the relevant entries from my /etc/apt/sources.list
 file:</p>
-<pre data-lang="{.sourceCode .sh}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .sh} "><code class="language-{.sourceCode .sh}" data-lang="{.sourceCode .sh}"><span># local repos (debmirror)
-</span><span>deb file:/home/wena/.repo_bin sid main
-</span><span>deb-src file:/home/wena/.repo_src sid main
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;"># local repos (debmirror)
+</span><span style="color:#bf616a;">deb</span><span> file:/home/wena/.repo_bin sid main
+</span><span style="color:#bf616a;">deb-src</span><span> file:/home/wena/.repo_src sid main
 </span><span>
-</span><span># local repo (reprepro)
-</span><span>deb file:/home/wena/.repo_local cache main
+</span><span style="color:#65737e;"># local repo (reprepro)
+</span><span style="color:#bf616a;">deb</span><span> file:/home/wena/.repo_local cache main
 </span><span>
-</span><span># remote repo
-</span><span>deb ftp://ftp.sun.ac.za/ftp/debian/ sid main non-free contrib
+</span><span style="color:#65737e;"># remote repo
+</span><span style="color:#bf616a;">deb</span><span> ftp://ftp.sun.ac.za/ftp/debian/ sid main non-free contrib
 </span></code></pre>
 <p>So, what I do on a semi-regular basis is run:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ wajig update &amp;&amp; wajig upgrade
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>wajig update &amp;&amp; wajig upgrade
 </span></code></pre>
 <p>The newly-updated packages are stored in a cache so that a reinstall
 doesn't have to fetch from network again. After this I run:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ reprepro -vv --basedir ~/.repo_local includedeb cache /var/cache/apt/archives/*deb
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>reprepro -vv --basedir ~/.repo_local includedeb cache /var/cache/apt/archives/*deb
 </span></code></pre>
 <p>This updates the local reprepro repo and after which I can then remove
 the cached packages:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ wajig clean
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>wajig clean
 </span></code></pre>
 <p>I do that because they are now available in my reprepro-managed repo.
 That now means that I got a massive mirror managed by debmirror and a

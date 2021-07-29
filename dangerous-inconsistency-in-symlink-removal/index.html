@@ -129,18 +129,18 @@
 
     <div class="post-content">
       <p>Here's how to make a symlink and to delete it:</p>
-<pre data-lang="{.sourceCode .sh}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .sh} "><code class="language-{.sourceCode .sh}" data-lang="{.sourceCode .sh}"><span>mkdir dir
-</span><span>ln -s dir dirlink
-</span><span>rm -r dirlink
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">mkdir</span><span> dir
+</span><span style="color:#bf616a;">ln -s</span><span> dir dirlink
+</span><span style="color:#bf616a;">rm -r</span><span> dirlink
 </span></code></pre>
 <p>Here's another way to delete it:</p>
-<pre data-lang="{.sourceCode .sh}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .sh} "><code class="language-{.sourceCode .sh}" data-lang="{.sourceCode .sh}"><span>rm -r dirlink/
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">rm -r</span><span> dirlink/
 </span></code></pre>
 <p>Although it will do the job, it will actually complain with:</p>
-<pre data-lang="{.sourceCode .sh}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .sh} "><code class="language-{.sourceCode .sh}" data-lang="{.sourceCode .sh}"><span>rm: cannot remove `dirlink&#39;: Not a directory
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">rm:</span><span> cannot remove `</span><span style="color:#bf616a;">dirlink</span><span>&#39;</span><span style="color:#a3be8c;">: Not a directory
 </span></code></pre>
 <p>Note that we could have achieved the deletion with just:</p>
-<pre data-lang="{.sourceCode .sh}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .sh} "><code class="language-{.sourceCode .sh}" data-lang="{.sourceCode .sh}"><span>rm dirlink
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">rm</span><span> dirlink
 </span></code></pre>
 <p>This is because the symlink is just a single file. So there's no need
 to treat it like a directory when deleting.</p>

@@ -217,43 +217,43 @@ become selectable on LightDM UI:</p>
 </span></code></pre>
 <p>On selecting the entry labeled <strong>Custom</strong> that appears on LightDM, and
 logging in, the following will get executed (<a href="https://github.com/tshepang/custom/blob/master/xsession">~/.xsession</a>):</p>
-<pre data-lang="{.sourceCode .sh}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .sh} "><code class="language-{.sourceCode .sh}" data-lang="{.sourceCode .sh}"><span># apps
-</span><span>xfce4-terminal --hide-menubar --tab --tab --tab &amp;
-</span><span>firefox &amp;
-</span><span>nautilus --no-desktop &amp;
-</span><span>nm-applet &amp;
-</span><span>trayer --edge top --align right --widthtype request --distance 15 &amp;
-</span><span>quodlibet &amp;
-</span><span>if [ $HOSTNAME == &#39;twork&#39; ]; then
-</span><span>   icedove &amp;
-</span><span>fi
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;"># apps
+</span><span style="color:#bf616a;">xfce4-terminal --hide-menubar --tab --tab --tab </span><span>&amp;
+</span><span style="color:#bf616a;">firefox </span><span>&amp;
+</span><span style="color:#bf616a;">nautilus --no-desktop </span><span>&amp;
+</span><span style="color:#bf616a;">nm-applet </span><span>&amp;
+</span><span style="color:#bf616a;">trayer --edge</span><span> top</span><span style="color:#bf616a;"> --align</span><span> right</span><span style="color:#bf616a;"> --widthtype</span><span> request</span><span style="color:#bf616a;"> --distance</span><span> 15 &amp;
+</span><span style="color:#bf616a;">quodlibet </span><span>&amp;
+</span><span style="color:#b48ead;">if </span><span style="color:#96b5b4;">[ </span><span>$</span><span style="color:#bf616a;">HOSTNAME </span><span>== &#39;</span><span style="color:#a3be8c;">twork</span><span>&#39; </span><span style="color:#96b5b4;">]</span><span>; </span><span style="color:#b48ead;">then
+</span><span>   </span><span style="color:#bf616a;">icedove </span><span>&amp;
+</span><span style="color:#b48ead;">fi
 </span><span>
-</span><span># settings
-</span><span>xset b off
-</span><span>xmodmap -e &quot;clear Lock&quot;
-</span><span>xmodmap -e &quot;keycode 66 = Super_L&quot;
+</span><span style="color:#65737e;"># settings
+</span><span style="color:#bf616a;">xset</span><span> b off
+</span><span style="color:#bf616a;">xmodmap -e </span><span>&quot;</span><span style="color:#a3be8c;">clear Lock</span><span>&quot;
+</span><span style="color:#bf616a;">xmodmap -e </span><span>&quot;</span><span style="color:#a3be8c;">keycode 66 = Super_L</span><span>&quot;
 </span><span>
-</span><span># host-specific settings
-</span><span>if [ $HOSTNAME == &#39;twork&#39; ]; then
-</span><span>    xrandr --output VGA-0 --output DVI-0 --right-of VGA-0
-</span><span>else
-</span><span>    synclient TapButton1=1 TapButton2=3 TapButton3=2 MaxDoubleTapTime=100
-</span><span>    syndaemon -dti 1
-</span><span>fi
+</span><span style="color:#65737e;"># host-specific settings
+</span><span style="color:#b48ead;">if </span><span style="color:#96b5b4;">[ </span><span>$</span><span style="color:#bf616a;">HOSTNAME </span><span>== &#39;</span><span style="color:#a3be8c;">twork</span><span>&#39; </span><span style="color:#96b5b4;">]</span><span>; </span><span style="color:#b48ead;">then
+</span><span>    </span><span style="color:#bf616a;">xrandr --output</span><span> VGA-0</span><span style="color:#bf616a;"> --output</span><span> DVI-0</span><span style="color:#bf616a;"> --right-of</span><span> VGA-0
+</span><span style="color:#b48ead;">else
+</span><span>    </span><span style="color:#bf616a;">synclient</span><span> TapButton1=1 TapButton2=3 TapButton3=2 MaxDoubleTapTime=100
+</span><span>    </span><span style="color:#bf616a;">syndaemon -dti</span><span> 1
+</span><span style="color:#b48ead;">fi
 </span><span>
-</span><span># clock
-</span><span>while true; do
-</span><span>    datetime=$( date +&quot;%F %R&quot; )
-</span><span>    if acpi -a | grep off-line &gt; /dev/null; then
-</span><span>        battery=$( python -c &quot;print(&quot;$(acpi)&quot;.split(&#39;,&#39;)[1].strip())&quot; )
-</span><span>        xsetroot -name &quot;$battery&quot;&quot; | &quot;&quot;$datetime&quot;
-</span><span>    else
-</span><span>        xsetroot -name &quot;$datetime&quot;
-</span><span>    fi
-</span><span>    sleep 1m
-</span><span>done &amp;
+</span><span style="color:#65737e;"># clock
+</span><span style="color:#b48ead;">while </span><span style="color:#bf616a;">true</span><span>; </span><span style="color:#b48ead;">do
+</span><span>    </span><span style="color:#bf616a;">datetime</span><span>=$</span><span style="color:#a3be8c;">( </span><span style="color:#bf616a;">date</span><span style="color:#a3be8c;"> +</span><span>&quot;</span><span style="color:#a3be8c;">%F %R</span><span>&quot; </span><span style="color:#a3be8c;">)
+</span><span>    </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">acpi -a </span><span>| </span><span style="color:#bf616a;">grep</span><span> off-line &gt; /dev/null; </span><span style="color:#b48ead;">then
+</span><span>        </span><span style="color:#bf616a;">battery</span><span>=$</span><span style="color:#a3be8c;">( </span><span style="color:#bf616a;">python -c </span><span>&quot;</span><span style="color:#a3be8c;">print(</span><span>&quot;$</span><span style="color:#a3be8c;">(</span><span style="color:#bf616a;">acpi</span><span style="color:#a3be8c;">)</span><span>&quot;</span><span style="color:#a3be8c;">.split(&#39;,&#39;)[1].strip())</span><span>&quot; </span><span style="color:#a3be8c;">)
+</span><span>        </span><span style="color:#bf616a;">xsetroot -name </span><span>&quot;$</span><span style="color:#bf616a;">battery</span><span>&quot;&quot;</span><span style="color:#a3be8c;"> | </span><span>&quot;&quot;$</span><span style="color:#bf616a;">datetime</span><span>&quot;
+</span><span>    </span><span style="color:#b48ead;">else
+</span><span>        </span><span style="color:#bf616a;">xsetroot -name </span><span>&quot;$</span><span style="color:#bf616a;">datetime</span><span>&quot;
+</span><span>    </span><span style="color:#b48ead;">fi
+</span><span>    </span><span style="color:#bf616a;">sleep</span><span> 1m
+</span><span style="color:#b48ead;">done </span><span>&amp;
 </span><span>
-</span><span>exec dwm
+</span><span style="color:#96b5b4;">exec</span><span> dwm
 </span></code></pre>
 <p>Finally, this is what my dwm config changes look like (<a href="https://github.com/tshepang/custom/blob/master/config.def.h">config.def.h</a>):</p>
 <pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>diff --git a/config.def.h b/config.def.h

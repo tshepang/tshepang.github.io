@@ -136,24 +136,24 @@ split a command line string, to feed into <a href="http://docs.python.org/librar
 within <code>python</code>. A normal <code>split</code> won't work, because it uses white
 space as a delimiter (by default). To test, I will create a file named
 &quot;<strong>file with spaces</strong>&quot; and add text (<code>content of 'file with spaces'</code>).</p>
-<pre data-lang="{.sourceCode .sh}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .sh} "><code class="language-{.sourceCode .sh}" data-lang="{.sourceCode .sh}"><span>$ echo &#39;content of file with spaces&#39; &gt; &#39;file with spaces&#39;
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">$</span><span> echo &#39;</span><span style="color:#a3be8c;">content of file with spaces</span><span>&#39; &gt; &#39;</span><span style="color:#a3be8c;">file with spaces</span><span>&#39;
 </span></code></pre>
 <p>And here's the code, using the normal split method:</p>
-<pre data-lang="{.sourceCode .python}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .python} "><code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span>import subprocess
-</span><span>cmd = &quot;/bin/cat &#39;file with spaces&#39;&quot;
-</span><span>formatted_cmd = cmd.split()
-</span><span>subprocess.Popen(formatted_cmd)
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>subprocess
+</span><span>cmd = &quot;</span><span style="color:#a3be8c;">/bin/cat &#39;file with spaces&#39;</span><span>&quot;
+</span><span>formatted_cmd = cmd.</span><span style="color:#bf616a;">split</span><span>()
+</span><span>subprocess.</span><span style="color:#bf616a;">Popen</span><span>(formatted_cmd)
 </span></code></pre>
 <p>Output:</p>
-<pre data-lang="{.sourceCode .sh}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .sh} "><code class="language-{.sourceCode .sh}" data-lang="{.sourceCode .sh}"><span>/bin/cat: &#39;file: No such file or directory
-</span><span>/bin/cat: with: No such file or directory
-</span><span>/bin/cat: spaces&#39;: No such file or directory
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">/bin/cat: </span><span>&#39;</span><span style="color:#a3be8c;">file: No such file or directory
+</span><span style="color:#a3be8c;">/bin/cat: with: No such file or directory
+</span><span style="color:#a3be8c;">/bin/cat: spaces</span><span>&#39;: No such file or directory
 </span></code></pre>
 <p>That's when <code>shlex</code> module gets to be useful.</p>
-<pre data-lang="{.sourceCode .python}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .python} "><code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span>import shlex, subprocess
-</span><span>cmd = &quot;/bin/cat &#39;file with spaces&#39;&quot;
-</span><span>formatted_cmd = shlex.split(cmd)
-</span><span>subprocess.Popen(formatted_cmd)
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>shlex, subprocess
+</span><span>cmd = &quot;</span><span style="color:#a3be8c;">/bin/cat &#39;file with spaces&#39;</span><span>&quot;
+</span><span>formatted_cmd = shlex.</span><span style="color:#bf616a;">split</span><span>(cmd)
+</span><span>subprocess.</span><span style="color:#bf616a;">Popen</span><span>(formatted_cmd)
 </span></code></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>content of &#39;file with spaces&#39;

@@ -130,23 +130,23 @@
     <div class="post-content">
       <p>If I have a string with spaces, and wanted to split it into a
 list/array, I would use this:</p>
-<pre data-lang="{.sourceCode .python}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .python} "><code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span>split_string = &quot;a b c&quot;.split()
-</span><span>print(split_string)
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>split_string = &quot;</span><span style="color:#a3be8c;">a b c</span><span>&quot;.</span><span style="color:#bf616a;">split</span><span>()
+</span><span style="color:#96b5b4;">print</span><span>(split_string)
 </span></code></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]
 </span></code></pre>
 <p>I can go ahead and specify a delimiter (which character the string must
 split on):</p>
-<pre data-lang="{.sourceCode .python}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .python} "><code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span>split_string = &quot;string with spaces&quot;.split(&quot; &quot;)
-</span><span>print(split_string)
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>split_string = &quot;</span><span style="color:#a3be8c;">string with spaces</span><span>&quot;.</span><span style="color:#bf616a;">split</span><span>(&quot; &quot;)
+</span><span style="color:#96b5b4;">print</span><span>(split_string)
 </span></code></pre>
 <p>I get the same result:</p>
 <pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]
 </span></code></pre>
 <p>But what if my string wasn't so forgiving?</p>
-<pre data-lang="{.sourceCode .python}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .python} "><code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span>split_string = &quot;a b  c&quot;.split(&quot; &quot;)
-</span><span>print(split_string)
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>split_string = &quot;</span><span style="color:#a3be8c;">a b  c</span><span>&quot;.</span><span style="color:#bf616a;">split</span><span>(&quot; &quot;)
+</span><span style="color:#96b5b4;">print</span><span>(split_string)
 </span></code></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>[&#39;a&#39;, &#39;b&#39;, &#39;&#39;, &#39;c&#39;]
@@ -198,8 +198,8 @@ tabs as well? We need some more regexp help:</p>
 <p>The <code>s</code> matches any white space.</p>
 <p>With Python, I expected the default way to work but it didn't, but came
 back disappointed:</p>
-<pre data-lang="{.sourceCode .python}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .python} "><code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span>split_string = &quot;a    bnc&quot;.split(&quot; &quot;)
-</span><span>print(split_string)
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>split_string = &quot;</span><span style="color:#a3be8c;">a    bnc</span><span>&quot;.</span><span style="color:#bf616a;">split</span><span>(&quot; &quot;)
+</span><span style="color:#96b5b4;">print</span><span>(split_string)
 </span></code></pre>
 <p>Output:</p>
 <pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>[&#39;at&#39;, &#39;bnc&#39;]
@@ -207,9 +207,9 @@ back disappointed:</p>
 <p>Perhaps it's a philosophical difference, but it's harder to do this
 with Python. This is the only thing so that I found easier to achieve in
 Java than in Python:</p>
-<pre data-lang="{.sourceCode .python}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .python} "><code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span>import re
-</span><span>split_string = re.split(&quot;s+&quot;, &quot;a    bnc&quot;)
-</span><span>print(split_string)
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>re
+</span><span>split_string = re.</span><span style="color:#bf616a;">split</span><span>(&quot;</span><span style="color:#a3be8c;">s+</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">a    bnc</span><span>&quot;)
+</span><span style="color:#96b5b4;">print</span><span>(split_string)
 </span></code></pre>
 <p>...and we finally get what we want:</p>
 <pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]

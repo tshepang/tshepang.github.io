@@ -133,36 +133,36 @@ takes some getting used to in terms of set-up, but this <a href="http://live.gno
 quite gentle, and it details how to get the code running on your
 machine.</p>
 <p>If you use Debian (or Ubuntu), you can use run this command:</p>
-<pre data-lang="{.sourceCode .sh}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .sh} "><code class="language-{.sourceCode .sh}" data-lang="{.sourceCode .sh}"><span>wajig --norecommends install build-essential docbook-xsl flex
-</span><span>bison cvs gperf cmake  {uuid,ppp}-dev
-</span><span>libx{composite,randr,damage,ft2,i,t}-dev
-</span><span>libxcb-{event1,aux0,atom1}-dev
-</span><span>lib{pam0g,iw,db,gdbm,png12,ffi,tiff,vorbis,gl1-mesa,unistring}
-</span><span>lib{quvi,icu,neon27,usb-1.0-0,asound2,ncurses5,udev,usb,acl1}
-</span><span>lib{boost-signals,ldap2,sasl2}-dev
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">wajig --norecommends</span><span> install build-essential docbook-xsl flex
+</span><span style="color:#bf616a;">bison</span><span> cvs gperf cmake  {uuid,ppp}-dev
+</span><span style="color:#bf616a;">libx{composite,randr,damage,ft2,i,t</span><span>}</span><span style="color:#bf616a;">-dev
+</span><span style="color:#bf616a;">libxcb-{event1,aux0,atom1</span><span>}</span><span style="color:#bf616a;">-dev
+</span><span style="color:#bf616a;">lib{pam0g,iw,db,gdbm,png12,ffi,tiff,vorbis,gl1-mesa,unistring</span><span>}
+</span><span style="color:#bf616a;">lib{quvi,icu,neon27,usb-1.0-0,asound2,ncurses5,udev,usb,acl1</span><span>}
+</span><span style="color:#bf616a;">lib{boost-signals,ldap2,sasl2</span><span>}</span><span style="color:#bf616a;">-dev
 </span></code></pre>
 <p>It's installs the development packages that will be needed by the build
 process. The <code>--no-recommends</code> option means I want to limit the
 installation to packages I really need, avoiding the extra stuff deemed
 by the packager to be useful for me.</p>
 <p>My &quot;~/.jhbuilrc&quot; contains the following:</p>
-<pre data-lang="{.sourceCode .python}" style="background-color:#2b303b;color:#c0c5ce;" class="language-{.sourceCode .python} "><code class="language-{.sourceCode .python}" data-lang="{.sourceCode .python}"><span># build directory
-</span><span>checkoutroot = os.path.expanduser(&quot;~/src/gnome&quot;)
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># build directory
+</span><span>checkoutroot = os.path.</span><span style="color:#bf616a;">expanduser</span><span>(&quot;</span><span style="color:#a3be8c;">~/src/gnome</span><span>&quot;)
 </span><span>
-</span><span># don&#39;t spew lots of distracting status messages
-</span><span>notrayicon = True
+</span><span style="color:#65737e;"># don&#39;t spew lots of distracting status messages
+</span><span>notrayicon = </span><span style="color:#d08770;">True
 </span><span>
-</span><span># attempt to build modules even if their dependencies weren&#39;t successfully built
-</span><span>nopoison = True
+</span><span style="color:#65737e;"># attempt to build modules even if their dependencies weren&#39;t successfully built
+</span><span>nopoison = </span><span style="color:#d08770;">True
 </span><span>
-</span><span># don&#39;t build these since they have issues; this implies that I must install my distro&#39;s development versions
-</span><span>skip = [&#39;nss&#39;, &#39;nspr&#39;]
+</span><span style="color:#65737e;"># don&#39;t build these since they have issues; this implies that I must install my distro&#39;s development versions
+</span><span>skip = [&#39;</span><span style="color:#a3be8c;">nss</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">nspr</span><span>&#39;]
 </span><span>
-</span><span># dont fetch moduleset xml files from the web; use ones that are installed locally
-</span><span>use_local_modulesets = True
+</span><span style="color:#65737e;"># dont fetch moduleset xml files from the web; use ones that are installed locally
+</span><span>use_local_modulesets = </span><span style="color:#d08770;">True
 </span><span>
-</span><span># where html-formatted logs are kept
-</span><span>tinderbox_outputdir = os.path.expanduser(&quot;~/temp/tinderbox&quot;)
+</span><span style="color:#65737e;"># where html-formatted logs are kept
+</span><span>tinderbox_outputdir = os.path.</span><span style="color:#bf616a;">expanduser</span><span>(&quot;</span><span style="color:#a3be8c;">~/temp/tinderbox</span><span>&quot;)
 </span></code></pre>
 <p>See <a href="http://library.gnome.org/devel/jhbuild/unstable/config-reference.html.en">Configuration File Reference</a> for a detailed explanation
 of these options.</p>
