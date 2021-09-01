@@ -4,8 +4,27 @@
 	<link href="http://tshepang.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="http://tshepang.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2021-08-14T00:00:00+00:00</updated>
+	<updated>2021-09-02T00:00:00+00:00</updated>
 	<id>http://tshepang.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>about me</title>
+		<published>2021-09-02T00:00:00+00:00</published>
+		<updated>2021-09-02T00:00:00+00:00</updated>
+		<link href="http://tshepang.github.io/about-me/" type="text/html"/>
+		<id>http://tshepang.github.io/about-me/</id>
+		<content type="html">&lt;p&gt;I am Tshepang Lekhonkhobe (&lt;a href=&quot;mailto:tshepang@gmail.com&quot;&gt;tshepang@gmail.com&lt;&#x2F;a&gt;),
+and I do software development &lt;a href=&quot;https:&#x2F;&#x2F;snode.com&quot;&gt;for a living&lt;&#x2F;a&gt; and as a hobby.
+My favorite language (and ecosystem) is &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.org&quot;&gt;Rust&lt;&#x2F;a&gt;, and my OS of choice is
+&lt;a href=&quot;https:&#x2F;&#x2F;debian.org&quot;&gt;Debian&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Among my profiles on the web:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev&quot;&gt;Twitter&lt;&#x2F;a&gt; (social)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tshepang&quot;&gt;GitHub&lt;&#x2F;a&gt; (software)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackexchange.com&#x2F;users&#x2F;125744&quot;&gt;Stack Exchange&lt;&#x2F;a&gt; (help)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The sources for this blog can be found &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tshepang&#x2F;blog&quot;&gt;on GitHub&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>2012 review</title>
 		<published>2021-08-14T00:00:00+00:00</published>
@@ -1088,25 +1107,6 @@ an Asus UX410 (itself a replacement of &lt;a href=&quot;http:&#x2F;&#x2F;tshepan
 &lt;&#x2F;span&gt;&lt;span&gt;data&#x2F;citm_catalog.json  1000 MB&#x2F;s   790 MB&#x2F;s  1540 MB&#x2F;s
 &lt;&#x2F;span&gt;&lt;span&gt;data&#x2F;twitter.json        870 MB&#x2F;s   900 MB&#x2F;s  1030 MB&#x2F;s
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>about me</title>
-		<published>2019-09-19T00:00:00+00:00</published>
-		<updated>2019-09-19T00:00:00+00:00</updated>
-		<link href="http://tshepang.github.io/about-me/" type="text/html"/>
-		<id>http://tshepang.github.io/about-me/</id>
-		<content type="html">&lt;p&gt;I am Tshepang Lekhonkhobe (&lt;a href=&quot;mailto:tshepang@gmail.com&quot;&gt;tshepang@gmail.com&lt;&#x2F;a&gt;),
-and I do software development &lt;a href=&quot;https:&#x2F;&#x2F;panoptix.io&quot;&gt;for a living&lt;&#x2F;a&gt; and as a hobby.
-My favorite language (and ecosystem) is &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.org&quot;&gt;Rust&lt;&#x2F;a&gt;, and my OS of choice is
-&lt;a href=&quot;https:&#x2F;&#x2F;debian.org&quot;&gt;Debian&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;Among my profiles on the web:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev&quot;&gt;Twitter&lt;&#x2F;a&gt; (social)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tshepang&quot;&gt;GitHub&lt;&#x2F;a&gt; (software)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackexchange.com&#x2F;users&#x2F;125744&quot;&gt;Stack Exchange&lt;&#x2F;a&gt; (help)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;The sources for this blog can be found &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tshepang&#x2F;blog&quot;&gt;on GitHub&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
