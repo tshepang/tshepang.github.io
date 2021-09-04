@@ -245,7 +245,7 @@ and accessed via &lt;strong&gt;nmcli&lt;&#x2F;strong&gt; and &lt;strong&gt;nm-ap
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;software-development&quot;&gt;software development&lt;&#x2F;h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;cargo&lt;&#x2F;strong&gt;: central tool for Rust development&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Cargo&lt;&#x2F;strong&gt;: central tool for Rust development&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;Git&lt;&#x2F;strong&gt;: this one has won the mindshare&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;gui-applications&quot;&gt;GUI applications&lt;&#x2F;h3&gt;
@@ -271,7 +271,7 @@ and accessed via &lt;strong&gt;nmcli&lt;&#x2F;strong&gt; and &lt;strong&gt;nm-ap
 &lt;li&gt;&lt;strong&gt;wajig&lt;&#x2F;strong&gt;: acts as pleasant front-end to &lt;code&gt;apt&lt;&#x2F;code&gt; and other
 package management tools;
 &lt;a href=&quot;http:&#x2F;&#x2F;tshepang.github.io&#x2F;tags&#x2F;wajig&quot;&gt;I used to maintain it&lt;&#x2F;a&gt;, and it happens to be the one Debian
-package that makes me a Debian Maintainer (I got upload access
+package that once made me a Debian Maintainer (I used to have upload access
 for it)&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;apt&lt;&#x2F;strong&gt;: Debian package management&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;apt-cacher-ng&lt;&#x2F;strong&gt;: avoids the need to re-fetch Debian packages when needed for
@@ -9411,7 +9411,7 @@ to rob the wrong guy.&lt;&#x2F;p&gt;
 		<updated>2013-03-25T00:00:00+00:00</updated>
 		<link href="http://tshepang.github.io/the-thirteenth-floor-1999/" type="text/html"/>
 		<id>http://tshepang.github.io/the-thirteenth-floor-1999/</id>
-		<content type="html">&lt;p&gt;The movie is well-made, and has an exciting twist. The eveil acts done
+		<content type="html">&lt;p&gt;The movie is well-made, and has an exciting twist. The evil acts done
 by two of the characters needed better explanation, most especially the
 first one (it was too sudden). I enjoyed watching the detective... nice
 performance there.&lt;&#x2F;p&gt;
@@ -18858,22 +18858,22 @@ Another inspiration is preparation for the upcoming 2010 movie review.&lt;&#x2F;
 &lt;p&gt;Jack Nicholson&#x27;s The Joker (&lt;em&gt;Batman&lt;&#x2F;em&gt;) has been given much praise, and
 on revisiting, I&#x27;m left wondering what the fuck they were
 drinking&#x2F;smoking. Sure, this version of the character was meant to be
-humorous, but it&#x27;s hard to ignore how far he pales in comparison to the
+humorous, but it&#x27;s hard to ignore how far he pales in comparison to
 Heath Ledger&#x27;s more recent portrayal.&lt;&#x2F;p&gt;
 &lt;p&gt;I was gladly surprised by how enjoyable &lt;em&gt;Superman&lt;&#x2F;em&gt; is. It&#x27;s generally a
 piece of shit (bad and childish dialogue, campy direction, shitty
 character development, bad script) but I fell in love with Lois, the
-love interest of Superman. She&#x27;s is so god-damn sexually suggestive
-(highlight is the interview scene). The comic sidekick of Lex Luther
+love interest of Superman. She is so god-damn sexually suggestive,
+highlight being the interview scene. The comic sidekick of Lex Luther
 (archvillain) is also fun to watch, sometimes. The guy playing Superman
-in his teens is pretty good too, making for a better actor the
+in his teens is pretty good too, making for a better actor than the
 fully-grown Superman. And the time-reversal moment is ludicrous. WTF! As
 a sidenote, it was interesting to find that &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Superman_(film)&quot;&gt;the movie&#x27;s director got
 someone to re-write the script due to it being too campy&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;em&gt;Superman II&lt;&#x2F;em&gt; had some (very) unbearably stupid moments, but it was fun
 watching the evil trio exploring the world, especially the inquisitive
-woman, and the power-hungry general. The whole was even campier than the
-first movie, and the script is pure trash, more of a curiosity than
+woman, and the power-hungry general. The movie was even campier than the
+first one, and the script is pure trash, more of a curiosity than
 something to be taken seriusly.&lt;&#x2F;p&gt;
 &lt;p&gt;I really love the editing of &lt;em&gt;The Kite Runner&lt;&#x2F;em&gt;, and how smooth the
 camera switches from one view&#x2F;scene to another. The movie itself is an
@@ -18921,9 +18921,9 @@ and charming.&lt;&#x2F;p&gt;
 and under-developed female leads (the unconvincing tracker and the
 too-convenient caretaking love interest).&lt;&#x2F;p&gt;
 &lt;p&gt;Gritty, decent action is offset by some real bad casting in the stale
-&lt;em&gt;Takers&lt;&#x2F;em&gt;. Far superior, and one of the best movies I&#x27;ve seen this year
-is &lt;em&gt;Brookly&#x27;s Finest&lt;&#x2F;em&gt;, an edgy thriller that more than makes up for
-it&#x27;s lack of originality with superb execution and nice acting. The
+&lt;em&gt;Takers&lt;&#x2F;em&gt;. Far superior, and one of the best movies I&#x27;ve seen this year,
+is &lt;em&gt;Brooklyn&#x27;s Finest&lt;&#x2F;em&gt;, an edgy thriller that more than makes up for
+its lack of originality with superb execution and nice acting. The
 ending would be even better if the fates of the three lead characters
 were treated consistently. It seems to me that someone fucked with the
 original story. One favorite moment of mine is the brief but powerful
@@ -18936,7 +18936,7 @@ helped by the attractive storyline of pretty assassin who kills without
 flinching.&lt;&#x2F;p&gt;
 &lt;p&gt;It&#x27;s amazing how little (none) chemistry exists between the 4 lead
 characters of &lt;em&gt;A-Team&lt;&#x2F;em&gt;. Liam Neeson and the agent lady are badly
-miscast; the guy plating B-A lacks the charisma that Mr T. had in the TV
+miscast; the guy playing B-A lacks the charisma that Mr T. had in the TV
 series, even if he&#x27;s a better actor.&lt;&#x2F;p&gt;
 &lt;p&gt;&amp;quot;...phew!&amp;quot;&lt;&#x2F;p&gt;
 </content>
