@@ -64,26 +64,24 @@
       <br>
       <p>By deterministic, I am referring to their scheduling. Here's an example
 in Rust:</p>
-<p>::: {.sourcecode}
-rust</p>
-<p>use std::thread; use std::sync::mpsc::channel;</p>
-<p>fn main() {</p>
-<p>:   let thread_count = 4; let (tx, rx) = channel();</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>for x in 0..thread_count {
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::thread;
+</span><span style="color:#b48ead;">use </span><span>std::sync::mpsc::channel;
 </span><span>
-</span><span>:   let tx = tx.clone(); thread::spawn(move || { println!(&quot;t{}
-</span><span>    tx&quot;, x); tx.send(x).unwrap(); });
-</span><span>
-</span><span>}
-</span><span>
-</span><span>for _ in 0..thread_count {
-</span><span>
-</span><span>:   println!(&quot;rx from t{}&quot;, rx.recv().unwrap());
-</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> thread_count = </span><span style="color:#d08770;">4</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let </span><span>(tx, rx) = </span><span style="color:#96b5b4;">channel</span><span>();
+</span><span>    </span><span style="color:#b48ead;">for</span><span> x in </span><span style="color:#d08770;">0</span><span>..thread_count {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> tx = tx.</span><span style="color:#96b5b4;">clone</span><span>();
+</span><span>        thread::spawn(</span><span style="color:#b48ead;">move </span><span>|| {
+</span><span>            println!(&quot;</span><span style="color:#a3be8c;">t</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> tx</span><span>&quot;, x);
+</span><span>            tx.</span><span style="color:#96b5b4;">send</span><span>(x).</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>        });
+</span><span>    }
+</span><span>    </span><span style="color:#b48ead;">for </span><span>_ in </span><span style="color:#d08770;">0</span><span>..thread_count {
+</span><span>        println!(&quot;</span><span style="color:#a3be8c;">rx from t</span><span style="color:#d08770;">{}</span><span>&quot;, rx.</span><span style="color:#96b5b4;">recv</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>());
+</span><span>    }
 </span><span>}
 </span></code></pre>
-<p>}
-:::</p>
 <p>What I'm doing there is create 4 child threads, from which I send
 messages that are to be captured by the main thread.</p>
 <p>I built and ran it with:</p>
