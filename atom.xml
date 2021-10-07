@@ -4,8 +4,66 @@
 	<link href="https://tshepang.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://tshepang.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2021-10-03T00:00:00+00:00</updated>
+	<updated>2021-10-07T00:00:00+00:00</updated>
 	<id>https://tshepang.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>FLOSS I use a-lot</title>
+		<published>2021-10-07T00:00:00+00:00</published>
+		<updated>2021-10-07T00:00:00+00:00</updated>
+		<link href="https://tshepang.github.io/floss-i-use-a-lot/" type="text/html"/>
+		<id>https://tshepang.github.io/floss-i-use-a-lot/</id>
+		<content type="html">&lt;h3 id=&quot;environment&quot;&gt;environment&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Debian&lt;&#x2F;strong&gt;: my primary OS, and also my favorite&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;my-current-desktop-setup&#x2F;&quot;&gt;dwm&lt;&#x2F;a&gt;: simple and clean window management&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tmux&#x2F;tmux&#x2F;wiki&quot;&gt;tmux&lt;&#x2F;a&gt;: amazingly powerful terminal multiplexer&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Emacs&lt;&#x2F;strong&gt;: pleasant text editing and file management&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;fish&lt;&#x2F;strong&gt;: compared to mighty Bash, it is far more pretty,
+and has a far better command completion system&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;NetworkManager&lt;&#x2F;strong&gt;: handles all networking on my workstation,
+and accessed via &lt;strong&gt;nmcli&lt;&#x2F;strong&gt; and &lt;strong&gt;nm-applet&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;software-development&quot;&gt;software development&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cargo&lt;&#x2F;strong&gt;: central tool for Rust development&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Git&lt;&#x2F;strong&gt;: this one has won the mindshare&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;gui-applications&quot;&gt;GUI applications&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alacritty&#x2F;alacritty&quot;&gt;Alacritty&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Firefox&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.transmissionbt.com&quot;&gt;Transmission&lt;&#x2F;a&gt;: the only torrent client I have ever used&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Nautilus&lt;&#x2F;strong&gt;: decent GUI file manager&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;network-diagnosis&quot;&gt;network diagnosis&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;humdi.net&#x2F;vnstat&quot;&gt;vnstat&lt;&#x2F;a&gt;: nifty network usage viewer&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;ping&lt;&#x2F;strong&gt;: checks general reachability&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;mtr&lt;&#x2F;strong&gt;: interactive traceroute tool&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;entertainment&quot;&gt;entertainment&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;quodlibet.readthedocs.io&quot;&gt;Quod Libet&lt;&#x2F;a&gt;: audio player&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;VLC&lt;&#x2F;strong&gt;: user interface could be a lot better&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;miscellaneous-tools&quot;&gt;miscellaneous tools&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;apt&lt;&#x2F;strong&gt;: Debian package management&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;apt-cacher-ng&lt;&#x2F;strong&gt;: avoids the need to re-fetch Debian packages when needed for
+additional installs, which helps speed things up, especially for poor connections&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;head&lt;&#x2F;strong&gt; and &lt;strong&gt;tail&lt;&#x2F;strong&gt;: included in GNU coreutils suite of tools&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;OpenSSH&lt;&#x2F;strong&gt;: duh!&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;project-of-note-sudo&#x2F;&quot;&gt;Sudo&lt;&#x2F;a&gt;: another duh!&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;rg3.github.io&#x2F;youtube-dl&quot;&gt;youtube-dl&lt;&#x2F;a&gt;: I prefer watching videos locally, with VLC&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;project-of-note-sudo&#x2F;&quot;&gt;Iotop&lt;&#x2F;a&gt;: nifty I&#x2F;O usage viewer&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;blog.burntsushi.net&#x2F;ripgrep&quot;&gt;ripgrep&lt;&#x2F;a&gt;: a more pleasant &lt;code&gt;grep&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;the.exa.website&quot;&gt;exa&lt;&#x2F;a&gt;: a more pleasant, more pretty &lt;code&gt;ls&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;bat&quot;&gt;bat&lt;&#x2F;a&gt;: a more pleasant, more fancy &lt;code&gt;cat&lt;&#x2F;code&gt;, which also supplants &lt;code&gt;less&lt;&#x2F;code&gt;
+(though it actually makes use of the latter for paging through long text)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;top&lt;&#x2F;strong&gt;: a powerful and flexible process viewer, part of &lt;a href=&quot;https:&#x2F;&#x2F;gitlab.com&#x2F;procps-ng&#x2F;procps&quot;&gt;procps suite&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>2014 review</title>
 		<published>2021-10-03T00:00:00+00:00</published>
@@ -96,69 +154,6 @@ much of it set in gorgeous scenery.&lt;&#x2F;p&gt;
 because the latter has billions of installations&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;security.googleblog.com&#x2F;2021&#x2F;09&#x2F;an-update-on-memory-safety-in-chrome.html?m=1&quot;&gt;Planned inclusion in Google Chrome&lt;&#x2F;a&gt;,
 a browser found in billions of devices&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>FLOSS I use a-lot</title>
-		<published>2021-09-26T00:00:00+00:00</published>
-		<updated>2021-09-26T00:00:00+00:00</updated>
-		<link href="https://tshepang.github.io/floss-i-use-a-lot/" type="text/html"/>
-		<id>https://tshepang.github.io/floss-i-use-a-lot/</id>
-		<content type="html">&lt;h3 id=&quot;environment&quot;&gt;environment&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Debian&lt;&#x2F;strong&gt;: my primary OS, and also my favorite&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;my-current-desktop-setup&#x2F;&quot;&gt;dwm&lt;&#x2F;a&gt;: simple and clean window management&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tmux&#x2F;tmux&#x2F;wiki&quot;&gt;tmux&lt;&#x2F;a&gt;: amazingly powerful terminal multiplexer&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Emacs&lt;&#x2F;strong&gt;: pleasant text editing and file management&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;fish&lt;&#x2F;strong&gt;: compared to mighty Bash, it is far more pretty,
-and has a far better command completion system&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;NetworkManager&lt;&#x2F;strong&gt;: handles all networking on my workstation,
-and accessed via &lt;strong&gt;nmcli&lt;&#x2F;strong&gt; and &lt;strong&gt;nm-applet&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;software-development&quot;&gt;software development&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Cargo&lt;&#x2F;strong&gt;: central tool for Rust development&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Git&lt;&#x2F;strong&gt;: this one has won the mindshare&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;gui-applications&quot;&gt;GUI applications&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alacritty&#x2F;alacritty&quot;&gt;Alacritty&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Firefox&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.transmissionbt.com&quot;&gt;Transmission&lt;&#x2F;a&gt;: the only torrent client I have ever used&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Nautilus&lt;&#x2F;strong&gt;: decent GUI file manager&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;network-diagnosis&quot;&gt;network diagnosis&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;humdi.net&#x2F;vnstat&quot;&gt;vnstat&lt;&#x2F;a&gt;: nifty network usage viewer&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;ping&lt;&#x2F;strong&gt;: checks general reachability&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;mtr&lt;&#x2F;strong&gt;: interactive traceroute tool&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;entertainment&quot;&gt;entertainment&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;quodlibet.readthedocs.io&quot;&gt;Quod Libet&lt;&#x2F;a&gt;: audio player&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;VLC&lt;&#x2F;strong&gt;: user interface could be a lot better&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;miscellaneous-tools&quot;&gt;miscellaneous tools&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;wajig&lt;&#x2F;strong&gt;: acts as pleasant front-end to &lt;code&gt;apt&lt;&#x2F;code&gt; and other
-package management tools;
-&lt;a href=&quot;http:&#x2F;&#x2F;tshepang.github.io&#x2F;tags&#x2F;wajig&quot;&gt;I used to maintain it&lt;&#x2F;a&gt;, and it happens to be the one Debian
-package that once made me a Debian Maintainer (I used to have upload access
-for it)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;apt&lt;&#x2F;strong&gt;: Debian package management&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;apt-cacher-ng&lt;&#x2F;strong&gt;: avoids the need to re-fetch Debian packages when needed for
-additional installs, which helps speed things up, especially for poor connections&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;head&lt;&#x2F;strong&gt; and &lt;strong&gt;tail&lt;&#x2F;strong&gt;: included in GNU coreutils suite of tools&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;OpenSSH&lt;&#x2F;strong&gt;: duh!&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;project-of-note-sudo&#x2F;&quot;&gt;Sudo&lt;&#x2F;a&gt;: another duh!&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;rg3.github.io&#x2F;youtube-dl&quot;&gt;youtube-dl&lt;&#x2F;a&gt;: I prefer watching videos locally, with VLC&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;project-of-note-sudo&#x2F;&quot;&gt;Iotop&lt;&#x2F;a&gt;: nifty I&#x2F;O usage viewer&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;blog.burntsushi.net&#x2F;ripgrep&quot;&gt;ripgrep&lt;&#x2F;a&gt;: a more pleasant &lt;code&gt;grep&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;the.exa.website&quot;&gt;exa&lt;&#x2F;a&gt;: a more pleasant, more pretty &lt;code&gt;ls&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;bat&quot;&gt;bat&lt;&#x2F;a&gt;: a more pleasant, more fancy &lt;code&gt;cat&lt;&#x2F;code&gt;, which also supplants &lt;code&gt;less&lt;&#x2F;code&gt;
-(though it actually makes use of the latter for paging through long text)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;top&lt;&#x2F;strong&gt;: a powerful and flexible process viewer, part of &lt;a href=&quot;https:&#x2F;&#x2F;gitlab.com&#x2F;procps-ng&#x2F;procps&quot;&gt;procps suite&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
 	</entry>
@@ -8826,16 +8821,16 @@ due to his care for the (delightful) leading lady.&lt;&#x2F;p&gt;
 		<updated>2013-05-26T00:00:00+00:00</updated>
 		<link href="https://tshepang.github.io/shutil-which-rocks/" type="text/html"/>
 		<id>https://tshepang.github.io/shutil-which-rocks/</id>
-		<content type="html">&lt;p&gt;Unix&#x2F;Linux systems have a simple (but useful) tool named which, whose
+		<content type="html">&lt;p&gt;Unix&#x2F;Linux systems have a simple (but useful) tool named &lt;code&gt;which&lt;&#x2F;code&gt;, whose
 main purpose is to indicate where in the filesystem a particular
 executable is installed. This functionality was added in Python 3.3, and
 though simple, I was looking forward to its availability in Debian, just
 so I could replace wajig&#x27;s own equivalent functionality, which only
 checked for file presence, and was hard-coded and therefore inflexible.
-&lt;a href=&quot;http:&#x2F;&#x2F;docs.python.org&#x2F;3&#x2F;library&#x2F;shutil#shutil.which&quot;&gt;shutil.which()&lt;&#x2F;a&gt;, OTOH, looks for the given executable name in user&#x27;s
+&lt;a href=&quot;http:&#x2F;&#x2F;docs.python.org&#x2F;3&#x2F;library&#x2F;shutil#shutil.which&quot;&gt;&lt;code&gt;shutil.which()&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;, OTOH, looks for the given executable name in user&#x27;s
 PATH and is more thorough, since it also checks if the executable name
 points to something that is actually executable. So, making use of this
-new function resulted in code that is both more robust and &lt;a href=&quot;https:&#x2F;&#x2F;code.google.com&#x2F;p&#x2F;wajig&#x2F;source&#x2F;detail?r=e419e439e47f880ab17f6394e3faaa8ce3b15fe1&quot;&gt;cleaner&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+new function resulted in code that is both more robust and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gjwgit&#x2F;wajig&#x2F;commit&#x2F;1b5b68fef401e097a97939e78555bb48e830dd1a&quot;&gt;cleaner&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;As a sidenote, this functionality &lt;a href=&quot;http:&#x2F;&#x2F;bugs.python.org&#x2F;issue444582&quot;&gt;was first proposed in 2001&lt;&#x2F;a&gt;!&lt;&#x2F;p&gt;
 </content>
 	</entry>
