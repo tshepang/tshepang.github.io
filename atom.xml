@@ -16,7 +16,7 @@
 &lt;ul&gt;
 &lt;li&gt;Removing non-Rust deps from toolchain
 &lt;ul&gt;
-&lt;li&gt;Removing libc dep for Linux (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;mustang&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;rsix&quot;&gt;rsix&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Removing libc dep for Linux-based systems (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;mustang&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;rsix&quot;&gt;rsix&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;li&gt;Removing llvm dep (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;cranelift&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
