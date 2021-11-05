@@ -4,36 +4,19 @@
 	<link href="https://tshepang.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://tshepang.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2021-10-31T00:00:00+00:00</updated>
+	<updated>2021-11-05T00:00:00+00:00</updated>
 	<id>https://tshepang.github.io/atom.xml</id>
 	<entry xml:lang="en">
-		<title>2014 review</title>
-		<published>2021-10-31T00:00:00+00:00</published>
-		<updated>2021-10-31T00:00:00+00:00</updated>
-		<link href="https://tshepang.github.io/2014-review/" type="text/html"/>
-		<id>https://tshepang.github.io/2014-review/</id>
-		<content type="html">&lt;p&gt;The best &lt;strong&gt;action&lt;&#x2F;strong&gt; can be found in the fight scenes of &lt;em&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;non-stop&#x2F;&quot;&gt;Non-Stop&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;, but
-the best &lt;strong&gt;visual effects&lt;&#x2F;strong&gt; are in &lt;em&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;dracula-untold&#x2F;&quot;&gt;Dracula Untold&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;. The best
-&lt;strong&gt;animation&lt;&#x2F;strong&gt; is in &lt;em&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;big-hero-6&#x2F;&quot;&gt;Big Hero 6&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;, a movie that also has my &lt;strong&gt;favorite
-character&lt;&#x2F;strong&gt;, the inflatable robot.&lt;&#x2F;p&gt;
-&lt;p&gt;My &lt;strong&gt;favorite performance&lt;&#x2F;strong&gt; is by Michael Rooker,
-playing the leader of the bandits in &lt;em&gt;Guardians of the Galaxy&lt;&#x2F;em&gt;.
-The &lt;strong&gt;best performance&lt;&#x2F;strong&gt;, however, is by Johnny Harris,
-playing the leader of a team of soldiers in &lt;em&gt;Monsters: Dark Continent&lt;&#x2F;em&gt;.
-Following that is one by Tom Wilkinson, playing a sad detective in &lt;em&gt;Good People&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
 		<title>Rust things I most anticipate</title>
-		<published>2021-10-26T00:00:00+00:00</published>
-		<updated>2021-10-26T00:00:00+00:00</updated>
+		<published>2021-11-05T00:00:00+00:00</published>
+		<updated>2021-11-05T00:00:00+00:00</updated>
 		<link href="https://tshepang.github.io/rust-things-i-most-anticipate/" type="text/html"/>
 		<id>https://tshepang.github.io/rust-things-i-most-anticipate/</id>
 		<content type="html">&lt;p&gt;The following are in progress:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Removing non-Rust deps from toolchain
 &lt;ul&gt;
-&lt;li&gt;Removing libc dep for Linux-based systems (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;mustang&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;rsix&quot;&gt;rsix&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Removing libc dep for Linux-based systems (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;mustang&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;rsix&quot;&gt;rustix&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;li&gt;Removing llvm dep (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;cranelift&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
@@ -52,7 +35,26 @@ a browser found in billions of devices&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&quot;&gt;Pijul&lt;&#x2F;a&gt;, a superior alternative to Git, &lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&#x2F;posts&#x2F;2020-11-07-towards-1.0&quot;&gt;reaching stability&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;Release of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;clap-rs&#x2F;clap&#x2F;issues&#x2F;2869&quot;&gt;version 3 of clap&lt;&#x2F;a&gt;,
 which much improves the already excellent CLI parsing library&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lore.kernel.org&#x2F;lkml&#x2F;20210704202756.29107-1-ojeda@kernel.org&quot;&gt;Allowing Rust usage in official Linux kernel&lt;&#x2F;a&gt;,
+though this would initially be limited to device drivers&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>2014 review</title>
+		<published>2021-10-31T00:00:00+00:00</published>
+		<updated>2021-10-31T00:00:00+00:00</updated>
+		<link href="https://tshepang.github.io/2014-review/" type="text/html"/>
+		<id>https://tshepang.github.io/2014-review/</id>
+		<content type="html">&lt;p&gt;The best &lt;strong&gt;action&lt;&#x2F;strong&gt; can be found in the fight scenes of &lt;em&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;non-stop&#x2F;&quot;&gt;Non-Stop&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;, but
+the best &lt;strong&gt;visual effects&lt;&#x2F;strong&gt; are in &lt;em&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;dracula-untold&#x2F;&quot;&gt;Dracula Untold&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;. The best
+&lt;strong&gt;animation&lt;&#x2F;strong&gt; is in &lt;em&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;big-hero-6&#x2F;&quot;&gt;Big Hero 6&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;, a movie that also has my &lt;strong&gt;favorite
+character&lt;&#x2F;strong&gt;, the inflatable robot.&lt;&#x2F;p&gt;
+&lt;p&gt;My &lt;strong&gt;favorite performance&lt;&#x2F;strong&gt; is by Michael Rooker,
+playing the leader of the bandits in &lt;em&gt;Guardians of the Galaxy&lt;&#x2F;em&gt;.
+The &lt;strong&gt;best performance&lt;&#x2F;strong&gt;, however, is by Johnny Harris,
+playing the leader of a team of soldiers in &lt;em&gt;Monsters: Dark Continent&lt;&#x2F;em&gt;.
+Following that is one by Tom Wilkinson, playing a sad detective in &lt;em&gt;Good People&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
