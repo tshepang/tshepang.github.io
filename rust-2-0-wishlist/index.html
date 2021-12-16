@@ -57,7 +57,7 @@
     <header>
         <h1 itemprop="headline">Rust 2.0 wishlist</h1>
         <span class="muted">
-    2019-12-10
+    2021-12-16
 </span>
     </header>
     <div itemprop="articleBody">
@@ -95,6 +95,8 @@ different types, which is not the case for <code>Vec</code>.</p>
 <tr><td></td><td>String</td><td>StrOwned</td></tr>
 <tr><td>os string</td><td>OsStr</td><td>OsStr (same)</td></tr>
 <tr><td></td><td>OsString</td><td>OsStrOwned</td></tr>
+<tr><td>C string</td><td>CStr</td><td>CStr (same)</td></tr>
+<tr><td></td><td>CString</td><td>CStrOwned</td></tr>
 <tr><td>fs path</td><td>Path</td><td>Path (same)</td></tr>
 <tr><td></td><td>PathBuf</td><td>PathOwned</td></tr>
 </tbody></table>
@@ -113,8 +115,8 @@ of the question_mark (<code>?</code>) operator.</p>
 <ul>
 <li>
 <p>Do not allow crate names with underscores, because taste...</p>
-<p><code>lazy_static</code> (bad)</p>
-<p><code>regex-syntax</code> (good)</p>
+<p><code>serde_json</code> (bad)</p>
+<p><code>serde-json</code> (good)</p>
 </li>
 </ul>
 
