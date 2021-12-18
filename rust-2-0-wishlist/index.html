@@ -57,12 +57,22 @@
     <header>
         <h1 itemprop="headline">Rust 2.0 wishlist</h1>
         <span class="muted">
-    2021-12-16
+    2021-12-18
 </span>
     </header>
     <div itemprop="articleBody">
       <br>
-      <h3 id="lang">lang</h3>
+      <p>There is a strong commitment for Rust not to break backwards compatibility,
+meaning that all code that compiled with Rust v1.0 should compile with all
+future Rust versions, all but for exceptional circumstances.
+The effort is commendable, and results in kool things like <a href="https://doc.rust-lang.org/edition-guide/editions">Editions</a>,
+but mistakes/cruft/poor choices are bound to happen that cannot be fixed with such.
+That is, I with we will have a breaking release at some point,
+and the pain of such a breaking change could be relieved/eliminated with
+planning and migration tooling.</p>
+<p>That said,
+following are my favorite breaking things I want in Rust.</p>
+<h3 id="lang">lang</h3>
 <ul>
 <li>
 <p>Assigning values to struct bindings should use the equal sign, not
