@@ -28,7 +28,7 @@ meaning that all code that compiled with Rust v1.0 should compile with all
 future Rust versions, all but for exceptional circumstances.
 The effort is commendable, and results in kool things like &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;edition-guide&#x2F;editions&quot;&gt;Editions&lt;&#x2F;a&gt;,
 but mistakes&#x2F;cruft&#x2F;poor choices are bound to happen that cannot be fixed with such.
-That is, I with we will have a breaking release at some point,
+That is, I wish we will have a breaking release at some point,
 and the pain of such a breaking change could be relieved&#x2F;eliminated with
 planning and migration tooling.&lt;&#x2F;p&gt;
 &lt;p&gt;That said,
