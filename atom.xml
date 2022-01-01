@@ -4,8 +4,40 @@
 	<link href="https://tshepang.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://tshepang.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2021-12-28T00:00:00+00:00</updated>
+	<updated>2022-01-01T00:00:00+00:00</updated>
 	<id>https://tshepang.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Rust things I most anticipate</title>
+		<published>2022-01-01T00:00:00+00:00</published>
+		<updated>2022-01-01T00:00:00+00:00</updated>
+		<link href="https://tshepang.github.io/rust-things-i-most-anticipate/" type="text/html"/>
+		<id>https://tshepang.github.io/rust-things-i-most-anticipate/</id>
+		<content type="html">&lt;p&gt;The following are in progress:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Removing non-Rust deps from toolchain
+&lt;ul&gt;
+&lt;li&gt;Removing libc dep for Linux-based systems (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;mustang&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;rsix&quot;&gt;rustix&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Removing llvm dep (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;cranelift&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Adding alternative codegen backends
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;cranelift&lt;&#x2F;a&gt;, immediate benefit being fast debug compiles&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;antoyo&#x2F;rustc_codegen_gcc&quot;&gt;rustc_codegen_gcc&lt;&#x2F;a&gt;, allowing Rust to run in more hardware platforms&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;spacejam&#x2F;sled&quot;&gt;sled&lt;&#x2F;a&gt; being a production grade database... being used in tikv would be great&lt;&#x2F;li&gt;
+&lt;li&gt;Having Rust be certified for use in safety-critical systems (&lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;ferrocene&quot;&gt;Ferrocene&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&quot;&gt;hyper&lt;&#x2F;a&gt; being used as default HTTP backend of cURL (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;curl&#x2F;curl&#x2F;wiki&#x2F;Hyper&quot;&gt;progress&lt;&#x2F;a&gt;),
+because the latter has billions of installations&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;security.googleblog.com&#x2F;2021&#x2F;09&#x2F;an-update-on-memory-safety-in-chrome.html?m=1&quot;&gt;Planned inclusion in Google Chrome&lt;&#x2F;a&gt;,
+a browser found in billions of devices&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&quot;&gt;Pijul&lt;&#x2F;a&gt;, a superior alternative to Git, &lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&#x2F;posts&#x2F;2020-11-07-towards-1.0&quot;&gt;reaching stability&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lore.kernel.org&#x2F;lkml&#x2F;20210704202756.29107-1-ojeda@kernel.org&quot;&gt;Allowing Rust usage in official Linux kernel&lt;&#x2F;a&gt;,
+though this would initially be limited to device drivers&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>2003 review</title>
 		<published>2021-12-28T00:00:00+00:00</published>
@@ -212,40 +244,6 @@ of course it makes sense. But anything that can end up in a script does
 not require a human and should avoid we&#x2F;you.&lt;&#x2F;p&gt;
 &lt;p&gt;-- &lt;a href=&quot;https:&#x2F;&#x2F;lore.kernel.org&#x2F;lkml&#x2F;20210706020950.GA32301@1wt.eu&quot;&gt;source&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Rust things I most anticipate</title>
-		<published>2021-11-05T00:00:00+00:00</published>
-		<updated>2021-11-05T00:00:00+00:00</updated>
-		<link href="https://tshepang.github.io/rust-things-i-most-anticipate/" type="text/html"/>
-		<id>https://tshepang.github.io/rust-things-i-most-anticipate/</id>
-		<content type="html">&lt;p&gt;The following are in progress:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Removing non-Rust deps from toolchain
-&lt;ul&gt;
-&lt;li&gt;Removing libc dep for Linux-based systems (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;mustang&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;rsix&quot;&gt;rustix&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;Removing llvm dep (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;cranelift&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;Adding alternative codegen backends
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;cranelift&lt;&#x2F;a&gt;, immediate benefit being fast debug compiles&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;antoyo&#x2F;rustc_codegen_gcc&quot;&gt;rustc_codegen_gcc&lt;&#x2F;a&gt;, allowing Rust to run in more hardware platforms&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;spacejam&#x2F;sled&quot;&gt;sled&lt;&#x2F;a&gt; being a production grade database... being used in tikv would be great&lt;&#x2F;li&gt;
-&lt;li&gt;Having Rust be certified for use in safety-critical systems (&lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;ferrocene&quot;&gt;Ferrocene&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&quot;&gt;hyper&lt;&#x2F;a&gt; being used as default HTTP backend of cURL (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;curl&#x2F;curl&#x2F;wiki&#x2F;Hyper&quot;&gt;progress&lt;&#x2F;a&gt;),
-because the latter has billions of installations&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;security.googleblog.com&#x2F;2021&#x2F;09&#x2F;an-update-on-memory-safety-in-chrome.html?m=1&quot;&gt;Planned inclusion in Google Chrome&lt;&#x2F;a&gt;,
-a browser found in billions of devices&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&quot;&gt;Pijul&lt;&#x2F;a&gt;, a superior alternative to Git, &lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&#x2F;posts&#x2F;2020-11-07-towards-1.0&quot;&gt;reaching stability&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;Release of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;clap-rs&#x2F;clap&#x2F;issues&#x2F;2869&quot;&gt;version 3 of clap&lt;&#x2F;a&gt;,
-which much improves the already excellent CLI parsing library&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lore.kernel.org&#x2F;lkml&#x2F;20210704202756.29107-1-ojeda@kernel.org&quot;&gt;Allowing Rust usage in official Linux kernel&lt;&#x2F;a&gt;,
-though this would initially be limited to device drivers&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
