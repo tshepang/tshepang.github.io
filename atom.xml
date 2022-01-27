@@ -4,8 +4,44 @@
 	<link href="https://tshepang.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://tshepang.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-01-03T00:00:00+00:00</updated>
+	<updated>2022-01-27T00:00:00+00:00</updated>
 	<id>https://tshepang.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>most used Rust software</title>
+		<published>2022-01-27T00:00:00+00:00</published>
+		<updated>2022-01-27T00:00:00+00:00</updated>
+		<link href="https://tshepang.github.io/most-used-rust-software/" type="text/html"/>
+		<id>https://tshepang.github.io/most-used-rust-software/</id>
+		<content type="html">&lt;p&gt;&lt;em&gt;This is in the sense of largest number of end users&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.cncf.io&#x2F;blog&#x2F;2019&#x2F;05&#x2F;21&#x2F;toc-votes-to-move-tikv-into-cncf-incubator&quot;&gt;millions use TiKV&lt;&#x2F;a&gt;
+(&lt;a href=&quot;https:&#x2F;&#x2F;tikv.org&#x2F;adopters&quot;&gt;adopters&lt;&#x2F;a&gt;), a distributed transactional key-value database.&lt;&#x2F;p&gt;
+&lt;p&gt;Here are some numbers for some of those adopters:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pingcap.com&#x2F;case-studies&#x2F;no-sharding-no-etl-use-scale-out-mysql-alternative-to-store-160-tb-of-data&quot;&gt;over 500m users&lt;&#x2F;a&gt; (early 2021)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pingcap.com&#x2F;case-studies&#x2F;how-chinas-insurance-giant-improved-agile-application-performance-with-a-newsql-database&quot;&gt;over 200m users&lt;&#x2F;a&gt; (late 2020)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pingcap.com&#x2F;case-studies&#x2F;lesson-learned-from-queries-over-1.3-trillion-rows-of-data-within-milliseconds-of-response-time-at-zhihu&quot;&gt;over 220m users&lt;&#x2F;a&gt; (mid 2019)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;This is, for me, the most impressive Rust success story.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;investors.dropbox.com&#x2F;news-releases&#x2F;news-release-details&#x2F;dropbox-announces-fourth-quarter-and-fiscal-2019-results&quot;&gt;600m people use Dropbox&lt;&#x2F;a&gt; (late 2019),
+&lt;a href=&quot;https:&#x2F;&#x2F;www.wired.com&#x2F;2016&#x2F;03&#x2F;epic-story-dropboxs-exodus-amazon-cloud-empire&quot;&gt;whose file storage system is written in Rust&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;data.firefox.com&#x2F;dashboard&#x2F;user-activity&quot;&gt;over 210m people use Firefox&lt;&#x2F;a&gt;
+(early 2022), which has various components written in Rust,
+most notably Stylo, which does CSS style calculation.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.discordapp.com&#x2F;a190bbca2b1f&quot;&gt;250m people use Discord&lt;&#x2F;a&gt;
+(early 2020), which has Read States service written in Rust,
+whose &amp;quot;sole purpose is to keep track of which channels and messages you have read&amp;quot;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>idle Rust questions</title>
 		<published>2022-01-03T00:00:00+00:00</published>
@@ -565,42 +601,6 @@ feels rehearsed.&lt;&#x2F;p&gt;
 which can be challenging to my patience.
 It&#x27;s an interesting movie, strange as it is.
 It also has unusually good character animation.&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>most used Rust software</title>
-		<published>2021-01-23T00:00:00+00:00</published>
-		<updated>2021-01-23T00:00:00+00:00</updated>
-		<link href="https://tshepang.github.io/most-used-rust-software/" type="text/html"/>
-		<id>https://tshepang.github.io/most-used-rust-software/</id>
-		<content type="html">&lt;p&gt;&lt;em&gt;This is in the sense of largest number of end users&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.cncf.io&#x2F;blog&#x2F;2019&#x2F;05&#x2F;21&#x2F;toc-votes-to-move-tikv-into-cncf-incubator&quot;&gt;millions use TiKV&lt;&#x2F;a&gt;
-(&lt;a href=&quot;https:&#x2F;&#x2F;tikv.org&#x2F;adopters&quot;&gt;adopters&lt;&#x2F;a&gt;), a distributed transactional key-value database.&lt;&#x2F;p&gt;
-&lt;p&gt;Here are some numbers for some of those adopters:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pingcap.com&#x2F;case-studies&#x2F;no-sharding-no-etl-use-scale-out-mysql-alternative-to-store-160-tb-of-data&quot;&gt;over 500m users&lt;&#x2F;a&gt; (early 2021)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pingcap.com&#x2F;case-studies&#x2F;how-chinas-insurance-giant-improved-agile-application-performance-with-a-newsql-database&quot;&gt;over 200m users&lt;&#x2F;a&gt; (late 2020)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pingcap.com&#x2F;case-studies&#x2F;lesson-learned-from-queries-over-1.3-trillion-rows-of-data-within-milliseconds-of-response-time-at-zhihu&quot;&gt;over 220m users&lt;&#x2F;a&gt; (mid 2019)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;This is, for me, the most impressive Rust success story.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;investors.dropbox.com&#x2F;news-releases&#x2F;news-release-details&#x2F;dropbox-announces-fourth-quarter-and-fiscal-2019-results&quot;&gt;600m people use Dropbox&lt;&#x2F;a&gt; (late 2019),
-&lt;a href=&quot;https:&#x2F;&#x2F;www.wired.com&#x2F;2016&#x2F;03&#x2F;epic-story-dropboxs-exodus-amazon-cloud-empire&quot;&gt;whose file storage system is written in Rust&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;data.firefox.com&#x2F;dashboard&#x2F;user-activity&quot;&gt;over 200m people use Firefox&lt;&#x2F;a&gt;
-(early 20201), which has various components written in Rust,
-most notably Stylo, which does CSS style calculation.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.discordapp.com&#x2F;a190bbca2b1f&quot;&gt;250m people use Discord&lt;&#x2F;a&gt;
-(early 2020), which has Read States service written in Rust,
-whose &amp;quot;sole purpose is to keep track of which channels and messages you have read&amp;quot;.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
