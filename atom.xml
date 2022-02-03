@@ -6854,7 +6854,7 @@ logging in, the following will get executed (&lt;a href=&quot;https:&#x2F;&#x2F;
 &lt;p&gt;Finally, this is what my dwm config changes look like (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tshepang&#x2F;custom&#x2F;blob&#x2F;master&#x2F;config.def.h&quot;&gt;config.def.h&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;diff --git a&#x2F;config.def.h b&#x2F;config.def.h
 &lt;&#x2F;span&gt;&lt;span&gt;index 77ff358..78af5d6 100644
-&lt;&#x2F;span&gt;&lt;span&gt;+++ a&#x2F;config.def.h
+&lt;&#x2F;span&gt;&lt;span&gt;--- a&#x2F;config.def.h
 &lt;&#x2F;span&gt;&lt;span&gt;+++ b&#x2F;config.def.h
 &lt;&#x2F;span&gt;&lt;span&gt;@@ -14,12 +14,15 @@ static const Bool showbar           = True;     &#x2F;*
 &lt;&#x2F;span&gt;&lt;span&gt;False means no bar *&#x2F;
@@ -11838,7 +11838,7 @@ still don&#x27;t really understand how it works, except that it works :)&lt;&#x2
 that is being changed. Those maintainers, who number around 700, feed
 those changes up to the 130 subsystem maintainers. From there, the
 patches make their way into linux-next, then to Linus Torvalds, and,
-eventually the mainline+++if they get accepted at each step along the
+eventually the mainline --- if they get accepted at each step along the
 way.&lt;&#x2F;p&gt;
 &lt;p&gt;-- &lt;a href=&quot;http:&#x2F;&#x2F;lwn.net&#x2F;Articles&#x2F;499952&#x2F;&quot;&gt;source&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
@@ -19615,9 +19615,9 @@ rsyslog in Debian (among others). Not just that but he is also a
 co-maintainer of a large number of GNOME technologies (gnome-session,
 dbus, avahi, gnome-power-manager, gvfs, hal, network-manager...).&lt;&#x2F;p&gt;
 &lt;p&gt;I love especially his role as some sorta QA for Tracker (he&#x27;s done a
-terrific job of it +++ most recently offering &lt;a href=&quot;http:&#x2F;&#x2F;mail.gnome.org&#x2F;archives&#x2F;tracker-list&#x2F;2010-April&#x2F;msg00044.html&quot;&gt;a bunch of patches&lt;&#x2F;a&gt; to
+terrific job of it --- most recently offering &lt;a href=&quot;http:&#x2F;&#x2F;mail.gnome.org&#x2F;archives&#x2F;tracker-list&#x2F;2010-April&#x2F;msg00044.html&quot;&gt;a bunch of patches&lt;&#x2F;a&gt; to
 fix some linking problems in the code). Oh, and I&#x27;m not the only one
-who noticed +++ &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;developer-of-note-josselin-mouette&#x2F;&quot;&gt;the great Josselin Mouette&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;np237.livejournal.com&#x2F;26532.html&quot;&gt;did offer accolades too&lt;&#x2F;a&gt;
+who noticed --- &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;developer-of-note-josselin-mouette&#x2F;&quot;&gt;the great Josselin Mouette&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;np237.livejournal.com&#x2F;26532.html&quot;&gt;did offer accolades too&lt;&#x2F;a&gt;
 for Michael&#x27;s other work.&lt;&#x2F;p&gt;
 </content>
 	</entry>
@@ -19630,7 +19630,7 @@ for Michael&#x27;s other work.&lt;&#x2F;p&gt;
 		<content type="html">&lt;p&gt;This past weekend, I finally went to this neighbouring country of ours,
 Botswana. This was the first time I ever left South Africa. I was
 welcomed by wonderful people, and the visit was limited to its largest
-city +++ Gaborone +++ which is beautiful, sparse, and vast, when
+city --- Gaborone --- which is beautiful, sparse, and vast, when
 compared to my country&#x27;s own cities.&lt;&#x2F;p&gt;
 &lt;p&gt;One of its residents got shocked when I argued that South Africa
 doesn&#x27;t have a unifying identity; I argued that the country is too
@@ -20251,7 +20251,7 @@ but because it&#x27;s hard to find anyone favouring it in my world (Debian,
 GNOME, Python), a world that proclaim it to be a disgusting pile of
 shit. Anyways let&#x27;s see how the ride will pan out.&lt;&#x2F;p&gt;
 &lt;p&gt;As for Perl, I found its string-handling capabilities exceedingly
-powerful but its syntax ugly and over-varied +++ too much of a free-form
+powerful but its syntax ugly and over-varied --- too much of a free-form
 language. That&#x27;s bad for someone used to the gracious elegance of
 mighty Python. If I could stay away from it, I would!&lt;&#x2F;p&gt;
 </content>
