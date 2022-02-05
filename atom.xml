@@ -4,8 +4,34 @@
 	<link href="https://tshepang.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://tshepang.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-01-31T00:00:00+00:00</updated>
+	<updated>2022-02-04T00:00:00+00:00</updated>
 	<id>https://tshepang.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>idle Rust questions</title>
+		<published>2022-02-04T00:00:00+00:00</published>
+		<updated>2022-02-04T00:00:00+00:00</updated>
+		<link href="https://tshepang.github.io/idle-rust-questions/" type="text/html"/>
+		<id>https://tshepang.github.io/idle-rust-questions/</id>
+		<content type="html">&lt;p&gt;Some curious questions I would ask to anyone that uses Rust seriously.&lt;&#x2F;p&gt;
+&lt;p&gt;What is...&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;the one crate you wish would get more dev attention?&lt;&#x2F;li&gt;
+&lt;li&gt;the one toolchain&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; feature you want stabilized?&lt;&#x2F;li&gt;
+&lt;li&gt;the one toolchain&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; change you would like to see happen?&lt;&#x2F;li&gt;
+&lt;li&gt;the one service you would like to see improved?&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;My own answers:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;dotenv&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;rustdoc-scrape-examples&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;unified toolchain&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; executable (instead of 6)&lt;&#x2F;li&gt;
+&lt;li&gt;the web UI that is &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&quot;&gt;https:&#x2F;&#x2F;crates.io&lt;&#x2F;a&gt;... slow and ugly&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
+&lt;p&gt;rustup, rustc, cargo, rustdoc, rustfmt, and clippy&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>FLOSS I use a-lot</title>
 		<published>2022-01-31T00:00:00+00:00</published>
@@ -90,32 +116,6 @@ most notably Stylo, which does CSS style calculation.&lt;&#x2F;p&gt;
 whose &amp;quot;sole purpose is to keep track of which channels and messages you have read&amp;quot;.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>idle Rust questions</title>
-		<published>2022-01-03T00:00:00+00:00</published>
-		<updated>2022-01-03T00:00:00+00:00</updated>
-		<link href="https://tshepang.github.io/idle-rust-questions/" type="text/html"/>
-		<id>https://tshepang.github.io/idle-rust-questions/</id>
-		<content type="html">&lt;p&gt;Some curious questions I would ask to anyone that uses Rust seriously.&lt;&#x2F;p&gt;
-&lt;p&gt;What is...&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;the one crate you wish would get more dev attention?&lt;&#x2F;li&gt;
-&lt;li&gt;the one toolchain&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; feature you want stabilized?&lt;&#x2F;li&gt;
-&lt;li&gt;the one toolchain&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; change you would like to see happen?&lt;&#x2F;li&gt;
-&lt;li&gt;the one service you would like to see improved?&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;My own answers:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;dotenv&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;code&gt;rustdoc-scrape-examples&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;unified toolchain executable&lt;&#x2F;li&gt;
-&lt;li&gt;the web UI that is &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&quot;&gt;https:&#x2F;&#x2F;crates.io&lt;&#x2F;a&gt;... slow and ugly&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
-&lt;p&gt;rustup, rustc, cargo, rustdoc, and clippy&lt;&#x2F;p&gt;
-&lt;&#x2F;div&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
@@ -806,7 +806,7 @@ built results in the following as the last line:&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Build completed successfully in 0:47:06&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;p&gt;The tools themselves, which get built last, take about 10m to built,
+&lt;p&gt;The tools themselves, which get built last, take about 10m to build,
 and are part of the above total:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;cargo&lt;&#x2F;li&gt;
@@ -6143,15 +6143,8 @@ unfunny humor and misguided romance.&lt;&#x2F;p&gt;
 		<content type="html">&lt;p&gt;I was very surprised when I went through a list of movies I tagged as
 excellent, which I watched first time in 2011, and found several. One
 problem though is that I can&#x27;t rank them because I don&#x27;t fully
-remember the experiences of all. Luckily, I know which of the movies are
-at the top:&lt;&#x2F;p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;megamind-2010&#x2F;&quot;&gt;Megamind&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;4-months-3-weeks-and-2-days-2007&#x2F;&quot;&gt;4 Months, 3 Weeks and 2 Days&lt;&#x2F;a&gt; (tie) &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;crimson-gold-2003&#x2F;&quot;&gt;Crimson Gold&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ol&gt;
-&lt;p&gt;The ranking of those taking second spot may very well be careless
-because I only watched them once, but the impact they had on me is still
-vivid, so they stay, at least for now.&lt;&#x2F;p&gt;
+remember the experiences of all. Luckily, I know which of the movies is
+at the top, &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;megamind-2010&#x2F;&quot;&gt;Megamind&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;Here&#x27;s the rest (ranked alphabetically):&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;downfall-2004&#x2F;&quot;&gt;Downfall&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -6240,14 +6233,10 @@ League&lt;&#x2F;a&gt;, followed by a tie between Jack Black&#x27;s partner in &l
 Libre&lt;&#x2F;a&gt; and the fat oversexed woman in &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;nanny-mcphee-and-the-big-bang-2010&#x2F;&quot;&gt;Nanny McPhee And The Big Bang&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;miscellaneous&quot;&gt;miscellaneous&lt;&#x2F;h2&gt;
 &lt;p&gt;The category of &lt;strong&gt;most important movie&lt;&#x2F;strong&gt; exists in order to recognize
-movies that deliver certain ideas&#x2F;messages I find extremely important;
-The harmful effects of making abortion illegal are portrayed in a very
-powerful way in &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;4-months-3-weeks-and-2-days-2007&#x2F;&quot;&gt;4 Months, 3 Weeks and 2 Days&lt;&#x2F;a&gt;, and that easily makes
-the movie the winner. There&#x27;s a tie between the 2 runner-ups:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;fair-game&#x2F;&quot;&gt;Fair Game&lt;&#x2F;a&gt; (harmful suppression of truth by powerful government
-officials)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
+movies that deliver certain ideas&#x2F;messages I find extremely important.
+&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;fair-game&#x2F;&quot;&gt;Fair Game&lt;&#x2F;a&gt;,
+which is about harmful suppression of truth by powerful government officials,
+wins this one.&lt;&#x2F;p&gt;
 &lt;p&gt;Each repeat of a movie is a different experience, hence this category of
 &lt;strong&gt;best first-time viewing experience&lt;&#x2F;strong&gt;. It&#x27;s won by &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;megamind-2010&#x2F;&quot;&gt;Megamind&lt;&#x2F;a&gt; (it blew
 my mind away due to its seeming perfection) and the runner-up is &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;shrek-forever-after-2010&#x2F;&quot;&gt;Shrek
@@ -15961,24 +15950,6 @@ earth (as a result of global warming) is interesting.&lt;&#x2F;p&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
-		<title>4 Months, 3 Weeks and 2 Days (2007)</title>
-		<published>2011-04-02T00:00:00+00:00</published>
-		<updated>2011-04-02T00:00:00+00:00</updated>
-		<link href="https://tshepang.github.io/4-months-3-weeks-and-2-days-2007/" type="text/html"/>
-		<id>https://tshepang.github.io/4-months-3-weeks-and-2-days-2007/</id>
-		<content type="html">&lt;p&gt;Done with the style of &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;crimson-gold-2003&#x2F;&quot;&gt;&lt;em&gt;Crimson Gold&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;, it&#x27;s a superbly-made and
--acted movie about the ravages of poverty and the problems associated
-with making abortion illegal. The general ill-treatment people give each
-other is horrid, but luckily things are lightened up when our hero&#x27;s
-boyfriend celebrates mom&#x27;s birthday (even though there&#x27;s a sour note).
-And the mom gives quite a good performance (and so does everyone else).&lt;&#x2F;p&gt;
-&lt;p&gt;As for the comparison with &lt;em&gt;Crimson Gold&lt;&#x2F;em&gt;, it has far better acting, but
-doesn&#x27;t cover as much ground and is therefore simpler. I can&#x27;t decide
-which is superior between the two, but &lt;em&gt;Crimson Gold&lt;&#x2F;em&gt; had a stronger
-emotional impact on me. Maybe that makes it a better movie.&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
 		<title>Animal Kingdom (2010)</title>
 		<published>2011-04-02T00:00:00+00:00</published>
 		<updated>2011-04-02T00:00:00+00:00</updated>
@@ -16844,15 +16815,10 @@ strange since he wrote the screenplay, and is considered by the director
 as his mentor. Most notable, it&#x27;s far better than those two boring
 pieces.&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
-&lt;p&gt;&lt;strong&gt;sidenotes&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Jonathan Rosenbaum, the best movie critic I&#x27;ve read, has a &lt;a href=&quot;http:&#x2F;&#x2F;www.jonathanrosenbaum.com&#x2F;?p=6061&quot;&gt;superb
+&lt;p&gt;&lt;strong&gt;sidenote&lt;&#x2F;strong&gt;: Jonathan Rosenbaum, the best movie critic I&#x27;ve read, has a &lt;a href=&quot;http:&#x2F;&#x2F;www.jonathanrosenbaum.com&#x2F;?p=6061&quot;&gt;superb
 and highly-detailed review&lt;&#x2F;a&gt;. He&#x27;s also the one that inspired me to
 watch the movie for he is a huge fan of it, to the point of labeling
-it a masterpiece.&lt;&#x2F;li&gt;
-&lt;li&gt;I&#x27;ve compared this to &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;4-months-3-weeks-and-2-days-2007&#x2F;&quot;&gt;4 Months, 3 Weeks and 2 Days&lt;&#x2F;a&gt;, which is made
-in a similar style.&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
+it a masterpiece.&lt;&#x2F;p&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
