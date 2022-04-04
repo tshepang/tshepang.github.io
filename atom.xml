@@ -4,8 +4,89 @@
 	<link href="https://tshepang.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://tshepang.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-02-19T00:00:00+00:00</updated>
+	<updated>2022-04-04T00:00:00+00:00</updated>
 	<id>https://tshepang.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>2012 review</title>
+		<published>2022-04-04T00:00:00+00:00</published>
+		<updated>2022-04-04T00:00:00+00:00</updated>
+		<link href="https://tshepang.github.io/2012-review/" type="text/html"/>
+		<id>https://tshepang.github.io/2012-review/</id>
+		<content type="html">&lt;p&gt;The &lt;strong&gt;best direction&lt;&#x2F;strong&gt; is from &lt;em&gt;Zero Dark Thirty&lt;&#x2F;em&gt;,
+an unflinching portrayal of a fictionalised hunt for a famous terrorist,
+and interestingly doesn&#x27;t take an obvious moral stance on murder,
+though it does not ignore the toll violence has on victims,
+and some of the perpetrators.
+Attention to detail is impressive too.
+The movie is followed by &lt;em&gt;Freelancers&lt;&#x2F;em&gt;, due to its edginess.&lt;&#x2F;p&gt;
+&lt;p&gt;The &lt;strong&gt;best performance&lt;&#x2F;strong&gt; is by Michael Shannon playing a fearsome hitman
+in &lt;em&gt;The Iceman&lt;&#x2F;em&gt;.
+He is followed by...&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ray Liotta, who plays his boss in the same movie&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Jessica_Chastain&quot;&gt;Jessica Chastain&lt;&#x2F;a&gt;, who leads the cast of &lt;em&gt;Zero Dark Thirty&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Reda_Kateb&quot;&gt;Reda Kateb&lt;&#x2F;a&gt;, also in &lt;em&gt;Zero Dark Thirty&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;My &lt;strong&gt;favorite performance&lt;&#x2F;strong&gt; is by &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Gregory_D._Gadson&quot;&gt;Gregory D. Gadson&lt;&#x2F;a&gt; in &lt;em&gt;Battleship&lt;&#x2F;em&gt;,
+by far the most interesting in the movie.&lt;&#x2F;p&gt;
+&lt;p&gt;Most &lt;strong&gt;desitable gal&lt;&#x2F;strong&gt; is &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Dana_Delany&quot;&gt;Dana Delany&lt;&#x2F;a&gt; in &lt;em&gt;Freelancers&lt;&#x2F;em&gt;,
+followed by April Hernandez Castillo in &lt;em&gt;The History of Future Folk&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The best &lt;strong&gt;visual effects&lt;&#x2F;strong&gt; are in &lt;em&gt;Battleship&lt;&#x2F;em&gt;...
+the aliens, their suits, and the battles.
+Besides the look inside the alien helmets,
+nothing feels new,
+but it&#x27;s all done very well.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>FLOSS I use a-lot</title>
+		<published>2022-04-04T00:00:00+00:00</published>
+		<updated>2022-04-04T00:00:00+00:00</updated>
+		<link href="https://tshepang.github.io/floss-i-use-a-lot/" type="text/html"/>
+		<id>https://tshepang.github.io/floss-i-use-a-lot/</id>
+		<content type="html">&lt;h3 id=&quot;environment&quot;&gt;environment&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Debian&lt;&#x2F;strong&gt;: my primary OS, and also my favorite&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tmux&#x2F;tmux&#x2F;wiki&quot;&gt;tmux&lt;&#x2F;a&gt;: amazingly powerful terminal multiplexer&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Emacs&lt;&#x2F;strong&gt;: pleasant text editing and file management&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;fish&lt;&#x2F;strong&gt;: compared to mighty Bash, it is far more pretty,
+and has a far better command completion system&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;nm-applet&lt;&#x2F;strong&gt;: part of NetworkManager&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;software-development&quot;&gt;software development&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cargo&lt;&#x2F;strong&gt;: central tool for Rust development&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Git&lt;&#x2F;strong&gt;: this one has won the mindshare&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;gui-applications&quot;&gt;GUI applications&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alacritty&#x2F;alacritty&quot;&gt;Alacritty&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Firefox&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.transmissionbt.com&quot;&gt;Transmission&lt;&#x2F;a&gt;: the only torrent client I have ever used&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;VLC&lt;&#x2F;strong&gt;: user interface could be a lot better&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;network-diagnosis&quot;&gt;network diagnosis&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;humdi.net&#x2F;vnstat&quot;&gt;vnstat&lt;&#x2F;a&gt;: nifty network usage viewer&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;ping&lt;&#x2F;strong&gt;: checks general reachability&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;mtr&lt;&#x2F;strong&gt;: interactive traceroute tool&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;miscellaneous-tools&quot;&gt;miscellaneous tools&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;apt&lt;&#x2F;strong&gt;: Debian package management&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;head&lt;&#x2F;strong&gt; and &lt;strong&gt;tail&lt;&#x2F;strong&gt;: included in GNU coreutils suite of tools&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;OpenSSH&lt;&#x2F;strong&gt;: duh!&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;project-of-note-sudo&#x2F;&quot;&gt;Sudo&lt;&#x2F;a&gt;: another duh!&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;rg3.github.io&#x2F;youtube-dl&quot;&gt;youtube-dl&lt;&#x2F;a&gt;: I prefer watching videos locally, with VLC&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;blog.burntsushi.net&#x2F;ripgrep&quot;&gt;ripgrep&lt;&#x2F;a&gt;: a more pleasant &lt;code&gt;grep&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;the.exa.website&quot;&gt;exa&lt;&#x2F;a&gt;: a more pleasant, more pretty &lt;code&gt;ls&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;bat&quot;&gt;bat&lt;&#x2F;a&gt;: a more pleasant, more fancy &lt;code&gt;cat&lt;&#x2F;code&gt;, which also supplants &lt;code&gt;less&lt;&#x2F;code&gt;
+(though it actually makes use of the latter for paging through long text)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;top&lt;&#x2F;strong&gt;: a powerful and flexible process viewer, part of &lt;a href=&quot;https:&#x2F;&#x2F;gitlab.com&#x2F;procps-ng&#x2F;procps&quot;&gt;procps suite&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;adrienverge&#x2F;openfortivpn&quot;&gt;openfortivpn&lt;&#x2F;a&gt;: to connect to work VPN&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>2010 review</title>
 		<published>2022-02-19T00:00:00+00:00</published>
@@ -67,55 +148,6 @@ the child actor in &lt;em&gt;Kate&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
 &lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
 &lt;p&gt;rustup, rustc, cargo, rustdoc, rustfmt, and clippy&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>FLOSS I use a-lot</title>
-		<published>2022-01-31T00:00:00+00:00</published>
-		<updated>2022-01-31T00:00:00+00:00</updated>
-		<link href="https://tshepang.github.io/floss-i-use-a-lot/" type="text/html"/>
-		<id>https://tshepang.github.io/floss-i-use-a-lot/</id>
-		<content type="html">&lt;h3 id=&quot;environment&quot;&gt;environment&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Debian&lt;&#x2F;strong&gt;: my primary OS, and also my favorite&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tmux&#x2F;tmux&#x2F;wiki&quot;&gt;tmux&lt;&#x2F;a&gt;: amazingly powerful terminal multiplexer&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Emacs&lt;&#x2F;strong&gt;: pleasant text editing and file management&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;fish&lt;&#x2F;strong&gt;: compared to mighty Bash, it is far more pretty,
-and has a far better command completion system&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;NetworkManager&lt;&#x2F;strong&gt;: handles all networking on my workstation,
-and accessed via &lt;strong&gt;nmcli&lt;&#x2F;strong&gt; and &lt;strong&gt;nm-applet&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;software-development&quot;&gt;software development&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Cargo&lt;&#x2F;strong&gt;: central tool for Rust development&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Git&lt;&#x2F;strong&gt;: this one has won the mindshare&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;gui-applications&quot;&gt;GUI applications&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alacritty&#x2F;alacritty&quot;&gt;Alacritty&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Firefox&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.transmissionbt.com&quot;&gt;Transmission&lt;&#x2F;a&gt;: the only torrent client I have ever used&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;VLC&lt;&#x2F;strong&gt;: user interface could be a lot better&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;network-diagnosis&quot;&gt;network diagnosis&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;humdi.net&#x2F;vnstat&quot;&gt;vnstat&lt;&#x2F;a&gt;: nifty network usage viewer&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;ping&lt;&#x2F;strong&gt;: checks general reachability&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;mtr&lt;&#x2F;strong&gt;: interactive traceroute tool&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;miscellaneous-tools&quot;&gt;miscellaneous tools&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;apt&lt;&#x2F;strong&gt;: Debian package management&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;head&lt;&#x2F;strong&gt; and &lt;strong&gt;tail&lt;&#x2F;strong&gt;: included in GNU coreutils suite of tools&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;OpenSSH&lt;&#x2F;strong&gt;: duh!&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;project-of-note-sudo&#x2F;&quot;&gt;Sudo&lt;&#x2F;a&gt;: another duh!&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;rg3.github.io&#x2F;youtube-dl&quot;&gt;youtube-dl&lt;&#x2F;a&gt;: I prefer watching videos locally, with VLC&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;blog.burntsushi.net&#x2F;ripgrep&quot;&gt;ripgrep&lt;&#x2F;a&gt;: a more pleasant &lt;code&gt;grep&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;the.exa.website&quot;&gt;exa&lt;&#x2F;a&gt;: a more pleasant, more pretty &lt;code&gt;ls&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;bat&quot;&gt;bat&lt;&#x2F;a&gt;: a more pleasant, more fancy &lt;code&gt;cat&lt;&#x2F;code&gt;, which also supplants &lt;code&gt;less&lt;&#x2F;code&gt;
-(though it actually makes use of the latter for paging through long text)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;top&lt;&#x2F;strong&gt;: a powerful and flexible process viewer, part of &lt;a href=&quot;https:&#x2F;&#x2F;gitlab.com&#x2F;procps-ng&#x2F;procps&quot;&gt;procps suite&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
@@ -472,38 +504,6 @@ My favorite language (and ecosystem) is &lt;a href=&quot;https:&#x2F;&#x2F;rust-
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackexchange.com&#x2F;users&#x2F;125744&quot;&gt;Stack Exchange&lt;&#x2F;a&gt; (help)&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;The sources for this blog can be found &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tshepang&#x2F;blog&quot;&gt;on GitHub&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>2012 review</title>
-		<published>2021-08-14T00:00:00+00:00</published>
-		<updated>2021-08-14T00:00:00+00:00</updated>
-		<link href="https://tshepang.github.io/2012-review/" type="text/html"/>
-		<id>https://tshepang.github.io/2012-review/</id>
-		<content type="html">&lt;p&gt;The &lt;strong&gt;best direction&lt;&#x2F;strong&gt; is from &lt;em&gt;Zero Dark Thirty&lt;&#x2F;em&gt;,
-an unflinching portrayal of a fictionalised hunt for a famous terrorist,
-and interestingly doesn&#x27;t take an obvious moral stance on murder,
-though it does not ignore the toll violence has on victims,
-and some of the perpetrators.
-Attention to detail is impressive too.
-The movie is followed by &lt;em&gt;Freelancers&lt;&#x2F;em&gt;, due to its edginess.&lt;&#x2F;p&gt;
-&lt;p&gt;The &lt;strong&gt;best performance&lt;&#x2F;strong&gt; is by Michael Shannon playing a fearsome hitman
-in &lt;em&gt;The Iceman&lt;&#x2F;em&gt;.
-He is followed by...&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Ray Liotta, who plays his boss in the same movie&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Jessica_Chastain&quot;&gt;Jessica Chastain&lt;&#x2F;a&gt;, who leads the cast of &lt;em&gt;Zero Dark Thirty&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Reda_Kateb&quot;&gt;Reda Kateb&lt;&#x2F;a&gt;, also in &lt;em&gt;Zero Dark Thirty&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;My &lt;strong&gt;favorite performance&lt;&#x2F;strong&gt; is by &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Gregory_D._Gadson&quot;&gt;Gregory D. Gadson&lt;&#x2F;a&gt; in &lt;em&gt;Battleship&lt;&#x2F;em&gt;,
-by far the most interesting in the movie.&lt;&#x2F;p&gt;
-&lt;p&gt;Most &lt;strong&gt;desitable gal&lt;&#x2F;strong&gt; is &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Dana_Delany&quot;&gt;Dana Delany&lt;&#x2F;a&gt; in &lt;em&gt;Freelancers&lt;&#x2F;em&gt;,
-followed by April Hernandez Castillo in &lt;em&gt;The History of Future Folk&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;The best &lt;strong&gt;visual effects&lt;&#x2F;strong&gt; are in &lt;em&gt;Battleship&lt;&#x2F;em&gt;...
-the aliens, their suits, and the battles.
-Besides the look inside the alien helmets,
-nothing feels new,
-but it&#x27;s all done very well.&lt;&#x2F;p&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
