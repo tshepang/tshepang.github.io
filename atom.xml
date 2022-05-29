@@ -17,6 +17,42 @@ and cartoonishly-directed &lt;em&gt;The Silence of the Lambs&lt;&#x2F;em&gt;.&lt
 </content>
 	</entry>
 	<entry xml:lang="en">
+		<title>Rust search tools to watch</title>
+		<published>2022-05-29T00:00:00+00:00</published>
+		<updated>2022-05-29T00:00:00+00:00</updated>
+		<link href="https://tshepang.github.io/rust-search-tools-to-watch/" type="text/html"/>
+		<id>https://tshepang.github.io/rust-search-tools-to-watch/</id>
+		<content type="html">&lt;p&gt;These are well-maintained and see some heavy use:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quickwit-oss&#x2F;quickwit&quot;&gt;Quickwit&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;quot;search engine for log managment&amp;quot;&lt;&#x2F;li&gt;
+&lt;li&gt;build on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quickwit-oss&#x2F;tantivy&quot;&gt;Tantivy&lt;&#x2F;a&gt;, an equivalent of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;apache&#x2F;lucene&quot;&gt;Lucene&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;search API compatible with that of Elasticsearch&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;meilisearch&#x2F;meilisearch&quot;&gt;Meilisearch&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;khonsulabs&#x2F;bonsaidb&quot;&gt;BonsaiDb&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;quot;document store&amp;quot;&lt;&#x2F;li&gt;
+&lt;li&gt;used &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;khonsulabs&#x2F;nebari&quot;&gt;Nebari&lt;&#x2F;a&gt; as backing store (&lt;a href=&quot;https:&#x2F;&#x2F;bonsaidb.io&#x2F;blog&#x2F;durable-writes&quot;&gt;update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;valeriansaliou&#x2F;sonic&quot;&gt;Sonic&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;quot;a schema-less search backend&amp;quot;&lt;&#x2F;li&gt;
+&lt;li&gt;uses &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;facebook&#x2F;rocksdb&quot;&gt;RocksDB&lt;&#x2F;a&gt; as backing store&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
 		<title>Rust things I most anticipate</title>
 		<published>2022-05-26T00:00:00+00:00</published>
 		<updated>2022-05-26T00:00:00+00:00</updated>
@@ -105,39 +141,6 @@ and I especially love the &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&
 for the ferocious energy he brings to the role.
 The most &lt;strong&gt;desirable guy&lt;&#x2F;strong&gt; is &lt;a href=&quot;https:&#x2F;&#x2F;www.imdb.com&#x2F;name&#x2F;nm0407507&#x2F;mediaviewer&#x2F;rm4211847680&quot;&gt;Hiroyuki Ikeuchi&lt;&#x2F;a&gt; in the same movie,
 one of the most beautiful men I&#x27;ve yet seen.&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Rust search tools to watch</title>
-		<published>2022-04-09T00:00:00+00:00</published>
-		<updated>2022-04-09T00:00:00+00:00</updated>
-		<link href="https://tshepang.github.io/rust-search-tools-to-watch/" type="text/html"/>
-		<id>https://tshepang.github.io/rust-search-tools-to-watch/</id>
-		<content type="html">&lt;p&gt;These are well-maintained and see some heavy use:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quickwit-oss&#x2F;quickwit&quot;&gt;Quickwit&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&amp;quot;search engine for log managment&amp;quot;&lt;&#x2F;li&gt;
-&lt;li&gt;build on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quickwit-oss&#x2F;tantivy&quot;&gt;Tantivy&lt;&#x2F;a&gt;, an equivalent of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;apache&#x2F;lucene&quot;&gt;Lucene&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;search API compatible with that of Elasticsearch&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;khonsulabs&#x2F;bonsaidb&quot;&gt;BonsaiDb&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&amp;quot;document sotre&amp;quot;&lt;&#x2F;li&gt;
-&lt;li&gt;used &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;khonsulabs&#x2F;nebari&quot;&gt;Nebari&lt;&#x2F;a&gt; as backing store&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;valeriansaliou&#x2F;sonic&quot;&gt;Sonic&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&amp;quot;a schema-less search backend&amp;quot;&lt;&#x2F;li&gt;
-&lt;li&gt;uses &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;facebook&#x2F;rocksdb&quot;&gt;RocksDB&lt;&#x2F;a&gt; as backing store&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
