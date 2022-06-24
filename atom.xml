@@ -53,32 +53,15 @@ the compiler is not certified, leaving C and Ada as the only allowed languages
 </content>
 	</entry>
 	<entry xml:lang="en">
-		<title>small Rust projects I wish were worked on</title>
-		<published>2022-06-19T00:00:00+00:00</published>
-		<updated>2022-06-19T00:00:00+00:00</updated>
-		<link href="https://tshepang.github.io/small-rust-projects-i-wish-were-worked-on/" type="text/html"/>
-		<id>https://tshepang.github.io/small-rust-projects-i-wish-were-worked-on/</id>
-		<content type="html">&lt;p&gt;Here are some small project ideas:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Make &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;git2-rs&#x2F;issues&#x2F;623&quot;&gt;git2-rs use Rustls&lt;&#x2F;a&gt;, which would replace a dependency on OpenSSL.
-There are 2 reasons why this is appealing:
-&lt;ul&gt;
-&lt;li&gt;OpenSSL is written in C, and its code quality is not considered stellar&lt;&#x2F;li&gt;
-&lt;li&gt;C dependencies are not as pleasant to work with as Rust ones in Cargo,
-both for users and for maintainers&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
 		<title>Rust things I most anticipate</title>
-		<published>2022-06-07T00:00:00+00:00</published>
-		<updated>2022-06-07T00:00:00+00:00</updated>
+		<published>2022-06-24T00:00:00+00:00</published>
+		<updated>2022-06-24T00:00:00+00:00</updated>
 		<link href="https://tshepang.github.io/rust-things-i-most-anticipate/" type="text/html"/>
 		<id>https://tshepang.github.io/rust-things-i-most-anticipate/</id>
 		<content type="html">&lt;p&gt;The following are in progress:&lt;&#x2F;p&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.memorysafety.org&#x2F;blog&#x2F;memory-safety-in-linux-kernel&quot;&gt;Allowing Rust usage in official Linux kernel&lt;&#x2F;a&gt; (&lt;a href=&quot;https:&#x2F;&#x2F;lore.kernel.org&#x2F;lkml&#x2F;20220523020209.11810-1-ojeda@kernel.org&quot;&gt;latest proposal&lt;&#x2F;a&gt;),
+though this would initially be limited to device drivers&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&quot;&gt;hyper&lt;&#x2F;a&gt; being used as default HTTP backend of cURL (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;orgs&#x2F;hyperium&#x2F;projects&#x2F;2&#x2F;views&#x2F;1&quot;&gt;Hyper progress
 tracker&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;curl&#x2F;curl&#x2F;wiki&#x2F;Hyper&quot;&gt;cURL progress tracker&lt;&#x2F;a&gt;),
 because the latter has billions of installations&lt;&#x2F;li&gt;
@@ -101,8 +84,25 @@ platforms (&lt;a href=&quot;https:&#x2F;&#x2F;blog.antoyo.xyz&#x2F;rustc_codegen
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;security.googleblog.com&#x2F;2021&#x2F;09&#x2F;an-update-on-memory-safety-in-chrome.html?m=1&quot;&gt;Planned inclusion in Google Chrome&lt;&#x2F;a&gt;,
 a browser found in billions of devices&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&quot;&gt;Pijul&lt;&#x2F;a&gt;, a superior alternative to Git, &lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&#x2F;posts&#x2F;2020-11-07-towards-1.0&quot;&gt;reaching stability&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lore.kernel.org&#x2F;lkml&#x2F;20220523020209.11810-1-ojeda@kernel.org&quot;&gt;Allowing Rust usage in official Linux kernel&lt;&#x2F;a&gt;,
-though this would initially be limited to device drivers&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>small Rust projects I wish were worked on</title>
+		<published>2022-06-19T00:00:00+00:00</published>
+		<updated>2022-06-19T00:00:00+00:00</updated>
+		<link href="https://tshepang.github.io/small-rust-projects-i-wish-were-worked-on/" type="text/html"/>
+		<id>https://tshepang.github.io/small-rust-projects-i-wish-were-worked-on/</id>
+		<content type="html">&lt;p&gt;Here are some small project ideas:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Make &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;git2-rs&#x2F;issues&#x2F;623&quot;&gt;git2-rs use Rustls&lt;&#x2F;a&gt;, which would replace a dependency on OpenSSL.
+There are 2 reasons why this is appealing:
+&lt;ul&gt;
+&lt;li&gt;OpenSSL is written in C, and its code quality is not considered stellar&lt;&#x2F;li&gt;
+&lt;li&gt;C dependencies are not as pleasant to work with as Rust ones in Cargo,
+both for users and for maintainers&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
 	</entry>
