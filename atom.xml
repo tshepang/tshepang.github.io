@@ -31,6 +31,28 @@ who plays a mentally challenged lover in &lt;em&gt;An Education&lt;&#x2F;em&gt;.
 </content>
 	</entry>
 	<entry xml:lang="en">
+		<title>Rust ecosystem weaknesses</title>
+		<published>2022-06-24T00:00:00+00:00</published>
+		<updated>2022-06-24T00:00:00+00:00</updated>
+		<link href="https://tshepang.github.io/rust-ecosystem-weaknesses/" type="text/html"/>
+		<id>https://tshepang.github.io/rust-ecosystem-weaknesses/</id>
+		<content type="html">&lt;p&gt;These are problems Rust face that have nothing to do with its
+capabilities as a tool,
+but rather more requiring work on libraries and advocacy:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;iOS: Rust is not tier 1 on this major platform
+(installations number the 100s of millions),
+which would help it be an alternative to Swift (and Objective-C)&lt;&#x2F;li&gt;
+&lt;li&gt;Android: Rust is not tier 1 on this major platform
+(installations number the billions),
+which would help it be an alternative to Kotlin (and Java)&lt;&#x2F;li&gt;
+&lt;li&gt;regulated industries, like safety critical systems:
+the compiler is not certified, leaving C and Ada as the only allowed languages
+(&lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;blog&#x2F;ferrocene-language-specification&quot;&gt;example initiative&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
 		<title>small Rust projects I wish were worked on</title>
 		<published>2022-06-19T00:00:00+00:00</published>
 		<updated>2022-06-19T00:00:00+00:00</updated>
