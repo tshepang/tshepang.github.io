@@ -4,8 +4,96 @@
 	<link href="https://tshepang.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://tshepang.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-06-24T00:00:00+00:00</updated>
+	<updated>2022-06-25T00:00:00+00:00</updated>
 	<id>https://tshepang.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Rust 2.0 wishlist</title>
+		<published>2022-06-25T00:00:00+00:00</published>
+		<updated>2022-06-25T00:00:00+00:00</updated>
+		<link href="https://tshepang.github.io/rust-2-0-wishlist/" type="text/html"/>
+		<id>https://tshepang.github.io/rust-2-0-wishlist/</id>
+		<content type="html">&lt;p&gt;There is a strong commitment for Rust not to break backwards compatibility,
+meaning that all code that compiled with Rust v1.0 should compile with all
+future Rust versions, all but for exceptional circumstances.
+The effort is commendable, and results in kool things like &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;edition-guide&#x2F;editions&quot;&gt;Editions&lt;&#x2F;a&gt;,
+but mistakes&#x2F;cruft&#x2F;poor choices are bound to happen that cannot be fixed with such.
+That is, I wish we will have a breaking release at some point,
+and the pain of such a breaking change could be relieved&#x2F;eliminated with
+planning and migration tooling.&lt;&#x2F;p&gt;
+&lt;p&gt;That said,
+following are my favorite breaking things I want in Rust.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;lang&quot;&gt;lang&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Assigning values to struct bindings should use the equal sign, not
+the colon:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; now
+&lt;&#x2F;span&gt;&lt;span&gt;Shoe { size: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span&gt;, style: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;sneaker&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; };
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; dream
+&lt;&#x2F;span&gt;&lt;span&gt;Shoe { size = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span&gt;, style = &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;sneaker&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; };
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This would be consistent with the rest of the language.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;std&quot;&gt;std&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;All collections types removed, except these basic ones: Vec,
+HashMap, and HashSet. Also, they would also be available from
+top-level (i.e. &lt;code&gt;std::{Vec, HashMap, HashSet}&lt;&#x2F;code&gt;), resulting in
+&lt;code&gt;std::collections&lt;&#x2F;code&gt; removal.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Rename &lt;code&gt;Vec&lt;&#x2F;code&gt; to &lt;code&gt;Array&lt;&#x2F;code&gt;, a more clear&#x2F;obvious name.
+An alternative is &lt;code&gt;List&lt;&#x2F;code&gt;, but that type in Python accepts members of
+different types, which is not the case for &lt;code&gt;Vec&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Consistent names for string-y types:&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;&lt;&#x2F;th&gt;&lt;th&gt;current&lt;&#x2F;th&gt;&lt;th&gt;wish&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;string&lt;&#x2F;td&gt;&lt;td&gt;str&lt;&#x2F;td&gt;&lt;td&gt;Str&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;&#x2F;td&gt;&lt;td&gt;String&lt;&#x2F;td&gt;&lt;td&gt;StrOwned&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;os string&lt;&#x2F;td&gt;&lt;td&gt;OsStr&lt;&#x2F;td&gt;&lt;td&gt;OsStr (same)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;&#x2F;td&gt;&lt;td&gt;OsString&lt;&#x2F;td&gt;&lt;td&gt;OsStrOwned&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;C string&lt;&#x2F;td&gt;&lt;td&gt;CStr&lt;&#x2F;td&gt;&lt;td&gt;CStr (same)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;&#x2F;td&gt;&lt;td&gt;CString&lt;&#x2F;td&gt;&lt;td&gt;CStrOwned&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;fs path&lt;&#x2F;td&gt;&lt;td&gt;Path&lt;&#x2F;td&gt;&lt;td&gt;Path (same)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;&#x2F;td&gt;&lt;td&gt;PathBuf&lt;&#x2F;td&gt;&lt;td&gt;PathOwned&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;Not exactly happy with above, but much better than the current &#x27;mess&#x27;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Remove &lt;code&gt;std::sync::mpsc&lt;&#x2F;code&gt; from stdlib, making it available
+externally... it does not feel general enough. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;42397#issuecomment-315867774&quot;&gt;more issues&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Remove per-type methods where trait impls offer same functionality,
+for generality&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; remove
+&lt;&#x2F;span&gt;&lt;span&gt;PathBuf::as_path
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; ... in favor of
+&lt;&#x2F;span&gt;&lt;span&gt;PathBuf::as_ref
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; remove
+&lt;&#x2F;span&gt;&lt;span&gt;Path::to_path_buf
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; ... in favor of
+&lt;&#x2F;span&gt;&lt;span&gt;Path::to_owned
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Remove all deprecated APIs, most notable being the &lt;code&gt;try!&lt;&#x2F;code&gt; macro&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;cargo&quot;&gt;cargo&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Do not allow crate names with underscores, because taste...&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;serde_json&lt;&#x2F;code&gt; (bad)&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;serde-json&lt;&#x2F;code&gt; (good)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>2009 review</title>
 		<published>2022-06-24T00:00:00+00:00</published>
@@ -438,81 +526,6 @@ She is followed by &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki
 		<content type="html">&lt;p&gt;My &lt;strong&gt;favorite performance&lt;&#x2F;strong&gt; is a tie between Tilda Swinton (playing
 head of a powerful company) and Byun Hee-bong (playing grandfather) in &lt;em&gt;Okja&lt;&#x2F;em&gt;.
 Both offer beautiful and unusual humor.&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Rust 2.0 wishlist</title>
-		<published>2021-12-18T00:00:00+00:00</published>
-		<updated>2021-12-18T00:00:00+00:00</updated>
-		<link href="https://tshepang.github.io/rust-2-0-wishlist/" type="text/html"/>
-		<id>https://tshepang.github.io/rust-2-0-wishlist/</id>
-		<content type="html">&lt;p&gt;There is a strong commitment for Rust not to break backwards compatibility,
-meaning that all code that compiled with Rust v1.0 should compile with all
-future Rust versions, all but for exceptional circumstances.
-The effort is commendable, and results in kool things like &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;edition-guide&#x2F;editions&quot;&gt;Editions&lt;&#x2F;a&gt;,
-but mistakes&#x2F;cruft&#x2F;poor choices are bound to happen that cannot be fixed with such.
-That is, I wish we will have a breaking release at some point,
-and the pain of such a breaking change could be relieved&#x2F;eliminated with
-planning and migration tooling.&lt;&#x2F;p&gt;
-&lt;p&gt;That said,
-following are my favorite breaking things I want in Rust.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;lang&quot;&gt;lang&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Assigning values to struct bindings should use the equal sign, not
-the colon:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; now
-&lt;&#x2F;span&gt;&lt;span&gt;Shoe { size: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span&gt;, style: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;sneaker&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; };
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; dream
-&lt;&#x2F;span&gt;&lt;span&gt;Shoe { size = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span&gt;, style = &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;sneaker&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; };
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;This would be consistent with the rest of the language.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;std&quot;&gt;std&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;All collections types removed, except these basic ones: Vec,
-HashMap, and HashSet. Also, they would also be available from
-top-level (i.e. &lt;code&gt;std::{Vec, HashMap, HashSet}&lt;&#x2F;code&gt;), resulting in
-&lt;code&gt;std::collections&lt;&#x2F;code&gt; removal.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Rename &lt;code&gt;Vec&lt;&#x2F;code&gt; to &lt;code&gt;Array&lt;&#x2F;code&gt;, a more clear&#x2F;obvious name.
-An alternative is &lt;code&gt;List&lt;&#x2F;code&gt;, but that type in Python accepts members of
-different types, which is not the case for &lt;code&gt;Vec&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Consistent names for string-y types:&lt;&#x2F;p&gt;
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;&lt;&#x2F;th&gt;&lt;th&gt;current&lt;&#x2F;th&gt;&lt;th&gt;wish&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
-&lt;tr&gt;&lt;td&gt;string&lt;&#x2F;td&gt;&lt;td&gt;str&lt;&#x2F;td&gt;&lt;td&gt;Str&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;&#x2F;td&gt;&lt;td&gt;String&lt;&#x2F;td&gt;&lt;td&gt;StrOwned&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td&gt;os string&lt;&#x2F;td&gt;&lt;td&gt;OsStr&lt;&#x2F;td&gt;&lt;td&gt;OsStr (same)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;&#x2F;td&gt;&lt;td&gt;OsString&lt;&#x2F;td&gt;&lt;td&gt;OsStrOwned&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td&gt;C string&lt;&#x2F;td&gt;&lt;td&gt;CStr&lt;&#x2F;td&gt;&lt;td&gt;CStr (same)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;&#x2F;td&gt;&lt;td&gt;CString&lt;&#x2F;td&gt;&lt;td&gt;CStrOwned&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td&gt;fs path&lt;&#x2F;td&gt;&lt;td&gt;Path&lt;&#x2F;td&gt;&lt;td&gt;Path (same)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;&#x2F;td&gt;&lt;td&gt;PathBuf&lt;&#x2F;td&gt;&lt;td&gt;PathOwned&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
-&lt;p&gt;Not exactly happy with above, but much better than the current &#x27;mess&#x27;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Remove &lt;code&gt;std::sync::mpsc&lt;&#x2F;code&gt; from stdlib, making it available
-externally... it does not feel general enough. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;42397#issuecomment-315867774&quot;&gt;more issues&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Remove the &lt;code&gt;try!&lt;&#x2F;code&gt; macro... it has a better replacement in the form
-of the question_mark (&lt;code&gt;?&lt;&#x2F;code&gt;) operator.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;cargo&quot;&gt;cargo&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Do not allow crate names with underscores, because taste...&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;code&gt;serde_json&lt;&#x2F;code&gt; (bad)&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;code&gt;serde-json&lt;&#x2F;code&gt; (good)&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
