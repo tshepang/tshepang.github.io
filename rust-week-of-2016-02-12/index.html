@@ -62,20 +62,24 @@
     </header>
     <div itemprop="articleBody">
       <br>
-      <p>I <a href="https://github.com/rust-lang/rust/pull/31762">submitted</a> <a href="https://github.com/rust-lang/rust/pull/31763">four</a> <a href="https://github.com/rust-lang/rust/pull/31764">documentation</a> <a href="https://github.com/rust-lang/rust/pull/31765">changes</a> this time. I also
+      <p>I
 enjoyed reading <a href="http://www.matusiak.eu/numerodix/blog/2016/1/10/two-weeks-rust/">Two Weeks of Rust</a>, a blog post resulting from building
 something non-trivial using the language.</p>
 <p>In terms of learning, I've always been wondering why one does not need
 <code>mut</code> when reading values from an iterator via a <code>for loop</code> , but does
 not when reading them using <code>next</code>:</p>
-<p>::: {.sourcecode}
-rust</p>
-<p>let it = std::env::args() // iterator over CLI arguments for value in it
-{ do_something(value); }</p>
-<p>// versus</p>
-<p>let mut it = std::env::args() // iterator over CLI arguments
-do_something(it.next()); do_something(it.next()); ...
-:::</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let</span><span> it = std::env::args() </span><span style="color:#65737e;">// iterator over CLI arguments
+</span><span style="color:#b48ead;">for</span><span> value in it {
+</span><span>    </span><span style="color:#96b5b4;">do_something</span><span>(value);
+</span><span>}
+</span><span>
+</span><span style="color:#65737e;">// versus
+</span><span>
+</span><span style="color:#b48ead;">let mut</span><span> it = std::env::args() </span><span style="color:#65737e;">// iterator over CLI arguments
+</span><span style="color:#96b5b4;">do_something</span><span>(it.</span><span style="color:#96b5b4;">next</span><span>());
+</span><span style="color:#96b5b4;">do_something</span><span>(it.</span><span style="color:#96b5b4;">next</span><span>());
+</span><span>...
+</span></code></pre>
 <p>I think with the <code>for loop</code>, <code>it</code> cannot be used anymore, and that's
 why it can get away with being immutable. I'm not 100% yet... this
 feels like a lousy explanation.</p>

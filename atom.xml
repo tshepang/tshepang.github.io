@@ -2675,20 +2675,24 @@ explanation.&lt;&#x2F;li&gt;
 		<updated>2016-02-18T00:00:00+00:00</updated>
 		<link rel="alternate" href="https://tshepang.github.io/rust-week-of-2016-02-12/" type="text/html"/>
 		<id>https://tshepang.github.io/rust-week-of-2016-02-12/</id>
-		<content type="html">&lt;p&gt;I &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;31762&quot;&gt;submitted&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;31763&quot;&gt;four&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;31764&quot;&gt;documentation&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;31765&quot;&gt;changes&lt;&#x2F;a&gt; this time. I also
+		<content type="html">&lt;p&gt;I
 enjoyed reading &lt;a href=&quot;http:&#x2F;&#x2F;www.matusiak.eu&#x2F;numerodix&#x2F;blog&#x2F;2016&#x2F;1&#x2F;10&#x2F;two-weeks-rust&#x2F;&quot;&gt;Two Weeks of Rust&lt;&#x2F;a&gt;, a blog post resulting from building
 something non-trivial using the language.&lt;&#x2F;p&gt;
 &lt;p&gt;In terms of learning, I&#x27;ve always been wondering why one does not need
 &lt;code&gt;mut&lt;&#x2F;code&gt; when reading values from an iterator via a &lt;code&gt;for loop&lt;&#x2F;code&gt; , but does
 not when reading them using &lt;code&gt;next&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;let it = std::env::args() &#x2F;&#x2F; iterator over CLI arguments for value in it
-{ do_something(value); }&lt;&#x2F;p&gt;
-&lt;p&gt;&#x2F;&#x2F; versus&lt;&#x2F;p&gt;
-&lt;p&gt;let mut it = std::env::args() &#x2F;&#x2F; iterator over CLI arguments
-do_something(it.next()); do_something(it.next()); ...
-:::&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; it = std::env::args() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; iterator over CLI arguments
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;for&lt;&#x2F;span&gt;&lt;span&gt; value in it {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;do_something&lt;&#x2F;span&gt;&lt;span&gt;(value);
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; versus
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let mut&lt;&#x2F;span&gt;&lt;span&gt; it = std::env::args() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; iterator over CLI arguments
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;do_something&lt;&#x2F;span&gt;&lt;span&gt;(it.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;next&lt;&#x2F;span&gt;&lt;span&gt;());
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;do_something&lt;&#x2F;span&gt;&lt;span&gt;(it.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;next&lt;&#x2F;span&gt;&lt;span&gt;());
+&lt;&#x2F;span&gt;&lt;span&gt;...
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;I think with the &lt;code&gt;for loop&lt;&#x2F;code&gt;, &lt;code&gt;it&lt;&#x2F;code&gt; cannot be used anymore, and that&#x27;s
 why it can get away with being immutable. I&#x27;m not 100% yet... this
 feels like a lousy explanation.&lt;&#x2F;p&gt;
@@ -2718,16 +2722,6 @@ direction:&lt;&#x2F;p&gt;
 &lt;li&gt;The girls running naked&lt;&#x2F;li&gt;
 &lt;li&gt;The prison confession&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Rust week of 2016-02-05</title>
-		<published>2016-02-11T00:00:00+00:00</published>
-		<updated>2016-02-11T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://tshepang.github.io/rust-week-of-2016-02-05/" type="text/html"/>
-		<id>https://tshepang.github.io/rust-week-of-2016-02-05/</id>
-		<content type="html">&lt;p&gt;As was the case with so many of the previous entries in this series, I
-didn&#x27;t do much this week, submitting a &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;31582&quot;&gt;mere&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;31584&quot;&gt;three&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;31585&quot;&gt;changes&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
