@@ -1,53 +1,74 @@
 <!DOCTYPE html>
-<html lang="en-US">
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link rel="alternate" type="application/atom+xml" title="Atom/RSS Feed" href="https://tshepang.github.io/atom.xml" />
-  <meta name="robots" content="index, follow" />
-  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-  <title>removing obsolete packages from a local Debian repository | Tshepang logs</title>
-  <meta name="copyright" content="Tshepang logs" />
-  <meta name="description" content="" />
-  <link rel="canonical" href="https://tshepang.github.io/removing-obsolete-packages-from-a-local-debian-repository/" />
-  <meta name="keywords" content="" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <noscript><link rel="stylesheet" href="https://tshepang.github.io/nojs.css" /></noscript>
-</head>
-<body>
-  <header>
-    <nav>
-      <div><h1><a href="https://tshepang.github.io/">Tshepang logs</a></h1></div>
-      <div>
-        <ul><li> <h2><a href="https://tshepang.github.io/about-me">about</a></h2> </li><li> <h2><a href="https://tshepang.github.io/tags">tags</a></h2> </li><li> <h2><a href="https://tshepang.github.io/categories/movies">movies</a></h2> </li></ul>
-      </div>
-      <div>
-        <form class="js" name="goSearch">
-          <div class="searchd">
-            <input id="userinput" type="text" placeholder="Search" autocomplete="off" title="Search" />
-            <button type="submit" title="Search"><span class="si">&#8981;</span></button>
-          </div>
-          <div><div id="suggestions"></div></div>
-        </form>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <article>
-        <h1><a href="https://tshepang.github.io/removing-obsolete-packages-from-a-local-debian-repository/">removing obsolete packages from a local Debian repository</a></h1>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-    <h2 id="background-info">background info</h2>
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://tshepang.github.io/atom.xml">
+      
+
+      
+          <link rel="stylesheet" href="https://tshepang.github.io/site.css">
+      
+
+      
+      
+    </head>
+
+    <body class="hack dark main container">
+        
+    
+        
+                
+                    <header>
+                        <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https:&#x2F;&#x2F;tshepang.github.io&#x2F;about-me">
+                                <span itemprop="name">about
+                                </span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https:&#x2F;&#x2F;tshepang.github.io&#x2F;tags">
+                                <span itemprop="name">tags
+                                </span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https:&#x2F;&#x2F;tshepang.github.io&#x2F;categories&#x2F;movies">
+                                <span itemprop="name">movies
+                                </span></a>
+                        
+                        </nav>
+                    </header>
+                
+            
+    
+
+<article itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1 itemprop="headline">removing obsolete packages from a local Debian repository</h1>
+        <span class="muted">
+    2012-02-21
+</span>
+    </header>
+    <div itemprop="articleBody">
+      <br>
+      <h2 id="background-info">background info</h2>
 <p>Bandwidth in South Africa is neither readily-available nor cheap, so
 whenever I fetch and install Debian packages (e.g. <code>apt-get upgrade</code>), I
 also keep them in a local custom repository. I use a great tool named
 <a href="https://salsa.debian.org/brlink/reprepro">reprepro</a> for this, and this is the command I use to update that
 repository, given the location of the fresh package files:</p>
-<pre class="z-code"><code><span class="z-text z-plain">$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang /var/cache/apt/archives/*deb
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang /var/cache/apt/archives/*deb
 </span></code></pre>
 <p>What's nice about the command is that, if there is an older version of
 the package I'm adding, it gets replaced, and the package index is
@@ -70,72 +91,91 @@ using that package, it is just a waste of resources (CPU and disk
 usage).</li>
 </ul>
 <p>To help with the cleanup, I have written the following simple script:</p>
-<pre data-lang="python" class="language-python z-code"><code class="language-python" data-lang="python"><span class="z-source z-python"><span class="z-comment z-line z-number-sign z-python"><span class="z-punctuation z-definition z-comment z-python">#</span>!/usr/bin/env python3
-</span>
-<span class="z-meta z-statement z-import z-python"><span class="z-keyword z-control z-import z-python">import</span> <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">apt_pkg</span></span></span>
-<span class="z-meta z-statement z-import z-python"><span class="z-keyword z-control z-import z-python">import</span> <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">gzip</span></span></span>
-<span class="z-meta z-statement z-import z-python"><span class="z-keyword z-control z-import z-python">import</span> <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">subprocess</span></span></span>
-
-<span class="z-meta z-qualified-name z-python"><span class="z-variable z-other z-constant z-python">CUSTOM_REPO</span></span> <span class="z-keyword z-operator z-assignment z-python">=</span> <span class="z-meta z-group z-python"><span class="z-punctuation z-section z-group z-begin z-python">(</span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">/home/wena/.custom_repo/dists/tshepang/main/<span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span>
-               <span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">binary-i386/Packages.gz<span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span><span class="z-punctuation z-section z-group z-end z-python">)</span></span>
-<span class="z-meta z-qualified-name z-python"><span class="z-variable z-other z-constant z-python">WHEEZY_REPO</span></span> <span class="z-keyword z-operator z-assignment z-python">=</span> <span class="z-meta z-group z-python"><span class="z-punctuation z-section z-group z-begin z-python">(</span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">/var/lib/apt/lists/ftp.de.debian.org_debian_dists_testing_<span class="z-constant z-other z-placeholder z-python"><span class="z-punctuation z-definition z-placeholder z-begin z-python">{</span><span class="z-punctuation z-definition z-placeholder z-end z-python">}</span></span>_<span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span>
-               <span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">binary-i386_Packages<span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span><span class="z-punctuation z-section z-group z-end z-python">)</span></span>
-
-
-<span class="z-meta z-function z-python"><span class="z-storage z-type z-function z-python"><span class="z-keyword z-declaration z-function z-python">def</span></span> <span class="z-entity z-name z-function z-python"><span class="z-meta z-generic-name z-python">main</span></span></span><span class="z-meta z-function z-parameters z-python"><span class="z-punctuation z-section z-parameters z-begin z-python">(</span></span><span class="z-meta z-function z-parameters z-python"><span class="z-punctuation z-section z-parameters z-end z-python">)</span></span><span class="z-meta z-function z-python"><span class="z-punctuation z-section z-function z-begin z-python">:</span></span>
-    <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">custom_repo</span></span> <span class="z-keyword z-operator z-assignment z-python">=</span> <span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">apt_pkg</span></span><span class="z-meta z-qualified-name z-python"><span class="z-punctuation z-accessor z-dot z-python">.</span></span><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-meta z-generic-name z-python">TagFile</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">gzip</span></span><span class="z-meta z-qualified-name z-python"><span class="z-punctuation z-accessor z-dot z-python">.</span></span><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-meta z-generic-name z-python">open</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-meta z-qualified-name z-python"><span class="z-variable z-other z-constant z-python">CUSTOM_REPO</span></span><span class="z-punctuation z-separator z-arguments z-python">,</span> <span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">rb<span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span>
-    <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">archive_areas</span></span> <span class="z-keyword z-operator z-assignment z-python">=</span> <span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">main contrib non-free<span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span><span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-punctuation z-accessor z-dot z-python">.</span></span><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-meta z-generic-name z-python">split</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span>
-    <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">wheezy_packages</span></span> <span class="z-keyword z-operator z-assignment z-python">=</span> <span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-support z-type z-python">list</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span>
-    <span class="z-meta z-statement z-loop z-for z-python"><span class="z-keyword z-control z-loop z-for z-python">for</span> <span class="z-meta z-generic-name z-python">archive_area</span> <span class="z-keyword z-control z-loop z-for z-in z-python">in</span></span><span class="z-meta z-statement z-loop z-for z-python"> <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">archive_areas</span></span></span><span class="z-meta z-statement z-loop z-for z-python"><span class="z-punctuation z-section z-block z-loop z-for z-python">:</span></span>
-        <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">repo</span></span> <span class="z-keyword z-operator z-assignment z-python">=</span> <span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">WHEEZY_REPO</span></span><span class="z-meta z-qualified-name z-python"><span class="z-punctuation z-accessor z-dot z-python">.</span></span><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-meta z-generic-name z-python">format</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">archive_area</span></span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span>
-        <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">repo</span></span> <span class="z-keyword z-operator z-assignment z-python">=</span> <span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">apt_pkg</span></span><span class="z-meta z-qualified-name z-python"><span class="z-punctuation z-accessor z-dot z-python">.</span></span><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-meta z-generic-name z-python">TagFile</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">gzip</span></span><span class="z-meta z-qualified-name z-python"><span class="z-punctuation z-accessor z-dot z-python">.</span></span><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-meta z-generic-name z-python">open</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">repo</span></span><span class="z-punctuation z-separator z-arguments z-python">,</span> <span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">rb<span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span>
-        <span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">wheezy_packages</span></span><span class="z-meta z-qualified-name z-python"><span class="z-punctuation z-accessor z-dot z-python">.</span></span><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-meta z-generic-name z-python">extend</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-meta z-sequence z-list z-python"><span class="z-punctuation z-section z-sequence z-begin z-python">[</span><span class="z-meta z-item-access z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">pkg</span></span></span><span class="z-meta z-item-access z-python"><span class="z-punctuation z-section z-brackets z-begin z-python">[</span></span><span class="z-meta z-item-access z-arguments z-python"><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">Package<span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span></span><span class="z-meta z-item-access z-python"><span class="z-punctuation z-section z-brackets z-end z-python">]</span></span> <span class="z-meta z-expression z-generator z-python"><span class="z-keyword z-control z-loop z-for z-generator z-python">for</span> <span class="z-meta z-generic-name z-python">pkg</span> <span class="z-keyword z-control z-loop z-for z-in z-python">in</span></span> <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">repo</span></span><span class="z-punctuation z-section z-sequence z-end z-python">]</span></span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span>
-    <span class="z-meta z-statement z-loop z-for z-python"><span class="z-keyword z-control z-loop z-for z-python">for</span> <span class="z-meta z-generic-name z-python">package</span> <span class="z-keyword z-control z-loop z-for z-in z-python">in</span></span><span class="z-meta z-statement z-loop z-for z-python"> <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">custom_repo</span></span></span><span class="z-meta z-statement z-loop z-for z-python"><span class="z-punctuation z-section z-block z-loop z-for z-python">:</span></span>
-        <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">package_name</span></span> <span class="z-keyword z-operator z-assignment z-python">=</span> <span class="z-meta z-item-access z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">package</span></span></span><span class="z-meta z-item-access z-python"><span class="z-punctuation z-section z-brackets z-begin z-python">[</span></span><span class="z-meta z-item-access z-arguments z-python"><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">Package<span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span></span><span class="z-meta z-item-access z-python"><span class="z-punctuation z-section z-brackets z-end z-python">]</span></span>
-        <span class="z-meta z-statement z-conditional z-if z-python"><span class="z-keyword z-control z-conditional z-if z-python">if</span> <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">package_name</span></span> <span class="z-keyword z-operator z-logical z-python">not</span> <span class="z-keyword z-operator z-logical z-python">in</span> <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">wheezy_packages</span></span><span class="z-punctuation z-section z-block z-conditional z-if z-python">:</span></span>
-            <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">cmd</span></span> <span class="z-keyword z-operator z-assignment z-python">=</span> <span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">apt-cache policy <span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span> <span class="z-keyword z-operator z-arithmetic z-python">+</span> <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">package_name</span></span>
-            <span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">subprocess</span></span><span class="z-meta z-qualified-name z-python"><span class="z-punctuation z-accessor z-dot z-python">.</span></span><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-meta z-generic-name z-python">call</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">cmd</span></span><span class="z-meta z-qualified-name z-python"><span class="z-punctuation z-accessor z-dot z-python">.</span></span><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-meta z-generic-name z-python">split</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span>
-            <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">choice</span></span> <span class="z-keyword z-operator z-assignment z-python">=</span> <span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-support z-function z-builtin z-python">input</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">remove from cache [Y/n]? <span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span>
-            <span class="z-meta z-statement z-conditional z-if z-python"><span class="z-keyword z-control z-conditional z-if z-python">if</span> <span class="z-keyword z-operator z-logical z-python">not</span> <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">choice</span></span> <span class="z-keyword z-operator z-logical z-python">or</span> <span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">choice</span></span><span class="z-meta z-qualified-name z-python"><span class="z-punctuation z-accessor z-dot z-python">.</span></span><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-meta z-generic-name z-python">lower</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span><span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-punctuation z-accessor z-dot z-python">.</span></span><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-meta z-generic-name z-python">startswith</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">y<span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span><span class="z-punctuation z-section z-block z-conditional z-if z-python">:</span></span>
-                <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">cmd</span></span> <span class="z-keyword z-operator z-assignment z-python">=</span> <span class="z-meta z-group z-python"><span class="z-punctuation z-section z-group z-begin z-python">(</span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">reprepro -vv --basedir /home/wena/.custom_repo/ <span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span>
-                       <span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">remove tshepang <span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span> <span class="z-keyword z-operator z-arithmetic z-python">+</span> <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">package_name</span></span><span class="z-punctuation z-section z-group z-end z-python">)</span></span>
-                <span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">subprocess</span></span><span class="z-meta z-qualified-name z-python"><span class="z-punctuation z-accessor z-dot z-python">.</span></span><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-meta z-generic-name z-python">call</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">cmd</span></span><span class="z-meta z-qualified-name z-python"><span class="z-punctuation z-accessor z-dot z-python">.</span></span><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-meta z-generic-name z-python">split</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span>
-
-<span class="z-meta z-statement z-conditional z-if z-python"><span class="z-keyword z-control z-conditional z-if z-python">if</span> <span class="z-meta z-qualified-name z-python"><span class="z-support z-variable z-magic z-python">__name__</span></span> <span class="z-keyword z-operator z-comparison z-python">==</span> <span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">__main__<span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span><span class="z-punctuation z-section z-block z-conditional z-if z-python">:</span></span>
-    <span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-meta z-generic-name z-python">main</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;">#!/usr/bin/env python3
+</span><span>
+</span><span style="color:#b48ead;">import </span><span>apt_pkg
+</span><span style="color:#b48ead;">import </span><span>gzip
+</span><span style="color:#b48ead;">import </span><span>subprocess
+</span><span>
+</span><span style="color:#bf616a;">CUSTOM_REPO </span><span>= (&quot;</span><span style="color:#a3be8c;">/home/wena/.custom_repo/dists/tshepang/main/</span><span>&quot;
+</span><span>               &quot;</span><span style="color:#a3be8c;">binary-i386/Packages.gz</span><span>&quot;)
+</span><span style="color:#bf616a;">WHEEZY_REPO </span><span>= (&quot;</span><span style="color:#a3be8c;">/var/lib/apt/lists/ftp.de.debian.org_debian_dists_testing_</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">_</span><span>&quot;
+</span><span>               &quot;</span><span style="color:#a3be8c;">binary-i386_Packages</span><span>&quot;)
+</span><span>
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">main</span><span>():
+</span><span>    custom_repo = apt_pkg.</span><span style="color:#bf616a;">TagFile</span><span>(gzip.</span><span style="color:#bf616a;">open</span><span>(</span><span style="color:#bf616a;">CUSTOM_REPO</span><span>, &quot;</span><span style="color:#a3be8c;">rb</span><span>&quot;))
+</span><span>    archive_areas = &quot;</span><span style="color:#a3be8c;">main contrib non-free</span><span>&quot;.</span><span style="color:#bf616a;">split</span><span>()
+</span><span>    wheezy_packages = </span><span style="color:#bf616a;">list</span><span>()
+</span><span>    </span><span style="color:#b48ead;">for </span><span>archive_area </span><span style="color:#b48ead;">in </span><span>archive_areas:
+</span><span>        repo = WHEEZY_REPO.</span><span style="color:#bf616a;">format</span><span>(archive_area)
+</span><span>        repo = apt_pkg.</span><span style="color:#bf616a;">TagFile</span><span>(gzip.</span><span style="color:#bf616a;">open</span><span>(repo, &quot;</span><span style="color:#a3be8c;">rb</span><span>&quot;))
+</span><span>        wheezy_packages.</span><span style="color:#bf616a;">extend</span><span>([pkg[&quot;</span><span style="color:#a3be8c;">Package</span><span>&quot;] </span><span style="color:#b48ead;">for </span><span>pkg </span><span style="color:#b48ead;">in </span><span>repo])
+</span><span>    </span><span style="color:#b48ead;">for </span><span>package </span><span style="color:#b48ead;">in </span><span>custom_repo:
+</span><span>        package_name = package[&quot;</span><span style="color:#a3be8c;">Package</span><span>&quot;]
+</span><span>        </span><span style="color:#b48ead;">if </span><span>package_name not in wheezy_packages:
+</span><span>            cmd = &quot;</span><span style="color:#a3be8c;">apt-cache policy </span><span>&quot; + package_name
+</span><span>            subprocess.</span><span style="color:#bf616a;">call</span><span>(cmd.</span><span style="color:#bf616a;">split</span><span>())
+</span><span>            choice = </span><span style="color:#96b5b4;">input</span><span>(&quot;</span><span style="color:#a3be8c;">remove from cache [Y/n]? </span><span>&quot;)
+</span><span>            </span><span style="color:#b48ead;">if </span><span>not choice or choice.</span><span style="color:#bf616a;">lower</span><span>().</span><span style="color:#bf616a;">startswith</span><span>(&quot;</span><span style="color:#a3be8c;">y</span><span>&quot;):
+</span><span>                cmd = (&quot;</span><span style="color:#a3be8c;">reprepro -vv --basedir /home/wena/.custom_repo/ </span><span>&quot;
+</span><span>                       &quot;</span><span style="color:#a3be8c;">remove tshepang </span><span>&quot; + package_name)
+</span><span>                subprocess.</span><span style="color:#bf616a;">call</span><span>(cmd.</span><span style="color:#bf616a;">split</span><span>())
+</span><span>
+</span><span style="color:#b48ead;">if </span><span>__name__ == &quot;</span><span style="color:#a3be8c;">__main__</span><span>&quot;:
+</span><span>    </span><span style="color:#bf616a;">main</span><span>()
 </span></code></pre>
 <p>And here's a snippet of its output:</p>
-<pre class="z-code"><code><span class="z-text z-plain">cx-oracle:
-  Installed: 5.1.1-2
-  Candidate: 5.1.1-2
-  Version table:
- *** 5.1.1-2 0
-        500 file:/home/wena/.custom_repo/ tshepang/main i386 Packages
-        100 /var/lib/dpkg/status
-remove from cache [Y/n]?
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>cx-oracle:
+</span><span>  Installed: 5.1.1-2
+</span><span>  Candidate: 5.1.1-2
+</span><span>  Version table:
+</span><span> *** 5.1.1-2 0
+</span><span>        500 file:/home/wena/.custom_repo/ tshepang/main i386 Packages
+</span><span>        100 /var/lib/dpkg/status
+</span><span>remove from cache [Y/n]?
 </span></code></pre>
 <p>What it does is look for packages which are only available in my custom
 repository, as compared with the one in Wheezy (soon to be Debian 7). It
 then prompts me on whether or not to remove it from that custom
 repository. Today, it helped me get rid of dozens of junk.</p>
 
-<p><b><a href="#">Back to top</a></b></p>
-    </article>
-  </main>
-  <footer>
-    <div class="c">
-      <nav>
-        <ul><li><a href="https://tshepang.github.io/atom.xml" target="_blank" title="Atom/RSS Feed"><i type="Button" class="svg rss" title="Atom/RSS Feed"></i></a></li><li><a href="mailto:tshepang@gmail.com" target="_blank" title="Mail"><i type="Button" class="svg mail" title="Mail"></i></a></li><li><a href="https://twitter.com/tshepang_dev/" target="_blank" title="Twitter"><i type="Button" class="svg twitter" title="Twitter"></i></a></li><li><a href="https://github.com/tshepang/" target="_blank" title="Github"><i type="Button" class="svg github" title="Github"></i></a></li></ul>
-      </nav>
-      <p>Copyright &copy; 2022 Tshepang logs</p>
-      <nav>
-        <ul><li> <a href="https://tshepang.github.io/about-me"> about </a> </li></ul>
-      </nav>
-      <p>Powered by <a href="https://www.getzola.org/">Zola</a> and <a href="https://github.com/jieiku/abridge/">Abridge</a></p>
     </div>
-  </footer>
-<span class="topout">
-<span class="topleft"> </span><a href="#" class="top" title="Back to Top">&cuwed;</a>
-</span>
-</body>
+
+    
+        <footer>
+            <hr>
+            <p>
+                
+                
+                
+                    
+                    tagged
+                    
+                        <a href="https://tshepang.github.io/tags/debian/">Debian</a>
+                        
+                    
+                
+            </p>
+            
+            
+        </footer>
+    
+</article>
+
+
+    </body>
+
+    
+        <div class="search-container">
+          <input id="search" type="search" placeholder="🔎  search">
+          <div class="search-results">
+            <div class="search-results__items"></div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://tshepang.github.io/elasticlunr.min.js"></script>
+        <script type="text/javascript" src="https://tshepang.github.io/search_index.en.js"></script>
+        <script type="text/javascript" src="https://tshepang.github.io/search.js"></script>
+    
+
 </html>

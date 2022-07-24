@@ -1,86 +1,107 @@
 <!DOCTYPE html>
-<html lang="en-US">
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link rel="alternate" type="application/atom+xml" title="Atom/RSS Feed" href="https://tshepang.github.io/atom.xml" />
-  <meta name="robots" content="index, follow" />
-  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-  <title>me likes subprocess.DEVNULL | Tshepang logs</title>
-  <meta name="copyright" content="Tshepang logs" />
-  <meta name="description" content="" />
-  <link rel="canonical" href="https://tshepang.github.io/me-likes-subprocess-devnull/" />
-  <meta name="keywords" content="" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <noscript><link rel="stylesheet" href="https://tshepang.github.io/nojs.css" /></noscript>
-</head>
-<body>
-  <header>
-    <nav>
-      <div><h1><a href="https://tshepang.github.io/">Tshepang logs</a></h1></div>
-      <div>
-        <ul><li> <h2><a href="https://tshepang.github.io/about-me">about</a></h2> </li><li> <h2><a href="https://tshepang.github.io/tags">tags</a></h2> </li><li> <h2><a href="https://tshepang.github.io/categories/movies">movies</a></h2> </li></ul>
-      </div>
-      <div>
-        <form class="js" name="goSearch">
-          <div class="searchd">
-            <input id="userinput" type="text" placeholder="Search" autocomplete="off" title="Search" />
-            <button type="submit" title="Search"><span class="si">&#8981;</span></button>
-          </div>
-          <div><div id="suggestions"></div></div>
-        </form>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <article>
-        <h1><a href="https://tshepang.github.io/me-likes-subprocess-devnull/">me likes subprocess.DEVNULL</a></h1>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-    <p>If you want to run an external process from within Python, and are not
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://tshepang.github.io/atom.xml">
+      
+
+      
+          <link rel="stylesheet" href="https://tshepang.github.io/site.css">
+      
+
+      
+      
+    </head>
+
+    <body class="hack dark main container">
+        
+    
+        
+                
+                    <header>
+                        <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https:&#x2F;&#x2F;tshepang.github.io&#x2F;about-me">
+                                <span itemprop="name">about
+                                </span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https:&#x2F;&#x2F;tshepang.github.io&#x2F;tags">
+                                <span itemprop="name">tags
+                                </span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https:&#x2F;&#x2F;tshepang.github.io&#x2F;categories&#x2F;movies">
+                                <span itemprop="name">movies
+                                </span></a>
+                        
+                        </nav>
+                    </header>
+                
+            
+    
+
+<article itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1 itemprop="headline">me likes subprocess.DEVNULL</h1>
+        <span class="muted">
+    2013-04-11
+</span>
+    </header>
+    <div itemprop="articleBody">
+      <br>
+      <p>If you want to run an external process from within Python, and are not
 interested in any errors that process may emit, there are a few ways you
 can go about it. I will demonstrate this by opening a Python shell in a
 directory that isn't version-controlled by <a href="http://mercurial.selenic.com">Mercurial</a>:</p>
 <ol>
 <li>
 <p>So, we don't want to see this ugliness:</p>
-<pre class="z-code"><code><span class="z-text z-plain">&gt;&gt;&gt; from subprocess import call
-&gt;&gt;&gt; call(&#39;hg status&#39;.split())
-abort: no repository found in &#39;/home/tshepang/projects/pyramid&#39; (.hg not found)!
-255
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt;&gt; from subprocess import call
+</span><span>&gt;&gt;&gt; call(&#39;hg status&#39;.split())
+</span><span>abort: no repository found in &#39;/home/tshepang/projects/pyramid&#39; (.hg not found)!
+</span><span>255
 </span></code></pre>
 </li>
 <li>
 <p>So, here's the simplest solution:</p>
-<pre class="z-code"><code><span class="z-text z-plain">&gt;&gt;&gt; import os
-&gt;&gt;&gt; from subprocess import call
-&gt;&gt;&gt; call(&#39;hg status&#39;.split(), stderr=open(os.devnull))
-255
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt;&gt; import os
+</span><span>&gt;&gt;&gt; from subprocess import call
+</span><span>&gt;&gt;&gt; call(&#39;hg status&#39;.split(), stderr=open(os.devnull))
+</span><span>255
 </span></code></pre>
 <p>Problem: it leaves the file descriptor open... not good.</p>
 </li>
 <li>
 <p>We fix:</p>
-<pre class="z-code"><code><span class="z-text z-plain">&gt;&gt;&gt; import os
-&gt;&gt;&gt; from subprocess import call
-&gt;&gt;&gt; DEVNULL = open(os.devnull)
-&gt;&gt;&gt; call(&#39;hg status&#39;.split(), stderr=DEVNULL)
-255
-&gt;&gt;&gt; DEVNULL.close()
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt;&gt; import os
+</span><span>&gt;&gt;&gt; from subprocess import call
+</span><span>&gt;&gt;&gt; DEVNULL = open(os.devnull)
+</span><span>&gt;&gt;&gt; call(&#39;hg status&#39;.split(), stderr=DEVNULL)
+</span><span>255
+</span><span>&gt;&gt;&gt; DEVNULL.close()
 </span></code></pre>
 <p>Much better, much uglier.</p>
 </li>
 <li>
 <p>Something better:</p>
-<pre class="z-code"><code><span class="z-text z-plain">&gt;&gt;&gt; import os
-&gt;&gt;&gt; from subprocess import call
-&gt;&gt;&gt; with open(os.devnull) as DEVNULL:
-...     call(&#39;hg status&#39;.split(), stderr=DEVNULL)
-255
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt;&gt; import os
+</span><span>&gt;&gt;&gt; from subprocess import call
+</span><span>&gt;&gt;&gt; with open(os.devnull) as DEVNULL:
+</span><span>...     call(&#39;hg status&#39;.split(), stderr=DEVNULL)
+</span><span>255
 </span></code></pre>
 <p>Looks much nicer, and is more convenient, unless we wanted to do
 something similar multiple times, in which case the previous example
@@ -88,32 +109,62 @@ would be preferable.</p>
 </li>
 <li>
 <p>Best solution:</p>
-<pre class="z-code"><code><span class="z-text z-plain">&gt;&gt;&gt; import os
-&gt;&gt;&gt; from subprocess import call, DEVNULL
-&gt;&gt;&gt; call(&#39;hg status&#39;.split(), stderr=DEVNULL)
-255
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt;&gt; import os
+</span><span>&gt;&gt;&gt; from subprocess import call, DEVNULL
+</span><span>&gt;&gt;&gt; call(&#39;hg status&#39;.split(), stderr=DEVNULL)
+</span><span>255
 </span></code></pre>
 </li>
 </ol>
 <p>This <a href="http://hg.python.org/cpython/rev/eaf93e156dff">small and wonderful feature</a> is <a href="http://docs.python.org/3/whatsnew/3.3.html#subprocess">new as of Python 3.3</a>.</p>
 
-<p><b><a href="#">Back to top</a></b></p>
-    </article>
-  </main>
-  <footer>
-    <div class="c">
-      <nav>
-        <ul><li><a href="https://tshepang.github.io/atom.xml" target="_blank" title="Atom/RSS Feed"><i type="Button" class="svg rss" title="Atom/RSS Feed"></i></a></li><li><a href="mailto:tshepang@gmail.com" target="_blank" title="Mail"><i type="Button" class="svg mail" title="Mail"></i></a></li><li><a href="https://twitter.com/tshepang_dev/" target="_blank" title="Twitter"><i type="Button" class="svg twitter" title="Twitter"></i></a></li><li><a href="https://github.com/tshepang/" target="_blank" title="Github"><i type="Button" class="svg github" title="Github"></i></a></li></ul>
-      </nav>
-      <p>Copyright &copy; 2022 Tshepang logs</p>
-      <nav>
-        <ul><li> <a href="https://tshepang.github.io/about-me"> about </a> </li></ul>
-      </nav>
-      <p>Powered by <a href="https://www.getzola.org/">Zola</a> and <a href="https://github.com/jieiku/abridge/">Abridge</a></p>
     </div>
-  </footer>
-<span class="topout">
-<span class="topleft"> </span><a href="#" class="top" title="Back to Top">&cuwed;</a>
-</span>
-</body>
+
+    
+        <footer>
+            <hr>
+            <p>
+                
+                
+                
+                    
+                    tagged
+                    
+                        <a href="https://tshepang.github.io/tags/python/">Python</a>
+                        
+                            
+                                
+                                    and
+                                
+                            
+                        
+                    
+                        <a href="https://tshepang.github.io/tags/vcs/">VCS</a>
+                        
+                            
+                        
+                    
+                
+            </p>
+            
+            
+        </footer>
+    
+</article>
+
+
+    </body>
+
+    
+        <div class="search-container">
+          <input id="search" type="search" placeholder="🔎  search">
+          <div class="search-results">
+            <div class="search-results__items"></div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://tshepang.github.io/elasticlunr.min.js"></script>
+        <script type="text/javascript" src="https://tshepang.github.io/search_index.en.js"></script>
+        <script type="text/javascript" src="https://tshepang.github.io/search.js"></script>
+    
+
 </html>
