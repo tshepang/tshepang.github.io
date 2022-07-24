@@ -4,8 +4,85 @@
 	<link href="https://tshepang.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://tshepang.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-07-23T00:00:00+00:00</updated>
+	<updated>2022-07-24T00:00:00+00:00</updated>
 	<id>https://tshepang.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Résumé</title>
+		<published>2022-07-24T00:00:00+00:00</published>
+		<updated>2022-07-24T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://tshepang.github.io/resume/" type="text/html"/>
+		<id>https://tshepang.github.io/resume/</id>
+		<content type="html">&lt;h2 id=&quot;higher-education&quot;&gt;higher education&lt;&#x2F;h2&gt;
+&lt;p&gt;course: National Diploma in Electronics&lt;&#x2F;p&gt;
+&lt;p&gt;school: &lt;a href=&quot;https:&#x2F;&#x2F;www.tut.ac.za&quot;&gt;Tshwane University of Technology&lt;&#x2F;a&gt; (2001-2003)&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;work-experience&quot;&gt;work experience&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;system-integration-technician-2004-2008&quot;&gt;system integration technician (2004-2008)&lt;&#x2F;h3&gt;
+&lt;p&gt;company: Carl Zeiss Optronics (now &lt;a href=&quot;https:&#x2F;&#x2F;www.hensoldt.net&#x2F;products&#x2F;optronics&quot;&gt;Hensoldt Optronics&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
+&lt;p&gt;duties: integration, assembly, calibration, testing,
+and fault-finding of electro-mechanical airborne surveillance systems&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;software-developer-2008-2012&quot;&gt;software developer (2008-2012)&lt;&#x2F;h3&gt;
+&lt;p&gt;company: &lt;a href=&quot;https:&#x2F;&#x2F;tauspace.com&quot;&gt;Tauspace&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;field: telecoms&lt;&#x2F;p&gt;
+&lt;p&gt;duties: Java, Perl, and Python development&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;software-developer-2012-2016&quot;&gt;software developer (2012-2016)&lt;&#x2F;h3&gt;
+&lt;p&gt;company: &lt;a href=&quot;http:&#x2F;&#x2F;eiq.co.za&quot;&gt;Embedded IQ&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;field: mining&lt;&#x2F;p&gt;
+&lt;p&gt;duties:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;C&#x2F;C++, Python, and Rust development&lt;&#x2F;li&gt;
+&lt;li&gt;system administration&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;software-developer-2016-2021&quot;&gt;software developer (2016-2021)&lt;&#x2F;h3&gt;
+&lt;p&gt;company: &lt;a href=&quot;https:&#x2F;&#x2F;panoptix.co.za&quot;&gt;Panoptix&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;field: networking&lt;&#x2F;p&gt;
+&lt;p&gt;duties:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Rust development, with a bit of shell and Javascript&lt;&#x2F;li&gt;
+&lt;li&gt;system administration&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;software-developer-2021-now&quot;&gt;software developer (2021-now)&lt;&#x2F;h3&gt;
+&lt;p&gt;company: &lt;a href=&quot;https:&#x2F;&#x2F;snode.com&quot;&gt;Snode&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;field: cyber security&lt;&#x2F;p&gt;
+&lt;p&gt;duties:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Go development&lt;&#x2F;li&gt;
+&lt;li&gt;integrating external data sources into company product&lt;&#x2F;li&gt;
+&lt;li&gt;system administration&lt;&#x2F;li&gt;
+&lt;li&gt;data engineering (ELK and Vector)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;public-projects&quot;&gt;public projects&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;docs&quot;&gt;docs&lt;&#x2F;h3&gt;
+&lt;p&gt;I&#x27;ve been known to do much doc work for various projects in the past&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;wiki.gnome.org&#x2F;Projects&#x2F;Tracker&quot;&gt;Tracker&lt;&#x2F;a&gt; - metadata DB and indexer&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;python.org&quot;&gt;CPython&lt;&#x2F;a&gt; - the main&#x2F;reference implementation of Python&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;trypyramid.com&quot;&gt;Pyramid&lt;&#x2F;a&gt; - web framework written in Python&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.org&quot;&gt;Rust project&lt;&#x2F;a&gt; - favorite language&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;mrh&quot;&gt;&lt;a href=&quot;http:&#x2F;&#x2F;github.com&#x2F;tshepang&#x2F;mrh&quot;&gt;mrh&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Rust CLI and library that reports on status of Git repos&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;wajig&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gjwgit&#x2F;wajig&quot;&gt;wajig&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;front-end for Debian package management&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Former maintainer&lt;&#x2F;li&gt;
+&lt;li&gt;Feature additions, general polish, and maintenance&lt;&#x2F;li&gt;
+&lt;li&gt;Python&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;talks&quot;&gt;talks&lt;&#x2F;h2&gt;
+&lt;p&gt;I have so far given 3 talks at conferences:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=Xk5IZOtLUmE&quot;&gt;Syntax conveniences afforded by the Rust compiler&lt;&#x2F;a&gt; (2018): RustBeltRust&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=EZHnzTk8YaU&quot;&gt;Behind the scenes of producing an executable&lt;&#x2F;a&gt; (2018): RustFest (Rome)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=-PRw8hcyIBI&quot;&gt;exploring the Rust compiler&lt;&#x2F;a&gt; (2020): DevConf ZA&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>about me</title>
 		<published>2022-07-23T00:00:00+00:00</published>
