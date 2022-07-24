@@ -2999,18 +2999,6 @@ amazing. I wish it was explored more.&lt;&#x2F;p&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
-		<title>Rust week of 2015-11-06</title>
-		<published>2015-11-10T00:00:00+00:00</published>
-		<updated>2015-11-10T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://tshepang.github.io/rust-week-of-2015-11-06/" type="text/html"/>
-		<id>https://tshepang.github.io/rust-week-of-2015-11-06/</id>
-		<content type="html">&lt;p&gt;I made some &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang-nursery&#x2F;rustc-serialize&#x2F;pull&#x2F;136&quot;&gt;small improvements&lt;&#x2F;a&gt; to rustc-serialize docs. I also looked
-at parsing JSON, and &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;num&#x2F;rustc_serialize&#x2F;json&#x2F;index.html&quot;&gt;it doesn&#x27;t look too bad&lt;&#x2F;a&gt;. I am mostly interested
-in the &lt;code&gt;from_str&lt;&#x2F;code&gt; method, and was surprised to find that it&#x27;s pretty
-much the same as that of (the more modern) &lt;a href=&quot;https:&#x2F;&#x2F;serde-rs.github.io&#x2F;serde&#x2F;serde_json&#x2F;serde_json&quot;&gt;serde_json&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
 		<title>Rust week of 2015-10-23</title>
 		<published>2015-10-29T00:00:00+00:00</published>
 		<updated>2015-10-29T00:00:00+00:00</updated>
