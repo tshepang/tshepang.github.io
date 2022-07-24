@@ -62,27 +62,20 @@
     </header>
     <div itemprop="articleBody">
       <br>
-      <ul>
-<li>
-<p>I was surprised by the somewhat magical Rust type inference:</p>
-<p>::: {.sourcecode}
-rust</p>
-<p>fn main() {</p>
-<p>:   let string = &quot;10&quot;; let num = match string.parse() { Ok(num)
-=&gt; num, Err(_) =&gt; 0, }; assert_eq!(num, 10);</p>
-<p>}
-:::</p>
+      <p>I was surprised by the somewhat magical Rust type inference:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>	</span><span style="color:#b48ead;">let</span><span> string = &quot;</span><span style="color:#a3be8c;">10</span><span>&quot;;
+</span><span>	</span><span style="color:#b48ead;">let</span><span> num = </span><span style="color:#b48ead;">match</span><span> string.</span><span style="color:#96b5b4;">parse</span><span>() {
+</span><span>		Ok(num) =&gt; num,
+</span><span>		Err(_) =&gt; </span><span style="color:#d08770;">0</span><span>,
+</span><span>	};
+</span><span>	assert_eq!(num, </span><span style="color:#d08770;">10</span><span>);
+</span><span>}
+</span></code></pre>
 <p>A more explicit <code>parse</code> call would be <code>string.parse::&lt;i32&gt;()</code>, but
 the type to be parsed into is inferred by the <code>0</code> that is returned
 in the <code>Err(_)</code> arm of the match, which is an i32. This is some
 far-reaching shit!</p>
-</li>
-<li>
-<p>I submitted <a href="https://github.com/rust-lang/rust/pull/25912">changes</a> to improve some of <code>str</code> documentation. I also
-<a href="https://github.com/rust-lang/rust/pull/25876">submitted</a> <a href="https://github.com/rust-lang/rust/pull/25907">a</a> <a href="https://github.com/rust-lang/rust/pull/25920">whole</a> <a href="https://github.com/rust-lang/rust/pull/25922">bunch</a> <a href="https://github.com/rust-lang/rust/pull/25923">of</a> <a href="https://github.com/rust-lang/rust/pull/25936">smaller</a>
-<a href="https://github.com/rust-lang/rust/pull/25948">changes</a>,</p>
-</li>
-</ul>
 
     </div>
 

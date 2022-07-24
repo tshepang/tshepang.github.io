@@ -3756,27 +3756,20 @@ trait concept. It was however not accepted, and replaced with
 		<updated>2015-05-30T00:00:00+00:00</updated>
 		<link rel="alternate" href="https://tshepang.github.io/rust-week-of-2015-05-29/" type="text/html"/>
 		<id>https://tshepang.github.io/rust-week-of-2015-05-29/</id>
-		<content type="html">&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;I was surprised by the somewhat magical Rust type inference:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;fn main() {&lt;&#x2F;p&gt;
-&lt;p&gt;:   let string = &amp;quot;10&amp;quot;; let num = match string.parse() { Ok(num)
-=&amp;gt; num, Err(_) =&amp;gt; 0, }; assert_eq!(num, 10);&lt;&#x2F;p&gt;
-&lt;p&gt;}
-:::&lt;&#x2F;p&gt;
+		<content type="html">&lt;p&gt;I was surprised by the somewhat magical Rust type inference:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; string = &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;;
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; num = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;match&lt;&#x2F;span&gt;&lt;span&gt; string.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;parse&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;		Ok(num) =&amp;gt; num,
+&lt;&#x2F;span&gt;&lt;span&gt;		Err(_) =&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;	};
+&lt;&#x2F;span&gt;&lt;span&gt;	assert_eq!(num, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;A more explicit &lt;code&gt;parse&lt;&#x2F;code&gt; call would be &lt;code&gt;string.parse::&amp;lt;i32&amp;gt;()&lt;&#x2F;code&gt;, but
 the type to be parsed into is inferred by the &lt;code&gt;0&lt;&#x2F;code&gt; that is returned
 in the &lt;code&gt;Err(_)&lt;&#x2F;code&gt; arm of the match, which is an i32. This is some
 far-reaching shit!&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;I submitted &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;25912&quot;&gt;changes&lt;&#x2F;a&gt; to improve some of &lt;code&gt;str&lt;&#x2F;code&gt; documentation. I also
-&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;25876&quot;&gt;submitted&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;25907&quot;&gt;a&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;25920&quot;&gt;whole&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;25922&quot;&gt;bunch&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;25923&quot;&gt;of&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;25936&quot;&gt;smaller&lt;&#x2F;a&gt;
-&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;25948&quot;&gt;changes&lt;&#x2F;a&gt;,&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
