@@ -66,96 +66,96 @@
 Investigation into Programming Language Syntax</em>. Now, since I'm a
 Python sucker, here is what I would change in Python in order to follow
 advice from <a href="http://dl.acm.org/authorize?6968137">that paper</a>:</p>
-<pre><code>    before       after
-    ------       -----
-     !=          not=
-      %          mod
-   string        text
-  try-except  check-error
-   finally       always
-    raise        alert
-     def       procedure
-    print       output
-   import        use
-  int&#x2F;float     number
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>    before       after
+</span><span>    ------       -----
+</span><span>     !=          not=
+</span><span>      %          mod
+</span><span>   string        text
+</span><span>  try-except  check-error
+</span><span>   finally       always
+</span><span>    raise        alert
+</span><span>     def       procedure
+</span><span>    print       output
+</span><span>   import        use
+</span><span>  int/float     number
+</span></code></pre>
 <p>The most surprising finding is that both programmers and non-programmers
 found <em>while</em> and <em>for</em> not intuitive for looping constructs. The
 preferred alternatives are <em>repeat</em> and <em>loop</em>. Of these, I prefer
 <em>loop</em>, but it does not read as well as <em>while</em>:</p>
-<pre><code>while count &lt; 3:
-    count = action()
-
-loop count &lt; 3:
-    count = action()
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>while count &lt; 3:
+</span><span>    count = action()
+</span><span>
+</span><span>loop count &lt; 3:
+</span><span>    count = action()
+</span></code></pre>
 <p>Quorum, the language by those responsible for this paper, went with:</p>
-<pre><code>repeat while (count &lt; 3)
-    count = action()
-end
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>repeat while (count &lt; 3)
+</span><span>    count = action()
+</span><span>end
+</span></code></pre>
 <p>To mimic that in Python, any of the following two sound fine (I prefer
 <em>if</em> to <em>while</em>; less syntax is better):</p>
-<pre><code>repeat if count &lt; 3:
-    count = action()
-
-loop if count &lt; 3:
-    count = action()
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>repeat if count &lt; 3:
+</span><span>    count = action()
+</span><span>
+</span><span>loop if count &lt; 3:
+</span><span>    count = action()
+</span></code></pre>
 <p>That means an infinite loop would be:</p>
-<pre><code>loop if True:
-    action()
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>loop if True:
+</span><span>    action()
+</span></code></pre>
 <p>Or for that special case, a shortcut can just be this simple:</p>
-<pre><code>loop:
-    action()
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>loop:
+</span><span>    action()
+</span></code></pre>
 <p>I wonder what cycling through items in a container would look like. In
 Python, it looks like:</p>
-<pre><code>for item in container:
-    action(item)
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>for item in container:
+</span><span>    action(item)
+</span></code></pre>
 <p>This feels as natural as anything, but then again I been doing Python
 for a number of years, so the bias could be heavy. Following is an
 attempt:</p>
-<pre><code>loop in range(3):
-    action()
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>loop in range(3):
+</span><span>    action()
+</span></code></pre>
 <p>It mimics this Python syntax, which I actually don't like, since we
 don't always need the items of the container:</p>
-<pre><code>for _ in range(3):
-    action()
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>for _ in range(3):
+</span><span>    action()
+</span></code></pre>
 <p>Quorum, the academic language mentioned above, does it like:</p>
-<pre><code>repeat 3 times
-    action()
-end
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>repeat 3 times
+</span><span>    action()
+</span><span>end
+</span></code></pre>
 <p>I don't like that either; feels contrived. The Python way strikes me as
 a good compromise, especially given how general it is. I will try again
 with the <em>loop</em> syntax:</p>
-<pre><code>loop item in container:
-    action(item)
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>loop item in container:
+</span><span>    action(item)
+</span></code></pre>
 <p>You have to admit it doesn't read as nice as:</p>
-<pre><code>for item in container:
-    action(item)
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>for item in container:
+</span><span>    action(item)
+</span></code></pre>
 <p>It should be flexible to accommodate more than just one value on each
 iteration, so should have an equivalent for this Python code:</p>
-<pre><code>for index, item in enumerate(container):
-    action(index, item)
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>for index, item in enumerate(container):
+</span><span>    action(index, item)
+</span></code></pre>
 <p>Here goes:</p>
-<pre><code>loop index, item in enumerate(container):
-    action(index, item)
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>loop index, item in enumerate(container):
+</span><span>    action(index, item)
+</span></code></pre>
 <p>Now, for the much-loved Python list comprehensions:</p>
-<pre><code>[procedure(item) for item in container]
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>[procedure(item) for item in container]
+</span></code></pre>
 <p>We would instead have:</p>
-<pre><code>[procedure(item) loop item in container]
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>[procedure(item) loop item in container]
+</span></code></pre>
 <p>So, apart from being highly-rated for being intuitive, <em>loop</em> also
 provides a consistent looping construct, whereas Python has 2, <em>while</em>
 and <em>for</em>, both of which received low points in the study. Interesting.</p>

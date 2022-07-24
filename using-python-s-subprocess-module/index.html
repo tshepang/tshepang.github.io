@@ -65,34 +65,34 @@
       <p>There are at least 2 ways to run a simple command like <code>echo test</code> in
 Python: via the shell, or directly (via the kernel).</p>
 <p>This is via the shell:</p>
-<pre data-lang="python" class="language-python "><code class="language-python" data-lang="python">import subprocess
-subprocess.Popen(&quot;echo test&quot;, shell=True)
-</code></pre>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>subprocess
+</span><span>subprocess.</span><span style="color:#bf616a;">Popen</span><span>(&quot;</span><span style="color:#a3be8c;">echo test</span><span>&quot;, </span><span style="color:#bf616a;">shell</span><span>=</span><span style="color:#d08770;">True</span><span>)
+</span></code></pre>
 <p>Output:</p>
-<pre><code>test
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>test
+</span></code></pre>
 <p>This is via the kernel:</p>
-<pre data-lang="python" class="language-python "><code class="language-python" data-lang="python">import subprocess
-p = subprocess.Popen([&quot;echo&quot;, &quot;test&quot;], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-output = p.communicate()
-print(output)
-</code></pre>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>subprocess
+</span><span>p = subprocess.</span><span style="color:#bf616a;">Popen</span><span>([&quot;</span><span style="color:#a3be8c;">echo</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">test</span><span>&quot;], </span><span style="color:#bf616a;">stdout</span><span>=subprocess.</span><span style="color:#bf616a;">PIPE</span><span>, </span><span style="color:#bf616a;">stderr</span><span>=subprocess.</span><span style="color:#bf616a;">PIPE</span><span>)
+</span><span>output = p.</span><span style="color:#bf616a;">communicate</span><span>()
+</span><span style="color:#96b5b4;">print</span><span>(output)
+</span></code></pre>
 <p>Output:</p>
-<pre><code>(b&#x27;testn&#x27;, b&#x27;&#x27;)
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>(b&#39;testn&#39;, b&#39;&#39;)
+</span></code></pre>
 <p>Not exactly what we want. The output is actually a tuple (<strong>stdout</strong>,
 <strong>stderr</strong>). Note that by default, <code>shell=False</code>, and that's why it's
 not stated here.</p>
 <p>To get the equivalent of what we get from the first example, we have to
 do a bit more work:</p>
-<pre data-lang="python" class="language-python "><code class="language-python" data-lang="python">import subprocess
-p = subprocess.Popen([&quot;echo&quot;, &quot;test&quot;], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-output = p.communicate()
-print(output[0].decode(), end=&quot;&quot;)
-</code></pre>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>subprocess
+</span><span>p = subprocess.</span><span style="color:#bf616a;">Popen</span><span>([&quot;</span><span style="color:#a3be8c;">echo</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">test</span><span>&quot;], </span><span style="color:#bf616a;">stdout</span><span>=subprocess.</span><span style="color:#bf616a;">PIPE</span><span>, </span><span style="color:#bf616a;">stderr</span><span>=subprocess.</span><span style="color:#bf616a;">PIPE</span><span>)
+</span><span>output = p.</span><span style="color:#bf616a;">communicate</span><span>()
+</span><span style="color:#96b5b4;">print</span><span>(output[</span><span style="color:#d08770;">0</span><span>].</span><span style="color:#bf616a;">decode</span><span>(), </span><span style="color:#bf616a;">end</span><span>=&quot;&quot;)
+</span></code></pre>
 <p>Output:</p>
-<pre><code>test
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>test
+</span></code></pre>
 <p>The <code>b</code> thing indicates that the string is in bytes format. To get a
 normal string from that, just run the string's <a href="http://docs.python.org/library/stdtypes.html?highlight=encode#str.decode">decode method</a>. Also,
 that I had to use the <code>end</code> argument on the <a href="http://docs.python.org/library/functions.html#print">print function</a>, was to

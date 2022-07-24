@@ -65,16 +65,16 @@
       <p>Just <a href="https://github.com/rust-lang/rust/pull/29651">one submission</a> this time around. Yep! I did however spend time
 pondering the magical forward type inference that I first experienced
 <a href="https://tshepang.github.io/rust-week-of-2015-05-29/">back in May</a>, this time sparked by <a href="https://github.com/carllerche/mio/blob/getting-started/doc/getting-started.md#writing-the-echo-server">this example</a>; see this line:</p>
-<pre><code>let address = &quot;0.0.0.0:6567&quot;.parse().unwrap();
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>let address = &quot;0.0.0.0:6567&quot;.parse().unwrap();
+</span></code></pre>
 <p>You actually have to read further to figure the type that URL is going
 to be parsed as:</p>
-<pre><code>let server = TcpListener::bind(&amp;address).unwrap();
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>let server = TcpListener::bind(&amp;address).unwrap();
+</span></code></pre>
 <p>It would be less surprising if we had the following instead:</p>
-<pre><code>let address = SocketAddr::from_str(&quot;0.0.0.0:6567&quot;.unwrap();
-let server = TcpListener::bind(&amp;address).unwrap();
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>let address = SocketAddr::from_str(&quot;0.0.0.0:6567&quot;.unwrap();
+</span><span>let server = TcpListener::bind(&amp;address).unwrap();
+</span></code></pre>
 
     </div>
 

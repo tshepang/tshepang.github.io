@@ -63,15 +63,15 @@
     <div itemprop="articleBody">
       <br>
       <p>Following should be self-explanatory:</p>
-<pre data-lang="python" class="language-python "><code class="language-python" data-lang="python">$ python
-&gt;&gt;&gt; numbers = dict(zero=0, one=1, two=2, three=3)
-&gt;&gt;&gt; numbers
-{&#x27;three&#x27;: 3, &#x27;zero&#x27;: 0, &#x27;two&#x27;: 2, &#x27;one&#x27;: 1}
-&gt;&gt;&gt; sorted(numbers)
-[&#x27;one&#x27;, &#x27;three&#x27;, &#x27;two&#x27;, &#x27;zero&#x27;]
-&gt;&gt;&gt; sorted(numbers, key=numbers.get)
-[&#x27;zero&#x27;, &#x27;one&#x27;, &#x27;two&#x27;, &#x27;three&#x27;]
-</code></pre>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>$ python
+</span><span>&gt;&gt;&gt; numbers = </span><span style="color:#bf616a;">dict</span><span>(</span><span style="color:#bf616a;">zero</span><span>=</span><span style="color:#d08770;">0</span><span>, </span><span style="color:#bf616a;">one</span><span>=</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#bf616a;">two</span><span>=</span><span style="color:#d08770;">2</span><span>, </span><span style="color:#bf616a;">three</span><span>=</span><span style="color:#d08770;">3</span><span>)
+</span><span>&gt;&gt;&gt; numbers
+</span><span>{&#39;</span><span style="color:#a3be8c;">three</span><span>&#39;: </span><span style="color:#d08770;">3</span><span>, &#39;</span><span style="color:#a3be8c;">zero</span><span>&#39;: </span><span style="color:#d08770;">0</span><span>, &#39;</span><span style="color:#a3be8c;">two</span><span>&#39;: </span><span style="color:#d08770;">2</span><span>, &#39;</span><span style="color:#a3be8c;">one</span><span>&#39;: </span><span style="color:#d08770;">1</span><span>}
+</span><span>&gt;&gt;&gt; </span><span style="color:#96b5b4;">sorted</span><span>(numbers)
+</span><span>[&#39;</span><span style="color:#a3be8c;">one</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">three</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">two</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">zero</span><span>&#39;]
+</span><span>&gt;&gt;&gt; </span><span style="color:#96b5b4;">sorted</span><span>(numbers, </span><span style="color:#bf616a;">key</span><span>=numbers.get)
+</span><span>[&#39;</span><span style="color:#a3be8c;">zero</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">one</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">two</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">three</span><span>&#39;]
+</span></code></pre>
 <p>The second-last command sorts by keys, but that's easy. Sorting by
 value, as shown by the last command above, is what trips many novices,
 and I had to spend too much time on the web finding how to do it, and I

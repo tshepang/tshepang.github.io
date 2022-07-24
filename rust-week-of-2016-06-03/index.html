@@ -89,16 +89,16 @@ process error case had to be handled in separate places.</p>
 means that we don't care about the success return value. On the
 calling side, we have an option to use a <code>match</code> statement to handle
 the result:</p>
-<pre data-lang="rust" class="language-rust "><code class="language-rust" data-lang="rust">match foo() {
-    Ok(_) =&gt; (), Err(error) =&gt; do_something_with(error)
-}
-</code></pre>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">match </span><span style="color:#96b5b4;">foo</span><span>() {
+</span><span>    Ok(_) =&gt; (), Err(error) =&gt; </span><span style="color:#96b5b4;">do_something_with</span><span>(error)
+</span><span>}
+</span></code></pre>
 <p>There is a convenient syntax to deal with such case, where you
 don't care about one of values... <code>if let</code>:</p>
-<pre data-lang="rust" class="language-rust "><code class="language-rust" data-lang="rust">if let Err(error) = foo() {
-    do_something_with(error)
-}
-</code></pre>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">if let </span><span>Err(error) = </span><span style="color:#96b5b4;">foo</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">do_something_with</span><span>(error)
+</span><span>}
+</span></code></pre>
 <p>So elegant!</p>
 </li>
 </ul>

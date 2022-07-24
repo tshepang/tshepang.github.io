@@ -64,27 +64,27 @@
       <br>
       <p>I came across <a href="http://greenteapress.com/perl/perl.pdf">a tutorial</a> that showes how to implement a simple cat in
 Perl. I've modified their example for the sake of simplicity:</p>
-<pre data-lang="perl" class="language-perl "><code class="language-perl" data-lang="perl">sub cat {
-    foreach my $filename (@_) {
-        open FILE, $filename;
-        while (my $line = &lt;FILE&gt;) {
-            print $line;
-        }
-    }
-}
-cat @ARGV;
-</code></pre>
+<pre data-lang="perl" style="background-color:#2b303b;color:#c0c5ce;" class="language-perl "><code class="language-perl" data-lang="perl"><span style="color:#b48ead;">sub </span><span style="color:#8fa1b3;">cat </span><span>{
+</span><span>    </span><span style="color:#b48ead;">foreach my </span><span>$</span><span style="color:#bf616a;">filename </span><span>(@</span><span style="color:#bf616a;">_</span><span>) {
+</span><span>        </span><span style="color:#96b5b4;">open </span><span style="color:#d08770;">FILE</span><span>, $</span><span style="color:#bf616a;">filename</span><span>;
+</span><span>        </span><span style="color:#b48ead;">while </span><span>(</span><span style="color:#b48ead;">my </span><span>$</span><span style="color:#bf616a;">line </span><span>= &lt;</span><span style="color:#a3be8c;">FILE</span><span>&gt;) {
+</span><span>            </span><span style="color:#96b5b4;">print </span><span>$</span><span style="color:#bf616a;">line</span><span>;
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span style="color:#bf616a;">cat </span><span>@</span><span style="color:#bf616a;">ARGV</span><span>;
+</span></code></pre>
 <p>Running this script (e.g. <code>perl cat.pl file</code>) will display those files
 as if you ran <code>cat file</code>.</p>
 <p>I decided to see how the Python example would look like:</p>
-<pre data-lang="python" class="language-python "><code class="language-python" data-lang="python">import sys
-def cat(files):
-    for filename in files:
-        with open(filename) as FILE:
-            for line in FILE:
-                print(line, end=&quot;&quot;)
-cat(sys.argv[1:])
-</code></pre>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>sys
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">cat</span><span>(</span><span style="color:#bf616a;">files</span><span>):
+</span><span>    </span><span style="color:#b48ead;">for </span><span>filename </span><span style="color:#b48ead;">in </span><span>files:
+</span><span>        </span><span style="color:#b48ead;">with </span><span style="color:#96b5b4;">open</span><span>(filename) </span><span style="color:#b48ead;">as </span><span style="color:#bf616a;">FILE</span><span>:
+</span><span>            </span><span style="color:#b48ead;">for </span><span>line </span><span style="color:#b48ead;">in </span><span style="color:#bf616a;">FILE</span><span>:
+</span><span>                </span><span style="color:#96b5b4;">print</span><span>(line, </span><span style="color:#bf616a;">end</span><span>=&quot;&quot;)
+</span><span style="color:#bf616a;">cat</span><span>(sys.argv[</span><span style="color:#d08770;">1</span><span>:])
+</span></code></pre>
 <p>Running this script (e.g. <code>python3 cat.py file1 file2</code>) will give
 exactly the same result as above.</p>
 <h2 id="notes">notes</h2>

@@ -64,36 +64,36 @@
       <br>
       <p>If you got two Debian repositories, it's quite easy to check the
 differences in package versions between them:</p>
-<pre data-lang="python" class="language-python "><code class="language-python" data-lang="python">import os
-import gzip
-import apt_pkg
-
-repo1 = &quot;~&#x2F;.repo_custom&#x2F;dists&#x2F;cache&#x2F;main&#x2F;binary-i386&#x2F;Packages.gz&quot;
-repo1 = os.path.expanduser(repo1)
-repo1 = apt_pkg.TagFile(gzip.open(repo1, &quot;rb&quot;))
-repo1 = dict([(pkg[&quot;Package&quot;], pkg[&quot;Version&quot;]) for pkg in repo1])
-
-repo2 = &quot;~&#x2F;.repo_bin&#x2F;dists&#x2F;squeeze&#x2F;main&#x2F;binary-i386&#x2F;Packages.gz&quot;
-repo2 = os.path.expanduser(repo2)
-repo2 = apt_pkg.TagFile(gzip.open(repo2, &quot;rb&quot;))
-repo2 = dict([(pkg[&quot;Package&quot;], pkg[&quot;Version&quot;]) for pkg in repo2])
-
-apt_pkg.init_system()
-for pkg in repo1:
-    if pkg in repo2:
-        vc = apt_pkg.version_compare(repo1[pkg], repo2[pkg])
-        if vc &gt; 0:
-            print(&quot;{0}t{1}t({2})&quot;.format(repo1[pkg], repo2[pkg], pkg))
-</code></pre>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>os
+</span><span style="color:#b48ead;">import </span><span>gzip
+</span><span style="color:#b48ead;">import </span><span>apt_pkg
+</span><span>
+</span><span>repo1 = &quot;</span><span style="color:#a3be8c;">~/.repo_custom/dists/cache/main/binary-i386/Packages.gz</span><span>&quot;
+</span><span>repo1 = os.path.</span><span style="color:#bf616a;">expanduser</span><span>(repo1)
+</span><span>repo1 = apt_pkg.</span><span style="color:#bf616a;">TagFile</span><span>(gzip.</span><span style="color:#bf616a;">open</span><span>(repo1, &quot;</span><span style="color:#a3be8c;">rb</span><span>&quot;))
+</span><span>repo1 = </span><span style="color:#bf616a;">dict</span><span>([(pkg[&quot;</span><span style="color:#a3be8c;">Package</span><span>&quot;], pkg[&quot;</span><span style="color:#a3be8c;">Version</span><span>&quot;]) </span><span style="color:#b48ead;">for </span><span>pkg </span><span style="color:#b48ead;">in </span><span>repo1])
+</span><span>
+</span><span>repo2 = &quot;</span><span style="color:#a3be8c;">~/.repo_bin/dists/squeeze/main/binary-i386/Packages.gz</span><span>&quot;
+</span><span>repo2 = os.path.</span><span style="color:#bf616a;">expanduser</span><span>(repo2)
+</span><span>repo2 = apt_pkg.</span><span style="color:#bf616a;">TagFile</span><span>(gzip.</span><span style="color:#bf616a;">open</span><span>(repo2, &quot;</span><span style="color:#a3be8c;">rb</span><span>&quot;))
+</span><span>repo2 = </span><span style="color:#bf616a;">dict</span><span>([(pkg[&quot;</span><span style="color:#a3be8c;">Package</span><span>&quot;], pkg[&quot;</span><span style="color:#a3be8c;">Version</span><span>&quot;]) </span><span style="color:#b48ead;">for </span><span>pkg </span><span style="color:#b48ead;">in </span><span>repo2])
+</span><span>
+</span><span>apt_pkg.</span><span style="color:#bf616a;">init_system</span><span>()
+</span><span style="color:#b48ead;">for </span><span>pkg </span><span style="color:#b48ead;">in </span><span>repo1:
+</span><span>    </span><span style="color:#b48ead;">if </span><span>pkg in repo2:
+</span><span>        vc = apt_pkg.</span><span style="color:#bf616a;">version_compare</span><span>(repo1[pkg], repo2[pkg])
+</span><span>        </span><span style="color:#b48ead;">if </span><span>vc &gt; </span><span style="color:#d08770;">0</span><span>:
+</span><span>            </span><span style="color:#96b5b4;">print</span><span>(&quot;</span><span style="color:#d08770;">{0}</span><span style="color:#a3be8c;">t</span><span style="color:#d08770;">{1}</span><span style="color:#a3be8c;">t(</span><span style="color:#d08770;">{2}</span><span style="color:#a3be8c;">)</span><span>&quot;.</span><span style="color:#bf616a;">format</span><span>(repo1[pkg], repo2[pkg], pkg))
+</span></code></pre>
 <p>The line <code>import apt_pkg</code> implies that <strong>python3-apt</strong> is installed.</p>
 <p>Here's a snippet of what the output will look like:</p>
-<pre><code>2.32.1-2    2.28.1-6    (gconf-defaults-service)
-0.23.0-1    0.21.1-1    (pylint)
-2.91.5-2    2.30.2-2    (libgnomekbd-common)
-0.21.2-1    0.16.4-1    (libpixman-1-dev)
-2.91.7-1    2.30.1-2    (nautilus)
-0.9.22-1    0.9.21-3    (pulseaudio-utils)
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>2.32.1-2    2.28.1-6    (gconf-defaults-service)
+</span><span>0.23.0-1    0.21.1-1    (pylint)
+</span><span>2.91.5-2    2.30.2-2    (libgnomekbd-common)
+</span><span>0.21.2-1    0.16.4-1    (libpixman-1-dev)
+</span><span>2.91.7-1    2.30.1-2    (nautilus)
+</span><span>0.9.22-1    0.9.21-3    (pulseaudio-utils)
+</span></code></pre>
 <p>Here, we get a display of package versions where the repo1 (custom repo
 in this case) is greater than repo2 version. To do it the other way
 around, use the <code>&lt;</code> character in the comparison line, <code>if vc &gt; 0</code>.</p>

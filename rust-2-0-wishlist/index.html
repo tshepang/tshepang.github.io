@@ -77,11 +77,11 @@ following are my favorite breaking things I want in Rust.</p>
 <li>
 <p>Assigning values to struct bindings should use the equal sign, not
 the colon:</p>
-<pre data-lang="rust" class="language-rust "><code class="language-rust" data-lang="rust">&#x2F;&#x2F; now
-Shoe { size: 10, style: &quot;sneaker&quot; };
-&#x2F;&#x2F; dream
-Shoe { size = 10, style = &quot;sneaker&quot; };
-</code></pre>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">// now
+</span><span>Shoe { size: </span><span style="color:#d08770;">10</span><span>, style: &quot;</span><span style="color:#a3be8c;">sneaker</span><span>&quot; };
+</span><span style="color:#65737e;">// dream
+</span><span>Shoe { size = </span><span style="color:#d08770;">10</span><span>, style = &quot;</span><span style="color:#a3be8c;">sneaker</span><span>&quot; };
+</span></code></pre>
 <p>This would be consistent with the rest of the language.</p>
 </li>
 </ul>
@@ -119,16 +119,16 @@ externally... it does not feel general enough. (<a href="https://github.com/rust
 <li>
 <p>Remove per-type methods where trait impls offer same functionality,
 for generality</p>
-<pre data-lang="rust" class="language-rust "><code class="language-rust" data-lang="rust">&#x2F;&#x2F; remove
-PathBuf::as_path
-&#x2F;&#x2F; ... in favor of
-PathBuf::as_ref
-
-&#x2F;&#x2F; remove
-Path::to_path_buf
-&#x2F;&#x2F; ... in favor of
-Path::to_owned
-</code></pre>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">// remove
+</span><span>PathBuf::as_path
+</span><span style="color:#65737e;">// ... in favor of
+</span><span>PathBuf::as_ref
+</span><span>
+</span><span style="color:#65737e;">// remove
+</span><span>Path::to_path_buf
+</span><span style="color:#65737e;">// ... in favor of
+</span><span>Path::to_owned
+</span></code></pre>
 </li>
 <li>
 <p>Remove all deprecated APIs, most notable being the <code>try!</code> macro</p>
