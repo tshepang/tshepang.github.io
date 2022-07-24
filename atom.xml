@@ -2517,7 +2517,7 @@ one to do away with using threads, reducing code complexity.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;Rust error handling is so nice, and forces one to think better about
-code. As an example, when you doing any I&#x2F;O, you mostly want to do
+code. As an example, when doing any I&#x2F;O, you mostly want to do
 that in a separate function so that you can return a &lt;code&gt;Result&lt;&#x2F;code&gt; type,
 something like &lt;code&gt;Result&amp;lt;(), std::io::Error&amp;gt;&lt;&#x2F;code&gt;. This forces you to
 isolate just the I&#x2F;O handling part from the other parts of the
@@ -2533,11 +2533,12 @@ means that we don&#x27;t care about the success return value. On the
 calling side, we have an option to use a &lt;code&gt;match&lt;&#x2F;code&gt; statement to handle
 the result:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;match &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;foo&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;    Ok(_) =&amp;gt; (), Err(error) =&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;do_something_with&lt;&#x2F;span&gt;&lt;span&gt;(error)
+&lt;&#x2F;span&gt;&lt;span&gt;    Ok(_) =&amp;gt; (),
+&lt;&#x2F;span&gt;&lt;span&gt;    Err(error) =&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;do_something_with&lt;&#x2F;span&gt;&lt;span&gt;(error),
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;There is a convenient syntax to deal with such case, where you
-don&#x27;t care about one of values... &lt;code&gt;if let&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;p&gt;There is a convenient syntax to deal with such a case, where you
+don&#x27;t care about one of the values... &lt;code&gt;if let&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;if let &lt;&#x2F;span&gt;&lt;span&gt;Err(error) = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;foo&lt;&#x2F;span&gt;&lt;span&gt;() {
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;do_something_with&lt;&#x2F;span&gt;&lt;span&gt;(error)
 &lt;&#x2F;span&gt;&lt;span&gt;}
@@ -2666,15 +2667,6 @@ super-annoying formula.&lt;&#x2F;li&gt;
 &lt;li&gt;Near the end of the movie, tough lady simply disappears without
 explanation.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Rust week of 2016-02-19</title>
-		<published>2016-02-25T00:00:00+00:00</published>
-		<updated>2016-02-25T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://tshepang.github.io/rust-week-of-2016-02-19/" type="text/html"/>
-		<id>https://tshepang.github.io/rust-week-of-2016-02-19/</id>
-		<content type="html">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;31893&quot;&gt;Just&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;31894&quot;&gt;four&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;31896&quot;&gt;documentation&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;31897&quot;&gt;submissions&lt;&#x2F;a&gt; this time.&lt;&#x2F;p&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
@@ -3488,14 +3480,6 @@ has only one blight... No Woman, No Cry.&lt;&#x2F;p&gt;
 for work, yay!), and I found it surprisingly easy to use. It&#x27;s not a
 very pretty API though, and I remember the Python API to be horrible
 too. Maybe the nature of inotify disallows beauty, who knows.&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;I submitted these to the Rust tree:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;27495&quot;&gt;Follow idiom&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;27549&quot;&gt;Be more specific&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;27550&quot;&gt;Add missing info&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;27552&quot;&gt;Some miscellany&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
@@ -4022,7 +4006,8 @@ including upstream ones, example being stdlib types as follows:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; foo = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10_&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;i32&lt;&#x2F;span&gt;&lt;span&gt;; assert_eq!(foo.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;invert&lt;&#x2F;span&gt;&lt;span&gt;(), &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0.1&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; foo = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10_&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;i32&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    assert_eq!(foo.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;invert&lt;&#x2F;span&gt;&lt;span&gt;(), &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0.1&lt;&#x2F;span&gt;&lt;span&gt;);
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Another example is that one can limit the type of arguments accepted

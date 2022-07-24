@@ -74,7 +74,7 @@ one to do away with using threads, reducing code complexity.</p>
 </li>
 <li>
 <p>Rust error handling is so nice, and forces one to think better about
-code. As an example, when you doing any I/O, you mostly want to do
+code. As an example, when doing any I/O, you mostly want to do
 that in a separate function so that you can return a <code>Result</code> type,
 something like <code>Result&lt;(), std::io::Error&gt;</code>. This forces you to
 isolate just the I/O handling part from the other parts of the
@@ -90,11 +90,12 @@ means that we don't care about the success return value. On the
 calling side, we have an option to use a <code>match</code> statement to handle
 the result:</p>
 <pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">match </span><span style="color:#96b5b4;">foo</span><span>() {
-</span><span>    Ok(_) =&gt; (), Err(error) =&gt; </span><span style="color:#96b5b4;">do_something_with</span><span>(error)
+</span><span>    Ok(_) =&gt; (),
+</span><span>    Err(error) =&gt; </span><span style="color:#96b5b4;">do_something_with</span><span>(error),
 </span><span>}
 </span></code></pre>
-<p>There is a convenient syntax to deal with such case, where you
-don't care about one of values... <code>if let</code>:</p>
+<p>There is a convenient syntax to deal with such a case, where you
+don't care about one of the values... <code>if let</code>:</p>
 <pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">if let </span><span>Err(error) = </span><span style="color:#96b5b4;">foo</span><span>() {
 </span><span>    </span><span style="color:#96b5b4;">do_something_with</span><span>(error)
 </span><span>}
