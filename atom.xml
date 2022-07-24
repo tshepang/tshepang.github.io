@@ -1786,7 +1786,7 @@ respect for what she created (what&#x27;s her name?).&lt;&#x2F;p&gt;
 upstream git reference does not match one that&#x27;s checked out, it could
 be that upstream is ahead. The assumption previously was that local is
 ahead of upstream, implying that a push is needed. The API that helped
-with this change is [Repository.graph_ahead_behind], a lovely and
+with this change is &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;git2&#x2F;0.6.8&#x2F;git2&#x2F;struct.Repository.html#method.graph_ahead_behind&quot;&gt;Repository.graph_ahead_behind&lt;&#x2F;a&gt;, a lovely and
 unexpected gift (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tshepang&#x2F;mrh&#x2F;commit&#x2F;fc82fe9890cf3a8033fa78295308d888628caa39&quot;&gt;commit&lt;&#x2F;a&gt;).&lt;&#x2F;p&gt;
 &lt;p&gt;I used &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;cargo-outdated&quot;&gt;cargo-outdated&lt;&#x2F;a&gt; for the first time... I like.&lt;&#x2F;p&gt;
 &lt;p&gt;I also released &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;panoptix-za&#x2F;tag-helper&quot;&gt;tag-helper&lt;&#x2F;a&gt;, whose development was sponsored by
