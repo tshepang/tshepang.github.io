@@ -1,208 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="alternate" type="application/atom+xml" title="Atom/RSS Feed" href="https://tshepang.github.io/atom.xml" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <title>a bit of benchmarking | Tshepang logs</title>
+  <meta name="copyright" content="Tshepang logs" />
+  <meta name="description" content="" />
+  <link rel="canonical" href="https://tshepang.github.io/a-bit-of-benchmarking/" />
+  <meta name="keywords" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <noscript><link rel="stylesheet" href="https://tshepang.github.io/nojs.css" /></noscript>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><h1><a href="https://tshepang.github.io/">Tshepang logs</a></h1></div>
+      <div>
+        <ul><li> <h2><a href="https://tshepang.github.io/about-me">about</a></h2> </li><li> <h2><a href="https://tshepang.github.io/tags">tags</a></h2> </li><li> <h2><a href="https://tshepang.github.io/categories/movies">movies</a></h2> </li></ul>
+      </div>
+      <div>
+        <form class="js" name="goSearch">
+          <div class="searchd">
+            <input id="userinput" type="text" placeholder="Search" autocomplete="off" title="Search" />
+            <button type="submit" title="Search"><span class="si">&#8981;</span></button>
+          </div>
+          <div><div id="suggestions"></div></div>
+        </form>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <article>
+        <h1><a href="https://tshepang.github.io/a-bit-of-benchmarking/">a bit of benchmarking</a></h1>
 
-      <!-- Enable responsiveness on mobile devices-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
-      <title>Tshepang logs</title>
-
-      
-        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://tshepang.github.io/atom.xml">
-      
-
-      
-          <link rel="stylesheet" href="https://tshepang.github.io/site.css">
-      
-
-      
-      
-    </head>
-
-    <body class="hack dark main container">
-        
-    
-        
-                
-                    <header>
-                        <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
-                        
-                            <a itemprop="url"
-                               class=""
-                               href="https:&#x2F;&#x2F;tshepang.github.io&#x2F;about-me">
-                                <span itemprop="name">about
-                                </span></a>
-                        
-                            <a itemprop="url"
-                               class=""
-                               href="https:&#x2F;&#x2F;tshepang.github.io&#x2F;tags">
-                                <span itemprop="name">tags
-                                </span></a>
-                        
-                            <a itemprop="url"
-                               class=""
-                               href="https:&#x2F;&#x2F;tshepang.github.io&#x2F;categories&#x2F;movies">
-                                <span itemprop="name">movies
-                                </span></a>
-                        
-                        </nav>
-                    </header>
-                
-            
-    
-
-<article itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-        <h1 itemprop="headline">a bit of benchmarking</h1>
-        <span class="muted">
-    2013-10-27
-</span>
-    </header>
-    <div itemprop="articleBody">
-      <br>
-      <p>I was curious how my home machine performs compared to my work machine.
+    <p>I was curious how my home machine performs compared to my work machine.
 Each of these have 4 logical processors (and 8GB of RAM), so are sort of
 comparable. I also added the <a href="https://www.digitalocean.com/?refcode=25b4887810cc">DigitalOcean</a> VPS with those specs
 (<a href="https://www.digitalocean.com/pricing">currently $80 per month</a>) because... why not.</p>
 <h2 id="machine-specs">Machine Specs</h2>
 <p>Each machine runs Debian testing (codename &quot;jessie&quot;). Following is the
 output of these commands for each machine:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>uname --all
-</span><span>cat /proc/cpuinfo | sed --quiet &#39;5p&#39;
+<pre class="z-code"><code><span class="z-text z-plain">uname --all
+cat /proc/cpuinfo | sed --quiet &#39;5p&#39;
 </span></code></pre>
 <p>Home machine:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>Linux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU/Linux
-</span><span>model name      : Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz
+<pre class="z-code"><code><span class="z-text z-plain">Linux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU/Linux
+model name      : Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz
 </span></code></pre>
 <p>Work machine:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>Linux twork 3.10-3-amd64 #1 SMP Debian 3.10.11-1 (2013-09-10) x86_64 GNU/Linux
-</span><span>model name      : AMD Phenom(tm) II X4 970 Processor
+<pre class="z-code"><code><span class="z-text z-plain">Linux twork 3.10-3-amd64 #1 SMP Debian 3.10.11-1 (2013-09-10) x86_64 GNU/Linux
+model name      : AMD Phenom(tm) II X4 970 Processor
 </span></code></pre>
 <p>DigitalOcean VPS:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>Linux tcloud 3.11-1-amd64 #1 SMP Debian 3.11.5-1 (2013-10-17) x86_64 GNU/Linux
-</span><span>model name      : QEMU Virtual CPU version 1.0
+<pre class="z-code"><code><span class="z-text z-plain">Linux tcloud 3.11-1-amd64 #1 SMP Debian 3.11.5-1 (2013-10-17) x86_64 GNU/Linux
+model name      : QEMU Virtual CPU version 1.0
 </span></code></pre>
 <h2 id="cpython-benchmarks">CPython benchmarks</h2>
 <p>I ran two benchmarks, both from the latest VCS version of CPython,
 development branch:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ hg identify --id --branch
-</span><span>b6a1a78818fe default
+<pre class="z-code"><code><span class="z-text z-plain">$ hg identify --id --branch
+b6a1a78818fe default
 </span></code></pre>
 <h3 id="build">Build</h3>
 <p>Here's the command I used:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>make distclean; time (./configure &amp;&amp; make --silent --jobs=4)
+<pre class="z-code"><code><span class="z-text z-plain">make distclean; time (./configure &amp;&amp; make --silent --jobs=4)
 </span></code></pre>
 <h3 id="results">Results</h3>
 <p>Home machine:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>real    2m11.687s
-</span><span>user    3m18.104s
-</span><span>sys     0m9.964s
+<pre class="z-code"><code><span class="z-text z-plain">real    2m11.687s
+user    3m18.104s
+sys     0m9.964s
 </span></code></pre>
 <p>Work machine:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>real    2m2.707s
-</span><span>user    2m24.200s
-</span><span>sys     0m12.280s
+<pre class="z-code"><code><span class="z-text z-plain">real    2m2.707s
+user    2m24.200s
+sys     0m12.280s
 </span></code></pre>
 <p>VPS:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>real    2m30.931s
-</span><span>user    3m7.272s
-</span><span>sys     0m16.592s
+<pre class="z-code"><code><span class="z-text z-plain">real    2m30.931s
+user    3m7.272s
+sys     0m16.592s
 </span></code></pre>
 <h3 id="test-suite">Test suite</h3>
 <p>Here's the command I used:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>time ./python -m test --multiprocess=0
+<pre class="z-code"><code><span class="z-text z-plain">time ./python -m test --multiprocess=0
 </span></code></pre>
 <p><strong>--multiprocess=0</strong> means that there will be 6 tests run in parallel;
 that is the number logical cores (4 in my case) + 2 (to avoid waiting
 too long for tests which are largely idle)</p>
 <h3 id="results-1">Results</h3>
 <p>Home machine:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>real    3m42.571s
-</span><span>user    7m13.124s
-</span><span>sys     0m33.320s
+<pre class="z-code"><code><span class="z-text z-plain">real    3m42.571s
+user    7m13.124s
+sys     0m33.320s
 </span></code></pre>
 <p>Work machine:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>real    2m29.957s
-</span><span>user    4m9.052s
-</span><span>sys     0m27.364s
+<pre class="z-code"><code><span class="z-text z-plain">real    2m29.957s
+user    4m9.052s
+sys     0m27.364s
 </span></code></pre>
 <p>VPS:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>real    2m19.174s
-</span><span>user    5m5.444s
-</span><span>sys     0m40.008s
+<pre class="z-code"><code><span class="z-text z-plain">real    2m19.174s
+user    5m5.444s
+sys     0m40.008s
 </span></code></pre>
 <h2 id="linux-kernel-build">Linux kernel build</h2>
 <p>Just for kicks, I decided to check how long building Linux would take;
 for this, I used latest 'final' release from Linus' git tree:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ git log -1
-</span><span>commit 6e4664525b1db28f8c4e1130957f70a94c19213e
-</span><span>Author: Linus Torvalds &lt;torvalds@linux-foundation.org&gt;
-</span><span>Date:   Mon Sep 2 13:46:10 2013 -0700
-</span><span>
-</span><span>Linux 3.11
+<pre class="z-code"><code><span class="z-text z-plain">$ git log -1
+commit 6e4664525b1db28f8c4e1130957f70a94c19213e
+Author: Linus Torvalds &lt;torvalds@linux-foundation.org&gt;
+Date:   Mon Sep 2 13:46:10 2013 -0700
+
+Linux 3.11
 </span></code></pre>
 <p>Here's the commands I used:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>make distclean &amp;&amp; make defconfig &amp;&amp; time make
+<pre class="z-code"><code><span class="z-text z-plain">make distclean &amp;&amp; make defconfig &amp;&amp; time make
 </span></code></pre>
 <h3 id="results-2">Results</h3>
 <p>Home machine:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>real    6m11.622s
-</span><span>user    21m2.664s
-</span><span>sys     1m15.324s
+<pre class="z-code"><code><span class="z-text z-plain">real    6m11.622s
+user    21m2.664s
+sys     1m15.324s
 </span></code></pre>
 <p>Work machine:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>real    2m40.275s
-</span><span>user    8m55.624s
-</span><span>sys     0m42.860s
+<pre class="z-code"><code><span class="z-text z-plain">real    2m40.275s
+user    8m55.624s
+sys     0m42.860s
 </span></code></pre>
 <p>VPS:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>real    3m41.240s
-</span><span>user    12m21.120s
-</span><span>sys     1m17.844s
+<pre class="z-code"><code><span class="z-text z-plain">real    3m41.240s
+user    12m21.120s
+sys     1m17.844s
 </span></code></pre>
 <h2 id="conclusion">Conclusion</h2>
 <p>My work machine is faster than the DigitalOcean offering of comparable
 specs, and much faster than my home machine, a laptop.</p>
 <p>(<a href="http://stackoverflow.com/a/556411/321731">detailed explanation of the output</a>)</p>
 
+<p><b><a href="#">Back to top</a></b></p>
+    </article>
+  </main>
+  <footer>
+    <div class="c">
+      <nav>
+        <ul><li><a href="https://tshepang.github.io/atom.xml" target="_blank" title="Atom/RSS Feed"><i type="Button" class="svg rss" title="Atom/RSS Feed"></i></a></li><li><a href="mailto:tshepang@gmail.com" target="_blank" title="Mail"><i type="Button" class="svg mail" title="Mail"></i></a></li><li><a href="https://twitter.com/tshepang_dev/" target="_blank" title="Twitter"><i type="Button" class="svg twitter" title="Twitter"></i></a></li><li><a href="https://github.com/tshepang/" target="_blank" title="Github"><i type="Button" class="svg github" title="Github"></i></a></li></ul>
+      </nav>
+      <p>Copyright &copy; 2022 Tshepang logs</p>
+      <nav>
+        <ul><li> <a href="https://tshepang.github.io/about-me"> about </a> </li></ul>
+      </nav>
+      <p>Powered by <a href="https://www.getzola.org/">Zola</a> and <a href="https://github.com/jieiku/abridge/">Abridge</a></p>
     </div>
-
-    
-        <footer>
-            <hr>
-            <p>
-                
-                
-                
-                    
-                    tagged
-                    
-                        <a href="https://tshepang.github.io/tags/python/">Python</a>
-                        
-                    
-                
-            </p>
-            
-            
-        </footer>
-    
-</article>
-
-
-    </body>
-
-    
-        <div class="search-container">
-          <input id="search" type="search" placeholder="🔎  search">
-          <div class="search-results">
-            <div class="search-results__items"></div>
-          </div>
-        </div>
-        <script type="text/javascript" src="https://tshepang.github.io/elasticlunr.min.js"></script>
-        <script type="text/javascript" src="https://tshepang.github.io/search_index.en.js"></script>
-        <script type="text/javascript" src="https://tshepang.github.io/search.js"></script>
-    
-
+  </footer>
+<span class="topout">
+<span class="topleft"> </span><a href="#" class="top" title="Back to Top">&cuwed;</a>
+</span>
+</body>
 </html>

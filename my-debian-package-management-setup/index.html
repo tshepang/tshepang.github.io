@@ -1,68 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="alternate" type="application/atom+xml" title="Atom/RSS Feed" href="https://tshepang.github.io/atom.xml" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <title>my Debian package management setup | Tshepang logs</title>
+  <meta name="copyright" content="Tshepang logs" />
+  <meta name="description" content="" />
+  <link rel="canonical" href="https://tshepang.github.io/my-debian-package-management-setup/" />
+  <meta name="keywords" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <noscript><link rel="stylesheet" href="https://tshepang.github.io/nojs.css" /></noscript>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><h1><a href="https://tshepang.github.io/">Tshepang logs</a></h1></div>
+      <div>
+        <ul><li> <h2><a href="https://tshepang.github.io/about-me">about</a></h2> </li><li> <h2><a href="https://tshepang.github.io/tags">tags</a></h2> </li><li> <h2><a href="https://tshepang.github.io/categories/movies">movies</a></h2> </li></ul>
+      </div>
+      <div>
+        <form class="js" name="goSearch">
+          <div class="searchd">
+            <input id="userinput" type="text" placeholder="Search" autocomplete="off" title="Search" />
+            <button type="submit" title="Search"><span class="si">&#8981;</span></button>
+          </div>
+          <div><div id="suggestions"></div></div>
+        </form>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <article>
+        <h1><a href="https://tshepang.github.io/my-debian-package-management-setup/">my Debian package management setup</a></h1>
 
-      <!-- Enable responsiveness on mobile devices-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
-      <title>Tshepang logs</title>
-
-      
-        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://tshepang.github.io/atom.xml">
-      
-
-      
-          <link rel="stylesheet" href="https://tshepang.github.io/site.css">
-      
-
-      
-      
-    </head>
-
-    <body class="hack dark main container">
-        
-    
-        
-                
-                    <header>
-                        <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
-                        
-                            <a itemprop="url"
-                               class=""
-                               href="https:&#x2F;&#x2F;tshepang.github.io&#x2F;about-me">
-                                <span itemprop="name">about
-                                </span></a>
-                        
-                            <a itemprop="url"
-                               class=""
-                               href="https:&#x2F;&#x2F;tshepang.github.io&#x2F;tags">
-                                <span itemprop="name">tags
-                                </span></a>
-                        
-                            <a itemprop="url"
-                               class=""
-                               href="https:&#x2F;&#x2F;tshepang.github.io&#x2F;categories&#x2F;movies">
-                                <span itemprop="name">movies
-                                </span></a>
-                        
-                        </nav>
-                    </header>
-                
-            
-    
-
-<article itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-        <h1 itemprop="headline">my Debian package management setup</h1>
-        <span class="muted">
-    2010-09-28
-</span>
-    </header>
-    <div itemprop="articleBody">
-      <br>
-      <p>Much of this is obsolete: I no longer use <code>debmirror</code> and no longer keep
+    <p>Much of this is obsolete: I no longer use <code>debmirror</code> and no longer keep
 the entire binary repository of i386 arch.</p>
 <hr />
 <p>There's a useful tool in Debian named debmirror. It's function is to
@@ -74,17 +53,17 @@ use it to create 2 repos:</p>
 </ul>
 <p>How this works is that I'd run the following command (an example for
 the source repo):</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>/usr/bin/debmirror
-</span><span> --verbose
-</span><span> --progress
-</span><span> --host=ftp.sun.ac.za
-</span><span> --passive
-</span><span> --dist=squeeze
-</span><span> --root=ftp/debian
-</span><span> --section=main
-</span><span> --method=ftp
-</span><span> --arch=none
-</span><span> /home/wena/.repo_src
+<pre class="z-code"><code><span class="z-text z-plain">/usr/bin/debmirror
+ --verbose
+ --progress
+ --host=ftp.sun.ac.za
+ --passive
+ --dist=squeeze
+ --root=ftp/debian
+ --section=main
+ --method=ftp
+ --arch=none
+ /home/wena/.repo_src
 </span></code></pre>
 <p>(look at debmirror's manpage to see what all those options mean)</p>
 <p>The result is that I'll be having ~30GB of Debian locally (for a
@@ -106,26 +85,26 @@ debmirror, and I think it can do what debmirror does (but I don't yet
 care to learn how).</p>
 <p>Moving on, here's the relevant entries from my /etc/apt/sources.list
 file:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;"># local repos (debmirror)
-</span><span style="color:#bf616a;">deb</span><span> file:/home/wena/.repo_bin sid main
-</span><span style="color:#bf616a;">deb-src</span><span> file:/home/wena/.repo_src sid main
-</span><span>
-</span><span style="color:#65737e;"># local repo (reprepro)
-</span><span style="color:#bf616a;">deb</span><span> file:/home/wena/.repo_local cache main
-</span><span>
-</span><span style="color:#65737e;"># remote repo
-</span><span style="color:#bf616a;">deb</span><span> ftp://ftp.sun.ac.za/ftp/debian/ sid main non-free contrib
+<pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-comment z-line z-number-sign z-shell"><span class="z-punctuation z-definition z-comment z-begin z-shell">#</span></span><span class="z-comment z-line z-number-sign z-shell"> local repos (debmirror)</span><span class="z-comment z-line z-number-sign z-shell">
+</span><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">deb</span></span><span class="z-meta z-function-call z-arguments z-shell"> file:/home/wena/.repo_bin sid main</span>
+<span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">deb-src</span></span><span class="z-meta z-function-call z-arguments z-shell"> file:/home/wena/.repo_src sid main</span>
+
+<span class="z-comment z-line z-number-sign z-shell"><span class="z-punctuation z-definition z-comment z-begin z-shell">#</span></span><span class="z-comment z-line z-number-sign z-shell"> local repo (reprepro)</span><span class="z-comment z-line z-number-sign z-shell">
+</span><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">deb</span></span><span class="z-meta z-function-call z-arguments z-shell"> file:/home/wena/.repo_local cache main</span>
+
+<span class="z-comment z-line z-number-sign z-shell"><span class="z-punctuation z-definition z-comment z-begin z-shell">#</span></span><span class="z-comment z-line z-number-sign z-shell"> remote repo</span><span class="z-comment z-line z-number-sign z-shell">
+</span><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">deb</span></span><span class="z-meta z-function-call z-arguments z-shell"> ftp://ftp.sun.ac.za/ftp/debian/ sid main non-free contrib</span>
 </span></code></pre>
 <p>So, what I do on a semi-regular basis is run:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>wajig update &amp;&amp; wajig upgrade
+<pre class="z-code"><code><span class="z-text z-plain">wajig update &amp;&amp; wajig upgrade
 </span></code></pre>
 <p>The newly-updated packages are stored in a cache so that a reinstall
 doesn't have to fetch from network again. After this I run:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>reprepro -vv --basedir ~/.repo_local includedeb cache /var/cache/apt/archives/*deb
+<pre class="z-code"><code><span class="z-text z-plain">reprepro -vv --basedir ~/.repo_local includedeb cache /var/cache/apt/archives/*deb
 </span></code></pre>
 <p>This updates the local reprepro repo and after which I can then remove
 the cached packages:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>wajig clean
+<pre class="z-code"><code><span class="z-text z-plain">wajig clean
 </span></code></pre>
 <p>I do that because they are now available in my reprepro-managed repo.
 That now means that I got a massive mirror managed by debmirror and a
@@ -135,42 +114,23 @@ repo has is some other packages like <strong>skype</strong> and <strong>oracle-x
 well as an odd packages from <a href="http://wiki.debian.org/DebianExperimental">Debian Experimental</a>.</p>
 <p>Not so simple I guess... but works so well for my needs.</p>
 
+<p><b><a href="#">Back to top</a></b></p>
+    </article>
+  </main>
+  <footer>
+    <div class="c">
+      <nav>
+        <ul><li><a href="https://tshepang.github.io/atom.xml" target="_blank" title="Atom/RSS Feed"><i type="Button" class="svg rss" title="Atom/RSS Feed"></i></a></li><li><a href="mailto:tshepang@gmail.com" target="_blank" title="Mail"><i type="Button" class="svg mail" title="Mail"></i></a></li><li><a href="https://twitter.com/tshepang_dev/" target="_blank" title="Twitter"><i type="Button" class="svg twitter" title="Twitter"></i></a></li><li><a href="https://github.com/tshepang/" target="_blank" title="Github"><i type="Button" class="svg github" title="Github"></i></a></li></ul>
+      </nav>
+      <p>Copyright &copy; 2022 Tshepang logs</p>
+      <nav>
+        <ul><li> <a href="https://tshepang.github.io/about-me"> about </a> </li></ul>
+      </nav>
+      <p>Powered by <a href="https://www.getzola.org/">Zola</a> and <a href="https://github.com/jieiku/abridge/">Abridge</a></p>
     </div>
-
-    
-        <footer>
-            <hr>
-            <p>
-                
-                
-                
-                    
-                    tagged
-                    
-                        <a href="https://tshepang.github.io/tags/debian/">Debian</a>
-                        
-                    
-                
-            </p>
-            
-            
-        </footer>
-    
-</article>
-
-
-    </body>
-
-    
-        <div class="search-container">
-          <input id="search" type="search" placeholder="🔎  search">
-          <div class="search-results">
-            <div class="search-results__items"></div>
-          </div>
-        </div>
-        <script type="text/javascript" src="https://tshepang.github.io/elasticlunr.min.js"></script>
-        <script type="text/javascript" src="https://tshepang.github.io/search_index.en.js"></script>
-        <script type="text/javascript" src="https://tshepang.github.io/search.js"></script>
-    
-
+  </footer>
+<span class="topout">
+<span class="topleft"> </span><a href="#" class="top" title="Back to Top">&cuwed;</a>
+</span>
+</body>
 </html>

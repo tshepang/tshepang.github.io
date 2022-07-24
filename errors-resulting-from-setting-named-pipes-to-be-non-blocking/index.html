@@ -1,123 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="alternate" type="application/atom+xml" title="Atom/RSS Feed" href="https://tshepang.github.io/atom.xml" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <title>errors resulting from setting named pipes to be non-blocking | Tshepang logs</title>
+  <meta name="copyright" content="Tshepang logs" />
+  <meta name="description" content="" />
+  <link rel="canonical" href="https://tshepang.github.io/errors-resulting-from-setting-named-pipes-to-be-non-blocking/" />
+  <meta name="keywords" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <noscript><link rel="stylesheet" href="https://tshepang.github.io/nojs.css" /></noscript>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><h1><a href="https://tshepang.github.io/">Tshepang logs</a></h1></div>
+      <div>
+        <ul><li> <h2><a href="https://tshepang.github.io/about-me">about</a></h2> </li><li> <h2><a href="https://tshepang.github.io/tags">tags</a></h2> </li><li> <h2><a href="https://tshepang.github.io/categories/movies">movies</a></h2> </li></ul>
+      </div>
+      <div>
+        <form class="js" name="goSearch">
+          <div class="searchd">
+            <input id="userinput" type="text" placeholder="Search" autocomplete="off" title="Search" />
+            <button type="submit" title="Search"><span class="si">&#8981;</span></button>
+          </div>
+          <div><div id="suggestions"></div></div>
+        </form>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <article>
+        <h1><a href="https://tshepang.github.io/errors-resulting-from-setting-named-pipes-to-be-non-blocking/">errors resulting from setting named pipes to be non-blocking</a></h1>
 
-      <!-- Enable responsiveness on mobile devices-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
-      <title>Tshepang logs</title>
-
-      
-        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://tshepang.github.io/atom.xml">
-      
-
-      
-          <link rel="stylesheet" href="https://tshepang.github.io/site.css">
-      
-
-      
-      
-    </head>
-
-    <body class="hack dark main container">
-        
-    
-        
-                
-                    <header>
-                        <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
-                        
-                            <a itemprop="url"
-                               class=""
-                               href="https:&#x2F;&#x2F;tshepang.github.io&#x2F;about-me">
-                                <span itemprop="name">about
-                                </span></a>
-                        
-                            <a itemprop="url"
-                               class=""
-                               href="https:&#x2F;&#x2F;tshepang.github.io&#x2F;tags">
-                                <span itemprop="name">tags
-                                </span></a>
-                        
-                            <a itemprop="url"
-                               class=""
-                               href="https:&#x2F;&#x2F;tshepang.github.io&#x2F;categories&#x2F;movies">
-                                <span itemprop="name">movies
-                                </span></a>
-                        
-                        </nav>
-                    </header>
-                
-            
-    
-
-<article itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-        <h1 itemprop="headline">errors resulting from setting named pipes to be non-blocking</h1>
-        <span class="muted">
-    2012-11-18
-</span>
-    </header>
-    <div itemprop="articleBody">
-      <br>
-      <p>Using C, I have been writing to named pipes in a non-blocking way and
+    <p>Using C, I have been writing to named pipes in a non-blocking way and
 have been getting a whole bunch of EAGAIN errors. I have spent way too
 long on the web trying to find out why, and bumped onto <a href="http://developerweb.net/viewtopic.php?pid=25967#p25967">this excellent
 answer</a>. Looking at the manpage, I see that this would give the same
 value as EWOULDBLOCK, which is a far more meaningful name in this case.</p>
 <p>This is what will display those errors:</p>
-<pre data-lang="c" style="background-color:#2b303b;color:#c0c5ce;" class="language-c "><code class="language-c" data-lang="c"><span style="color:#b48ead;">if </span><span>(</span><span style="color:#bf616a;">write</span><span>(fd, buffer, </span><span style="color:#96b5b4;">strlen</span><span>(buffer)) == -</span><span style="color:#d08770;">1</span><span>)
-</span><span>    </span><span style="color:#bf616a;">fprintf </span><span>(stderr, &quot;</span><span style="color:#a3be8c;">error writing to file &#39;</span><span style="color:#d08770;">%s</span><span style="color:#a3be8c;">&#39;: </span><span style="color:#d08770;">%s</span><span style="color:#a3be8c;"> (errno </span><span style="color:#d08770;">%d</span><span style="color:#a3be8c;">)</span><span>&quot;,
-</span><span>             path, </span><span style="color:#96b5b4;">strerror</span><span>(errno), fd);
-</span><span style="background-color:#bf616a;color:#2b303b;">}</span><span>
+<pre data-lang="c" class="language-c z-code"><code class="language-c" data-lang="c"><span class="z-source z-c"><span class="z-keyword z-control z-c">if</span> <span class="z-meta z-group z-c"><span class="z-punctuation z-section z-group z-begin z-c">(</span><span class="z-meta z-function-call z-c"><span class="z-variable z-function z-c">write</span><span class="z-meta z-group z-c"><span class="z-punctuation z-section z-group z-begin z-c">(</span></span></span><span class="z-meta z-function-call z-c"><span class="z-meta z-group z-c">fd<span class="z-punctuation z-separator z-c">,</span> buffer<span class="z-punctuation z-separator z-c">,</span> <span class="z-meta z-function-call z-c"><span class="z-support z-function z-C99 z-c">strlen</span><span class="z-meta z-group z-c"><span class="z-punctuation z-section z-group z-begin z-c">(</span></span></span><span class="z-meta z-function-call z-c"><span class="z-meta z-group z-c">buffer</span></span><span class="z-meta z-function-call z-c"><span class="z-meta z-group z-c"><span class="z-punctuation z-section z-group z-end z-c">)</span></span></span></span></span><span class="z-meta z-function-call z-c"><span class="z-meta z-group z-c"><span class="z-punctuation z-section z-group z-end z-c">)</span></span></span> <span class="z-keyword z-operator z-comparison z-c">==</span> <span class="z-keyword z-operator z-arithmetic z-c">-</span><span class="z-constant z-numeric z-integer z-decimal z-c">1</span><span class="z-punctuation z-section z-group z-end z-c">)</span></span>
+    <span class="z-meta z-function-call z-c"><span class="z-variable z-function z-c">fprintf</span> <span class="z-meta z-group z-c"><span class="z-punctuation z-section z-group z-begin z-c">(</span></span></span><span class="z-meta z-function-call z-c"><span class="z-meta z-group z-c">stderr<span class="z-punctuation z-separator z-c">,</span> <span class="z-string z-quoted z-double z-c"><span class="z-punctuation z-definition z-string z-begin z-c">&quot;</span>error writing to file &#39;<span class="z-constant z-other z-placeholder z-c">%s</span>&#39;: <span class="z-constant z-other z-placeholder z-c">%s</span> (errno <span class="z-constant z-other z-placeholder z-c">%d</span>)<span class="z-punctuation z-definition z-string z-end z-c">&quot;</span></span><span class="z-punctuation z-separator z-c">,</span>
+             path<span class="z-punctuation z-separator z-c">,</span> <span class="z-meta z-function-call z-c"><span class="z-support z-function z-C99 z-c">strerror</span><span class="z-meta z-group z-c"><span class="z-punctuation z-section z-group z-begin z-c">(</span></span></span><span class="z-meta z-function-call z-c"><span class="z-meta z-group z-c">errno</span></span><span class="z-meta z-function-call z-c"><span class="z-meta z-group z-c"><span class="z-punctuation z-section z-group z-end z-c">)</span></span></span><span class="z-punctuation z-separator z-c">,</span> fd</span><span class="z-meta z-group z-c"><span class="z-punctuation z-section z-group z-end z-c">)</span></span></span><span class="z-punctuation z-terminator z-c">;</span>
+<span class="z-invalid z-illegal z-stray-bracket-end z-c">}</span>
 </span></code></pre>
 <p>And here is how to avoid them:</p>
-<pre data-lang="c" style="background-color:#2b303b;color:#c0c5ce;" class="language-c "><code class="language-c" data-lang="c"><span style="color:#b48ead;">if </span><span>((</span><span style="color:#bf616a;">write</span><span>(fd, buffer, </span><span style="color:#96b5b4;">strlen</span><span>(buffer)) == -</span><span style="color:#d08770;">1</span><span>) &amp;&amp; (errno != EWOULDBLOCK)) {
-</span><span>    </span><span style="color:#96b5b4;">fprintf</span><span>( stderr, &quot;</span><span style="color:#a3be8c;">error writing to file &#39;</span><span style="color:#d08770;">%s</span><span style="color:#a3be8c;">&#39;: </span><span style="color:#d08770;">%s</span><span style="color:#a3be8c;"> (errno </span><span style="color:#d08770;">%d</span><span style="color:#a3be8c;">)</span><span>&quot;,
-</span><span>             path, </span><span style="color:#96b5b4;">strerror</span><span>(errno), fd);
-</span><span>}
+<pre data-lang="c" class="language-c z-code"><code class="language-c" data-lang="c"><span class="z-source z-c"><span class="z-keyword z-control z-c">if</span> <span class="z-meta z-group z-c"><span class="z-punctuation z-section z-group z-begin z-c">(</span><span class="z-meta z-group z-c"><span class="z-punctuation z-section z-group z-begin z-c">(</span><span class="z-meta z-function-call z-c"><span class="z-variable z-function z-c">write</span><span class="z-meta z-group z-c"><span class="z-punctuation z-section z-group z-begin z-c">(</span></span></span><span class="z-meta z-function-call z-c"><span class="z-meta z-group z-c">fd<span class="z-punctuation z-separator z-c">,</span> buffer<span class="z-punctuation z-separator z-c">,</span> <span class="z-meta z-function-call z-c"><span class="z-support z-function z-C99 z-c">strlen</span><span class="z-meta z-group z-c"><span class="z-punctuation z-section z-group z-begin z-c">(</span></span></span><span class="z-meta z-function-call z-c"><span class="z-meta z-group z-c">buffer</span></span><span class="z-meta z-function-call z-c"><span class="z-meta z-group z-c"><span class="z-punctuation z-section z-group z-end z-c">)</span></span></span></span></span><span class="z-meta z-function-call z-c"><span class="z-meta z-group z-c"><span class="z-punctuation z-section z-group z-end z-c">)</span></span></span> <span class="z-keyword z-operator z-comparison z-c">==</span> <span class="z-keyword z-operator z-arithmetic z-c">-</span><span class="z-constant z-numeric z-integer z-decimal z-c">1</span><span class="z-punctuation z-section z-group z-end z-c">)</span></span> <span class="z-keyword z-operator z-arithmetic z-c">&amp;&amp;</span> <span class="z-meta z-group z-c"><span class="z-punctuation z-section z-group z-begin z-c">(</span>errno <span class="z-keyword z-operator z-comparison z-c">!=</span> EWOULDBLOCK<span class="z-punctuation z-section z-group z-end z-c">)</span></span><span class="z-punctuation z-section z-group z-end z-c">)</span></span> <span class="z-meta z-block z-c"><span class="z-punctuation z-section z-block z-begin z-c">{</span>
+    <span class="z-meta z-function-call z-c"><span class="z-support z-function z-C99 z-c">fprintf</span><span class="z-meta z-group z-c"><span class="z-punctuation z-section z-group z-begin z-c">(</span></span></span><span class="z-meta z-function-call z-c"><span class="z-meta z-group z-c"> stderr<span class="z-punctuation z-separator z-c">,</span> <span class="z-string z-quoted z-double z-c"><span class="z-punctuation z-definition z-string z-begin z-c">&quot;</span>error writing to file &#39;<span class="z-constant z-other z-placeholder z-c">%s</span>&#39;: <span class="z-constant z-other z-placeholder z-c">%s</span> (errno <span class="z-constant z-other z-placeholder z-c">%d</span>)<span class="z-punctuation z-definition z-string z-end z-c">&quot;</span></span><span class="z-punctuation z-separator z-c">,</span>
+             path<span class="z-punctuation z-separator z-c">,</span> <span class="z-meta z-function-call z-c"><span class="z-support z-function z-C99 z-c">strerror</span><span class="z-meta z-group z-c"><span class="z-punctuation z-section z-group z-begin z-c">(</span></span></span><span class="z-meta z-function-call z-c"><span class="z-meta z-group z-c">errno</span></span><span class="z-meta z-function-call z-c"><span class="z-meta z-group z-c"><span class="z-punctuation z-section z-group z-end z-c">)</span></span></span><span class="z-punctuation z-separator z-c">,</span> fd</span></span><span class="z-meta z-function-call z-c"><span class="z-meta z-group z-c"><span class="z-punctuation z-section z-group z-end z-c">)</span></span></span><span class="z-punctuation z-terminator z-c">;</span>
+<span class="z-punctuation z-section z-block z-end z-c">}</span></span>
 </span></code></pre>
 <p>To avoid this kind of confusion, I just wish these two variables did not
 refer to the same errno value.</p>
 
+    </article>
+  </main>
+  <footer>
+    <div class="c">
+      <nav>
+        <ul><li><a href="https://tshepang.github.io/atom.xml" target="_blank" title="Atom/RSS Feed"><i type="Button" class="svg rss" title="Atom/RSS Feed"></i></a></li><li><a href="mailto:tshepang@gmail.com" target="_blank" title="Mail"><i type="Button" class="svg mail" title="Mail"></i></a></li><li><a href="https://twitter.com/tshepang_dev/" target="_blank" title="Twitter"><i type="Button" class="svg twitter" title="Twitter"></i></a></li><li><a href="https://github.com/tshepang/" target="_blank" title="Github"><i type="Button" class="svg github" title="Github"></i></a></li></ul>
+      </nav>
+      <p>Copyright &copy; 2022 Tshepang logs</p>
+      <nav>
+        <ul><li> <a href="https://tshepang.github.io/about-me"> about </a> </li></ul>
+      </nav>
+      <p>Powered by <a href="https://www.getzola.org/">Zola</a> and <a href="https://github.com/jieiku/abridge/">Abridge</a></p>
     </div>
-
-    
-        <footer>
-            <hr>
-            <p>
-                
-                
-                
-                    
-                    tagged
-                    
-                        <a href="https://tshepang.github.io/tags/non-python/">non-Python</a>
-                        
-                    
-                
-            </p>
-            
-            
-        </footer>
-    
-</article>
-
-
-    </body>
-
-    
-        <div class="search-container">
-          <input id="search" type="search" placeholder="🔎  search">
-          <div class="search-results">
-            <div class="search-results__items"></div>
-          </div>
-        </div>
-        <script type="text/javascript" src="https://tshepang.github.io/elasticlunr.min.js"></script>
-        <script type="text/javascript" src="https://tshepang.github.io/search_index.en.js"></script>
-        <script type="text/javascript" src="https://tshepang.github.io/search.js"></script>
-    
-
+  </footer>
+</body>
 </html>

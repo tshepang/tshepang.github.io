@@ -1,120 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="alternate" type="application/atom+xml" title="Atom/RSS Feed" href="https://tshepang.github.io/atom.xml" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <title>Rust week of 2016-06-10 | Tshepang logs</title>
+  <meta name="copyright" content="Tshepang logs" />
+  <meta name="description" content="" />
+  <link rel="canonical" href="https://tshepang.github.io/rust-week-of-2016-06-10/" />
+  <meta name="keywords" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <noscript><link rel="stylesheet" href="https://tshepang.github.io/nojs.css" /></noscript>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><h1><a href="https://tshepang.github.io/">Tshepang logs</a></h1></div>
+      <div>
+        <ul><li> <h2><a href="https://tshepang.github.io/about-me">about</a></h2> </li><li> <h2><a href="https://tshepang.github.io/tags">tags</a></h2> </li><li> <h2><a href="https://tshepang.github.io/categories/movies">movies</a></h2> </li></ul>
+      </div>
+      <div>
+        <form class="js" name="goSearch">
+          <div class="searchd">
+            <input id="userinput" type="text" placeholder="Search" autocomplete="off" title="Search" />
+            <button type="submit" title="Search"><span class="si">&#8981;</span></button>
+          </div>
+          <div><div id="suggestions"></div></div>
+        </form>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <article>
+        <h1><a href="https://tshepang.github.io/rust-week-of-2016-06-10/">Rust week of 2016-06-10</a></h1>
 
-      <!-- Enable responsiveness on mobile devices-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
-      <title>Tshepang logs</title>
-
-      
-        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://tshepang.github.io/atom.xml">
-      
-
-      
-          <link rel="stylesheet" href="https://tshepang.github.io/site.css">
-      
-
-      
-      
-    </head>
-
-    <body class="hack dark main container">
-        
-    
-        
-                
-                    <header>
-                        <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
-                        
-                            <a itemprop="url"
-                               class=""
-                               href="https:&#x2F;&#x2F;tshepang.github.io&#x2F;about-me">
-                                <span itemprop="name">about
-                                </span></a>
-                        
-                            <a itemprop="url"
-                               class=""
-                               href="https:&#x2F;&#x2F;tshepang.github.io&#x2F;tags">
-                                <span itemprop="name">tags
-                                </span></a>
-                        
-                            <a itemprop="url"
-                               class=""
-                               href="https:&#x2F;&#x2F;tshepang.github.io&#x2F;categories&#x2F;movies">
-                                <span itemprop="name">movies
-                                </span></a>
-                        
-                        </nav>
-                    </header>
-                
-            
-    
-
-<article itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-        <h1 itemprop="headline">Rust week of 2016-06-10</h1>
-        <span class="muted">
-    2016-06-16
-</span>
-    </header>
-    <div itemprop="articleBody">
-      <br>
-      <p>I was made sad by the complexity of involving STDIN when using
+    <p>I was made sad by the complexity of involving STDIN when using
 <a href="https://doc.rust-lang.org/std/process">std::process</a> module:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">o_to_0</span><span>() -&gt; std::io::Result&lt;</span><span style="color:#b48ead;">bool</span><span>&gt; {
-</span><span>    </span><span style="color:#b48ead;">let mut</span><span> p = std::process::Command::new(&quot;</span><span style="color:#a3be8c;">tr</span><span>&quot;)
-</span><span>        .</span><span style="color:#96b5b4;">arg</span><span>(&quot;</span><span style="color:#a3be8c;">o</span><span>&quot;)
-</span><span>        .</span><span style="color:#96b5b4;">arg</span><span>(&quot;</span><span style="color:#a3be8c;">0</span><span>&quot;)
-</span><span>        .</span><span style="color:#96b5b4;">stdin</span><span>(std::process::Stdio::piped())
-</span><span>        .</span><span style="color:#96b5b4;">spawn</span><span>()?;
-</span><span>    </span><span style="color:#b48ead;">let</span><span> input = &quot;</span><span style="color:#a3be8c;">foo</span><span>&quot;;
-</span><span>    </span><span style="color:#b48ead;">if let </span><span>Some(stdin) = p.stdin.</span><span style="color:#96b5b4;">as_mut</span><span>() {
-</span><span>        stdin.</span><span style="color:#96b5b4;">write_all</span><span>(input.</span><span style="color:#96b5b4;">as_bytes</span><span>())?;
-</span><span>    }
-</span><span>    Ok(p.</span><span style="color:#96b5b4;">wait</span><span>()?.</span><span style="color:#96b5b4;">success</span><span>())
-</span><span>}
+<pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust"><span class="z-meta z-function z-rust"><span class="z-meta z-function z-rust"><span class="z-storage z-type z-function z-rust">fn</span> </span><span class="z-entity z-name z-function z-rust">o_to_0</span></span><span class="z-meta z-function z-rust"><span class="z-meta z-function z-parameters z-rust"><span class="z-punctuation z-section z-parameters z-begin z-rust">(</span></span><span class="z-meta z-function z-rust"><span class="z-meta z-function z-parameters z-rust"><span class="z-punctuation z-section z-parameters z-end z-rust">)</span></span></span></span><span class="z-meta z-function z-rust"> <span class="z-meta z-function z-return-type z-rust"><span class="z-punctuation z-separator z-rust">-&gt;</span> <span class="z-meta z-path z-rust">std<span class="z-punctuation z-accessor z-rust">::</span></span><span class="z-meta z-path z-rust">io<span class="z-punctuation z-accessor z-rust">::</span></span><span class="z-meta z-generic z-rust"><span class="z-support z-type z-rust">Result</span><span class="z-punctuation z-definition z-generic z-begin z-rust">&lt;</span><span class="z-storage z-type z-rust">bool</span><span class="z-punctuation z-definition z-generic z-end z-rust">&gt;</span></span></span> </span><span class="z-meta z-function z-rust"><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span>
+    <span class="z-storage z-type z-rust">let</span> <span class="z-storage z-modifier z-rust">mut</span> p <span class="z-keyword z-operator z-assignment z-rust">=</span> <span class="z-meta z-path z-rust">std<span class="z-punctuation z-accessor z-rust">::</span></span><span class="z-meta z-path z-rust">process<span class="z-punctuation z-accessor z-rust">::</span></span><span class="z-meta z-path z-rust">Command<span class="z-punctuation z-accessor z-rust">::</span></span>new<span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span><span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>tr<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span>
+        <span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">arg</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span><span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>o<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span>
+        <span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">arg</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span><span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>0<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span>
+        <span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">stdin</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span><span class="z-meta z-path z-rust">std<span class="z-punctuation z-accessor z-rust">::</span></span><span class="z-meta z-path z-rust">process<span class="z-punctuation z-accessor z-rust">::</span></span><span class="z-meta z-path z-rust">Stdio<span class="z-punctuation z-accessor z-rust">::</span></span>piped<span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span>
+        <span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">spawn</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span><span class="z-keyword z-operator z-rust">?</span><span class="z-punctuation z-terminator z-rust">;</span>
+    <span class="z-storage z-type z-rust">let</span> input <span class="z-keyword z-operator z-assignment z-rust">=</span> <span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>foo<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span><span class="z-punctuation z-terminator z-rust">;</span>
+    <span class="z-keyword z-control z-rust">if</span> <span class="z-storage z-type z-rust">let</span> <span class="z-support z-type z-rust">Some</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span>stdin</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span> <span class="z-keyword z-operator z-assignment z-rust">=</span> p<span class="z-punctuation z-accessor z-dot z-rust">.</span>stdin<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">as_mut</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span> <span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span>
+        stdin<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">write_all</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span>input<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">as_bytes</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span><span class="z-keyword z-operator z-rust">?</span><span class="z-punctuation z-terminator z-rust">;</span>
+    </span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span>
+    <span class="z-support z-type z-rust">Ok</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span>p<span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">wait</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span><span class="z-keyword z-operator z-rust">?</span><span class="z-punctuation z-accessor z-dot z-rust">.</span><span class="z-support z-function z-rust">success</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span>
+</span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span></span>
 </span></code></pre>
 <p>I wonder if this can be more easy, in other languages and/or libraries.</p>
 
+    </article>
+  </main>
+  <footer>
+    <div class="c">
+      <nav>
+        <ul><li><a href="https://tshepang.github.io/atom.xml" target="_blank" title="Atom/RSS Feed"><i type="Button" class="svg rss" title="Atom/RSS Feed"></i></a></li><li><a href="mailto:tshepang@gmail.com" target="_blank" title="Mail"><i type="Button" class="svg mail" title="Mail"></i></a></li><li><a href="https://twitter.com/tshepang_dev/" target="_blank" title="Twitter"><i type="Button" class="svg twitter" title="Twitter"></i></a></li><li><a href="https://github.com/tshepang/" target="_blank" title="Github"><i type="Button" class="svg github" title="Github"></i></a></li></ul>
+      </nav>
+      <p>Copyright &copy; 2022 Tshepang logs</p>
+      <nav>
+        <ul><li> <a href="https://tshepang.github.io/about-me"> about </a> </li></ul>
+      </nav>
+      <p>Powered by <a href="https://www.getzola.org/">Zola</a> and <a href="https://github.com/jieiku/abridge/">Abridge</a></p>
     </div>
-
-    
-        <footer>
-            <hr>
-            <p>
-                
-                
-                
-                    
-                    tagged
-                    
-                        <a href="https://tshepang.github.io/tags/rust/">Rust</a>
-                        
-                    
-                
-            </p>
-            
-            
-        </footer>
-    
-</article>
-
-
-    </body>
-
-    
-        <div class="search-container">
-          <input id="search" type="search" placeholder="🔎  search">
-          <div class="search-results">
-            <div class="search-results__items"></div>
-          </div>
-        </div>
-        <script type="text/javascript" src="https://tshepang.github.io/elasticlunr.min.js"></script>
-        <script type="text/javascript" src="https://tshepang.github.io/search_index.en.js"></script>
-        <script type="text/javascript" src="https://tshepang.github.io/search.js"></script>
-    
-
+  </footer>
+</body>
 </html>
