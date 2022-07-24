@@ -66,26 +66,23 @@
 bit about <a href="https://github.com/lifthrasiir/rust-chrono">Chrono</a>, seemingly the most comprehensive date and time
 library for Rust. I used to determine what the next release date for
 Rust is, using the following code:</p>
-<p>::: {.sourcecode}
-rust</p>
-<p>extern crate chrono;</p>
-<p>use chrono::{NaiveDate, Duration, Local};</p>
-<p>fn main() {</p>
-<p>:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>for n in 0.. {
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">extern crate</span><span> chrono;
 </span><span>
-</span><span>:   // Rust 1.0 release let initial = NaiveDate::from_ymd(2015, 5,
-</span><span>    15); // 1.0 was released on a Friday, but nowadays they happen
-</span><span>    Thursdays let release_date =
-</span><span>    initial.checked_add(Duration::weeks(6 * n)).unwrap() -
-</span><span>    Duration::days(1); if release_date &gt;
-</span><span>    Local::today().naive_local() { println!(&quot;{}&quot;, release_date);
-</span><span>    break; }
+</span><span style="color:#b48ead;">use </span><span>chrono::{NaiveDate, Duration, Local};
 </span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">for</span><span> n in </span><span style="color:#d08770;">0</span><span>.. {
+</span><span>       </span><span style="color:#65737e;">// Rust 1.0 release
+</span><span>       </span><span style="color:#b48ead;">let</span><span> initial = NaiveDate::from_ymd(</span><span style="color:#d08770;">2015</span><span>, </span><span style="color:#d08770;">5</span><span>, </span><span style="color:#d08770;">15</span><span>);
+</span><span>       </span><span style="color:#65737e;">// 1.0 was released on a Friday, but nowadays they happen Thursdays
+</span><span>       </span><span style="color:#b48ead;">let</span><span> release_date = initial.</span><span style="color:#96b5b4;">checked_add</span><span>(Duration::weeks(</span><span style="color:#d08770;">6 </span><span>* n)).</span><span style="color:#96b5b4;">unwrap</span><span>() - Duration::days(</span><span style="color:#d08770;">1</span><span>);
+</span><span>       </span><span style="color:#b48ead;">if</span><span> release_date &gt; Local::today().</span><span style="color:#96b5b4;">naive_local</span><span>() {
+</span><span>           println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, release_date);
+</span><span>           </span><span style="color:#b48ead;">break</span><span>;
+</span><span>       }
+</span><span>    }
 </span><span>}
 </span></code></pre>
-<p>}
-:::</p>
 
     </div>
 

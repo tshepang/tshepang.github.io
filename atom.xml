@@ -2962,26 +2962,23 @@ exciting, while also providing feedback.&lt;&#x2F;p&gt;
 bit about &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lifthrasiir&#x2F;rust-chrono&quot;&gt;Chrono&lt;&#x2F;a&gt;, seemingly the most comprehensive date and time
 library for Rust. I used to determine what the next release date for
 Rust is, using the following code:&lt;&#x2F;p&gt;
-&lt;p&gt;::: {.sourcecode}
-rust&lt;&#x2F;p&gt;
-&lt;p&gt;extern crate chrono;&lt;&#x2F;p&gt;
-&lt;p&gt;use chrono::{NaiveDate, Duration, Local};&lt;&#x2F;p&gt;
-&lt;p&gt;fn main() {&lt;&#x2F;p&gt;
-&lt;p&gt;:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;for n in 0.. {
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;extern crate&lt;&#x2F;span&gt;&lt;span&gt; chrono;
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;:   &#x2F;&#x2F; Rust 1.0 release let initial = NaiveDate::from_ymd(2015, 5,
-&lt;&#x2F;span&gt;&lt;span&gt;    15); &#x2F;&#x2F; 1.0 was released on a Friday, but nowadays they happen
-&lt;&#x2F;span&gt;&lt;span&gt;    Thursdays let release_date =
-&lt;&#x2F;span&gt;&lt;span&gt;    initial.checked_add(Duration::weeks(6 * n)).unwrap() -
-&lt;&#x2F;span&gt;&lt;span&gt;    Duration::days(1); if release_date &amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;    Local::today().naive_local() { println!(&amp;quot;{}&amp;quot;, release_date);
-&lt;&#x2F;span&gt;&lt;span&gt;    break; }
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span&gt;chrono::{NaiveDate, Duration, Local};
 &lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;for&lt;&#x2F;span&gt;&lt;span&gt; n in &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;.. {
+&lt;&#x2F;span&gt;&lt;span&gt;       &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; Rust 1.0 release
+&lt;&#x2F;span&gt;&lt;span&gt;       &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; initial = NaiveDate::from_ymd(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;2015&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;5&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;15&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;       &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; 1.0 was released on a Friday, but nowadays they happen Thursdays
+&lt;&#x2F;span&gt;&lt;span&gt;       &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; release_date = initial.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;checked_add&lt;&#x2F;span&gt;&lt;span&gt;(Duration::weeks(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;6 &lt;&#x2F;span&gt;&lt;span&gt;* n)).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span&gt;() - Duration::days(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;       &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;if&lt;&#x2F;span&gt;&lt;span&gt; release_date &amp;gt; Local::today().&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;naive_local&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;           println!(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;{}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, release_date);
+&lt;&#x2F;span&gt;&lt;span&gt;           &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;break&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;       }
+&lt;&#x2F;span&gt;&lt;span&gt;    }
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;}
-:::&lt;&#x2F;p&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
