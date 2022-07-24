@@ -63,64 +63,64 @@
     <div itemprop="articleBody">
       <br>
       <p>Here's drawing a simple graph:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">from </span><span>matplotlib </span><span style="color:#b48ead;">import </span><span>pyplot
-</span><span>x = </span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>)  </span><span style="color:#65737e;"># a list of 10 integers, 0-9
-</span><span>y = </span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>)
-</span><span>pyplot.</span><span style="color:#bf616a;">plot</span><span>(x, y)
-</span><span>pyplot.</span><span style="color:#bf616a;">show</span><span>()
-</span></code></pre>
+<pre data-lang="python" class="language-python "><code class="language-python" data-lang="python">from matplotlib import pyplot
+x = range(10)  # a list of 10 integers, 0-9
+y = range(10)
+pyplot.plot(x, y)
+pyplot.show()
+</code></pre>
 <p>And now for something a little more interesting:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>random
-</span><span style="color:#b48ead;">from </span><span>matplotlib </span><span style="color:#b48ead;">import </span><span>pyplot
-</span><span>x = </span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>)
-</span><span>y = random.</span><span style="color:#bf616a;">sample</span><span>(</span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>), </span><span style="color:#d08770;">10</span><span>)
-</span><span>pyplot.</span><span style="color:#bf616a;">plot</span><span>(x, y)
-</span><span>pyplot.</span><span style="color:#bf616a;">show</span><span>()
-</span></code></pre>
+<pre data-lang="python" class="language-python "><code class="language-python" data-lang="python">import random
+from matplotlib import pyplot
+x = range(10)
+y = random.sample(range(10), 10)
+pyplot.plot(x, y)
+pyplot.show()
+</code></pre>
 <p>We can have more than one graph on a single figure:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>random
-</span><span style="color:#b48ead;">from </span><span>matplotlib </span><span style="color:#b48ead;">import </span><span>pyplot
-</span><span>x = </span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>)
-</span><span>y1 = random.</span><span style="color:#bf616a;">sample</span><span>(</span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>), </span><span style="color:#d08770;">10</span><span>)
-</span><span>y2 = random.</span><span style="color:#bf616a;">sample</span><span>(</span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>), </span><span style="color:#d08770;">10</span><span>)
-</span><span>pyplot.</span><span style="color:#bf616a;">plot</span><span>(x, y1, x, y2)
-</span><span>pyplot.</span><span style="color:#bf616a;">show</span><span>()
-</span></code></pre>
+<pre data-lang="python" class="language-python "><code class="language-python" data-lang="python">import random
+from matplotlib import pyplot
+x = range(10)
+y1 = random.sample(range(10), 10)
+y2 = random.sample(range(10), 10)
+pyplot.plot(x, y1, x, y2)
+pyplot.show()
+</code></pre>
 <p>What if the two graphs have much differing ranges:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>random
-</span><span style="color:#b48ead;">from </span><span>matplotlib </span><span style="color:#b48ead;">import </span><span>pyplot
-</span><span>x = </span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>)
-</span><span>y1 = random.</span><span style="color:#bf616a;">sample</span><span>(</span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>), </span><span style="color:#d08770;">10</span><span>)
-</span><span>y2 = random.</span><span style="color:#bf616a;">sample</span><span>(</span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">100</span><span>, </span><span style="color:#d08770;">110</span><span>), </span><span style="color:#d08770;">10</span><span>)
-</span><span>pyplot.</span><span style="color:#bf616a;">plot</span><span>(x, y1, x, y2)
-</span><span>pyplot.</span><span style="color:#bf616a;">show</span><span>()
-</span></code></pre>
+<pre data-lang="python" class="language-python "><code class="language-python" data-lang="python">import random
+from matplotlib import pyplot
+x = range(10)
+y1 = random.sample(range(10), 10)
+y2 = random.sample(range(100, 110), 10)
+pyplot.plot(x, y1, x, y2)
+pyplot.show()
+</code></pre>
 <p>Depending on need, that might not be ideal. So let's create two
 separate y-axes:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>random
-</span><span style="color:#b48ead;">from </span><span>matplotlib </span><span style="color:#b48ead;">import </span><span>pyplot
-</span><span>x = </span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>)
-</span><span>y1 = random.</span><span style="color:#bf616a;">sample</span><span>(</span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>), </span><span style="color:#d08770;">10</span><span>)
-</span><span>y2 = random.</span><span style="color:#bf616a;">sample</span><span>(</span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">100</span><span>, </span><span style="color:#d08770;">110</span><span>), </span><span style="color:#d08770;">10</span><span>)
-</span><span>pyplot.</span><span style="color:#bf616a;">plot</span><span>(x, y1)
-</span><span>pyplot.</span><span style="color:#bf616a;">twinx</span><span>()
-</span><span>pyplot.</span><span style="color:#bf616a;">plot</span><span>(x, y2)
-</span><span>pyplot.</span><span style="color:#bf616a;">show</span><span>()
-</span></code></pre>
+<pre data-lang="python" class="language-python "><code class="language-python" data-lang="python">import random
+from matplotlib import pyplot
+x = range(10)
+y1 = random.sample(range(10), 10)
+y2 = random.sample(range(100, 110), 10)
+pyplot.plot(x, y1)
+pyplot.twinx()
+pyplot.plot(x, y2)
+pyplot.show()
+</code></pre>
 <p>Yeah, not exactly ideal. We lost the automatic coloring, and we don't
 even know which graph is which. Let's do better:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>random
-</span><span style="color:#b48ead;">from </span><span>matplotlib </span><span style="color:#b48ead;">import </span><span>pyplot
-</span><span>x = </span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>)
-</span><span>y1 = random.</span><span style="color:#bf616a;">sample</span><span>(</span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>), </span><span style="color:#d08770;">10</span><span>)
-</span><span>y2 = random.</span><span style="color:#bf616a;">sample</span><span>(</span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">100</span><span>, </span><span style="color:#d08770;">110</span><span>), </span><span style="color:#d08770;">10</span><span>)
-</span><span>pyplot.</span><span style="color:#bf616a;">plot</span><span>(x, y1, &quot;</span><span style="color:#a3be8c;">red</span><span>&quot;)
-</span><span>pyplot.</span><span style="color:#bf616a;">ylabel</span><span>(&quot;</span><span style="color:#a3be8c;">y1</span><span>&quot;, </span><span style="color:#bf616a;">color</span><span>=&quot;</span><span style="color:#a3be8c;">red</span><span>&quot;)
-</span><span>pyplot.</span><span style="color:#bf616a;">twinx</span><span>()
-</span><span>pyplot.</span><span style="color:#bf616a;">plot</span><span>(x, y2, &quot;</span><span style="color:#a3be8c;">blue</span><span>&quot;)
-</span><span>pyplot.</span><span style="color:#bf616a;">ylabel</span><span>(&quot;</span><span style="color:#a3be8c;">y2</span><span>&quot;, </span><span style="color:#bf616a;">color</span><span>=&quot;</span><span style="color:#a3be8c;">blue</span><span>&quot;)
-</span><span>pyplot.</span><span style="color:#bf616a;">show</span><span>()
-</span></code></pre>
+<pre data-lang="python" class="language-python "><code class="language-python" data-lang="python">import random
+from matplotlib import pyplot
+x = range(10)
+y1 = random.sample(range(10), 10)
+y2 = random.sample(range(100, 110), 10)
+pyplot.plot(x, y1, &quot;red&quot;)
+pyplot.ylabel(&quot;y1&quot;, color=&quot;red&quot;)
+pyplot.twinx()
+pyplot.plot(x, y2, &quot;blue&quot;)
+pyplot.ylabel(&quot;y2&quot;, color=&quot;blue&quot;)
+pyplot.show()
+</code></pre>
 <p>This was done with the help of <a href="http://matplotlib.sourceforge.net/examples/api/two_scales.html">this example</a>. There's a heck of a
 <a href="http://matplotlib.sourceforge.net/examples/index.html">lot</a> <a href="http://matplotlib.sourceforge.net/gallery.html">more</a>.</p>
 <h1 id="further-reading">further reading</h1>

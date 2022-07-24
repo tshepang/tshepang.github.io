@@ -66,12 +66,12 @@
 understands shell quoting, helping in transforming command arguments
 into what's suitable to send to <code>process::Command::args</code>. This allows
 one to avoid the pain experienced by naively doing the following:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let mut</span><span> command = command.</span><span style="color:#96b5b4;">split</span><span>(</span><span style="color:#b48ead;">char</span><span>::is_whitespace);
-</span><span>std::process::Command::new(command.</span><span style="color:#96b5b4;">next</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>())
-</span><span>    .</span><span style="color:#96b5b4;">args</span><span>(command)
-</span><span>    .</span><span style="color:#96b5b4;">spawn</span><span>()
-</span><span>...
-</span></code></pre>
+<pre data-lang="rust" class="language-rust "><code class="language-rust" data-lang="rust">let mut command = command.split(char::is_whitespace);
+std::process::Command::new(command.next().unwrap())
+    .args(command)
+    .spawn()
+...
+</code></pre>
 <p>If the command is something like <code>hg commit --message 'git eat world'</code>,
 then the iterator would expand to:</p>
 <ul>
@@ -84,12 +84,12 @@ then the iterator would expand to:</p>
 </ul>
 <p>That will not run, and will fail with a not-obvious error message. Using
 shlex, we instead:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let mut</span><span> command = shlex::split(command).</span><span style="color:#96b5b4;">unwrap</span><span>());
-</span><span>std::process::Command::new(command.</span><span style="color:#96b5b4;">remove</span><span>(</span><span style="color:#d08770;">0</span><span>).</span><span style="color:#96b5b4;">unwrap</span><span>())
-</span><span>    .</span><span style="color:#96b5b4;">args</span><span>(command)
-</span><span>    .</span><span style="color:#96b5b4;">spawn</span><span>()
-</span><span> ...
-</span></code></pre>
+<pre data-lang="rust" class="language-rust "><code class="language-rust" data-lang="rust">let mut command = shlex::split(command).unwrap());
+std::process::Command::new(command.remove(0).unwrap())
+    .args(command)
+    .spawn()
+ ...
+</code></pre>
 <p>Output should then be like:</p>
 <ul>
 <li>hg</li>

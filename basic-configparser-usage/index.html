@@ -64,45 +64,45 @@
       <br>
       <p>Reading <code>.INI</code> files is very easy with Python. Say you had a file,
 &quot;<em>config.cfg</em>&quot;, with this content:</p>
-<pre data-lang="ini" style="background-color:#2b303b;color:#c0c5ce;" class="language-ini "><code class="language-ini" data-lang="ini"><span style="color:#b48ead;">[numbers]
-</span><span style="color:#bf616a;">one</span><span>: </span><span style="color:#d08770;">1
-</span><span style="color:#bf616a;">two</span><span>: </span><span style="color:#d08770;">2
-</span></code></pre>
+<pre data-lang="ini" class="language-ini "><code class="language-ini" data-lang="ini">[numbers]
+one: 1
+two: 2
+</code></pre>
 <p>The code to read that content is:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>configparser
-</span><span>conf = configparser.</span><span style="color:#bf616a;">ConfigParser</span><span>()
-</span><span>conf.</span><span style="color:#bf616a;">read</span><span>(&quot;</span><span style="color:#a3be8c;">config.cfg</span><span>&quot;)
-</span><span>items = conf.</span><span style="color:#bf616a;">items</span><span>(&quot;</span><span style="color:#a3be8c;">numbers</span><span>&quot;)
-</span><span style="color:#96b5b4;">print</span><span>(items)
-</span></code></pre>
+<pre data-lang="python" class="language-python "><code class="language-python" data-lang="python">import configparser
+conf = configparser.ConfigParser()
+conf.read(&quot;config.cfg&quot;)
+items = conf.items(&quot;numbers&quot;)
+print(items)
+</code></pre>
 <p>Output:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>[(&#39;one&#39;, &#39;1&#39;), (&#39;two&#39;, &#39;2&#39;)]
-</span></code></pre>
+<pre><code>[(&#x27;one&#x27;, &#x27;1&#x27;), (&#x27;two&#x27;, &#x27;2&#x27;)]
+</code></pre>
 <p>That's a list of tuples, each tuple a key-value pair.</p>
 <p>Even better, since these are key-value pairs, why not use a more
 suitable data type? Here goes:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>configparser
-</span><span>conf = configparser.</span><span style="color:#bf616a;">ConfigParser</span><span>()
-</span><span>conf.</span><span style="color:#bf616a;">read</span><span>(&quot;</span><span style="color:#a3be8c;">config.cfg</span><span>&quot;)
-</span><span>items = </span><span style="color:#bf616a;">dict</span><span>(conf.</span><span style="color:#bf616a;">items</span><span>(&quot;</span><span style="color:#a3be8c;">numbers</span><span>&quot;))
-</span><span style="color:#96b5b4;">print</span><span>(items)
-</span></code></pre>
+<pre data-lang="python" class="language-python "><code class="language-python" data-lang="python">import configparser
+conf = configparser.ConfigParser()
+conf.read(&quot;config.cfg&quot;)
+items = dict(conf.items(&quot;numbers&quot;))
+print(items)
+</code></pre>
 <p>Output:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>{&#39;two&#39;: &#39;2&#39;, &#39;one&#39;: &#39;1&#39;}
-</span></code></pre>
+<pre><code>{&#x27;two&#x27;: &#x27;2&#x27;, &#x27;one&#x27;: &#x27;1&#x27;}
+</code></pre>
 <p>That's the <strong>dict</strong> function, which takes a list of tuples, and
 converts them to a dictionary. You might also have noticed that the
 ordering is now a bit off. That's because the dict type doesn't care
 about ordering. Remember that in order to access dictionary content, you
 use a key and not an index:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>&gt;&gt;&gt; d = {</span><span style="color:#d08770;">1</span><span>: &#39;</span><span style="color:#a3be8c;">one</span><span>&#39;}
-</span><span>&gt;&gt;&gt; d[</span><span style="color:#d08770;">0</span><span>]
-</span><span style="color:#bf616a;">Traceback </span><span>(most recent call last):
-</span><span>  File &quot;&quot;, line </span><span style="color:#d08770;">1</span><span>, in
-</span><span>KeyError: </span><span style="color:#d08770;">0
-</span><span>&gt;&gt;&gt; d[</span><span style="color:#d08770;">1</span><span>]
-</span><span>&#39;</span><span style="color:#a3be8c;">one</span><span>&#39;
-</span></code></pre>
+<pre data-lang="python" class="language-python "><code class="language-python" data-lang="python">&gt;&gt;&gt; d = {1: &#x27;one&#x27;}
+&gt;&gt;&gt; d[0]
+Traceback (most recent call last):
+  File &quot;&quot;, line 1, in
+KeyError: 0
+&gt;&gt;&gt; d[1]
+&#x27;one&#x27;
+</code></pre>
 <h3 id="further-reading">further reading</h3>
 <ul>
 <li><a href="http://docs.python.org/library/configparser">configparser module</a></li>

@@ -75,35 +75,35 @@ and are part of the above total:</p>
 <li>rustfmt</li>
 </ul>
 <p>Following is my <em>config.toml</em>:</p>
-<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[build]
-</span><span style="color:#bf616a;">compiler-docs </span><span>= </span><span style="color:#d08770;">true
-</span><span style="color:#bf616a;">extended </span><span>= </span><span style="color:#d08770;">true
-</span><span style="color:#bf616a;">tools </span><span>= [ &quot;</span><span style="color:#a3be8c;">clippy</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">rustfmt</span><span>&quot; ]
-</span><span>
-</span><span>[rust]
-</span><span style="color:#bf616a;">incremental </span><span>= </span><span style="color:#d08770;">true
-</span><span style="color:#bf616a;">parallel-compiler </span><span>= </span><span style="color:#d08770;">true
-</span></code></pre>
+<pre data-lang="toml" class="language-toml "><code class="language-toml" data-lang="toml">[build]
+compiler-docs = true
+extended = true
+tools = [ &quot;clippy&quot;, &quot;rustfmt&quot; ]
+
+[rust]
+incremental = true
+parallel-compiler = true
+</code></pre>
 <p>Following is the commit I built:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>❯ git show
-</span><span>commit 96dd4690c3aa70ec312448c3f2d50e6dc6fb87df (HEAD -&gt; master, origin/master, origin/HEAD)
-</span><span>Merge: 77f95a89a10 3f3e0ee4b04
-</span><span>Author: bors &lt;bors@rust-lang.org&gt;
-</span><span>Date:   Fri May 29 11:16:45 2020 +0000
-</span><span>
-</span><span>    Auto merge of #72671 - flip1995:clippyup, r=Xanewok
-</span><span>
-</span><span>    Update Clippy, RLS, and rustfmt
-</span><span>
-</span><span>    r? @Dylan-DPC
-</span><span>
-</span><span>    This makes Clippy test-pass again: 3089c3b
-</span><span>
-</span><span>    Otherwise this includes bugfixes and a few new lints.
-</span><span>
-</span><span>    Fixes #72231
-</span><span>    Fixes #72232
-</span></code></pre>
+<pre><code>❯ git show
+commit 96dd4690c3aa70ec312448c3f2d50e6dc6fb87df (HEAD -&gt; master, origin&#x2F;master, origin&#x2F;HEAD)
+Merge: 77f95a89a10 3f3e0ee4b04
+Author: bors &lt;bors@rust-lang.org&gt;
+Date:   Fri May 29 11:16:45 2020 +0000
+
+    Auto merge of #72671 - flip1995:clippyup, r=Xanewok
+
+    Update Clippy, RLS, and rustfmt
+
+    r? @Dylan-DPC
+
+    This makes Clippy test-pass again: 3089c3b
+
+    Otherwise this includes bugfixes and a few new lints.
+
+    Fixes #72231
+    Fixes #72232
+</code></pre>
 
     </div>
 

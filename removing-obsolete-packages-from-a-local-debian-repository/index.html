@@ -68,8 +68,8 @@ whenever I fetch and install Debian packages (e.g. <code>apt-get upgrade</code>)
 also keep them in a local custom repository. I use a great tool named
 <a href="https://salsa.debian.org/brlink/reprepro">reprepro</a> for this, and this is the command I use to update that
 repository, given the location of the fresh package files:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang /var/cache/apt/archives/*deb
-</span></code></pre>
+<pre><code>$ reprepro -vv --basedir ~&#x2F;.custom_repo&#x2F; includedeb tshepang &#x2F;var&#x2F;cache&#x2F;apt&#x2F;archives&#x2F;*deb
+</code></pre>
 <p>What's nice about the command is that, if there is an older version of
 the package I'm adding, it gets replaced, and the package index is
 updated accordingly.</p>
@@ -91,50 +91,50 @@ using that package, it is just a waste of resources (CPU and disk
 usage).</li>
 </ul>
 <p>To help with the cleanup, I have written the following simple script:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;">#!/usr/bin/env python3
-</span><span>
-</span><span style="color:#b48ead;">import </span><span>apt_pkg
-</span><span style="color:#b48ead;">import </span><span>gzip
-</span><span style="color:#b48ead;">import </span><span>subprocess
-</span><span>
-</span><span style="color:#bf616a;">CUSTOM_REPO </span><span>= (&quot;</span><span style="color:#a3be8c;">/home/wena/.custom_repo/dists/tshepang/main/</span><span>&quot;
-</span><span>               &quot;</span><span style="color:#a3be8c;">binary-i386/Packages.gz</span><span>&quot;)
-</span><span style="color:#bf616a;">WHEEZY_REPO </span><span>= (&quot;</span><span style="color:#a3be8c;">/var/lib/apt/lists/ftp.de.debian.org_debian_dists_testing_</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">_</span><span>&quot;
-</span><span>               &quot;</span><span style="color:#a3be8c;">binary-i386_Packages</span><span>&quot;)
-</span><span>
-</span><span>
-</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">main</span><span>():
-</span><span>    custom_repo = apt_pkg.</span><span style="color:#bf616a;">TagFile</span><span>(gzip.</span><span style="color:#bf616a;">open</span><span>(</span><span style="color:#bf616a;">CUSTOM_REPO</span><span>, &quot;</span><span style="color:#a3be8c;">rb</span><span>&quot;))
-</span><span>    archive_areas = &quot;</span><span style="color:#a3be8c;">main contrib non-free</span><span>&quot;.</span><span style="color:#bf616a;">split</span><span>()
-</span><span>    wheezy_packages = </span><span style="color:#bf616a;">list</span><span>()
-</span><span>    </span><span style="color:#b48ead;">for </span><span>archive_area </span><span style="color:#b48ead;">in </span><span>archive_areas:
-</span><span>        repo = WHEEZY_REPO.</span><span style="color:#bf616a;">format</span><span>(archive_area)
-</span><span>        repo = apt_pkg.</span><span style="color:#bf616a;">TagFile</span><span>(gzip.</span><span style="color:#bf616a;">open</span><span>(repo, &quot;</span><span style="color:#a3be8c;">rb</span><span>&quot;))
-</span><span>        wheezy_packages.</span><span style="color:#bf616a;">extend</span><span>([pkg[&quot;</span><span style="color:#a3be8c;">Package</span><span>&quot;] </span><span style="color:#b48ead;">for </span><span>pkg </span><span style="color:#b48ead;">in </span><span>repo])
-</span><span>    </span><span style="color:#b48ead;">for </span><span>package </span><span style="color:#b48ead;">in </span><span>custom_repo:
-</span><span>        package_name = package[&quot;</span><span style="color:#a3be8c;">Package</span><span>&quot;]
-</span><span>        </span><span style="color:#b48ead;">if </span><span>package_name not in wheezy_packages:
-</span><span>            cmd = &quot;</span><span style="color:#a3be8c;">apt-cache policy </span><span>&quot; + package_name
-</span><span>            subprocess.</span><span style="color:#bf616a;">call</span><span>(cmd.</span><span style="color:#bf616a;">split</span><span>())
-</span><span>            choice = </span><span style="color:#96b5b4;">input</span><span>(&quot;</span><span style="color:#a3be8c;">remove from cache [Y/n]? </span><span>&quot;)
-</span><span>            </span><span style="color:#b48ead;">if </span><span>not choice or choice.</span><span style="color:#bf616a;">lower</span><span>().</span><span style="color:#bf616a;">startswith</span><span>(&quot;</span><span style="color:#a3be8c;">y</span><span>&quot;):
-</span><span>                cmd = (&quot;</span><span style="color:#a3be8c;">reprepro -vv --basedir /home/wena/.custom_repo/ </span><span>&quot;
-</span><span>                       &quot;</span><span style="color:#a3be8c;">remove tshepang </span><span>&quot; + package_name)
-</span><span>                subprocess.</span><span style="color:#bf616a;">call</span><span>(cmd.</span><span style="color:#bf616a;">split</span><span>())
-</span><span>
-</span><span style="color:#b48ead;">if </span><span>__name__ == &quot;</span><span style="color:#a3be8c;">__main__</span><span>&quot;:
-</span><span>    </span><span style="color:#bf616a;">main</span><span>()
-</span></code></pre>
+<pre data-lang="python" class="language-python "><code class="language-python" data-lang="python">#!&#x2F;usr&#x2F;bin&#x2F;env python3
+
+import apt_pkg
+import gzip
+import subprocess
+
+CUSTOM_REPO = (&quot;&#x2F;home&#x2F;wena&#x2F;.custom_repo&#x2F;dists&#x2F;tshepang&#x2F;main&#x2F;&quot;
+               &quot;binary-i386&#x2F;Packages.gz&quot;)
+WHEEZY_REPO = (&quot;&#x2F;var&#x2F;lib&#x2F;apt&#x2F;lists&#x2F;ftp.de.debian.org_debian_dists_testing_{}_&quot;
+               &quot;binary-i386_Packages&quot;)
+
+
+def main():
+    custom_repo = apt_pkg.TagFile(gzip.open(CUSTOM_REPO, &quot;rb&quot;))
+    archive_areas = &quot;main contrib non-free&quot;.split()
+    wheezy_packages = list()
+    for archive_area in archive_areas:
+        repo = WHEEZY_REPO.format(archive_area)
+        repo = apt_pkg.TagFile(gzip.open(repo, &quot;rb&quot;))
+        wheezy_packages.extend([pkg[&quot;Package&quot;] for pkg in repo])
+    for package in custom_repo:
+        package_name = package[&quot;Package&quot;]
+        if package_name not in wheezy_packages:
+            cmd = &quot;apt-cache policy &quot; + package_name
+            subprocess.call(cmd.split())
+            choice = input(&quot;remove from cache [Y&#x2F;n]? &quot;)
+            if not choice or choice.lower().startswith(&quot;y&quot;):
+                cmd = (&quot;reprepro -vv --basedir &#x2F;home&#x2F;wena&#x2F;.custom_repo&#x2F; &quot;
+                       &quot;remove tshepang &quot; + package_name)
+                subprocess.call(cmd.split())
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
 <p>And here's a snippet of its output:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>cx-oracle:
-</span><span>  Installed: 5.1.1-2
-</span><span>  Candidate: 5.1.1-2
-</span><span>  Version table:
-</span><span> *** 5.1.1-2 0
-</span><span>        500 file:/home/wena/.custom_repo/ tshepang/main i386 Packages
-</span><span>        100 /var/lib/dpkg/status
-</span><span>remove from cache [Y/n]?
-</span></code></pre>
+<pre><code>cx-oracle:
+  Installed: 5.1.1-2
+  Candidate: 5.1.1-2
+  Version table:
+ *** 5.1.1-2 0
+        500 file:&#x2F;home&#x2F;wena&#x2F;.custom_repo&#x2F; tshepang&#x2F;main i386 Packages
+        100 &#x2F;var&#x2F;lib&#x2F;dpkg&#x2F;status
+remove from cache [Y&#x2F;n]?
+</code></pre>
 <p>What it does is look for packages which are only available in my custom
 repository, as compared with the one in Wheezy (soon to be Debian 7). It
 then prompts me on whether or not to remove it from that custom

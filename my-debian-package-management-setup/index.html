@@ -74,18 +74,18 @@ use it to create 2 repos:</p>
 </ul>
 <p>How this works is that I'd run the following command (an example for
 the source repo):</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>/usr/bin/debmirror
-</span><span> --verbose
-</span><span> --progress
-</span><span> --host=ftp.sun.ac.za
-</span><span> --passive
-</span><span> --dist=squeeze
-</span><span> --root=ftp/debian
-</span><span> --section=main
-</span><span> --method=ftp
-</span><span> --arch=none
-</span><span> /home/wena/.repo_src
-</span></code></pre>
+<pre><code>&#x2F;usr&#x2F;bin&#x2F;debmirror
+ --verbose
+ --progress
+ --host=ftp.sun.ac.za
+ --passive
+ --dist=squeeze
+ --root=ftp&#x2F;debian
+ --section=main
+ --method=ftp
+ --arch=none
+ &#x2F;home&#x2F;wena&#x2F;.repo_src
+</code></pre>
 <p>(look at debmirror's manpage to see what all those options mean)</p>
 <p>The result is that I'll be having ~30GB of Debian locally (for a
 comparison, see <a href="http://www.debian.org/mirror/size">total Debian archive size</a>).</p>
@@ -106,27 +106,27 @@ debmirror, and I think it can do what debmirror does (but I don't yet
 care to learn how).</p>
 <p>Moving on, here's the relevant entries from my /etc/apt/sources.list
 file:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;"># local repos (debmirror)
-</span><span style="color:#bf616a;">deb</span><span> file:/home/wena/.repo_bin sid main
-</span><span style="color:#bf616a;">deb-src</span><span> file:/home/wena/.repo_src sid main
-</span><span>
-</span><span style="color:#65737e;"># local repo (reprepro)
-</span><span style="color:#bf616a;">deb</span><span> file:/home/wena/.repo_local cache main
-</span><span>
-</span><span style="color:#65737e;"># remote repo
-</span><span style="color:#bf616a;">deb</span><span> ftp://ftp.sun.ac.za/ftp/debian/ sid main non-free contrib
-</span></code></pre>
+<pre data-lang="sh" class="language-sh "><code class="language-sh" data-lang="sh"># local repos (debmirror)
+deb file:&#x2F;home&#x2F;wena&#x2F;.repo_bin sid main
+deb-src file:&#x2F;home&#x2F;wena&#x2F;.repo_src sid main
+
+# local repo (reprepro)
+deb file:&#x2F;home&#x2F;wena&#x2F;.repo_local cache main
+
+# remote repo
+deb ftp:&#x2F;&#x2F;ftp.sun.ac.za&#x2F;ftp&#x2F;debian&#x2F; sid main non-free contrib
+</code></pre>
 <p>So, what I do on a semi-regular basis is run:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>wajig update &amp;&amp; wajig upgrade
-</span></code></pre>
+<pre><code>wajig update &amp;&amp; wajig upgrade
+</code></pre>
 <p>The newly-updated packages are stored in a cache so that a reinstall
 doesn't have to fetch from network again. After this I run:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>reprepro -vv --basedir ~/.repo_local includedeb cache /var/cache/apt/archives/*deb
-</span></code></pre>
+<pre><code>reprepro -vv --basedir ~&#x2F;.repo_local includedeb cache &#x2F;var&#x2F;cache&#x2F;apt&#x2F;archives&#x2F;*deb
+</code></pre>
 <p>This updates the local reprepro repo and after which I can then remove
 the cached packages:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>wajig clean
-</span></code></pre>
+<pre><code>wajig clean
+</code></pre>
 <p>I do that because they are now available in my reprepro-managed repo.
 That now means that I got a massive mirror managed by debmirror and a
 smaller one managed by reprepro, and I have these on an external drive

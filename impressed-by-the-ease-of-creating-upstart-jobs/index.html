@@ -67,10 +67,10 @@ system is Upstart. I needed to have one binary to start when the system
 boots, and because I'm horrified by sysvinit scripts (which Upstart
 supports), I decided to give creating an Upstart job a try. I was
 surprised how easy it was:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>exec /usr/local/bin/executable
-</span><span>start on startup
-</span><span>respawn
-</span></code></pre>
+<pre><code>exec &#x2F;usr&#x2F;local&#x2F;bin&#x2F;executable
+start on startup
+respawn
+</code></pre>
 <p>I placed a file with above contents in <code>/etc/init/executable.conf</code>, and
 that's pretty much it. Impressive.</p>
 <p>Here's what happens:</p>

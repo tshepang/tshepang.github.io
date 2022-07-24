@@ -64,49 +64,49 @@
       <br>
       <p>By deterministic, I am referring to their scheduling. Here's an example
 in Rust:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::thread;
-</span><span style="color:#b48ead;">use </span><span>std::sync::mpsc::channel;
-</span><span>
-</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
-</span><span>    </span><span style="color:#b48ead;">let</span><span> thread_count = </span><span style="color:#d08770;">4</span><span>;
-</span><span>    </span><span style="color:#b48ead;">let </span><span>(tx, rx) = </span><span style="color:#96b5b4;">channel</span><span>();
-</span><span>    </span><span style="color:#b48ead;">for</span><span> x in </span><span style="color:#d08770;">0</span><span>..thread_count {
-</span><span>        </span><span style="color:#b48ead;">let</span><span> tx = tx.</span><span style="color:#96b5b4;">clone</span><span>();
-</span><span>        thread::spawn(</span><span style="color:#b48ead;">move </span><span>|| {
-</span><span>            println!(&quot;</span><span style="color:#a3be8c;">t</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> tx</span><span>&quot;, x);
-</span><span>            tx.</span><span style="color:#96b5b4;">send</span><span>(x).</span><span style="color:#96b5b4;">unwrap</span><span>();
-</span><span>        });
-</span><span>    }
-</span><span>    </span><span style="color:#b48ead;">for </span><span>_ in </span><span style="color:#d08770;">0</span><span>..thread_count {
-</span><span>        println!(&quot;</span><span style="color:#a3be8c;">rx from t</span><span style="color:#d08770;">{}</span><span>&quot;, rx.</span><span style="color:#96b5b4;">recv</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>());
-</span><span>    }
-</span><span>}
-</span></code></pre>
+<pre data-lang="rust" class="language-rust "><code class="language-rust" data-lang="rust">use std::thread;
+use std::sync::mpsc::channel;
+
+fn main() {
+    let thread_count = 4;
+    let (tx, rx) = channel();
+    for x in 0..thread_count {
+        let tx = tx.clone();
+        thread::spawn(move || {
+            println!(&quot;t{} tx&quot;, x);
+            tx.send(x).unwrap();
+        });
+    }
+    for _ in 0..thread_count {
+        println!(&quot;rx from t{}&quot;, rx.recv().unwrap());
+    }
+}
+</code></pre>
 <p>What I'm doing there is create 4 child threads, from which I send
 messages that are to be captured by the main thread.</p>
 <p>I built and ran it with:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>rustc --opt-level 0 main.rs &amp;&amp; ./main
-</span></code></pre>
+<pre><code>rustc --opt-level 0 main.rs &amp;&amp; .&#x2F;main
+</code></pre>
 <p>Following is output from one sample run:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>t1 tx
-</span><span>t0 tx
-</span><span>t2 tx
-</span><span>t3 tx
-</span><span>rx from t1
-</span><span>rx from t0
-</span><span>rx from t3
-</span><span>rx from t2
-</span></code></pre>
+<pre><code>t1 tx
+t0 tx
+t2 tx
+t3 tx
+rx from t1
+rx from t0
+rx from t3
+rx from t2
+</code></pre>
 <p>Following is what I get with another run:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>t0 tx
-</span><span>t1 tx
-</span><span>rx from t1
-</span><span>t2 tx
-</span><span>rx from t2
-</span><span>t3 tx
-</span><span>rx from t3
-</span><span>rx from t0
-</span></code></pre>
+<pre><code>t0 tx
+t1 tx
+rx from t1
+t2 tx
+rx from t2
+t3 tx
+rx from t3
+rx from t0
+</code></pre>
 <p>If it was all deterministic (i.e. predictable), <code>t0 tx</code> would always
 come before <code>t1 tx</code>, and <code>rx from t0</code> before <code>rx from t1</code>, and so on.</p>
 <p>I think this is done for performance reasons, where the kernel just

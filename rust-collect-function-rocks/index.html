@@ -63,43 +63,43 @@
     <div itemprop="articleBody">
       <br>
       <p>Here is one way to populate a Vec with some data:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let mut</span><span> vector = Vec::new();
-</span><span style="color:#b48ead;">for</span><span> n in </span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">COUNT </span><span>{
-</span><span>    vector.</span><span style="color:#96b5b4;">push</span><span>(n);
-</span><span>};
-</span></code></pre>
+<pre data-lang="rust" class="language-rust "><code class="language-rust" data-lang="rust">let mut vector = Vec::new();
+for n in 0..COUNT {
+    vector.push(n);
+};
+</code></pre>
 <p>Alternatively, one can simply do this:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let</span><span> vector = (</span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">COUNT</span><span>).collect::&lt;Vec&lt;_&gt;&gt;()
-</span></code></pre>
+<pre data-lang="rust" class="language-rust "><code class="language-rust" data-lang="rust">let vector = (0..COUNT).collect::&lt;Vec&lt;_&gt;&gt;()
+</code></pre>
 <p>The function is also about twice as fast, according to the following
 benchmark:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#![</span><span style="color:#bf616a;">feature</span><span>(test)]
-</span><span style="color:#b48ead;">extern crate</span><span> test;
-</span><span>
-</span><span style="color:#b48ead;">static </span><span style="color:#d08770;">COUNT</span><span>: </span><span style="color:#b48ead;">i32 </span><span>= </span><span style="color:#d08770;">100</span><span>;
-</span><span>
-</span><span>#[</span><span style="color:#bf616a;">bench</span><span>]
-</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">collect</span><span>(</span><span style="color:#bf616a;">b</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>test::Bencher) {
-</span><span>    b.</span><span style="color:#96b5b4;">iter</span><span>(|| {
-</span><span>        (</span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">COUNT</span><span>).collect::&lt;Vec&lt;_&gt;&gt;()
-</span><span>    });
-</span><span>}
-</span><span>
-</span><span>#[</span><span style="color:#bf616a;">bench</span><span>]
-</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">no_collect</span><span>(</span><span style="color:#bf616a;">b</span><span>: &amp;</span><span style="color:#b48ead;">mut </span><span>test::Bencher) {
-</span><span>    b.</span><span style="color:#96b5b4;">iter</span><span>(|| {
-</span><span>        </span><span style="color:#b48ead;">let mut</span><span> vector = Vec::new();
-</span><span>        </span><span style="color:#b48ead;">for</span><span> n in (</span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">COUNT</span><span>) {
-</span><span>            vector.</span><span style="color:#96b5b4;">push</span><span>(n);
-</span><span>        };
-</span><span>        vector
-</span><span>    });
-</span><span>}
-</span></code></pre>
+<pre data-lang="rust" class="language-rust "><code class="language-rust" data-lang="rust">#![feature(test)]
+extern crate test;
+
+static COUNT: i32 = 100;
+
+#[bench]
+fn collect(b: &amp;mut test::Bencher) {
+    b.iter(|| {
+        (0..COUNT).collect::&lt;Vec&lt;_&gt;&gt;()
+    });
+}
+
+#[bench]
+fn no_collect(b: &amp;mut test::Bencher) {
+    b.iter(|| {
+        let mut vector = Vec::new();
+        for n in (0..COUNT) {
+            vector.push(n);
+        };
+        vector
+    });
+}
+</code></pre>
 <p>Here is the output of <code>cargo bench</code>:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>test collect    ... bench:       164 ns/iter (+/- 7)
-</span><span>test no_collect ... bench:       346 ns/iter (+/- 8)
-</span></code></pre>
+<pre><code>test collect    ... bench:       164 ns&#x2F;iter (+&#x2F;- 7)
+test no_collect ... bench:       346 ns&#x2F;iter (+&#x2F;- 8)
+</code></pre>
 
     </div>
 

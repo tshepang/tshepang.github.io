@@ -64,19 +64,19 @@
       <br>
       <p>I was made sad by the complexity of involving STDIN when using
 <a href="https://doc.rust-lang.org/std/process">std::process</a> module:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">o_to_0</span><span>() -&gt; std::io::Result&lt;</span><span style="color:#b48ead;">bool</span><span>&gt; {
-</span><span>    </span><span style="color:#b48ead;">let mut</span><span> p = std::process::Command::new(&quot;</span><span style="color:#a3be8c;">tr</span><span>&quot;)
-</span><span>        .</span><span style="color:#96b5b4;">arg</span><span>(&quot;</span><span style="color:#a3be8c;">o</span><span>&quot;)
-</span><span>        .</span><span style="color:#96b5b4;">arg</span><span>(&quot;</span><span style="color:#a3be8c;">0</span><span>&quot;)
-</span><span>        .</span><span style="color:#96b5b4;">stdin</span><span>(std::process::Stdio::piped())
-</span><span>        .</span><span style="color:#96b5b4;">spawn</span><span>()?;
-</span><span>    </span><span style="color:#b48ead;">let</span><span> input = &quot;</span><span style="color:#a3be8c;">foo</span><span>&quot;;
-</span><span>    </span><span style="color:#b48ead;">if let </span><span>Some(stdin) = p.stdin.</span><span style="color:#96b5b4;">as_mut</span><span>() {
-</span><span>        stdin.</span><span style="color:#96b5b4;">write_all</span><span>(input.</span><span style="color:#96b5b4;">as_bytes</span><span>())?;
-</span><span>    }
-</span><span>    Ok(p.</span><span style="color:#96b5b4;">wait</span><span>()?.</span><span style="color:#96b5b4;">success</span><span>())
-</span><span>}
-</span></code></pre>
+<pre data-lang="rust" class="language-rust "><code class="language-rust" data-lang="rust">fn o_to_0() -&gt; std::io::Result&lt;bool&gt; {
+    let mut p = std::process::Command::new(&quot;tr&quot;)
+        .arg(&quot;o&quot;)
+        .arg(&quot;0&quot;)
+        .stdin(std::process::Stdio::piped())
+        .spawn()?;
+    let input = &quot;foo&quot;;
+    if let Some(stdin) = p.stdin.as_mut() {
+        stdin.write_all(input.as_bytes())?;
+    }
+    Ok(p.wait()?.success())
+}
+</code></pre>
 <p>I wonder if this can be more easy, in other languages and/or libraries.</p>
 
     </div>

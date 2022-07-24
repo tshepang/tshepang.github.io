@@ -65,16 +65,16 @@
       <p>Requests is a Python module that makes it real easy to deal with HTTP.
 As an example, something as scary as fetching a web page that needs
 authentication requires only a single line of code:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>requests.</span><span style="color:#bf616a;">get</span><span>(&quot;</span><span style="color:#a3be8c;">https://example.com</span><span>&quot;, </span><span style="color:#bf616a;">auth</span><span>=(&quot;</span><span style="color:#a3be8c;">user</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">pass</span><span>&quot;))
-</span></code></pre>
+<pre data-lang="python" class="language-python "><code class="language-python" data-lang="python">requests.get(&quot;https:&#x2F;&#x2F;example.com&quot;, auth=(&quot;user&quot;, &quot;pass&quot;))
+</code></pre>
 <p>It's capable of <a href="http://docs.python-requests.org/en/latest/index.html#feature-support">a lot more</a> of course (<a href="http://docs.python-requests.org/en/latest/user/quickstart/">tutorial</a>), and it's weird
 that something this nice hasn't been around for ages. There is another
 that is much simpler to use and more advanced than Python's standard
 library named <a href="http://code.google.com/p/httplib2/">httplib2</a>, but it's not quite as simple/elegant:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>h = httplib2.</span><span style="color:#bf616a;">Http</span><span>(&quot;</span><span style="color:#a3be8c;">.cache</span><span>&quot;)  // ugly
-</span><span>h.</span><span style="color:#bf616a;">add_credentials</span><span>(&quot;</span><span style="color:#a3be8c;">user</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">pass</span><span>&quot;)
-</span><span>resp, content = h.</span><span style="color:#bf616a;">request</span><span>(&quot;</span><span style="color:#a3be8c;">https://example.com</span><span>&quot;)
-</span></code></pre>
+<pre data-lang="python" class="language-python "><code class="language-python" data-lang="python">h = httplib2.Http(&quot;.cache&quot;)  &#x2F;&#x2F; ugly
+h.add_credentials(&quot;user&quot;, &quot;pass&quot;)
+resp, content = h.request(&quot;https:&#x2F;&#x2F;example.com&quot;)
+</code></pre>
 <p>An example for achieving the same with only the standard library is far
 messier.</p>
 

@@ -75,40 +75,40 @@ installation is also insane fast.</p>
 <p>There was much pain trying to get audio to work. Luckily <a href="https://wiki.archlinux.org/index.php/Sony_Vaio_Pro_SVP-1x21#Sound">I got some
 help</a>, where I needed to change two lines in
 <code>/usr/share/alsa/alsa.conf</code>:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>defaults.ctl.card 1
-</span><span>defaults.pcm.card 1
-</span></code></pre>
+<pre><code>defaults.ctl.card 1
+defaults.pcm.card 1
+</code></pre>
 <p>VLC video didn't work well either, but I needed only change Video
 Output to <strong>OpenGL GLX video output (XCB)</strong>, and all was well.</p>
 <h1 id="performance">Performance</h1>
 <p>I am now going to check how this machine compares to <a href="https://tshepang.github.io/a-bit-of-benchmarking/">these others</a>.</p>
 <p>Specs:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ uname --all
-</span><span>Linux thome 3.12-1-amd64 #1 SMP Debian 3.12.9-1 (2014-02-01) x86_64 GNU/Linux
-</span><span>$ cat /proc/cpuinfo | sed --quiet &#39;5p&#39;
-</span><span>model name      : Intel(R) Core(TM) i5-4200U CPU @ 1.60GHz
-</span></code></pre>
+<pre><code>$ uname --all
+Linux thome 3.12-1-amd64 #1 SMP Debian 3.12.9-1 (2014-02-01) x86_64 GNU&#x2F;Linux
+$ cat &#x2F;proc&#x2F;cpuinfo | sed --quiet &#x27;5p&#x27;
+model name      : Intel(R) Core(TM) i5-4200U CPU @ 1.60GHz
+</code></pre>
 <p>CPython build (changeset <code>b6a1a78818fe</code>):</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ make distclean; time (./configure &amp;&amp; make --silent --jobs=4)
-</span><span>[...]
-</span><span>real    1m52.372s
-</span><span>user    3m12.460s
-</span><span>sys     0m6.764s
-</span></code></pre>
+<pre><code>$ make distclean; time (.&#x2F;configure &amp;&amp; make --silent --jobs=4)
+[...]
+real    1m52.372s
+user    3m12.460s
+sys     0m6.764s
+</code></pre>
 <p>CPython test suite:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ time ./python -m test --multiprocess=0
-</span><span>[...]
-</span><span>real    3m34.582s
-</span><span>user    5m12.260s
-</span><span>sys     0m20.640s
-</span></code></pre>
+<pre><code>$ time .&#x2F;python -m test --multiprocess=0
+[...]
+real    3m34.582s
+user    5m12.260s
+sys     0m20.640s
+</code></pre>
 <p>Linux kernel build (commit <code>6e4664525b1d</code>):</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ make distclean &amp;&amp; make defconfig &amp;&amp; time make
-</span><span>[...]
-</span><span>real    11m57.220s
-</span><span>user    11m1.544s
-</span><span>sys     0m38.260s
-</span></code></pre>
+<pre><code>$ make distclean &amp;&amp; make defconfig &amp;&amp; time make
+[...]
+real    11m57.220s
+user    11m1.544s
+sys     0m38.260s
+</code></pre>
 <p>So the machine still doesn't compare with my work machine, a ~2
 year-old desktop. It is faster than my old laptop as expected, and
 comparable to the DigitalOcean VPS, no surprises there. The storage is a
@@ -129,21 +129,21 @@ is buggy enough to cause OS hangs and other misbehaviour.</p>
 <p>The fan is too quick to kick in, and easily gets noisy. Running the
 following commands does not help, at least not in a way I could
 notice:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>echo silent | sudo tee  /sys/devices/platform/sony-laptop/thermal_control
-</span></code></pre>
+<pre><code>echo silent | sudo tee  &#x2F;sys&#x2F;devices&#x2F;platform&#x2F;sony-laptop&#x2F;thermal_control
+</code></pre>
 <p>I don't know why this happens, given that I have never seen the
 temperature rise above 60 °C:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ sensors
-</span><span>acpitz-virtual-0
-</span><span>Adapter: Virtual device
-</span><span>temp1:        +48.0°C  (crit = +97.0°C)
-</span><span>
-</span><span>coretemp-isa-0000
-</span><span>Adapter: ISA adapter
-</span><span>Physical id 0:  +48.0°C  (high = +100.0°C, crit = +100.0°C)
-</span><span>Core 0:         +46.0°C  (high = +100.0°C, crit = +100.0°C)
-</span><span>Core 1:         +45.0°C  (high = +100.0°C, crit = +100.0°C)
-</span></code></pre>
+<pre><code>$ sensors
+acpitz-virtual-0
+Adapter: Virtual device
+temp1:        +48.0°C  (crit = +97.0°C)
+
+coretemp-isa-0000
+Adapter: ISA adapter
+Physical id 0:  +48.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 0:         +46.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 1:         +45.0°C  (high = +100.0°C, crit = +100.0°C)
+</code></pre>
 </li>
 <li>
 <p>The screen brightness control is painful. It requires one to press

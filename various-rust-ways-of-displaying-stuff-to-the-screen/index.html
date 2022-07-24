@@ -63,35 +63,35 @@
     <div itemprop="articleBody">
       <br>
       <p>Here is a simple way of doing it:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::io::{</span><span style="color:#bf616a;">self</span><span>, Write};
-</span><span>
-</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
-</span><span>    io::stdout().</span><span style="color:#96b5b4;">write_all</span><span>(</span><span style="color:#b48ead;">b</span><span>&quot;</span><span style="color:#a3be8c;">some outputn</span><span>&quot;);
-</span><span>}
-</span></code></pre>
+<pre data-lang="rust" class="language-rust "><code class="language-rust" data-lang="rust">use std::io::{self, Write};
+
+fn main() {
+    io::stdout().write_all(b&quot;some outputn&quot;);
+}
+</code></pre>
 <p>I do however get this warning when I build it:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ rustc main.rs
-</span><span>main.rs:4:5: 4:42 warning: unused result which must be used, #[warn(unused_must_use)] on by default
-</span><span>main.rs:4     io::stdout().write_ln(b&quot;some output&quot;);
-</span><span>              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-</span></code></pre>
+<pre><code>$ rustc main.rs
+main.rs:4:5: 4:42 warning: unused result which must be used, #[warn(unused_must_use)] on by default
+main.rs:4     io::stdout().write_ln(b&quot;some output&quot;);
+              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+</code></pre>
 <p>Let's kill it:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::io::{</span><span style="color:#bf616a;">self</span><span>, Write};
-</span><span>
-</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
-</span><span>    io::stdout().</span><span style="color:#96b5b4;">write_all</span><span>(</span><span style="color:#b48ead;">b</span><span>&quot;</span><span style="color:#a3be8c;">some output</span><span>&quot;).</span><span style="color:#96b5b4;">unwrap</span><span>();
-</span><span>}
-</span></code></pre>
+<pre data-lang="rust" class="language-rust "><code class="language-rust" data-lang="rust">use std::io::{self, Write};
+
+fn main() {
+    io::stdout().write_all(b&quot;some output&quot;).unwrap();
+}
+</code></pre>
 <p>What I did is call <code>unwrap</code> which basically asks our operation to
 <code>panic!</code> in case of some error. Think of it as a shortcut of:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::io::{</span><span style="color:#bf616a;">self</span><span>, Write};
-</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
-</span><span>    </span><span style="color:#b48ead;">match </span><span>io::stdout().</span><span style="color:#96b5b4;">write_all</span><span>(</span><span style="color:#b48ead;">b</span><span>&quot;</span><span style="color:#a3be8c;">some output</span><span>&quot;) {
-</span><span>        Ok(_) =&gt; (),
-</span><span>        Err(_) =&gt; panic!(),
-</span><span>    }
-</span><span>}
-</span></code></pre>
+<pre data-lang="rust" class="language-rust "><code class="language-rust" data-lang="rust">use std::io::{self, Write};
+fn main() {
+    match io::stdout().write_all(b&quot;some output&quot;) {
+        Ok(_) =&gt; (),
+        Err(_) =&gt; panic!(),
+    }
+}
+</code></pre>
 <p>Some docs:</p>
 <ul>
 <li><a href="http://doc.rust-lang.org/std/io/trait.Write.html#method.write_all">std::io::Writer::write_line</a></li>
@@ -100,26 +100,26 @@
 </ul>
 <hr />
 <p>What if we wanted to do some string formatting:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::io::{</span><span style="color:#bf616a;">self</span><span>, Write};
-</span><span>
-</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
-</span><span>    </span><span style="color:#b48ead;">let</span><span> second_word = &quot;</span><span style="color:#a3be8c;">output</span><span>&quot;; </span><span style="color:#b48ead;">let</span><span> text = format!(&quot;</span><span style="color:#a3be8c;">some </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">n</span><span>&quot;,
-</span><span>    second_word); io::stdout().</span><span style="color:#96b5b4;">write_all</span><span>(text.</span><span style="color:#96b5b4;">as_bytes</span><span>()).</span><span style="color:#96b5b4;">unwrap</span><span>();
-</span><span>}
-</span></code></pre>
+<pre data-lang="rust" class="language-rust "><code class="language-rust" data-lang="rust">use std::io::{self, Write};
+
+fn main() {
+    let second_word = &quot;output&quot;; let text = format!(&quot;some {}n&quot;,
+    second_word); io::stdout().write_all(text.as_bytes()).unwrap();
+}
+</code></pre>
 <p>But there is a shortcut for the code above:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::io::{</span><span style="color:#bf616a;">self</span><span>, Write};
-</span><span>
-</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
-</span><span>    </span><span style="color:#b48ead;">let</span><span> second_word = &quot;</span><span style="color:#a3be8c;">output</span><span>&quot;;
-</span><span>    writeln!(&amp;mut io::stdout(), &quot;</span><span style="color:#a3be8c;">some </span><span style="color:#d08770;">{}</span><span>&quot;, second_word).</span><span style="color:#96b5b4;">unwrap</span><span>();
-</span><span>}
-</span></code></pre>
+<pre data-lang="rust" class="language-rust "><code class="language-rust" data-lang="rust">use std::io::{self, Write};
+
+fn main() {
+    let second_word = &quot;output&quot;;
+    writeln!(&amp;mut io::stdout(), &quot;some {}&quot;, second_word).unwrap();
+}
+</code></pre>
 <p>There is an even shorter shortcut:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
-</span><span>    </span><span style="color:#b48ead;">let</span><span> second_word = &quot;</span><span style="color:#a3be8c;">output</span><span>&quot;; println!(&quot;</span><span style="color:#a3be8c;">some </span><span style="color:#d08770;">{}</span><span>&quot;, second_word);
-</span><span>}
-</span></code></pre>
+<pre data-lang="rust" class="language-rust "><code class="language-rust" data-lang="rust">fn main() {
+    let second_word = &quot;output&quot;; println!(&quot;some {}&quot;, second_word);
+}
+</code></pre>
 <p>Question to self: do we get a <code>panic!</code> if <code>println</code> gets an I/O error?</p>
 <p>Some docs:</p>
 <ul>
@@ -134,16 +134,16 @@
 stderr. There is no simple macro for that (<code>println!</code> is for stdout).
 Short of implementing <a href="http://stackoverflow.com/a/27590832/321731">our own macro</a>, We'd have to do something like
 the following:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::io;
-</span><span>
-</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
-</span><span>    writeln!(&amp;mut io::stderr(), &quot;</span><span style="color:#a3be8c;">some output</span><span>&quot;);
-</span><span>}
-</span></code></pre>
+<pre data-lang="rust" class="language-rust "><code class="language-rust" data-lang="rust">use std::io;
+
+fn main() {
+    writeln!(&amp;mut io::stderr(), &quot;some output&quot;);
+}
+</code></pre>
 <p>You can test that it really goes to stderr by running it like:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ ./main &gt; /dev/null
-</span><span>some output
-</span></code></pre>
+<pre><code>$ .&#x2F;main &gt; &#x2F;dev&#x2F;null
+some output
+</code></pre>
 
     </div>
 

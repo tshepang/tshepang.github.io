@@ -86,49 +86,49 @@ missing it. I also updated the code to run on modern Rust.</p>
 well-written post, <a href="http://blog.rust-lang.org/2015/05/11/traits.html">Abstraction without overhead: traits in Rust</a>.
 One feature they have is they allow adding methods to types,
 including upstream ones, example being stdlib types as follows:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">trait </span><span>Invert {
-</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">invert</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; </span><span style="color:#b48ead;">f64</span><span>;
-</span><span>}
-</span><span>
-</span><span style="color:#b48ead;">impl </span><span>Invert </span><span style="color:#b48ead;">for </span><span>i32 {
-</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">invert</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; </span><span style="color:#b48ead;">f64 </span><span>{
-</span><span>        </span><span style="color:#d08770;">1.0</span><span>/(*</span><span style="color:#bf616a;">self </span><span>as </span><span style="color:#b48ead;">f64</span><span>)
-</span><span>    }
-</span><span>}
-</span><span>
-</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
-</span><span>    </span><span style="color:#b48ead;">let</span><span> foo = </span><span style="color:#d08770;">10_</span><span style="color:#b48ead;">i32</span><span>; assert_eq!(foo.</span><span style="color:#96b5b4;">invert</span><span>(), </span><span style="color:#d08770;">0.1</span><span>);
-</span><span>}
-</span></code></pre>
+<pre data-lang="rust" class="language-rust "><code class="language-rust" data-lang="rust">trait Invert {
+    fn invert(&amp;self) -&gt; f64;
+}
+
+impl Invert for i32 {
+    fn invert(&amp;self) -&gt; f64 {
+        1.0&#x2F;(*self as f64)
+    }
+}
+
+fn main() {
+    let foo = 10_i32; assert_eq!(foo.invert(), 0.1);
+}
+</code></pre>
 <p>Another example is that one can limit the type of arguments accepted
 by a function, though it uses something of an ugly syntax:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">print_inverse</span><span>&lt;T: Invert&gt;(</span><span style="color:#bf616a;">foo</span><span>: T) {
-</span><span>   println!(&quot;</span><span style="color:#a3be8c;">Inverse: </span><span style="color:#d08770;">{}</span><span>&quot;, foo.</span><span style="color:#96b5b4;">invert</span><span>());
-</span><span>}
-</span></code></pre>
+<pre data-lang="rust" class="language-rust "><code class="language-rust" data-lang="rust">fn print_inverse&lt;T: Invert&gt;(foo: T) {
+   println!(&quot;Inverse: {}&quot;, foo.invert());
+}
+</code></pre>
 <p>The <code>&lt;T: Invert&gt;</code> means this function will only accept <code>foo</code> whose
 type implements the <code>Invert</code> trait. You can check by calling it with
 an <code>i32</code> value, in which it will succeed:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#96b5b4;">print_inverse</span><span>(</span><span style="color:#d08770;">10_</span><span style="color:#b48ead;">i32</span><span>);
-</span></code></pre>
+<pre data-lang="rust" class="language-rust "><code class="language-rust" data-lang="rust">print_inverse(10_i32);
+</code></pre>
 <p>Output:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>Inverse: 0.1
-</span></code></pre>
+<pre><code>Inverse: 0.1
+</code></pre>
 <p>Any other type will fail:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#96b5b4;">print_inverse</span><span>(</span><span style="color:#d08770;">10_</span><span style="color:#b48ead;">f64</span><span>);
-</span></code></pre>
+<pre data-lang="rust" class="language-rust "><code class="language-rust" data-lang="rust">print_inverse(10_f64);
+</code></pre>
 <p>Output:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>the trait `Invert` is not implemented for the type `f64` [E0277]
-</span></code></pre>
+<pre><code>the trait `Invert` is not implemented for the type `f64` [E0277]
+</code></pre>
 <p>This allows for a feature named generics, where one can use multiple
 types for the same function. For example, that error will disappear
 if you got this:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">impl </span><span>Invert </span><span style="color:#b48ead;">for </span><span>f64 {
-</span><span>    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">invert</span><span>(&amp;</span><span style="color:#bf616a;">self</span><span>) -&gt; </span><span style="color:#b48ead;">f64 </span><span>{
-</span><span>        </span><span style="color:#d08770;">1.0</span><span>/(*</span><span style="color:#bf616a;">self</span><span>)
-</span><span>    }
-</span><span>}
-</span></code></pre>
+<pre data-lang="rust" class="language-rust "><code class="language-rust" data-lang="rust">impl Invert for f64 {
+    fn invert(&amp;self) -&gt; f64 {
+        1.0&#x2F;(*self)
+    }
+}
+</code></pre>
 </li>
 </ul>
 

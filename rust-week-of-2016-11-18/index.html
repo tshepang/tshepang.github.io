@@ -64,12 +64,12 @@
       <br>
       <p>I was surprised by the ease of use of <a href="https://crates.io/crates/libflate">libflate</a> when decompressing a
 gzip'ed file:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
-</span><span>    </span><span style="color:#b48ead;">let mut</span><span> file = std::fs::File::open(&quot;</span><span style="color:#a3be8c;">file.gz</span><span>&quot;).</span><span style="color:#96b5b4;">unwrap</span><span>();
-</span><span>    </span><span style="color:#b48ead;">let</span><span> file = libflate::gzip::Decoder::new(&amp;</span><span style="color:#b48ead;">mut</span><span> file).</span><span style="color:#96b5b4;">unwrap</span><span>();
-</span><span>    </span><span style="color:#96b5b4;">do_something_with</span><span>(file);
-</span><span>}
-</span></code></pre>
+<pre data-lang="rust" class="language-rust "><code class="language-rust" data-lang="rust">fn main() {
+    let mut file = std::fs::File::open(&quot;file.gz&quot;).unwrap();
+    let file = libflate::gzip::Decoder::new(&amp;mut file).unwrap();
+    do_something_with(file);
+}
+</code></pre>
 <p>And that's it, <code>file</code> is now like a normal file!</p>
 <p>Another module I used for the first time is <a href="https://crates.io/crates/regex">regex</a>, which seems to have
 such a well-designed API actually.</p>
