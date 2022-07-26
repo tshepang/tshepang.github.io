@@ -168,12 +168,6 @@ function initSearch() {
       $searchResultsItems.appendChild(item);
     }
   }, 150));
-
-  window.addEventListener('click', function(e) {
-    if ($searchResults.style.display == "block" && !$searchResults.contains(e.target)) {
-      $searchResults.style.display = "none";
-    }
-  });
 }
 
 
