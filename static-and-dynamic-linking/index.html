@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://tshepang.github.io/atom.xml">
+      
+
+      
+          <link rel="stylesheet" href="https://tshepang.github.io/site.css">
+      
+
+      
+      
+    </head>
+
+    <body class="hack dark main container">
+        
+    
+        
+                
+                    <header>
+                        <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https:&#x2F;&#x2F;tshepang.github.io&#x2F;about-me">
+                                <span itemprop="name">about
+                                </span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https:&#x2F;&#x2F;tshepang.github.io&#x2F;tags">
+                                <span itemprop="name">tags
+                                </span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https:&#x2F;&#x2F;tshepang.github.io&#x2F;categories&#x2F;movies">
+                                <span itemprop="name">movies
+                                </span></a>
+                        
+                        </nav>
+                    </header>
+                
+            
+    
+
+<article itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1 itemprop="headline">static and dynamic linking</h1>
+        <span class="muted">
+    2022-07-26
+</span>
+    </header>
+    <div itemprop="articleBody">
+      <br>
+      <p><em>Let us simplify the model by assuming there is an executable (exe)
+and a single dependency (dep)</em></p>
+<p>For a language that lacks ABI (such as Rust),
+the challenge with dynamic linking is that new versions of
+a dep will require rebuilding the exe,
+unless multiple versions of the dep are kept around
+(which defeats the point of dynamic linking).
+That flaw does not affect the exe that has static linking,
+since they have all they need embedded in them.</p>
+<p>Beyond that, dynamic linking has clear wins...</p>
+<ul>
+<li>
+<p>where a change does <strong>not</strong> require a new toolchain:</p>
+<table><thead><tr><th>change</th><th>static linking</th><th>dynamic linking</th></tr></thead><tbody>
+<tr><td>dep</td><td>rebuild all, relink</td><td>rebuild</td></tr>
+<tr><td>exe</td><td>rebuild, relink</td><td>rebuild</td></tr>
+</tbody></table>
+</li>
+<li>
+<p>where a change requires a new toolchain:</p>
+<table><thead><tr><th>change</th><th>static linking</th><th>dynamic linking</th></tr></thead><tbody>
+<tr><td>dep</td><td>rebuild all, relink</td><td>rebuild all</td></tr>
+<tr><td>exe</td><td>rebuild all, relink</td><td>rebuild all</td></tr>
+</tbody></table>
+</li>
+</ul>
+<p>It's not an easy trade, so actual numbers would help.
+Assuming there are no other problems related to dynamic linking,
+there are two alternatives:</p>
+<ul>
+<li>The dep and exe is rebuilt each time a new toolchain is released,
+to benefit from possible improvements such better codegen.</li>
+<li>Toolchain releases do not result in any (automatic) rebuilds,
+unless there are changes in either the dep or the exe.
+This seems reasonable,
+and has no disadvantages compared to static linking.</li>
+</ul>
+
+    </div>
+
+    
+        <footer>
+            <hr>
+            <p>
+                
+                
+                
+                    
+                    tagged
+                    
+                        <a href="https://tshepang.github.io/tags/rust/">Rust</a>
+                        
+                    
+                
+            </p>
+            
+            
+        </footer>
+    
+</article>
+
+
+    </body>
+
+    
+        <div class="search-container">
+          <input id="search" type="search" placeholder="🔎  search">
+          <div class="search-results">
+            <div class="search-results__items"></div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://tshepang.github.io/elasticlunr.min.js"></script>
+        <script type="text/javascript" src="https://tshepang.github.io/search_index.en.js"></script>
+        <script type="text/javascript" src="https://tshepang.github.io/search.js"></script>
+    
+
+</html>
