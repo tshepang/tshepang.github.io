@@ -4,8 +4,26 @@
 	<link href="https://tshepang.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://tshepang.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-08-11T00:00:00+00:00</updated>
+	<updated>2022-08-12T00:00:00+00:00</updated>
 	<id>https://tshepang.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Rust things I would fund if were able</title>
+		<published>2022-08-12T00:00:00+00:00</published>
+		<updated>2022-08-12T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://tshepang.github.io/rust-things-i-would-fund-if-were-able/" type="text/html"/>
+		<id>https://tshepang.github.io/rust-things-i-would-fund-if-were-able/</id>
+		<content type="html">&lt;p&gt;My fantasy is having $1m for each of these,
+in order of importance:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&quot;&gt;Pijul&lt;&#x2F;a&gt;, for I want a better VCS than Git&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;Mustang&lt;&#x2F;a&gt;, for I want C off my dependencies&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;theseus-os&#x2F;Theseus&quot;&gt;Theseus&lt;&#x2F;a&gt;, for I want C off my kernel
+(and because it&#x27;s the most exciting project written in Rust at the moment)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zellij-org&#x2F;zellij&quot;&gt;Zellij&lt;&#x2F;a&gt;, for I want a more pleasant terminal multiplexer than tmux&lt;&#x2F;li&gt;
+&lt;li&gt;[rustc_codegen_cranelift], for I want C++ off my tooling&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Rust search tools to watch</title>
 		<published>2022-08-11T00:00:00+00:00</published>
@@ -79,23 +97,6 @@ platforms (&lt;a href=&quot;https:&#x2F;&#x2F;blog.antoyo.xyz&#x2F;rustc_codegen
 a browser found in billions of devices&lt;&#x2F;li&gt;
 &lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&quot;&gt;Pijul&lt;&#x2F;a&gt;, a superior alternative to Git
 (&lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&#x2F;posts&#x2F;2022-01-08-beta&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Rust things I would fund if were able</title>
-		<published>2022-08-11T00:00:00+00:00</published>
-		<updated>2022-08-11T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://tshepang.github.io/rust-things-i-would-fund-if-were-able/" type="text/html"/>
-		<id>https://tshepang.github.io/rust-things-i-would-fund-if-were-able/</id>
-		<content type="html">&lt;p&gt;My fantasy is having $1m for each of these,
-in order of importance:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;Mustang&lt;&#x2F;a&gt;, for I want C off my dependencies&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&quot;&gt;Pijul&lt;&#x2F;a&gt;, for I want a better VCS than Git&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;theseus-os&#x2F;Theseus&quot;&gt;Theseus&lt;&#x2F;a&gt;, for I want C off my kernel
-(and because it&#x27;s the most exciting project written in Rust at the moment)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zellij-org&#x2F;zellij&quot;&gt;Zellij&lt;&#x2F;a&gt;, for I want a more pleasant terminal multiplexer than tmux&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
 	</entry>
