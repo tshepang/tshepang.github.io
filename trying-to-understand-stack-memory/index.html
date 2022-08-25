@@ -63,15 +63,16 @@
 heap memory are hidden from its users. Not so with lower-level languages
 like C. Following examples are implemented in Rust, which is easier to
 use than C:</p>
-<p>::: {.sourcecode}
-rust</p>
-<p>fn main() {</p>
-<p>:   let a = 0i8; let b = 0i8; let c = 0i8;</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>println!(&quot;{:p}&quot;, &amp;a); println!(&quot;{:p}&quot;, &amp;b); println!(&quot;{:p}&quot;,
-</span><span>&amp;c);
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> a = </span><span style="color:#d08770;">0</span><span style="color:#b48ead;">i8</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> b = </span><span style="color:#d08770;">0</span><span style="color:#b48ead;">i8</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> c = </span><span style="color:#d08770;">0</span><span style="color:#b48ead;">i8</span><span>;
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{:p}</span><span>&quot;, &amp;a);
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{:p}</span><span>&quot;, &amp;b);
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{:p}</span><span>&quot;, &amp;c);
+</span><span>}
 </span></code></pre>
-<p>}
-:::</p>
 <p>We build and run it like this:</p>
 <pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ rustc main.rs &amp;&amp; ./main
 </span><span>0x7fff0c8d16d7
@@ -85,15 +86,16 @@ the stack, which helps separate things nicely. I suppose this would be
 for performance reasons and/or simpler memory management code.</p>
 <p>If we use larger types, we'll see each value taking more than just one
 address:</p>
-<p>::: {.sourcecode}
-rust</p>
-<p>fn main() {</p>
-<p>:   let a = 0i16; let b = 0i16; let c = 0i16;</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>println!(&quot;{:p}&quot;, &amp;a); println!(&quot;{:p}&quot;, &amp;b); println!(&quot;{:p}&quot;,
-</span><span>&amp;c);
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> a = </span><span style="color:#d08770;">0</span><span style="color:#b48ead;">i16</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> b = </span><span style="color:#d08770;">0</span><span style="color:#b48ead;">i16</span><span>;
+</span><span>    </span><span style="color:#b48ead;">let</span><span> c = </span><span style="color:#d08770;">0</span><span style="color:#b48ead;">i16</span><span>;
+</span><span>
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{:p}</span><span>&quot;, &amp;a);
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{:p}</span><span>&quot;, &amp;b);
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{:p}</span><span>&quot;, &amp;c);
+</span><span>}
 </span></code></pre>
-<p>}
-:::</p>
 <p>Output:</p>
 <pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ rustc main.rs &amp;&amp; ./main
 </span><span>0x7fff2462aed6
