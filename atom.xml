@@ -4,8 +4,47 @@
 	<link href="https://tshepang.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://tshepang.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-08-24T00:00:00+00:00</updated>
+	<updated>2022-08-31T00:00:00+00:00</updated>
 	<id>https://tshepang.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>favorite companies</title>
+		<published>2022-08-31T00:00:00+00:00</published>
+		<updated>2022-08-31T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://tshepang.github.io/favorite-companies/" type="text/html"/>
+		<id>https://tshepang.github.io/favorite-companies/</id>
+		<content type="html">&lt;p&gt;I like these companies a lot, for they appear transparent,
+leading me to trust them.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&quot;&gt;Ferrous Systems&lt;&#x2F;a&gt;, which offers Rust consulting and training,
+also does a lot for the language in the embedded domain by running &lt;a href=&quot;https:&#x2F;&#x2F;oxidizeconf.com&quot;&gt;Oxidise&lt;&#x2F;a&gt;.
+That, combined with having Jonathan Pallant in their employ
+(and previously Jorge Aparicio and James Munns),
+makes them the most visible name in that domain for Rust.
+I am also excited for &lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;ferrocene&quot;&gt;Ferrocene&lt;&#x2F;a&gt;,
+which is their effort in getting Rust to be used in
+&amp;quot;Safety-critical sectors, such as automotive, railway, and aerospace&amp;quot;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mullvad.net&quot;&gt;Mullvad&lt;&#x2F;a&gt;, which offers a VPN service,
+develop their tools &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mullvad&quot;&gt;in public&lt;&#x2F;a&gt; (open source),
+and Rust features a lot in those.
+Reading through their site leaves me impressed about how
+serious they are about security and privacy.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;oxide.computer&quot;&gt;Oxide&lt;&#x2F;a&gt;, which builds servers (early stage, nothing shipping yet),
+also makes heavy use of Rust as well as open source firmware.
+Best of all, &lt;a href=&quot;https:&#x2F;&#x2F;oxide.computer&#x2F;blog&#x2F;compensation-as-a-reflection-of-values&quot;&gt;all workers get the same salary&lt;&#x2F;a&gt;!&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.fastly.com&quot;&gt;Fastly&lt;&#x2F;a&gt;, which offers various internet services,
+is a key player in the Wasm ecosystem,
+as evidenced by employing giants such as &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alexcrichton&quot;&gt;Alex Crichton&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&quot;&gt;Dan Gohman&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>2018 review</title>
 		<published>2022-08-24T00:00:00+00:00</published>
@@ -25,52 +64,6 @@ a sequel that also happens to be better than the (delightful) original.&lt;&#x2F
 and its &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Iko_Uwais&quot;&gt;Iko Uwais&lt;&#x2F;a&gt; gives the year&#x27;s &lt;strong&gt;favorite performance&lt;&#x2F;strong&gt;.
 The movie also has the best &lt;strong&gt;action direction&lt;&#x2F;strong&gt;.
 Runner-up for &lt;strong&gt;favorite performance&lt;&#x2F;strong&gt; is by &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Jesse_Plemons&quot;&gt;Jesse Plemons&lt;&#x2F;a&gt; in &lt;em&gt;Game Night&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>favorite companies</title>
-		<published>2022-08-21T00:00:00+00:00</published>
-		<updated>2022-08-21T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://tshepang.github.io/favorite-companies/" type="text/html"/>
-		<id>https://tshepang.github.io/favorite-companies/</id>
-		<content type="html">&lt;p&gt;I like these companies a lot, for they appear transparent,
-leading me to trust them.&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&quot;&gt;Ferrous Systems&lt;&#x2F;a&gt;, which offers Rust consulting and training,
-also does a lot for the language in the embedded domain by running &lt;a href=&quot;https:&#x2F;&#x2F;oxidizeconf.com&quot;&gt;Oxidise&lt;&#x2F;a&gt;.
-That, combined with having Jorge Aparicio work for them,
-makes them the most visible name in that domain for Rust.
-I am also excited for &lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;blog&#x2F;sealed-rust-the-pitch&quot;&gt;their effort&lt;&#x2F;a&gt; in helping Rust get to be
-certified for use in Safety Critical systems.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mullvad.net&quot;&gt;Mullvad&lt;&#x2F;a&gt;, which offers a VPN service,
-develop their tools &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mullvad&quot;&gt;in public&lt;&#x2F;a&gt; (open source),
-and Rust features a lot in those.
-Reading through their site leaves me impressed about how
-serious they are about security and privacy.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;oxide.computer&quot;&gt;Oxide&lt;&#x2F;a&gt;, which builds servers (early stage, nothing shipping yet),
-also makes heavy use of Rust as well as open source firmware.
-Best of all, &lt;a href=&quot;https:&#x2F;&#x2F;oxide.computer&#x2F;blog&#x2F;compensation-as-a-reflection-of-values&quot;&gt;all workers get the same salary&lt;&#x2F;a&gt;!&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;cloudflare.com&quot;&gt;Cloudflare&lt;&#x2F;a&gt;, which offers various internet services,
-offers many of them without a fee.
-The one I use is their DNS service, with a promise of speed and privacy.
-Also impressive is their blog posts,
-which are both detailed and numerous.
-A number of them &lt;a href=&quot;https:&#x2F;&#x2F;blog.cloudflare.com&#x2F;tag&#x2F;rust&quot;&gt;have to do with Rust&lt;&#x2F;a&gt;,
-for they use the language to develop some of their tools.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.fastly.com&quot;&gt;Fastly&lt;&#x2F;a&gt;, which also offers various internet services,
-is a key player in the Wasm ecosystem,
-as evidenced by employing giants such as &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alexcrichton&quot;&gt;Alex Crichton&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&quot;&gt;Dan Gohman&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
