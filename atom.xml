@@ -4,8 +4,32 @@
 	<link href="https://tshepang.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://tshepang.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-08-31T00:00:00+00:00</updated>
+	<updated>2022-09-10T00:00:00+00:00</updated>
 	<id>https://tshepang.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>favorite Rust libs (crates)</title>
+		<published>2022-09-10T00:00:00+00:00</published>
+		<updated>2022-09-10T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://tshepang.github.io/favorite-rust-libs-crates/" type="text/html"/>
+		<id>https://tshepang.github.io/favorite-rust-libs-crates/</id>
+		<content type="html">&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;clap-rs&#x2F;clap&quot;&gt;clap&lt;&#x2F;a&gt;:
+I consider this one of the killer libs in the Rust ecosystem...
+there is good taste in terms of design,
+it is comprehensive,
+and it has a very pleasant way of using it,
+the derive API.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;serde-rs&#x2F;serde&quot;&gt;serde&lt;&#x2F;a&gt;:
+This one seems to get even more praise (compared to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;clap-rs&#x2F;clap&quot;&gt;clap&lt;&#x2F;a&gt;),
+and is perhaps as good as anything in other language ecosystems in its domain,
+especially with its derive API (as is the case with clap).&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>favorite companies</title>
 		<published>2022-08-31T00:00:00+00:00</published>
