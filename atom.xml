@@ -4,8 +4,24 @@
 	<link href="https://tshepang.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://tshepang.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-09-22T00:00:00+00:00</updated>
+	<updated>2022-09-23T00:00:00+00:00</updated>
 	<id>https://tshepang.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Rust dreams</title>
+		<published>2022-09-23T00:00:00+00:00</published>
+		<updated>2022-09-23T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://tshepang.github.io/rust-dreams/" type="text/html"/>
+		<id>https://tshepang.github.io/rust-dreams/</id>
+		<content type="html">&lt;p&gt;My ideal computing environment, for all device types (from servers to embedded):&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;processors are &lt;a href=&quot;https:&#x2F;&#x2F;riscv.org&#x2F;risc-v-isa&quot;&gt;RISC-V&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;OS is &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;theseus-os&#x2F;Theseus&quot;&gt;Theseus&lt;&#x2F;a&gt;
+(excluding some embedded systems where there is only a single process)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;rustix&quot;&gt;rustix&lt;&#x2F;a&gt; (and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;mustang&lt;&#x2F;a&gt;) are used to help run POSIX apps&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;Cranelift&lt;&#x2F;a&gt; is used to generate machine code&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>favorite companies</title>
 		<published>2022-09-22T00:00:00+00:00</published>
