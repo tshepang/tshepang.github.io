@@ -63,7 +63,13 @@
 <ul>
 <li>processors are <a href="https://riscv.org/risc-v-isa">RISC-V</a></li>
 <li>OS is <a href="https://github.com/theseus-os/Theseus">Theseus</a>
-(excluding some embedded systems where there is only a single process)</li>
+(excluding some embedded systems where there is only a single application)
+<ul>
+<li>the next best thing is having <a href="https://www.redox-os.org">Redox OS</a> reach mainstream usage</li>
+<li>the next best thing after that is having <a href="https://www.memorysafety.org/blog/memory-safety-in-linux-kernel">Rust in Linux kernel</a>,
+which would require the least effort of the options above</li>
+</ul>
+</li>
 <li><a href="https://github.com/bytecodealliance/rustix">rustix</a> (and <a href="https://github.com/sunfishcode/mustang">mustang</a>) are used to help run POSIX apps</li>
 <li><a href="https://github.com/bytecodealliance/wasmtime/tree/main/cranelift">Cranelift</a> is used to generate machine code</li>
 </ul>
