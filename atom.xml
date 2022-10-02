@@ -16,6 +16,15 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.memorysafety.org&#x2F;blog&#x2F;memory-safety-in-linux-kernel&quot;&gt;Allowing Rust usage in official Linux kernel&lt;&#x2F;a&gt;,
 though this would initially be limited to device drivers (&lt;a href=&quot;https:&#x2F;&#x2F;lore.kernel.org&#x2F;lkml&#x2F;20220927131518.30000-1-ojeda@kernel.org&quot;&gt;latest proposal&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Make alternatives (to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;llvm&#x2F;llvm-project&quot;&gt;LLVM&lt;&#x2F;a&gt;) codegen backends easily available in
+Rust toolchain (as in via &lt;code&gt;rustup&lt;&#x2F;code&gt;)
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bjorn3&#x2F;rustc_codegen_cranelift&quot;&gt;rustc_codegen_cranelift&lt;&#x2F;a&gt; (for using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;cranelift&lt;&#x2F;a&gt; as codegen backend),
+immediate benefit being fast debug compiles (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;81746&quot;&gt;progress&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rustc_codegen_gcc&quot;&gt;rustc_codegen_gcc&lt;&#x2F;a&gt;, allowing Rust to run in more hardware
+platforms (&lt;a href=&quot;https:&#x2F;&#x2F;blog.antoyo.xyz&#x2F;rustc_codegen_gcc-progress-report-15&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
 &lt;li&gt;Having Rust be certified for use in safety-critical systems,
 most visible example being &lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;ferrocene&quot;&gt;Ferrocene&lt;&#x2F;a&gt; (&lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;blog&#x2F;the-ferrocene-language-specification-is-here&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&quot;&gt;hyper&lt;&#x2F;a&gt; being used as default HTTP backend of cURL (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;orgs&#x2F;hyperium&#x2F;projects&#x2F;2&#x2F;views&#x2F;1&quot;&gt;Hyper progress
@@ -25,15 +34,6 @@ because the latter has billions of installations&lt;&#x2F;li&gt;
 &lt;ul&gt;
 &lt;li&gt;Removing libc dep for Linux-based systems (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;mustang&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;rsix&quot;&gt;rustix&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;li&gt;Removing llvm dep (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;cranelift&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;Make alternatives (to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;llvm&#x2F;llvm-project&quot;&gt;LLVM&lt;&#x2F;a&gt;) codegen backends easily available in
-Rust toolchain (as in via &lt;code&gt;rustup&lt;&#x2F;code&gt;)
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bjorn3&#x2F;rustc_codegen_cranelift&quot;&gt;rustc_codegen_cranelift&lt;&#x2F;a&gt; (for using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;cranelift&lt;&#x2F;a&gt; as codegen backend),
-immediate benefit being fast debug compiles (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;81746&quot;&gt;progress&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rustc_codegen_gcc&quot;&gt;rustc_codegen_gcc&lt;&#x2F;a&gt;, allowing Rust to run in more hardware
-platforms (&lt;a href=&quot;https:&#x2F;&#x2F;blog.antoyo.xyz&#x2F;rustc_codegen_gcc-progress-report-11&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;security.googleblog.com&#x2F;2021&#x2F;09&#x2F;an-update-on-memory-safety-in-chrome.html?m=1&quot;&gt;Planned inclusion in Google Chrome&lt;&#x2F;a&gt;,
