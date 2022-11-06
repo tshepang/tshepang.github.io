@@ -27,6 +27,60 @@ Following that is one by Tom Wilkinson, playing a sad detective in &lt;em&gt;Goo
 </content>
 	</entry>
 	<entry xml:lang="en">
+		<title>FLOSS I use a-lot</title>
+		<published>2022-11-06T00:00:00+00:00</published>
+		<updated>2022-11-06T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://tshepang.github.io/floss-i-use-a-lot/" type="text/html"/>
+		<id>https://tshepang.github.io/floss-i-use-a-lot/</id>
+		<content type="html">&lt;h3 id=&quot;environment&quot;&gt;environment&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Debian&lt;&#x2F;strong&gt;: my primary OS, and also my favorite&lt;&#x2F;li&gt;
+&lt;li&gt;[zellij]: pleasant terminal multiplexer&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Emacs&lt;&#x2F;strong&gt;: pleasant text editing and file management&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;fish&lt;&#x2F;strong&gt;: compared to mighty Bash, it is far more pretty,
+and has a far better command completion system&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;nm-applet&lt;&#x2F;strong&gt;: part of NetworkManager&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;software-development&quot;&gt;software development&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cargo&lt;&#x2F;strong&gt;: central tool for Rust development&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Git&lt;&#x2F;strong&gt;: this one has won the mindshare&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;gui-applications&quot;&gt;GUI applications&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alacritty&#x2F;alacritty&quot;&gt;Alacritty&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Firefox&lt;&#x2F;strong&gt; (on Debian and on Android)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.transmissionbt.com&quot;&gt;Transmission&lt;&#x2F;a&gt;: the only torrent client I have ever used&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;VLC&lt;&#x2F;strong&gt;: user interface could be a lot better&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;antennapod.org&quot;&gt;AntennaPod&lt;&#x2F;a&gt;: for listening to podcasts, on Android&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;network-diagnosis&quot;&gt;network diagnosis&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;humdi.net&#x2F;vnstat&quot;&gt;vnstat&lt;&#x2F;a&gt;: nifty network usage viewer&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;ping&lt;&#x2F;strong&gt;: checks general reachability&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;mtr&lt;&#x2F;strong&gt;: interactive traceroute tool&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;miscellaneous-tools&quot;&gt;miscellaneous tools&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;apt&lt;&#x2F;strong&gt;: Debian package management&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;head&lt;&#x2F;strong&gt; and &lt;strong&gt;tail&lt;&#x2F;strong&gt;: included in GNU coreutils suite of tools&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;OpenSSH&lt;&#x2F;strong&gt;: duh!&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;project-of-note-sudo&#x2F;&quot;&gt;Sudo&lt;&#x2F;a&gt;: another duh!&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;blog.burntsushi.net&#x2F;ripgrep&quot;&gt;ripgrep&lt;&#x2F;a&gt;: a more pleasant &lt;code&gt;grep&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;the.exa.website&quot;&gt;exa&lt;&#x2F;a&gt;: a more pleasant, more pretty &lt;code&gt;ls&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;bat&quot;&gt;bat&lt;&#x2F;a&gt;: a more pleasant, more fancy &lt;code&gt;cat&lt;&#x2F;code&gt;, which also supplants &lt;code&gt;less&lt;&#x2F;code&gt;
+(though it actually makes use of the latter for paging through long text)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;top&lt;&#x2F;strong&gt;: a powerful and flexible process viewer, part of &lt;a href=&quot;https:&#x2F;&#x2F;gitlab.com&#x2F;procps-ng&#x2F;procps&quot;&gt;procps suite&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;adrienverge&#x2F;openfortivpn&quot;&gt;openfortivpn&lt;&#x2F;a&gt;: to connect to work VPN&lt;&#x2F;li&gt;
+&lt;li&gt;[mdBook]: lightweight documentation system,
+using it for work  documentation,
+and for Cargo and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rustc-dev-guide&quot;&gt;rustc-dev-guide&lt;&#x2F;a&gt; documentation
+(which is always served with &lt;code&gt;mdbook serve&lt;&#x2F;code&gt;).&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&quot;&gt;zola&lt;&#x2F;a&gt;: for this blog, also always served (with &lt;code&gt;zola serve&lt;&#x2F;code&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
 		<title>Rust things I most anticipate</title>
 		<published>2022-10-29T00:00:00+00:00</published>
 		<updated>2022-10-29T00:00:00+00:00</updated>
@@ -304,60 +358,6 @@ which would help it be an alternative to Kotlin and Java
 &lt;li&gt;regulated industries, like safety critical systems:
 the compiler is not certified, leaving C and Ada as the only allowed languages
 (&lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;blog&#x2F;ferrocene-language-specification&quot;&gt;example initiative&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>FLOSS I use a-lot</title>
-		<published>2022-08-01T00:00:00+00:00</published>
-		<updated>2022-08-01T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://tshepang.github.io/floss-i-use-a-lot/" type="text/html"/>
-		<id>https://tshepang.github.io/floss-i-use-a-lot/</id>
-		<content type="html">&lt;h3 id=&quot;environment&quot;&gt;environment&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Debian&lt;&#x2F;strong&gt;: my primary OS, and also my favorite&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tmux&#x2F;tmux&#x2F;wiki&quot;&gt;tmux&lt;&#x2F;a&gt; and [zellij]: the latter is replacing the former these days&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Emacs&lt;&#x2F;strong&gt;: pleasant text editing and file management&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;fish&lt;&#x2F;strong&gt;: compared to mighty Bash, it is far more pretty,
-and has a far better command completion system&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;nm-applet&lt;&#x2F;strong&gt;: part of NetworkManager&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;software-development&quot;&gt;software development&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Cargo&lt;&#x2F;strong&gt;: central tool for Rust development&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Git&lt;&#x2F;strong&gt;: this one has won the mindshare&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;gui-applications&quot;&gt;GUI applications&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alacritty&#x2F;alacritty&quot;&gt;Alacritty&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Firefox&lt;&#x2F;strong&gt; (on Debian and on Android)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.transmissionbt.com&quot;&gt;Transmission&lt;&#x2F;a&gt;: the only torrent client I have ever used&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;VLC&lt;&#x2F;strong&gt;: user interface could be a lot better&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;antennapod.org&quot;&gt;AntennaPod&lt;&#x2F;a&gt;: for listening to podcasts, on Android&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;network-diagnosis&quot;&gt;network diagnosis&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;humdi.net&#x2F;vnstat&quot;&gt;vnstat&lt;&#x2F;a&gt;: nifty network usage viewer&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;ping&lt;&#x2F;strong&gt;: checks general reachability&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;mtr&lt;&#x2F;strong&gt;: interactive traceroute tool&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;miscellaneous-tools&quot;&gt;miscellaneous tools&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;apt&lt;&#x2F;strong&gt;: Debian package management&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;head&lt;&#x2F;strong&gt; and &lt;strong&gt;tail&lt;&#x2F;strong&gt;: included in GNU coreutils suite of tools&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;OpenSSH&lt;&#x2F;strong&gt;: duh!&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;project-of-note-sudo&#x2F;&quot;&gt;Sudo&lt;&#x2F;a&gt;: another duh!&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;blog.burntsushi.net&#x2F;ripgrep&quot;&gt;ripgrep&lt;&#x2F;a&gt;: a more pleasant &lt;code&gt;grep&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;the.exa.website&quot;&gt;exa&lt;&#x2F;a&gt;: a more pleasant, more pretty &lt;code&gt;ls&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;bat&quot;&gt;bat&lt;&#x2F;a&gt;: a more pleasant, more fancy &lt;code&gt;cat&lt;&#x2F;code&gt;, which also supplants &lt;code&gt;less&lt;&#x2F;code&gt;
-(though it actually makes use of the latter for paging through long text)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;top&lt;&#x2F;strong&gt;: a powerful and flexible process viewer, part of &lt;a href=&quot;https:&#x2F;&#x2F;gitlab.com&#x2F;procps-ng&#x2F;procps&quot;&gt;procps suite&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;adrienverge&#x2F;openfortivpn&quot;&gt;openfortivpn&lt;&#x2F;a&gt;: to connect to work VPN&lt;&#x2F;li&gt;
-&lt;li&gt;[mdBook]: lightweight documentation system,
-using it for work  documentation,
-and for Cargo and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rustc-dev-guide&quot;&gt;rustc-dev-guide&lt;&#x2F;a&gt; documentation
-(which is always served with &lt;code&gt;mdbook serve&lt;&#x2F;code&gt;).&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&quot;&gt;zola&lt;&#x2F;a&gt;: for this blog, also always served (with &lt;code&gt;zola serve&lt;&#x2F;code&gt;)&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
 	</entry>
