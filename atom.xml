@@ -4,55 +4,37 @@
 	<link href="https://tshepang.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://tshepang.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-11-06T00:00:00+00:00</updated>
+	<updated>2022-11-08T00:00:00+00:00</updated>
 	<id>https://tshepang.github.io/atom.xml</id>
 	<entry xml:lang="en">
-		<title>2014 review</title>
-		<published>2022-11-06T00:00:00+00:00</published>
-		<updated>2022-11-06T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://tshepang.github.io/2014-review/" type="text/html"/>
-		<id>https://tshepang.github.io/2014-review/</id>
-		<content type="html">&lt;p&gt;The greatest &lt;strong&gt;spectable&lt;&#x2F;strong&gt; is &lt;em&gt;Edge of Tomorrow&lt;&#x2F;em&gt;.
-It also has the best &lt;strong&gt;visual effects&lt;&#x2F;strong&gt;,
-as well as the best &lt;strong&gt;visual effects artefact&lt;&#x2F;strong&gt; in the form of the battle suites.
-The best &lt;strong&gt;action&lt;&#x2F;strong&gt; can be found in the fight scenes of &lt;em&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;non-stop&#x2F;&quot;&gt;Non-Stop&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;,
-and the best &lt;strong&gt;animation&lt;&#x2F;strong&gt; is in &lt;em&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;big-hero-6&#x2F;&quot;&gt;Big Hero 6&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;,
-a movie that also has my &lt;strong&gt;favorite character&lt;&#x2F;strong&gt;,
-the inflatable robot.&lt;&#x2F;p&gt;
-&lt;p&gt;My &lt;strong&gt;favorite performance&lt;&#x2F;strong&gt; is by Michael Rooker,
-playing the leader of the bandits in &lt;em&gt;Guardians of the Galaxy&lt;&#x2F;em&gt;.
-The &lt;strong&gt;best performance&lt;&#x2F;strong&gt;, however, is by Johnny Harris,
-playing the leader of a team of soldiers in &lt;em&gt;Monsters: Dark Continent&lt;&#x2F;em&gt;.
-Following that is one by Tom Wilkinson, playing a sad detective in &lt;em&gt;Good People&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
 		<title>FLOSS I use a-lot</title>
-		<published>2022-11-06T00:00:00+00:00</published>
-		<updated>2022-11-06T00:00:00+00:00</updated>
+		<published>2022-11-08T00:00:00+00:00</published>
+		<updated>2022-11-08T00:00:00+00:00</updated>
 		<link rel="alternate" href="https://tshepang.github.io/floss-i-use-a-lot/" type="text/html"/>
 		<id>https://tshepang.github.io/floss-i-use-a-lot/</id>
 		<content type="html">&lt;h3 id=&quot;environment&quot;&gt;environment&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Debian&lt;&#x2F;strong&gt;: my primary OS, and also my favorite&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zellij-org&#x2F;zellij&quot;&gt;zellij&lt;&#x2F;a&gt;: pleasant terminal multiplexer&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Android&lt;&#x2F;strong&gt;: for all my mobile needs&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;Emacs&lt;&#x2F;strong&gt;: pleasant text editing and file management&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;fish&lt;&#x2F;strong&gt;: compared to mighty Bash, it is far more pretty,
+&lt;li&gt;&lt;strong&gt;fish&lt;&#x2F;strong&gt;: compared to mighty Bash, it is far more pretty,&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zellij-org&#x2F;zellij&quot;&gt;zellij&lt;&#x2F;a&gt;: pleasant terminal multiplexer
 and has a far better command completion system&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alacritty&#x2F;alacritty&quot;&gt;Alacritty&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;nm-applet&lt;&#x2F;strong&gt;: part of NetworkManager&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;software-development&quot;&gt;software development&lt;&#x2F;h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Cargo&lt;&#x2F;strong&gt;: central tool for Rust development&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Emacs&lt;&#x2F;strong&gt;: acts as a decent IDE&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;Git&lt;&#x2F;strong&gt;: this one has won the mindshare&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Cargo&lt;&#x2F;strong&gt;: central tool for Rust development&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;gui-applications&quot;&gt;GUI applications&lt;&#x2F;h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alacritty&#x2F;alacritty&quot;&gt;Alacritty&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;Firefox&lt;&#x2F;strong&gt; (on Debian and on Android)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;antennapod.org&quot;&gt;AntennaPod&lt;&#x2F;a&gt;: for listening to podcasts (on Android)&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.transmissionbt.com&quot;&gt;Transmission&lt;&#x2F;a&gt;: the only torrent client I have ever used&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;VLC&lt;&#x2F;strong&gt;: user interface could be a lot better&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;antennapod.org&quot;&gt;AntennaPod&lt;&#x2F;a&gt;: for listening to podcasts, on Android&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;network-diagnosis&quot;&gt;network diagnosis&lt;&#x2F;h3&gt;
 &lt;ul&gt;
@@ -72,12 +54,32 @@ and has a far better command completion system&lt;&#x2F;li&gt;
 (though it actually makes use of the latter for paging through long text)&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;top&lt;&#x2F;strong&gt;: a powerful and flexible process viewer, part of &lt;a href=&quot;https:&#x2F;&#x2F;gitlab.com&#x2F;procps-ng&#x2F;procps&quot;&gt;procps suite&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;adrienverge&#x2F;openfortivpn&quot;&gt;openfortivpn&lt;&#x2F;a&gt;: to connect to work VPN&lt;&#x2F;li&gt;
-&lt;li&gt;[mdBook]: lightweight documentation system,
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;mdBook&quot;&gt;mdBook&lt;&#x2F;a&gt;: lightweight documentation system,
 using it for work  documentation,
 and for Cargo and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rustc-dev-guide&quot;&gt;rustc-dev-guide&lt;&#x2F;a&gt; documentation
 (which is always served with &lt;code&gt;mdbook serve&lt;&#x2F;code&gt;).&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&quot;&gt;zola&lt;&#x2F;a&gt;: for this blog, also always served (with &lt;code&gt;zola serve&lt;&#x2F;code&gt;)&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>2014 review</title>
+		<published>2022-11-06T00:00:00+00:00</published>
+		<updated>2022-11-06T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://tshepang.github.io/2014-review/" type="text/html"/>
+		<id>https://tshepang.github.io/2014-review/</id>
+		<content type="html">&lt;p&gt;The greatest &lt;strong&gt;spectable&lt;&#x2F;strong&gt; is &lt;em&gt;Edge of Tomorrow&lt;&#x2F;em&gt;.
+It also has the best &lt;strong&gt;visual effects&lt;&#x2F;strong&gt;,
+as well as the best &lt;strong&gt;visual effects artefact&lt;&#x2F;strong&gt; in the form of the battle suites.
+The best &lt;strong&gt;action&lt;&#x2F;strong&gt; can be found in the fight scenes of &lt;em&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;non-stop&#x2F;&quot;&gt;Non-Stop&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;,
+and the best &lt;strong&gt;animation&lt;&#x2F;strong&gt; is in &lt;em&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;big-hero-6&#x2F;&quot;&gt;Big Hero 6&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;,
+a movie that also has my &lt;strong&gt;favorite character&lt;&#x2F;strong&gt;,
+the inflatable robot.&lt;&#x2F;p&gt;
+&lt;p&gt;My &lt;strong&gt;favorite performance&lt;&#x2F;strong&gt; is by Michael Rooker,
+playing the leader of the bandits in &lt;em&gt;Guardians of the Galaxy&lt;&#x2F;em&gt;.
+The &lt;strong&gt;best performance&lt;&#x2F;strong&gt;, however, is by Johnny Harris,
+playing the leader of a team of soldiers in &lt;em&gt;Monsters: Dark Continent&lt;&#x2F;em&gt;.
+Following that is one by Tom Wilkinson, playing a sad detective in &lt;em&gt;Good People&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
