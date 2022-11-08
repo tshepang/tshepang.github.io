@@ -797,32 +797,6 @@ the child actor in &lt;em&gt;Kate&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
-		<title>idle Rust questions</title>
-		<published>2022-02-04T00:00:00+00:00</published>
-		<updated>2022-02-04T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://tshepang.github.io/idle-rust-questions/" type="text/html"/>
-		<id>https://tshepang.github.io/idle-rust-questions/</id>
-		<content type="html">&lt;p&gt;Some curious questions I would ask to anyone that uses Rust seriously.&lt;&#x2F;p&gt;
-&lt;p&gt;What is...&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;the one crate you wish would get more dev attention?&lt;&#x2F;li&gt;
-&lt;li&gt;the one toolchain&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; feature you want stabilized?&lt;&#x2F;li&gt;
-&lt;li&gt;the one toolchain&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; change you would like to see happen?&lt;&#x2F;li&gt;
-&lt;li&gt;the one service you would like to see improved?&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;My own answers:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;dotenv&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;code&gt;rustdoc-scrape-examples&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;unified toolchain&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; executable (instead of 6)&lt;&#x2F;li&gt;
-&lt;li&gt;the web UI that is &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&quot;&gt;https:&#x2F;&#x2F;crates.io&lt;&#x2F;a&gt;... slow and ugly&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
-&lt;p&gt;rustup, rustc, cargo, rustdoc, rustfmt, and clippy&lt;&#x2F;p&gt;
-&lt;&#x2F;div&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
 		<title>2003 review</title>
 		<published>2021-12-28T00:00:00+00:00</published>
 		<updated>2021-12-28T00:00:00+00:00</updated>
