@@ -4,8 +4,37 @@
 	<link href="https://tshepang.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://tshepang.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-11-28T00:00:00+00:00</updated>
+	<updated>2022-12-01T00:00:00+00:00</updated>
 	<id>https://tshepang.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>enjoying Helix</title>
+		<published>2022-12-01T00:00:00+00:00</published>
+		<updated>2022-12-01T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://tshepang.github.io/enjoying-helix/" type="text/html"/>
+		<id>https://tshepang.github.io/enjoying-helix/</id>
+		<content type="html">&lt;p&gt;I have been hoping for an alternative to Emacs:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;The complexity of configuration (my &lt;code&gt;init.el&lt;&#x2F;code&gt; has over 200 lines)&lt;&#x2F;li&gt;
+&lt;li&gt;The sluggish behavior, especially over SSH&lt;&#x2F;li&gt;
+&lt;li&gt;The uncomfortable hurt on my left tiny finger&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;I may have found one in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;helix-editor&#x2F;helix&quot;&gt;Helix&lt;&#x2F;a&gt;,
+though it does lack certain rather important features:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;It cannot work through SSH :(&lt;&#x2F;li&gt;
+&lt;li&gt;It cannot manage files (though there is &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;helix-editor&#x2F;helix&#x2F;pull&#x2F;2377&quot;&gt;a proposal to fix this&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;It cannot open files relative to that in an open buffer (though there is &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;helix-editor&#x2F;helix&#x2F;pull&#x2F;2412&quot;&gt;a proposal to fix this as well&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Beyond that,
+I love that it integrates IDE functionality without any need for configuration.
+In addition,
+I enjoy how responsive it is (it feels far more snappy&#x2F;lightweight than Emacs).
+It also has a nifty approach,
+where text that would be operated on is highlighted,
+and that makes it far more approachable than vi (and relatives),
+to a point where I feel it takes modal editors to more mainstream audiences.&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>2013 review</title>
 		<published>2022-11-28T00:00:00+00:00</published>
