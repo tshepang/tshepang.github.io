@@ -22,8 +22,12 @@
 though it does lack certain rather important features:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;It cannot work through SSH :(&lt;&#x2F;li&gt;
-&lt;li&gt;It cannot manage files (though there is &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;helix-editor&#x2F;helix&#x2F;pull&#x2F;2377&quot;&gt;a proposal to fix this&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;It cannot open files relative to that in an open buffer (though there is &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;helix-editor&#x2F;helix&#x2F;pull&#x2F;2412&quot;&gt;a proposal to fix this as well&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;It cannot manage files
+(though there is &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;helix-editor&#x2F;helix&#x2F;pull&#x2F;2377&quot;&gt;a proposal to fix this&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;It cannot open files relative to that in an open buffer
+(though there is &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;helix-editor&#x2F;helix&#x2F;pull&#x2F;2412&quot;&gt;a proposal to fix this as well&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;It cannot remove trailing whitespace on save
+(though there is &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;helix-editor&#x2F;helix&#x2F;pull&#x2F;3674&quot;&gt;a proposal to fix this too&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;Beyond that,
 I love that it integrates IDE functionality without any need for configuration.
