@@ -4,8 +4,46 @@
 	<link href="https://tshepang.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://tshepang.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-12-04T00:00:00+00:00</updated>
+	<updated>2022-12-17T00:00:00+00:00</updated>
 	<id>https://tshepang.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Rust things I most anticipate</title>
+		<published>2022-12-17T00:00:00+00:00</published>
+		<updated>2022-12-17T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://tshepang.github.io/rust-things-i-most-anticipate/" type="text/html"/>
+		<id>https://tshepang.github.io/rust-things-i-most-anticipate/</id>
+		<content type="html">&lt;p&gt;The following are in progress:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.memorysafety.org&#x2F;blog&#x2F;memory-safety-in-linux-kernel&quot;&gt;Allowing Rust usage in official Linux kernel&lt;&#x2F;a&gt;,
+though this would initially be limited to device drivers
+(&lt;a href=&quot;https:&#x2F;&#x2F;www.memorysafety.org&#x2F;blog&#x2F;rust-in-linux-just-the-beginning&quot;&gt;initial merge&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;lore.kernel.org&#x2F;lkml&#x2F;20221110164152.26136-1-ojeda@kernel.org&quot;&gt;latest proposal&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Make alternatives (to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;llvm&#x2F;llvm-project&quot;&gt;LLVM&lt;&#x2F;a&gt;) codegen backends easily available in
+Rust toolchain (as in via &lt;code&gt;rustup&lt;&#x2F;code&gt;)
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bjorn3&#x2F;rustc_codegen_cranelift&quot;&gt;rustc_codegen_cranelift&lt;&#x2F;a&gt; (for using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;cranelift&lt;&#x2F;a&gt; as codegen backend),
+immediate benefit being fast debug compiles (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;81746&quot;&gt;progress&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rustc_codegen_gcc&quot;&gt;rustc_codegen_gcc&lt;&#x2F;a&gt;, allowing Rust to run in more hardware
+platforms (&lt;a href=&quot;https:&#x2F;&#x2F;blog.antoyo.xyz&#x2F;rustc_codegen_gcc-progress-report-15&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Having Rust be certified for use in safety-critical systems,
+most visible example being &lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;ferrocene&quot;&gt;Ferrocene&lt;&#x2F;a&gt; (&lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;blog&#x2F;the-ferrocene-language-specification-is-here&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&quot;&gt;hyper&lt;&#x2F;a&gt; being used as default HTTP backend of cURL (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;orgs&#x2F;hyperium&#x2F;projects&#x2F;2&#x2F;views&#x2F;1&quot;&gt;Hyper progress
+tracker&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;curl&#x2F;curl&#x2F;wiki&#x2F;Hyper&quot;&gt;cURL progress tracker&lt;&#x2F;a&gt;),
+because the latter has billions of installations&lt;&#x2F;li&gt;
+&lt;li&gt;Removing non-Rust deps from toolchain
+&lt;ul&gt;
+&lt;li&gt;Removing libc dep for Linux-based systems (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;mustang&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;rsix&quot;&gt;rustix&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Removing llvm dep (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;cranelift&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;groups.google.com&#x2F;a&#x2F;chromium.org&#x2F;g&#x2F;chromium-dev&#x2F;c&#x2F;0z-6VJ9ZpVU&quot;&gt;Planned inclusion in Google Chrome&lt;&#x2F;a&gt;,
+a browser found in billions of devices&lt;&#x2F;li&gt;
+&lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&quot;&gt;Pijul&lt;&#x2F;a&gt;, a superior alternative to Git
+(&lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&#x2F;posts&#x2F;2022-01-08-beta&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>most used Rust software</title>
 		<published>2022-12-04T00:00:00+00:00</published>
@@ -159,44 +197,6 @@ especially the early sequences following the awakening of the lead character.&lt
 &lt;p&gt;My &lt;strong&gt;favorite performance&lt;&#x2F;strong&gt; is that of &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Stephanie_Hsu&quot;&gt;Stephanie Hsu&lt;&#x2F;a&gt;
 as a fun and colorful villain in
 &lt;em&gt;Everything Everywhere All at Once&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Rust things I most anticipate</title>
-		<published>2022-11-19T00:00:00+00:00</published>
-		<updated>2022-11-19T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://tshepang.github.io/rust-things-i-most-anticipate/" type="text/html"/>
-		<id>https://tshepang.github.io/rust-things-i-most-anticipate/</id>
-		<content type="html">&lt;p&gt;The following are in progress:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.memorysafety.org&#x2F;blog&#x2F;memory-safety-in-linux-kernel&quot;&gt;Allowing Rust usage in official Linux kernel&lt;&#x2F;a&gt;,
-though this would initially be limited to device drivers
-(&lt;a href=&quot;https:&#x2F;&#x2F;www.memorysafety.org&#x2F;blog&#x2F;rust-in-linux-just-the-beginning&quot;&gt;initial merge&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;lore.kernel.org&#x2F;lkml&#x2F;20221110164152.26136-1-ojeda@kernel.org&quot;&gt;latest proposal&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;Make alternatives (to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;llvm&#x2F;llvm-project&quot;&gt;LLVM&lt;&#x2F;a&gt;) codegen backends easily available in
-Rust toolchain (as in via &lt;code&gt;rustup&lt;&#x2F;code&gt;)
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bjorn3&#x2F;rustc_codegen_cranelift&quot;&gt;rustc_codegen_cranelift&lt;&#x2F;a&gt; (for using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;cranelift&lt;&#x2F;a&gt; as codegen backend),
-immediate benefit being fast debug compiles (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;81746&quot;&gt;progress&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rustc_codegen_gcc&quot;&gt;rustc_codegen_gcc&lt;&#x2F;a&gt;, allowing Rust to run in more hardware
-platforms (&lt;a href=&quot;https:&#x2F;&#x2F;blog.antoyo.xyz&#x2F;rustc_codegen_gcc-progress-report-15&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;Having Rust be certified for use in safety-critical systems,
-most visible example being &lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;ferrocene&quot;&gt;Ferrocene&lt;&#x2F;a&gt; (&lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;blog&#x2F;the-ferrocene-language-specification-is-here&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&quot;&gt;hyper&lt;&#x2F;a&gt; being used as default HTTP backend of cURL (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;orgs&#x2F;hyperium&#x2F;projects&#x2F;2&#x2F;views&#x2F;1&quot;&gt;Hyper progress
-tracker&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;curl&#x2F;curl&#x2F;wiki&#x2F;Hyper&quot;&gt;cURL progress tracker&lt;&#x2F;a&gt;),
-because the latter has billions of installations&lt;&#x2F;li&gt;
-&lt;li&gt;Removing non-Rust deps from toolchain
-&lt;ul&gt;
-&lt;li&gt;Removing libc dep for Linux-based systems (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;mustang&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;rsix&quot;&gt;rustix&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;Removing llvm dep (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;cranelift&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;security.googleblog.com&#x2F;2021&#x2F;09&#x2F;an-update-on-memory-safety-in-chrome.html?m=1&quot;&gt;Planned inclusion in Google Chrome&lt;&#x2F;a&gt;,
-a browser found in billions of devices&lt;&#x2F;li&gt;
-&lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&quot;&gt;Pijul&lt;&#x2F;a&gt;, a superior alternative to Git
-(&lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&#x2F;posts&#x2F;2022-01-08-beta&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
