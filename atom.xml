@@ -619,7 +619,7 @@ The effort is commendable, and results in kool things like &lt;a href=&quot;http
 but mistakes&#x2F;cruft&#x2F;poor choices are bound to happen that cannot be fixed with such.
 That is, I wish we will have a breaking release at some point,
 and the pain of such a breaking change could be relieved&#x2F;eliminated with
-planning and migration tooling.&lt;&#x2F;p&gt;
+careful planning and migration tooling.&lt;&#x2F;p&gt;
 &lt;p&gt;That said,
 following are my favorite breaking things I want in Rust.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;lang&quot;&gt;lang&lt;&#x2F;h3&gt;
@@ -660,7 +660,7 @@ different types, which is not the case for &lt;code&gt;Vec&lt;&#x2F;code&gt;.&lt
 &lt;tr&gt;&lt;td&gt;fs path&lt;&#x2F;td&gt;&lt;td&gt;Path&lt;&#x2F;td&gt;&lt;td&gt;Path (same)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;&#x2F;td&gt;&lt;td&gt;PathBuf&lt;&#x2F;td&gt;&lt;td&gt;PathOwned&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
-&lt;p&gt;Not exactly happy with above, but much better than the current &#x27;mess&#x27;&lt;&#x2F;p&gt;
+&lt;p&gt;Not exactly happy with above, but much better than the current &#x27;mess&#x27;.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;Remove &lt;code&gt;std::sync::mpsc&lt;&#x2F;code&gt; from stdlib, making it available
@@ -668,7 +668,7 @@ externally... it does not feel general enough. (&lt;a href=&quot;https:&#x2F;&#x
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;Remove per-type methods where trait impls offer same functionality,
-for generality&lt;&#x2F;p&gt;
+for generality:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; remove
 &lt;&#x2F;span&gt;&lt;span&gt;PathBuf::as_path
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; ... in favor of

@@ -66,7 +66,7 @@ The effort is commendable, and results in kool things like <a href="https://doc.
 but mistakes/cruft/poor choices are bound to happen that cannot be fixed with such.
 That is, I wish we will have a breaking release at some point,
 and the pain of such a breaking change could be relieved/eliminated with
-planning and migration tooling.</p>
+careful planning and migration tooling.</p>
 <p>That said,
 following are my favorite breaking things I want in Rust.</p>
 <h3 id="lang">lang</h3>
@@ -107,7 +107,7 @@ different types, which is not the case for <code>Vec</code>.</p>
 <tr><td>fs path</td><td>Path</td><td>Path (same)</td></tr>
 <tr><td></td><td>PathBuf</td><td>PathOwned</td></tr>
 </tbody></table>
-<p>Not exactly happy with above, but much better than the current 'mess'</p>
+<p>Not exactly happy with above, but much better than the current 'mess'.</p>
 </li>
 <li>
 <p>Remove <code>std::sync::mpsc</code> from stdlib, making it available
@@ -115,7 +115,7 @@ externally... it does not feel general enough. (<a href="https://github.com/rust
 </li>
 <li>
 <p>Remove per-type methods where trait impls offer same functionality,
-for generality</p>
+for generality:</p>
 <pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">// remove
 </span><span>PathBuf::as_path
 </span><span style="color:#65737e;">// ... in favor of
