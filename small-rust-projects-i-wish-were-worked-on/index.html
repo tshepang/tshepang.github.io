@@ -54,20 +54,27 @@
     <header>
         <h1 itemprop="headline">small Rust projects I wish were worked on</h1>
         <span class="muted">
-    2022-06-19
+    2022-12-28
 </span>
     </header>
     <div itemprop="articleBody">
       <br>
       <p>Here are some small project ideas:</p>
 <ul>
-<li>Make <a href="https://github.com/rust-lang/git2-rs/issues/623">git2-rs use Rustls</a>, which would replace a dependency on OpenSSL.
-There are 2 reasons why this is appealing:
+<li>
+<p>Make <a href="https://github.com/rust-lang/git2-rs/issues/623">git2-rs use Rustls</a>, which would replace a dependency on OpenSSL.
+There are 2 reasons why this is appealing:</p>
 <ul>
-<li>OpenSSL is written in C, and its code quality is not considered stellar</li>
-<li>C dependencies are not as pleasant to work with as Rust ones in Cargo,
-both for users and for maintainers</li>
+<li>
+<p>OpenSSL is written in C, and its code quality is not considered stellar</p>
+</li>
+<li>
+<p>C dependencies are not as pleasant to work with as Rust ones in Cargo,
+both for users and for maintainers</p>
+</li>
 </ul>
+<p>Even better would be replacement of <strong>git2-rs</strong> with <a href="https://github.com/Byron/gitoxide">gitoxide</a>,
+a pure Rust implementation.</p>
 </li>
 </ul>
 
