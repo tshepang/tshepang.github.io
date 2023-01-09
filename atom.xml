@@ -4,8 +4,41 @@
 	<link href="https://tshepang.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://tshepang.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-01-02T00:00:00+00:00</updated>
+	<updated>2023-01-09T00:00:00+00:00</updated>
 	<id>https://tshepang.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>small Rust projects I wish were worked on</title>
+		<published>2023-01-09T00:00:00+00:00</published>
+		<updated>2023-01-09T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://tshepang.github.io/small-rust-projects-i-wish-were-worked-on/" type="text/html"/>
+		<id>https://tshepang.github.io/small-rust-projects-i-wish-were-worked-on/</id>
+		<content type="html">&lt;p&gt;Here are some small project ideas:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Make &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;git2-rs&#x2F;issues&#x2F;623&quot;&gt;git2-rs use Rustls&lt;&#x2F;a&gt;, which would replace a dependency on OpenSSL.
+There are 2 reasons why this is appealing:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;OpenSSL is written in C, and its code quality is not considered stellar&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;C dependencies are not as pleasant to work with as Rust ones in Cargo,
+both for users and for maintainers&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Even better would be replacement of &lt;strong&gt;git2-rs&lt;&#x2F;strong&gt; with &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Byron&#x2F;gitoxide&quot;&gt;gitoxide&lt;&#x2F;a&gt;,
+a pure Rust implementation.
+Looking further in the future,
+Git should be discarded in favor of a &lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&quot;&gt;Pijul&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Maintnenance of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;chmln&#x2F;sd&quot;&gt;sd&lt;&#x2F;a&gt;,
+a kool sed replacement.
+It not had a release in over 2 years.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>favorite tv performances</title>
 		<published>2023-01-02T00:00:00+00:00</published>
@@ -29,34 +62,6 @@
 &lt;p&gt;Nicoye Banks (&lt;em&gt;Atlanta&lt;&#x2F;em&gt;)&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>small Rust projects I wish were worked on</title>
-		<published>2022-12-30T00:00:00+00:00</published>
-		<updated>2022-12-30T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://tshepang.github.io/small-rust-projects-i-wish-were-worked-on/" type="text/html"/>
-		<id>https://tshepang.github.io/small-rust-projects-i-wish-were-worked-on/</id>
-		<content type="html">&lt;p&gt;Here are some small project ideas:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Make &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;git2-rs&#x2F;issues&#x2F;623&quot;&gt;git2-rs use Rustls&lt;&#x2F;a&gt;, which would replace a dependency on OpenSSL.
-There are 2 reasons why this is appealing:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;OpenSSL is written in C, and its code quality is not considered stellar&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;C dependencies are not as pleasant to work with as Rust ones in Cargo,
-both for users and for maintainers&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;Even better would be replacement of &lt;strong&gt;git2-rs&lt;&#x2F;strong&gt; with &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Byron&#x2F;gitoxide&quot;&gt;gitoxide&lt;&#x2F;a&gt;,
-a pure Rust implementation.
-Looking further in the future,
-Git should be discarded in favor of a &lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&quot;&gt;Pijul&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
@@ -4279,7 +4284,7 @@ when leaving, but didn&#x27;t when we entered. Interesting.&lt;&#x2F;p&gt;
 		<link rel="alternate" href="https://tshepang.github.io/links-2015-01-16/" type="text/html"/>
 		<id>https://tshepang.github.io/links-2015-01-16/</id>
 		<content type="html">&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;people.debian.org&#x2F;%7Estapelberg&#x2F;&#x2F;2014&#x2F;12&#x2F;23&#x2F;code-search-taming-the-latency-tail&quot;&gt;an epic battle in improving performance of Debian Code Search&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;people.debian.org&#x2F;~stapelberg&#x2F;&#x2F;2014&#x2F;12&#x2F;23&#x2F;code-search-taming-the-latency-tail&quot;&gt;an epic battle in improving performance of Debian Code Search&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;siciarz.net&#x2F;tag&#x2F;24%20days%20of%20rust&quot;&gt;24 days of Rust&lt;&#x2F;a&gt; is a nice series of 24 posts related to Rust, each
 short and concise, which is the way I like it&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;chrismorgan.info&#x2F;blog&#x2F;rust-fizzbuzz.html&quot;&gt;Why your first FizzBuzz implementation may not work&lt;&#x2F;a&gt;
@@ -7394,7 +7399,7 @@ as a way of verifying your identity).&lt;&#x2F;p&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.eastoftheweb.com&#x2F;short-stories&#x2F;UBooks&#x2F;TheyMade.shtml&quot;&gt;They&#x27;re Made out of Meat&lt;&#x2F;a&gt; - nice sci-fi humor&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;blog.eat24hours.com&#x2F;how-to-advertise-on-a-porn-website&quot;&gt;How to Advertise on a Porn Website&lt;&#x2F;a&gt; - interesting, with decent
 humor&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;hezmatt.org&#x2F;%7Empalmer&#x2F;blog&#x2F;general&#x2F;how_to_frustrate_your_train_driver.html&quot;&gt;How to Frustrate Your Train Driver&lt;&#x2F;a&gt; - delicious humor&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;hezmatt.org&#x2F;~mpalmer&#x2F;blog&#x2F;general&#x2F;how_to_frustrate_your_train_driver.html&quot;&gt;How to Frustrate Your Train Driver&lt;&#x2F;a&gt; - delicious humor&lt;&#x2F;li&gt;
 &lt;li&gt;I have, for a long time, considered NYC the greatest city on the
 planet, which is actually quite vague. &lt;a href=&quot;http:&#x2F;&#x2F;www.wired.com&#x2F;business&#x2F;2010&#x2F;12&#x2F;google-nyc&quot;&gt;This article&lt;&#x2F;a&gt; fixes that for
 me... &lt;em&gt;the most important city in the world&lt;&#x2F;em&gt;.&lt;&#x2F;li&gt;
@@ -8249,7 +8254,7 @@ days, isn&#x27;t welcome either. They are too eccentric and meaningless.&lt;&#x2
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.comp.leeds.ac.uk&#x2F;nde&#x2F;papers&#x2F;teachpy3.html&quot;&gt;why Python 3&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;thechangelog.com&#x2F;open-products&quot;&gt;Open Products&lt;&#x2F;a&gt; is an excellent essay by the admirable Chad
 Whitacre, &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;am-joining-gittip&#x2F;&quot;&gt;Gittip&lt;&#x2F;a&gt; founder&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;people.gnome.org&#x2F;%7Emichael&#x2F;blog&#x2F;2013-06-13-under-the-hood.html&quot;&gt;impressive Libreoffice clean-up work&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;people.gnome.org&#x2F;~michael&#x2F;blog&#x2F;2013-06-13-under-the-hood.html&quot;&gt;impressive Libreoffice clean-up work&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;open-source-life&#x2F;d44a1953749c&quot;&gt;Money and Open Source&lt;&#x2F;a&gt; - an insightful opinion piece&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
@@ -8261,11 +8266,11 @@ Whitacre, &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;am-joining-
 		<link rel="alternate" href="https://tshepang.github.io/links-2013-07-09/" type="text/html"/>
 		<id>https://tshepang.github.io/links-2013-07-09/</id>
 		<content type="html">&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.eyrie.org&#x2F;%7Eeagle&#x2F;journal&#x2F;2013-01&#x2F;026.html&quot;&gt;Consensus failure&lt;&#x2F;a&gt; looks like worthy criticism of consensus
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.eyrie.org&#x2F;~eagle&#x2F;journal&#x2F;2013-01&#x2F;026.html&quot;&gt;Consensus failure&lt;&#x2F;a&gt; looks like worthy criticism of consensus
 decision-making in large groups.&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.informationclearinghouse.info&#x2F;article25936.htm&quot;&gt;great explanation of the concept of Confirmation Bias&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;youarenotsosmart.com&#x2F;2010&#x2F;06&#x2F;23&#x2F;confirmation-bias&quot;&gt;honorable
 mention&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.eyrie.org&#x2F;%7Eeagle&#x2F;journal&#x2F;2012-12&#x2F;006.html&quot;&gt;great advice on which Charities to give to&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.eyrie.org&#x2F;~eagle&#x2F;journal&#x2F;2012-12&#x2F;006.html&quot;&gt;great advice on which Charities to give to&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;whoever said anything involving bowel humor can&#x27;t be beautiful is
 wrong; &lt;a href=&quot;http:&#x2F;&#x2F;theoatmeal.com&#x2F;comics&#x2F;tipping_tooting&quot;&gt;here is proof&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
@@ -8863,7 +8868,7 @@ this oppressor or that incursion or this unforgivable action.&lt;&#x2F;p&gt;
 &lt;li&gt;I don&#x27;t care much for C#, but &lt;a href=&quot;http:&#x2F;&#x2F;msmvps.com&#x2F;blogs&#x2F;jon_skeet&#x2F;archive&#x2F;2011&#x2F;12&#x2F;05&#x2F;book-review-fluent-c-rebecca-riordan-sams.aspx&quot;&gt;this &#x27;negative&#x27; book review&lt;&#x2F;a&gt; by
 &lt;a href=&quot;http:&#x2F;&#x2F;www.yoda.arachsys.com&#x2F;csharp&#x2F;&quot;&gt;a luminary&lt;&#x2F;a&gt; in the .NET community is worthy.&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;pycon.blip.tv&#x2F;file&#x2F;4880330&#x2F;&quot;&gt;a video&lt;&#x2F;a&gt; on the awesome Disqus commenting system&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;people.gnome.org&#x2F;%7Emichael&#x2F;blog&#x2F;2011-06-03-libreoffice-3-4-0.html&quot;&gt;LibreOffice progress&lt;&#x2F;a&gt; is quite impressive.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;people.gnome.org&#x2F;~michael&#x2F;blog&#x2F;2011-06-03-libreoffice-3-4-0.html&quot;&gt;LibreOffice progress&lt;&#x2F;a&gt; is quite impressive.&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;journal.dedasys.com&#x2F;2011&#x2F;07&#x2F;25&#x2F;why-i-prefer-text-to-video&quot;&gt;pros of text over video&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.curiousefficiency.org&#x2F;posts&#x2F;2011&#x2F;08&#x2F;scripting-languages-and-suitable.html&quot;&gt;going from simple to complex in teaching&#x2F;learning programming&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
@@ -10146,7 +10151,7 @@ request, &lt;a href=&quot;https:&#x2F;&#x2F;bugzilla.gnome.org&#x2F;show_bug.cgi
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.codinguser.com&#x2F;2012&#x2F;07&#x2F;i-miss-qt-or-what-cute-documentation-looks-like&#x2F;&quot;&gt;great praise for Qt and its docs&lt;&#x2F;a&gt;; me was led to it when
 researching a cross-platform (Linux and Windows) GUI toolkit&lt;&#x2F;li&gt;
 &lt;li&gt;I found using gaming to explain version control unbeatable; that is
-the great appeal of &lt;a href=&quot;http:&#x2F;&#x2F;www-cs-students.stanford.edu&#x2F;%7Eblynn&#x2F;gitmagic&#x2F;&quot;&gt;Git Magic&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+the great appeal of &lt;a href=&quot;http:&#x2F;&#x2F;www-cs-students.stanford.edu&#x2F;~blynn&#x2F;gitmagic&#x2F;&quot;&gt;Git Magic&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
 	</entry>
@@ -10383,7 +10388,7 @@ interesting.&lt;&#x2F;p&gt;
 fact, I thought it would see some resistance, due to so many
 Python-related threading&#x2F;multiprocessing questions on Stack
 Overflow, such that it might be closed as a duplicate.&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;people.gnome.org&#x2F;%7Emichael&#x2F;blog&#x2F;2012-08-08-libreoffice-3-6-0.html&quot;&gt;This blog post&lt;&#x2F;a&gt; makes me wanna contribute to LibreOffice, which is
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;people.gnome.org&#x2F;~michael&#x2F;blog&#x2F;2012-08-08-libreoffice-3-6-0.html&quot;&gt;This blog post&lt;&#x2F;a&gt; makes me wanna contribute to LibreOffice, which is
 made even more appealing by fact that I&#x27;m using the language a lot
 &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;me-got-meself-another-coding-job&#x2F;&quot;&gt;at work&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
 &lt;li&gt;It is a sad fact that for large Python codebases, the pain of
@@ -10754,7 +10759,7 @@ it real unbearable.&lt;&#x2F;p&gt;
 developer for a number of years now, he is also a tireless communicator
 and organiser. The switch from OpenOffice.org to LibreOffice was not
 exactly a smooth ride, but this guy kept showing a positive attitude
-throughout. In &lt;a href=&quot;http:&#x2F;&#x2F;people.gnome.org&#x2F;%7Emichael&#x2F;blog&#x2F;2012-08-08-libreoffice-3-6-0.html&quot;&gt;the latest&lt;&#x2F;a&gt; of his longer-form blog posts (he normally
+throughout. In &lt;a href=&quot;http:&#x2F;&#x2F;people.gnome.org&#x2F;~michael&#x2F;blog&#x2F;2012-08-08-libreoffice-3-6-0.html&quot;&gt;the latest&lt;&#x2F;a&gt; of his longer-form blog posts (he normally
 writes tiny updates), he exposes the great progress that LibreOffice has
 had. This is not the most glamorous of software projects, but it
 certainly is among the most important in the world of &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;FLOSS&quot;&gt;FLOSS&lt;&#x2F;a&gt;, and it&#x27;s
@@ -11949,7 +11954,7 @@ of people interested in this kind of work to do it full-time.&lt;&#x2F;p&gt;
 		<updated>2012-04-15T00:00:00+00:00</updated>
 		<link rel="alternate" href="https://tshepang.github.io/developer-of-note-stefano-zacchiroli/" type="text/html"/>
 		<id>https://tshepang.github.io/developer-of-note-stefano-zacchiroli/</id>
-		<content type="html">&lt;p&gt;I admire &lt;a href=&quot;http:&#x2F;&#x2F;upsilon.cc&#x2F;%7Ezack&quot;&gt;this guy&lt;&#x2F;a&gt; a lot:&lt;&#x2F;p&gt;
+		<content type="html">&lt;p&gt;I admire &lt;a href=&quot;http:&#x2F;&#x2F;upsilon.cc&#x2F;~zack&quot;&gt;this guy&lt;&#x2F;a&gt; a lot:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;his great passion for Debian (he speaks on behalf of it on a variety
 of events)&lt;&#x2F;li&gt;
