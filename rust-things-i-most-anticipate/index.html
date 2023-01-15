@@ -61,6 +61,8 @@
       <br>
       <p>The following are in progress:</p>
 <ul>
+<li>Usage in production versions of Chromium,
+though this would only be <a href="https://security.googleblog.com/2023/01/supporting-use-of-rust-in-chromium.html">for external dependencies</a></li>
 <li>Make alternative (to <a href="https://github.com/llvm/llvm-project">LLVM</a>) codegen backends easily available in
 Rust toolchain (as in via <code>rustup</code>)
 <ul>
@@ -70,19 +72,12 @@ immediate benefit being fast debug compiles (<a href="https://github.com/rust-la
 allowing Rust to run in more hardware platforms (<a href="https://blog.antoyo.xyz/rustc_codegen_gcc-progress-report-19">latest update</a>)</li>
 </ul>
 </li>
-<li><a href="https://groups.google.com/a/chromium.org/g/chromium-dev/c/0z-6VJ9ZpVU">Planned inclusion in Google Chrome</a>,
-a browser found in billions of devices</li>
 <li>Having Rust be certified for use in safety-critical systems,
 most visible example being <a href="https://ferrous-systems.com/ferrocene">Ferrocene</a> (<a href="https://ferrous-systems.com/blog/the-ferrocene-language-specification-is-here">latest update</a>)</li>
 <li><a href="https://github.com/hyperium/hyper">hyper</a> being used as default HTTP backend of cURL (<a href="https://github.com/orgs/hyperium/projects/2/views/1">Hyper progress
 tracker</a> and <a href="https://github.com/curl/curl/wiki/Hyper">cURL progress tracker</a>),
 because the latter has billions of installations</li>
-<li>Removing non-Rust deps from toolchain
-<ul>
-<li>Removing libc dep for Linux-based systems (<a href="https://github.com/sunfishcode/mustang">mustang</a> and <a href="https://github.com/bytecodealliance/rsix">rustix</a>)</li>
-<li>Removing llvm dep (<a href="https://github.com/bytecodealliance/wasmtime/tree/main/cranelift">cranelift</a>)</li>
-</ul>
-</li>
+<li>Removing libc depepndecy for Linux-based systems (<a href="https://github.com/sunfishcode/mustang">mustang</a> and <a href="https://github.com/bytecodealliance/rsix">rustix</a>)</li>
 <li>Wide use of <a href="https://pijul.org">Pijul</a>, a superior alternative to Git
 (<a href="https://pijul.org/posts/2022-01-08-beta">latest update</a>)</li>
 </ul>
