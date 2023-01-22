@@ -4,8 +4,46 @@
 	<link href="https://tshepang.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://tshepang.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-01-15T00:00:00+00:00</updated>
+	<updated>2023-01-22T00:00:00+00:00</updated>
 	<id>https://tshepang.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>small Rust projects I wish were worked on</title>
+		<published>2023-01-22T00:00:00+00:00</published>
+		<updated>2023-01-22T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://tshepang.github.io/small-rust-projects-i-wish-were-worked-on/" type="text/html"/>
+		<id>https://tshepang.github.io/small-rust-projects-i-wish-were-worked-on/</id>
+		<content type="html">&lt;p&gt;Here are some small project ideas:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Make &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;git2-rs&#x2F;issues&#x2F;623&quot;&gt;git2-rs use Rustls&lt;&#x2F;a&gt;, which would replace a dependency on OpenSSL.
+There are 2 reasons why this is appealing:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;OpenSSL is written in C, and its code quality is not considered stellar&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;C dependencies are not as pleasant to work with as Rust ones in Cargo,
+both for users and for maintainers&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Even better would be replacement of &lt;strong&gt;git2-rs&lt;&#x2F;strong&gt; with &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Byron&#x2F;gitoxide&quot;&gt;gitoxide&lt;&#x2F;a&gt;,
+a pure Rust implementation.
+Looking further in the future,
+Git should be discarded in favor of a &lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&quot;&gt;Pijul&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Maintnenance of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;chmln&#x2F;sd&quot;&gt;sd&lt;&#x2F;a&gt;,
+a kool sed replacement.
+It not had a release in over 2 years.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Maintnenance of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;xampprocky&#x2F;tokei&quot;&gt;tokei&lt;&#x2F;a&gt;,
+a kool code stats tool that cares for accuracy.
+Like &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;chmln&#x2F;sd&quot;&gt;sd&lt;&#x2F;a&gt;, it also not had a release in over 2 years.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Rust things I most anticipate</title>
 		<published>2023-01-15T00:00:00+00:00</published>
@@ -87,39 +125,6 @@ and has a far better command completion system&lt;&#x2F;li&gt;
 using it for Cargo and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rustc-dev-guide&quot;&gt;rustc-dev-guide&lt;&#x2F;a&gt; documentation
 (and always served with &lt;code&gt;mdbook serve&lt;&#x2F;code&gt;).&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&quot;&gt;zola&lt;&#x2F;a&gt;: for this blog, also always served (with &lt;code&gt;zola serve&lt;&#x2F;code&gt;)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>small Rust projects I wish were worked on</title>
-		<published>2023-01-09T00:00:00+00:00</published>
-		<updated>2023-01-09T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://tshepang.github.io/small-rust-projects-i-wish-were-worked-on/" type="text/html"/>
-		<id>https://tshepang.github.io/small-rust-projects-i-wish-were-worked-on/</id>
-		<content type="html">&lt;p&gt;Here are some small project ideas:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Make &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;git2-rs&#x2F;issues&#x2F;623&quot;&gt;git2-rs use Rustls&lt;&#x2F;a&gt;, which would replace a dependency on OpenSSL.
-There are 2 reasons why this is appealing:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;OpenSSL is written in C, and its code quality is not considered stellar&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;C dependencies are not as pleasant to work with as Rust ones in Cargo,
-both for users and for maintainers&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;Even better would be replacement of &lt;strong&gt;git2-rs&lt;&#x2F;strong&gt; with &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Byron&#x2F;gitoxide&quot;&gt;gitoxide&lt;&#x2F;a&gt;,
-a pure Rust implementation.
-Looking further in the future,
-Git should be discarded in favor of a &lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&quot;&gt;Pijul&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Maintnenance of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;chmln&#x2F;sd&quot;&gt;sd&lt;&#x2F;a&gt;,
-a kool sed replacement.
-It not had a release in over 2 years.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
 	</entry>
