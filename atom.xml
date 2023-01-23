@@ -4,8 +4,72 @@
 	<link href="https://tshepang.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://tshepang.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-01-22T00:00:00+00:00</updated>
+	<updated>2023-01-23T00:00:00+00:00</updated>
 	<id>https://tshepang.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>speed of current laptops (part 2)</title>
+		<published>2023-01-23T00:00:00+00:00</published>
+		<updated>2023-01-23T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://tshepang.github.io/speed-of-current-laptops-part-2/" type="text/html"/>
+		<id>https://tshepang.github.io/speed-of-current-laptops-part-2/</id>
+		<content type="html">&lt;p&gt;&lt;em&gt;See &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;speed-of-current-laptops&#x2F;&quot;&gt;part 1&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I recently bought a lovely laptop, &lt;a href=&quot;https:&#x2F;&#x2F;www.computermania.co.za&#x2F;asus-zenbook-14-oled-um3402ya-716512b0w-amd-ryzen-7-16gb-ram-512gb-ssd-jade-black.html&quot;&gt;Asus Zenbook UM3402&lt;&#x2F;a&gt;.
+It replaces a Dell Latitude 5521,
+partly due to bad battery life (about 2 hours),
+which is a pain since the country (South Africa) faces power outages as long as 4 hours.&lt;&#x2F;p&gt;
+&lt;p&gt;To check performance, I used  &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;serde-rs&#x2F;json-benchmark&quot;&gt;Rust JSON Benchmark&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;git clone https:&#x2F;&#x2F;github.com&#x2F;serde-rs&#x2F;json-benchmark
+&lt;&#x2F;span&gt;&lt;span&gt;cd json-benchmark
+&lt;&#x2F;span&gt;&lt;span&gt;git checkout de23484ca078b9756e6e35f2a7a3fd1e806769bc
+&lt;&#x2F;span&gt;&lt;span&gt;rustup override set 1.66
+&lt;&#x2F;span&gt;&lt;span&gt;cargo build --release
+&lt;&#x2F;span&gt;&lt;span&gt;cargo run --quiet --release --bin json-benchmark
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Results for the Zenbook:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;...
+&lt;&#x2F;span&gt;&lt;span&gt;   Compiling json-benchmark v0.0.1 (&#x2F;tmp&#x2F;json-benchmark)
+&lt;&#x2F;span&gt;&lt;span&gt;    Finished release [optimized + debuginfo] target(s) in 34.64s
+&lt;&#x2F;span&gt;&lt;span&gt;                                    DOM                  STRUCT
+&lt;&#x2F;span&gt;&lt;span&gt;======= serde_json ======= parse|stringify ===== parse|stringify ====
+&lt;&#x2F;span&gt;&lt;span&gt;data&#x2F;canada.json         410 MB&#x2F;s   530 MB&#x2F;s   630 MB&#x2F;s   470 MB&#x2F;s
+&lt;&#x2F;span&gt;&lt;span&gt;data&#x2F;citm_catalog.json   700 MB&#x2F;s   850 MB&#x2F;s  1230 MB&#x2F;s  1090 MB&#x2F;s
+&lt;&#x2F;span&gt;&lt;span&gt;data&#x2F;twitter.json        430 MB&#x2F;s  1080 MB&#x2F;s   820 MB&#x2F;s  1160 MB&#x2F;s
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;==== rustc_serialize ===== parse|stringify ===== parse|stringify ====
+&lt;&#x2F;span&gt;&lt;span&gt;data&#x2F;canada.json         220 MB&#x2F;s   110 MB&#x2F;s   170 MB&#x2F;s    77 MB&#x2F;s
+&lt;&#x2F;span&gt;&lt;span&gt;data&#x2F;citm_catalog.json   330 MB&#x2F;s   260 MB&#x2F;s   210 MB&#x2F;s   280 MB&#x2F;s
+&lt;&#x2F;span&gt;&lt;span&gt;data&#x2F;twitter.json        170 MB&#x2F;s   460 MB&#x2F;s   120 MB&#x2F;s   480 MB&#x2F;s
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;======= simd-json ======== parse|stringify ===== parse|stringify ====
+&lt;&#x2F;span&gt;&lt;span&gt;data&#x2F;canada.json         530 MB&#x2F;s   600 MB&#x2F;s   640 MB&#x2F;s
+&lt;&#x2F;span&gt;&lt;span&gt;data&#x2F;citm_catalog.json  1550 MB&#x2F;s  1080 MB&#x2F;s  2150 MB&#x2F;s
+&lt;&#x2F;span&gt;&lt;span&gt;data&#x2F;twitter.json       1400 MB&#x2F;s  1600 MB&#x2F;s  1350 MB&#x2F;s
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Results for the Latitude:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;   Compiling json-benchmark v0.0.1 (&#x2F;tmp&#x2F;json-benchmark)
+&lt;&#x2F;span&gt;&lt;span&gt;    Finished release [optimized + debuginfo] target(s) in 28.30s
+&lt;&#x2F;span&gt;&lt;span&gt;                                DOM                  STRUCT
+&lt;&#x2F;span&gt;&lt;span&gt;======= serde_json ======= parse|stringify ===== parse|stringify ====
+&lt;&#x2F;span&gt;&lt;span&gt;data&#x2F;canada.json         510 MB&#x2F;s   590 MB&#x2F;s   710 MB&#x2F;s   490 MB&#x2F;s
+&lt;&#x2F;span&gt;&lt;span&gt;data&#x2F;citm_catalog.json   670 MB&#x2F;s  1000 MB&#x2F;s  1270 MB&#x2F;s  1320 MB&#x2F;s
+&lt;&#x2F;span&gt;&lt;span&gt;data&#x2F;twitter.json        480 MB&#x2F;s  1240 MB&#x2F;s   790 MB&#x2F;s  1270 MB&#x2F;s
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;==== rustc_serialize ===== parse|stringify ===== parse|stringify ====
+&lt;&#x2F;span&gt;&lt;span&gt;data&#x2F;canada.json         240 MB&#x2F;s   110 MB&#x2F;s   190 MB&#x2F;s    77 MB&#x2F;s
+&lt;&#x2F;span&gt;&lt;span&gt;data&#x2F;citm_catalog.json   340 MB&#x2F;s   290 MB&#x2F;s   220 MB&#x2F;s   330 MB&#x2F;s
+&lt;&#x2F;span&gt;&lt;span&gt;data&#x2F;twitter.json        180 MB&#x2F;s   550 MB&#x2F;s   130 MB&#x2F;s   590 MB&#x2F;s
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;======= simd-json ======== parse|stringify ===== parse|stringify ====
+&lt;&#x2F;span&gt;&lt;span&gt;data&#x2F;canada.json         540 MB&#x2F;s   690 MB&#x2F;s   620 MB&#x2F;s
+&lt;&#x2F;span&gt;&lt;span&gt;data&#x2F;citm_catalog.json  1410 MB&#x2F;s  1230 MB&#x2F;s  1870 MB&#x2F;s
+&lt;&#x2F;span&gt;&lt;span&gt;data&#x2F;twitter.json       1420 MB&#x2F;s  1660 MB&#x2F;s  1500 MB&#x2F;s
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The Zenbook (Ryzen 7 5825U) is a bit slower than the Latitude,
+except for the SIMD tests.
+I expected the Latitude (i7-11850H) to be a lot faster,
+given how hungry it is for battery.&lt;&#x2F;p&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>small Rust projects I wish were worked on</title>
 		<published>2023-01-22T00:00:00+00:00</published>
@@ -1551,7 +1615,17 @@ overlong and pompous waste. The praise remains though.&lt;&#x2F;p&gt;
 		<updated>2019-10-27T00:00:00+00:00</updated>
 		<link rel="alternate" href="https://tshepang.github.io/speed-of-current-laptops/" type="text/html"/>
 		<id>https://tshepang.github.io/speed-of-current-laptops/</id>
-		<content type="html">&lt;p&gt;I decided to get me my dream laptop, a Lenovo X1 Carbon (code 20KGS3X910).
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;2023 update:&lt;&#x2F;p&gt;
+&lt;p&gt;I lost my wonderful Lenovo X1 Carbon due to a fried motherboard,
+likely due to too much fiddling with a flaky charger,
+instead of just caving and buying a replacement.
+The cost of this motherboard was greater than the laptop itself,
+a sad state of affairs which makes me wish for a &lt;a href=&quot;https:&#x2F;&#x2F;frame.work&quot;&gt;Framework Laptop&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I also lost access to the UX410,
+due to change of jobs.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;I decided to get me my dream laptop, a Lenovo X1 Carbon (code 20KGS3X910).
 It has amazing keyboard (as promised) as well as amazing touchpad.
 The performance is sad though, less than my work laptop,
 an Asus UX410 (itself a replacement of &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;asus-zenbook-ux305fa&#x2F;&quot;&gt;the UX305&lt;&#x2F;a&gt; whose battery circuitry got fried).&lt;&#x2F;p&gt;
