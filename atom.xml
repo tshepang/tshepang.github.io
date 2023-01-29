@@ -7,6 +7,73 @@
 	<updated>2023-01-29T00:00:00+00:00</updated>
 	<id>https://tshepang.github.io/atom.xml</id>
 	<entry xml:lang="en">
+		<title>favorite companies</title>
+		<published>2023-01-29T00:00:00+00:00</published>
+		<updated>2023-01-29T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://tshepang.github.io/favorite-companies/" type="text/html"/>
+		<id>https://tshepang.github.io/favorite-companies/</id>
+		<content type="html">&lt;p&gt;Here are some reasons why I like some companies a lot:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;how they appear to be managed&lt;&#x2F;li&gt;
+&lt;li&gt;what they build&lt;&#x2F;li&gt;
+&lt;li&gt;their Rust embrace&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Here goes, and they need not show strongly in all of the 3 reasons above...&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.embark-studios.com&quot;&gt;Embark Studios&lt;&#x2F;a&gt;,
+a gamedev company,
+is probably the most kool of companies that embrace Rust...
+they care deeply about the Rust ecosystem,
+which includes developing open source tooling for it,
+and helping to funding many open source contributors and projects.
+What makes them the most kool is the games they develop...
+they got some mouth-watering teasers and concept art
+(for the upcoming 2 games, &lt;a href=&quot;https:&#x2F;&#x2F;www.reachthefinals.com&quot;&gt;The Finals&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;arcraiders.com&quot;&gt;Arc Raiders&lt;&#x2F;a&gt;).&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&quot;&gt;Ferrous Systems&lt;&#x2F;a&gt;, which offers Rust consulting and training,
+also does a lot for the language in the embedded domain by running &lt;a href=&quot;https:&#x2F;&#x2F;oxidizeconf.com&quot;&gt;Oxidize&lt;&#x2F;a&gt;.
+That, combined with having Jonathan Pallant in their employ
+(and previously Jorge Aparicio and James Munns),
+makes them the most visible name in that domain for Rust.
+I am also excited for &lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;ferrocene&quot;&gt;Ferrocene&lt;&#x2F;a&gt;,
+which is their effort in getting Rust to be used in
+&amp;quot;Safety-critical sectors, such as automotive, railway, and aerospace&amp;quot;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;[Igalia],
+an open source consultancy company most visible in open source web browser work
+(they make large contributions to all 3 major browser engines),
+also happens to be a worker cooperative.
+As is the case with such organisation kinds,
+all workers are involved in business decisions,
+and they also get the same pay.
+They recently began re-igniting the development of Servo,
+a project that pioneered a number of browser components written in Rust,
+some of which are now included in Firefox.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mullvad.net&quot;&gt;Mullvad&lt;&#x2F;a&gt;, which offers a VPN service,
+develop their tools &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mullvad&quot;&gt;in public&lt;&#x2F;a&gt; (open source),
+and Rust features a lot in those.
+Reading through their site leaves me impressed about how
+serious they are about security and privacy.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;oxide.computer&quot;&gt;Oxide&lt;&#x2F;a&gt;, which builds servers (early stage, nothing shipping yet),
+also makes heavy use of Rust as well as open source firmware.
+Best of all, &lt;a href=&quot;https:&#x2F;&#x2F;oxide.computer&#x2F;blog&#x2F;compensation-as-a-reflection-of-values&quot;&gt;all workers get the same pay&lt;&#x2F;a&gt;!&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.fastly.com&quot;&gt;Fastly&lt;&#x2F;a&gt;, which offers various internet services,
+is a key player in the Wasm ecosystem,
+as evidenced by employing giants such as &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alexcrichton&quot;&gt;Alex Crichton&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&quot;&gt;Dan Gohman&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
 		<title>FLOSS I use a-lot</title>
 		<published>2023-01-29T00:00:00+00:00</published>
 		<updated>2023-01-29T00:00:00+00:00</updated>
@@ -543,61 +610,6 @@ which would require the least effort of the options above&lt;&#x2F;li&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;rustix&quot;&gt;rustix&lt;&#x2F;a&gt; (and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;mustang&lt;&#x2F;a&gt;) are used to help run POSIX apps&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;Cranelift&lt;&#x2F;a&gt; is used to generate machine code&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>favorite companies</title>
-		<published>2022-09-22T00:00:00+00:00</published>
-		<updated>2022-09-22T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://tshepang.github.io/favorite-companies/" type="text/html"/>
-		<id>https://tshepang.github.io/favorite-companies/</id>
-		<content type="html">&lt;p&gt;These are some reasons why I like some companies a lot:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;how they appear to be managed&lt;&#x2F;li&gt;
-&lt;li&gt;what they build&lt;&#x2F;li&gt;
-&lt;li&gt;their Rust embrace&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;Here goes, and they need not show strongly in all of the 3 reasons above...&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.embark-studios.com&quot;&gt;Embark Studios&lt;&#x2F;a&gt;,
-a gamedev company,
-is probably the most kool of companies that embrace Rust...
-they care deeply about the Rust ecosystem,
-which includes developing open source tooling for it,
-and helping to funding many open source contributors and projects.
-What makes them the most kool is the games they develop...
-they got some mouth-watering teasers and concept art
-(for the upcoming 2 games, &lt;a href=&quot;https:&#x2F;&#x2F;www.reachthefinals.com&quot;&gt;The Finals&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;arcraiders.com&quot;&gt;Arc Raiders&lt;&#x2F;a&gt;).&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&quot;&gt;Ferrous Systems&lt;&#x2F;a&gt;, which offers Rust consulting and training,
-also does a lot for the language in the embedded domain by running &lt;a href=&quot;https:&#x2F;&#x2F;oxidizeconf.com&quot;&gt;Oxidize&lt;&#x2F;a&gt;.
-That, combined with having Jonathan Pallant in their employ
-(and previously Jorge Aparicio and James Munns),
-makes them the most visible name in that domain for Rust.
-I am also excited for &lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;ferrocene&quot;&gt;Ferrocene&lt;&#x2F;a&gt;,
-which is their effort in getting Rust to be used in
-&amp;quot;Safety-critical sectors, such as automotive, railway, and aerospace&amp;quot;.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mullvad.net&quot;&gt;Mullvad&lt;&#x2F;a&gt;, which offers a VPN service,
-develop their tools &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mullvad&quot;&gt;in public&lt;&#x2F;a&gt; (open source),
-and Rust features a lot in those.
-Reading through their site leaves me impressed about how
-serious they are about security and privacy.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;oxide.computer&quot;&gt;Oxide&lt;&#x2F;a&gt;, which builds servers (early stage, nothing shipping yet),
-also makes heavy use of Rust as well as open source firmware.
-Best of all, &lt;a href=&quot;https:&#x2F;&#x2F;oxide.computer&#x2F;blog&#x2F;compensation-as-a-reflection-of-values&quot;&gt;all workers get the same salary&lt;&#x2F;a&gt;!&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.fastly.com&quot;&gt;Fastly&lt;&#x2F;a&gt;, which offers various internet services,
-is a key player in the Wasm ecosystem,
-as evidenced by employing giants such as &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alexcrichton&quot;&gt;Alex Crichton&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&quot;&gt;Dan Gohman&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
 	</entry>
