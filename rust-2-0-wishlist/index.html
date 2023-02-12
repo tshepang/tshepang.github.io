@@ -54,7 +54,7 @@
     <header>
         <h1 itemprop="headline">Rust 2.0 wishlist</h1>
         <span class="muted">
-    2023-01-28
+    2023-02-12
 </span>
     </header>
     <div itemprop="articleBody">
@@ -88,7 +88,7 @@ functions and closures.</p>
 <p>A closure syntax looks like this:</p>
 <pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
 </span><span>    </span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">square </span><span>= |</span><span style="color:#bf616a;">number</span><span>: </span><span style="color:#b48ead;">i32</span><span>| {
-</span><span>        num * num
+</span><span>        number * number
 </span><span>    };
 </span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#96b5b4;">square</span><span>(</span><span style="color:#d08770;">4</span><span>));
 </span><span>}
@@ -170,6 +170,11 @@ for generality:</p>
 </span><span>Path::to_path_buf
 </span><span style="color:#65737e;">// ... in favor of
 </span><span>Path::to_owned
+</span><span>
+</span><span style="color:#65737e;">// remove
+</span><span>Vec::append
+</span><span style="color:#65737e;">// ... in favor of
+</span><span>Vec::extend
 </span></code></pre>
 </li>
 <li>
