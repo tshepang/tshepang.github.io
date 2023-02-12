@@ -95,7 +95,7 @@ functions and closures.</p>
 </span></code></pre>
 <p>A function for same looks like this:</p>
 <pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">square</span><span>(</span><span style="color:#bf616a;">number</span><span>: </span><span style="color:#b48ead;">i32</span><span>) -&gt; </span><span style="color:#b48ead;">i32 </span><span>{
-</span><span>    num * num
+</span><span>    number * number
 </span><span>}
 </span><span>
 </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
@@ -104,7 +104,7 @@ functions and closures.</p>
 </span></code></pre>
 <p>Imagine if you could have this instead:</p>
 <pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let</span><span> square: |</span><span style="color:#bf616a;">number</span><span>: </span><span style="color:#b48ead;">i32</span><span>| -&gt; </span><span style="color:#b48ead;">i32 </span><span>= {
-</span><span>    num * num
+</span><span>    number * number
 </span><span>}
 </span><span>
 </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
@@ -118,7 +118,7 @@ and less syntax to learn for new users.</p>
 <p>As a final note on this one,
 this is what a function would look like if it returned nothing:</p>
 <pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let</span><span> show_square: |</span><span style="color:#bf616a;">number</span><span>: </span><span style="color:#b48ead;">i32</span><span>| = {
-</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, num * num);
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, number * number);
 </span><span>}
 </span><span>
 </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
