@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Tshepang logs</title>
+
+      
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://tshepang.github.io/atom.xml">
+      
+
+      
+          <link rel="stylesheet" href="https://tshepang.github.io/site.css">
+      
+
+      
+      
+    </head>
+
+    <body class="hack dark main container">
+        
+    
+        
+                
+                    <header>
+                        <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https:&#x2F;&#x2F;tshepang.github.io&#x2F;about-me">
+                                <span itemprop="name">about</span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https:&#x2F;&#x2F;tshepang.github.io&#x2F;tags">
+                                <span itemprop="name">tags</span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https:&#x2F;&#x2F;tshepang.github.io&#x2F;categories&#x2F;movies">
+                                <span itemprop="name">movies</span></a>
+                        
+                        </nav>
+                    </header>
+                
+            
+    
+
+<article itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1 itemprop="headline">enjoying Helix (part 2)</h1>
+        <span class="muted">
+    2023-02-18
+</span>
+    </header>
+    <div itemprop="articleBody">
+      <br>
+      <p>It has been <a href="https://tshepang.github.io/enjoying-helix/">over 2 months</a> since I started using Helix heavily,
+and it continues to impress:</p>
+<ul>
+<li>
+<p>One feature I enjoy a lot is its directory view feature,
+which you access with <code>:open</code> command.
+It displays all files in the whole directory tree,
+and allows filtering them by just typing any matching character(s),
+to the point of even doing <a href="https://github.com/helix-editor/helix/pull/5114">things like exact matching</a>,
+in addition to fuzzy matching (the default).</p>
+</li>
+<li>
+<p>Another I love is the <strong>jumplist</strong>,
+which allows moving forward (<code>C-i</code>) and backward (<code>C-o</code>) through the motions that occured.
+It's extra kool in that this spans not just the current buffer,
+but others as well,
+allowing easy navigation between buffer locations reached with <strong>Go to definition</strong> (<code>g d</code>).
+Emacs has a similar feature, except via twisted finger gymnastics.</p>
+</li>
+</ul>
+<p>I do, however, have some unfulfilled desires:</p>
+<ul>
+<li>
+<p>None of <a href="https://tshepang.github.io/enjoying-helix/">the issues I had back then</a> have been fixed.</p>
+</li>
+<li>
+<p>I wish there was <a href="https://github.com/helix-editor/helix/issues/5783">automatic saving of yanks</a>,
+a feature available by default on Emacs
+(where older yanks are accessed with <code>Alt-y</code>, as contrasted with <code>C-y</code> for latest yanked text).
+Currently, one has to do the more awkward usage of so-called <em>registers</em>,
+which have to predefined in advance before an action (like <strong>yank</strong>, <strong>delete</strong>, or <strong>change</strong>).</p>
+</li>
+<li>
+<p>I have installed the editor a few times,
+and it's still not clear how things fit together...
+I have struggled too much to setup nice things like syntax highlighting and code completion.</p>
+</li>
+<li>
+<p>Too many of themes are immature, such that I still haven't found one I could settle on.</p>
+</li>
+</ul>
+
+    </div>
+
+    
+        <footer>
+            <hr>
+            <p>
+                
+                
+                
+                    
+                    tagged
+                    
+                        <a href="https://tshepang.github.io/tags/rust/">Rust</a>
+                        
+                    
+                
+            </p>
+            
+            
+        </footer>
+    
+</article>
+
+
+    </body>
+
+    
+        <div class="search-container">
+          <input id="search" type="search" placeholder="🔎  search">
+          <div class="search-results">
+            <div class="search-results__items"></div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://tshepang.github.io/elasticlunr.min.js"></script>
+        <script type="text/javascript" src="https://tshepang.github.io/search_index.en.js"></script>
+        <script type="text/javascript" src="https://tshepang.github.io/search.js"></script>
+    
+
+</html>

@@ -4,8 +4,57 @@
 	<link href="https://tshepang.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://tshepang.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-02-17T00:00:00+00:00</updated>
+	<updated>2023-02-18T00:00:00+00:00</updated>
 	<id>https://tshepang.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>enjoying Helix (part 2)</title>
+		<published>2023-02-18T00:00:00+00:00</published>
+		<updated>2023-02-18T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://tshepang.github.io/enjoying-helix-part-2/" type="text/html"/>
+		<id>https://tshepang.github.io/enjoying-helix-part-2/</id>
+		<content type="html">&lt;p&gt;It has been &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;enjoying-helix&#x2F;&quot;&gt;over 2 months&lt;&#x2F;a&gt; since I started using Helix heavily,
+and it continues to impress:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;One feature I enjoy a lot is its directory view feature,
+which you access with &lt;code&gt;:open&lt;&#x2F;code&gt; command.
+It displays all files in the whole directory tree,
+and allows filtering them by just typing any matching character(s),
+to the point of even doing &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;helix-editor&#x2F;helix&#x2F;pull&#x2F;5114&quot;&gt;things like exact matching&lt;&#x2F;a&gt;,
+in addition to fuzzy matching (the default).&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Another I love is the &lt;strong&gt;jumplist&lt;&#x2F;strong&gt;,
+which allows moving forward (&lt;code&gt;C-i&lt;&#x2F;code&gt;) and backward (&lt;code&gt;C-o&lt;&#x2F;code&gt;) through the motions that occured.
+It&#x27;s extra kool in that this spans not just the current buffer,
+but others as well,
+allowing easy navigation between buffer locations reached with &lt;strong&gt;Go to definition&lt;&#x2F;strong&gt; (&lt;code&gt;g d&lt;&#x2F;code&gt;).
+Emacs has a similar feature, except via twisted finger gymnastics.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;I do, however, have some unfulfilled desires:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;None of &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;enjoying-helix&#x2F;&quot;&gt;the issues I had back then&lt;&#x2F;a&gt; have been fixed.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;I wish there was &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;helix-editor&#x2F;helix&#x2F;issues&#x2F;5783&quot;&gt;automatic saving of yanks&lt;&#x2F;a&gt;,
+a feature available by default on Emacs
+(where older yanks are accessed with &lt;code&gt;Alt-y&lt;&#x2F;code&gt;, as contrasted with &lt;code&gt;C-y&lt;&#x2F;code&gt; for latest yanked text).
+Currently, one has to do the more awkward usage of so-called &lt;em&gt;registers&lt;&#x2F;em&gt;,
+which have to predefined in advance before an action (like &lt;strong&gt;yank&lt;&#x2F;strong&gt;, &lt;strong&gt;delete&lt;&#x2F;strong&gt;, or &lt;strong&gt;change&lt;&#x2F;strong&gt;).&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;I have installed the editor a few times,
+and it&#x27;s still not clear how things fit together...
+I have struggled too much to setup nice things like syntax highlighting and code completion.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Too many of themes are immature, such that I still haven&#x27;t found one I could settle on.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>2022 review</title>
 		<published>2023-02-17T00:00:00+00:00</published>
@@ -526,7 +575,8 @@ especially starting with Android 13.&lt;&#x2F;p&gt;
 		<updated>2022-12-01T00:00:00+00:00</updated>
 		<link rel="alternate" href="https://tshepang.github.io/enjoying-helix/" type="text/html"/>
 		<id>https://tshepang.github.io/enjoying-helix/</id>
-		<content type="html">&lt;p&gt;I have been hoping for an alternative to Emacs:&lt;&#x2F;p&gt;
+		<content type="html">&lt;p&gt;&lt;em&gt;(update: there is &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;enjoying-helix-part-2&#x2F;&quot;&gt;a part 2&lt;&#x2F;a&gt;)&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I have been hoping for an alternative to Emacs:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;The complexity of configuration (my &lt;code&gt;init.el&lt;&#x2F;code&gt; has over 200 lines)&lt;&#x2F;li&gt;
 &lt;li&gt;The sluggish behavior, especially over SSH&lt;&#x2F;li&gt;
