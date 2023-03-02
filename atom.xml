@@ -4,110 +4,12 @@
 	<link href="https://tshepang.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://tshepang.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-02-25T00:00:00+00:00</updated>
+	<updated>2023-03-02T00:00:00+00:00</updated>
 	<id>https://tshepang.github.io/atom.xml</id>
 	<entry xml:lang="en">
-		<title>Rust things I most anticipate</title>
-		<published>2023-02-25T00:00:00+00:00</published>
-		<updated>2023-02-25T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://tshepang.github.io/rust-things-i-most-anticipate/" type="text/html"/>
-		<id>https://tshepang.github.io/rust-things-i-most-anticipate/</id>
-		<content type="html">&lt;p&gt;The following are in progress:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Make alternative (to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;llvm&#x2F;llvm-project&quot;&gt;LLVM&lt;&#x2F;a&gt;) codegen backends easily available in
-Rust toolchain (as in via &lt;code&gt;rustup&lt;&#x2F;code&gt;)
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bjorn3&#x2F;rustc_codegen_cranelift&quot;&gt;rustc_codegen_cranelift&lt;&#x2F;a&gt; (for using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;cranelift&lt;&#x2F;a&gt;),
-immediate benefit being fast debug compiles (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;81746&quot;&gt;progress&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rustc_codegen_gcc&quot;&gt;rustc_codegen_gcc&lt;&#x2F;a&gt;,
-allowing Rust to run in more hardware platforms (&lt;a href=&quot;https:&#x2F;&#x2F;blog.antoyo.xyz&#x2F;rustc_codegen_gcc-progress-report-20&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;Usage in production versions of Chromium,
-though this would only be &lt;a href=&quot;https:&#x2F;&#x2F;security.googleblog.com&#x2F;2023&#x2F;01&#x2F;supporting-use-of-rust-in-chromium.html&quot;&gt;for external dependencies&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;Having Rust be certified for use in safety-critical systems,
-most visible example being &lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;ferrocene&quot;&gt;Ferrocene&lt;&#x2F;a&gt; (&lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;blog&#x2F;the-ferrocene-language-specification-is-here&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&quot;&gt;hyper&lt;&#x2F;a&gt; being used as default HTTP backend of cURL (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;orgs&#x2F;hyperium&#x2F;projects&#x2F;2&#x2F;views&#x2F;1&quot;&gt;Hyper progress
-tracker&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;curl&#x2F;curl&#x2F;wiki&#x2F;Hyper&quot;&gt;cURL progress tracker&lt;&#x2F;a&gt;),
-because the latter has billions of installations&lt;&#x2F;li&gt;
-&lt;li&gt;Removing libc dependency for Linux-based systems (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;mustang&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;rsix&quot;&gt;rustix&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&quot;&gt;Pijul&lt;&#x2F;a&gt;, a superior alternative to Git
-(&lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&#x2F;posts&#x2F;2022-01-08-beta&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>2022 review</title>
-		<published>2023-02-19T00:00:00+00:00</published>
-		<updated>2023-02-19T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://tshepang.github.io/2022-review/" type="text/html"/>
-		<id>https://tshepang.github.io/2022-review/</id>
-		<content type="html">&lt;p&gt;The greatest &lt;strong&gt;spectacle&lt;&#x2F;strong&gt; is &lt;em&gt;Black Adam&lt;&#x2F;em&gt;,
-due to its fun action,
-especially the early sequences following the awakening of the lead character.
-The best &lt;strong&gt;action sequence&lt;&#x2F;strong&gt; is the prison rescue in &lt;em&gt;The Bad Guys&lt;&#x2F;em&gt;...
-it does not feel original, but it was so kool, in an otherwise bland movie.&lt;&#x2F;p&gt;
-&lt;p&gt;The &lt;strong&gt;best performance&lt;&#x2F;strong&gt; is that of &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Hong_Chau&quot;&gt;Hong Chau&lt;&#x2F;a&gt; (such perfection!) in &lt;em&gt;The Menu&lt;&#x2F;em&gt;,
-and my &lt;strong&gt;favorite performance&lt;&#x2F;strong&gt; is that of &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Stephanie_Hsu&quot;&gt;Stephanie Hsu&lt;&#x2F;a&gt;
-as a fun and colorful villain in
-&lt;em&gt;Everything Everywhere All at Once&lt;&#x2F;em&gt;.
-Following that is one by &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Ronny_Chieng&quot;&gt;Ronny Chieng&lt;&#x2F;a&gt;,
-a fun portrayal of a shitty boss in the uneven &lt;em&gt;M3GAN&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>enjoying Helix (part 2)</title>
-		<published>2023-02-18T00:00:00+00:00</published>
-		<updated>2023-02-18T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://tshepang.github.io/enjoying-helix-part-2/" type="text/html"/>
-		<id>https://tshepang.github.io/enjoying-helix-part-2/</id>
-		<content type="html">&lt;p&gt;It has been &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;enjoying-helix&#x2F;&quot;&gt;over 2 months&lt;&#x2F;a&gt; since I started using Helix heavily,
-and it continues to impress:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;One feature I enjoy a lot is its directory view feature,
-which you access with &lt;code&gt;:open&lt;&#x2F;code&gt; command.
-It displays all files in the whole directory tree,
-and allows filtering them by just typing any matching character(s),
-to the point of even doing &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;helix-editor&#x2F;helix&#x2F;pull&#x2F;5114&quot;&gt;things like exact matching&lt;&#x2F;a&gt;,
-in addition to fuzzy matching (the default).&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Another I love is the &lt;strong&gt;jumplist&lt;&#x2F;strong&gt;,
-which allows moving forward (&lt;code&gt;C-i&lt;&#x2F;code&gt;) and backward (&lt;code&gt;C-o&lt;&#x2F;code&gt;) through the motions that occured.
-It&#x27;s extra kool in that this spans not just the current buffer,
-but others as well,
-allowing easy navigation between buffer locations reached with &lt;strong&gt;Go to definition&lt;&#x2F;strong&gt; (&lt;code&gt;g d&lt;&#x2F;code&gt;).
-Emacs has a similar feature, except via twisted finger gymnastics.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;I do, however, have some unfulfilled desires:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;None of &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;enjoying-helix&#x2F;&quot;&gt;the issues I had back then&lt;&#x2F;a&gt; have been fixed.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;I wish there was &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;helix-editor&#x2F;helix&#x2F;issues&#x2F;5783&quot;&gt;automatic saving of yanks&lt;&#x2F;a&gt;,
-a feature available by default on Emacs
-(where older yanks are accessed with &lt;code&gt;Alt-y&lt;&#x2F;code&gt;, as contrasted with &lt;code&gt;C-y&lt;&#x2F;code&gt; for latest yanked text).
-Currently, one has to do the more awkward usage of so-called &lt;em&gt;registers&lt;&#x2F;em&gt;,
-which have to predefined in advance before an action (like &lt;strong&gt;yank&lt;&#x2F;strong&gt;, &lt;strong&gt;delete&lt;&#x2F;strong&gt;, or &lt;strong&gt;change&lt;&#x2F;strong&gt;).&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;I have installed the editor a few times,
-and it&#x27;s still not clear how things fit together...
-I have struggled too much to setup nice things like syntax highlighting and code completion.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Too many of themes are immature, such that I still haven&#x27;t found one I could settle on.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
 		<title>Rust 2.0 wishlist</title>
-		<published>2023-02-12T00:00:00+00:00</published>
-		<updated>2023-02-12T00:00:00+00:00</updated>
+		<published>2023-03-02T00:00:00+00:00</published>
+		<updated>2023-03-02T00:00:00+00:00</updated>
 		<link rel="alternate" href="https://tshepang.github.io/rust-2-0-wishlist/" type="text/html"/>
 		<id>https://tshepang.github.io/rust-2-0-wishlist/</id>
 		<content type="html">&lt;p&gt;There is a strong commitment for Rust not to break backwards compatibility,
@@ -231,6 +133,16 @@ for generality:&lt;&#x2F;p&gt;
 &lt;li&gt;
 &lt;p&gt;Remove all deprecated APIs, most notable being the &lt;code&gt;try!&lt;&#x2F;code&gt; macro&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Renames of panick methods (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rfcs&#x2F;pull&#x2F;3218#issuecomment-1010084722&quot;&gt;inspiration&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;foo.unwrap&lt;&#x2F;code&gt; -&amp;gt; remove&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;foo.expect(&amp;quot;message&amp;quot;)&lt;&#x2F;code&gt; -&amp;gt; &lt;code&gt;foo.or_panic(&amp;quot;message&amp;quot;)&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;foo.unwrap_ord&lt;&#x2F;code&gt; -&amp;gt; &lt;code&gt;foo.or&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;foo.unwrap_or_default&lt;&#x2F;code&gt; -&amp;gt; &lt;code&gt;foo.or_default&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;foo.unwrap_or_else&lt;&#x2F;code&gt; -&amp;gt; &lt;code&gt;foo.or_else&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;cargo&quot;&gt;cargo&lt;&#x2F;h3&gt;
 &lt;ul&gt;
@@ -238,6 +150,104 @@ for generality:&lt;&#x2F;p&gt;
 &lt;p&gt;Do not allow crate names with underscores, because taste...&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;code&gt;serde_json&lt;&#x2F;code&gt; (bad)&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;code&gt;serde-json&lt;&#x2F;code&gt; (good)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Rust things I most anticipate</title>
+		<published>2023-02-25T00:00:00+00:00</published>
+		<updated>2023-02-25T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://tshepang.github.io/rust-things-i-most-anticipate/" type="text/html"/>
+		<id>https://tshepang.github.io/rust-things-i-most-anticipate/</id>
+		<content type="html">&lt;p&gt;The following are in progress:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Make alternative (to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;llvm&#x2F;llvm-project&quot;&gt;LLVM&lt;&#x2F;a&gt;) codegen backends easily available in
+Rust toolchain (as in via &lt;code&gt;rustup&lt;&#x2F;code&gt;)
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bjorn3&#x2F;rustc_codegen_cranelift&quot;&gt;rustc_codegen_cranelift&lt;&#x2F;a&gt; (for using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;cranelift&lt;&#x2F;a&gt;),
+immediate benefit being fast debug compiles (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;81746&quot;&gt;progress&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rustc_codegen_gcc&quot;&gt;rustc_codegen_gcc&lt;&#x2F;a&gt;,
+allowing Rust to run in more hardware platforms (&lt;a href=&quot;https:&#x2F;&#x2F;blog.antoyo.xyz&#x2F;rustc_codegen_gcc-progress-report-20&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Usage in production versions of Chromium,
+though this would only be &lt;a href=&quot;https:&#x2F;&#x2F;security.googleblog.com&#x2F;2023&#x2F;01&#x2F;supporting-use-of-rust-in-chromium.html&quot;&gt;for external dependencies&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Having Rust be certified for use in safety-critical systems,
+most visible example being &lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;ferrocene&quot;&gt;Ferrocene&lt;&#x2F;a&gt; (&lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;blog&#x2F;the-ferrocene-language-specification-is-here&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&quot;&gt;hyper&lt;&#x2F;a&gt; being used as default HTTP backend of cURL (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;orgs&#x2F;hyperium&#x2F;projects&#x2F;2&#x2F;views&#x2F;1&quot;&gt;Hyper progress
+tracker&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;curl&#x2F;curl&#x2F;wiki&#x2F;Hyper&quot;&gt;cURL progress tracker&lt;&#x2F;a&gt;),
+because the latter has billions of installations&lt;&#x2F;li&gt;
+&lt;li&gt;Removing libc dependency for Linux-based systems (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;mustang&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;rsix&quot;&gt;rustix&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&quot;&gt;Pijul&lt;&#x2F;a&gt;, a superior alternative to Git
+(&lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&#x2F;posts&#x2F;2022-01-08-beta&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>2022 review</title>
+		<published>2023-02-19T00:00:00+00:00</published>
+		<updated>2023-02-19T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://tshepang.github.io/2022-review/" type="text/html"/>
+		<id>https://tshepang.github.io/2022-review/</id>
+		<content type="html">&lt;p&gt;The greatest &lt;strong&gt;spectacle&lt;&#x2F;strong&gt; is &lt;em&gt;Black Adam&lt;&#x2F;em&gt;,
+due to its fun action,
+especially the early sequences following the awakening of the lead character.
+The best &lt;strong&gt;action sequence&lt;&#x2F;strong&gt; is the prison rescue in &lt;em&gt;The Bad Guys&lt;&#x2F;em&gt;...
+it does not feel original, but it was so kool, in an otherwise bland movie.&lt;&#x2F;p&gt;
+&lt;p&gt;The &lt;strong&gt;best performance&lt;&#x2F;strong&gt; is that of &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Hong_Chau&quot;&gt;Hong Chau&lt;&#x2F;a&gt; (such perfection!) in &lt;em&gt;The Menu&lt;&#x2F;em&gt;,
+and my &lt;strong&gt;favorite performance&lt;&#x2F;strong&gt; is that of &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Stephanie_Hsu&quot;&gt;Stephanie Hsu&lt;&#x2F;a&gt;
+as a fun and colorful villain in
+&lt;em&gt;Everything Everywhere All at Once&lt;&#x2F;em&gt;.
+Following that is one by &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Ronny_Chieng&quot;&gt;Ronny Chieng&lt;&#x2F;a&gt;,
+a fun portrayal of a shitty boss in the uneven &lt;em&gt;M3GAN&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>enjoying Helix (part 2)</title>
+		<published>2023-02-18T00:00:00+00:00</published>
+		<updated>2023-02-18T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://tshepang.github.io/enjoying-helix-part-2/" type="text/html"/>
+		<id>https://tshepang.github.io/enjoying-helix-part-2/</id>
+		<content type="html">&lt;p&gt;It has been &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;enjoying-helix&#x2F;&quot;&gt;over 2 months&lt;&#x2F;a&gt; since I started using Helix heavily,
+and it continues to impress:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;One feature I enjoy a lot is its directory view feature,
+which you access with &lt;code&gt;:open&lt;&#x2F;code&gt; command.
+It displays all files in the whole directory tree,
+and allows filtering them by just typing any matching character(s),
+to the point of even doing &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;helix-editor&#x2F;helix&#x2F;pull&#x2F;5114&quot;&gt;things like exact matching&lt;&#x2F;a&gt;,
+in addition to fuzzy matching (the default).&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Another I love is the &lt;strong&gt;jumplist&lt;&#x2F;strong&gt;,
+which allows moving forward (&lt;code&gt;C-i&lt;&#x2F;code&gt;) and backward (&lt;code&gt;C-o&lt;&#x2F;code&gt;) through the motions that occured.
+It&#x27;s extra kool in that this spans not just the current buffer,
+but others as well,
+allowing easy navigation between buffer locations reached with &lt;strong&gt;Go to definition&lt;&#x2F;strong&gt; (&lt;code&gt;g d&lt;&#x2F;code&gt;).
+Emacs has a similar feature, except via twisted finger gymnastics.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;I do, however, have some unfulfilled desires:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;None of &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;enjoying-helix&#x2F;&quot;&gt;the issues I had back then&lt;&#x2F;a&gt; have been fixed.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;I wish there was &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;helix-editor&#x2F;helix&#x2F;issues&#x2F;5783&quot;&gt;automatic saving of yanks&lt;&#x2F;a&gt;,
+a feature available by default on Emacs
+(where older yanks are accessed with &lt;code&gt;Alt-y&lt;&#x2F;code&gt;, as contrasted with &lt;code&gt;C-y&lt;&#x2F;code&gt; for latest yanked text).
+Currently, one has to do the more awkward usage of so-called &lt;em&gt;registers&lt;&#x2F;em&gt;,
+which have to predefined in advance before an action (like &lt;strong&gt;yank&lt;&#x2F;strong&gt;, &lt;strong&gt;delete&lt;&#x2F;strong&gt;, or &lt;strong&gt;change&lt;&#x2F;strong&gt;).&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;I have installed the editor a few times,
+and it&#x27;s still not clear how things fit together...
+I have struggled too much to setup nice things like syntax highlighting and code completion.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Too many of themes are immature, such that I still haven&#x27;t found one I could settle on.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>

@@ -54,7 +54,7 @@
     <header>
         <h1 itemprop="headline">Rust 2.0 wishlist</h1>
         <span class="muted">
-    2023-02-12
+    2023-03-02
 </span>
     </header>
     <div itemprop="articleBody">
@@ -179,6 +179,16 @@ for generality:</p>
 </li>
 <li>
 <p>Remove all deprecated APIs, most notable being the <code>try!</code> macro</p>
+</li>
+<li>
+<p>Renames of panick methods (<a href="https://github.com/rust-lang/rfcs/pull/3218#issuecomment-1010084722">inspiration</a>)</p>
+<ul>
+<li><code>foo.unwrap</code> -&gt; remove</li>
+<li><code>foo.expect(&quot;message&quot;)</code> -&gt; <code>foo.or_panic(&quot;message&quot;)</code></li>
+<li><code>foo.unwrap_ord</code> -&gt; <code>foo.or</code></li>
+<li><code>foo.unwrap_or_default</code> -&gt; <code>foo.or_default</code></li>
+<li><code>foo.unwrap_or_else</code> -&gt; <code>foo.or_else</code></li>
+</ul>
 </li>
 </ul>
 <h3 id="cargo">cargo</h3>
