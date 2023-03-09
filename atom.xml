@@ -4,12 +4,12 @@
 	<link href="https://tshepang.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://tshepang.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-03-02T00:00:00+00:00</updated>
+	<updated>2023-03-09T00:00:00+00:00</updated>
 	<id>https://tshepang.github.io/atom.xml</id>
 	<entry xml:lang="en">
 		<title>Rust 2.0 wishlist</title>
-		<published>2023-03-02T00:00:00+00:00</published>
-		<updated>2023-03-02T00:00:00+00:00</updated>
+		<published>2023-03-09T00:00:00+00:00</published>
+		<updated>2023-03-09T00:00:00+00:00</updated>
 		<link rel="alternate" href="https://tshepang.github.io/rust-2-0-wishlist/" type="text/html"/>
 		<id>https://tshepang.github.io/rust-2-0-wishlist/</id>
 		<content type="html">&lt;p&gt;There is a strong commitment for Rust not to break backwards compatibility,
@@ -79,6 +79,47 @@ this is what a function would look like if it returned nothing:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Perhaps ridiculous,
+but what if we got rid of &lt;code&gt;struct&lt;&#x2F;code&gt; and &lt;code&gt;enum&lt;&#x2F;code&gt; keywords,
+where the structure of the types is instead inferred:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; current
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct &lt;&#x2F;span&gt;&lt;span&gt;Character {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;: String,
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;kind&lt;&#x2F;span&gt;&lt;span&gt;: Kind,
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;enum &lt;&#x2F;span&gt;&lt;span&gt;Kind {
+&lt;&#x2F;span&gt;&lt;span&gt;  Good,
+&lt;&#x2F;span&gt;&lt;span&gt;  Bad,
+&lt;&#x2F;span&gt;&lt;span&gt;  Ugly(Detail),
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct &lt;&#x2F;span&gt;&lt;span&gt;Detail;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; wish
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;type &lt;&#x2F;span&gt;&lt;span&gt;Character = {
+&lt;&#x2F;span&gt;&lt;span&gt;  name: String,
+&lt;&#x2F;span&gt;&lt;span&gt;  kind: Kind,
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;type &lt;&#x2F;span&gt;&lt;span&gt;Kind = {
+&lt;&#x2F;span&gt;&lt;span&gt;  Good,
+&lt;&#x2F;span&gt;&lt;span&gt;  Bad,
+&lt;&#x2F;span&gt;&lt;span&gt;  Ugly(Detail), &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; looks like a struct with an unnamed field
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;type &lt;&#x2F;span&gt;&lt;span&gt;Detail; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; implicitly a struct
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;type &lt;&#x2F;span&gt;&lt;span&gt;StructWithUnnamedFields(String, Kind);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; and unions are a special case, so we use this new syntax...
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;type &lt;&#x2F;span&gt;&lt;span&gt;SomeUnion = union {
+&lt;&#x2F;span&gt;&lt;span&gt;    integer: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;u32&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    float: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;f32&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This brings the syntax close to type aliases.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;std&quot;&gt;std&lt;&#x2F;h3&gt;
 &lt;ul&gt;
@@ -135,13 +176,13 @@ for generality:&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;Renames of panick methods (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rfcs&#x2F;pull&#x2F;3218#issuecomment-1010084722&quot;&gt;inspiration&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;foo.unwrap&lt;&#x2F;code&gt; -&amp;gt; remove&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;code&gt;foo.expect(&amp;quot;message&amp;quot;)&lt;&#x2F;code&gt; -&amp;gt; &lt;code&gt;foo.or_panic(&amp;quot;message&amp;quot;)&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;code&gt;foo.unwrap_ord&lt;&#x2F;code&gt; -&amp;gt; &lt;code&gt;foo.or&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;code&gt;foo.unwrap_or_default&lt;&#x2F;code&gt; -&amp;gt; &lt;code&gt;foo.or_default&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;code&gt;foo.unwrap_or_else&lt;&#x2F;code&gt; -&amp;gt; &lt;code&gt;foo.or_else&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;current&lt;&#x2F;th&gt;&lt;th&gt;wish&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;foo.unwrap&lt;&#x2F;td&gt;&lt;td&gt;(remove)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;foo.expect(&amp;quot;message&amp;quot;)&lt;&#x2F;td&gt;&lt;td&gt;foo.or_panic(&amp;quot;message&amp;quot;)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;foo.unwrap_ord&lt;&#x2F;td&gt;&lt;td&gt;foo.or&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;foo.unwrap_or_default&lt;&#x2F;td&gt;&lt;td&gt;foo.or_default&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;foo.unwrap_or_else&lt;&#x2F;td&gt;&lt;td&gt;foo.or_else&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;cargo&quot;&gt;cargo&lt;&#x2F;h3&gt;

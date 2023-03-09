@@ -54,7 +54,7 @@
     <header>
         <h1 itemprop="headline">Rust 2.0 wishlist</h1>
         <span class="muted">
-    2023-03-02
+    2023-03-09
 </span>
     </header>
     <div itemprop="articleBody">
@@ -126,6 +126,47 @@ this is what a function would look like if it returned nothing:</p>
 </span><span>}
 </span></code></pre>
 </li>
+<li>
+<p>Perhaps ridiculous,
+but what if we got rid of <code>struct</code> and <code>enum</code> keywords,
+where the structure of the types is instead inferred:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">// current
+</span><span style="color:#b48ead;">struct </span><span>Character {
+</span><span>  </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>  </span><span style="color:#bf616a;">kind</span><span>: Kind,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">enum </span><span>Kind {
+</span><span>  Good,
+</span><span>  Bad,
+</span><span>  Ugly(Detail),
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>Detail;
+</span><span>
+</span><span style="color:#65737e;">// wish
+</span><span style="color:#b48ead;">type </span><span>Character = {
+</span><span>  name: String,
+</span><span>  kind: Kind,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">type </span><span>Kind = {
+</span><span>  Good,
+</span><span>  Bad,
+</span><span>  Ugly(Detail), </span><span style="color:#65737e;">// looks like a struct with an unnamed field
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">type </span><span>Detail; </span><span style="color:#65737e;">// implicitly a struct
+</span><span style="color:#b48ead;">type </span><span>StructWithUnnamedFields(String, Kind);
+</span><span>
+</span><span style="color:#65737e;">// and unions are a special case, so we use this new syntax...
+</span><span style="color:#b48ead;">type </span><span>SomeUnion = union {
+</span><span>    integer: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>    float: </span><span style="color:#b48ead;">f32</span><span>,
+</span><span>}
+</span></code></pre>
+<p>This brings the syntax close to type aliases.</p>
+</li>
 </ul>
 <h3 id="std">std</h3>
 <ul>
@@ -182,13 +223,13 @@ for generality:</p>
 </li>
 <li>
 <p>Renames of panick methods (<a href="https://github.com/rust-lang/rfcs/pull/3218#issuecomment-1010084722">inspiration</a>)</p>
-<ul>
-<li><code>foo.unwrap</code> -&gt; remove</li>
-<li><code>foo.expect(&quot;message&quot;)</code> -&gt; <code>foo.or_panic(&quot;message&quot;)</code></li>
-<li><code>foo.unwrap_ord</code> -&gt; <code>foo.or</code></li>
-<li><code>foo.unwrap_or_default</code> -&gt; <code>foo.or_default</code></li>
-<li><code>foo.unwrap_or_else</code> -&gt; <code>foo.or_else</code></li>
-</ul>
+<table><thead><tr><th>current</th><th>wish</th></tr></thead><tbody>
+<tr><td>foo.unwrap</td><td>(remove)</td></tr>
+<tr><td>foo.expect(&quot;message&quot;)</td><td>foo.or_panic(&quot;message&quot;)</td></tr>
+<tr><td>foo.unwrap_ord</td><td>foo.or</td></tr>
+<tr><td>foo.unwrap_or_default</td><td>foo.or_default</td></tr>
+<tr><td>foo.unwrap_or_else</td><td>foo.or_else</td></tr>
+</tbody></table>
 </li>
 </ul>
 <h3 id="cargo">cargo</h3>
