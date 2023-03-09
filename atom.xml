@@ -64,7 +64,7 @@ functions and closures.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;    println!(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;{}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;square&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;4&lt;&#x2F;span&gt;&lt;span&gt;));
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;It a bit more heavy on tokens
+&lt;p&gt;It is a bit more heavy on tokens
 (there is an extra &lt;code&gt;:&lt;&#x2F;code&gt; and there is a &lt;code&gt;=&lt;&#x2F;code&gt;),
 but it also means one less keyword (&lt;code&gt;fn&lt;&#x2F;code&gt;),
 and less syntax to learn for new users.&lt;&#x2F;p&gt;
