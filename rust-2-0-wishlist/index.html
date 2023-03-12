@@ -202,21 +202,11 @@ externally... it does not feel general enough. (<a href="https://github.com/rust
 <li>
 <p>Remove per-type methods where trait impls offer same functionality,
 for generality:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">// remove
-</span><span>PathBuf::as_path
-</span><span style="color:#65737e;">// ... in favor of
-</span><span>PathBuf::as_ref
-</span><span>
-</span><span style="color:#65737e;">// remove
-</span><span>Path::to_path_buf
-</span><span style="color:#65737e;">// ... in favor of
-</span><span>Path::to_owned
-</span><span>
-</span><span style="color:#65737e;">// remove
-</span><span>Vec::append
-</span><span style="color:#65737e;">// ... in favor of
-</span><span>Vec::extend
-</span></code></pre>
+<table><thead><tr><th>current</th><th>wish</th></tr></thead><tbody>
+<tr><td>PathBuf::as_path</td><td>PathBuf::as_ref</td></tr>
+<tr><td>Path::to_path_buf</td><td>Path::to_owned</td></tr>
+<tr><td>Vec::append</td><td>Vec::extend</td></tr>
+</tbody></table>
 </li>
 <li>
 <p>Remove all deprecated APIs, most notable being the <code>try!</code> macro</p>

@@ -4,8 +4,40 @@
 	<link href="https://tshepang.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://tshepang.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-03-09T00:00:00+00:00</updated>
+	<updated>2023-03-13T00:00:00+00:00</updated>
 	<id>https://tshepang.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>top tv shows</title>
+		<published>2023-03-13T00:00:00+00:00</published>
+		<updated>2023-03-13T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://tshepang.github.io/top-tv-shows/" type="text/html"/>
+		<id>https://tshepang.github.io/top-tv-shows/</id>
+		<content type="html">&lt;p&gt;The list is roughly in the chronological order of the first time I
+watched them.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Yizo Yizo (seasons 1 and 2)&lt;&#x2F;li&gt;
+&lt;li&gt;24&lt;&#x2F;li&gt;
+&lt;li&gt;Game of Thrones (seasons 1 to 6)&lt;&#x2F;li&gt;
+&lt;li&gt;Homeland&lt;&#x2F;li&gt;
+&lt;li&gt;Utopia&lt;&#x2F;li&gt;
+&lt;li&gt;Girls (seasons 1 and 2)&lt;&#x2F;li&gt;
+&lt;li&gt;House of Cards (seasons 1 and 2)&lt;&#x2F;li&gt;
+&lt;li&gt;The Knick&lt;&#x2F;li&gt;
+&lt;li&gt;Barry (season 1)&lt;&#x2F;li&gt;
+&lt;li&gt;Atlanta (season 1)&lt;&#x2F;li&gt;
+&lt;li&gt;Succession (season 1)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;honorable mentions&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Alphas&lt;&#x2F;li&gt;
+&lt;li&gt;Breaking Bad&lt;&#x2F;li&gt;
+&lt;li&gt;The Americans&lt;&#x2F;li&gt;
+&lt;li&gt;Bodyguard (season 1)&lt;&#x2F;li&gt;
+&lt;li&gt;Mr. Robot&lt;&#x2F;li&gt;
+&lt;li&gt;The Boys (season 1)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Rust 2.0 wishlist</title>
 		<published>2023-03-09T00:00:00+00:00</published>
@@ -155,21 +187,11 @@ externally... it does not feel general enough. (&lt;a href=&quot;https:&#x2F;&#x
 &lt;li&gt;
 &lt;p&gt;Remove per-type methods where trait impls offer same functionality,
 for generality:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; remove
-&lt;&#x2F;span&gt;&lt;span&gt;PathBuf::as_path
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; ... in favor of
-&lt;&#x2F;span&gt;&lt;span&gt;PathBuf::as_ref
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; remove
-&lt;&#x2F;span&gt;&lt;span&gt;Path::to_path_buf
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; ... in favor of
-&lt;&#x2F;span&gt;&lt;span&gt;Path::to_owned
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; remove
-&lt;&#x2F;span&gt;&lt;span&gt;Vec::append
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; ... in favor of
-&lt;&#x2F;span&gt;&lt;span&gt;Vec::extend
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;current&lt;&#x2F;th&gt;&lt;th&gt;wish&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;PathBuf::as_path&lt;&#x2F;td&gt;&lt;td&gt;PathBuf::as_ref&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Path::to_path_buf&lt;&#x2F;td&gt;&lt;td&gt;Path::to_owned&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Vec::append&lt;&#x2F;td&gt;&lt;td&gt;Vec::extend&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;Remove all deprecated APIs, most notable being the &lt;code&gt;try!&lt;&#x2F;code&gt; macro&lt;&#x2F;p&gt;
@@ -1279,37 +1301,6 @@ and as mentioned in the older review,
 the aftermath of the damage is amazing,
 among the best ever,
 much of it set in gorgeous scenery.&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>top tv shows</title>
-		<published>2021-04-07T00:00:00+00:00</published>
-		<updated>2021-04-07T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://tshepang.github.io/top-tv-shows/" type="text/html"/>
-		<id>https://tshepang.github.io/top-tv-shows/</id>
-		<content type="html">&lt;p&gt;The list is roughly in the chronological order of the first time I
-watched them.&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Yizo Yizo (seasons 1 and 2)&lt;&#x2F;li&gt;
-&lt;li&gt;24&lt;&#x2F;li&gt;
-&lt;li&gt;Game of Thrones (seasons 1 to 6)&lt;&#x2F;li&gt;
-&lt;li&gt;Homeland&lt;&#x2F;li&gt;
-&lt;li&gt;Utopia&lt;&#x2F;li&gt;
-&lt;li&gt;Girls (seasons 1 and 2)&lt;&#x2F;li&gt;
-&lt;li&gt;House of Cards (seasons 1 and 2)&lt;&#x2F;li&gt;
-&lt;li&gt;The Knick&lt;&#x2F;li&gt;
-&lt;li&gt;Barry (season 1)&lt;&#x2F;li&gt;
-&lt;li&gt;Atlanta (season 1)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;strong&gt;honorable mentions&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Alphas&lt;&#x2F;li&gt;
-&lt;li&gt;Breaking Bad&lt;&#x2F;li&gt;
-&lt;li&gt;The Americans&lt;&#x2F;li&gt;
-&lt;li&gt;Bodyguard (season 1)&lt;&#x2F;li&gt;
-&lt;li&gt;Mr. Robot&lt;&#x2F;li&gt;
-&lt;li&gt;The Boys (season 1)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
