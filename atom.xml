@@ -185,7 +185,7 @@ for generality:&lt;&#x2F;p&gt;
 &lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;current&lt;&#x2F;th&gt;&lt;th&gt;wish&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
 &lt;tr&gt;&lt;td&gt;foo.unwrap&lt;&#x2F;td&gt;&lt;td&gt;(remove)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;tr&gt;&lt;td&gt;foo.expect(&amp;quot;message&amp;quot;)&lt;&#x2F;td&gt;&lt;td&gt;foo.or_panic(&amp;quot;message&amp;quot;)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td&gt;foo.unwrap_ord&lt;&#x2F;td&gt;&lt;td&gt;foo.or&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;foo.unwrap_or&lt;&#x2F;td&gt;&lt;td&gt;foo.or&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;tr&gt;&lt;td&gt;foo.unwrap_or_default&lt;&#x2F;td&gt;&lt;td&gt;foo.or_default&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;tr&gt;&lt;td&gt;foo.unwrap_or_else&lt;&#x2F;td&gt;&lt;td&gt;foo.or_else&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
