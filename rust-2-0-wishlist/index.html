@@ -58,7 +58,7 @@
     <header>
         <h1 itemprop="headline">Rust 2.0 wishlist</h1>
         <span class="muted">
-    2023-09-12
+    2023-09-15
 </span>
     </header>
     <div itemprop="articleBody">
@@ -67,12 +67,13 @@
 meaning that all code that compiled with Rust v1.0 should compile with all
 future Rust versions, all but for exceptional circumstances.
 The effort is commendable, and results in kool things like <a href="https://doc.rust-lang.org/edition-guide/editions">Editions</a>,
-but mistakes/cruft/poor choices are bound to happen that cannot be fixed with such.
+but mistakes are bound to happen that cannot be fixed with such.
 That is, I wish we will have a breaking release at some point,
 and the pain of such a breaking change could be relieved/eliminated with
 careful planning and migration tooling.</p>
 <p>That said,
-following are my favorite breaking things I want in Rust.</p>
+following are my favorite breaking things I want in Rust
+(and many are much too outrageous to ever be seriously considered).</p>
 <h3 id="lang">lang</h3>
 <ul>
 <li>
@@ -86,9 +87,8 @@ the colon:</p>
 <p>This would be consistent with the rest of the language.</p>
 </li>
 <li>
-<p>Minor one, but saw something like this <a href="https://twitter.com/brundolfsmith/status/1610431400209158144">suggested somewhere</a>...
-would be nice to make the language a little smaller by unifying syntax for
-functions and closures.</p>
+<p>It would be nice to make the language a little smaller by unifying syntax for
+functions and closures (<a href="https://twitter.com/brundolfsmith/status/1610431400209158144">inspiration</a>).</p>
 <p>A closure syntax looks like this:</p>
 <pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
 </span><span>    </span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">square </span><span>= |</span><span style="color:#bf616a;">number</span><span>: </span><span style="color:#b48ead;">i32</span><span>| {
@@ -119,7 +119,7 @@ functions and closures.</p>
 (there is an extra <code>:</code> and there is a <code>=</code>),
 but it also means one less keyword (<code>fn</code>),
 and less syntax to learn for new users.</p>
-<p>As a final note on this one,
+<p>As an additional example,
 this is what a function would look like if it returned nothing:</p>
 <pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let</span><span> show_square: |</span><span style="color:#bf616a;">number</span><span>: </span><span style="color:#b48ead;">i32</span><span>| = {
 </span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, number * number);
@@ -127,6 +127,13 @@ this is what a function would look like if it returned nothing:</p>
 </span><span>
 </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
 </span><span>    </span><span style="color:#96b5b4;">show_square</span><span>(</span><span style="color:#d08770;">4</span><span>);
+</span><span>}
+</span></code></pre>
+<p>As a final note on this one,
+this is what an async function would look like
+(<a href="https://hachyderm.io/@kevinmehall/111065682919309293">inspiration</a>):</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let</span><span> show_square: |</span><span style="color:#bf616a;">number</span><span>: </span><span style="color:#b48ead;">i32</span><span>| -&gt; </span><span style="color:#b48ead;">i32 </span><span>= async {
+</span><span>    ...
 </span><span>}
 </span></code></pre>
 </li>
@@ -236,6 +243,7 @@ for generality:</p>
 <tr><td>foo.unwrap_or_default</td><td>foo.or_default</td></tr>
 <tr><td>foo.unwrap_or_else</td><td>foo.or_else</td></tr>
 </tbody></table>
+<p>It feels somewhat implicit, but maybe not so bad.</p>
 </li>
 </ul>
 <h3 id="cargo">cargo</h3>
