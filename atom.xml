@@ -20,9 +20,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Debian&lt;&#x2F;strong&gt;: my primary OS, also my favorite&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;Android&lt;&#x2F;strong&gt;: for all my mobile needs&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;fish&lt;&#x2F;strong&gt;:
-compared to mighty Bash, it is far more pretty,
-and has a far better command completion system&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;fish&lt;&#x2F;strong&gt;: a superior command completion system, and overall better usability&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zellij-org&#x2F;zellij&quot;&gt;zellij&lt;&#x2F;a&gt;: pleasant terminal multiplexer&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alacritty&#x2F;alacritty&quot;&gt;Alacritty&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;wez&#x2F;wezterm&quot;&gt;wezterm&lt;&#x2F;a&gt; (only on work machine)&lt;&#x2F;li&gt;
@@ -47,6 +45,7 @@ and has a far better command completion system&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;humdi.net&#x2F;vnstat&quot;&gt;vnstat&lt;&#x2F;a&gt;: nifty network usage viewer&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;ping&lt;&#x2F;strong&gt;: checks general reachability&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;mtr&lt;&#x2F;strong&gt;: interactive traceroute tool&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;trippy&lt;&#x2F;strong&gt;: another traceroute tool (only on work machine)&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;miscellaneous-tools&quot;&gt;miscellaneous tools&lt;&#x2F;h3&gt;
 &lt;ul&gt;
@@ -60,6 +59,7 @@ and has a far better command completion system&lt;&#x2F;li&gt;
 a more pleasant, more fancy &lt;code&gt;cat&lt;&#x2F;code&gt;, which also supplants &lt;code&gt;less&lt;&#x2F;code&gt;
 (though it actually makes use of the latter for paging through long text)&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;top&lt;&#x2F;strong&gt;: a powerful and flexible process viewer, part of &lt;a href=&quot;https:&#x2F;&#x2F;gitlab.com&#x2F;procps-ng&#x2F;procps&quot;&gt;procps suite&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;clementtsang&#x2F;bottom&quot;&gt;bottom&lt;&#x2F;a&gt;: an alternative to &lt;code&gt;top&lt;&#x2F;code&gt; (only on work machine)&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;mdBook&quot;&gt;mdBook&lt;&#x2F;a&gt;:
 lightweight documentation system,
 using it for Cargo and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rustc-dev-guide&quot;&gt;rustc-dev-guide&lt;&#x2F;a&gt; documentation
