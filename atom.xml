@@ -831,14 +831,14 @@ to a point where I feel it takes modal editors to more mainstream audiences.&lt;
         
     </entry>
     <entry xml:lang="en">
-        <title>favorite Rust libs (crates)</title>
+        <title>favorite Rust libs</title>
         <published>2022-12-01T00:00:00+00:00</published>
         <updated>2022-12-01T00:00:00+00:00</updated>
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://tshepang.github.io/favorite-rust-libs-crates/" type="text/html"/>
-        <id>https://tshepang.github.io/favorite-rust-libs-crates/</id>
+        <link rel="alternate" href="https://tshepang.github.io/favorite-rust-libs/" type="text/html"/>
+        <id>https://tshepang.github.io/favorite-rust-libs/</id>
         
         <content type="html">&lt;ul&gt;
 &lt;li&gt;
@@ -857,7 +857,7 @@ especially with its derive API (as is the case with clap).&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;dtolnay&#x2F;anyhow&quot;&gt;anyhow&lt;&#x2F;a&gt;:
-The default Rust error crate in the ecosystem,
+The most popular error crate in the ecosystem,
 it offers very easy error handling,
 and also comes with some nice conveniences,
 like &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;anyhow&#x2F;latest&#x2F;anyhow&#x2F;macro.bail.html&quot;&gt;&lt;code&gt;bail!&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;anyhow&#x2F;latest&#x2F;anyhow&#x2F;macro.ensure.html&quot;&gt;&lt;code&gt;ensure!&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;, and &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;anyhow&#x2F;latest&#x2F;anyhow&#x2F;trait.Context.html&quot;&gt;&lt;code&gt;Context&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
