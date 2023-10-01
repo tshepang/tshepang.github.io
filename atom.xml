@@ -1805,61 +1805,6 @@ Your Dragon 2&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
         
     </entry>
     <entry xml:lang="en">
-        <title>rustc compile times</title>
-        <published>2020-05-29T00:00:00+00:00</published>
-        <updated>2020-05-29T00:00:00+00:00</updated>
-        <author>
-          <name>Unknown</name>
-        </author>
-        <link rel="alternate" href="https://tshepang.github.io/rustc-compile-times/" type="text/html"/>
-        <id>https://tshepang.github.io/rustc-compile-times/</id>
-        
-        <content type="html">&lt;p&gt;Running &lt;code&gt;.&#x2F;x.py build --stage 1&lt;&#x2F;code&gt; on a codebase that already has LLVM
-built results in the following as the last line:&lt;&#x2F;p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Build completed successfully in 0:47:06&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;The tools themselves, which get built last, take about 10m to build,
-and are part of the above total:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;cargo&lt;&#x2F;li&gt;
-&lt;li&gt;clippy&lt;&#x2F;li&gt;
-&lt;li&gt;rustfmt&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;Following is my &lt;em&gt;config.toml&lt;&#x2F;em&gt;:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span&gt;[build]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;compiler-docs &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;extended &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;tools &lt;&#x2F;span&gt;&lt;span&gt;= [ &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;clippy&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;rustfmt&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; ]
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;[rust]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;incremental &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;parallel-compiler &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Following is the commit I built:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;❯ git show
-&lt;&#x2F;span&gt;&lt;span&gt;commit 96dd4690c3aa70ec312448c3f2d50e6dc6fb87df (HEAD -&amp;gt; master, origin&#x2F;master, origin&#x2F;HEAD)
-&lt;&#x2F;span&gt;&lt;span&gt;Merge: 77f95a89a10 3f3e0ee4b04
-&lt;&#x2F;span&gt;&lt;span&gt;Author: bors &amp;lt;bors@rust-lang.org&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;Date:   Fri May 29 11:16:45 2020 +0000
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;    Auto merge of #72671 - flip1995:clippyup, r=Xanewok
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;    Update Clippy, RLS, and rustfmt
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;    r? @Dylan-DPC
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;    This makes Clippy test-pass again: 3089c3b
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;    Otherwise this includes bugfixes and a few new lints.
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;    Fixes #72231
-&lt;&#x2F;span&gt;&lt;span&gt;    Fixes #72232
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
         <title>2010 movie review</title>
         <published>2020-05-12T00:00:00+00:00</published>
         <updated>2020-05-12T00:00:00+00:00</updated>
