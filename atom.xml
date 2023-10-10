@@ -4,8 +4,101 @@
     <link href="https://tshepang.github.io/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://tshepang.github.io"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-10-01T00:00:00+00:00</updated>
+    <updated>2023-10-10T00:00:00+00:00</updated>
     <id>https://tshepang.github.io/atom.xml</id>
+    <entry xml:lang="en">
+        <title>about me</title>
+        <published>2023-10-10T00:00:00+00:00</published>
+        <updated>2023-10-10T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tshepang.github.io/about-me/" type="text/html"/>
+        <id>https://tshepang.github.io/about-me/</id>
+        
+        <content type="html">&lt;p&gt;I am Tshepang Mbambo (&lt;a href=&quot;mailto:tshepang@gmail.com&quot;&gt;tshepang@gmail.com&lt;&#x2F;a&gt;),
+and I do software development &lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&quot;&gt;for a living&lt;&#x2F;a&gt; and as a hobby.
+My favorite language (and ecosystem) is &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.org&quot;&gt;Rust&lt;&#x2F;a&gt;,
+and my OS of choice is &lt;a href=&quot;https:&#x2F;&#x2F;debian.org&quot;&gt;Debian&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Among my profiles on the web:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;hachyderm.io&#x2F;@tshepang&quot;&gt;Hachyderm&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev&quot;&gt;Twitter&lt;&#x2F;a&gt; (social)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tshepang&quot;&gt;GitHub&lt;&#x2F;a&gt; (software)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.zulipchat.com&quot;&gt;Rust Zulip&lt;&#x2F;a&gt; (chat)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackexchange.com&#x2F;users&#x2F;125744&quot;&gt;Stack Exchange&lt;&#x2F;a&gt; (help)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The sources for this blog can be found &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tshepang&#x2F;blog&quot;&gt;on GitHub&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>FLOSS I use a-lot</title>
+        <published>2023-10-10T00:00:00+00:00</published>
+        <updated>2023-10-10T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tshepang.github.io/floss-i-use-a-lot/" type="text/html"/>
+        <id>https://tshepang.github.io/floss-i-use-a-lot/</id>
+        
+        <content type="html">&lt;h3 id=&quot;environment&quot;&gt;environment&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Debian&lt;&#x2F;strong&gt;: my primary OS, also my favorite&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Android&lt;&#x2F;strong&gt;: for all my mobile needs&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;fish&lt;&#x2F;strong&gt;: a superior command completion system, and overall better usability&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zellij-org&#x2F;zellij&quot;&gt;zellij&lt;&#x2F;a&gt;: pleasant terminal multiplexer&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alacritty&#x2F;alacritty&quot;&gt;Alacritty&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;wez&#x2F;wezterm&quot;&gt;wezterm&lt;&#x2F;a&gt; (only on work machine)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;info-comms&quot;&gt;info&#x2F;comms&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;zulip.com&quot;&gt;Zulip&lt;&#x2F;a&gt;, which is (luckily!) used both at work and in the Rust project&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;joinmastodon.org&quot;&gt;Mastodon&lt;&#x2F;a&gt;, to get informed, interact, and share&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;software-development&quot;&gt;software development&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;enjoying-helix&#x2F;&quot;&gt;Helix&lt;&#x2F;a&gt;: acts as a decent IDE, and is a fantastic text editor&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Git&lt;&#x2F;strong&gt;: hard to avoid&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Cargo&lt;&#x2F;strong&gt;: central tool for Rust development&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;gui-applications&quot;&gt;GUI applications&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Firefox&lt;&#x2F;strong&gt; (on Debian and on Android)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;antennapod.org&quot;&gt;AntennaPod&lt;&#x2F;a&gt;: for listening to podcasts (on Android)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.transmissionbt.com&quot;&gt;Transmission&lt;&#x2F;a&gt;: the only torrent client I ever used&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;VLC&lt;&#x2F;strong&gt;: user interface could be a lot better&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;linuxmint&#x2F;nemo&quot;&gt;Nemo&lt;&#x2F;a&gt;: a fork of Nautilus&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;nm-applet&lt;&#x2F;strong&gt;: part of NetworkManager&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;network-diagnosis&quot;&gt;network diagnosis&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;humdi.net&#x2F;vnstat&quot;&gt;vnstat&lt;&#x2F;a&gt;: nifty network usage viewer&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;ping&lt;&#x2F;strong&gt;: checks general reachability&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;mtr&lt;&#x2F;strong&gt;: interactive traceroute tool&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;fujiapple852&#x2F;trippy&quot;&gt;trippy&lt;&#x2F;a&gt;: another traceroute tool (only on work machine)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;miscellaneous-tools&quot;&gt;miscellaneous tools&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;apt&lt;&#x2F;strong&gt;: Debian package management&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;head&lt;&#x2F;strong&gt; and &lt;strong&gt;tail&lt;&#x2F;strong&gt;: included in GNU coreutils suite of tools&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;OpenSSH&lt;&#x2F;strong&gt;: duh!&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;project-of-note-sudo&#x2F;&quot;&gt;Sudo&lt;&#x2F;a&gt;: another duh!&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;blog.burntsushi.net&#x2F;ripgrep&quot;&gt;ripgrep&lt;&#x2F;a&gt;: a more pleasant &lt;code&gt;grep&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;the.exa.website&quot;&gt;exa&lt;&#x2F;a&gt;: a more pleasant, more pretty &lt;code&gt;ls&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;bat&quot;&gt;bat&lt;&#x2F;a&gt;:
+a more pleasant, more fancy &lt;code&gt;cat&lt;&#x2F;code&gt;, which also supplants &lt;code&gt;less&lt;&#x2F;code&gt;
+(though it actually makes use of the latter for paging through long text)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;top&lt;&#x2F;strong&gt;: a powerful and flexible process viewer, part of &lt;a href=&quot;https:&#x2F;&#x2F;gitlab.com&#x2F;procps-ng&#x2F;procps&quot;&gt;procps suite&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;clementtsang&#x2F;bottom&quot;&gt;bottom&lt;&#x2F;a&gt;: an alternative to &lt;code&gt;top&lt;&#x2F;code&gt; (only on work machine)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;mdBook&quot;&gt;mdBook&lt;&#x2F;a&gt;:
+lightweight documentation system,
+using it for Cargo and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rustc-dev-guide&quot;&gt;rustc-dev-guide&lt;&#x2F;a&gt; documentation
+(and always served with &lt;code&gt;mdbook serve&lt;&#x2F;code&gt;).&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&quot;&gt;zola&lt;&#x2F;a&gt;: for this blog, also always served (with &lt;code&gt;zola serve&lt;&#x2F;code&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Rust dreams</title>
         <published>2023-10-01T00:00:00+00:00</published>
@@ -123,69 +216,6 @@ Best of all, &lt;a href=&quot;https:&#x2F;&#x2F;oxide.computer&#x2F;blog&#x2F;co
 is a key player in the Wasm ecosystem,
 as evidenced by employing giants such as &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alexcrichton&quot;&gt;Alex Crichton&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&quot;&gt;Dan Gohman&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>FLOSS I use a-lot</title>
-        <published>2023-09-19T00:00:00+00:00</published>
-        <updated>2023-09-19T00:00:00+00:00</updated>
-        <author>
-          <name>Unknown</name>
-        </author>
-        <link rel="alternate" href="https://tshepang.github.io/floss-i-use-a-lot/" type="text/html"/>
-        <id>https://tshepang.github.io/floss-i-use-a-lot/</id>
-        
-        <content type="html">&lt;h3 id=&quot;environment&quot;&gt;environment&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Debian&lt;&#x2F;strong&gt;: my primary OS, also my favorite&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Android&lt;&#x2F;strong&gt;: for all my mobile needs&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;fish&lt;&#x2F;strong&gt;: a superior command completion system, and overall better usability&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zellij-org&#x2F;zellij&quot;&gt;zellij&lt;&#x2F;a&gt;: pleasant terminal multiplexer&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alacritty&#x2F;alacritty&quot;&gt;Alacritty&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;wez&#x2F;wezterm&quot;&gt;wezterm&lt;&#x2F;a&gt; (only on work machine)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;software-development&quot;&gt;software development&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;enjoying-helix&#x2F;&quot;&gt;Helix&lt;&#x2F;a&gt;: acts as a decent IDE, and is a fantastic text editor&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Git&lt;&#x2F;strong&gt;: hard to avoid&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Cargo&lt;&#x2F;strong&gt;: central tool for Rust development&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;gui-applications&quot;&gt;GUI applications&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Firefox&lt;&#x2F;strong&gt; (on Debian and on Android)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;antennapod.org&quot;&gt;AntennaPod&lt;&#x2F;a&gt;: for listening to podcasts (on Android)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.transmissionbt.com&quot;&gt;Transmission&lt;&#x2F;a&gt;: the only torrent client I ever used&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;VLC&lt;&#x2F;strong&gt;: user interface could be a lot better&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;linuxmint&#x2F;nemo&quot;&gt;Nemo&lt;&#x2F;a&gt;: a fork of Nautilus&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;nm-applet&lt;&#x2F;strong&gt;: part of NetworkManager&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;network-diagnosis&quot;&gt;network diagnosis&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;humdi.net&#x2F;vnstat&quot;&gt;vnstat&lt;&#x2F;a&gt;: nifty network usage viewer&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;ping&lt;&#x2F;strong&gt;: checks general reachability&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;mtr&lt;&#x2F;strong&gt;: interactive traceroute tool&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;fujiapple852&#x2F;trippy&quot;&gt;trippy&lt;&#x2F;a&gt;: another traceroute tool (only on work machine)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;miscellaneous-tools&quot;&gt;miscellaneous tools&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;apt&lt;&#x2F;strong&gt;: Debian package management&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;head&lt;&#x2F;strong&gt; and &lt;strong&gt;tail&lt;&#x2F;strong&gt;: included in GNU coreutils suite of tools&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;OpenSSH&lt;&#x2F;strong&gt;: duh!&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;project-of-note-sudo&#x2F;&quot;&gt;Sudo&lt;&#x2F;a&gt;: another duh!&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;blog.burntsushi.net&#x2F;ripgrep&quot;&gt;ripgrep&lt;&#x2F;a&gt;: a more pleasant &lt;code&gt;grep&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;the.exa.website&quot;&gt;exa&lt;&#x2F;a&gt;: a more pleasant, more pretty &lt;code&gt;ls&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;bat&quot;&gt;bat&lt;&#x2F;a&gt;:
-a more pleasant, more fancy &lt;code&gt;cat&lt;&#x2F;code&gt;, which also supplants &lt;code&gt;less&lt;&#x2F;code&gt;
-(though it actually makes use of the latter for paging through long text)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;top&lt;&#x2F;strong&gt;: a powerful and flexible process viewer, part of &lt;a href=&quot;https:&#x2F;&#x2F;gitlab.com&#x2F;procps-ng&#x2F;procps&quot;&gt;procps suite&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;clementtsang&#x2F;bottom&quot;&gt;bottom&lt;&#x2F;a&gt;: an alternative to &lt;code&gt;top&lt;&#x2F;code&gt; (only on work machine)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;mdBook&quot;&gt;mdBook&lt;&#x2F;a&gt;:
-lightweight documentation system,
-using it for Cargo and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rustc-dev-guide&quot;&gt;rustc-dev-guide&lt;&#x2F;a&gt; documentation
-(and always served with &lt;code&gt;mdbook serve&lt;&#x2F;code&gt;).&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&quot;&gt;zola&lt;&#x2F;a&gt;: for this blog, also always served (with &lt;code&gt;zola serve&lt;&#x2F;code&gt;)&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
         
@@ -1202,31 +1232,6 @@ and fault-finding of electro-mechanical airborne surveillance systems&lt;&#x2F;p
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=-PRw8hcyIBI&quot;&gt;exploring the Rust compiler&lt;&#x2F;a&gt; (2020): DevConf ZA&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>about me</title>
-        <published>2022-07-23T00:00:00+00:00</published>
-        <updated>2022-07-23T00:00:00+00:00</updated>
-        <author>
-          <name>Unknown</name>
-        </author>
-        <link rel="alternate" href="https://tshepang.github.io/about-me/" type="text/html"/>
-        <id>https://tshepang.github.io/about-me/</id>
-        
-        <content type="html">&lt;p&gt;I am Tshepang Mbambo (&lt;a href=&quot;mailto:tshepang@gmail.com&quot;&gt;tshepang@gmail.com&lt;&#x2F;a&gt;),
-and I do software development &lt;a href=&quot;https:&#x2F;&#x2F;snode.com&quot;&gt;for a living&lt;&#x2F;a&gt; and as a hobby.
-My favorite language (and ecosystem) is &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.org&quot;&gt;Rust&lt;&#x2F;a&gt;,
-and my OS of choice is &lt;a href=&quot;https:&#x2F;&#x2F;debian.org&quot;&gt;Debian&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;Among my profiles on the web:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;tshepang_dev&quot;&gt;Twitter&lt;&#x2F;a&gt; (social)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tshepang&quot;&gt;GitHub&lt;&#x2F;a&gt; (software)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackexchange.com&#x2F;users&#x2F;125744&quot;&gt;Stack Exchange&lt;&#x2F;a&gt; (help)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.zulipchat.com&quot;&gt;Rust Zulip&lt;&#x2F;a&gt; (chat)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;The sources for this blog can be found &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tshepang&#x2F;blog&quot;&gt;on GitHub&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </content>
         
     </entry>
