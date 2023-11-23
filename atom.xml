@@ -74,6 +74,34 @@ using it to serve a number of books (with &lt;code&gt;mdbook serve&lt;&#x2F;code
         
     </entry>
     <entry xml:lang="en">
+        <title>Rust dreams</title>
+        <published>2023-11-23T00:00:00+00:00</published>
+        <updated>2023-11-23T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tshepang.github.io/rust-dreams/" type="text/html"/>
+        <id>https://tshepang.github.io/rust-dreams/</id>
+        
+        <content type="html">&lt;p&gt;My ideal computing environment, for all device types (from servers to embedded):&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;processors are &lt;a href=&quot;https:&#x2F;&#x2F;riscv.org&#x2F;risc-v-isa&quot;&gt;RISC-V&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;OS is &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;theseus-os&#x2F;Theseus&quot;&gt;Theseus&lt;&#x2F;a&gt;
+(the most exciting project written in Rust at the moment)
+&lt;ul&gt;
+&lt;li&gt;the next best thing is having &lt;a href=&quot;https:&#x2F;&#x2F;www.redox-os.org&quot;&gt;Redox OS&lt;&#x2F;a&gt; reach mainstream usage&lt;&#x2F;li&gt;
+&lt;li&gt;the next best thing after that is having &lt;a href=&quot;https:&#x2F;&#x2F;www.memorysafety.org&#x2F;blog&#x2F;memory-safety-in-linux-kernel&quot;&gt;Rust in Linux kernel&lt;&#x2F;a&gt;,
+which would require the least effort of the options above&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;rustix&quot;&gt;rustix&lt;&#x2F;a&gt; (and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;Mustang&lt;&#x2F;a&gt; &#x2F; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;eyra&quot;&gt;Eyra&lt;&#x2F;a&gt;) are used to help run POSIX apps&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;Cranelift&lt;&#x2F;a&gt; is used to generate machine code, for I want C++ (LLVM) off my tooling&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&quot;&gt;Pijul&lt;&#x2F;a&gt;, for I want a better VCS than Git&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
         <title>2023 review</title>
         <published>2023-11-22T00:00:00+00:00</published>
         <updated>2023-11-22T00:00:00+00:00</updated>
@@ -110,55 +138,6 @@ and my OS of choice is &lt;a href=&quot;https:&#x2F;&#x2F;debian.org&quot;&gt;De
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackexchange.com&#x2F;users&#x2F;125744&quot;&gt;Stack Exchange&lt;&#x2F;a&gt; (help)&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;The sources for this blog can be found &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tshepang&#x2F;blog&quot;&gt;on GitHub&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Rust dreams</title>
-        <published>2023-10-01T00:00:00+00:00</published>
-        <updated>2023-10-01T00:00:00+00:00</updated>
-        <author>
-          <name>Unknown</name>
-        </author>
-        <link rel="alternate" href="https://tshepang.github.io/rust-dreams/" type="text/html"/>
-        <id>https://tshepang.github.io/rust-dreams/</id>
-        
-        <content type="html">&lt;p&gt;My ideal computing environment, for all device types (from servers to embedded):&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;processors are &lt;a href=&quot;https:&#x2F;&#x2F;riscv.org&#x2F;risc-v-isa&quot;&gt;RISC-V&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;OS is &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;theseus-os&#x2F;Theseus&quot;&gt;Theseus&lt;&#x2F;a&gt;
-(excluding some embedded systems where there is only a single application)
-&lt;ul&gt;
-&lt;li&gt;the next best thing is having &lt;a href=&quot;https:&#x2F;&#x2F;www.redox-os.org&quot;&gt;Redox OS&lt;&#x2F;a&gt; reach mainstream usage&lt;&#x2F;li&gt;
-&lt;li&gt;the next best thing after that is having &lt;a href=&quot;https:&#x2F;&#x2F;www.memorysafety.org&#x2F;blog&#x2F;memory-safety-in-linux-kernel&quot;&gt;Rust in Linux kernel&lt;&#x2F;a&gt;,
-which would require the least effort of the options above&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;rustix&quot;&gt;rustix&lt;&#x2F;a&gt; (and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;Mustang&lt;&#x2F;a&gt; &#x2F; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;eyra&quot;&gt;Eyra&lt;&#x2F;a&gt;) are used to help run POSIX apps&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;Cranelift&lt;&#x2F;a&gt; is used to generate machine code&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Rust things I would fund if were able</title>
-        <published>2023-10-01T00:00:00+00:00</published>
-        <updated>2023-10-01T00:00:00+00:00</updated>
-        <author>
-          <name>Unknown</name>
-        </author>
-        <link rel="alternate" href="https://tshepang.github.io/rust-things-i-would-fund-if-were-able/" type="text/html"/>
-        <id>https://tshepang.github.io/rust-things-i-would-fund-if-were-able/</id>
-        
-        <content type="html">&lt;p&gt;My fantasy is having $1m for each of these,
-in order of importance:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&quot;&gt;Pijul&lt;&#x2F;a&gt;, for I want a better VCS than Git&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;Mustang&lt;&#x2F;a&gt; &#x2F; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;eyra&quot;&gt;Eyra&lt;&#x2F;a&gt;, for I want C off my dependencies&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;theseus-os&#x2F;Theseus&quot;&gt;Theseus&lt;&#x2F;a&gt;, for I want C off my kernel
-(and because it&#x27;s the most exciting project written in Rust at the moment)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bjorn3&#x2F;rustc_codegen_cranelift&quot;&gt;rustc_codegen_cranelift&lt;&#x2F;a&gt;, for I want C++ off my tooling&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
 </content>
         
     </entry>
