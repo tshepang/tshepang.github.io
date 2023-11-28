@@ -65,6 +65,18 @@
       <br>
       <p>The following are in progress:</p>
 <ul>
+<li>A driver written in Rust in the official Linux kernel,
+most promising ones being:
+<ul>
+<li><a href="https://lore.kernel.org/rust-for-linux/20231101-rust-binder-v1-0-08ba9197f637@google.com">Binder</a> (for Android IPC)</li>
+<li>Apple GPU driver (<a href="https://blog.antoyo.xyz/rustc_codegen_gcc-progress-report-27">latest update</a>(apple gpu driver update)),
+which seems to be one that has attracted the most attention</li>
+</ul>
+</li>
+<li>Use of Rust in safety-critical systems,
+<a href="https://ferrous-systems.com/ferrocene">Ferrocene</a> being the most likely candidate,
+due to being the first (and only) Rust toolchain <a href="https://ferrous-systems.com/blog/officially-qualified-ferrocene">qualified for the domain</a></li>
+<li>Wide use of <a href="https://github.com/typst/typst">typst</a>, a more pleasant alternative to latex</li>
 <li>Make alternative (to <a href="https://github.com/llvm/llvm-project">LLVM</a>) codegen backends available in a Rust stable toolchain:
 <ul>
 <li><a href="https://github.com/bjorn3/rustc_codegen_cranelift">rustc_codegen_cranelift</a>,
@@ -77,13 +89,11 @@ allowing Rust to run in more hardware platforms (<a href="https://blog.antoyo.xy
 </li>
 <li>Usage in production versions of Chromium,
 though this would only be <a href="https://security.googleblog.com/2023/01/supporting-use-of-rust-in-chromium.html">for external dependencies</a></li>
-<li>Having Rust be certified for use in safety-critical systems,
-most visible example being <a href="https://ferrous-systems.com/ferrocene">Ferrocene</a> (<a href="https://ferrous-systems.com/blog/the-ferrocene-language-specification-is-here">latest update</a>)</li>
 <li><a href="https://github.com/hyperium/hyper">hyper</a> being used as default HTTP backend of cURL (<a href="https://github.com/orgs/hyperium/projects/2/views/1">Hyper progress
 tracker</a> and <a href="https://github.com/curl/curl/wiki/Hyper">cURL progress tracker</a>),
 because the latter has billions of installations</li>
 <li>Removing libc dependency for Linux-based systems (<a href="https://github.com/sunfishcode/mustang">mustang</a> and <a href="https://github.com/bytecodealliance/rsix">rustix</a>)</li>
-<li>Wide use of <a href="https://pijul.org">Pijul</a>, a superior alternative to Git
+<li>Wide use of <a href="https://pijul.org">Pijul</a>, for I want a better VCS than Git
 (<a href="https://pijul.org/posts/2022-01-08-beta">latest update</a>)</li>
 </ul>
 
