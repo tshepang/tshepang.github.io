@@ -4,8 +4,45 @@
     <link href="https://tshepang.github.io/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://tshepang.github.io"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-11-29T00:00:00+00:00</updated>
+    <updated>2023-12-09T00:00:00+00:00</updated>
     <id>https://tshepang.github.io/atom.xml</id>
+    <entry xml:lang="en">
+        <title>2013 review</title>
+        <published>2023-12-09T00:00:00+00:00</published>
+        <updated>2023-12-09T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tshepang.github.io/2013-review/" type="text/html"/>
+        <id>https://tshepang.github.io/2013-review/</id>
+        
+        <content type="html">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;her&#x2F;&quot;&gt;Her&lt;&#x2F;a&gt; boasts best &lt;strong&gt;editing&lt;&#x2F;strong&gt;, best &lt;strong&gt;cinematography&lt;&#x2F;strong&gt;, and most
+&lt;strong&gt;exciting story concept&lt;&#x2F;strong&gt;.
+&lt;em&gt;Elysium&lt;&#x2F;em&gt; has the best &lt;strong&gt;visual design&lt;&#x2F;strong&gt;:
+see the vehicles (especially the gorgeous one carrying the billionaire),
+the robot police, and the ring world.
+The most &lt;strong&gt;desirable character&lt;&#x2F;strong&gt; is that of &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Rachelle_Lefevre&quot;&gt;Rachelle Lefevre&lt;&#x2F;a&gt; in &lt;em&gt;White House Down&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The most &lt;strong&gt;surprising movie&lt;&#x2F;strong&gt; is &lt;em&gt;No Man&#x27;s Land&lt;&#x2F;em&gt;,
+because it is the only China movie I watched that is either a dark comedy or a Western.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>2023 review</title>
+        <published>2023-12-09T00:00:00+00:00</published>
+        <updated>2023-12-09T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tshepang.github.io/2023-review/" type="text/html"/>
+        <id>https://tshepang.github.io/2023-review/</id>
+        
+        <content type="html">&lt;p&gt;My &lt;strong&gt;favorite character&lt;&#x2F;strong&gt; is Nimona in &lt;em&gt;Nimona&lt;&#x2F;em&gt;...
+fun, powerful, desirable.&lt;&#x2F;p&gt;
+&lt;p&gt;The best &lt;strong&gt;comedy performance&lt;&#x2F;strong&gt; is by &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Huang_Bo&quot;&gt;Huang Bo&lt;&#x2F;a&gt; in &lt;em&gt;Creation of the Gods I&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Rust dreams</title>
         <published>2023-11-29T00:00:00+00:00</published>
@@ -43,8 +80,7 @@ which would require the least effort of the options above&lt;&#x2F;li&gt;
         <link rel="alternate" href="https://tshepang.github.io/rust-things-i-most-anticipate/" type="text/html"/>
         <id>https://tshepang.github.io/rust-things-i-most-anticipate/</id>
         
-        <content type="html">&lt;p&gt;The following are in progress:&lt;&#x2F;p&gt;
-&lt;ul&gt;
+        <content type="html">&lt;ul&gt;
 &lt;li&gt;A driver written in Rust in the official Linux kernel,
 most promising ones being:
 &lt;ul&gt;
@@ -143,21 +179,6 @@ lightweight documentation system,
 using it to serve a number of books (with &lt;code&gt;mdbook serve&lt;&#x2F;code&gt;)&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&quot;&gt;zola&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: for this blog, and served with &lt;code&gt;zola serve&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>2023 review</title>
-        <published>2023-11-22T00:00:00+00:00</published>
-        <updated>2023-11-22T00:00:00+00:00</updated>
-        <author>
-          <name>Unknown</name>
-        </author>
-        <link rel="alternate" href="https://tshepang.github.io/2023-review/" type="text/html"/>
-        <id>https://tshepang.github.io/2023-review/</id>
-        
-        <content type="html">&lt;p&gt;My &lt;strong&gt;favorite character&lt;&#x2F;strong&gt; is Nimona in &lt;em&gt;Nimona&lt;&#x2F;em&gt;...
-fun, powerful, desirable.&lt;&#x2F;p&gt;
 </content>
         
     </entry>
@@ -945,25 +966,6 @@ and also comes with some nice conveniences,
 like &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;anyhow&#x2F;latest&#x2F;anyhow&#x2F;macro.bail.html&quot;&gt;&lt;code&gt;bail!&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;anyhow&#x2F;latest&#x2F;anyhow&#x2F;macro.ensure.html&quot;&gt;&lt;code&gt;ensure!&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;, and &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;anyhow&#x2F;latest&#x2F;anyhow&#x2F;trait.Context.html&quot;&gt;&lt;code&gt;Context&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>2013 review</title>
-        <published>2022-11-28T00:00:00+00:00</published>
-        <updated>2022-11-28T00:00:00+00:00</updated>
-        <author>
-          <name>Unknown</name>
-        </author>
-        <link rel="alternate" href="https://tshepang.github.io/2013-review/" type="text/html"/>
-        <id>https://tshepang.github.io/2013-review/</id>
-        
-        <content type="html">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;her&#x2F;&quot;&gt;Her&lt;&#x2F;a&gt; boasts best &lt;strong&gt;editing&lt;&#x2F;strong&gt;, best &lt;strong&gt;cinematography&lt;&#x2F;strong&gt;, and most
-&lt;strong&gt;exciting story concept&lt;&#x2F;strong&gt;.
-&lt;em&gt;Elysium&lt;&#x2F;em&gt; has the best &lt;strong&gt;visual design&lt;&#x2F;strong&gt;:
-see the vehicles (especially the gorgeous one carrying the billionaire),
-the robot police, and the ring world.
-The most &lt;strong&gt;desirable character&lt;&#x2F;strong&gt; is that of &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Rachelle_Lefevre&quot;&gt;Rachelle Lefevre&lt;&#x2F;a&gt; in &lt;em&gt;White House Down&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
 </content>
         
     </entry>
