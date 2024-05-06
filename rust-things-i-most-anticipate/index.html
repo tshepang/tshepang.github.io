@@ -58,12 +58,22 @@
     <header>
         <h1 itemprop="headline">Rust things I most anticipate</h1>
         <span class="muted">
-    2023-11-28
+    2024-05-06
 </span>
     </header>
     <div itemprop="articleBody">
       <br>
       <ul>
+<li>Make alternative (to <a href="https://github.com/llvm/llvm-project">LLVM</a>) codegen backends available in a Rust stable toolchain:
+<ul>
+<li><a href="https://github.com/bjorn3/rustc_codegen_cranelift">rustc_codegen_cranelift</a>,
+which uses <a href="https://github.com/bytecodealliance/wasmtime/tree/main/cranelift">cranelift</a> for codegen,
+is already available via <code>rustup</code> on nightly toolchains,
+and the immediate benefit is fast debug compiles (<a href="https://bjorn3.github.io/2024/04/06/progress-report-april-2024.html">latest update</a>)</li>
+<li><a href="https://github.com/rust-lang/rustc_codegen_gcc">rustc_codegen_gcc</a>,
+allowing Rust to run in more hardware platforms (<a href="https://blog.antoyo.xyz/rustc_codegen_gcc-progress-report-32">latest update</a>)</li>
+</ul>
+</li>
 <li>A driver written in Rust in the official Linux kernel,
 most promising ones being:
 <ul>
@@ -76,16 +86,6 @@ which seems to be one that has attracted the most attention</li>
 <a href="https://ferrous-systems.com/ferrocene">Ferrocene</a> being the most likely candidate,
 due to being the first (and only) Rust toolchain <a href="https://ferrous-systems.com/blog/officially-qualified-ferrocene">qualified for the domain</a></li>
 <li>Wide use of <a href="https://github.com/typst/typst">Typst</a>, a more pleasant alternative to LaTeX</li>
-<li>Make alternative (to <a href="https://github.com/llvm/llvm-project">LLVM</a>) codegen backends available in a Rust stable toolchain:
-<ul>
-<li><a href="https://github.com/bjorn3/rustc_codegen_cranelift">rustc_codegen_cranelift</a>,
-which uses <a href="https://github.com/bytecodealliance/wasmtime/tree/main/cranelift">cranelift</a> for codegen,
-is already available via <code>rustup</code> on nightly toolchains,
-and the immediate benefit is fast debug compiles (<a href="https://bjorn3.github.io/2023/10/31/progress-report-oct-2023.html">latest update</a>)</li>
-<li><a href="https://github.com/rust-lang/rustc_codegen_gcc">rustc_codegen_gcc</a>,
-allowing Rust to run in more hardware platforms (<a href="https://blog.antoyo.xyz/rustc_codegen_gcc-progress-report-27">latest update</a>)</li>
-</ul>
-</li>
 <li>Usage in production versions of Chromium,
 though this would only be <a href="https://security.googleblog.com/2023/01/supporting-use-of-rust-in-chromium.html">for external dependencies</a></li>
 <li><a href="https://github.com/hyperium/hyper">hyper</a> being used as default HTTP backend of cURL (<a href="https://github.com/orgs/hyperium/projects/2/views/1">Hyper progress

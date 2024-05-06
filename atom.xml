@@ -7,6 +7,51 @@
     <updated>2024-05-06T00:00:00+00:00</updated>
     <id>https://tshepang.github.io/atom.xml</id>
     <entry xml:lang="en">
+        <title>Rust things I most anticipate</title>
+        <published>2024-05-06T00:00:00+00:00</published>
+        <updated>2024-05-06T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tshepang.github.io/rust-things-i-most-anticipate/" type="text/html"/>
+        <id>https://tshepang.github.io/rust-things-i-most-anticipate/</id>
+        
+        <content type="html">&lt;ul&gt;
+&lt;li&gt;Make alternative (to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;llvm&#x2F;llvm-project&quot;&gt;LLVM&lt;&#x2F;a&gt;) codegen backends available in a Rust stable toolchain:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bjorn3&#x2F;rustc_codegen_cranelift&quot;&gt;rustc_codegen_cranelift&lt;&#x2F;a&gt;,
+which uses &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;cranelift&lt;&#x2F;a&gt; for codegen,
+is already available via &lt;code&gt;rustup&lt;&#x2F;code&gt; on nightly toolchains,
+and the immediate benefit is fast debug compiles (&lt;a href=&quot;https:&#x2F;&#x2F;bjorn3.github.io&#x2F;2024&#x2F;04&#x2F;06&#x2F;progress-report-april-2024.html&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rustc_codegen_gcc&quot;&gt;rustc_codegen_gcc&lt;&#x2F;a&gt;,
+allowing Rust to run in more hardware platforms (&lt;a href=&quot;https:&#x2F;&#x2F;blog.antoyo.xyz&#x2F;rustc_codegen_gcc-progress-report-32&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;A driver written in Rust in the official Linux kernel,
+most promising ones being:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lore.kernel.org&#x2F;rust-for-linux&#x2F;20231101-rust-binder-v1-0-08ba9197f637@google.com&quot;&gt;Binder&lt;&#x2F;a&gt; (for Android IPC)&lt;&#x2F;li&gt;
+&lt;li&gt;Apple GPU driver (&lt;a href=&quot;https:&#x2F;&#x2F;asahilinux.org&#x2F;2023&#x2F;03&#x2F;road-to-vulkan&quot;&gt;latest update&lt;&#x2F;a&gt;),
+which seems to be one that has attracted the most attention&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Use of Rust in safety-critical systems,
+&lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;ferrocene&quot;&gt;Ferrocene&lt;&#x2F;a&gt; being the most likely candidate,
+due to being the first (and only) Rust toolchain &lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;blog&#x2F;officially-qualified-ferrocene&quot;&gt;qualified for the domain&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;typst&#x2F;typst&quot;&gt;Typst&lt;&#x2F;a&gt;, a more pleasant alternative to LaTeX&lt;&#x2F;li&gt;
+&lt;li&gt;Usage in production versions of Chromium,
+though this would only be &lt;a href=&quot;https:&#x2F;&#x2F;security.googleblog.com&#x2F;2023&#x2F;01&#x2F;supporting-use-of-rust-in-chromium.html&quot;&gt;for external dependencies&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&quot;&gt;hyper&lt;&#x2F;a&gt; being used as default HTTP backend of cURL (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;orgs&#x2F;hyperium&#x2F;projects&#x2F;2&#x2F;views&#x2F;1&quot;&gt;Hyper progress
+tracker&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;curl&#x2F;curl&#x2F;wiki&#x2F;Hyper&quot;&gt;cURL progress tracker&lt;&#x2F;a&gt;),
+because the latter has billions of installations&lt;&#x2F;li&gt;
+&lt;li&gt;Removing libc dependency for Linux-based systems (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;mustang&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;rsix&quot;&gt;rustix&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&quot;&gt;Pijul&lt;&#x2F;a&gt;, for I want a better VCS than Git
+(&lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&#x2F;posts&#x2F;2022-01-08-beta&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
         <title>top tv shows</title>
         <published>2024-05-06T00:00:00+00:00</published>
         <updated>2024-05-06T00:00:00+00:00</updated>
@@ -301,51 +346,6 @@ which would require the least effort of the options above&lt;&#x2F;li&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;rustix&quot;&gt;rustix&lt;&#x2F;a&gt; (and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;Mustang&lt;&#x2F;a&gt; &#x2F; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;eyra&quot;&gt;Eyra&lt;&#x2F;a&gt;) are used to help run POSIX apps&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;Cranelift&lt;&#x2F;a&gt; is used to generate machine code, for I want C++ (LLVM) off my tooling&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Rust things I most anticipate</title>
-        <published>2023-11-28T00:00:00+00:00</published>
-        <updated>2023-11-28T00:00:00+00:00</updated>
-        <author>
-          <name>Unknown</name>
-        </author>
-        <link rel="alternate" href="https://tshepang.github.io/rust-things-i-most-anticipate/" type="text/html"/>
-        <id>https://tshepang.github.io/rust-things-i-most-anticipate/</id>
-        
-        <content type="html">&lt;ul&gt;
-&lt;li&gt;A driver written in Rust in the official Linux kernel,
-most promising ones being:
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lore.kernel.org&#x2F;rust-for-linux&#x2F;20231101-rust-binder-v1-0-08ba9197f637@google.com&quot;&gt;Binder&lt;&#x2F;a&gt; (for Android IPC)&lt;&#x2F;li&gt;
-&lt;li&gt;Apple GPU driver (&lt;a href=&quot;https:&#x2F;&#x2F;asahilinux.org&#x2F;2023&#x2F;03&#x2F;road-to-vulkan&quot;&gt;latest update&lt;&#x2F;a&gt;),
-which seems to be one that has attracted the most attention&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;Use of Rust in safety-critical systems,
-&lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;ferrocene&quot;&gt;Ferrocene&lt;&#x2F;a&gt; being the most likely candidate,
-due to being the first (and only) Rust toolchain &lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;blog&#x2F;officially-qualified-ferrocene&quot;&gt;qualified for the domain&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;typst&#x2F;typst&quot;&gt;Typst&lt;&#x2F;a&gt;, a more pleasant alternative to LaTeX&lt;&#x2F;li&gt;
-&lt;li&gt;Make alternative (to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;llvm&#x2F;llvm-project&quot;&gt;LLVM&lt;&#x2F;a&gt;) codegen backends available in a Rust stable toolchain:
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bjorn3&#x2F;rustc_codegen_cranelift&quot;&gt;rustc_codegen_cranelift&lt;&#x2F;a&gt;,
-which uses &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;cranelift&lt;&#x2F;a&gt; for codegen,
-is already available via &lt;code&gt;rustup&lt;&#x2F;code&gt; on nightly toolchains,
-and the immediate benefit is fast debug compiles (&lt;a href=&quot;https:&#x2F;&#x2F;bjorn3.github.io&#x2F;2023&#x2F;10&#x2F;31&#x2F;progress-report-oct-2023.html&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rustc_codegen_gcc&quot;&gt;rustc_codegen_gcc&lt;&#x2F;a&gt;,
-allowing Rust to run in more hardware platforms (&lt;a href=&quot;https:&#x2F;&#x2F;blog.antoyo.xyz&#x2F;rustc_codegen_gcc-progress-report-27&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;Usage in production versions of Chromium,
-though this would only be &lt;a href=&quot;https:&#x2F;&#x2F;security.googleblog.com&#x2F;2023&#x2F;01&#x2F;supporting-use-of-rust-in-chromium.html&quot;&gt;for external dependencies&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&quot;&gt;hyper&lt;&#x2F;a&gt; being used as default HTTP backend of cURL (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;orgs&#x2F;hyperium&#x2F;projects&#x2F;2&#x2F;views&#x2F;1&quot;&gt;Hyper progress
-tracker&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;curl&#x2F;curl&#x2F;wiki&#x2F;Hyper&quot;&gt;cURL progress tracker&lt;&#x2F;a&gt;),
-because the latter has billions of installations&lt;&#x2F;li&gt;
-&lt;li&gt;Removing libc dependency for Linux-based systems (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;mustang&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;rsix&quot;&gt;rustix&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&quot;&gt;Pijul&lt;&#x2F;a&gt;, for I want a better VCS than Git
-(&lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&#x2F;posts&#x2F;2022-01-08-beta&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
         
