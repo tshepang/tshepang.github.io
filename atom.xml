@@ -327,7 +327,7 @@ which seems to be one that has attracted the most attention&lt;&#x2F;li&gt;
 &lt;li&gt;Use of Rust in safety-critical systems,
 &lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;ferrocene&quot;&gt;Ferrocene&lt;&#x2F;a&gt; being the most likely candidate,
 due to being the first (and only) Rust toolchain &lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;blog&#x2F;officially-qualified-ferrocene&quot;&gt;qualified for the domain&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;typst&#x2F;typst&quot;&gt;typst&lt;&#x2F;a&gt;, a more pleasant alternative to LaTeX&lt;&#x2F;li&gt;
+&lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;typst&#x2F;typst&quot;&gt;Typst&lt;&#x2F;a&gt;, a more pleasant alternative to LaTeX&lt;&#x2F;li&gt;
 &lt;li&gt;Make alternative (to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;llvm&#x2F;llvm-project&quot;&gt;LLVM&lt;&#x2F;a&gt;) codegen backends available in a Rust stable toolchain:
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bjorn3&#x2F;rustc_codegen_cranelift&quot;&gt;rustc_codegen_cranelift&lt;&#x2F;a&gt;,
