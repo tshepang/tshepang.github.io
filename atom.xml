@@ -4,8 +4,48 @@
     <link href="https://tshepang.github.io/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://tshepang.github.io"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2024-06-15T00:00:00+00:00</updated>
+    <updated>2024-06-17T00:00:00+00:00</updated>
     <id>https://tshepang.github.io/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Rust search tools to watch</title>
+        <published>2024-06-17T00:00:00+00:00</published>
+        <updated>2024-06-17T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://tshepang.github.io/rust-search-tools-to-watch/" type="text/html"/>
+        <id>https://tshepang.github.io/rust-search-tools-to-watch/</id>
+        
+        <content type="html">&lt;p&gt;These are all maintained well:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quickwit-oss&#x2F;quickwit&quot;&gt;Quickwit&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;quot;search engine for log management&amp;quot;&lt;&#x2F;li&gt;
+&lt;li&gt;built on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quickwit-oss&#x2F;tantivy&quot;&gt;Tantivy&lt;&#x2F;a&gt;, an equivalent of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;apache&#x2F;lucene&quot;&gt;Lucene&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;search API compatible with that of Elasticsearch&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;meilisearch&#x2F;meilisearch&quot;&gt;Meilisearch&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;uses LMDB as backing store&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;a5huynh&#x2F;spyglass&quot;&gt;Spyglass&lt;&#x2F;a&gt;: search engine that crawls websites and stores them locally&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;valeriansaliou&#x2F;sonic&quot;&gt;Sonic&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;quot;a schema-less search backend&amp;quot;&lt;&#x2F;li&gt;
+&lt;li&gt;uses &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;facebook&#x2F;rocksdb&quot;&gt;RocksDB&lt;&#x2F;a&gt; as backing store&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>2023 review</title>
         <published>2024-06-15T00:00:00+00:00</published>
@@ -1105,53 +1145,6 @@ a sequel that also happens to be better than the (delightful) original.&lt;&#x2F
 and its &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Iko_Uwais&quot;&gt;Iko Uwais&lt;&#x2F;a&gt; gives the year&#x27;s &lt;strong&gt;favorite performance&lt;&#x2F;strong&gt;.
 The movie also has the best &lt;strong&gt;action direction&lt;&#x2F;strong&gt;.
 Runner-up for &lt;strong&gt;favorite performance&lt;&#x2F;strong&gt; is by &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Jesse_Plemons&quot;&gt;Jesse Plemons&lt;&#x2F;a&gt; in &lt;em&gt;Game Night&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Rust search tools to watch</title>
-        <published>2022-08-11T00:00:00+00:00</published>
-        <updated>2022-08-11T00:00:00+00:00</updated>
-        <author>
-          <name>Unknown</name>
-        </author>
-        <link rel="alternate" href="https://tshepang.github.io/rust-search-tools-to-watch/" type="text/html"/>
-        <id>https://tshepang.github.io/rust-search-tools-to-watch/</id>
-        
-        <content type="html">&lt;p&gt;These are all maintained well:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quickwit-oss&#x2F;quickwit&quot;&gt;Quickwit&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&amp;quot;search engine for log management&amp;quot;&lt;&#x2F;li&gt;
-&lt;li&gt;built on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quickwit-oss&#x2F;tantivy&quot;&gt;Tantivy&lt;&#x2F;a&gt;, an equivalent of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;apache&#x2F;lucene&quot;&gt;Lucene&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;search API compatible with that of Elasticsearch&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;meilisearch&#x2F;meilisearch&quot;&gt;Meilisearch&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;uses LMDB as backing store&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;khonsulabs&#x2F;bonsaidb&quot;&gt;BonsaiDb&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&amp;quot;document store&amp;quot;&lt;&#x2F;li&gt;
-&lt;li&gt;used &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;khonsulabs&#x2F;nebari&quot;&gt;Nebari&lt;&#x2F;a&gt; as backing store (&lt;a href=&quot;https:&#x2F;&#x2F;bonsaidb.io&#x2F;blog&#x2F;durable-writes&quot;&gt;update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;a5huynh&#x2F;spyglass&quot;&gt;Spyglass&lt;&#x2F;a&gt;: search engine that crawls websites and stores them locally&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;valeriansaliou&#x2F;sonic&quot;&gt;Sonic&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&amp;quot;a schema-less search backend&amp;quot;&lt;&#x2F;li&gt;
-&lt;li&gt;uses &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;facebook&#x2F;rocksdb&quot;&gt;RocksDB&lt;&#x2F;a&gt; as backing store&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
 </content>
         
     </entry>
