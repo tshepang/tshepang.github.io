@@ -14,8 +14,6 @@
       <title>Tshepang logs</title>
 
       
-        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://tshepang.github.io/atom.xml">
-      
 
       
           <link rel="stylesheet" href="https://tshepang.github.io/site.css">
@@ -58,6 +56,19 @@
     <header>
         <h1 itemprop="headline">Java gripes</h1>
         <span class="muted">
+    <svg class="icon i-clock" viewBox="0 0 32 32"
+         width="16" height="16" fill="none" stroke="currentcolor"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+        <circle cx="16" cy="16" r="14"/>
+        <path d="M16 8 L16 16 20 20"/>
+    </svg>
+    <span>1 minute read</span>
+    <svg class="icon i-edit" viewBox="0 0 32 32"
+         width="16" height="16" fill="none" stroke="currentcolor"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+        <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z"/>
+    </svg>
+
     2011-11-02
 </span>
     </header>
@@ -66,13 +77,13 @@
       <p>Okay, so Java sucks 'a bit', but the following surprised me:</p>
 <ul>
 <li>I struggled to find a way to count the number of elements in an
-array. In a string it's done thus: <code>&quot;four&quot;.length()</code>. Given that, I
+array. In a string it's done thus: <code>"four".length()</code>. Given that, I
 expected that <code>{'f', 'o', 'u', 'r'}.length()</code> would gimme the same
 result. Nah! I found that I had to do
 <code>new char [] {'f', 'o', 'u', 'r'}.length</code>, and yes, without the
 brackets after length. WTF! There might be a good reason for such
 (seeming) inconsistency of course, but I've been spoilt by
-Python's elegant equivalents: <code>len(&quot;four&quot;)</code> and
+Python's elegant equivalents: <code>len("four")</code> and
 <code>len(['f','o', 'u', 'r'])</code> which all give the same result.
 (sidenote: <code>len()</code> is a Python built-in function, which explains why
 there's no dot notation there).</li>

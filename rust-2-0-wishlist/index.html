@@ -14,8 +14,6 @@
       <title>Tshepang logs</title>
 
       
-        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://tshepang.github.io/atom.xml">
-      
 
       
           <link rel="stylesheet" href="https://tshepang.github.io/site.css">
@@ -58,6 +56,19 @@
     <header>
         <h1 itemprop="headline">Rust 2.0 wishlist</h1>
         <span class="muted">
+    <svg class="icon i-clock" viewBox="0 0 32 32"
+         width="16" height="16" fill="none" stroke="currentcolor"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+        <circle cx="16" cy="16" r="14"/>
+        <path d="M16 8 L16 16 20 20"/>
+    </svg>
+    <span>3 minute read</span>
+    <svg class="icon i-edit" viewBox="0 0 32 32"
+         width="16" height="16" fill="none" stroke="currentcolor"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+        <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z"/>
+    </svg>
+
     2023-09-15
 </span>
     </header>
@@ -238,7 +249,7 @@ for generality:</p>
 <p>Renames of panic methods (<a href="https://github.com/rust-lang/rfcs/pull/3218#issuecomment-1010084722">inspiration</a>)</p>
 <table><thead><tr><th>current</th><th>wish</th></tr></thead><tbody>
 <tr><td>foo.unwrap</td><td>(remove)</td></tr>
-<tr><td>foo.expect(&quot;message&quot;)</td><td>foo.or_panic(&quot;message&quot;)</td></tr>
+<tr><td>foo.expect("message")</td><td>foo.or_panic("message")</td></tr>
 <tr><td>foo.unwrap_or</td><td>foo.or</td></tr>
 <tr><td>foo.unwrap_or_default</td><td>foo.or_default</td></tr>
 <tr><td>foo.unwrap_or_else</td><td>foo.or_else</td></tr>

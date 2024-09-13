@@ -14,8 +14,6 @@
       <title>Tshepang logs</title>
 
       
-        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://tshepang.github.io/atom.xml">
-      
 
       
           <link rel="stylesheet" href="https://tshepang.github.io/site.css">
@@ -58,6 +56,19 @@
     <header>
         <h1 itemprop="headline">a bit of benchmarking</h1>
         <span class="muted">
+    <svg class="icon i-clock" viewBox="0 0 32 32"
+         width="16" height="16" fill="none" stroke="currentcolor"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+        <circle cx="16" cy="16" r="14"/>
+        <path d="M16 8 L16 16 20 20"/>
+    </svg>
+    <span>3 minute read</span>
+    <svg class="icon i-edit" viewBox="0 0 32 32"
+         width="16" height="16" fill="none" stroke="currentcolor"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+        <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z"/>
+    </svg>
+
     2013-10-27
 </span>
     </header>
@@ -68,7 +79,7 @@ Each of these have 4 logical processors (and 8GB of RAM), so are sort of
 comparable. I also added the <a href="https://www.digitalocean.com/?refcode=25b4887810cc">DigitalOcean</a> VPS with those specs
 (<a href="https://www.digitalocean.com/pricing">currently $80 per month</a>) because... why not.</p>
 <h2 id="machine-specs">Machine Specs</h2>
-<p>Each machine runs Debian testing (codename &quot;jessie&quot;). Following is the
+<p>Each machine runs Debian testing (codename "jessie"). Following is the
 output of these commands for each machine:</p>
 <pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>uname --all
 </span><span>cat /proc/cpuinfo | sed --quiet &#39;5p&#39;

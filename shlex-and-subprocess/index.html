@@ -14,8 +14,6 @@
       <title>Tshepang logs</title>
 
       
-        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://tshepang.github.io/atom.xml">
-      
 
       
           <link rel="stylesheet" href="https://tshepang.github.io/site.css">
@@ -58,6 +56,19 @@
     <header>
         <h1 itemprop="headline">shlex and subprocess</h1>
         <span class="muted">
+    <svg class="icon i-clock" viewBox="0 0 32 32"
+         width="16" height="16" fill="none" stroke="currentcolor"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+        <circle cx="16" cy="16" r="14"/>
+        <path d="M16 8 L16 16 20 20"/>
+    </svg>
+    <span>1 minute read</span>
+    <svg class="icon i-edit" viewBox="0 0 32 32"
+         width="16" height="16" fill="none" stroke="currentcolor"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+        <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z"/>
+    </svg>
+
     2011-01-25
 </span>
     </header>
@@ -70,7 +81,7 @@ split a command line string, to feed into <a href="http://docs.python.org/librar
 <p>Let's say I want to run the command <code>/bin/cat 'file with spaces'</code> from
 within <code>python</code>. A normal <code>split</code> won't work, because it uses white
 space as a delimiter (by default). To test, I will create a file named
-&quot;<strong>file with spaces</strong>&quot; and add text (<code>content of 'file with spaces'</code>).</p>
+"<strong>file with spaces</strong>" and add text (<code>content of 'file with spaces'</code>).</p>
 <pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">$</span><span> echo &#39;</span><span style="color:#a3be8c;">content of file with spaces</span><span>&#39; &gt; &#39;</span><span style="color:#a3be8c;">file with spaces</span><span>&#39;
 </span></code></pre>
 <p>And here's the code, using the normal split method:</p>
