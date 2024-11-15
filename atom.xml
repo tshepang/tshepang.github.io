@@ -57,6 +57,45 @@
         
     </entry>
     <entry xml:lang="en">
+        <title>Rust search tools to watch</title>
+        <published>2024-11-16T00:00:00+00:00</published>
+        <updated>2024-11-16T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tshepang.github.io/rust-search-tools-to-watch/"/>
+        <id>https://tshepang.github.io/rust-search-tools-to-watch/</id>
+        
+        <content type="html" xml:base="https://tshepang.github.io/rust-search-tools-to-watch/">&lt;p&gt;These are all maintained well:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quickwit-oss&#x2F;quickwit&quot;&gt;Quickwit&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&quot;search engine for observability&quot;&lt;&#x2F;li&gt;
+&lt;li&gt;built on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quickwit-oss&#x2F;tantivy&quot;&gt;Tantivy&lt;&#x2F;a&gt;, an equivalent of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;apache&#x2F;lucene&quot;&gt;Lucene&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;search API compatible with that of Elasticsearch&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;meilisearch&#x2F;meilisearch&quot;&gt;Meilisearch&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;uses LMDB as backing store&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;a5huynh&#x2F;spyglass&quot;&gt;Spyglass&lt;&#x2F;a&gt;: search engine that crawls websites and stores them locally&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
         <title>2017 review</title>
         <published>2024-11-03T00:00:00+00:00</published>
         <updated>2024-11-03T00:00:00+00:00</updated>
@@ -381,52 +420,6 @@ while the most &lt;strong&gt;desirable character&lt;&#x2F;strong&gt; is that of 
 followed by that of &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Rachelle_Lefevre&quot;&gt;Rachelle Lefevre&lt;&#x2F;a&gt; in &lt;em&gt;White House Down&lt;&#x2F;em&gt;,&lt;&#x2F;p&gt;
 &lt;p&gt;The most &lt;strong&gt;surprising movie&lt;&#x2F;strong&gt; is &lt;em&gt;No Man&#x27;s Land&lt;&#x2F;em&gt;,
 because it is the only China movie I watched that is either a dark comedy or a Western.&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Rust search tools to watch</title>
-        <published>2024-06-17T00:00:00+00:00</published>
-        <updated>2024-06-17T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://tshepang.github.io/rust-search-tools-to-watch/"/>
-        <id>https://tshepang.github.io/rust-search-tools-to-watch/</id>
-        
-        <content type="html" xml:base="https://tshepang.github.io/rust-search-tools-to-watch/">&lt;p&gt;These are all maintained well:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quickwit-oss&#x2F;quickwit&quot;&gt;Quickwit&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&quot;search engine for log management&quot;&lt;&#x2F;li&gt;
-&lt;li&gt;built on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quickwit-oss&#x2F;tantivy&quot;&gt;Tantivy&lt;&#x2F;a&gt;, an equivalent of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;apache&#x2F;lucene&quot;&gt;Lucene&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;search API compatible with that of Elasticsearch&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;meilisearch&#x2F;meilisearch&quot;&gt;Meilisearch&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;uses LMDB as backing store&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;a5huynh&#x2F;spyglass&quot;&gt;Spyglass&lt;&#x2F;a&gt;: search engine that crawls websites and stores them locally&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;valeriansaliou&#x2F;sonic&quot;&gt;Sonic&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&quot;a schema-less search backend&quot;&lt;&#x2F;li&gt;
-&lt;li&gt;uses &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;facebook&#x2F;rocksdb&quot;&gt;RocksDB&lt;&#x2F;a&gt; as backing store&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
 </content>
         
     </entry>
