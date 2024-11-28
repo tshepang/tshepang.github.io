@@ -58,6 +58,35 @@ because the latter has billions of installations&lt;&#x2F;li&gt;
         
     </entry>
     <entry xml:lang="en">
+        <title>Rust things I would fund if were able</title>
+        <published>2024-11-28T00:00:00+00:00</published>
+        <updated>2024-11-28T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tshepang.github.io/rust-things-i-would-fund-if-were-able/"/>
+        <id>https://tshepang.github.io/rust-things-i-would-fund-if-were-able/</id>
+        
+        <content type="html" xml:base="https://tshepang.github.io/rust-things-i-would-fund-if-were-able/">&lt;p&gt;My fantasy is having $1m for each of these,
+in order of importance:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;helix-editor&#x2F;helix&quot;&gt;Helix&lt;&#x2F;a&gt;, for it is my primary editor, and has &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;enjoying-helix-part-3&#x2F;&quot;&gt;a lot that can be improved&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&quot;&gt;Pijul&lt;&#x2F;a&gt;, for I want a better VCS than Git&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;Mustang&lt;&#x2F;a&gt; &#x2F; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;eyra&quot;&gt;Eyra&lt;&#x2F;a&gt;, for I want C off my dependencies&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;theseus-os&#x2F;Theseus&quot;&gt;Theseus&lt;&#x2F;a&gt;, for I want C off my kernel
+(and because it&#x27;s the most exciting project written in Rust at the moment)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bjorn3&#x2F;rustc_codegen_cranelift&quot;&gt;rustc_codegen_cranelift&lt;&#x2F;a&gt;, for I want C++ off my tooling&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
         <title>a deep admiration</title>
         <published>2024-11-24T00:00:00+00:00</published>
         <updated>2024-11-24T00:00:00+00:00</updated>
@@ -714,7 +743,7 @@ or heavily sponsoring work on important projects such as &lt;a href=&quot;https:
 &lt;ul&gt;
 &lt;li&gt;processors are &lt;a href=&quot;https:&#x2F;&#x2F;riscv.org&#x2F;risc-v-isa&quot;&gt;RISC-V&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;OS is &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;theseus-os&#x2F;Theseus&quot;&gt;Theseus&lt;&#x2F;a&gt;
-(the most exciting project written in Rust at the moment)
+(excluding some embedded systems where there is only a single application)
 &lt;ul&gt;
 &lt;li&gt;the next best thing is having &lt;a href=&quot;https:&#x2F;&#x2F;www.redox-os.org&quot;&gt;Redox OS&lt;&#x2F;a&gt; reach mainstream usage&lt;&#x2F;li&gt;
 &lt;li&gt;the next best thing after that is having &lt;a href=&quot;https:&#x2F;&#x2F;www.memorysafety.org&#x2F;blog&#x2F;memory-safety-in-linux-kernel&quot;&gt;Rust in Linux kernel&lt;&#x2F;a&gt;,
