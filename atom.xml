@@ -30,7 +30,7 @@ which uses &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#
 is already available via &lt;code&gt;rustup&lt;&#x2F;code&gt; on nightly toolchains,
 and the immediate benefit is fast debug compiles (&lt;a href=&quot;https:&#x2F;&#x2F;bjorn3.github.io&#x2F;2024&#x2F;11&#x2F;14&#x2F;progress-report-nov-2024.html&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rustc_codegen_gcc&quot;&gt;rustc_codegen_gcc&lt;&#x2F;a&gt;,
-allowing Rust to run in more hardware platforms ([latest update][]rustc_codegen_gcc update])&lt;&#x2F;li&gt;
+allowing Rust to run in more hardware platforms (&lt;a href=&quot;https:&#x2F;&#x2F;blog.antoyo.xyz&#x2F;development-rustc_codegen_gcc&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;A driver written in Rust in the official Linux kernel,
