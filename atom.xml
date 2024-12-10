@@ -4,8 +4,115 @@
     <link rel="self" type="application/atom+xml" href="https://tshepang.github.io/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://tshepang.github.io"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2024-12-08T00:00:00+00:00</updated>
+    <updated>2024-12-10T00:00:00+00:00</updated>
     <id>https://tshepang.github.io/atom.xml</id>
+    <entry xml:lang="en">
+        <title>favorite FLOSS</title>
+        <published>2024-12-10T00:00:00+00:00</published>
+        <updated>2024-12-10T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tshepang.github.io/favorite-floss/"/>
+        <id>https://tshepang.github.io/favorite-floss/</id>
+        
+        <content type="html" xml:base="https://tshepang.github.io/favorite-floss/">&lt;p&gt;For a piece of &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Free_and_open-source_software&quot;&gt;FLOSS&lt;&#x2F;a&gt; (free&#x2F;libre and open source software) to be here,
+it has to both be personally useful and I have to like it a-lot:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;environment&lt;&#x2F;strong&gt;: Debian, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zellij-org&#x2F;zellij&quot;&gt;zellij&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;fishshell.com&quot;&gt;fish&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;web browser&lt;&#x2F;strong&gt;: Firefox (laptop and mobile)&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;text editor&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;helix-editor.com&quot;&gt;Helix&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;development&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;helix-editor.com&quot;&gt;Helix&lt;&#x2F;a&gt;, Rust toolchain (cargo, rustfmt, rustdoc, rust-analyzer)&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;chat&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;zulip.com&quot;&gt;Zulip&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;social&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;phanpy.social&quot;&gt;Phanpy&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;search&lt;&#x2F;strong&gt;: &lt;a href=&quot;http:&#x2F;&#x2F;blog.burntsushi.net&#x2F;ripgrep&quot;&gt;ripgrep&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;audio&#x2F;video&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;antennapod.org&quot;&gt;AntennaPod&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;www.videolan.org&quot;&gt;VLC&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;www.transmissionbt.com&quot;&gt;Transmission&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;monitoring&lt;&#x2F;strong&gt;: top (part of procps suite)&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;documentation&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;mdBook&quot;&gt;mdBook&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>FLOSS I use a-lot</title>
+        <published>2024-12-10T00:00:00+00:00</published>
+        <updated>2024-12-10T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tshepang.github.io/floss-i-use-a-lot/"/>
+        <id>https://tshepang.github.io/floss-i-use-a-lot/</id>
+        
+        <content type="html" xml:base="https://tshepang.github.io/floss-i-use-a-lot/">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving...
+There is &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;favorite-floss&#x2F;&quot;&gt;a separate post&lt;&#x2F;a&gt; for those.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;environment&quot;&gt;environment&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Debian&lt;&#x2F;strong&gt;: my favorite OS&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Android&lt;&#x2F;strong&gt;, for nearly all my mobile needs&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Firefox&lt;&#x2F;strong&gt; (on Debian and on Android)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;fish&lt;&#x2F;strong&gt;: has a superior command completion system, and overall better usability&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zellij-org&#x2F;zellij&quot;&gt;zellij&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: pleasant terminal multiplexer&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alacritty&#x2F;alacritty&quot;&gt;Alacritty&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;wez&#x2F;wezterm&quot;&gt;wezterm&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt; (only on work machine)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;info-comms&quot;&gt;info&#x2F;comms&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;zulip.com&quot;&gt;Zulip&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt; (use both by work and by the Rust project)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;joinmastodon.org&quot;&gt;Mastodon&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt; (primarily via &lt;a href=&quot;https:&#x2F;&#x2F;phanpy.social&quot;&gt;Phanpy&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;software-development&quot;&gt;software development&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;enjoying-helix&#x2F;&quot;&gt;Helix&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: acts as a decent IDE, and is a fantastic text editor&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Git&lt;&#x2F;strong&gt;: hard to avoid&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Rust toolchain&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;gui-applications&quot;&gt;GUI applications&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;antennapod.org&quot;&gt;AntennaPod&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: for listening to podcasts (on Android)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.transmissionbt.com&quot;&gt;Transmission&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: the only torrent client I ever used&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;VLC&lt;&#x2F;strong&gt;: user interface could be a lot better&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;newpipe.net&quot;&gt;NewPipe&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: alternative viewer for YouTube (on Android)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;linuxmint&#x2F;nemo&quot;&gt;Nemo&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: a fork of Nautilus&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;nm-applet&lt;&#x2F;strong&gt;: part of NetworkManager&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;network-diagnosis&quot;&gt;network diagnosis&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http:&#x2F;&#x2F;humdi.net&#x2F;vnstat&quot;&gt;vnstat&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: nifty network usage viewer&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;ping&lt;&#x2F;strong&gt;: checks general reachability&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;mtr&lt;&#x2F;strong&gt;: interactive traceroute tool&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;fujiapple852&#x2F;trippy&quot;&gt;trippy&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: another traceroute tool (only on work machine)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;miscellaneous-tools&quot;&gt;miscellaneous tools&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;apt&lt;&#x2F;strong&gt;: Debian package management&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;tail&lt;&#x2F;strong&gt;: included in GNU coreutils suite of tools&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sharkdp&#x2F;fd&quot;&gt;fd-find&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: a more pleasant &lt;code&gt;find&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;project-of-note-sudo&#x2F;&quot;&gt;Sudo&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http:&#x2F;&#x2F;blog.burntsushi.net&#x2F;ripgrep&quot;&gt;ripgrep&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: a more pleasant &lt;code&gt;grep&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;the.exa.website&quot;&gt;exa&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: a more pleasant, more pretty &lt;code&gt;ls&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;bat&quot;&gt;bat&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;:
+a more pleasant, more fancy &lt;code&gt;cat&lt;&#x2F;code&gt;, which also supplants &lt;code&gt;less&lt;&#x2F;code&gt;
+(though it actually makes use of the latter for paging through long text)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;top&lt;&#x2F;strong&gt;: a powerful and flexible process viewer, part of &lt;a href=&quot;https:&#x2F;&#x2F;gitlab.com&#x2F;procps-ng&#x2F;procps&quot;&gt;procps suite&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;clementtsang&#x2F;bottom&quot;&gt;bottom&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: an alternative to &lt;code&gt;top&lt;&#x2F;code&gt; (only on work machine)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;mdBook&quot;&gt;mdBook&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;:
+lightweight documentation system,
+using it to serve a number of books (with &lt;code&gt;mdbook serve&lt;&#x2F;code&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&quot;&gt;zola&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: for this blog, and served with &lt;code&gt;zola serve&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>2017 review</title>
         <published>2024-12-08T00:00:00+00:00</published>
@@ -341,112 +448,6 @@ The quarrel of the married couple is particularly notable.&lt;&#x2F;p&gt;
 &lt;p&gt;The best &lt;strong&gt;combat&lt;&#x2F;strong&gt; is the final one in &lt;em&gt;Boy Meets World&lt;&#x2F;em&gt;...
 so intense, so brutal.&lt;&#x2F;p&gt;
 &lt;p&gt;The &lt;strong&gt;best twist&lt;&#x2F;strong&gt; is in &lt;em&gt;Strange Darling&lt;&#x2F;em&gt;... so surprising!&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>favorite FLOSS</title>
-        <published>2024-09-13T00:00:00+00:00</published>
-        <updated>2024-09-13T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://tshepang.github.io/favorite-floss/"/>
-        <id>https://tshepang.github.io/favorite-floss/</id>
-        
-        <content type="html" xml:base="https://tshepang.github.io/favorite-floss/">&lt;p&gt;For a piece of &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Free_and_open-source_software&quot;&gt;FLOSS&lt;&#x2F;a&gt; (free&#x2F;libre and open source software) to be here,
-it has to both be personally useful and I have to like it a-lot:&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;environment&lt;&#x2F;strong&gt;: Debian, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zellij-org&#x2F;zellij&quot;&gt;zellij&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;fishshell.com&quot;&gt;fish&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;web browser&lt;&#x2F;strong&gt;: Firefox (laptop and mobile)&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;text editor&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;helix-editor.com&quot;&gt;Helix&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;development&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;helix-editor.com&quot;&gt;Helix&lt;&#x2F;a&gt;, Rust toolchain (cargo, rustfmt, rustdoc, rust-analyzer)&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;chat&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;zulip.com&quot;&gt;Zulip&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;search&lt;&#x2F;strong&gt;: &lt;a href=&quot;http:&#x2F;&#x2F;blog.burntsushi.net&#x2F;ripgrep&quot;&gt;ripgrep&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;audio&#x2F;video&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;antennapod.org&quot;&gt;AntennaPod&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;www.videolan.org&quot;&gt;VLC&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;www.transmissionbt.com&quot;&gt;Transmission&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;monitoring&lt;&#x2F;strong&gt;: top (part of procps suite)&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;documentation&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;mdBook&quot;&gt;mdBook&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>FLOSS I use a-lot</title>
-        <published>2024-09-13T00:00:00+00:00</published>
-        <updated>2024-09-13T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://tshepang.github.io/floss-i-use-a-lot/"/>
-        <id>https://tshepang.github.io/floss-i-use-a-lot/</id>
-        
-        <content type="html" xml:base="https://tshepang.github.io/floss-i-use-a-lot/">&lt;p&gt;Following are tools I use a lot, but am not necessarily loving...
-There is &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;favorite-floss&#x2F;&quot;&gt;a separate post&lt;&#x2F;a&gt; for those.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;environment&quot;&gt;environment&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Debian&lt;&#x2F;strong&gt;: my favorite OS&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Android&lt;&#x2F;strong&gt;, for nearly all my mobile needs&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Firefox&lt;&#x2F;strong&gt; (on Debian and on Android)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;fish&lt;&#x2F;strong&gt;: has a superior command completion system, and overall better usability&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zellij-org&#x2F;zellij&quot;&gt;zellij&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: pleasant terminal multiplexer&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alacritty&#x2F;alacritty&quot;&gt;Alacritty&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;wez&#x2F;wezterm&quot;&gt;wezterm&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt; (only on work machine)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;info-comms&quot;&gt;info&#x2F;comms&lt;&#x2F;h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;zulip.com&quot;&gt;Zulip&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt; (use both by work and by the Rust project)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;joinmastodon.org&quot;&gt;Mastodon&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;software-development&quot;&gt;software development&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;enjoying-helix&#x2F;&quot;&gt;Helix&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: acts as a decent IDE, and is a fantastic text editor&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Git&lt;&#x2F;strong&gt;: hard to avoid&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Rust toolchain&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;gui-applications&quot;&gt;GUI applications&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;antennapod.org&quot;&gt;AntennaPod&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: for listening to podcasts (on Android)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.transmissionbt.com&quot;&gt;Transmission&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: the only torrent client I ever used&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;VLC&lt;&#x2F;strong&gt;: user interface could be a lot better&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;newpipe.net&quot;&gt;NewPipe&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: alternative viewer for YouTube (on Android)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;linuxmint&#x2F;nemo&quot;&gt;Nemo&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: a fork of Nautilus&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;nm-applet&lt;&#x2F;strong&gt;: part of NetworkManager&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;network-diagnosis&quot;&gt;network diagnosis&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http:&#x2F;&#x2F;humdi.net&#x2F;vnstat&quot;&gt;vnstat&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: nifty network usage viewer&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;ping&lt;&#x2F;strong&gt;: checks general reachability&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;mtr&lt;&#x2F;strong&gt;: interactive traceroute tool&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;fujiapple852&#x2F;trippy&quot;&gt;trippy&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: another traceroute tool (only on work machine)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;miscellaneous-tools&quot;&gt;miscellaneous tools&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;apt&lt;&#x2F;strong&gt;: Debian package management&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;tail&lt;&#x2F;strong&gt;: included in GNU coreutils suite of tools&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sharkdp&#x2F;fd&quot;&gt;fd-find&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: a more pleasant &lt;code&gt;find&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;project-of-note-sudo&#x2F;&quot;&gt;Sudo&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http:&#x2F;&#x2F;blog.burntsushi.net&#x2F;ripgrep&quot;&gt;ripgrep&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: a more pleasant &lt;code&gt;grep&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;the.exa.website&quot;&gt;exa&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: a more pleasant, more pretty &lt;code&gt;ls&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;bat&quot;&gt;bat&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;:
-a more pleasant, more fancy &lt;code&gt;cat&lt;&#x2F;code&gt;, which also supplants &lt;code&gt;less&lt;&#x2F;code&gt;
-(though it actually makes use of the latter for paging through long text)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;top&lt;&#x2F;strong&gt;: a powerful and flexible process viewer, part of &lt;a href=&quot;https:&#x2F;&#x2F;gitlab.com&#x2F;procps-ng&#x2F;procps&quot;&gt;procps suite&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;clementtsang&#x2F;bottom&quot;&gt;bottom&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: an alternative to &lt;code&gt;top&lt;&#x2F;code&gt; (only on work machine)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;mdBook&quot;&gt;mdBook&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;:
-lightweight documentation system,
-using it to serve a number of books (with &lt;code&gt;mdbook serve&lt;&#x2F;code&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&quot;&gt;zola&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: for this blog, and served with &lt;code&gt;zola serve&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
 </content>
         
     </entry>
