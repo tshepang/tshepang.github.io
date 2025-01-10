@@ -4,12 +4,12 @@
     <link rel="self" type="application/atom+xml" href="https://tshepang.github.io/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://tshepang.github.io"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-01-08T00:00:00+00:00</updated>
+    <updated>2025-01-11T00:00:00+00:00</updated>
     <id>https://tshepang.github.io/atom.xml</id>
     <entry xml:lang="en">
         <title>Rust things I most anticipate</title>
-        <published>2025-01-08T00:00:00+00:00</published>
-        <updated>2025-01-08T00:00:00+00:00</updated>
+        <published>2025-01-11T00:00:00+00:00</published>
+        <updated>2025-01-11T00:00:00+00:00</updated>
         
         <author>
           <name>
@@ -35,7 +35,7 @@ and the immediate benefit is fast debug compiles (&lt;a href=&quot;https:&#x2F;&
 allowing Rust to run in more hardware platforms (&lt;a href=&quot;https:&#x2F;&#x2F;blog.antoyo.xyz&#x2F;development-rustc_codegen_gcc&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
-&lt;li&gt;A driver written in Rust in the official Linux kernel,
+&lt;li&gt;More drivers written in Rust in the official Linux kernel,
 most promising ones being:
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lore.kernel.org&#x2F;rust-for-linux&#x2F;20231101-rust-binder-v1-0-08ba9197f637@google.com&quot;&gt;Binder&lt;&#x2F;a&gt; (for Android IPC)&lt;&#x2F;li&gt;
@@ -52,6 +52,15 @@ though this would only be &lt;a href=&quot;https:&#x2F;&#x2F;security.googleblog
 &lt;li&gt;Removing libc dependency for Linux-based systems (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;mustang&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;rsix&quot;&gt;rustix&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&quot;&gt;Pijul&lt;&#x2F;a&gt;, for I want a better VCS than Git
 (&lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&#x2F;posts&#x2F;2022-01-08-beta&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;achieved&quot;&gt;achieved&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A driver written in Rust in the official Linux kernel:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;torvalds&#x2F;linux&#x2F;blob&#x2F;master&#x2F;drivers&#x2F;net&#x2F;phy&#x2F;ax88796b_rust.rs&quot;&gt;Asix PHYs driver&lt;&#x2F;a&gt;
+is the first, released early 2024&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
         
