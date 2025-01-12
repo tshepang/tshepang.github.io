@@ -4,37 +4,12 @@
     <link rel="self" type="application/atom+xml" href="https://tshepang.github.io/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://tshepang.github.io"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-01-11T00:00:00+00:00</updated>
+    <updated>2025-01-12T00:00:00+00:00</updated>
     <id>https://tshepang.github.io/atom.xml</id>
     <entry xml:lang="en">
-        <title>1999 review</title>
-        <published>2025-01-11T00:00:00+00:00</published>
-        <updated>2025-01-11T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://tshepang.github.io/1999-review/"/>
-        <id>https://tshepang.github.io/1999-review/</id>
-        
-        <content type="html" xml:base="https://tshepang.github.io/1999-review/">&lt;p&gt;The best &lt;strong&gt;direction&lt;&#x2F;strong&gt; can be found in &lt;em&gt;Payback&lt;&#x2F;em&gt; (both the original
-and the version released in 2006).
-Both movies also boast best &lt;strong&gt;cast&lt;&#x2F;strong&gt;,
-and I especially love the &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;top-movie-performances&#x2F;&quot;&gt;dirty detective pair&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;The best &lt;strong&gt;twist&lt;&#x2F;strong&gt; is in &lt;em&gt;The Thirteenth Floor&lt;&#x2F;em&gt;,
-an underrated movie.&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
         <title>Rust things I most anticipate</title>
-        <published>2025-01-11T00:00:00+00:00</published>
-        <updated>2025-01-11T00:00:00+00:00</updated>
+        <published>2025-01-12T00:00:00+00:00</published>
+        <updated>2025-01-12T00:00:00+00:00</updated>
         
         <author>
           <name>
@@ -55,9 +30,9 @@ an alternative to GitHub that is peer-to-peer (&lt;a href=&quot;https:&#x2F;&#x2
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bjorn3&#x2F;rustc_codegen_cranelift&quot;&gt;rustc_codegen_cranelift&lt;&#x2F;a&gt;,
 which uses &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;cranelift&lt;&#x2F;a&gt; for codegen,
 is already available via &lt;code&gt;rustup&lt;&#x2F;code&gt; on nightly toolchains,
-and the immediate benefit is fast debug compiles (&lt;a href=&quot;https:&#x2F;&#x2F;bjorn3.github.io&#x2F;2024&#x2F;11&#x2F;14&#x2F;progress-report-nov-2024.html&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+and the immediate benefit is fast debug compiles (&lt;a href=&quot;https:&#x2F;&#x2F;bjorn3.github.io&quot;&gt;updates&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rustc_codegen_gcc&quot;&gt;rustc_codegen_gcc&lt;&#x2F;a&gt;,
-allowing Rust to run in more hardware platforms (&lt;a href=&quot;https:&#x2F;&#x2F;blog.antoyo.xyz&#x2F;development-rustc_codegen_gcc&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+allowing Rust to run in more hardware platforms (&lt;a href=&quot;https:&#x2F;&#x2F;blog.antoyo.xyz&quot;&gt;updates&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;More drivers written in Rust in the official Linux kernel,
@@ -87,6 +62,31 @@ is the first, released early 2024&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>1999 review</title>
+        <published>2025-01-11T00:00:00+00:00</published>
+        <updated>2025-01-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tshepang.github.io/1999-review/"/>
+        <id>https://tshepang.github.io/1999-review/</id>
+        
+        <content type="html" xml:base="https://tshepang.github.io/1999-review/">&lt;p&gt;The best &lt;strong&gt;direction&lt;&#x2F;strong&gt; can be found in &lt;em&gt;Payback&lt;&#x2F;em&gt; (both the original
+and the version released in 2006).
+Both movies also boast best &lt;strong&gt;cast&lt;&#x2F;strong&gt;,
+and I especially love the &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;top-movie-performances&#x2F;&quot;&gt;dirty detective pair&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The best &lt;strong&gt;twist&lt;&#x2F;strong&gt; is in &lt;em&gt;The Thirteenth Floor&lt;&#x2F;em&gt;,
+an underrated movie.&lt;&#x2F;p&gt;
 </content>
         
     </entry>
