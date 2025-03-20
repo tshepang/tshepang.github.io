@@ -43,6 +43,65 @@ while linking it to environmental activism.&lt;&#x2F;li&gt;
         
     </entry>
     <entry xml:lang="en">
+        <title>Rust things I most anticipate</title>
+        <published>2025-03-20T00:00:00+00:00</published>
+        <updated>2025-03-20T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tshepang.github.io/rust-things-i-most-anticipate/"/>
+        <id>https://tshepang.github.io/rust-things-i-most-anticipate/</id>
+        
+        <content type="html" xml:base="https://tshepang.github.io/rust-things-i-most-anticipate/">&lt;ul&gt;
+&lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;radicle.xyz&quot;&gt;Radicle&lt;&#x2F;a&gt;,
+an alternative to GitHub that is peer-to-peer (&lt;a href=&quot;https:&#x2F;&#x2F;radicle.xyz&#x2F;2024&#x2F;12&#x2F;05&#x2F;radicle-1.1.html&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Make alternative (to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;llvm&#x2F;llvm-project&quot;&gt;LLVM&lt;&#x2F;a&gt;) codegen backends available in a Rust stable toolchain:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bjorn3&#x2F;rustc_codegen_cranelift&quot;&gt;rustc_codegen_cranelift&lt;&#x2F;a&gt;,
+which uses &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;cranelift&lt;&#x2F;a&gt; for codegen,
+is already available via &lt;code&gt;rustup&lt;&#x2F;code&gt; on nightly toolchains,
+and the immediate benefit is fast debug compiles (&lt;a href=&quot;https:&#x2F;&#x2F;bjorn3.github.io&quot;&gt;updates&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rustc_codegen_gcc&quot;&gt;rustc_codegen_gcc&lt;&#x2F;a&gt;,
+allowing Rust to run in more hardware platforms (&lt;a href=&quot;https:&#x2F;&#x2F;blog.antoyo.xyz&quot;&gt;updates&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;More drivers written in Rust in the official Linux kernel,
+most promising ones being:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lore.kernel.org&#x2F;rust-for-linux&#x2F;20231101-rust-binder-v1-0-08ba9197f637@google.com&quot;&gt;Binder&lt;&#x2F;a&gt; (for Android IPC)&lt;&#x2F;li&gt;
+&lt;li&gt;Apple GPU driver (&lt;a href=&quot;https:&#x2F;&#x2F;asahilinux.org&#x2F;2023&#x2F;03&#x2F;road-to-vulkan&quot;&gt;latest update&lt;&#x2F;a&gt;),
+which seems to be one that has attracted the most attention&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Use of Rust in safety-critical systems,
+&lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;ferrocene&quot;&gt;Ferrocene&lt;&#x2F;a&gt; being the most likely candidate,
+due to being the first Rust toolchain &lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;blog&#x2F;officially-qualified-ferrocene&quot;&gt;qualified for the domain&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;typst&#x2F;typst&quot;&gt;Typst&lt;&#x2F;a&gt;, a more pleasant alternative to LaTeX&lt;&#x2F;li&gt;
+&lt;li&gt;Removing libc dependency for Linux-based systems (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;mustang&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;rsix&quot;&gt;rustix&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&quot;&gt;Pijul&lt;&#x2F;a&gt;, for I want a better VCS than Git
+(&lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&#x2F;posts&#x2F;2022-01-08-beta&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;achieved&quot;&gt;achieved&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Usage in production versions of Chromium,
+&lt;a href=&quot;https:&#x2F;&#x2F;developer.chrome.com&#x2F;blog&#x2F;memory-safety-fonts&quot;&gt;released in mid 2024&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;A driver written in Rust in the official Linux kernel:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;torvalds&#x2F;linux&#x2F;blob&#x2F;master&#x2F;drivers&#x2F;net&#x2F;phy&#x2F;ax88796b_rust.rs&quot;&gt;Asix PHYs driver&lt;&#x2F;a&gt;
+is the first, released early 2024&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
         <title>2019 review</title>
         <published>2025-02-03T00:00:00+00:00</published>
         <updated>2025-02-03T00:00:00+00:00</updated>
@@ -193,65 +252,6 @@ Runner-up for &lt;strong&gt;favorite performance&lt;&#x2F;strong&gt; is by &lt;a
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Katherine_Waterston&quot;&gt;Katherine Waterston&lt;&#x2F;a&gt; (&lt;em&gt;Slow Horses&lt;&#x2F;em&gt;)&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Rust things I most anticipate</title>
-        <published>2025-01-12T00:00:00+00:00</published>
-        <updated>2025-01-12T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://tshepang.github.io/rust-things-i-most-anticipate/"/>
-        <id>https://tshepang.github.io/rust-things-i-most-anticipate/</id>
-        
-        <content type="html" xml:base="https://tshepang.github.io/rust-things-i-most-anticipate/">&lt;ul&gt;
-&lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;radicle.xyz&quot;&gt;Radicle&lt;&#x2F;a&gt;,
-an alternative to GitHub that is peer-to-peer (&lt;a href=&quot;https:&#x2F;&#x2F;radicle.xyz&#x2F;2024&#x2F;12&#x2F;05&#x2F;radicle-1.1.html&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;Make alternative (to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;llvm&#x2F;llvm-project&quot;&gt;LLVM&lt;&#x2F;a&gt;) codegen backends available in a Rust stable toolchain:
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bjorn3&#x2F;rustc_codegen_cranelift&quot;&gt;rustc_codegen_cranelift&lt;&#x2F;a&gt;,
-which uses &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;cranelift&lt;&#x2F;a&gt; for codegen,
-is already available via &lt;code&gt;rustup&lt;&#x2F;code&gt; on nightly toolchains,
-and the immediate benefit is fast debug compiles (&lt;a href=&quot;https:&#x2F;&#x2F;bjorn3.github.io&quot;&gt;updates&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rustc_codegen_gcc&quot;&gt;rustc_codegen_gcc&lt;&#x2F;a&gt;,
-allowing Rust to run in more hardware platforms (&lt;a href=&quot;https:&#x2F;&#x2F;blog.antoyo.xyz&quot;&gt;updates&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;More drivers written in Rust in the official Linux kernel,
-most promising ones being:
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lore.kernel.org&#x2F;rust-for-linux&#x2F;20231101-rust-binder-v1-0-08ba9197f637@google.com&quot;&gt;Binder&lt;&#x2F;a&gt; (for Android IPC)&lt;&#x2F;li&gt;
-&lt;li&gt;Apple GPU driver (&lt;a href=&quot;https:&#x2F;&#x2F;asahilinux.org&#x2F;2023&#x2F;03&#x2F;road-to-vulkan&quot;&gt;latest update&lt;&#x2F;a&gt;),
-which seems to be one that has attracted the most attention&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;Use of Rust in safety-critical systems,
-&lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;ferrocene&quot;&gt;Ferrocene&lt;&#x2F;a&gt; being the most likely candidate,
-due to being the first Rust toolchain &lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;blog&#x2F;officially-qualified-ferrocene&quot;&gt;qualified for the domain&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;typst&#x2F;typst&quot;&gt;Typst&lt;&#x2F;a&gt;, a more pleasant alternative to LaTeX&lt;&#x2F;li&gt;
-&lt;li&gt;Usage in production versions of Chromium,
-though this would only be &lt;a href=&quot;https:&#x2F;&#x2F;security.googleblog.com&#x2F;2023&#x2F;01&#x2F;supporting-use-of-rust-in-chromium.html&quot;&gt;for external dependencies&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;Removing libc dependency for Linux-based systems (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;mustang&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;rsix&quot;&gt;rustix&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&quot;&gt;Pijul&lt;&#x2F;a&gt;, for I want a better VCS than Git
-(&lt;a href=&quot;https:&#x2F;&#x2F;pijul.org&#x2F;posts&#x2F;2022-01-08-beta&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;achieved&quot;&gt;achieved&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;A driver written in Rust in the official Linux kernel:
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;torvalds&#x2F;linux&#x2F;blob&#x2F;master&#x2F;drivers&#x2F;net&#x2F;phy&#x2F;ax88796b_rust.rs&quot;&gt;Asix PHYs driver&lt;&#x2F;a&gt;
-is the first, released early 2024&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
 </content>
         
     </entry>
