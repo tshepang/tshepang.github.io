@@ -75,12 +75,21 @@
     <header>
         <h1 itemprop="headline">Rust things I most anticipate</h1>
         <span class="muted">
-    2025-03-20
+    2025-04-10
 </span>
     </header>
     <div itemprop="articleBody">
       <br>
       <ul>
+<li>More drivers written in Rust in the official Linux kernel,
+most promising ones being:
+<ul>
+<li>NVIDIA GPU driver (<a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=54e6baf123fde089cfa9f609b0b39b40abe41e94">latest update</a>)</li>
+<li><a href="https://lore.kernel.org/rust-for-linux/20231101-rust-binder-v1-0-08ba9197f637@google.com">Binder</a> (for Android IPC)</li>
+<li>Apple GPU driver (<a href="https://asahilinux.org/2023/03/road-to-vulkan">latest update</a>),
+which seems to be one that has attracted the most attention</li>
+</ul>
+</li>
 <li>Wide use of <a href="https://radicle.xyz">Radicle</a>,
 an alternative to GitHub that is peer-to-peer (<a href="https://radicle.xyz/2024/12/05/radicle-1.1.html">latest update</a>)</li>
 <li>Make alternative (to <a href="https://github.com/llvm/llvm-project">LLVM</a>) codegen backends available in a Rust stable toolchain:
@@ -91,14 +100,6 @@ is already available via <code>rustup</code> on nightly toolchains,
 and the immediate benefit is fast debug compiles (<a href="https://bjorn3.github.io">updates</a>)</li>
 <li><a href="https://github.com/rust-lang/rustc_codegen_gcc">rustc_codegen_gcc</a>,
 allowing Rust to run in more hardware platforms (<a href="https://blog.antoyo.xyz">updates</a>)</li>
-</ul>
-</li>
-<li>More drivers written in Rust in the official Linux kernel,
-most promising ones being:
-<ul>
-<li><a href="https://lore.kernel.org/rust-for-linux/20231101-rust-binder-v1-0-08ba9197f637@google.com">Binder</a> (for Android IPC)</li>
-<li>Apple GPU driver (<a href="https://asahilinux.org/2023/03/road-to-vulkan">latest update</a>),
-which seems to be one that has attracted the most attention</li>
 </ul>
 </li>
 <li>Use of Rust in safety-critical systems,
