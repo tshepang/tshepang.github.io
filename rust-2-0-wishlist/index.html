@@ -75,7 +75,7 @@
     <header>
         <h1 itemprop="headline">Rust 2.0 wishlist</h1>
         <span class="muted">
-    2023-09-15
+    2025-04-25
 </span>
     </header>
     <div itemprop="articleBody">
@@ -207,14 +207,19 @@ where the structure of the types is instead inferred:</p>
 but would disallow math operations without spaces,
 like <code>one-number - another-number</code>.</p>
 </li>
+<li>
+<p>Remove re-exports (<a href="https://phanpy.social/#/hachyderm.io/s/114360667953868210">inspiration</a>)</p>
+<p>This would make it more clear where functionality comes from.
+Not sure the convenience of not having to explicitly manage a dependency
+is worth the feature.</p>
+</li>
 </ul>
 <h3 id="std">std</h3>
 <ul>
 <li>
-<p>All collections types removed, except these basic ones: Vec,
-HashMap, and HashSet. Also, they would also be available from
-top-level (i.e. <code>std::{Vec, HashMap, HashSet}</code>), resulting in
-<code>std::collections</code> removal.</p>
+<p>Remove <code>std</code>, and retain <code>alloc</code> without any of the types in <code>collections</code> module.</p>
+<p>That removed code can have official status (to retain trust),
+maybe even distributed with rustup (to retain convenience).</p>
 </li>
 <li>
 <p>Rename <code>Vec</code> to <code>Array</code>, a more clear/obvious name.
@@ -236,8 +241,8 @@ which is not the case for <code>Vec</code>.</p>
 </tbody></table>
 </li>
 <li>
-<p>Remove <code>std::sync::mpsc</code> from stdlib, making it available
-externally... it does not feel general enough. (<a href="https://github.com/rust-lang/rust/pull/42397#issuecomment-315867774">more issues</a>)</p>
+<p>Remove <code>std::sync::mpsc</code> from stdlib, making it available externally...
+it does not feel general enough. (<a href="https://github.com/rust-lang/rust/pull/42397#issuecomment-315867774">more issues</a>)</p>
 </li>
 <li>
 <p>Remove per-type methods where trait impls offer same functionality,
