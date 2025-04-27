@@ -4,8 +4,45 @@
     <link rel="self" type="application/atom+xml" href="https://tshepang.github.io/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://tshepang.github.io"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-04-25T00:00:00+00:00</updated>
+    <updated>2025-04-27T00:00:00+00:00</updated>
     <id>https://tshepang.github.io/atom.xml</id>
+    <entry xml:lang="en">
+        <title>playin with Radicle</title>
+        <published>2025-04-27T00:00:00+00:00</published>
+        <updated>2025-04-27T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tshepang.github.io/playin-with-radicle/"/>
+        <id>https://tshepang.github.io/playin-with-radicle/</id>
+        
+        <content type="html" xml:base="https://tshepang.github.io/playin-with-radicle/">&lt;p&gt;One thing I wish I discovered more early while exploring Radicle is that
+the simple act of cloning a Radicle repo also automatically seeds it.
+I say this because I went to documentation on creating a seed node,
+and found the requirements onerous (long setup instructions and a stable public ip address),
+which was somewhat discouraging.&lt;&#x2F;p&gt;
+&lt;p&gt;Some kool things:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;One can open an issue on the command line (&lt;code&gt;rad issue open&lt;&#x2F;code&gt;),
+and needs not be online to do so.&lt;&#x2F;li&gt;
+&lt;li&gt;Similarly, one can open a PR (patch) on the command line,
+also without needing to be online.&lt;&#x2F;li&gt;
+&lt;li&gt;Issues and patches (PRs) are also stored with the rest of the Radicle repo
+(though external to Git repo).&lt;&#x2F;li&gt;
+&lt;li&gt;When working on patches,
+doing a &lt;code&gt;git push --force&lt;&#x2F;code&gt; is not destructive (immutable),
+in that old patch versions are still accessible.
+One can even give a patch version (revision) a description, so as to detail the change.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Rust 2.0 wishlist</title>
         <published>2025-04-25T00:00:00+00:00</published>
