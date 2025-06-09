@@ -4,8 +4,38 @@
     <link rel="self" type="application/atom+xml" href="https://tshepang.github.io/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://tshepang.github.io"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-06-03T00:00:00+00:00</updated>
+    <updated>2025-06-09T00:00:00+00:00</updated>
     <id>https://tshepang.github.io/atom.xml</id>
+    <entry xml:lang="en">
+        <title>about me</title>
+        <published>2025-06-09T00:00:00+00:00</published>
+        <updated>2025-06-09T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tshepang.github.io/about-me/"/>
+        <id>https://tshepang.github.io/about-me/</id>
+        
+        <content type="html" xml:base="https://tshepang.github.io/about-me/">&lt;p&gt;I am Tshepang Mbambo,
+and I do software development &lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&quot;&gt;for a living&lt;&#x2F;a&gt; and as a hobby.
+My favorite language (and ecosystem) is &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.org&quot;&gt;Rust&lt;&#x2F;a&gt;,
+and my OS of choice is &lt;a href=&quot;https:&#x2F;&#x2F;debian.org&quot;&gt;Debian&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Among my active profiles:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;hachyderm.io&#x2F;@tshepang&quot;&gt;Hachyderm&lt;&#x2F;a&gt; (social)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tshepang&quot;&gt;GitHub&lt;&#x2F;a&gt; (software)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.zulipchat.com&#x2F;#user&#x2F;119529&quot;&gt;Rust Zulip&lt;&#x2F;a&gt; (chat)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The sources for this blog can be found &lt;a href=&quot;https:&#x2F;&#x2F;app.radicle.at&#x2F;nodes&#x2F;seed.radicle.at&#x2F;rad:z495gX4yCu5U8PmWBNiGHWEn9wBuz&quot;&gt;on Radicle&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>nifty Zellij</title>
         <published>2025-06-03T00:00:00+00:00</published>
@@ -160,36 +190,6 @@ the &lt;strong&gt;best performance&lt;&#x2F;strong&gt; is by &lt;a href=&quot;ht
 followed by Joaquin Phoenix in &lt;em&gt;Joker: Folie à Deux&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;My &lt;strong&gt;favorite performance&lt;&#x2F;strong&gt; is that of &lt;a href=&quot;https:&#x2F;&#x2F;fr.wikipedia.org&#x2F;wiki&#x2F;Lazare_Minoungou&quot;&gt;Lazare Minoungou&lt;&#x2F;a&gt;,
 playing a formerly decorated soldier in &lt;em&gt;No Chains No Masters&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>about me</title>
-        <published>2025-05-17T00:00:00+00:00</published>
-        <updated>2025-05-17T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://tshepang.github.io/about-me/"/>
-        <id>https://tshepang.github.io/about-me/</id>
-        
-        <content type="html" xml:base="https://tshepang.github.io/about-me/">&lt;p&gt;I am Tshepang Mbambo,
-and I do software development &lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&quot;&gt;for a living&lt;&#x2F;a&gt; and as a hobby.
-My favorite language (and ecosystem) is &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.org&quot;&gt;Rust&lt;&#x2F;a&gt;,
-and my OS of choice is &lt;a href=&quot;https:&#x2F;&#x2F;debian.org&quot;&gt;Debian&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;Among my profiles on the web:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;hachyderm.io&#x2F;@tshepang&quot;&gt;Hachyderm&lt;&#x2F;a&gt; (social)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tshepang&quot;&gt;GitHub&lt;&#x2F;a&gt; (software)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.zulipchat.com&#x2F;#user&#x2F;119529&quot;&gt;Rust Zulip&lt;&#x2F;a&gt; (chat)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;The sources for this blog can be found &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tshepang&#x2F;blog&quot;&gt;on GitHub&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </content>
         
     </entry>
