@@ -4,8 +4,59 @@
     <link rel="self" type="application/atom+xml" href="https://tshepang.github.io/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://tshepang.github.io"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-06-09T00:00:00+00:00</updated>
+    <updated>2025-06-21T00:00:00+00:00</updated>
     <id>https://tshepang.github.io/atom.xml</id>
+    <entry xml:lang="en">
+        <title>some kool regex things</title>
+        <published>2025-06-21T00:00:00+00:00</published>
+        <updated>2025-06-21T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tshepang.github.io/some-kool-regex-things/"/>
+        <id>https://tshepang.github.io/some-kool-regex-things/</id>
+        
+        <content type="html" xml:base="https://tshepang.github.io/some-kool-regex-things/">&lt;p&gt;I rarely use regex (regular expressions) beyond basics such as these:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;match one or more characters: &lt;code&gt;.+&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;match beginning of line: &lt;code&gt;^&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;match end of line: &lt;code&gt;$&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;I recently had to do more fancy things:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;exclude a character from matching: &lt;code&gt;[^x]&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;allow &lt;code&gt;.&lt;&#x2F;code&gt; to match &lt;code&gt;\n&lt;&#x2F;code&gt;: &lt;code&gt;(?s:.)&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;do multi-line matching: &lt;code&gt;(?m:\s)&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;For an example of how the above 2 work, consider this text:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span&gt;asm!(
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;jmp {}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span&gt;    label {},
+&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The following regex will match &lt;code&gt;asm!&lt;&#x2F;code&gt;,
+followed by &lt;code&gt;label&lt;&#x2F;code&gt;,
+followed by &lt;code&gt;{&lt;&#x2F;code&gt;,
+while ignoring all that is between those:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;regex&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-regex &quot;&gt;&lt;code class=&quot;language-regex&quot; data-lang=&quot;regex&quot;&gt;&lt;span&gt;asm!(?s:.)+label(?m:\s)*\{
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;The regex dialect used is &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;regex&#x2F;latest&#x2F;regex&#x2F;#syntax&quot;&gt;that of the Rust regex crate&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>about me</title>
         <published>2025-06-09T00:00:00+00:00</published>
