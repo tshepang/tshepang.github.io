@@ -4,8 +4,235 @@
     <link rel="self" type="application/atom+xml" href="https://tshepang.github.io/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://tshepang.github.io"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-06-22T00:00:00+00:00</updated>
+    <updated>2025-06-23T00:00:00+00:00</updated>
     <id>https://tshepang.github.io/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Rust dreams</title>
+        <published>2025-06-23T00:00:00+00:00</published>
+        <updated>2025-06-23T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tshepang.github.io/rust-dreams/"/>
+        <id>https://tshepang.github.io/rust-dreams/</id>
+        
+        <content type="html" xml:base="https://tshepang.github.io/rust-dreams/">&lt;p&gt;(&lt;em&gt;see &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;rust-std-dreams&#x2F;&quot;&gt;Rust std dreams&lt;&#x2F;a&gt; for a similar list, but for the standard library&lt;&#x2F;em&gt;)&lt;&#x2F;p&gt;
+&lt;p&gt;There is a strong commitment for Rust not to break backwards compatibility,
+meaning that all code that compiled with Rust v1.0 should compile with all
+future Rust versions, all but for exceptional circumstances.
+The effort is commendable, and results in kool things like &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;edition-guide&#x2F;editions&quot;&gt;Editions&lt;&#x2F;a&gt;,
+but mistakes are bound to happen that cannot be fixed with such.
+That is, I wish we will have a breaking release at some point,
+and the pain of such a breaking change could be relieved&#x2F;eliminated with
+careful planning and migration tooling.&lt;&#x2F;p&gt;
+&lt;p&gt;That said,
+following are my favorite breaking things I want in the Rust language
+(and many are much too outrageous to ever be seriously considered).&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Assigning values to struct bindings should use the equal sign, not
+the colon:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; now
+&lt;&#x2F;span&gt;&lt;span&gt;Shoe { size: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span&gt;, style: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;sneaker&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; };
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; dream
+&lt;&#x2F;span&gt;&lt;span&gt;Shoe { size = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span&gt;, style = &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;sneaker&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; };
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This would be consistent with the rest of the language.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;It would be nice to make the language a little smaller by unifying syntax for
+functions and closures (&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;brundolfsmith&#x2F;status&#x2F;1610431400209158144&quot;&gt;inspiration&lt;&#x2F;a&gt;).&lt;&#x2F;p&gt;
+&lt;p&gt;A closure syntax looks like this:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;square &lt;&#x2F;span&gt;&lt;span&gt;= |&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;number&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;i32&lt;&#x2F;span&gt;&lt;span&gt;| {
+&lt;&#x2F;span&gt;&lt;span&gt;        number * number
+&lt;&#x2F;span&gt;&lt;span&gt;    };
+&lt;&#x2F;span&gt;&lt;span&gt;    println!(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;{}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;square&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;4&lt;&#x2F;span&gt;&lt;span&gt;));
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;A function for same looks like this:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;square&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;number&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;i32&lt;&#x2F;span&gt;&lt;span&gt;) -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;i32 &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    number * number
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;    println!(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;{}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;square&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;4&lt;&#x2F;span&gt;&lt;span&gt;));
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Imagine if you could have this instead:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; square: |&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;number&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;i32&lt;&#x2F;span&gt;&lt;span&gt;| -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;i32 &lt;&#x2F;span&gt;&lt;span&gt;= {
+&lt;&#x2F;span&gt;&lt;span&gt;    number * number
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;    println!(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;{}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;square&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;4&lt;&#x2F;span&gt;&lt;span&gt;));
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;It is a bit more heavy on tokens
+(there is an extra &lt;code&gt;:&lt;&#x2F;code&gt; and there is a &lt;code&gt;=&lt;&#x2F;code&gt;),
+but it also means one less keyword (&lt;code&gt;fn&lt;&#x2F;code&gt;),
+and less syntax to learn for new users.&lt;&#x2F;p&gt;
+&lt;p&gt;As an additional example,
+this is what a function would look like if it returned nothing:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; show_square: |&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;number&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;i32&lt;&#x2F;span&gt;&lt;span&gt;| = {
+&lt;&#x2F;span&gt;&lt;span&gt;    println!(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;{}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, number * number);
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;show_square&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;4&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;As a final note on this one,
+this is what an async function would look like
+(&lt;a href=&quot;https:&#x2F;&#x2F;hachyderm.io&#x2F;@kevinmehall&#x2F;111065682919309293&quot;&gt;inspiration&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; show_square: |&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;number&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;i32&lt;&#x2F;span&gt;&lt;span&gt;| -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;i32 &lt;&#x2F;span&gt;&lt;span&gt;= async {
+&lt;&#x2F;span&gt;&lt;span&gt;    ...
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Perhaps ridiculous,
+but what if we got rid of &lt;code&gt;struct&lt;&#x2F;code&gt; and &lt;code&gt;enum&lt;&#x2F;code&gt; keywords,
+where the structure of the types is instead inferred:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; current
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct &lt;&#x2F;span&gt;&lt;span&gt;Character {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;: String,
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;kind&lt;&#x2F;span&gt;&lt;span&gt;: Kind,
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;enum &lt;&#x2F;span&gt;&lt;span&gt;Kind {
+&lt;&#x2F;span&gt;&lt;span&gt;  Good,
+&lt;&#x2F;span&gt;&lt;span&gt;  Bad,
+&lt;&#x2F;span&gt;&lt;span&gt;  Ugly(Detail),
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct &lt;&#x2F;span&gt;&lt;span&gt;Detail;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; wish
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;type &lt;&#x2F;span&gt;&lt;span&gt;Character = {
+&lt;&#x2F;span&gt;&lt;span&gt;  name: String,
+&lt;&#x2F;span&gt;&lt;span&gt;  kind: Kind,
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;type &lt;&#x2F;span&gt;&lt;span&gt;Kind = {
+&lt;&#x2F;span&gt;&lt;span&gt;  Good,
+&lt;&#x2F;span&gt;&lt;span&gt;  Bad,
+&lt;&#x2F;span&gt;&lt;span&gt;  Ugly(Detail), &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; looks like a struct with an unnamed field
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;type &lt;&#x2F;span&gt;&lt;span&gt;Detail; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; implicitly a struct
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;type &lt;&#x2F;span&gt;&lt;span&gt;StructWithUnnamedFields(String, Kind);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; and unions are a special case, so we use this new syntax...
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;type &lt;&#x2F;span&gt;&lt;span&gt;SomeUnion = union {
+&lt;&#x2F;span&gt;&lt;span&gt;    integer: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;u32&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    float: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;f32&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This brings the syntax close to type aliases.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Replace underscores (_) with dashes (-) in bindings&#x2F;identifers:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; current
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; we_dream;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; wish
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; we-dream;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;That is a lot more pretty,
+but would disallow math operations without spaces,
+like &lt;code&gt;one-number - another-number&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Remove re-exports (&lt;a href=&quot;https:&#x2F;&#x2F;phanpy.social&#x2F;#&#x2F;hachyderm.io&#x2F;s&#x2F;114360667953868210&quot;&gt;inspiration&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
+&lt;p&gt;This would make it more clear where functionality comes from.
+Not sure the convenience of not having to explicitly manage a dependency
+is worth the feature.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Rust std dreams</title>
+        <published>2025-06-23T00:00:00+00:00</published>
+        <updated>2025-06-23T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tshepang.github.io/rust-std-dreams/"/>
+        <id>https://tshepang.github.io/rust-std-dreams/</id>
+        
+        <content type="html" xml:base="https://tshepang.github.io/rust-std-dreams/">&lt;p&gt;(&lt;em&gt;see &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;rust-dreams&#x2F;&quot;&gt;Rust dreams&lt;&#x2F;a&gt; for a similar list, but for the language&lt;&#x2F;em&gt;)&lt;&#x2F;p&gt;
+&lt;p&gt;Here are things I wish could be changed in the Rust standard library (std).&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Remove &lt;code&gt;std&lt;&#x2F;code&gt;, and retain &lt;code&gt;alloc&lt;&#x2F;code&gt; without any of the types in &lt;code&gt;collections&lt;&#x2F;code&gt; module.&lt;&#x2F;p&gt;
+&lt;p&gt;That removed code can have official status (to retain trust),
+maybe even distributed with rustup (to retain convenience).&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Rename &lt;code&gt;Vec&lt;&#x2F;code&gt; to &lt;code&gt;Array&lt;&#x2F;code&gt;, a more clear&#x2F;obvious name.
+An alternative is &lt;code&gt;List&lt;&#x2F;code&gt;,
+but that type in Python accepts members of different types,
+which is not the case for &lt;code&gt;Vec&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Consistent names for string-y types:&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;&lt;&#x2F;th&gt;&lt;th&gt;current&lt;&#x2F;th&gt;&lt;th&gt;wish&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;string&lt;&#x2F;td&gt;&lt;td&gt;str&lt;&#x2F;td&gt;&lt;td&gt;Str&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;&#x2F;td&gt;&lt;td&gt;String&lt;&#x2F;td&gt;&lt;td&gt;StrOwned&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;os string&lt;&#x2F;td&gt;&lt;td&gt;OsStr&lt;&#x2F;td&gt;&lt;td&gt;OsStr (same)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;&#x2F;td&gt;&lt;td&gt;OsString&lt;&#x2F;td&gt;&lt;td&gt;OsStrOwned&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;C string&lt;&#x2F;td&gt;&lt;td&gt;CStr&lt;&#x2F;td&gt;&lt;td&gt;CStr (same)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;&#x2F;td&gt;&lt;td&gt;CString&lt;&#x2F;td&gt;&lt;td&gt;CStrOwned&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;fs path&lt;&#x2F;td&gt;&lt;td&gt;Path&lt;&#x2F;td&gt;&lt;td&gt;Path (same)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;&#x2F;td&gt;&lt;td&gt;PathBuf&lt;&#x2F;td&gt;&lt;td&gt;PathOwned&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Remove &lt;code&gt;std::sync::mpsc&lt;&#x2F;code&gt; from stdlib, making it available externally...
+it does not feel general enough. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;42397#issuecomment-315867774&quot;&gt;more issues&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Remove per-type methods where trait impls offer same functionality,
+for generality:&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;current&lt;&#x2F;th&gt;&lt;th&gt;wish&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;PathBuf::as_path&lt;&#x2F;td&gt;&lt;td&gt;PathBuf::as_ref&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Path::to_path_buf&lt;&#x2F;td&gt;&lt;td&gt;Path::to_owned&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Vec::append&lt;&#x2F;td&gt;&lt;td&gt;Vec::extend&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Remove all deprecated APIs, most notable being the &lt;code&gt;try!&lt;&#x2F;code&gt; macro&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Renames of panic methods (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rfcs&#x2F;pull&#x2F;3218#issuecomment-1010084722&quot;&gt;inspiration&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;current&lt;&#x2F;th&gt;&lt;th&gt;wish&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;foo.unwrap&lt;&#x2F;td&gt;&lt;td&gt;(remove)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;foo.expect(&quot;message&quot;)&lt;&#x2F;td&gt;&lt;td&gt;foo.or_panic(&quot;message&quot;)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;foo.unwrap_or&lt;&#x2F;td&gt;&lt;td&gt;foo.or&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;foo.unwrap_or_default&lt;&#x2F;td&gt;&lt;td&gt;foo.or_default&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;foo.unwrap_or_else&lt;&#x2F;td&gt;&lt;td&gt;foo.or_else&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;It feels somewhat implicit, but maybe not so bad.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>2020 review</title>
         <published>2025-06-22T00:00:00+00:00</published>
@@ -521,221 +748,6 @@ also without needing to be online.&lt;&#x2F;li&gt;
 doing a &lt;code&gt;git push --force&lt;&#x2F;code&gt; is not destructive (immutable),
 in that old patch versions are still accessible.
 One can even give a patch version (revision) a description, so as to detail the change.&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Rust 2.0 wishlist</title>
-        <published>2025-04-25T00:00:00+00:00</published>
-        <updated>2025-04-25T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://tshepang.github.io/rust-2-0-wishlist/"/>
-        <id>https://tshepang.github.io/rust-2-0-wishlist/</id>
-        
-        <content type="html" xml:base="https://tshepang.github.io/rust-2-0-wishlist/">&lt;p&gt;There is a strong commitment for Rust not to break backwards compatibility,
-meaning that all code that compiled with Rust v1.0 should compile with all
-future Rust versions, all but for exceptional circumstances.
-The effort is commendable, and results in kool things like &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;edition-guide&#x2F;editions&quot;&gt;Editions&lt;&#x2F;a&gt;,
-but mistakes are bound to happen that cannot be fixed with such.
-That is, I wish we will have a breaking release at some point,
-and the pain of such a breaking change could be relieved&#x2F;eliminated with
-careful planning and migration tooling.&lt;&#x2F;p&gt;
-&lt;p&gt;That said,
-following are my favorite breaking things I want in Rust
-(and many are much too outrageous to ever be seriously considered).&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;lang&quot;&gt;lang&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Assigning values to struct bindings should use the equal sign, not
-the colon:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; now
-&lt;&#x2F;span&gt;&lt;span&gt;Shoe { size: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span&gt;, style: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;sneaker&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; };
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; dream
-&lt;&#x2F;span&gt;&lt;span&gt;Shoe { size = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span&gt;, style = &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;sneaker&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; };
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;This would be consistent with the rest of the language.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;It would be nice to make the language a little smaller by unifying syntax for
-functions and closures (&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;brundolfsmith&#x2F;status&#x2F;1610431400209158144&quot;&gt;inspiration&lt;&#x2F;a&gt;).&lt;&#x2F;p&gt;
-&lt;p&gt;A closure syntax looks like this:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;square &lt;&#x2F;span&gt;&lt;span&gt;= |&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;number&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;i32&lt;&#x2F;span&gt;&lt;span&gt;| {
-&lt;&#x2F;span&gt;&lt;span&gt;        number * number
-&lt;&#x2F;span&gt;&lt;span&gt;    };
-&lt;&#x2F;span&gt;&lt;span&gt;    println!(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;{}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;square&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;4&lt;&#x2F;span&gt;&lt;span&gt;));
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;A function for same looks like this:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;square&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;number&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;i32&lt;&#x2F;span&gt;&lt;span&gt;) -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;i32 &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;    number * number
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;    println!(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;{}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;square&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;4&lt;&#x2F;span&gt;&lt;span&gt;));
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Imagine if you could have this instead:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; square: |&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;number&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;i32&lt;&#x2F;span&gt;&lt;span&gt;| -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;i32 &lt;&#x2F;span&gt;&lt;span&gt;= {
-&lt;&#x2F;span&gt;&lt;span&gt;    number * number
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;    println!(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;{}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;square&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;4&lt;&#x2F;span&gt;&lt;span&gt;));
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;It is a bit more heavy on tokens
-(there is an extra &lt;code&gt;:&lt;&#x2F;code&gt; and there is a &lt;code&gt;=&lt;&#x2F;code&gt;),
-but it also means one less keyword (&lt;code&gt;fn&lt;&#x2F;code&gt;),
-and less syntax to learn for new users.&lt;&#x2F;p&gt;
-&lt;p&gt;As an additional example,
-this is what a function would look like if it returned nothing:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; show_square: |&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;number&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;i32&lt;&#x2F;span&gt;&lt;span&gt;| = {
-&lt;&#x2F;span&gt;&lt;span&gt;    println!(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;{}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, number * number);
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;show_square&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;4&lt;&#x2F;span&gt;&lt;span&gt;);
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;As a final note on this one,
-this is what an async function would look like
-(&lt;a href=&quot;https:&#x2F;&#x2F;hachyderm.io&#x2F;@kevinmehall&#x2F;111065682919309293&quot;&gt;inspiration&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; show_square: |&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;number&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;i32&lt;&#x2F;span&gt;&lt;span&gt;| -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;i32 &lt;&#x2F;span&gt;&lt;span&gt;= async {
-&lt;&#x2F;span&gt;&lt;span&gt;    ...
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Perhaps ridiculous,
-but what if we got rid of &lt;code&gt;struct&lt;&#x2F;code&gt; and &lt;code&gt;enum&lt;&#x2F;code&gt; keywords,
-where the structure of the types is instead inferred:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; current
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct &lt;&#x2F;span&gt;&lt;span&gt;Character {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;: String,
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;kind&lt;&#x2F;span&gt;&lt;span&gt;: Kind,
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;enum &lt;&#x2F;span&gt;&lt;span&gt;Kind {
-&lt;&#x2F;span&gt;&lt;span&gt;  Good,
-&lt;&#x2F;span&gt;&lt;span&gt;  Bad,
-&lt;&#x2F;span&gt;&lt;span&gt;  Ugly(Detail),
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct &lt;&#x2F;span&gt;&lt;span&gt;Detail;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; wish
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;type &lt;&#x2F;span&gt;&lt;span&gt;Character = {
-&lt;&#x2F;span&gt;&lt;span&gt;  name: String,
-&lt;&#x2F;span&gt;&lt;span&gt;  kind: Kind,
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;type &lt;&#x2F;span&gt;&lt;span&gt;Kind = {
-&lt;&#x2F;span&gt;&lt;span&gt;  Good,
-&lt;&#x2F;span&gt;&lt;span&gt;  Bad,
-&lt;&#x2F;span&gt;&lt;span&gt;  Ugly(Detail), &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; looks like a struct with an unnamed field
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;type &lt;&#x2F;span&gt;&lt;span&gt;Detail; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; implicitly a struct
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;type &lt;&#x2F;span&gt;&lt;span&gt;StructWithUnnamedFields(String, Kind);
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; and unions are a special case, so we use this new syntax...
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;type &lt;&#x2F;span&gt;&lt;span&gt;SomeUnion = union {
-&lt;&#x2F;span&gt;&lt;span&gt;    integer: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;u32&lt;&#x2F;span&gt;&lt;span&gt;,
-&lt;&#x2F;span&gt;&lt;span&gt;    float: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;f32&lt;&#x2F;span&gt;&lt;span&gt;,
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;This brings the syntax close to type aliases.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Replace underscores (_) with dashes (-) in bindings&#x2F;identifers:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; current
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; we_dream;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; wish
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; we-dream;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;That is a lot more pretty,
-but would disallow math operations without spaces,
-like &lt;code&gt;one-number - another-number&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Remove re-exports (&lt;a href=&quot;https:&#x2F;&#x2F;phanpy.social&#x2F;#&#x2F;hachyderm.io&#x2F;s&#x2F;114360667953868210&quot;&gt;inspiration&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
-&lt;p&gt;This would make it more clear where functionality comes from.
-Not sure the convenience of not having to explicitly manage a dependency
-is worth the feature.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;std&quot;&gt;std&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Remove &lt;code&gt;std&lt;&#x2F;code&gt;, and retain &lt;code&gt;alloc&lt;&#x2F;code&gt; without any of the types in &lt;code&gt;collections&lt;&#x2F;code&gt; module.&lt;&#x2F;p&gt;
-&lt;p&gt;That removed code can have official status (to retain trust),
-maybe even distributed with rustup (to retain convenience).&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Rename &lt;code&gt;Vec&lt;&#x2F;code&gt; to &lt;code&gt;Array&lt;&#x2F;code&gt;, a more clear&#x2F;obvious name.
-An alternative is &lt;code&gt;List&lt;&#x2F;code&gt;,
-but that type in Python accepts members of different types,
-which is not the case for &lt;code&gt;Vec&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Consistent names for string-y types:&lt;&#x2F;p&gt;
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;&lt;&#x2F;th&gt;&lt;th&gt;current&lt;&#x2F;th&gt;&lt;th&gt;wish&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
-&lt;tr&gt;&lt;td&gt;string&lt;&#x2F;td&gt;&lt;td&gt;str&lt;&#x2F;td&gt;&lt;td&gt;Str&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;&#x2F;td&gt;&lt;td&gt;String&lt;&#x2F;td&gt;&lt;td&gt;StrOwned&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td&gt;os string&lt;&#x2F;td&gt;&lt;td&gt;OsStr&lt;&#x2F;td&gt;&lt;td&gt;OsStr (same)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;&#x2F;td&gt;&lt;td&gt;OsString&lt;&#x2F;td&gt;&lt;td&gt;OsStrOwned&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td&gt;C string&lt;&#x2F;td&gt;&lt;td&gt;CStr&lt;&#x2F;td&gt;&lt;td&gt;CStr (same)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;&#x2F;td&gt;&lt;td&gt;CString&lt;&#x2F;td&gt;&lt;td&gt;CStrOwned&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td&gt;fs path&lt;&#x2F;td&gt;&lt;td&gt;Path&lt;&#x2F;td&gt;&lt;td&gt;Path (same)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;&#x2F;td&gt;&lt;td&gt;PathBuf&lt;&#x2F;td&gt;&lt;td&gt;PathOwned&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Remove &lt;code&gt;std::sync::mpsc&lt;&#x2F;code&gt; from stdlib, making it available externally...
-it does not feel general enough. (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;42397#issuecomment-315867774&quot;&gt;more issues&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Remove per-type methods where trait impls offer same functionality,
-for generality:&lt;&#x2F;p&gt;
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;current&lt;&#x2F;th&gt;&lt;th&gt;wish&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
-&lt;tr&gt;&lt;td&gt;PathBuf::as_path&lt;&#x2F;td&gt;&lt;td&gt;PathBuf::as_ref&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td&gt;Path::to_path_buf&lt;&#x2F;td&gt;&lt;td&gt;Path::to_owned&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td&gt;Vec::append&lt;&#x2F;td&gt;&lt;td&gt;Vec::extend&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Remove all deprecated APIs, most notable being the &lt;code&gt;try!&lt;&#x2F;code&gt; macro&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;Renames of panic methods (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rfcs&#x2F;pull&#x2F;3218#issuecomment-1010084722&quot;&gt;inspiration&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;current&lt;&#x2F;th&gt;&lt;th&gt;wish&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
-&lt;tr&gt;&lt;td&gt;foo.unwrap&lt;&#x2F;td&gt;&lt;td&gt;(remove)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td&gt;foo.expect(&quot;message&quot;)&lt;&#x2F;td&gt;&lt;td&gt;foo.or_panic(&quot;message&quot;)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td&gt;foo.unwrap_or&lt;&#x2F;td&gt;&lt;td&gt;foo.or&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td&gt;foo.unwrap_or_default&lt;&#x2F;td&gt;&lt;td&gt;foo.or_default&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td&gt;foo.unwrap_or_else&lt;&#x2F;td&gt;&lt;td&gt;foo.or_else&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
-&lt;p&gt;It feels somewhat implicit, but maybe not so bad.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;cargo&quot;&gt;cargo&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Do not allow crate names with underscores, because taste...&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;code&gt;serde_json&lt;&#x2F;code&gt; (bad)&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;code&gt;serde-json&lt;&#x2F;code&gt; (good)&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
         
@@ -1402,39 +1414,6 @@ is a key player in the Wasm ecosystem,
 as evidenced by employing giants such as &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&quot;&gt;Dan Gohman&lt;&#x2F;a&gt;,
 or heavily sponsoring work on important projects such as &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&quot;&gt;Wasmtime&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Rust dreams</title>
-        <published>2023-11-29T00:00:00+00:00</published>
-        <updated>2023-11-29T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://tshepang.github.io/rust-dreams/"/>
-        <id>https://tshepang.github.io/rust-dreams/</id>
-        
-        <content type="html" xml:base="https://tshepang.github.io/rust-dreams/">&lt;p&gt;My ideal computing environment, for all device types (from servers to embedded):&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;processors are &lt;a href=&quot;https:&#x2F;&#x2F;riscv.org&#x2F;risc-v-isa&quot;&gt;RISC-V&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;OS is &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;theseus-os&#x2F;Theseus&quot;&gt;Theseus&lt;&#x2F;a&gt;
-(excluding some embedded systems where there is only a single application)
-&lt;ul&gt;
-&lt;li&gt;the next best thing is having &lt;a href=&quot;https:&#x2F;&#x2F;www.redox-os.org&quot;&gt;Redox OS&lt;&#x2F;a&gt; reach mainstream usage&lt;&#x2F;li&gt;
-&lt;li&gt;the next best thing after that is having &lt;a href=&quot;https:&#x2F;&#x2F;www.memorysafety.org&#x2F;blog&#x2F;memory-safety-in-linux-kernel&quot;&gt;Rust in Linux kernel&lt;&#x2F;a&gt;,
-which would require the least effort of the options above&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;rustix&quot;&gt;rustix&lt;&#x2F;a&gt; (and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;Mustang&lt;&#x2F;a&gt; &#x2F; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;eyra&quot;&gt;Eyra&lt;&#x2F;a&gt;) are used to help run POSIX apps&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;Cranelift&lt;&#x2F;a&gt; is used to generate machine code, for I want C++ (LLVM) off my tooling&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
         

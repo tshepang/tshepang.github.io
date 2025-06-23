@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  
+  
+
+  <title>
+    
+    Rust std dreams
+    
+</title>
+  <link rel="alternate" type="application/atom+xml" title="Tshepang logs Atom Feed" href="https://tshepang.github.io/atom.xml" />
+
+  
+  <link rel="stylesheet" href="https://tshepang.github.io/site.css">
+  
+
+  
+  
+</head>
+
+<body class="hack dark main container">
+  
+    
+        
+  
+  <header class="nav-header">
+    <nav itemscope itemtype="http://schema.org/SiteNavigationElement" class="navbar">
+      <div class="nav-links">
+        
+        <a itemprop="url"
+          class=""
+          href="https://tshepang.github.io/about-me">
+          <span itemprop="name">about</span></a>
+        
+        <a itemprop="url"
+          class=""
+          href="https://tshepang.github.io/tags">
+          <span itemprop="name">tags</span></a>
+        
+        <a itemprop="url"
+          class=""
+          href="https://tshepang.github.io/categories/movies">
+          <span itemprop="name">movies</span></a>
+        
+      </div>
+    </nav>
+    
+    <div class="search-container">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="search-icon">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+      </svg>
+      <input type="text" id="search" placeholder="Search...">
+      <div class="search-results">
+        <div class="search-results__items"></div>
+      </div>
+    </div>
+    
+
+  </header>
+  
+  
+    
+
+<article itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1 itemprop="headline">Rust std dreams</h1>
+        <span class="muted">
+    2025-06-23
+</span>
+    </header>
+    <div itemprop="articleBody">
+      <br>
+      <p>(<em>see <a href="https://tshepang.github.io/rust-dreams/">Rust dreams</a> for a similar list, but for the language</em>)</p>
+<p>Here are things I wish could be changed in the Rust standard library (std).</p>
+<ul>
+<li>
+<p>Remove <code>std</code>, and retain <code>alloc</code> without any of the types in <code>collections</code> module.</p>
+<p>That removed code can have official status (to retain trust),
+maybe even distributed with rustup (to retain convenience).</p>
+</li>
+<li>
+<p>Rename <code>Vec</code> to <code>Array</code>, a more clear/obvious name.
+An alternative is <code>List</code>,
+but that type in Python accepts members of different types,
+which is not the case for <code>Vec</code>.</p>
+</li>
+<li>
+<p>Consistent names for string-y types:</p>
+<table><thead><tr><th></th><th>current</th><th>wish</th></tr></thead><tbody>
+<tr><td>string</td><td>str</td><td>Str</td></tr>
+<tr><td></td><td>String</td><td>StrOwned</td></tr>
+<tr><td>os string</td><td>OsStr</td><td>OsStr (same)</td></tr>
+<tr><td></td><td>OsString</td><td>OsStrOwned</td></tr>
+<tr><td>C string</td><td>CStr</td><td>CStr (same)</td></tr>
+<tr><td></td><td>CString</td><td>CStrOwned</td></tr>
+<tr><td>fs path</td><td>Path</td><td>Path (same)</td></tr>
+<tr><td></td><td>PathBuf</td><td>PathOwned</td></tr>
+</tbody></table>
+</li>
+<li>
+<p>Remove <code>std::sync::mpsc</code> from stdlib, making it available externally...
+it does not feel general enough. (<a href="https://github.com/rust-lang/rust/pull/42397#issuecomment-315867774">more issues</a>)</p>
+</li>
+<li>
+<p>Remove per-type methods where trait impls offer same functionality,
+for generality:</p>
+<table><thead><tr><th>current</th><th>wish</th></tr></thead><tbody>
+<tr><td>PathBuf::as_path</td><td>PathBuf::as_ref</td></tr>
+<tr><td>Path::to_path_buf</td><td>Path::to_owned</td></tr>
+<tr><td>Vec::append</td><td>Vec::extend</td></tr>
+</tbody></table>
+</li>
+<li>
+<p>Remove all deprecated APIs, most notable being the <code>try!</code> macro</p>
+</li>
+<li>
+<p>Renames of panic methods (<a href="https://github.com/rust-lang/rfcs/pull/3218#issuecomment-1010084722">inspiration</a>)</p>
+<table><thead><tr><th>current</th><th>wish</th></tr></thead><tbody>
+<tr><td>foo.unwrap</td><td>(remove)</td></tr>
+<tr><td>foo.expect("message")</td><td>foo.or_panic("message")</td></tr>
+<tr><td>foo.unwrap_or</td><td>foo.or</td></tr>
+<tr><td>foo.unwrap_or_default</td><td>foo.or_default</td></tr>
+<tr><td>foo.unwrap_or_else</td><td>foo.or_else</td></tr>
+</tbody></table>
+<p>It feels somewhat implicit, but maybe not so bad.</p>
+</li>
+</ul>
+
+    </div>
+
+    
+        <footer>
+            <hr>
+            <p>
+                
+                
+                
+                    
+                    tagged
+                    
+                        <a href="https://tshepang.github.io/tags/rust/">Rust</a>
+                        
+                    
+                
+            </p>
+            
+            
+        </footer>
+    
+</article>
+
+
+
+  <!-- optional scripts -->
+  
+  
+
+  
+
+  
+<script type="text/javascript" src="https://tshepang.github.io/elasticlunr.min.js"></script>
+<script type="text/javascript" src="https://tshepang.github.io/js/search.js"></script>
+
+
+  
+</body>
+
+</html>

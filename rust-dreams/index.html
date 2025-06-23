@@ -75,24 +75,144 @@
     <header>
         <h1 itemprop="headline">Rust dreams</h1>
         <span class="muted">
-    2023-11-29
+    2025-06-23
 </span>
     </header>
     <div itemprop="articleBody">
       <br>
-      <p>My ideal computing environment, for all device types (from servers to embedded):</p>
+      <p>(<em>see <a href="https://tshepang.github.io/rust-std-dreams/">Rust std dreams</a> for a similar list, but for the standard library</em>)</p>
+<p>There is a strong commitment for Rust not to break backwards compatibility,
+meaning that all code that compiled with Rust v1.0 should compile with all
+future Rust versions, all but for exceptional circumstances.
+The effort is commendable, and results in kool things like <a href="https://doc.rust-lang.org/edition-guide/editions">Editions</a>,
+but mistakes are bound to happen that cannot be fixed with such.
+That is, I wish we will have a breaking release at some point,
+and the pain of such a breaking change could be relieved/eliminated with
+careful planning and migration tooling.</p>
+<p>That said,
+following are my favorite breaking things I want in the Rust language
+(and many are much too outrageous to ever be seriously considered).</p>
 <ul>
-<li>processors are <a href="https://riscv.org/risc-v-isa">RISC-V</a></li>
-<li>OS is <a href="https://github.com/theseus-os/Theseus">Theseus</a>
-(excluding some embedded systems where there is only a single application)
-<ul>
-<li>the next best thing is having <a href="https://www.redox-os.org">Redox OS</a> reach mainstream usage</li>
-<li>the next best thing after that is having <a href="https://www.memorysafety.org/blog/memory-safety-in-linux-kernel">Rust in Linux kernel</a>,
-which would require the least effort of the options above</li>
-</ul>
+<li>
+<p>Assigning values to struct bindings should use the equal sign, not
+the colon:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">// now
+</span><span>Shoe { size: </span><span style="color:#d08770;">10</span><span>, style: &quot;</span><span style="color:#a3be8c;">sneaker</span><span>&quot; };
+</span><span style="color:#65737e;">// dream
+</span><span>Shoe { size = </span><span style="color:#d08770;">10</span><span>, style = &quot;</span><span style="color:#a3be8c;">sneaker</span><span>&quot; };
+</span></code></pre>
+<p>This would be consistent with the rest of the language.</p>
 </li>
-<li><a href="https://github.com/bytecodealliance/rustix">rustix</a> (and <a href="https://github.com/sunfishcode/mustang">Mustang</a> / <a href="https://github.com/sunfishcode/eyra">Eyra</a>) are used to help run POSIX apps</li>
-<li><a href="https://github.com/bytecodealliance/wasmtime/tree/main/cranelift">Cranelift</a> is used to generate machine code, for I want C++ (LLVM) off my tooling</li>
+<li>
+<p>It would be nice to make the language a little smaller by unifying syntax for
+functions and closures (<a href="https://twitter.com/brundolfsmith/status/1610431400209158144">inspiration</a>).</p>
+<p>A closure syntax looks like this:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">square </span><span>= |</span><span style="color:#bf616a;">number</span><span>: </span><span style="color:#b48ead;">i32</span><span>| {
+</span><span>        number * number
+</span><span>    };
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#96b5b4;">square</span><span>(</span><span style="color:#d08770;">4</span><span>));
+</span><span>}
+</span></code></pre>
+<p>A function for same looks like this:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">square</span><span>(</span><span style="color:#bf616a;">number</span><span>: </span><span style="color:#b48ead;">i32</span><span>) -&gt; </span><span style="color:#b48ead;">i32 </span><span>{
+</span><span>    number * number
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#96b5b4;">square</span><span>(</span><span style="color:#d08770;">4</span><span>));
+</span><span>}
+</span></code></pre>
+<p>Imagine if you could have this instead:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let</span><span> square: |</span><span style="color:#bf616a;">number</span><span>: </span><span style="color:#b48ead;">i32</span><span>| -&gt; </span><span style="color:#b48ead;">i32 </span><span>= {
+</span><span>    number * number
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#96b5b4;">square</span><span>(</span><span style="color:#d08770;">4</span><span>));
+</span><span>}
+</span></code></pre>
+<p>It is a bit more heavy on tokens
+(there is an extra <code>:</code> and there is a <code>=</code>),
+but it also means one less keyword (<code>fn</code>),
+and less syntax to learn for new users.</p>
+<p>As an additional example,
+this is what a function would look like if it returned nothing:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let</span><span> show_square: |</span><span style="color:#bf616a;">number</span><span>: </span><span style="color:#b48ead;">i32</span><span>| = {
+</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, number * number);
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#96b5b4;">show_square</span><span>(</span><span style="color:#d08770;">4</span><span>);
+</span><span>}
+</span></code></pre>
+<p>As a final note on this one,
+this is what an async function would look like
+(<a href="https://hachyderm.io/@kevinmehall/111065682919309293">inspiration</a>):</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let</span><span> show_square: |</span><span style="color:#bf616a;">number</span><span>: </span><span style="color:#b48ead;">i32</span><span>| -&gt; </span><span style="color:#b48ead;">i32 </span><span>= async {
+</span><span>    ...
+</span><span>}
+</span></code></pre>
+</li>
+<li>
+<p>Perhaps ridiculous,
+but what if we got rid of <code>struct</code> and <code>enum</code> keywords,
+where the structure of the types is instead inferred:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">// current
+</span><span style="color:#b48ead;">struct </span><span>Character {
+</span><span>  </span><span style="color:#bf616a;">name</span><span>: String,
+</span><span>  </span><span style="color:#bf616a;">kind</span><span>: Kind,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">enum </span><span>Kind {
+</span><span>  Good,
+</span><span>  Bad,
+</span><span>  Ugly(Detail),
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">struct </span><span>Detail;
+</span><span>
+</span><span style="color:#65737e;">// wish
+</span><span style="color:#b48ead;">type </span><span>Character = {
+</span><span>  name: String,
+</span><span>  kind: Kind,
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">type </span><span>Kind = {
+</span><span>  Good,
+</span><span>  Bad,
+</span><span>  Ugly(Detail), </span><span style="color:#65737e;">// looks like a struct with an unnamed field
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">type </span><span>Detail; </span><span style="color:#65737e;">// implicitly a struct
+</span><span style="color:#b48ead;">type </span><span>StructWithUnnamedFields(String, Kind);
+</span><span>
+</span><span style="color:#65737e;">// and unions are a special case, so we use this new syntax...
+</span><span style="color:#b48ead;">type </span><span>SomeUnion = union {
+</span><span>    integer: </span><span style="color:#b48ead;">u32</span><span>,
+</span><span>    float: </span><span style="color:#b48ead;">f32</span><span>,
+</span><span>}
+</span></code></pre>
+<p>This brings the syntax close to type aliases.</p>
+</li>
+<li>
+<p>Replace underscores (_) with dashes (-) in bindings/identifers:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">// current
+</span><span style="color:#b48ead;">let</span><span> we_dream;
+</span><span>
+</span><span style="color:#65737e;">// wish
+</span><span style="color:#b48ead;">let</span><span> we-dream;
+</span></code></pre>
+<p>That is a lot more pretty,
+but would disallow math operations without spaces,
+like <code>one-number - another-number</code>.</p>
+</li>
+<li>
+<p>Remove re-exports (<a href="https://phanpy.social/#/hachyderm.io/s/114360667953868210">inspiration</a>)</p>
+<p>This would make it more clear where functionality comes from.
+Not sure the convenience of not having to explicitly manage a dependency
+is worth the feature.</p>
+</li>
 </ul>
 
     </div>
