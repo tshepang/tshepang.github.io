@@ -24,20 +24,38 @@
         
         <content type="html" xml:base="https://tshepang.github.io/ambient-ci-notes/">&lt;p&gt;I been exploring &lt;a href=&quot;https:&#x2F;&#x2F;app.radicle.at&#x2F;nodes&#x2F;seed.radicle.at&#x2F;rad:zwPaQSTBX8hktn22F6tHAZSFH2Fh&quot;&gt;Ambient CI&lt;&#x2F;a&gt; for some weeks now, for use with &lt;a href=&quot;https:&#x2F;&#x2F;radicle.xyz&quot;&gt;Radicle&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;ul&gt;
-&lt;li&gt;Install deps (see project README)&lt;&#x2F;li&gt;
-&lt;li&gt;Install Ambient (it is a Rust project, but Debian packages are also available)&lt;&#x2F;li&gt;
-&lt;li&gt;Create OS user (&lt;code&gt;adduser rad-ci&lt;&#x2F;code&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;Add that user (CI user) to &lt;code&gt;kvm&lt;&#x2F;code&gt; group (&lt;code&gt;adduer rad-ci kvm&lt;&#x2F;code&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;Install Rust toolchain &lt;a href=&quot;https:&#x2F;&#x2F;rustup.rs&quot;&gt;with rustup&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;Create directoroy in CI user home, &lt;code&gt;srv&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;Download &lt;a href=&quot;https:&#x2F;&#x2F;files.liw.fi&#x2F;ambient&quot;&gt;a QEMU image&lt;&#x2F;a&gt; which will provide an isolated environment where the CI runs&lt;&#x2F;li&gt;
-&lt;li&gt;Create Ambient config in it, &lt;code&gt;&quot;&#x2F;home&#x2F;rad-ci&#x2F;srv&#x2F;ambient-ci.yaml&quot;&lt;&#x2F;code&gt;&lt;pre data-lang=&quot;yaml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;image&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;home&#x2F;rad-ci&#x2F;ambient.qcow2
+&lt;li&gt;
+&lt;p&gt;Install deps (see project README)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Install Ambient (it is a Rust project, but Debian packages are also available)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Create OS user (&lt;code&gt;adduser rad-ci&lt;&#x2F;code&gt;)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Add that user (CI user) to &lt;code&gt;kvm&lt;&#x2F;code&gt; group (&lt;code&gt;adduer rad-ci kvm&lt;&#x2F;code&gt;)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Install Rust toolchain &lt;a href=&quot;https:&#x2F;&#x2F;rustup.rs&quot;&gt;with rustup&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Create directoroy in CI user home, &lt;code&gt;srv&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Download &lt;a href=&quot;https:&#x2F;&#x2F;files.liw.fi&#x2F;ambient&quot;&gt;a QEMU image&lt;&#x2F;a&gt; which will provide an isolated environment where the CI runs&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Create Ambient config in it, &lt;code&gt;&quot;&#x2F;home&#x2F;rad-ci&#x2F;srv&#x2F;ambient-ci.yaml&quot;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;yaml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;image&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;home&#x2F;rad-ci&#x2F;ambient.qcow2
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;logdir&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;home&#x2F;rad-ci&#x2F;srv&#x2F;http&#x2F;ambient-log
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;home&#x2F;rad-ci&#x2F;srv&#x2F;ambient-ci.log
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;base_url&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;http:&#x2F;&#x2F;localhost:8080&#x2F;ambient-log
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;&#x2F;li&gt;
-&lt;li&gt;Create CI broker config, also in the same dir, &lt;code&gt;&quot;&#x2F;home&#x2F;rad-ci&#x2F;srv&#x2F;ci-broker.yaml&quot;&lt;&#x2F;code&gt;&lt;pre data-lang=&quot;yaml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;db&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;home&#x2F;rad-ci&#x2F;srv&#x2F;ci-broker.db
+&lt;li&gt;
+&lt;p&gt;Create CI broker config, also in the same dir, &lt;code&gt;&quot;&#x2F;home&#x2F;rad-ci&#x2F;srv&#x2F;ci-broker.yaml&quot;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;yaml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;db&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;home&#x2F;rad-ci&#x2F;srv&#x2F;ci-broker.db
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;report_dir&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;home&#x2F;rad-ci&#x2F;srv&#x2F;http
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;queue_len_interval&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;1min
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;adapters&lt;&#x2F;span&gt;&lt;span&gt;:
@@ -61,22 +79,34 @@
 &lt;&#x2F;span&gt;&lt;span&gt;      - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;!Node &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;z6MkfPSKW7AgQqXSi8fgEJMduHpm9ABmsPYwPhMeF7PssonK
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;&#x2F;li&gt;
-&lt;li&gt;Create Radicle node for CI user (&lt;code&gt;sudo --user rad-ci rad auth&lt;&#x2F;code&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;Start Radicle node for CI user (&lt;code&gt;sudo --user rad-ci rad node start&lt;&#x2F;code&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;Seed repos that are to be watched for CI action (&lt;code&gt;sudo --user rad-ci rad seed $RID&lt;&#x2F;code&gt;),
-where example &lt;code&gt;$RID&lt;&#x2F;code&gt; is &lt;code&gt;z495gX4yCu5U8PmWBNiGHWEn9wBuz&lt;&#x2F;code&gt;, my blog&lt;&#x2F;li&gt;
-&lt;li&gt;Run Ambient&lt;pre data-lang=&quot;text&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-text &quot;&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;sudo --login --user rad-ci \
+&lt;li&gt;
+&lt;p&gt;Create Radicle node for CI user (&lt;code&gt;sudo --user rad-ci rad auth&lt;&#x2F;code&gt;)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Start Radicle node for CI user (&lt;code&gt;sudo --user rad-ci rad node start&lt;&#x2F;code&gt;)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Seed repos that are to be watched for CI action (&lt;code&gt;sudo --user rad-ci rad seed $RID&lt;&#x2F;code&gt;),
+where example &lt;code&gt;$RID&lt;&#x2F;code&gt; is &lt;code&gt;z495gX4yCu5U8PmWBNiGHWEn9wBuz&lt;&#x2F;code&gt;, my blog&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Run Ambient&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;text&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-text &quot;&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;sudo --login --user rad-ci \
 &lt;&#x2F;span&gt;&lt;span&gt;  cib \
 &lt;&#x2F;span&gt;&lt;span&gt;  --config srv&#x2F;ci-broker.yaml \
 &lt;&#x2F;span&gt;&lt;span&gt;  --log-level info \
 &lt;&#x2F;span&gt;&lt;span&gt;  process-events
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;&#x2F;li&gt;
-&lt;li&gt;Watch logs&lt;pre data-lang=&quot;text&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-text &quot;&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;sudo --login --user rad-ci tail -F srv&#x2F;ambient-ci.lo
+&lt;li&gt;
+&lt;p&gt;Watch logs&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;text&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-text &quot;&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;sudo --login --user rad-ci tail -F srv&#x2F;ambient-ci.lo
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;&#x2F;li&gt;
-&lt;li&gt;Ensure some repo on node listed in CI broker config has as &lt;code&gt;&quot;.radicle&#x2F;ambient.yaml&quot;&lt;&#x2F;code&gt; file,
-trigger CI action, and watch the logs.&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Ensure some repo on node listed in CI broker config has as &lt;code&gt;&quot;.radicle&#x2F;ambient.yaml&quot;&lt;&#x2F;code&gt; file,
+trigger CI action, and watch the logs.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
         

@@ -82,20 +82,38 @@
       <br>
       <p>I been exploring <a href="https://app.radicle.at/nodes/seed.radicle.at/rad:zwPaQSTBX8hktn22F6tHAZSFH2Fh">Ambient CI</a> for some weeks now, for use with <a href="https://radicle.xyz">Radicle</a>.</p>
 <ul>
-<li>Install deps (see project README)</li>
-<li>Install Ambient (it is a Rust project, but Debian packages are also available)</li>
-<li>Create OS user (<code>adduser rad-ci</code>)</li>
-<li>Add that user (CI user) to <code>kvm</code> group (<code>adduer rad-ci kvm</code>)</li>
-<li>Install Rust toolchain <a href="https://rustup.rs">with rustup</a></li>
-<li>Create directoroy in CI user home, <code>srv</code></li>
-<li>Download <a href="https://files.liw.fi/ambient">a QEMU image</a> which will provide an isolated environment where the CI runs</li>
-<li>Create Ambient config in it, <code>"/home/rad-ci/srv/ambient-ci.yaml"</code><pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#bf616a;">image</span><span>: </span><span style="color:#a3be8c;">/home/rad-ci/ambient.qcow2
+<li>
+<p>Install deps (see project README)</p>
+</li>
+<li>
+<p>Install Ambient (it is a Rust project, but Debian packages are also available)</p>
+</li>
+<li>
+<p>Create OS user (<code>adduser rad-ci</code>)</p>
+</li>
+<li>
+<p>Add that user (CI user) to <code>kvm</code> group (<code>adduer rad-ci kvm</code>)</p>
+</li>
+<li>
+<p>Install Rust toolchain <a href="https://rustup.rs">with rustup</a></p>
+</li>
+<li>
+<p>Create directoroy in CI user home, <code>srv</code></p>
+</li>
+<li>
+<p>Download <a href="https://files.liw.fi/ambient">a QEMU image</a> which will provide an isolated environment where the CI runs</p>
+</li>
+<li>
+<p>Create Ambient config in it, <code>"/home/rad-ci/srv/ambient-ci.yaml"</code></p>
+<pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#bf616a;">image</span><span>: </span><span style="color:#a3be8c;">/home/rad-ci/ambient.qcow2
 </span><span style="color:#bf616a;">logdir</span><span>: </span><span style="color:#a3be8c;">/home/rad-ci/srv/http/ambient-log
 </span><span style="color:#bf616a;">log</span><span>: </span><span style="color:#a3be8c;">/home/rad-ci/srv/ambient-ci.log
 </span><span style="color:#bf616a;">base_url</span><span>: </span><span style="color:#a3be8c;">http://localhost:8080/ambient-log
 </span></code></pre>
 </li>
-<li>Create CI broker config, also in the same dir, <code>"/home/rad-ci/srv/ci-broker.yaml"</code><pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#bf616a;">db</span><span>: </span><span style="color:#a3be8c;">/home/rad-ci/srv/ci-broker.db
+<li>
+<p>Create CI broker config, also in the same dir, <code>"/home/rad-ci/srv/ci-broker.yaml"</code></p>
+<pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#bf616a;">db</span><span>: </span><span style="color:#a3be8c;">/home/rad-ci/srv/ci-broker.db
 </span><span style="color:#bf616a;">report_dir</span><span>: </span><span style="color:#a3be8c;">/home/rad-ci/srv/http
 </span><span style="color:#bf616a;">queue_len_interval</span><span>: </span><span style="color:#a3be8c;">1min
 </span><span style="color:#bf616a;">adapters</span><span>:
@@ -119,22 +137,34 @@
 </span><span>      - </span><span style="color:#b48ead;">!Node </span><span style="color:#a3be8c;">z6MkfPSKW7AgQqXSi8fgEJMduHpm9ABmsPYwPhMeF7PssonK
 </span></code></pre>
 </li>
-<li>Create Radicle node for CI user (<code>sudo --user rad-ci rad auth</code>)</li>
-<li>Start Radicle node for CI user (<code>sudo --user rad-ci rad node start</code>)</li>
-<li>Seed repos that are to be watched for CI action (<code>sudo --user rad-ci rad seed $RID</code>),
-where example <code>$RID</code> is <code>z495gX4yCu5U8PmWBNiGHWEn9wBuz</code>, my blog</li>
-<li>Run Ambient<pre data-lang="text" style="background-color:#2b303b;color:#c0c5ce;" class="language-text "><code class="language-text" data-lang="text"><span>sudo --login --user rad-ci \
+<li>
+<p>Create Radicle node for CI user (<code>sudo --user rad-ci rad auth</code>)</p>
+</li>
+<li>
+<p>Start Radicle node for CI user (<code>sudo --user rad-ci rad node start</code>)</p>
+</li>
+<li>
+<p>Seed repos that are to be watched for CI action (<code>sudo --user rad-ci rad seed $RID</code>),
+where example <code>$RID</code> is <code>z495gX4yCu5U8PmWBNiGHWEn9wBuz</code>, my blog</p>
+</li>
+<li>
+<p>Run Ambient</p>
+<pre data-lang="text" style="background-color:#2b303b;color:#c0c5ce;" class="language-text "><code class="language-text" data-lang="text"><span>sudo --login --user rad-ci \
 </span><span>  cib \
 </span><span>  --config srv/ci-broker.yaml \
 </span><span>  --log-level info \
 </span><span>  process-events
 </span></code></pre>
 </li>
-<li>Watch logs<pre data-lang="text" style="background-color:#2b303b;color:#c0c5ce;" class="language-text "><code class="language-text" data-lang="text"><span>sudo --login --user rad-ci tail -F srv/ambient-ci.lo
+<li>
+<p>Watch logs</p>
+<pre data-lang="text" style="background-color:#2b303b;color:#c0c5ce;" class="language-text "><code class="language-text" data-lang="text"><span>sudo --login --user rad-ci tail -F srv/ambient-ci.lo
 </span></code></pre>
 </li>
-<li>Ensure some repo on node listed in CI broker config has as <code>".radicle/ambient.yaml"</code> file,
-trigger CI action, and watch the logs.</li>
+<li>
+<p>Ensure some repo on node listed in CI broker config has as <code>".radicle/ambient.yaml"</code> file,
+trigger CI action, and watch the logs.</p>
+</li>
 </ul>
 
     </div>
