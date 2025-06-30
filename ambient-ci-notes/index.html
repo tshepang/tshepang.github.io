@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  
+  
+
+  <title>
+    
+    Ambient CI notes
+    
+</title>
+  <link rel="alternate" type="application/atom+xml" title="Tshepang logs Atom Feed" href="https://tshepang.github.io/atom.xml" />
+
+  
+  <link rel="stylesheet" href="https://tshepang.github.io/site.css">
+  
+
+  
+  
+</head>
+
+<body class="hack dark main container">
+  
+    
+        
+  
+  <header class="nav-header">
+    <nav itemscope itemtype="http://schema.org/SiteNavigationElement" class="navbar">
+      <div class="nav-links">
+        
+        <a itemprop="url"
+          class=""
+          href="https://tshepang.github.io/about-me">
+          <span itemprop="name">about</span></a>
+        
+        <a itemprop="url"
+          class=""
+          href="https://tshepang.github.io/tags">
+          <span itemprop="name">tags</span></a>
+        
+        <a itemprop="url"
+          class=""
+          href="https://tshepang.github.io/categories/movies">
+          <span itemprop="name">movies</span></a>
+        
+      </div>
+    </nav>
+    
+    <div class="search-container">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="search-icon">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+      </svg>
+      <input type="text" id="search" placeholder="Search...">
+      <div class="search-results">
+        <div class="search-results__items"></div>
+      </div>
+    </div>
+    
+
+  </header>
+  
+  
+    
+
+<article itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1 itemprop="headline">Ambient CI notes</h1>
+        <span class="muted">
+    2025-06-30
+</span>
+    </header>
+    <div itemprop="articleBody">
+      <br>
+      <p>I been exploring <a href="https://app.radicle.at/nodes/seed.radicle.at/rad:zwPaQSTBX8hktn22F6tHAZSFH2Fh">Ambient CI</a> for some weeks now, for use with <a href="https://radicle.xyz">Radicle</a>.</p>
+<p>My setup:</p>
+<ul>
+<li>Install deps (see project README)</li>
+<li>Install Ambient (it is a Rust project, but Debian packages are also available)</li>
+<li>Create OS user (<code>adduser rad-ci</code>)</li>
+<li>Add that user (CI user) to <code>kvm</code> group (<code>adduer rad-ci kvm</code>)</li>
+<li>Install Rust toolchain <a href="https://rustup.rs">with rustup</a></li>
+<li>Create directoroy in CI user home, <code>srv</code></li>
+<li>Download <a href="https://files.liw.fi/ambient">a QEMU image</a> which will provide an isolated environment where the CI runs</li>
+<li>Create Ambient config in it, <code>"/home/rad-ci/srv/ambient-ci.yaml"</code><pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#bf616a;">image</span><span>: </span><span style="color:#a3be8c;">/home/rad-ci/ambient.qcow2
+</span><span style="color:#bf616a;">logdir</span><span>: </span><span style="color:#a3be8c;">/home/rad-ci/srv/http/ambient-log
+</span><span style="color:#bf616a;">log</span><span>: </span><span style="color:#a3be8c;">/home/rad-ci/srv/ambient-ci.log
+</span><span style="color:#bf616a;">base_url</span><span>: </span><span style="color:#a3be8c;">http://localhost:8080/ambient-log
+</span></code></pre>
+</li>
+<li>Create CI broker config, also in the same dir, <code>"/home/rad-ci/srv/ci-broker.yaml"</code><pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#bf616a;">db</span><span>: </span><span style="color:#a3be8c;">/home/rad-ci/srv/ci-broker.db
+</span><span style="color:#bf616a;">report_dir</span><span>: </span><span style="color:#a3be8c;">/home/rad-ci/srv/http
+</span><span style="color:#bf616a;">queue_len_interval</span><span>: </span><span style="color:#a3be8c;">1min
+</span><span style="color:#bf616a;">adapters</span><span>:
+</span><span>  </span><span style="color:#bf616a;">ambient</span><span>:
+</span><span>    </span><span style="color:#bf616a;">command</span><span>: </span><span style="color:#a3be8c;">/bin/radicle-ci-ambient
+</span><span>    </span><span style="color:#bf616a;">env</span><span>:
+</span><span>      </span><span style="color:#bf616a;">RADICLE_CI_AMBIENT</span><span>: </span><span style="color:#a3be8c;">/home/rad-ci/srv/ambient-ci.yaml
+</span><span>      </span><span style="color:#bf616a;">RADICLE_CI_BROKER_WEBROOT</span><span>: </span><span style="color:#a3be8c;">/home/rad-ci/srv/pages/ci-broker
+</span><span>      </span><span style="color:#bf616a;">PATH</span><span>: </span><span style="color:#a3be8c;">/bin:/usr/local/bin:/home/rad-ci/.cargo/bin
+</span><span style="color:#bf616a;">triggers</span><span>:
+</span><span>  - </span><span style="color:#bf616a;">adapter</span><span>: </span><span style="color:#a3be8c;">ambient
+</span><span>    </span><span style="color:#bf616a;">filters</span><span>:
+</span><span>    - </span><span style="color:#b48ead;">!And
+</span><span>      </span><span style="color:#65737e;"># Run CI when repo has this file
+</span><span>      - </span><span style="color:#b48ead;">!HasFile </span><span>&quot;</span><span style="color:#a3be8c;">.radicle/ambient.yaml</span><span>&quot;
+</span><span>      - </span><span style="color:#b48ead;">!Or
+</span><span>        - </span><span style="color:#b48ead;">!DefaultBranch
+</span><span>        - </span><span style="color:#b48ead;">!PatchCreated
+</span><span>        - </span><span style="color:#b48ead;">!PatchUpdated
+</span><span>      </span><span style="color:#65737e;"># Rust CI when any of the above 3 events originated from this node
+</span><span>      - </span><span style="color:#b48ead;">!Node </span><span style="color:#a3be8c;">z6MkfPSKW7AgQqXSi8fgEJMduHpm9ABmsPYwPhMeF7PssonK
+</span></code></pre>
+</li>
+<li>Create Radicle node for CI user (<code>sudo --user rad-ci rad auth</code>)</li>
+<li>Start Radicle node for CI user (<code>sudo --user rad-ci rad node start</code>)</li>
+<li>Seed repos that are to be watched for CI action (<code>sudo --user rad-ci rad seed $RID</code>),
+where example <code>$RID</code> is <code>z495gX4yCu5U8PmWBNiGHWEn9wBuz</code>, my blog</li>
+<li>Run Ambient<pre data-lang="text" style="background-color:#2b303b;color:#c0c5ce;" class="language-text "><code class="language-text" data-lang="text"><span>sudo --login --user rad-ci \
+</span><span>  cib \
+</span><span>  --config srv/ci-broker.yaml \
+</span><span>  --log-level info \
+</span><span>  process-events
+</span></code></pre>
+</li>
+<li>Watch logs<pre data-lang="text" style="background-color:#2b303b;color:#c0c5ce;" class="language-text "><code class="language-text" data-lang="text"><span>sudo --login --user rad-ci tail -F srv/ambient-ci.lo
+</span></code></pre>
+</li>
+<li>Ensure some repo on node listed in CI broker config has as <code>".radicle/ambient.yaml"</code> file,
+trigger CI action, and watch the logs.</li>
+</ul>
+
+    </div>
+
+    
+        <footer>
+            <hr>
+            <p>
+                
+                
+                
+                    
+                    tagged
+                    
+                        <a href="https://tshepang.github.io/tags/untagged/">untagged</a>
+                        
+                    
+                
+            </p>
+            
+            
+        </footer>
+    
+</article>
+
+
+
+  <!-- optional scripts -->
+  
+  
+
+  
+
+  
+<script type="text/javascript" src="https://tshepang.github.io/elasticlunr.min.js"></script>
+<script type="text/javascript" src="https://tshepang.github.io/js/search.js"></script>
+
+
+  
+</body>
+
+</html>

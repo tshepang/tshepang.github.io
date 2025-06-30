@@ -4,8 +4,84 @@
     <link rel="self" type="application/atom+xml" href="https://tshepang.github.io/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://tshepang.github.io"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-06-27T00:00:00+00:00</updated>
+    <updated>2025-06-30T00:00:00+00:00</updated>
     <id>https://tshepang.github.io/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Ambient CI notes</title>
+        <published>2025-06-30T00:00:00+00:00</published>
+        <updated>2025-06-30T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tshepang.github.io/ambient-ci-notes/"/>
+        <id>https://tshepang.github.io/ambient-ci-notes/</id>
+        
+        <content type="html" xml:base="https://tshepang.github.io/ambient-ci-notes/">&lt;p&gt;I been exploring &lt;a href=&quot;https:&#x2F;&#x2F;app.radicle.at&#x2F;nodes&#x2F;seed.radicle.at&#x2F;rad:zwPaQSTBX8hktn22F6tHAZSFH2Fh&quot;&gt;Ambient CI&lt;&#x2F;a&gt; for some weeks now, for use with &lt;a href=&quot;https:&#x2F;&#x2F;radicle.xyz&quot;&gt;Radicle&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;My setup:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install deps (see project README)&lt;&#x2F;li&gt;
+&lt;li&gt;Install Ambient (it is a Rust project, but Debian packages are also available)&lt;&#x2F;li&gt;
+&lt;li&gt;Create OS user (&lt;code&gt;adduser rad-ci&lt;&#x2F;code&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Add that user (CI user) to &lt;code&gt;kvm&lt;&#x2F;code&gt; group (&lt;code&gt;adduer rad-ci kvm&lt;&#x2F;code&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Install Rust toolchain &lt;a href=&quot;https:&#x2F;&#x2F;rustup.rs&quot;&gt;with rustup&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Create directoroy in CI user home, &lt;code&gt;srv&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Download &lt;a href=&quot;https:&#x2F;&#x2F;files.liw.fi&#x2F;ambient&quot;&gt;a QEMU image&lt;&#x2F;a&gt; which will provide an isolated environment where the CI runs&lt;&#x2F;li&gt;
+&lt;li&gt;Create Ambient config in it, &lt;code&gt;&quot;&#x2F;home&#x2F;rad-ci&#x2F;srv&#x2F;ambient-ci.yaml&quot;&lt;&#x2F;code&gt;&lt;pre data-lang=&quot;yaml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;image&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;home&#x2F;rad-ci&#x2F;ambient.qcow2
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;logdir&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;home&#x2F;rad-ci&#x2F;srv&#x2F;http&#x2F;ambient-log
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;home&#x2F;rad-ci&#x2F;srv&#x2F;ambient-ci.log
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;base_url&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;http:&#x2F;&#x2F;localhost:8080&#x2F;ambient-log
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Create CI broker config, also in the same dir, &lt;code&gt;&quot;&#x2F;home&#x2F;rad-ci&#x2F;srv&#x2F;ci-broker.yaml&quot;&lt;&#x2F;code&gt;&lt;pre data-lang=&quot;yaml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;db&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;home&#x2F;rad-ci&#x2F;srv&#x2F;ci-broker.db
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;report_dir&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;home&#x2F;rad-ci&#x2F;srv&#x2F;http
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;queue_len_interval&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;1min
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;adapters&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;ambient&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;command&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;bin&#x2F;radicle-ci-ambient
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;env&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;RADICLE_CI_AMBIENT&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;home&#x2F;rad-ci&#x2F;srv&#x2F;ambient-ci.yaml
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;RADICLE_CI_BROKER_WEBROOT&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;home&#x2F;rad-ci&#x2F;srv&#x2F;pages&#x2F;ci-broker
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;PATH&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;bin:&#x2F;usr&#x2F;local&#x2F;bin:&#x2F;home&#x2F;rad-ci&#x2F;.cargo&#x2F;bin
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;triggers&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;adapter&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;ambient
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;filters&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;!And
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Run CI when repo has this file
+&lt;&#x2F;span&gt;&lt;span&gt;      - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;!HasFile &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;.radicle&#x2F;ambient.yaml&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;      - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;!Or
+&lt;&#x2F;span&gt;&lt;span&gt;        - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;!DefaultBranch
+&lt;&#x2F;span&gt;&lt;span&gt;        - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;!PatchCreated
+&lt;&#x2F;span&gt;&lt;span&gt;        - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;!PatchUpdated
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Rust CI when any of the above 3 events originated from this node
+&lt;&#x2F;span&gt;&lt;span&gt;      - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;!Node &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;z6MkfPSKW7AgQqXSi8fgEJMduHpm9ABmsPYwPhMeF7PssonK
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Create Radicle node for CI user (&lt;code&gt;sudo --user rad-ci rad auth&lt;&#x2F;code&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Start Radicle node for CI user (&lt;code&gt;sudo --user rad-ci rad node start&lt;&#x2F;code&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Seed repos that are to be watched for CI action (&lt;code&gt;sudo --user rad-ci rad seed $RID&lt;&#x2F;code&gt;),
+where example &lt;code&gt;$RID&lt;&#x2F;code&gt; is &lt;code&gt;z495gX4yCu5U8PmWBNiGHWEn9wBuz&lt;&#x2F;code&gt;, my blog&lt;&#x2F;li&gt;
+&lt;li&gt;Run Ambient&lt;pre data-lang=&quot;text&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-text &quot;&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;sudo --login --user rad-ci \
+&lt;&#x2F;span&gt;&lt;span&gt;  cib \
+&lt;&#x2F;span&gt;&lt;span&gt;  --config srv&#x2F;ci-broker.yaml \
+&lt;&#x2F;span&gt;&lt;span&gt;  --log-level info \
+&lt;&#x2F;span&gt;&lt;span&gt;  process-events
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Watch logs&lt;pre data-lang=&quot;text&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-text &quot;&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;sudo --login --user rad-ci tail -F srv&#x2F;ambient-ci.lo
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Ensure some repo on node listed in CI broker config has as &lt;code&gt;&quot;.radicle&#x2F;ambient.yaml&quot;&lt;&#x2F;code&gt; file,
+trigger CI action, and watch the logs.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>top Kwaito songs</title>
         <published>2025-06-27T00:00:00+00:00</published>
@@ -183,8 +259,8 @@ where the structure of the types is instead inferred:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; we-dream;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;That is a lot more pretty,
-but would disallow math operations without spaces,
-like &lt;code&gt;one-number - another-number&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+but would disallow arithmetic operations without spaces,
+(since &lt;code&gt;-&lt;&#x2F;code&gt; is a subtraction symbol).&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;Remove re-exports (&lt;a href=&quot;https:&#x2F;&#x2F;phanpy.social&#x2F;#&#x2F;hachyderm.io&#x2F;s&#x2F;114360667953868210&quot;&gt;inspiration&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
@@ -768,24 +844,24 @@ is the first, released early 2024&lt;&#x2F;li&gt;
         <link rel="alternate" type="text/html" href="https://tshepang.github.io/playin-with-radicle/"/>
         <id>https://tshepang.github.io/playin-with-radicle/</id>
         
-        <content type="html" xml:base="https://tshepang.github.io/playin-with-radicle/">&lt;p&gt;One thing I wish I discovered more early while exploring Radicle is that
-the simple act of cloning a Radicle repo also automatically seeds it.
-I say this because I went to documentation on creating a seed node,
-and found the requirements onerous (long setup instructions and a stable public ip address),
-which was somewhat discouraging.&lt;&#x2F;p&gt;
-&lt;p&gt;Some kool things:&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://tshepang.github.io/playin-with-radicle/">&lt;p&gt;Some kool things:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;One can open an issue on the command line (&lt;code&gt;rad issue open&lt;&#x2F;code&gt;),
 and needs not be online to do so.&lt;&#x2F;li&gt;
 &lt;li&gt;Similarly, one can open a PR (patch) on the command line,
 also without needing to be online.&lt;&#x2F;li&gt;
-&lt;li&gt;Issues and patches (PRs) are also stored with the rest of the Radicle repo
-(though external to Git repo).&lt;&#x2F;li&gt;
+&lt;li&gt;Issues and patches (PRs) are also stored with the rest of the Radicle repo.&lt;&#x2F;li&gt;
 &lt;li&gt;When working on patches,
 doing a &lt;code&gt;git push --force&lt;&#x2F;code&gt; is not destructive (immutable),
 in that old patch versions are still accessible.
-One can even give a patch version (revision) a description, so as to detail the change.&lt;&#x2F;li&gt;
+One can even give a patch revision a description,
+so as to detail the change.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
+&lt;p&gt;One thing I wish I discovered more early while exploring Radicle is that
+the simple act of cloning a Radicle repo also automatically seeds it.
+I say this because I went to documentation on creating a seed node,
+and found the requirements onerous (long setup instructions and a stable public ip address),
+which was somewhat discouraging.&lt;&#x2F;p&gt;
 </content>
         
     </entry>
@@ -2023,94 +2099,6 @@ to benefit from possible improvements such better codegen.&lt;&#x2F;li&gt;
 unless there are changes in either the dep or the exe.
 This seems reasonable,
 and has no disadvantages compared to static linking.&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Résumé</title>
-        <published>2022-07-24T00:00:00+00:00</published>
-        <updated>2022-07-24T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://tshepang.github.io/resume/"/>
-        <id>https://tshepang.github.io/resume/</id>
-        
-        <content type="html" xml:base="https://tshepang.github.io/resume/">&lt;h2 id=&quot;higher-education&quot;&gt;higher education&lt;&#x2F;h2&gt;
-&lt;p&gt;course: National Diploma in Electronics&lt;&#x2F;p&gt;
-&lt;p&gt;school: &lt;a href=&quot;https:&#x2F;&#x2F;www.tut.ac.za&quot;&gt;Tshwane University of Technology&lt;&#x2F;a&gt; (2001-2003)&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;work-experience&quot;&gt;work experience&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;system-integration-technician-2004-2008&quot;&gt;system integration technician (2004-2008)&lt;&#x2F;h3&gt;
-&lt;p&gt;company: Carl Zeiss Optronics (now &lt;a href=&quot;https:&#x2F;&#x2F;www.hensoldt.net&#x2F;products&#x2F;optronics&quot;&gt;Hensoldt Optronics&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
-&lt;p&gt;duties: integration, assembly, calibration, testing,
-and fault-finding of electro-mechanical airborne surveillance systems&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;software-developer-2008-2012&quot;&gt;software developer (2008-2012)&lt;&#x2F;h3&gt;
-&lt;p&gt;company: &lt;a href=&quot;https:&#x2F;&#x2F;tauspace.com&quot;&gt;Tauspace&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;field: telecoms&lt;&#x2F;p&gt;
-&lt;p&gt;duties: Java, Perl, and Python development&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;software-developer-2012-2016&quot;&gt;software developer (2012-2016)&lt;&#x2F;h3&gt;
-&lt;p&gt;company: &lt;a href=&quot;http:&#x2F;&#x2F;eiq.co.za&quot;&gt;Embedded IQ&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;field: mining&lt;&#x2F;p&gt;
-&lt;p&gt;duties:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;C&#x2F;C++, Python, and Rust development&lt;&#x2F;li&gt;
-&lt;li&gt;system administration&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;software-developer-2016-2021&quot;&gt;software developer (2016-2021)&lt;&#x2F;h3&gt;
-&lt;p&gt;company: &lt;a href=&quot;https:&#x2F;&#x2F;panoptix.co.za&quot;&gt;Panoptix&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;field: networking&lt;&#x2F;p&gt;
-&lt;p&gt;duties:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Rust development, with a bit of shell and Javascript&lt;&#x2F;li&gt;
-&lt;li&gt;system administration&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;software-developer-2021-now&quot;&gt;software developer (2021-now)&lt;&#x2F;h3&gt;
-&lt;p&gt;company: &lt;a href=&quot;https:&#x2F;&#x2F;snode.com&quot;&gt;Snode&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;field: cyber security&lt;&#x2F;p&gt;
-&lt;p&gt;duties:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Go development&lt;&#x2F;li&gt;
-&lt;li&gt;integrating external data sources into company product&lt;&#x2F;li&gt;
-&lt;li&gt;system administration&lt;&#x2F;li&gt;
-&lt;li&gt;data engineering (ELK and Vector)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;public-projects&quot;&gt;public projects&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;docs&quot;&gt;docs&lt;&#x2F;h3&gt;
-&lt;p&gt;I&#x27;ve been known to do much doc work for various projects in the past&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;wiki.gnome.org&#x2F;Projects&#x2F;Tracker&quot;&gt;Tracker&lt;&#x2F;a&gt; - metadata DB and indexer&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;python.org&quot;&gt;CPython&lt;&#x2F;a&gt; - the main&#x2F;reference implementation of Python&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;trypyramid.com&quot;&gt;Pyramid&lt;&#x2F;a&gt; - web framework written in Python&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.org&quot;&gt;Rust project&lt;&#x2F;a&gt; - favorite language&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;mrh&quot;&gt;&lt;a href=&quot;http:&#x2F;&#x2F;github.com&#x2F;tshepang&#x2F;mrh&quot;&gt;mrh&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
-&lt;p&gt;Rust CLI and library that reports on status of Git repos&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;wajig&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gjwgit&#x2F;wajig&quot;&gt;wajig&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
-&lt;p&gt;front-end for Debian package management&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Former maintainer&lt;&#x2F;li&gt;
-&lt;li&gt;Feature additions, general polish, and maintenance&lt;&#x2F;li&gt;
-&lt;li&gt;Python&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;talks&quot;&gt;talks&lt;&#x2F;h2&gt;
-&lt;p&gt;I have so far given 3 talks at conferences:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=Xk5IZOtLUmE&quot;&gt;Syntax conveniences afforded by the Rust compiler&lt;&#x2F;a&gt; (2018): RustBeltRust&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=EZHnzTk8YaU&quot;&gt;Behind the scenes of producing an executable&lt;&#x2F;a&gt; (2018): RustFest (Rome)&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=-PRw8hcyIBI&quot;&gt;exploring the Rust compiler&lt;&#x2F;a&gt; (2020): DevConf ZA&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
         
