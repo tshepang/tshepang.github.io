@@ -180,7 +180,7 @@ where example &lt;code&gt;$RID&lt;&#x2F;code&gt; is &lt;code&gt;z495gX4yCu5U8PmW
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;Run Ambient&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;text&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-text &quot;&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;sudo --login --user rad-ci \
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo --login --user rad-ci \
 &lt;&#x2F;span&gt;&lt;span&gt;  cib \
 &lt;&#x2F;span&gt;&lt;span&gt;  --config srv&#x2F;ci-broker.yaml \
 &lt;&#x2F;span&gt;&lt;span&gt;  --log-level info \
@@ -189,7 +189,7 @@ where example &lt;code&gt;$RID&lt;&#x2F;code&gt; is &lt;code&gt;z495gX4yCu5U8PmW
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;Watch logs&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;text&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-text &quot;&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;sudo --login --user rad-ci tail -F srv&#x2F;ambient-ci.lo
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo --login --user rad-ci tail -F srv&#x2F;ambient-ci.lo
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
