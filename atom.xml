@@ -30,22 +30,17 @@ and one written in Rust.&lt;&#x2F;p&gt;
 particularly ones I only recently started using:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;You can move between tabs quickly with &lt;strong&gt;M-h&lt;&#x2F;strong&gt; (previous tab) or &lt;strong&gt;M-l&lt;&#x2F;strong&gt; (next tab).
-This is far less awkward than &lt;strong&gt;C-t&lt;&#x2F;strong&gt; (tab mode),
+&lt;p&gt;You can move between tabs quickly with &lt;strong&gt;alt-h&lt;&#x2F;strong&gt; (previous tab) or &lt;strong&gt;alt-l&lt;&#x2F;strong&gt; (next tab).
+This is far less awkward than &lt;strong&gt;ctrl-t&lt;&#x2F;strong&gt; (tab mode),
 then one of &lt;strong&gt;h&lt;&#x2F;strong&gt; (previous tab) or &lt;strong&gt;l&lt;&#x2F;strong&gt; (next tab).&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;You can create a throwaway window, which is floating (in the foreground):&lt;&#x2F;p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;C-p w&lt;&#x2F;strong&gt; (press a Ctrl+p combo, then press w)&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;Doing the same key sequence hides it from view.&lt;&#x2F;p&gt;
+&lt;p&gt;You can create a small foreground window with &lt;strong&gt;ctrl-p w&lt;&#x2F;strong&gt; (ctrl-p combo, then &lt;strong&gt;w&lt;&#x2F;strong&gt;).
+Doing the same key sequence hides it from view.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;You can create additional floating windows, which get stacked on top of the previous ones:&lt;&#x2F;p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;M-n&lt;&#x2F;strong&gt; (Alt+n combo)&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
+&lt;p&gt;You can create additional small foreground windows with &lt;strong&gt;alt-n&lt;&#x2F;strong&gt;.
+These get stacked on top of the previous ones.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
