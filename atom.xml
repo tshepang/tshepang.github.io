@@ -7,6 +7,58 @@
     <updated>2025-07-09T00:00:00+00:00</updated>
     <id>https://tshepang.github.io/atom.xml</id>
     <entry xml:lang="en">
+        <title>a shared Zulip instance for Rust meets</title>
+        <published>2025-07-09T00:00:00+00:00</published>
+        <updated>2025-07-09T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tshepang.github.io/a-shared-zulip-instance-for-rust-meets/"/>
+        <id>https://tshepang.github.io/a-shared-zulip-instance-for-rust-meets/</id>
+        
+        <content type="html" xml:base="https://tshepang.github.io/a-shared-zulip-instance-for-rust-meets/">&lt;p&gt;Would be kool to have a shared place for people of various Rust meets around the world.&lt;&#x2F;p&gt;
+&lt;p&gt;An idea I have is that each meet group would have its own channel,
+and then there would be shared channels,
+where people would, for example, share tips on making their meets more inclusive,
+or whatever else.&lt;&#x2F;p&gt;
+&lt;p&gt;A possible structure:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;text&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-text &quot;&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;- misc
+&lt;&#x2F;span&gt;&lt;span&gt;  - news (for sharing some Rust links)
+&lt;&#x2F;span&gt;&lt;span&gt;  - off topic
+&lt;&#x2F;span&gt;&lt;span&gt;- tips
+&lt;&#x2F;span&gt;&lt;span&gt;  - food
+&lt;&#x2F;span&gt;&lt;span&gt;  - attracting talks
+&lt;&#x2F;span&gt;&lt;span&gt;  - ...
+&lt;&#x2F;span&gt;&lt;span&gt;- group&#x2F;johannesburg (a location where meet happens)
+&lt;&#x2F;span&gt;&lt;span&gt;  - 2025-07-08 (notes on an individual meet)
+&lt;&#x2F;span&gt;&lt;span&gt;- group&#x2F;berlin
+&lt;&#x2F;span&gt;&lt;span&gt;  ...
+&lt;&#x2F;span&gt;&lt;span&gt;- group&#x2F;nairobi
+&lt;&#x2F;span&gt;&lt;span&gt;  ...
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;I have created one, &lt;a href=&quot;https:&#x2F;&#x2F;rust-meets.zulipchat.com&quot;&gt;https:&#x2F;&#x2F;rust-meets.zulipchat.com&lt;&#x2F;a&gt;.
+Let&#x27;s see how far that goes.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Why &lt;a href=&quot;https:&#x2F;&#x2F;zulip.com&quot;&gt;Zulip&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;It is used by Rust makers (&lt;a href=&quot;https::&#x2F;rust-lang.zulipchat.com&quot;&gt;instance&lt;&#x2F;a&gt;),
+as well as some adjacent communities,
+like &lt;a href=&quot;https:&#x2F;&#x2F;rust-for-linux.com&quot;&gt;Rust for Linux&lt;&#x2F;a&gt; (&lt;a href=&quot;https:&#x2F;&#x2F;rust-for-linux.zulipchat.com&quot;&gt;instance&lt;&#x2F;a&gt;)
+and &lt;a href=&quot;https:&#x2F;&#x2F;servo.org&quot;&gt;Servo&lt;&#x2F;a&gt; (&lt;a href=&quot;https:&#x2F;&#x2F;servo.zulipchat.com&quot;&gt;instance&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;It is open source&lt;&#x2F;li&gt;
+&lt;li&gt;It has amazing usability (or at least the best software of its type I used yet)&lt;&#x2F;li&gt;
+&lt;li&gt;It is developed in public (see &lt;a href=&quot;https:&#x2F;&#x2F;chat.zulip.org&quot;&gt;https:&#x2F;&#x2F;chat.zulip.org&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
         <title>favorite software people</title>
         <published>2025-07-09T00:00:00+00:00</published>
         <updated>2025-07-09T00:00:00+00:00</updated>
