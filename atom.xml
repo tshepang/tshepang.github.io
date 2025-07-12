@@ -4,8 +4,40 @@
     <link rel="self" type="application/atom+xml" href="https://tshepang.github.io/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://tshepang.github.io"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-07-09T00:00:00+00:00</updated>
+    <updated>2025-07-12T00:00:00+00:00</updated>
     <id>https://tshepang.github.io/atom.xml</id>
+    <entry xml:lang="en">
+        <title>favorite FLOSS</title>
+        <published>2025-07-12T00:00:00+00:00</published>
+        <updated>2025-07-12T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tshepang.github.io/favorite-floss/"/>
+        <id>https://tshepang.github.io/favorite-floss/</id>
+        
+        <content type="html" xml:base="https://tshepang.github.io/favorite-floss/">&lt;p&gt;For a piece of &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Free_and_open-source_software&quot;&gt;FLOSS&lt;&#x2F;a&gt; (free&#x2F;libre and open source software) to be here,
+it has to both be personally useful, and I have to like it a-lot.&lt;&#x2F;p&gt;
+&lt;p&gt;The following applies to use on lap&#x2F;desk&#x2F;rack computers, unless specified:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;environment&lt;&#x2F;strong&gt;: Debian, &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;nifty-zellij&#x2F;&quot;&gt;Zellij&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;fishshell.com&quot;&gt;fish&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;web browser&lt;&#x2F;strong&gt;: Firefox (also hand computer)&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;text editor&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;helix-editor.com&quot;&gt;Helix&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;development&lt;&#x2F;strong&gt;: Rust toolchain (cargo, rustfmt, rustdoc, rust-analyzer, clippy)&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;chat&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;zulip.com&quot;&gt;Zulip&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;social&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;phanpy.social&quot;&gt;Phanpy&lt;&#x2F;a&gt; (on hand computer)&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;search&lt;&#x2F;strong&gt;: &lt;a href=&quot;http:&#x2F;&#x2F;blog.burntsushi.net&#x2F;ripgrep&quot;&gt;ripgrep&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sharkdp&#x2F;fd&quot;&gt;fd-find&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;audio&#x2F;video&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;antennapod.org&quot;&gt;AntennaPod&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;www.videolan.org&quot;&gt;VLC&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;www.transmissionbt.com&quot;&gt;Transmission&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;monitoring&lt;&#x2F;strong&gt;: top, part of procps suite&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;documentation&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;mdBook&quot;&gt;mdBook&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>a shared Zulip instance for Rust meets</title>
         <published>2025-07-09T00:00:00+00:00</published>
@@ -1357,37 +1389,6 @@ Both movies also boast best &lt;strong&gt;cast&lt;&#x2F;strong&gt;,
 and I especially love the &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;top-movie-performances&#x2F;&quot;&gt;dirty detective pair&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;The best &lt;strong&gt;twist&lt;&#x2F;strong&gt; is in &lt;em&gt;The Thirteenth Floor&lt;&#x2F;em&gt;,
 an underrated movie.&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>favorite FLOSS</title>
-        <published>2024-12-10T00:00:00+00:00</published>
-        <updated>2024-12-10T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://tshepang.github.io/favorite-floss/"/>
-        <id>https://tshepang.github.io/favorite-floss/</id>
-        
-        <content type="html" xml:base="https://tshepang.github.io/favorite-floss/">&lt;p&gt;For a piece of &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Free_and_open-source_software&quot;&gt;FLOSS&lt;&#x2F;a&gt; (free&#x2F;libre and open source software) to be here,
-it has to both be personally useful and I have to like it a-lot:&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;environment&lt;&#x2F;strong&gt;: Debian, &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;nifty-zellij&#x2F;&quot;&gt;Zellij&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;fishshell.com&quot;&gt;fish&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;web browser&lt;&#x2F;strong&gt;: Firefox (laptop and mobile)&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;text editor&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;helix-editor.com&quot;&gt;Helix&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;development&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;helix-editor.com&quot;&gt;Helix&lt;&#x2F;a&gt;, Rust toolchain (cargo, rustfmt, rustdoc, rust-analyzer)&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;chat&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;zulip.com&quot;&gt;Zulip&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;social&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;phanpy.social&quot;&gt;Phanpy&lt;&#x2F;a&gt; (on mobile)&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;search&lt;&#x2F;strong&gt;: &lt;a href=&quot;http:&#x2F;&#x2F;blog.burntsushi.net&#x2F;ripgrep&quot;&gt;ripgrep&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sharkdp&#x2F;fd&quot;&gt;fd-find&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;audio&#x2F;video&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;antennapod.org&quot;&gt;AntennaPod&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;www.videolan.org&quot;&gt;VLC&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;www.transmissionbt.com&quot;&gt;Transmission&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;monitoring&lt;&#x2F;strong&gt;: top (part of procps suite)&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;documentation&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;mdBook&quot;&gt;mdBook&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
         
     </entry>
