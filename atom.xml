@@ -915,7 +915,7 @@ a movie that also has the most &lt;strong&gt;surprising plot&lt;&#x2F;strong&gt;
 &lt;p&gt;do multi-line matching: &lt;code&gt;(?m:\s)&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;For an example of how the above 2 work, consider this text:&lt;&#x2F;p&gt;
+&lt;p&gt;For an example of how 2 of the above works, consider this text:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span&gt;asm!(
 &lt;&#x2F;span&gt;&lt;span&gt;    &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;jmp {}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;,
 &lt;&#x2F;span&gt;&lt;span&gt;    label {},
