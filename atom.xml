@@ -4,8 +4,42 @@
     <link rel="self" type="application/atom+xml" href="https://tshepang.github.io/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://tshepang.github.io"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-08-20T00:00:00+00:00</updated>
+    <updated>2025-08-22T00:00:00+00:00</updated>
     <id>https://tshepang.github.io/atom.xml</id>
+    <entry xml:lang="en">
+        <title>some favorite links</title>
+        <published>2025-08-22T00:00:00+00:00</published>
+        <updated>2025-08-22T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tshepang.github.io/some-favorite-links/"/>
+        <id>https://tshepang.github.io/some-favorite-links/</id>
+        
+        <content type="html" xml:base="https://tshepang.github.io/some-favorite-links/">&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=GkV306PyvqM&amp;amp;list=PL8NC5lCgGs6MnMLJvhFH2jLa8bLYwCzmI&amp;amp;index=14&quot;&gt;&quot;Let&#x27;s build our own message streaming platform&quot;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;140525&quot;&gt;A model pull request&lt;&#x2F;a&gt;, split lovingly in separate commits, each gently revealing more the outcome&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;rust&#x2F;comments&#x2F;1lapcl7&#x2F;comment&#x2F;mxn4385&quot;&gt;An appreciation of Rust for its security benefits for decoding images&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Memory safety bugs are not just 70% of the CVEs,
+they are almost 100% of the CVEs in image decoding.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>2015 review</title>
         <published>2025-08-20T00:00:00+00:00</published>
@@ -323,37 +357,6 @@ and is &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;team&#x
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;epage&quot;&gt;Ed Page&lt;&#x2F;a&gt; is the primary maintainer of some key Rust projects, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;clap-rs&#x2F;clap&quot;&gt;clap&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;toml-rs&#x2F;toml&quot;&gt;toml&lt;&#x2F;a&gt;.
 And like Eric Huss, he is also a major contributor to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;cargo&quot;&gt;Cargo&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>some favorite links</title>
-        <published>2025-07-09T00:00:00+00:00</published>
-        <updated>2025-07-09T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://tshepang.github.io/some-favorite-links/"/>
-        <id>https://tshepang.github.io/some-favorite-links/</id>
-        
-        <content type="html" xml:base="https://tshepang.github.io/some-favorite-links/">&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;140525&quot;&gt;A model pull request&lt;&#x2F;a&gt;, split lovingly in separate commits, each gently revealing more the outcome&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;rust&#x2F;comments&#x2F;1lapcl7&#x2F;comment&#x2F;mxn4385&quot;&gt;An appreciation of Rust for its security benefits for decoding images&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Memory safety bugs are not just 70% of the CVEs,
-they are almost 100% of the CVEs in image decoding.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
