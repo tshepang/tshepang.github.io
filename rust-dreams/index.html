@@ -75,7 +75,7 @@
     <header>
         <h1 itemprop="headline">Rust dreams</h1>
         <span class="muted">
-    2025-06-23
+    2025-09-13
 </span>
     </header>
     <div itemprop="articleBody">
@@ -212,6 +212,18 @@ but would disallow arithmetic operations without spaces,
 <p>This would make it more clear where functionality comes from.
 Not sure the convenience of not having to explicitly manage a dependency
 is worth the feature.</p>
+</li>
+<li>
+<p>Replace <code>&amp;&amp; ||</code> with <code>and or</code>, for less visual noise (like Python)</p>
+</li>
+<li>
+<p>Replace <code>*some_ref</code> with <code>some_ref*</code>, to ease reading of nested dereferencing (<a href="https://hachyderm.io/@GregMorenz/114310163840809475">source</a>).</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">// current
+</span><span>*(*(*pointer).field).</span><span style="color:#96b5b4;">complex_method</span><span>()
+</span><span>
+</span><span style="color:#65737e;">// wish
+</span><span>pointer*.field*.</span><span style="color:#96b5b4;">complex_method</span><span>()*
+</span></code></pre>
 </li>
 </ul>
 
