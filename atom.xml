@@ -26,11 +26,13 @@
 &lt;ul&gt;
 &lt;li&gt;processors are &lt;a href=&quot;https:&#x2F;&#x2F;riscv.org&#x2F;risc-v-isa&quot;&gt;RISC-V&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;OS is &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;theseus-os&#x2F;Theseus&quot;&gt;Theseus&lt;&#x2F;a&gt;
-(excluding some embedded systems where there is only a single application)
 &lt;ul&gt;
-&lt;li&gt;the next best thing is having &lt;a href=&quot;https:&#x2F;&#x2F;www.redox-os.org&quot;&gt;Redox OS&lt;&#x2F;a&gt; reach mainstream usage (&lt;a href=&quot;https:&#x2F;&#x2F;redox-os.org&#x2F;news&#x2F;development-priorities-2025-09&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;the next best thing after that is having &lt;a href=&quot;https:&#x2F;&#x2F;www.memorysafety.org&#x2F;blog&#x2F;memory-safety-in-linux-kernel&quot;&gt;Rust in Linux kernel&lt;&#x2F;a&gt;,
+&lt;li&gt;the next best thing is having &lt;a href=&quot;https:&#x2F;&#x2F;www.redox-os.org&quot;&gt;Redox OS&lt;&#x2F;a&gt; reach mainstream usage (&lt;a href=&quot;https:&#x2F;&#x2F;redox-os.org&#x2F;news&#x2F;development-priorities-2025-09&quot;&gt;latest update&lt;&#x2F;a&gt;)
+&lt;ul&gt;
+&lt;li&gt;the next best thing is having more &lt;a href=&quot;https:&#x2F;&#x2F;rust-for-linux.com&quot;&gt;Rust in the Linux kernel&lt;&#x2F;a&gt;,
 which would require the least effort of the options above&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;rustix&quot;&gt;rustix&lt;&#x2F;a&gt; (and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;Mustang&lt;&#x2F;a&gt; &#x2F; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;eyra&quot;&gt;Eyra&lt;&#x2F;a&gt;) are used to help run POSIX apps&lt;&#x2F;li&gt;
@@ -618,15 +620,6 @@ an alternative to GitHub that is peer-to-peer (&lt;a href=&quot;https:&#x2F;&#x2
 &lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quickwit-oss&#x2F;tantivy&quot;&gt;Tantivy&lt;&#x2F;a&gt;, a full-text search engine library (&lt;a href=&quot;https:&#x2F;&#x2F;quickwit.io&#x2F;blog&#x2F;tantivy-0.24&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
 &lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quickwit-oss&#x2F;quickwit&quot;&gt;Quickwit&lt;&#x2F;a&gt;, a distributed search engine built on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quickwit-oss&#x2F;tantivy&quot;&gt;Tantivy&lt;&#x2F;a&gt;
 (&lt;a href=&quot;https:&#x2F;&#x2F;quickwit.io&#x2F;blog&#x2F;quickwit-binance-story&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;More drivers written in Rust in the official Linux kernel,
-most promising ones being:
-&lt;ul&gt;
-&lt;li&gt;NVIDIA GPU driver (&lt;a href=&quot;https:&#x2F;&#x2F;git.kernel.org&#x2F;pub&#x2F;scm&#x2F;linux&#x2F;kernel&#x2F;git&#x2F;torvalds&#x2F;linux.git&#x2F;commit&#x2F;?id=54e6baf123fde089cfa9f609b0b39b40abe41e94&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lore.kernel.org&#x2F;rust-for-linux&#x2F;20231101-rust-binder-v1-0-08ba9197f637@google.com&quot;&gt;Binder&lt;&#x2F;a&gt; (for Android IPC)&lt;&#x2F;li&gt;
-&lt;li&gt;Apple GPU driver (&lt;a href=&quot;https:&#x2F;&#x2F;asahilinux.org&#x2F;2023&#x2F;03&#x2F;road-to-vulkan&quot;&gt;latest update&lt;&#x2F;a&gt;),
-which seems to be one that has attracted the most attention&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
 &lt;li&gt;Make alternative (to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;llvm&#x2F;llvm-project&quot;&gt;LLVM&lt;&#x2F;a&gt;) codegen backends available in a Rust stable toolchain:
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bjorn3&#x2F;rustc_codegen_cranelift&quot;&gt;rustc_codegen_cranelift&lt;&#x2F;a&gt;,
