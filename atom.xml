@@ -4,8 +4,41 @@
     <link rel="self" type="application/atom+xml" href="https://tshepang.github.io/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://tshepang.github.io"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-09-13T00:00:00+00:00</updated>
+    <updated>2025-09-14T00:00:00+00:00</updated>
     <id>https://tshepang.github.io/atom.xml</id>
+    <entry xml:lang="en">
+        <title>computing dreams</title>
+        <published>2025-09-14T00:00:00+00:00</published>
+        <updated>2025-09-14T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tshepang.github.io/computing-dreams/"/>
+        <id>https://tshepang.github.io/computing-dreams/</id>
+        
+        <content type="html" xml:base="https://tshepang.github.io/computing-dreams/">&lt;p&gt;My ideal computing environment, for all device types (from servers to embedded):&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;processors are &lt;a href=&quot;https:&#x2F;&#x2F;riscv.org&#x2F;risc-v-isa&quot;&gt;RISC-V&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;OS is &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;theseus-os&#x2F;Theseus&quot;&gt;Theseus&lt;&#x2F;a&gt;
+(excluding some embedded systems where there is only a single application)
+&lt;ul&gt;
+&lt;li&gt;the next best thing is having &lt;a href=&quot;https:&#x2F;&#x2F;www.redox-os.org&quot;&gt;Redox OS&lt;&#x2F;a&gt; reach mainstream usage (&lt;a href=&quot;https:&#x2F;&#x2F;redox-os.org&#x2F;news&#x2F;development-priorities-2025-09&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;the next best thing after that is having &lt;a href=&quot;https:&#x2F;&#x2F;www.memorysafety.org&#x2F;blog&#x2F;memory-safety-in-linux-kernel&quot;&gt;Rust in Linux kernel&lt;&#x2F;a&gt;,
+which would require the least effort of the options above&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;rustix&quot;&gt;rustix&lt;&#x2F;a&gt; (and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;Mustang&lt;&#x2F;a&gt; &#x2F; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;eyra&quot;&gt;Eyra&lt;&#x2F;a&gt;) are used to help run POSIX apps&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;Cranelift&lt;&#x2F;a&gt; is used to generate machine code, for I want C++ (LLVM) off my tooling&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>favorite software people</title>
         <published>2025-09-13T00:00:00+00:00</published>
