@@ -4,8 +4,53 @@
     <link rel="self" type="application/atom+xml" href="https://tshepang.github.io/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://tshepang.github.io"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-09-15T00:00:00+00:00</updated>
+    <updated>2025-09-24T00:00:00+00:00</updated>
     <id>https://tshepang.github.io/atom.xml</id>
+    <entry xml:lang="en">
+        <title>favorite software people</title>
+        <published>2025-09-24T00:00:00+00:00</published>
+        <updated>2025-09-24T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tshepang.github.io/favorite-software-people/"/>
+        <id>https://tshepang.github.io/favorite-software-people/</id>
+        
+        <content type="html" xml:base="https://tshepang.github.io/favorite-software-people/">&lt;p&gt;This is something of a continuation of &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;about-developer-of-note-series&#x2F;&quot;&gt;developer of note series&lt;&#x2F;a&gt;,
+only with a different shape (all in 1 page) and a more gentle tone (&lt;em&gt;favorite&lt;&#x2F;em&gt; instead of &lt;em&gt;note&lt;&#x2F;em&gt;).&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;epage&quot;&gt;Ed Page&lt;&#x2F;a&gt; is the primary maintainer of some key Rust projects, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;clap-rs&#x2F;clap&quot;&gt;clap&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;toml-rs&#x2F;toml&quot;&gt;toml&lt;&#x2F;a&gt;.
+And like Eric Huss, he is also a major contributor to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;cargo&quot;&gt;Cargo&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ehuss&quot;&gt;Eric Huss&lt;&#x2F;a&gt; is the primary maintainer of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;reference&quot;&gt;The Rust Reference&lt;&#x2F;a&gt;, as well as (the indispensable) &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;mdBook&quot;&gt;mdBook&lt;&#x2F;a&gt;.
+He is also a major contributor to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;cargo&quot;&gt;Cargo&lt;&#x2F;a&gt;,
+and is a member of Leadership council, the highest team in Rust Project.
+He is &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;team&#x2F;pull&#x2F;1898#issue-3204320010&quot;&gt;described as&lt;&#x2F;a&gt; &quot;an individual of consistently high judgment and character&quot;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;kobzol&quot;&gt;Jakub Beránek&lt;&#x2F;a&gt; is a key member of several Rust teams,
+including compiler, bootstrap, and infra.
+He is also a member of Leadership council, the highest team in Rust Project.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;[Björn] is the maintainer of &lt;code&gt;rustc_codegen_cranelift&lt;&#x2F;code&gt;,
+an alternative codegen backend for &lt;code&gt;rustc&lt;&#x2F;code&gt;.
+A member of Compiler team,
+Björn can often be seen being helpful in Rust Project avenues,
+showing arcane compiler knowledge.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>2004 review</title>
         <published>2025-09-15T00:00:00+00:00</published>
@@ -147,42 +192,6 @@ due to being the first Rust toolchain &lt;a href=&quot;https:&#x2F;&#x2F;ferrous
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;torvalds&#x2F;linux&#x2F;blob&#x2F;master&#x2F;drivers&#x2F;net&#x2F;phy&#x2F;ax88796b_rust.rs&quot;&gt;Asix PHYs driver&lt;&#x2F;a&gt;
 is the first, released early 2024&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>favorite software people</title>
-        <published>2025-09-13T00:00:00+00:00</published>
-        <updated>2025-09-13T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://tshepang.github.io/favorite-software-people/"/>
-        <id>https://tshepang.github.io/favorite-software-people/</id>
-        
-        <content type="html" xml:base="https://tshepang.github.io/favorite-software-people/">&lt;p&gt;This is something of a continuation of &lt;a href=&quot;https:&#x2F;&#x2F;tshepang.github.io&#x2F;about-developer-of-note-series&#x2F;&quot;&gt;developer of note series&lt;&#x2F;a&gt;,
-only with a different shape (all in 1 page) and a more gentle tone (&lt;em&gt;favorite&lt;&#x2F;em&gt; instead of &lt;em&gt;note&lt;&#x2F;em&gt;).&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;epage&quot;&gt;Ed Page&lt;&#x2F;a&gt; is the primary maintainer of some key Rust projects, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;clap-rs&#x2F;clap&quot;&gt;clap&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;toml-rs&#x2F;toml&quot;&gt;toml&lt;&#x2F;a&gt;.
-And like Eric Huss, he is also a major contributor to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;cargo&quot;&gt;Cargo&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ehuss&quot;&gt;Eric Huss&lt;&#x2F;a&gt; is the primary maintainer of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;reference&quot;&gt;The Rust Reference&lt;&#x2F;a&gt;, as well as (the indispensable) &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;mdBook&quot;&gt;mdBook&lt;&#x2F;a&gt;.
-He is also a major contributor to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;cargo&quot;&gt;Cargo&lt;&#x2F;a&gt;,
-and is &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;team&#x2F;pull&#x2F;1898#issue-3204320010&quot;&gt;described as&lt;&#x2F;a&gt; &quot;an individual of consistently high judgment and character&quot;.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;kobzol&quot;&gt;Jakub Beránek&lt;&#x2F;a&gt; is a key member of several Rust teams,
-including bootstrap and infra.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
