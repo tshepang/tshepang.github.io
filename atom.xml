@@ -4,8 +4,65 @@
     <link rel="self" type="application/atom+xml" href="https://tshepang.github.io/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://tshepang.github.io"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-10-25T00:00:00+00:00</updated>
+    <updated>2025-10-31T00:00:00+00:00</updated>
     <id>https://tshepang.github.io/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Rust things I most anticipate</title>
+        <published>2025-10-31T00:00:00+00:00</published>
+        <updated>2025-10-31T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tshepang.github.io/rust-things-i-most-anticipate/"/>
+        <id>https://tshepang.github.io/rust-things-i-most-anticipate/</id>
+        
+        <content type="html" xml:base="https://tshepang.github.io/rust-things-i-most-anticipate/">&lt;ul&gt;
+&lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;davidlattimore&#x2F;wild&quot;&gt;Wild&lt;&#x2F;a&gt;, an alternative to mold, lld, and ld&lt;&#x2F;li&gt;
+&lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;radicle.xyz&quot;&gt;Radicle&lt;&#x2F;a&gt;,
+an alternative to GitHub that is peer-to-peer
+(&lt;a href=&quot;https:&#x2F;&#x2F;radicle.xyz&#x2F;#updates&quot;&gt;updates&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quickwit-oss&#x2F;tantivy&quot;&gt;Tantivy&lt;&#x2F;a&gt;, a full-text search engine library
+(&lt;a href=&quot;https:&#x2F;&#x2F;quickwit.io&#x2F;blog&#x2F;tantivy-0.24&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quickwit-oss&#x2F;quickwit&quot;&gt;Quickwit&lt;&#x2F;a&gt;, a distributed search engine built on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quickwit-oss&#x2F;tantivy&quot;&gt;Tantivy&lt;&#x2F;a&gt;
+(&lt;a href=&quot;https:&#x2F;&#x2F;quickwit.io&#x2F;blog&#x2F;quickwit-binance-story&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Make alternative (to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;llvm&#x2F;llvm-project&quot;&gt;LLVM&lt;&#x2F;a&gt;) codegen backends available in a Rust stable toolchain:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bjorn3&#x2F;rustc_codegen_cranelift&quot;&gt;rustc_codegen_cranelift&lt;&#x2F;a&gt;,
+which uses &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;cranelift&lt;&#x2F;a&gt; for codegen,
+is already available via &lt;code&gt;rustup&lt;&#x2F;code&gt; on nightly toolchains,
+and the immediate benefit is fast debug compiles
+(&lt;a href=&quot;https:&#x2F;&#x2F;bjorn3.github.io&quot;&gt;updates&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rustc_codegen_gcc&quot;&gt;rustc_codegen_gcc&lt;&#x2F;a&gt;,
+allowing Rust to run in more hardware platforms
+(&lt;a href=&quot;https:&#x2F;&#x2F;blog.antoyo.xyz&quot;&gt;updates&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Use of Rust in safety-critical systems,
+&lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;ferrocene&quot;&gt;Ferrocene&lt;&#x2F;a&gt; being the most likely candidate,
+due to being the first Rust toolchain &lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;blog&#x2F;officially-qualified-ferrocene&quot;&gt;qualified for the domain&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;typst&#x2F;typst&quot;&gt;Typst&lt;&#x2F;a&gt;, a more pleasant alternative to LaTeX&lt;&#x2F;li&gt;
+&lt;li&gt;Removing libc dependency for Linux-based systems (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;mustang&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;rsix&quot;&gt;rustix&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;achieved&quot;&gt;achieved&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Usage in production versions of Chromium,
+&lt;a href=&quot;https:&#x2F;&#x2F;developer.chrome.com&#x2F;blog&#x2F;memory-safety-fonts&quot;&gt;released in mid 2024&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;A driver written in Rust in the official Linux kernel:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;torvalds&#x2F;linux&#x2F;blob&#x2F;master&#x2F;drivers&#x2F;net&#x2F;phy&#x2F;ax88796b_rust.rs&quot;&gt;Asix PHYs driver&lt;&#x2F;a&gt;
+is the first, released early 2024&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>2015 review</title>
         <published>2025-10-25T00:00:00+00:00</published>
@@ -236,58 +293,6 @@ which would require the least effort of the options above&lt;&#x2F;li&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;rustix&quot;&gt;rustix&lt;&#x2F;a&gt; (and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;Mustang&lt;&#x2F;a&gt; &#x2F; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;eyra&quot;&gt;Eyra&lt;&#x2F;a&gt;) are used to help run POSIX apps&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;Cranelift&lt;&#x2F;a&gt; is used to generate machine code&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Rust things I most anticipate</title>
-        <published>2025-09-14T00:00:00+00:00</published>
-        <updated>2025-09-14T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://tshepang.github.io/rust-things-i-most-anticipate/"/>
-        <id>https://tshepang.github.io/rust-things-i-most-anticipate/</id>
-        
-        <content type="html" xml:base="https://tshepang.github.io/rust-things-i-most-anticipate/">&lt;ul&gt;
-&lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;radicle.xyz&quot;&gt;Radicle&lt;&#x2F;a&gt;,
-an alternative to GitHub that is peer-to-peer (&lt;a href=&quot;https:&#x2F;&#x2F;radicle.xyz&#x2F;2025&#x2F;06&#x2F;13&#x2F;radicle-desktop&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quickwit-oss&#x2F;tantivy&quot;&gt;Tantivy&lt;&#x2F;a&gt;, a full-text search engine library (&lt;a href=&quot;https:&#x2F;&#x2F;quickwit.io&#x2F;blog&#x2F;tantivy-0.24&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quickwit-oss&#x2F;quickwit&quot;&gt;Quickwit&lt;&#x2F;a&gt;, a distributed search engine built on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;quickwit-oss&#x2F;tantivy&quot;&gt;Tantivy&lt;&#x2F;a&gt;
-(&lt;a href=&quot;https:&#x2F;&#x2F;quickwit.io&#x2F;blog&#x2F;quickwit-binance-story&quot;&gt;latest update&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;Make alternative (to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;llvm&#x2F;llvm-project&quot;&gt;LLVM&lt;&#x2F;a&gt;) codegen backends available in a Rust stable toolchain:
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bjorn3&#x2F;rustc_codegen_cranelift&quot;&gt;rustc_codegen_cranelift&lt;&#x2F;a&gt;,
-which uses &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;wasmtime&#x2F;tree&#x2F;main&#x2F;cranelift&quot;&gt;cranelift&lt;&#x2F;a&gt; for codegen,
-is already available via &lt;code&gt;rustup&lt;&#x2F;code&gt; on nightly toolchains,
-and the immediate benefit is fast debug compiles (&lt;a href=&quot;https:&#x2F;&#x2F;bjorn3.github.io&quot;&gt;updates&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rustc_codegen_gcc&quot;&gt;rustc_codegen_gcc&lt;&#x2F;a&gt;,
-allowing Rust to run in more hardware platforms (&lt;a href=&quot;https:&#x2F;&#x2F;blog.antoyo.xyz&quot;&gt;updates&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;Use of Rust in safety-critical systems,
-&lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;ferrocene&quot;&gt;Ferrocene&lt;&#x2F;a&gt; being the most likely candidate,
-due to being the first Rust toolchain &lt;a href=&quot;https:&#x2F;&#x2F;ferrous-systems.com&#x2F;blog&#x2F;officially-qualified-ferrocene&quot;&gt;qualified for the domain&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;Wide use of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;typst&#x2F;typst&quot;&gt;Typst&lt;&#x2F;a&gt;, a more pleasant alternative to LaTeX&lt;&#x2F;li&gt;
-&lt;li&gt;Removing libc dependency for Linux-based systems (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sunfishcode&#x2F;mustang&quot;&gt;mustang&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bytecodealliance&#x2F;rsix&quot;&gt;rustix&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;achieved&quot;&gt;achieved&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Usage in production versions of Chromium,
-&lt;a href=&quot;https:&#x2F;&#x2F;developer.chrome.com&#x2F;blog&#x2F;memory-safety-fonts&quot;&gt;released in mid 2024&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;A driver written in Rust in the official Linux kernel:
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;torvalds&#x2F;linux&#x2F;blob&#x2F;master&#x2F;drivers&#x2F;net&#x2F;phy&#x2F;ax88796b_rust.rs&quot;&gt;Asix PHYs driver&lt;&#x2F;a&gt;
-is the first, released early 2024&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
         
