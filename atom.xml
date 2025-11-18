@@ -4,8 +4,51 @@
     <link rel="self" type="application/atom+xml" href="https://tshepang.github.io/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://tshepang.github.io"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-11-07T00:00:00+00:00</updated>
+    <updated>2025-11-18T00:00:00+00:00</updated>
     <id>https://tshepang.github.io/atom.xml</id>
+    <entry xml:lang="en">
+        <title>some favorite links</title>
+        <published>2025-11-18T00:00:00+00:00</published>
+        <updated>2025-11-18T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tshepang.github.io/some-favorite-links/"/>
+        <id>https://tshepang.github.io/some-favorite-links/</id>
+        
+        <content type="html" xml:base="https://tshepang.github.io/some-favorite-links/">&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;aftermath.site&quot;&gt;Aftermath&lt;&#x2F;a&gt; is...&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;a worker-owned,
+reader-supported news site covering video games,
+the internet,
+and the cultures that surround them.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=GkV306PyvqM&amp;amp;list=PL8NC5lCgGs6MnMLJvhFH2jLa8bLYwCzmI&amp;amp;index=14&quot;&gt;&quot;Let&#x27;s build our own message streaming platform&quot;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;140525&quot;&gt;A model pull request&lt;&#x2F;a&gt;, split lovingly in separate commits, each gently revealing more the outcome&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;rust&#x2F;comments&#x2F;1lapcl7&#x2F;comment&#x2F;mxn4385&quot;&gt;An appreciation of Rust for its security benefits for decoding images&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Memory safety bugs are not just 70% of the CVEs,
+they are almost 100% of the CVEs in image decoding.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>favorite FLOSS</title>
         <published>2025-11-07T00:00:00+00:00</published>
@@ -747,40 +790,6 @@ due to the fierce and intense persona in &lt;em&gt;Captain Fantastic&lt;&#x2F;em
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Natasha_Rothwell&quot;&gt;Natasha Rothwell&lt;&#x2F;a&gt; (&lt;em&gt;The White Lotus&lt;&#x2F;em&gt; - season 3)&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>some favorite links</title>
-        <published>2025-08-22T00:00:00+00:00</published>
-        <updated>2025-08-22T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://tshepang.github.io/some-favorite-links/"/>
-        <id>https://tshepang.github.io/some-favorite-links/</id>
-        
-        <content type="html" xml:base="https://tshepang.github.io/some-favorite-links/">&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=GkV306PyvqM&amp;amp;list=PL8NC5lCgGs6MnMLJvhFH2jLa8bLYwCzmI&amp;amp;index=14&quot;&gt;&quot;Let&#x27;s build our own message streaming platform&quot;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;pull&#x2F;140525&quot;&gt;A model pull request&lt;&#x2F;a&gt;, split lovingly in separate commits, each gently revealing more the outcome&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;rust&#x2F;comments&#x2F;1lapcl7&#x2F;comment&#x2F;mxn4385&quot;&gt;An appreciation of Rust for its security benefits for decoding images&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Memory safety bugs are not just 70% of the CVEs,
-they are almost 100% of the CVEs in image decoding.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
