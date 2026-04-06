@@ -4,12 +4,12 @@
     <link rel="self" type="application/atom+xml" href="https://tshepang.github.io/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://tshepang.github.io"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2026-03-15T00:00:00+00:00</updated>
+    <updated>2026-04-06T00:00:00+00:00</updated>
     <id>https://tshepang.github.io/atom.xml</id>
     <entry xml:lang="en">
         <title>some select movies</title>
-        <published>2026-03-15T00:00:00+00:00</published>
-        <updated>2026-03-15T00:00:00+00:00</updated>
+        <published>2026-04-06T00:00:00+00:00</published>
+        <updated>2026-04-06T00:00:00+00:00</updated>
         
         <author>
           <name>
@@ -29,6 +29,54 @@ I miss the point, just a few people living miserable lives.&lt;&#x2F;p&gt;
 if we exclude the intro (which is before the lead goes to space),
 which presents an interesting scenario and some striking scenery.
 The phenomenon in outer space is not interesting, and neither is the lead performance.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Upstream Color&lt;&#x2F;em&gt; (2013) explores the fun idea of mental connection to other organisms,
+but then spends too much time doing that through a tumultous romantic relationship.
+It is done well, but it does not feel so fresh, and the performances are too broody.
+I have gaps in my understanding...
+would have liked to know the connection between the pig farmer and those who gift the humans.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>nifty Zellij</title>
+        <published>2026-04-03T00:00:00+00:00</published>
+        <updated>2026-04-03T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tshepang.github.io/nifty-zellij/"/>
+        <id>https://tshepang.github.io/nifty-zellij/</id>
+        
+        <content type="html" xml:base="https://tshepang.github.io/nifty-zellij/">&lt;p&gt;I have been using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zellij-org&#x2F;zellij&quot;&gt;Zellij&lt;&#x2F;a&gt; for years,
+and its creation was a dream fulfil,
+for I was hoping for a more pleasant tmux than &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tmux&#x2F;tmux&quot;&gt;tmux&lt;&#x2F;a&gt;,
+and one written in Rust.&lt;&#x2F;p&gt;
+&lt;p&gt;This post is about some kool features it has:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;You can move between tabs quickly with &lt;strong&gt;alt-h&lt;&#x2F;strong&gt; (previous tab) or &lt;strong&gt;alt-l&lt;&#x2F;strong&gt; (next tab).
+This is far less awkward than &lt;strong&gt;ctrl-t&lt;&#x2F;strong&gt; (tab mode),
+then one of &lt;strong&gt;h&lt;&#x2F;strong&gt; (previous tab) or &lt;strong&gt;l&lt;&#x2F;strong&gt; (next tab).&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;You can create a small foreground window with &lt;strong&gt;ctrl-p w&lt;&#x2F;strong&gt; (&lt;strong&gt;ctrl-p&lt;&#x2F;strong&gt; combo, then &lt;strong&gt;w&lt;&#x2F;strong&gt;).
+Doing the same key sequence hides it from view.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;You can create additional small foreground windows with &lt;strong&gt;alt-n&lt;&#x2F;strong&gt;.
+Each of these gets stacked on top of the previous one.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;When a pane is fullscreen (&lt;strong&gt;ctrl-p f&lt;&#x2F;strong&gt;),
+moving to the other panes (&lt;strong&gt;alt-j&lt;&#x2F;strong&gt; and friends) inherits the state of being maximised.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
 </content>
         
     </entry>
@@ -992,46 +1040,6 @@ and &lt;a href=&quot;https:&#x2F;&#x2F;servo.org&quot;&gt;Servo&lt;&#x2F;a&gt; (
 &lt;li&gt;It is open source&lt;&#x2F;li&gt;
 &lt;li&gt;It has amazing usability (or at least the best software of its type I used yet)&lt;&#x2F;li&gt;
 &lt;li&gt;It is developed in public (see &lt;a href=&quot;https:&#x2F;&#x2F;chat.zulip.org&quot;&gt;https:&#x2F;&#x2F;chat.zulip.org&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>nifty Zellij</title>
-        <published>2025-07-04T00:00:00+00:00</published>
-        <updated>2025-07-04T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://tshepang.github.io/nifty-zellij/"/>
-        <id>https://tshepang.github.io/nifty-zellij/</id>
-        
-        <content type="html" xml:base="https://tshepang.github.io/nifty-zellij/">&lt;p&gt;I have been using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zellij-org&#x2F;zellij&quot;&gt;Zellij&lt;&#x2F;a&gt; for years,
-and its creation was a dream fulfil,
-for I was hoping for a more pleasant tmux than &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tmux&#x2F;tmux&quot;&gt;tmux&lt;&#x2F;a&gt;,
-and one written in Rust.&lt;&#x2F;p&gt;
-&lt;p&gt;This post is about some kool features it has,
-particularly ones I only recently started using:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;You can move between tabs quickly with &lt;strong&gt;alt-h&lt;&#x2F;strong&gt; (previous tab) or &lt;strong&gt;alt-l&lt;&#x2F;strong&gt; (next tab).
-This is far less awkward than &lt;strong&gt;ctrl-t&lt;&#x2F;strong&gt; (tab mode),
-then one of &lt;strong&gt;h&lt;&#x2F;strong&gt; (previous tab) or &lt;strong&gt;l&lt;&#x2F;strong&gt; (next tab).&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;You can create a small foreground window with &lt;strong&gt;ctrl-p w&lt;&#x2F;strong&gt; (&lt;strong&gt;ctrl-p&lt;&#x2F;strong&gt; combo, then &lt;strong&gt;w&lt;&#x2F;strong&gt;).
-Doing the same key sequence hides it from view.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;You can create additional small foreground windows with &lt;strong&gt;alt-n&lt;&#x2F;strong&gt;.
-These get stacked on top of the previous ones.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
         
