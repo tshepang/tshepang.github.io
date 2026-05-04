@@ -4,8 +4,81 @@
     <link rel="self" type="application/atom+xml" href="https://tshepang.github.io/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://tshepang.github.io"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2026-04-06T00:00:00+00:00</updated>
+    <updated>2026-05-04T00:00:00+00:00</updated>
     <id>https://tshepang.github.io/atom.xml</id>
+    <entry xml:lang="en">
+        <title>failings of computing industry</title>
+        <published>2026-05-04T00:00:00+00:00</published>
+        <updated>2026-05-04T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tshepang.github.io/failings-of-computing-industry/"/>
+        <id>https://tshepang.github.io/failings-of-computing-industry/</id>
+        
+        <content type="html" xml:base="https://tshepang.github.io/failings-of-computing-industry/">&lt;p&gt;We spend far too little effort in these:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Availability&lt;&#x2F;p&gt;
+&lt;p&gt;We should make tools and services freely and easily available.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Accessibility&lt;&#x2F;p&gt;
+&lt;p&gt;We should make tools maximally usable by those who are impaired.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Standardisation&lt;&#x2F;p&gt;
+&lt;p&gt;Having different teams follow standards&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#std&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; improves learnability of new tools,
+ease swithcing to alternatives&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#lockin&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;, as well as interoperability.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Usability&lt;&#x2F;p&gt;
+&lt;p&gt;Tools that are a not pleasant to use cause needless frustration.
+We need to build tools that follow usability levels that can also be tweaked
+according to individual levels, and that in a global way&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#global&quot;&gt;3&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Information access&lt;&#x2F;p&gt;
+&lt;p&gt;We should have ways of reliably categorizing and ranking useful information,
+and search engines that presents such information in a way that maximizes comprehension.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Migration tooling&lt;&#x2F;p&gt;
+&lt;p&gt;We need to be more willing to keep improving foundational software&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#fs&quot;&gt;4&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;,
+to a point we more readily release breaking changes,
+which implies solid (and easy) migration tooling.
+This means replacing designs that are not ideal for learning and usability,
+instead of being stuck due to large ecosystems depending upon such designs.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Documentation&lt;&#x2F;p&gt;
+&lt;p&gt;There should be various types of documentation to fit different levels and styles of learning.
+Breaking changes for foundational software should also be clearly documented,
+alongside migration tooling.
+The documentation should be to a level where one would not need to use external means
+(such as search engines)
+to learn any aspect of the software.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;std&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;&lt;&#x2F;div&gt;
+&lt;p&gt;this includes protocols and APIs&lt;&#x2F;p&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;lockin&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;2&lt;&#x2F;sup&gt;&lt;&#x2F;div&gt;
+&lt;p&gt;avoids vendor lockin&lt;&#x2F;p&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;global&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;3&lt;&#x2F;sup&gt;&lt;&#x2F;div&gt;
+&lt;p&gt;all tools on all devices of a given user should feel similar (cohesive),
+complete with centralised configuration&lt;&#x2F;p&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;fs&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;4&lt;&#x2F;sup&gt;&lt;&#x2F;div&gt;
+&lt;p&gt;software that other software is relies upon,
+things like operating systems and platform libraries.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>some select movies</title>
         <published>2026-04-06T00:00:00+00:00</published>
