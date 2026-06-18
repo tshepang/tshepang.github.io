@@ -25,31 +25,31 @@
         <content type="html" xml:base="https://tshepang.github.io/some-failings-of-software-industry/">&lt;p&gt;We spend far too little effort in these:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Availability&lt;&#x2F;p&gt;
+&lt;p&gt;availability&lt;&#x2F;p&gt;
 &lt;p&gt;We should make tools and services freely and easily available.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;Accessibility&lt;&#x2F;p&gt;
+&lt;p&gt;accessibility&lt;&#x2F;p&gt;
 &lt;p&gt;We should make tools maximally usable by those who are impaired.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;Standardisation&lt;&#x2F;p&gt;
+&lt;p&gt;standardisation&lt;&#x2F;p&gt;
 &lt;p&gt;Having different teams follow standards&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#std&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; improves learnability of new tools,
 ease swithcing to alternatives&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#lockin&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;, as well as interoperability.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;Usability&lt;&#x2F;p&gt;
+&lt;p&gt;usability&lt;&#x2F;p&gt;
 &lt;p&gt;Tools that are a not pleasant to use cause needless frustration.
 We need to build tools that follow usability levels that can also be tweaked
 according to individual levels, and that in a global way&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#global&quot;&gt;3&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;Information access&lt;&#x2F;p&gt;
+&lt;p&gt;information access&lt;&#x2F;p&gt;
 &lt;p&gt;We should have ways of reliably categorizing and ranking useful information,
 and search engines that presents such information in a way that maximizes comprehension.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;Migration tooling&lt;&#x2F;p&gt;
+&lt;p&gt;migration tooling&lt;&#x2F;p&gt;
 &lt;p&gt;We need to be more willing to keep improving foundational software&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#fs&quot;&gt;4&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;,
 to a point we more readily release breaking changes,
 which implies solid (and easy) migration tooling.
@@ -57,7 +57,7 @@ This means replacing designs that are not ideal for learning and usability,
 instead of being stuck due to large ecosystems depending upon such designs.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;Documentation&lt;&#x2F;p&gt;
+&lt;p&gt;documentation&lt;&#x2F;p&gt;
 &lt;p&gt;There should be various types of documentation to fit different levels and styles of learning.
 Breaking changes for foundational software should also be clearly documented,
 alongside migration tooling.
