@@ -1,311 +1,11 @@
-
-<!DOCTYPE html>
-<html lang="en" class="dark light">
-
-    
-<head>
-    
-
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="base" content="https://tshepang.github.io" />
-
-    
-
-    
-
-    
-    
-    
-        <title>
+<!doctype html><html class="dark light" lang=en><head><meta charset=UTF-8><meta content="IE=edge" http-equiv=X-UA-Compatible><meta content="width=device-width,initial-scale=1.0" name=viewport><meta content=https://tshepang.github.io name=base><title>
             
                 my current desktop setup
             
-        </title>
-
-        
-            <meta property="og:title"
-                  content="my current desktop setup" />
-        
-    
-
-    
-        
-    
-
-    
-        
-    
-
-    
-    
-
-    
-    
-        <link href=https://tshepang.github.io/fonts.css rel="stylesheet" />
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-
-    
-    
-        
-            
-                <link rel="alternate"
-                      type="application/atom+xml"
-                      title="
+        </title><meta content="my current desktop setup" property=og:title><link href=https://tshepang.github.io/fonts.css rel=stylesheet><link title="
 Tshepang logs
-"
-                      href="https://tshepang.github.io/atom.xml" />
-            
-        
-    
-
-
-    
-
-    
-    
-
-    
-    
-        <link rel="stylesheet"
-              type="text/css"
-              href="https://tshepang.github.io/theme/light.css" />
-        <link id="darkModeStyle"
-              rel="stylesheet"
-              type="text/css"
-              href="https://tshepang.github.io/theme/dark.css" />
-    
-
-    
-        
-            <script>
-                var themeToggleMode = "toggle";
-            </script>
-        
-        <script src=https://tshepang.github.io/js/themetoggle.js></script>
-
-        
-            <script>
-                setTheme(getSavedTheme());
-            </script>
-        
-    
-
-
-    <link rel="stylesheet"
-          type="text/css"
-          media="screen"
-          href="https://tshepang.github.io/main.css" />
-
-    
-
-    
-        <script defer
-                src="https://tshepang.github.io/js/searchElasticlunr.min.js?h=3626c0ef99daa745b31e"></script>
-
-</head>
-
-
-    <body>
-        
-
-        <div class="left-content">
-            
-            
-        </div>
-
-        <div class="content">
-            <nav>
-    <div class="left-nav">
-        
-            <a href=https://tshepang.github.io>Tshepang logs</a>
-        
-
-
-        <div class="socials">
-            
-                
-            
-            
-                <a rel='me' href="https://github.com/tshepang" class="social">
-                    <img alt="code"
-                         src="https://tshepang.github.io/icons/social/github.svg" />
-                </a>
-            
-        </div>
-    </div>
-
-    <div class="right-nav">
-        
-            <a href=https://tshepang.github.io/about-me style="margin-right: 0.5em">about</a>
-        
-            <a href=https://tshepang.github.io/categories/movies style="margin-right: 0.5em">movies</a>
-        
-            <a href=https://tshepang.github.io/tags style="margin-right: 0.5em">tags</a>
-        
-
-        
-            <button id="search-button"
-                    class="search-button"
-                    title="$SHORTCUT to open search">
-                <img src="https://tshepang.github.io/icons/search.svg"
-                     alt="Search"
-                     class="search-icon" />
-            </button>
-
-            <div id="searchModal"
-                 class="search-modal js"
-                 role="dialog"
-                 aria-labelledby="modalTitle">
-                <div id="modal-content">
-                    <h1 id="modalTitle" class="page-header">
-                        Search
-                    </h1>
-                    <div id="searchBar">
-                        <input id="searchInput"
-                               role="combobox"
-                               autocomplete="off"
-                               spellcheck="false"
-                               aria-expanded="false"
-                               aria-controls="results-container"
-                               placeholder="Search..." />
-                        <button id="clear-search" class="clear-button" title="Clear search">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-                                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div id="results-container">
-                        <div id="results-info">
-                            <span id="zero_results" style="display: none;">No results</span>
-                            <span id="one_result" style="display: none;">1 result</span>
-                            <span id="many_results" style="display: none;">$NUMBER results</span>
-                        </div>
-                        <div id="results" role="listbox">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-
-        
-        
-            <a id="dark-mode-toggle"
-               onclick="toggleTheme(); event.preventDefault();"
-               href="#">
-                <img src="https://tshepang.github.io/icons/sun.svg" id="sun-icon" alt="Light" />
-                <img src="https://tshepang.github.io/icons/moon.svg"
-                     id="moon-icon"
-                     style="filter: invert(1)"
-                     alt="Dark" />
-                
-            </a>
-
-            <!-- Initialize the theme toggle icons -->
-            <script>
-                updateItemToggleTheme()
-            </script>
-        
-    </div>
-</nav>
-
-
-            
-            
-    
-<div class="visible-element-observer-root" data-selector="main article p">
-    <main>
-        <article>
-            <div class="title">
-                
-                
-
-    <div class="page-header">
-        my current desktop setup
-    </div>
-
-
-
-                <div class="meta">
-                    
-                        Posted on <time>2014-02-16</time>
-                    
-
-
-                    
-
-                    
-
-                    
-
-                    
-                    
-
-                    
-                    
-
-                    
-                    
-                        <span class="tags-label">::</span>
-                        <span class="tags">
-                                <a href="https://tshepang.github.io/tags/debian/"
-                                   class="post-tag">Debian</a>
-                            
-                                <a href="https://tshepang.github.io/tags/gnome/"
-                                   class="post-tag">GNOME</a>
-                            
-                        </span>
-                    
-
-                    
-
-                </div>
-            </div>
-
-            
-
-            <section class="body">
-                <p>Following is how my GUI environment is set-up on <a href="https://tshepang.github.io/sony-vaio-pro-13-svp13212sgbi/">my home machine</a> (a
-laptop) and work machine (a desktop). For the (libre) tools I frequently
-use, see <a href="https://tshepang.github.io/floss-i-use-a-lot/">this post</a> instead.</p>
-<hr />
-<p>With recent Debian GNOME updates (late 2013), something got broken
-enough that I could not login to my account. I saw this as a good
-opportunity to finally try something other than GNOME as my primary
-environment. I have before tinkered with other GUI environments (XFCE,
-KDE 3, FluxBox, LXDE, and most recently, Window Maker), but none lasted
-very long. But I think this time I will actually abandon GNOME
-permanently (after nearly a decade of use).</p>
-<p>I been playing with <a rel="external" href="http://dwm.suckless.org">dwm</a> for the past several weeks, and the experience
-has convinced me to stay. I am attracted to the philosophy of
-minimalism, though I find they do take things a bit far in requiring
-users to tinker with C source code in order to configure it. Luckily
-it's not hard, and there's examples out there. It just takes a while
-since there isn't a comprehensive guide I could find.</p>
-<p>For my login manager, I use <a rel="external" href="http://www.freedesktop.org/wiki/Software/LightDM">LightDM</a>. I added this line to its
-configuration, in <code>[SeatDefaults]</code> section:</p>
-<pre><code>greeter-hide-users=false
-</code></pre>
-<p>It removes the need to manually enter my username each time I want to
-login.</p>
-<p>Reason I'm not using GDM? I wanted something light, which also
-wouldn't pull in dozens of packages that I won't use. For example:</p>
-<pre><code>$ sudo apt-get install --no-install-recommends gdm3
+" href=https://tshepang.github.io/atom.xml rel=alternate type=application/atom+xml><link href=https://tshepang.github.io/theme/light.css rel=stylesheet><link href=https://tshepang.github.io/theme/dark.css id=darkModeStyle rel=stylesheet><script>var themeToggleMode = "toggle";</script><script src=https://tshepang.github.io/js/themetoggle.js></script><script>setTheme(getSavedTheme());</script><link href=https://tshepang.github.io/main.css media=screen rel=stylesheet><script src="https://tshepang.github.io/js/searchElasticlunr.min.js?h=3626c0ef99daa745b31e" defer></script><body><div class=left-content></div><div class=content><nav><div class=left-nav><a href=https://tshepang.github.io>Tshepang logs</a><div class=socials><a class=social href=https://github.com/tshepang rel=me> <img alt=code src=https://tshepang.github.io/icons/social/github.svg> </a></div></div><div class=right-nav><a href=https://tshepang.github.io/about-me style=margin-right:.5em>about</a><a href=https://tshepang.github.io/categories/movies style=margin-right:.5em>movies</a><a href=https://tshepang.github.io/tags style=margin-right:.5em>tags</a><button title="$SHORTCUT to open search" class=search-button id=search-button><img alt=Search class=search-icon src=https://tshepang.github.io/icons/search.svg></button><div class="search-modal js" aria-labelledby=modalTitle id=searchModal role=dialog><div id=modal-content><h1 class=page-header id=modalTitle>Search</h1><div id=searchBar><input aria-controls=results-container aria-expanded=false autocomplete=off id=searchInput placeholder=Search... role=combobox spellcheck=false><button title="Clear search" class=clear-button id=clear-search><svg viewbox="0 -960 960 960" xmlns=http://www.w3.org/2000/svg><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button></div><div id=results-container><div id=results-info><span id=zero_results style=display:none>No results</span><span id=one_result style=display:none>1 result</span><span id=many_results style=display:none>$NUMBER results</span></div><div id=results role=listbox></div></div></div></div><a onclick="toggleTheme(); event.preventDefault();" href=# id=dark-mode-toggle> <img alt=Light id=sun-icon src=https://tshepang.github.io/icons/sun.svg> <img alt=Dark id=moon-icon src=https://tshepang.github.io/icons/moon.svg style=filter:invert()> </a><script>updateItemToggleTheme()</script></div></nav><div data-selector="main article p" class=visible-element-observer-root><main><article><div class=title><div class=page-header>my current desktop setup</div><div class=meta>Posted on <time>2014-02-16</time><span class=tags-label>::</span><span class=tags> <a class=post-tag href=https://tshepang.github.io/tags/debian/>Debian</a> <a class=post-tag href=https://tshepang.github.io/tags/gnome/>GNOME</a> </span></div></div><section class=body><p>Following is how my GUI environment is set-up on <a href=https://tshepang.github.io/sony-vaio-pro-13-svp13212sgbi/>my home machine</a> (a laptop) and work machine (a desktop). For the (libre) tools I frequently use, see <a href=https://tshepang.github.io/floss-i-use-a-lot/>this post</a> instead.<hr><p>With recent Debian GNOME updates (late 2013), something got broken enough that I could not login to my account. I saw this as a good opportunity to finally try something other than GNOME as my primary environment. I have before tinkered with other GUI environments (XFCE, KDE 3, FluxBox, LXDE, and most recently, Window Maker), but none lasted very long. But I think this time I will actually abandon GNOME permanently (after nearly a decade of use).<p>I been playing with <a href=http://dwm.suckless.org rel=external>dwm</a> for the past several weeks, and the experience has convinced me to stay. I am attracted to the philosophy of minimalism, though I find they do take things a bit far in requiring users to tinker with C source code in order to configure it. Luckily it's not hard, and there's examples out there. It just takes a while since there isn't a comprehensive guide I could find.<p>For my login manager, I use <a href=http://www.freedesktop.org/wiki/Software/LightDM rel=external>LightDM</a>. I added this line to its configuration, in <code>[SeatDefaults]</code> section:<pre><code>greeter-hide-users=false
+</code></pre><p>It removes the need to manually enter my username each time I want to login.<p>Reason I'm not using GDM? I wanted something light, which also wouldn't pull in dozens of packages that I won't use. For example:<pre><code>$ sudo apt-get install --no-install-recommends gdm3
 Reading package lists... Done
 Building dependency tree
 Reading state information... Done
@@ -351,42 +51,29 @@ The following NEW packages will be installed:
 0 upgraded, 67 newly installed, 0 to remove and 45 not upgraded.
 Need to get 0 B/31.0 MB of archives.
 After this operation, 90.8 MB of additional disk space will be used.
-</code></pre>
-<p>GNOME philosophy tends towards tight integration, leading to things
-being not as modular as I would like: how could a display manager end up
-depending on a Contacts tool, or the Bluetooth stack. It may be just how
-it was built in Debian, but that also means there were build options
-that allowed such tight coupling in the first place. GDM has served me
-well for years, but I'm not interested in all those tools it brings
-with.</p>
-<p>Anyways, enough with that. I added a custom <code>.desktop</code> file which will
-become selectable on LightDM UI:</p>
-<pre><code>$ cat /usr/share/xsessions/custom.desktop
+</code></pre><p>GNOME philosophy tends towards tight integration, leading to things being not as modular as I would like: how could a display manager end up depending on a Contacts tool, or the Bluetooth stack. It may be just how it was built in Debian, but that also means there were build options that allowed such tight coupling in the first place. GDM has served me well for years, but I'm not interested in all those tools it brings with.<p>Anyways, enough with that. I added a custom <code>.desktop</code> file which will become selectable on LightDM UI:<pre><code>$ cat /usr/share/xsessions/custom.desktop
 [Desktop Entry]
 Name=Custom
 Exec=/etc/X11/Xsession
 Type=XSession
-</code></pre>
-<p>On selecting the entry labeled <strong>Custom</strong> that appears on LightDM, and
-logging in, the following will get executed (<a rel="external" href="https://github.com/tshepang/custom/blob/master/xsession">~/.xsession</a>):</p>
-<pre><code data-lang="sh"># apps
-xfce4-terminal --hide-menubar --tab --tab --tab &amp;
-firefox &amp;
-nautilus --no-desktop &amp;
-nm-applet &amp;
-trayer --edge top --align right --widthtype request --distance 15 &amp;
-quodlibet &amp;
-if [ $HOSTNAME == &#39;twork&#39; ]; then
-   icedove &amp;
+</code></pre><p>On selecting the entry labeled <strong>Custom</strong> that appears on LightDM, and logging in, the following will get executed (<a href=https://github.com/tshepang/custom/blob/master/xsession rel=external>~/.xsession</a>):<pre><code data-lang=sh># apps
+xfce4-terminal --hide-menubar --tab --tab --tab &
+firefox &
+nautilus --no-desktop &
+nm-applet &
+trayer --edge top --align right --widthtype request --distance 15 &
+quodlibet &
+if [ $HOSTNAME == 'twork' ]; then
+   icedove &
 fi
 
 # settings
 xset b off
-xmodmap -e &quot;clear Lock&quot;
-xmodmap -e &quot;keycode 66 = Super_L&quot;
+xmodmap -e "clear Lock"
+xmodmap -e "keycode 66 = Super_L"
 
 # host-specific settings
-if [ $HOSTNAME == &#39;twork&#39; ]; then
+if [ $HOSTNAME == 'twork' ]; then
     xrandr --output VGA-0 --output DVI-0 --right-of VGA-0
 else
     synclient TapButton1=1 TapButton2=3 TapButton3=2 MaxDoubleTapTime=100
@@ -395,20 +82,18 @@ fi
 
 # clock
 while true; do
-    datetime=$( date +&quot;%F %R&quot; )
-    if acpi -a | grep off-line &gt; /dev/null; then
-        battery=$( python -c &quot;print(&quot;$(acpi)&quot;.split(&#39;,&#39;)[1].strip())&quot; )
-        xsetroot -name &quot;$battery&quot;&quot; | &quot;&quot;$datetime&quot;
+    datetime=$( date +"%F %R" )
+    if acpi -a | grep off-line > /dev/null; then
+        battery=$( python -c "print("$(acpi)".split(',')[1].strip())" )
+        xsetroot -name "$battery"" | ""$datetime"
     else
-        xsetroot -name &quot;$datetime&quot;
+        xsetroot -name "$datetime"
     fi
     sleep 1m
-done &amp;
+done &
 
 exec dwm
-</code></pre>
-<p>Finally, this is what my dwm config changes look like (<a rel="external" href="https://github.com/tshepang/custom/blob/master/config.def.h">config.def.h</a>):</p>
-<pre><code>diff --git a/config.def.h b/config.def.h
+</code></pre><p>Finally, this is what my dwm config changes look like (<a href=https://github.com/tshepang/custom/blob/master/config.def.h rel=external>config.def.h</a>):<pre><code>diff --git a/config.def.h b/config.def.h
 index 77ff358..78af5d6 100644
 --- a/config.def.h
 +++ b/config.def.h
@@ -418,24 +103,24 @@ False means no bar */
  bar */
 
  /* tagging */
--static const char *tags[] = { &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;,
-&quot;9&quot; };
-+static const char *tags[] = { &quot;web&quot;, &quot;files&quot;, &quot;terminal&quot;, &quot;misc&quot; };
+-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8",
+"9" };
++static const char *tags[] = { "web", "files", "terminal", "misc" };
 
  static const Rule rules[] = {
 -       /* class      instance    title       tags mask     isfloating
         monitor */
--       { &quot;Gimp&quot;,     NULL,       NULL,       0,
+-       { "Gimp",     NULL,       NULL,       0,
         True,        -1 },
--       { &quot;Firefox&quot;,  NULL,       NULL,       1 &lt;&lt; 8,
+-       { "Firefox",  NULL,       NULL,       1 &lt;&lt; 8,
         False,       -1 },
 +  /* class             instance  title  tags mask  isfloating
    monitor */
-+  { &quot;Iceweasel&quot;,       NULL,     NULL,  1 &lt;&lt; 0,    False,       -1 },
-+  { &quot;trayer&quot;,          NULL,     NULL,  1 &lt;&lt; 0,    False,       -1 },
-+  { &quot;Nautilus&quot;,        NULL,     NULL,  1 &lt;&lt; 1,    False,       -1 },
-+  { &quot;Xfce4-terminal&quot;,  NULL,     NULL,  1 &lt;&lt; 2,    False,       -1 },
-+  { &quot;Quodlibet&quot;,       NULL,     NULL,  1 &lt;&lt; 3,    False,       -1 },
++  { "Iceweasel",       NULL,     NULL,  1 &lt;&lt; 0,    False,       -1 },
++  { "trayer",          NULL,     NULL,  1 &lt;&lt; 0,    False,       -1 },
++  { "Nautilus",        NULL,     NULL,  1 &lt;&lt; 1,    False,       -1 },
++  { "Xfce4-terminal",  NULL,     NULL,  1 &lt;&lt; 2,    False,       -1 },
++  { "Quodlibet",       NULL,     NULL,  1 &lt;&lt; 3,    False,       -1 },
  };
 
  /* layout(s) */
@@ -453,44 +138,14 @@ False means no bar */
 @@ -47,7 +50,7 @@ static const Layout layouts[] = {
 
  /* commands */
- static const char *dmenucmd[] = { &quot;dmenu_run&quot;, &quot;-fn&quot;, font, &quot;-nb&quot;,
- normbgcolor, &quot;-nf&quot;, normfgcolor, &quot;-sb&quot;, selbgcolor, &quot;-sf&quot;,
+ static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb",
+ normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf",
  selfgcolor, NULL };
--static const char *termcmd[]  = { &quot;uxterm&quot;, NULL };
-+static const char *termcmd[]  = { &quot;xfce4-terminal&quot;, &quot;--hide-menubar&quot;
+-static const char *termcmd[]  = { "uxterm", NULL };
++static const char *termcmd[]  = { "xfce4-terminal", "--hide-menubar"
 };
 
  static Key keys[] = {
         /* modifier                     key        function
         argument */
-</code></pre>
-<p>Note that this diff is against the Debian package (version <strong>6.0-6</strong>). I
-could not change the modifier key with the upstream version of dwm.</p>
-<p>You will notice that I'm still using one major GNOME package, Nautilus,
-the file browser. It remains my favorite GUI file manager.</p>
-
-            </section>
-        </article>
-    </main>
-</div>
-
-
-
-            
-                
-            
-
-            
-        </div>
-
-        <div class="right-content">
-            
-    
-    
-
-        </div>
-        
-
-    </body>
-
-</html>
+</code></pre><p>Note that this diff is against the Debian package (version <strong>6.0-6</strong>). I could not change the modifier key with the upstream version of dwm.<p>You will notice that I'm still using one major GNOME package, Nautilus, the file browser. It remains my favorite GUI file manager.</section></article></main></div></div><div class=right-content></div>

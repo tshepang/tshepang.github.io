@@ -1,409 +1,53 @@
-
-<!DOCTYPE html>
-<html lang="en" class="dark light">
-
-    
-<head>
-    
-
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="base" content="https://tshepang.github.io" />
-
-    
-
-    
-
-    
-    
-    
-        <title>
+<!doctype html><html class="dark light" lang=en><head><meta charset=UTF-8><meta content="IE=edge" http-equiv=X-UA-Compatible><meta content="width=device-width,initial-scale=1.0" name=viewport><meta content=https://tshepang.github.io name=base><title>
             
                 a bit of benchmarking
             
-        </title>
-
-        
-            <meta property="og:title"
-                  content="a bit of benchmarking" />
-        
-    
-
-    
-        
-    
-
-    
-        
-    
-
-    
-    
-
-    
-    
-        <link href=https://tshepang.github.io/fonts.css rel="stylesheet" />
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-
-    
-    
-        
-            
-                <link rel="alternate"
-                      type="application/atom+xml"
-                      title="
+        </title><meta content="a bit of benchmarking" property=og:title><link href=https://tshepang.github.io/fonts.css rel=stylesheet><link title="
 Tshepang logs
-"
-                      href="https://tshepang.github.io/atom.xml" />
-            
-        
-    
-
-
-    
-
-    
-    
-
-    
-    
-        <link rel="stylesheet"
-              type="text/css"
-              href="https://tshepang.github.io/theme/light.css" />
-        <link id="darkModeStyle"
-              rel="stylesheet"
-              type="text/css"
-              href="https://tshepang.github.io/theme/dark.css" />
-    
-
-    
-        
-            <script>
-                var themeToggleMode = "toggle";
-            </script>
-        
-        <script src=https://tshepang.github.io/js/themetoggle.js></script>
-
-        
-            <script>
-                setTheme(getSavedTheme());
-            </script>
-        
-    
-
-
-    <link rel="stylesheet"
-          type="text/css"
-          media="screen"
-          href="https://tshepang.github.io/main.css" />
-
-    
-
-    
-        <script defer
-                src="https://tshepang.github.io/js/searchElasticlunr.min.js?h=3626c0ef99daa745b31e"></script>
-
-</head>
-
-
-    <body>
-        
-
-        <div class="left-content">
-            
-            
-        </div>
-
-        <div class="content">
-            <nav>
-    <div class="left-nav">
-        
-            <a href=https://tshepang.github.io>Tshepang logs</a>
-        
-
-
-        <div class="socials">
-            
-                
-            
-            
-                <a rel='me' href="https://github.com/tshepang" class="social">
-                    <img alt="code"
-                         src="https://tshepang.github.io/icons/social/github.svg" />
-                </a>
-            
-        </div>
-    </div>
-
-    <div class="right-nav">
-        
-            <a href=https://tshepang.github.io/about-me style="margin-right: 0.5em">about</a>
-        
-            <a href=https://tshepang.github.io/categories/movies style="margin-right: 0.5em">movies</a>
-        
-            <a href=https://tshepang.github.io/tags style="margin-right: 0.5em">tags</a>
-        
-
-        
-            <button id="search-button"
-                    class="search-button"
-                    title="$SHORTCUT to open search">
-                <img src="https://tshepang.github.io/icons/search.svg"
-                     alt="Search"
-                     class="search-icon" />
-            </button>
-
-            <div id="searchModal"
-                 class="search-modal js"
-                 role="dialog"
-                 aria-labelledby="modalTitle">
-                <div id="modal-content">
-                    <h1 id="modalTitle" class="page-header">
-                        Search
-                    </h1>
-                    <div id="searchBar">
-                        <input id="searchInput"
-                               role="combobox"
-                               autocomplete="off"
-                               spellcheck="false"
-                               aria-expanded="false"
-                               aria-controls="results-container"
-                               placeholder="Search..." />
-                        <button id="clear-search" class="clear-button" title="Clear search">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-                                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div id="results-container">
-                        <div id="results-info">
-                            <span id="zero_results" style="display: none;">No results</span>
-                            <span id="one_result" style="display: none;">1 result</span>
-                            <span id="many_results" style="display: none;">$NUMBER results</span>
-                        </div>
-                        <div id="results" role="listbox">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-
-        
-        
-            <a id="dark-mode-toggle"
-               onclick="toggleTheme(); event.preventDefault();"
-               href="#">
-                <img src="https://tshepang.github.io/icons/sun.svg" id="sun-icon" alt="Light" />
-                <img src="https://tshepang.github.io/icons/moon.svg"
-                     id="moon-icon"
-                     style="filter: invert(1)"
-                     alt="Dark" />
-                
-            </a>
-
-            <!-- Initialize the theme toggle icons -->
-            <script>
-                updateItemToggleTheme()
-            </script>
-        
-    </div>
-</nav>
-
-
-            
-            
-    
-<div class="visible-element-observer-root" data-selector="main article p">
-    <main>
-        <article>
-            <div class="title">
-                
-                
-
-    <div class="page-header">
-        a bit of benchmarking
-    </div>
-
-
-
-                <div class="meta">
-                    
-                        Posted on <time>2013-10-27</time>
-                    
-
-
-                    
-
-                    
-
-                    
-
-                    
-                    
-
-                    
-                    
-
-                    
-                    
-                        <span class="tags-label">::</span>
-                        <span class="tags">
-                                <a href="https://tshepang.github.io/tags/python/"
-                                   class="post-tag">Python</a>
-                            
-                        </span>
-                    
-
-                    
-
-                </div>
-            </div>
-
-            
-
-            <section class="body">
-                <p>I was curious how my home machine performs compared to my work machine.
-Each of these have 4 logical processors (and 8GB of RAM), so are sort of
-comparable. I also added the <a rel="external" href="https://www.digitalocean.com/?refcode=25b4887810cc">DigitalOcean</a> VPS with those specs
-(<a rel="external" href="https://www.digitalocean.com/pricing">currently $80 per month</a>) because... why not.</p>
-<h2 id="machine-specs">Machine Specs</h2>
-<p>Each machine runs Debian testing (codename "jessie"). Following is the
-output of these commands for each machine:</p>
-<pre><code>uname --all
-cat /proc/cpuinfo | sed --quiet &#39;5p&#39;
-</code></pre>
-<p>Home machine:</p>
-<pre><code>Linux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU/Linux
+" href=https://tshepang.github.io/atom.xml rel=alternate type=application/atom+xml><link href=https://tshepang.github.io/theme/light.css rel=stylesheet><link href=https://tshepang.github.io/theme/dark.css id=darkModeStyle rel=stylesheet><script>var themeToggleMode = "toggle";</script><script src=https://tshepang.github.io/js/themetoggle.js></script><script>setTheme(getSavedTheme());</script><link href=https://tshepang.github.io/main.css media=screen rel=stylesheet><script src="https://tshepang.github.io/js/searchElasticlunr.min.js?h=3626c0ef99daa745b31e" defer></script><body><div class=left-content></div><div class=content><nav><div class=left-nav><a href=https://tshepang.github.io>Tshepang logs</a><div class=socials><a class=social href=https://github.com/tshepang rel=me> <img alt=code src=https://tshepang.github.io/icons/social/github.svg> </a></div></div><div class=right-nav><a href=https://tshepang.github.io/about-me style=margin-right:.5em>about</a><a href=https://tshepang.github.io/categories/movies style=margin-right:.5em>movies</a><a href=https://tshepang.github.io/tags style=margin-right:.5em>tags</a><button title="$SHORTCUT to open search" class=search-button id=search-button><img alt=Search class=search-icon src=https://tshepang.github.io/icons/search.svg></button><div class="search-modal js" aria-labelledby=modalTitle id=searchModal role=dialog><div id=modal-content><h1 class=page-header id=modalTitle>Search</h1><div id=searchBar><input aria-controls=results-container aria-expanded=false autocomplete=off id=searchInput placeholder=Search... role=combobox spellcheck=false><button title="Clear search" class=clear-button id=clear-search><svg viewbox="0 -960 960 960" xmlns=http://www.w3.org/2000/svg><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button></div><div id=results-container><div id=results-info><span id=zero_results style=display:none>No results</span><span id=one_result style=display:none>1 result</span><span id=many_results style=display:none>$NUMBER results</span></div><div id=results role=listbox></div></div></div></div><a onclick="toggleTheme(); event.preventDefault();" href=# id=dark-mode-toggle> <img alt=Light id=sun-icon src=https://tshepang.github.io/icons/sun.svg> <img alt=Dark id=moon-icon src=https://tshepang.github.io/icons/moon.svg style=filter:invert()> </a><script>updateItemToggleTheme()</script></div></nav><div data-selector="main article p" class=visible-element-observer-root><main><article><div class=title><div class=page-header>a bit of benchmarking</div><div class=meta>Posted on <time>2013-10-27</time><span class=tags-label>::</span><span class=tags> <a class=post-tag href=https://tshepang.github.io/tags/python/>Python</a> </span></div></div><section class=body><p>I was curious how my home machine performs compared to my work machine. Each of these have 4 logical processors (and 8GB of RAM), so are sort of comparable. I also added the <a href="https://www.digitalocean.com/?refcode=25b4887810cc" rel=external>DigitalOcean</a> VPS with those specs (<a href=https://www.digitalocean.com/pricing rel=external>currently $80 per month</a>) because... why not.<h2 id=machine-specs>Machine Specs</h2><p>Each machine runs Debian testing (codename "jessie"). Following is the output of these commands for each machine:<pre><code>uname --all
+cat /proc/cpuinfo | sed --quiet '5p'
+</code></pre><p>Home machine:<pre><code>Linux thome 3.11-trunk-amd64 #1 SMP Debian 3.11-1~exp1 (2013-09-12) x86_64 GNU/Linux
 model name      : Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz
-</code></pre>
-<p>Work machine:</p>
-<pre><code>Linux twork 3.10-3-amd64 #1 SMP Debian 3.10.11-1 (2013-09-10) x86_64 GNU/Linux
+</code></pre><p>Work machine:<pre><code>Linux twork 3.10-3-amd64 #1 SMP Debian 3.10.11-1 (2013-09-10) x86_64 GNU/Linux
 model name      : AMD Phenom(tm) II X4 970 Processor
-</code></pre>
-<p>DigitalOcean VPS:</p>
-<pre><code>Linux tcloud 3.11-1-amd64 #1 SMP Debian 3.11.5-1 (2013-10-17) x86_64 GNU/Linux
+</code></pre><p>DigitalOcean VPS:<pre><code>Linux tcloud 3.11-1-amd64 #1 SMP Debian 3.11.5-1 (2013-10-17) x86_64 GNU/Linux
 model name      : QEMU Virtual CPU version 1.0
-</code></pre>
-<h2 id="cpython-benchmarks">CPython benchmarks</h2>
-<p>I ran two benchmarks, both from the latest VCS version of CPython,
-development branch:</p>
-<pre><code>$ hg identify --id --branch
+</code></pre><h2 id=cpython-benchmarks>CPython benchmarks</h2><p>I ran two benchmarks, both from the latest VCS version of CPython, development branch:<pre><code>$ hg identify --id --branch
 b6a1a78818fe default
-</code></pre>
-<h3 id="build">Build</h3>
-<p>Here's the command I used:</p>
-<pre><code>make distclean; time (./configure &amp;&amp; make --silent --jobs=4)
-</code></pre>
-<h3 id="results">Results</h3>
-<p>Home machine:</p>
-<pre><code>real    2m11.687s
+</code></pre><h3 id=build>Build</h3><p>Here's the command I used:<pre><code>make distclean; time (./configure && make --silent --jobs=4)
+</code></pre><h3 id=results>Results</h3><p>Home machine:<pre><code>real    2m11.687s
 user    3m18.104s
 sys     0m9.964s
-</code></pre>
-<p>Work machine:</p>
-<pre><code>real    2m2.707s
+</code></pre><p>Work machine:<pre><code>real    2m2.707s
 user    2m24.200s
 sys     0m12.280s
-</code></pre>
-<p>VPS:</p>
-<pre><code>real    2m30.931s
+</code></pre><p>VPS:<pre><code>real    2m30.931s
 user    3m7.272s
 sys     0m16.592s
-</code></pre>
-<h3 id="test-suite">Test suite</h3>
-<p>Here's the command I used:</p>
-<pre><code>time ./python -m test --multiprocess=0
-</code></pre>
-<p><strong>--multiprocess=0</strong> means that there will be 6 tests run in parallel;
-that is the number logical cores (4 in my case) + 2 (to avoid waiting
-too long for tests which are largely idle)</p>
-<h3 id="results-1">Results</h3>
-<p>Home machine:</p>
-<pre><code>real    3m42.571s
+</code></pre><h3 id=test-suite>Test suite</h3><p>Here's the command I used:<pre><code>time ./python -m test --multiprocess=0
+</code></pre><p><strong>--multiprocess=0</strong> means that there will be 6 tests run in parallel; that is the number logical cores (4 in my case) + 2 (to avoid waiting too long for tests which are largely idle)<h3 id=results-1>Results</h3><p>Home machine:<pre><code>real    3m42.571s
 user    7m13.124s
 sys     0m33.320s
-</code></pre>
-<p>Work machine:</p>
-<pre><code>real    2m29.957s
+</code></pre><p>Work machine:<pre><code>real    2m29.957s
 user    4m9.052s
 sys     0m27.364s
-</code></pre>
-<p>VPS:</p>
-<pre><code>real    2m19.174s
+</code></pre><p>VPS:<pre><code>real    2m19.174s
 user    5m5.444s
 sys     0m40.008s
-</code></pre>
-<h2 id="linux-kernel-build">Linux kernel build</h2>
-<p>Just for kicks, I decided to check how long building Linux would take;
-for this, I used latest 'final' release from Linus' git tree:</p>
-<pre><code>$ git log -1
+</code></pre><h2 id=linux-kernel-build>Linux kernel build</h2><p>Just for kicks, I decided to check how long building Linux would take; for this, I used latest 'final' release from Linus' git tree:<pre><code>$ git log -1
 commit 6e4664525b1db28f8c4e1130957f70a94c19213e
-Author: Linus Torvalds &lt;torvalds@linux-foundation.org&gt;
+Author: Linus Torvalds &lt;torvalds@linux-foundation.org>
 Date:   Mon Sep 2 13:46:10 2013 -0700
 
 Linux 3.11
-</code></pre>
-<p>Here's the commands I used:</p>
-<pre><code>make distclean &amp;&amp; make defconfig &amp;&amp; time make
-</code></pre>
-<h3 id="results-2">Results</h3>
-<p>Home machine:</p>
-<pre><code>real    6m11.622s
+</code></pre><p>Here's the commands I used:<pre><code>make distclean && make defconfig && time make
+</code></pre><h3 id=results-2>Results</h3><p>Home machine:<pre><code>real    6m11.622s
 user    21m2.664s
 sys     1m15.324s
-</code></pre>
-<p>Work machine:</p>
-<pre><code>real    2m40.275s
+</code></pre><p>Work machine:<pre><code>real    2m40.275s
 user    8m55.624s
 sys     0m42.860s
-</code></pre>
-<p>VPS:</p>
-<pre><code>real    3m41.240s
+</code></pre><p>VPS:<pre><code>real    3m41.240s
 user    12m21.120s
 sys     1m17.844s
-</code></pre>
-<h2 id="conclusion">Conclusion</h2>
-<p>My work machine is faster than the DigitalOcean offering of comparable
-specs, and much faster than my home machine, a laptop.</p>
-<p>(<a rel="external" href="http://stackoverflow.com/a/556411/321731">detailed explanation of the output</a>)</p>
-
-            </section>
-        </article>
-    </main>
-</div>
-
-
-
-            
-                
-            
-
-            
-        </div>
-
-        <div class="right-content">
-            
-    
-    
-
-        </div>
-        
-
-    </body>
-
-</html>
+</code></pre><h2 id=conclusion>Conclusion</h2><p>My work machine is faster than the DigitalOcean offering of comparable specs, and much faster than my home machine, a laptop.<p>(<a href=http://stackoverflow.com/a/556411/321731 rel=external>detailed explanation of the output</a>)</section></article></main></div></div><div class=right-content></div>
