@@ -1,108 +1,308 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark light">
 
+    
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  
-  
-
-  <title>
     
-    cat, Python, and Perl
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base" content="https://tshepang.github.io" />
+
     
-</title>
-  <link rel="alternate" type="application/atom+xml" title="Tshepang logs Atom Feed" href="https://tshepang.github.io/atom.xml" />
 
-  
-  <link rel="stylesheet" href="https://tshepang.github.io/site.css">
-  
+    
 
-  
-  
+    
+    
+    
+        <title>
+            
+                cat, Python, and Perl
+            
+        </title>
+
+        
+            <meta property="og:title"
+                  content="cat, Python, and Perl" />
+        
+    
+
+    
+        
+    
+
+    
+        
+    
+
+    
+    
+
+    
+    
+        <link href=https://tshepang.github.io/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+
+    
+    
+        
+            
+                <link rel="alternate"
+                      type="application/atom+xml"
+                      title="
+Tshepang logs
+"
+                      href="https://tshepang.github.io/atom.xml" />
+            
+        
+    
+
+
+    
+
+    
+    
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://tshepang.github.io/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://tshepang.github.io/theme/dark.css" />
+    
+
+    
+        
+            <script>
+                var themeToggleMode = "toggle";
+            </script>
+        
+        <script src=https://tshepang.github.io/js/themetoggle.js></script>
+
+        
+            <script>
+                setTheme(getSavedTheme());
+            </script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://tshepang.github.io/main.css" />
+
+    
+
+    
+        <script defer
+                src="https://tshepang.github.io/js/searchElasticlunr.min.js?h=3626c0ef99daa745b31e"></script>
+
 </head>
 
-<body class="hack dark main container">
-  
-    
+
+    <body>
         
-  
-  <header class="nav-header">
-    <nav itemscope itemtype="http://schema.org/SiteNavigationElement" class="navbar">
-      <div class="nav-links">
+
+        <div class="left-content">
+            
+            
+        </div>
+
+        <div class="content">
+            <nav>
+    <div class="left-nav">
         
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/about-me">
-          <span itemprop="name">about</span></a>
+            <a href=https://tshepang.github.io>Tshepang logs</a>
         
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/tags">
-          <span itemprop="name">tags</span></a>
-        
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/categories/movies">
-          <span itemprop="name">movies</span></a>
-        
-      </div>
-    </nav>
-    
-    <div class="search-container">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="search-icon">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-      </svg>
-      <input type="text" id="search" placeholder="Search...">
-      <div class="search-results">
-        <div class="search-results__items"></div>
-      </div>
+
+
+        <div class="socials">
+            
+                
+            
+            
+                <a rel='me' href="https://github.com/tshepang" class="social">
+                    <img alt="code"
+                         src="https://tshepang.github.io/icons/social/github.svg" />
+                </a>
+            
+        </div>
     </div>
-    
 
-  </header>
-  
-  
-    
+    <div class="right-nav">
+        
+            <a href=https://tshepang.github.io/about-me style="margin-right: 0.5em">about</a>
+        
+            <a href=https://tshepang.github.io/categories/movies style="margin-right: 0.5em">movies</a>
+        
+            <a href=https://tshepang.github.io/tags style="margin-right: 0.5em">tags</a>
+        
 
-<article itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-        <h1 itemprop="headline">cat, Python, and Perl</h1>
-        <span class="muted">
-    2011-03-15
-</span>
-    </header>
-    <div itemprop="articleBody">
-      <br>
-      <p>I came across <a href="http://greenteapress.com/perl/perl.pdf">a tutorial</a> that showes how to implement a simple cat in
+        
+            <button id="search-button"
+                    class="search-button"
+                    title="$SHORTCUT to open search">
+                <img src="https://tshepang.github.io/icons/search.svg"
+                     alt="Search"
+                     class="search-icon" />
+            </button>
+
+            <div id="searchModal"
+                 class="search-modal js"
+                 role="dialog"
+                 aria-labelledby="modalTitle">
+                <div id="modal-content">
+                    <h1 id="modalTitle" class="page-header">
+                        Search
+                    </h1>
+                    <div id="searchBar">
+                        <input id="searchInput"
+                               role="combobox"
+                               autocomplete="off"
+                               spellcheck="false"
+                               aria-expanded="false"
+                               aria-controls="results-container"
+                               placeholder="Search..." />
+                        <button id="clear-search" class="clear-button" title="Clear search">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="results-container">
+                        <div id="results-info">
+                            <span id="zero_results" style="display: none;">No results</span>
+                            <span id="one_result" style="display: none;">1 result</span>
+                            <span id="many_results" style="display: none;">$NUMBER results</span>
+                        </div>
+                        <div id="results" role="listbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+        
+        
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://tshepang.github.io/icons/sun.svg" id="sun-icon" alt="Light" />
+                <img src="https://tshepang.github.io/icons/moon.svg"
+                     id="moon-icon"
+                     style="filter: invert(1)"
+                     alt="Dark" />
+                
+            </a>
+
+            <!-- Initialize the theme toggle icons -->
+            <script>
+                updateItemToggleTheme()
+            </script>
+        
+    </div>
+</nav>
+
+
+            
+            
+    
+<div class="visible-element-observer-root" data-selector="main article p">
+    <main>
+        <article>
+            <div class="title">
+                
+                
+
+    <div class="page-header">
+        cat, Python, and Perl
+    </div>
+
+
+
+                <div class="meta">
+                    
+                        Posted on <time>2011-03-15</time>
+                    
+
+
+                    
+
+                    
+
+                    
+
+                    
+                    
+
+                    
+                    
+
+                    
+                    
+                        <span class="tags-label">::</span>
+                        <span class="tags">
+                                <a href="https://tshepang.github.io/tags/python/"
+                                   class="post-tag">Python</a>
+                            
+                                <a href="https://tshepang.github.io/tags/non-python/"
+                                   class="post-tag">non-Python</a>
+                            
+                        </span>
+                    
+
+                    
+
+                </div>
+            </div>
+
+            
+
+            <section class="body">
+                <p>I came across <a rel="external" href="http://greenteapress.com/perl/perl.pdf">a tutorial</a> that showes how to implement a simple cat in
 Perl. I've modified their example for the sake of simplicity:</p>
-<pre data-lang="perl" style="background-color:#2b303b;color:#c0c5ce;" class="language-perl "><code class="language-perl" data-lang="perl"><span style="color:#b48ead;">sub </span><span style="color:#8fa1b3;">cat </span><span>{
-</span><span>    </span><span style="color:#b48ead;">foreach my </span><span>$</span><span style="color:#bf616a;">filename </span><span>(@</span><span style="color:#bf616a;">_</span><span>) {
-</span><span>        </span><span style="color:#96b5b4;">open </span><span style="color:#d08770;">FILE</span><span>, $</span><span style="color:#bf616a;">filename</span><span>;
-</span><span>        </span><span style="color:#b48ead;">while </span><span>(</span><span style="color:#b48ead;">my </span><span>$</span><span style="color:#bf616a;">line </span><span>= &lt;</span><span style="color:#a3be8c;">FILE</span><span>&gt;) {
-</span><span>            </span><span style="color:#96b5b4;">print </span><span>$</span><span style="color:#bf616a;">line</span><span>;
-</span><span>        }
-</span><span>    }
-</span><span>}
-</span><span style="color:#bf616a;">cat </span><span>@</span><span style="color:#bf616a;">ARGV</span><span>;
-</span></code></pre>
+<pre><code data-lang="perl">sub cat {
+    foreach my $filename (@_) {
+        open FILE, $filename;
+        while (my $line = &lt;FILE&gt;) {
+            print $line;
+        }
+    }
+}
+cat @ARGV;
+</code></pre>
 <p>Running this script (e.g. <code>perl cat.pl file</code>) will display those files
 as if you ran <code>cat file</code>.</p>
 <p>I decided to see how the Python example would look like:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>sys
-</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">cat</span><span>(</span><span style="color:#bf616a;">files</span><span>):
-</span><span>    </span><span style="color:#b48ead;">for </span><span>filename </span><span style="color:#b48ead;">in </span><span>files:
-</span><span>        </span><span style="color:#b48ead;">with </span><span style="color:#96b5b4;">open</span><span>(filename) </span><span style="color:#b48ead;">as </span><span style="color:#bf616a;">FILE</span><span>:
-</span><span>            </span><span style="color:#b48ead;">for </span><span>line </span><span style="color:#b48ead;">in </span><span style="color:#bf616a;">FILE</span><span>:
-</span><span>                </span><span style="color:#96b5b4;">print</span><span>(line, </span><span style="color:#bf616a;">end</span><span>=&quot;&quot;)
-</span><span style="color:#bf616a;">cat</span><span>(sys.argv[</span><span style="color:#d08770;">1</span><span>:])
-</span></code></pre>
+<pre><code data-lang="python">import sys
+def cat(files):
+    for filename in files:
+        with open(filename) as FILE:
+            for line in FILE:
+                print(line, end=&quot;&quot;)
+cat(sys.argv[1:])
+</code></pre>
 <p>Running this script (e.g. <code>python3 cat.py file1 file2</code>) will give
 exactly the same result as above.</p>
 <h2 id="notes">notes</h2>
@@ -130,7 +330,7 @@ argument list should have been provided during the function
 declaration, as in Python's <code>cat(files)</code>.</li>
 <li>Note that I didn't need to import anything to get Perl to work with
 command line arguments. With Python, I need to explicitly do so, and
-that's via the <a href="http://docs.python.org/3/library/sys">sys module</a>, which is part of its standard library.</li>
+that's via the <a rel="external" href="http://docs.python.org/3/library/sys">sys module</a>, which is part of its standard library.</li>
 <li>The Python <code>with</code> statement is meant to make our lives easier, but
 also adds syntax to the language. What it does is close a file for
 us so we don't have to do it.</li>
@@ -147,59 +347,33 @@ elegantly.</li>
 </ul>
 <h2 id="further-reading">further reading</h2>
 <ul>
-<li><a href="http://docs.python.org/reference/executionmodel">Python scope</a></li>
-<li><a href="http://docs.python.org/3/library/functions#print">Python print function</a></li>
-<li><a href="http://docs.python.org/3/reference/compound_stmts#the-with-statement">Python with statement</a></li>
+<li><a rel="external" href="http://docs.python.org/reference/executionmodel">Python scope</a></li>
+<li><a rel="external" href="http://docs.python.org/3/library/functions#print">Python print function</a></li>
+<li><a rel="external" href="http://docs.python.org/3/reference/compound_stmts#the-with-statement">Python with statement</a></li>
 </ul>
 
-    </div>
+            </section>
+        </article>
+    </main>
+</div>
 
-    
-        <footer>
-            <hr>
-            <p>
-                
-                
-                
-                    
-                    tagged
-                    
-                        <a href="https://tshepang.github.io/tags/non-python/">non-Python</a>
-                        
-                            
-                                
-                                    and
-                                
-                            
-                        
-                    
-                        <a href="https://tshepang.github.io/tags/python/">Python</a>
-                        
-                            
-                        
-                    
-                
-            </p>
+
+
             
+                
             
-        </footer>
+
+            
+        </div>
+
+        <div class="right-content">
+            
     
-</article>
+    
 
+        </div>
+        
 
-
-  <!-- optional scripts -->
-  
-  
-
-  
-
-  
-<script type="text/javascript" src="https://tshepang.github.io/elasticlunr.min.js"></script>
-<script type="text/javascript" src="https://tshepang.github.io/js/search.js"></script>
-
-
-  
-</body>
+    </body>
 
 </html>

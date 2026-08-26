@@ -1,179 +1,379 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark light">
 
+    
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  
-  
-
-  <title>
     
-    a better Python
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base" content="https://tshepang.github.io" />
+
     
-</title>
-  <link rel="alternate" type="application/atom+xml" title="Tshepang logs Atom Feed" href="https://tshepang.github.io/atom.xml" />
 
-  
-  <link rel="stylesheet" href="https://tshepang.github.io/site.css">
-  
+    
 
-  
-  
+    
+    
+    
+        <title>
+            
+                a better Python
+            
+        </title>
+
+        
+            <meta property="og:title"
+                  content="a better Python" />
+        
+    
+
+    
+        
+    
+
+    
+        
+    
+
+    
+    
+
+    
+    
+        <link href=https://tshepang.github.io/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+
+    
+    
+        
+            
+                <link rel="alternate"
+                      type="application/atom+xml"
+                      title="
+Tshepang logs
+"
+                      href="https://tshepang.github.io/atom.xml" />
+            
+        
+    
+
+
+    
+
+    
+    
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://tshepang.github.io/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://tshepang.github.io/theme/dark.css" />
+    
+
+    
+        
+            <script>
+                var themeToggleMode = "toggle";
+            </script>
+        
+        <script src=https://tshepang.github.io/js/themetoggle.js></script>
+
+        
+            <script>
+                setTheme(getSavedTheme());
+            </script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://tshepang.github.io/main.css" />
+
+    
+
+    
+        <script defer
+                src="https://tshepang.github.io/js/searchElasticlunr.min.js?h=3626c0ef99daa745b31e"></script>
+
 </head>
 
-<body class="hack dark main container">
-  
-    
+
+    <body>
         
-  
-  <header class="nav-header">
-    <nav itemscope itemtype="http://schema.org/SiteNavigationElement" class="navbar">
-      <div class="nav-links">
+
+        <div class="left-content">
+            
+            
+        </div>
+
+        <div class="content">
+            <nav>
+    <div class="left-nav">
         
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/about-me">
-          <span itemprop="name">about</span></a>
+            <a href=https://tshepang.github.io>Tshepang logs</a>
         
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/tags">
-          <span itemprop="name">tags</span></a>
-        
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/categories/movies">
-          <span itemprop="name">movies</span></a>
-        
-      </div>
-    </nav>
-    
-    <div class="search-container">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="search-icon">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-      </svg>
-      <input type="text" id="search" placeholder="Search...">
-      <div class="search-results">
-        <div class="search-results__items"></div>
-      </div>
+
+
+        <div class="socials">
+            
+                
+            
+            
+                <a rel='me' href="https://github.com/tshepang" class="social">
+                    <img alt="code"
+                         src="https://tshepang.github.io/icons/social/github.svg" />
+                </a>
+            
+        </div>
     </div>
-    
 
-  </header>
-  
-  
-    
+    <div class="right-nav">
+        
+            <a href=https://tshepang.github.io/about-me style="margin-right: 0.5em">about</a>
+        
+            <a href=https://tshepang.github.io/categories/movies style="margin-right: 0.5em">movies</a>
+        
+            <a href=https://tshepang.github.io/tags style="margin-right: 0.5em">tags</a>
+        
 
-<article itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-        <h1 itemprop="headline">a better Python</h1>
-        <span class="muted">
-    2014-05-10
-</span>
-    </header>
-    <div itemprop="articleBody">
-      <br>
-      <p><a href="http://neverworkintheory.org/2014/01/29/stefik-siebert-syntax">This post</a> led me to an interesting paper titled <em>An Empirical
+        
+            <button id="search-button"
+                    class="search-button"
+                    title="$SHORTCUT to open search">
+                <img src="https://tshepang.github.io/icons/search.svg"
+                     alt="Search"
+                     class="search-icon" />
+            </button>
+
+            <div id="searchModal"
+                 class="search-modal js"
+                 role="dialog"
+                 aria-labelledby="modalTitle">
+                <div id="modal-content">
+                    <h1 id="modalTitle" class="page-header">
+                        Search
+                    </h1>
+                    <div id="searchBar">
+                        <input id="searchInput"
+                               role="combobox"
+                               autocomplete="off"
+                               spellcheck="false"
+                               aria-expanded="false"
+                               aria-controls="results-container"
+                               placeholder="Search..." />
+                        <button id="clear-search" class="clear-button" title="Clear search">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="results-container">
+                        <div id="results-info">
+                            <span id="zero_results" style="display: none;">No results</span>
+                            <span id="one_result" style="display: none;">1 result</span>
+                            <span id="many_results" style="display: none;">$NUMBER results</span>
+                        </div>
+                        <div id="results" role="listbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+        
+        
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://tshepang.github.io/icons/sun.svg" id="sun-icon" alt="Light" />
+                <img src="https://tshepang.github.io/icons/moon.svg"
+                     id="moon-icon"
+                     style="filter: invert(1)"
+                     alt="Dark" />
+                
+            </a>
+
+            <!-- Initialize the theme toggle icons -->
+            <script>
+                updateItemToggleTheme()
+            </script>
+        
+    </div>
+</nav>
+
+
+            
+            
+    
+<div class="visible-element-observer-root" data-selector="main article p">
+    <main>
+        <article>
+            <div class="title">
+                
+                
+
+    <div class="page-header">
+        a better Python
+    </div>
+
+
+
+                <div class="meta">
+                    
+                        Posted on <time>2014-05-10</time>
+                    
+
+
+                    
+
+                    
+
+                    
+
+                    
+                    
+
+                    
+                    
+
+                    
+                    
+                        <span class="tags-label">::</span>
+                        <span class="tags">
+                                <a href="https://tshepang.github.io/tags/python/"
+                                   class="post-tag">Python</a>
+                            
+                                <a href="https://tshepang.github.io/tags/non-python/"
+                                   class="post-tag">non-Python</a>
+                            
+                        </span>
+                    
+
+                    
+
+                </div>
+            </div>
+
+            
+
+            <section class="body">
+                <p><a rel="external" href="http://neverworkintheory.org/2014/01/29/stefik-siebert-syntax">This post</a> led me to an interesting paper titled <em>An Empirical
 Investigation into Programming Language Syntax</em>. Now, since I'm a
 Python sucker, here is what I would change in Python in order to follow
-advice from <a href="http://dl.acm.org/authorize?6968137">that paper</a>:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>    before       after
-</span><span>    ------       -----
-</span><span>     !=          not=
-</span><span>      %          mod
-</span><span>   string        text
-</span><span>  try-except  check-error
-</span><span>   finally       always
-</span><span>    raise        alert
-</span><span>     def       procedure
-</span><span>    print       output
-</span><span>   import        use
-</span><span>  int/float     number
-</span></code></pre>
+advice from <a rel="external" href="http://dl.acm.org/authorize?6968137">that paper</a>:</p>
+<pre><code>    before       after
+    ------       -----
+     !=          not=
+      %          mod
+   string        text
+  try-except  check-error
+   finally       always
+    raise        alert
+     def       procedure
+    print       output
+   import        use
+  int/float     number
+</code></pre>
 <p>The most surprising finding is that both programmers and non-programmers
 found <em>while</em> and <em>for</em> not intuitive for looping constructs. The
 preferred alternatives are <em>repeat</em> and <em>loop</em>. Of these, I prefer
 <em>loop</em>, but it does not read as well as <em>while</em>:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>while count &lt; 3:
-</span><span>    count = action()
-</span><span>
-</span><span>loop count &lt; 3:
-</span><span>    count = action()
-</span></code></pre>
+<pre><code>while count &lt; 3:
+    count = action()
+
+loop count &lt; 3:
+    count = action()
+</code></pre>
 <p>Quorum, the language by those responsible for this paper, went with:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>repeat while (count &lt; 3)
-</span><span>    count = action()
-</span><span>end
-</span></code></pre>
+<pre><code>repeat while (count &lt; 3)
+    count = action()
+end
+</code></pre>
 <p>To mimic that in Python, any of the following two sound fine (I prefer
 <em>if</em> to <em>while</em>; less syntax is better):</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>repeat if count &lt; 3:
-</span><span>    count = action()
-</span><span>
-</span><span>loop if count &lt; 3:
-</span><span>    count = action()
-</span></code></pre>
+<pre><code>repeat if count &lt; 3:
+    count = action()
+
+loop if count &lt; 3:
+    count = action()
+</code></pre>
 <p>That means an infinite loop would be:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>loop if True:
-</span><span>    action()
-</span></code></pre>
+<pre><code>loop if True:
+    action()
+</code></pre>
 <p>Or for that special case, a shortcut can just be this simple:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>loop:
-</span><span>    action()
-</span></code></pre>
+<pre><code>loop:
+    action()
+</code></pre>
 <p>I wonder what cycling through items in a container would look like. In
 Python, it looks like:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>for item in container:
-</span><span>    action(item)
-</span></code></pre>
+<pre><code>for item in container:
+    action(item)
+</code></pre>
 <p>This feels as natural as anything, but then again I been doing Python
 for a number of years, so the bias could be heavy. Following is an
 attempt:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>loop in range(3):
-</span><span>    action()
-</span></code></pre>
+<pre><code>loop in range(3):
+    action()
+</code></pre>
 <p>It mimics this Python syntax, which I actually don't like, since we
 don't always need the items of the container:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>for _ in range(3):
-</span><span>    action()
-</span></code></pre>
+<pre><code>for _ in range(3):
+    action()
+</code></pre>
 <p>Quorum, the academic language mentioned above, does it like:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>repeat 3 times
-</span><span>    action()
-</span><span>end
-</span></code></pre>
+<pre><code>repeat 3 times
+    action()
+end
+</code></pre>
 <p>I don't like that either; feels contrived. The Python way strikes me as
 a good compromise, especially given how general it is. I will try again
 with the <em>loop</em> syntax:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>loop item in container:
-</span><span>    action(item)
-</span></code></pre>
+<pre><code>loop item in container:
+    action(item)
+</code></pre>
 <p>You have to admit it doesn't read as nice as:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>for item in container:
-</span><span>    action(item)
-</span></code></pre>
+<pre><code>for item in container:
+    action(item)
+</code></pre>
 <p>It should be flexible to accommodate more than just one value on each
 iteration, so should have an equivalent for this Python code:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>for index, item in enumerate(container):
-</span><span>    action(index, item)
-</span></code></pre>
+<pre><code>for index, item in enumerate(container):
+    action(index, item)
+</code></pre>
 <p>Here goes:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>loop index, item in enumerate(container):
-</span><span>    action(index, item)
-</span></code></pre>
+<pre><code>loop index, item in enumerate(container):
+    action(index, item)
+</code></pre>
 <p>Now, for the much-loved Python list comprehensions:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>[procedure(item) for item in container]
-</span></code></pre>
+<pre><code>[procedure(item) for item in container]
+</code></pre>
 <p>We would instead have:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>[procedure(item) loop item in container]
-</span></code></pre>
+<pre><code>[procedure(item) loop item in container]
+</code></pre>
 <p>So, apart from being highly-rated for being intuitive, <em>loop</em> also
 provides a consistent looping construct, whereas Python has 2, <em>while</em>
 and <em>for</em>, both of which received low points in the study. Interesting.</p>
@@ -181,54 +381,28 @@ and <em>for</em>, both of which received low points in the study. Interesting.</
 would not be named a Python variant (they are just too drastic), but
 more a Python descendent... <strong>a better Python</strong>.</p>
 
-    </div>
+            </section>
+        </article>
+    </main>
+</div>
 
-    
-        <footer>
-            <hr>
-            <p>
-                
-                
-                
-                    
-                    tagged
-                    
-                        <a href="https://tshepang.github.io/tags/python/">Python</a>
-                        
-                            
-                                
-                                    and
-                                
-                            
-                        
-                    
-                        <a href="https://tshepang.github.io/tags/non-python/">non-Python</a>
-                        
-                            
-                        
-                    
-                
-            </p>
+
+
             
+                
             
-        </footer>
+
+            
+        </div>
+
+        <div class="right-content">
+            
     
-</article>
+    
 
+        </div>
+        
 
-
-  <!-- optional scripts -->
-  
-  
-
-  
-
-  
-<script type="text/javascript" src="https://tshepang.github.io/elasticlunr.min.js"></script>
-<script type="text/javascript" src="https://tshepang.github.io/js/search.js"></script>
-
-
-  
-</body>
+    </body>
 
 </html>

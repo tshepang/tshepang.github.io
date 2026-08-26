@@ -1,112 +1,309 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark light">
 
+    
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  
-  
-
-  <title>
     
-    my Debian package management setup
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base" content="https://tshepang.github.io" />
+
     
-</title>
-  <link rel="alternate" type="application/atom+xml" title="Tshepang logs Atom Feed" href="https://tshepang.github.io/atom.xml" />
 
-  
-  <link rel="stylesheet" href="https://tshepang.github.io/site.css">
-  
+    
 
-  
-  
+    
+    
+    
+        <title>
+            
+                my Debian package management setup
+            
+        </title>
+
+        
+            <meta property="og:title"
+                  content="my Debian package management setup" />
+        
+    
+
+    
+        
+    
+
+    
+        
+    
+
+    
+    
+
+    
+    
+        <link href=https://tshepang.github.io/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+
+    
+    
+        
+            
+                <link rel="alternate"
+                      type="application/atom+xml"
+                      title="
+Tshepang logs
+"
+                      href="https://tshepang.github.io/atom.xml" />
+            
+        
+    
+
+
+    
+
+    
+    
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://tshepang.github.io/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://tshepang.github.io/theme/dark.css" />
+    
+
+    
+        
+            <script>
+                var themeToggleMode = "toggle";
+            </script>
+        
+        <script src=https://tshepang.github.io/js/themetoggle.js></script>
+
+        
+            <script>
+                setTheme(getSavedTheme());
+            </script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://tshepang.github.io/main.css" />
+
+    
+
+    
+        <script defer
+                src="https://tshepang.github.io/js/searchElasticlunr.min.js?h=3626c0ef99daa745b31e"></script>
+
 </head>
 
-<body class="hack dark main container">
-  
-    
+
+    <body>
         
-  
-  <header class="nav-header">
-    <nav itemscope itemtype="http://schema.org/SiteNavigationElement" class="navbar">
-      <div class="nav-links">
+
+        <div class="left-content">
+            
+            
+        </div>
+
+        <div class="content">
+            <nav>
+    <div class="left-nav">
         
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/about-me">
-          <span itemprop="name">about</span></a>
+            <a href=https://tshepang.github.io>Tshepang logs</a>
         
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/tags">
-          <span itemprop="name">tags</span></a>
-        
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/categories/movies">
-          <span itemprop="name">movies</span></a>
-        
-      </div>
-    </nav>
-    
-    <div class="search-container">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="search-icon">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-      </svg>
-      <input type="text" id="search" placeholder="Search...">
-      <div class="search-results">
-        <div class="search-results__items"></div>
-      </div>
+
+
+        <div class="socials">
+            
+                
+            
+            
+                <a rel='me' href="https://github.com/tshepang" class="social">
+                    <img alt="code"
+                         src="https://tshepang.github.io/icons/social/github.svg" />
+                </a>
+            
+        </div>
     </div>
-    
 
-  </header>
-  
-  
-    
+    <div class="right-nav">
+        
+            <a href=https://tshepang.github.io/about-me style="margin-right: 0.5em">about</a>
+        
+            <a href=https://tshepang.github.io/categories/movies style="margin-right: 0.5em">movies</a>
+        
+            <a href=https://tshepang.github.io/tags style="margin-right: 0.5em">tags</a>
+        
 
-<article itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-        <h1 itemprop="headline">my Debian package management setup</h1>
-        <span class="muted">
-    2010-09-28
-</span>
-    </header>
-    <div itemprop="articleBody">
-      <br>
-      <p>Much of this is obsolete: I no longer use <code>debmirror</code> and no longer keep
+        
+            <button id="search-button"
+                    class="search-button"
+                    title="$SHORTCUT to open search">
+                <img src="https://tshepang.github.io/icons/search.svg"
+                     alt="Search"
+                     class="search-icon" />
+            </button>
+
+            <div id="searchModal"
+                 class="search-modal js"
+                 role="dialog"
+                 aria-labelledby="modalTitle">
+                <div id="modal-content">
+                    <h1 id="modalTitle" class="page-header">
+                        Search
+                    </h1>
+                    <div id="searchBar">
+                        <input id="searchInput"
+                               role="combobox"
+                               autocomplete="off"
+                               spellcheck="false"
+                               aria-expanded="false"
+                               aria-controls="results-container"
+                               placeholder="Search..." />
+                        <button id="clear-search" class="clear-button" title="Clear search">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="results-container">
+                        <div id="results-info">
+                            <span id="zero_results" style="display: none;">No results</span>
+                            <span id="one_result" style="display: none;">1 result</span>
+                            <span id="many_results" style="display: none;">$NUMBER results</span>
+                        </div>
+                        <div id="results" role="listbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+        
+        
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://tshepang.github.io/icons/sun.svg" id="sun-icon" alt="Light" />
+                <img src="https://tshepang.github.io/icons/moon.svg"
+                     id="moon-icon"
+                     style="filter: invert(1)"
+                     alt="Dark" />
+                
+            </a>
+
+            <!-- Initialize the theme toggle icons -->
+            <script>
+                updateItemToggleTheme()
+            </script>
+        
+    </div>
+</nav>
+
+
+            
+            
+    
+<div class="visible-element-observer-root" data-selector="main article p">
+    <main>
+        <article>
+            <div class="title">
+                
+                
+
+    <div class="page-header">
+        my Debian package management setup
+    </div>
+
+
+
+                <div class="meta">
+                    
+                        Posted on <time>2010-09-28</time>
+                    
+
+
+                    
+
+                    
+
+                    
+
+                    
+                    
+
+                    
+                    
+
+                    
+                    
+                        <span class="tags-label">::</span>
+                        <span class="tags">
+                                <a href="https://tshepang.github.io/tags/debian/"
+                                   class="post-tag">Debian</a>
+                            
+                        </span>
+                    
+
+                    
+
+                </div>
+            </div>
+
+            
+
+            <section class="body">
+                <p>Much of this is obsolete: I no longer use <code>debmirror</code> and no longer keep
 the entire binary repository of i386 arch.</p>
 <hr />
 <p>There's a useful tool in Debian named debmirror. It's function is to
 create and manage a partial copy of an official Debian repository, and I
 use it to create 2 repos:</p>
 <ul>
-<li>an entire i386 Debian repo for <a href="http://www.debian.org/releases/squeeze/">Squeeze</a></li>
-<li>an entire source Debian repo for <a href="http://www.debian.org/releases/squeeze/">Squeeze</a></li>
+<li>an entire i386 Debian repo for <a rel="external" href="http://www.debian.org/releases/squeeze/">Squeeze</a></li>
+<li>an entire source Debian repo for <a rel="external" href="http://www.debian.org/releases/squeeze/">Squeeze</a></li>
 </ul>
 <p>How this works is that I'd run the following command (an example for
 the source repo):</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>/usr/bin/debmirror
-</span><span> --verbose
-</span><span> --progress
-</span><span> --host=ftp.sun.ac.za
-</span><span> --passive
-</span><span> --dist=squeeze
-</span><span> --root=ftp/debian
-</span><span> --section=main
-</span><span> --method=ftp
-</span><span> --arch=none
-</span><span> /home/wena/.repo_src
-</span></code></pre>
+<pre><code>/usr/bin/debmirror
+ --verbose
+ --progress
+ --host=ftp.sun.ac.za
+ --passive
+ --dist=squeeze
+ --root=ftp/debian
+ --section=main
+ --method=ftp
+ --arch=none
+ /home/wena/.repo_src
+</code></pre>
 <p>(look at debmirror's manpage to see what all those options mean)</p>
 <p>The result is that I'll be having ~30GB of Debian locally (for a
-comparison, see <a href="http://www.debian.org/mirror/size">total Debian archive size</a>).</p>
+comparison, see <a rel="external" href="http://www.debian.org/mirror/size">total Debian archive size</a>).</p>
 <p>That's a lot of data, most of which I'll never use, but:</p>
 <ul>
 <li>I do this as a matter of convenience; I want to be able to install
@@ -124,72 +321,57 @@ debmirror, and I think it can do what debmirror does (but I don't yet
 care to learn how).</p>
 <p>Moving on, here's the relevant entries from my /etc/apt/sources.list
 file:</p>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;"># local repos (debmirror)
-</span><span style="color:#bf616a;">deb</span><span> file:/home/wena/.repo_bin sid main
-</span><span style="color:#bf616a;">deb-src</span><span> file:/home/wena/.repo_src sid main
-</span><span>
-</span><span style="color:#65737e;"># local repo (reprepro)
-</span><span style="color:#bf616a;">deb</span><span> file:/home/wena/.repo_local cache main
-</span><span>
-</span><span style="color:#65737e;"># remote repo
-</span><span style="color:#bf616a;">deb</span><span> ftp://ftp.sun.ac.za/ftp/debian/ sid main non-free contrib
-</span></code></pre>
+<pre><code data-lang="sh"># local repos (debmirror)
+deb file:/home/wena/.repo_bin sid main
+deb-src file:/home/wena/.repo_src sid main
+
+# local repo (reprepro)
+deb file:/home/wena/.repo_local cache main
+
+# remote repo
+deb ftp://ftp.sun.ac.za/ftp/debian/ sid main non-free contrib
+</code></pre>
 <p>So, what I do on a semi-regular basis is run:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>wajig update &amp;&amp; wajig upgrade
-</span></code></pre>
+<pre><code>wajig update &amp;&amp; wajig upgrade
+</code></pre>
 <p>The newly-updated packages are stored in a cache so that a reinstall
 doesn't have to fetch from network again. After this I run:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>reprepro -vv --basedir ~/.repo_local includedeb cache /var/cache/apt/archives/*deb
-</span></code></pre>
+<pre><code>reprepro -vv --basedir ~/.repo_local includedeb cache /var/cache/apt/archives/*deb
+</code></pre>
 <p>This updates the local reprepro repo and after which I can then remove
 the cached packages:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>wajig clean
-</span></code></pre>
+<pre><code>wajig clean
+</code></pre>
 <p>I do that because they are now available in my reprepro-managed repo.
 That now means that I got a massive mirror managed by debmirror and a
 smaller one managed by reprepro, and I have these on an external drive
 for in case I want to install Debian anywhere. What else my reprepro
 repo has is some other packages like <strong>skype</strong> and <strong>oracle-xe</strong>, as
-well as some odd packages from <a href="http://wiki.debian.org/DebianExperimental">Debian Experimental</a>.</p>
+well as some odd packages from <a rel="external" href="http://wiki.debian.org/DebianExperimental">Debian Experimental</a>.</p>
 <p>Not so simple I guess... but works so well for my needs.</p>
 
-    </div>
+            </section>
+        </article>
+    </main>
+</div>
 
-    
-        <footer>
-            <hr>
-            <p>
-                
-                
-                
-                    
-                    tagged
-                    
-                        <a href="https://tshepang.github.io/tags/debian/">Debian</a>
-                        
-                    
-                
-            </p>
+
+
             
+                
             
-        </footer>
+
+            
+        </div>
+
+        <div class="right-content">
+            
     
-</article>
+    
 
+        </div>
+        
 
-
-  <!-- optional scripts -->
-  
-  
-
-  
-
-  
-<script type="text/javascript" src="https://tshepang.github.io/elasticlunr.min.js"></script>
-<script type="text/javascript" src="https://tshepang.github.io/js/search.js"></script>
-
-
-  
-</body>
+    </body>
 
 </html>

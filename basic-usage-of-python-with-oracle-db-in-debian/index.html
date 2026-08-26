@@ -1,162 +1,344 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark light">
 
+    
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  
-  
-
-  <title>
     
-    basic usage of Python with Oracle DB, in Debian
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base" content="https://tshepang.github.io" />
+
     
-</title>
-  <link rel="alternate" type="application/atom+xml" title="Tshepang logs Atom Feed" href="https://tshepang.github.io/atom.xml" />
 
-  
-  <link rel="stylesheet" href="https://tshepang.github.io/site.css">
-  
+    
 
-  
-  
+    
+    
+    
+        <title>
+            
+                basic usage of Python with Oracle DB, in Debian
+            
+        </title>
+
+        
+            <meta property="og:title"
+                  content="basic usage of Python with Oracle DB, in Debian" />
+        
+    
+
+    
+        
+    
+
+    
+        
+    
+
+    
+    
+
+    
+    
+        <link href=https://tshepang.github.io/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+
+    
+    
+        
+            
+                <link rel="alternate"
+                      type="application/atom+xml"
+                      title="
+Tshepang logs
+"
+                      href="https://tshepang.github.io/atom.xml" />
+            
+        
+    
+
+
+    
+
+    
+    
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://tshepang.github.io/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://tshepang.github.io/theme/dark.css" />
+    
+
+    
+        
+            <script>
+                var themeToggleMode = "toggle";
+            </script>
+        
+        <script src=https://tshepang.github.io/js/themetoggle.js></script>
+
+        
+            <script>
+                setTheme(getSavedTheme());
+            </script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://tshepang.github.io/main.css" />
+
+    
+
+    
+        <script defer
+                src="https://tshepang.github.io/js/searchElasticlunr.min.js?h=3626c0ef99daa745b31e"></script>
+
 </head>
 
-<body class="hack dark main container">
-  
-    
+
+    <body>
         
-  
-  <header class="nav-header">
-    <nav itemscope itemtype="http://schema.org/SiteNavigationElement" class="navbar">
-      <div class="nav-links">
+
+        <div class="left-content">
+            
+            
+        </div>
+
+        <div class="content">
+            <nav>
+    <div class="left-nav">
         
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/about-me">
-          <span itemprop="name">about</span></a>
+            <a href=https://tshepang.github.io>Tshepang logs</a>
         
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/tags">
-          <span itemprop="name">tags</span></a>
-        
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/categories/movies">
-          <span itemprop="name">movies</span></a>
-        
-      </div>
-    </nav>
-    
-    <div class="search-container">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="search-icon">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-      </svg>
-      <input type="text" id="search" placeholder="Search...">
-      <div class="search-results">
-        <div class="search-results__items"></div>
-      </div>
+
+
+        <div class="socials">
+            
+                
+            
+            
+                <a rel='me' href="https://github.com/tshepang" class="social">
+                    <img alt="code"
+                         src="https://tshepang.github.io/icons/social/github.svg" />
+                </a>
+            
+        </div>
     </div>
-    
 
-  </header>
-  
-  
-    
+    <div class="right-nav">
+        
+            <a href=https://tshepang.github.io/about-me style="margin-right: 0.5em">about</a>
+        
+            <a href=https://tshepang.github.io/categories/movies style="margin-right: 0.5em">movies</a>
+        
+            <a href=https://tshepang.github.io/tags style="margin-right: 0.5em">tags</a>
+        
 
-<article itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-        <h1 itemprop="headline">basic usage of Python with Oracle DB, in Debian</h1>
-        <span class="muted">
-    2011-01-27
-</span>
-    </header>
-    <div itemprop="articleBody">
-      <br>
-      <p>What if you wanted to access Oracle using Python? Once you are <a href="https://tshepang.github.io/accessing-oracle-db-using-python-in-debian/">set up</a>,
-it's real easy. We use <a href="http://cx-oracle.sourceforge.net/html/index.html">cx_Oracle</a>, the most popular Python library to
+        
+            <button id="search-button"
+                    class="search-button"
+                    title="$SHORTCUT to open search">
+                <img src="https://tshepang.github.io/icons/search.svg"
+                     alt="Search"
+                     class="search-icon" />
+            </button>
+
+            <div id="searchModal"
+                 class="search-modal js"
+                 role="dialog"
+                 aria-labelledby="modalTitle">
+                <div id="modal-content">
+                    <h1 id="modalTitle" class="page-header">
+                        Search
+                    </h1>
+                    <div id="searchBar">
+                        <input id="searchInput"
+                               role="combobox"
+                               autocomplete="off"
+                               spellcheck="false"
+                               aria-expanded="false"
+                               aria-controls="results-container"
+                               placeholder="Search..." />
+                        <button id="clear-search" class="clear-button" title="Clear search">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="results-container">
+                        <div id="results-info">
+                            <span id="zero_results" style="display: none;">No results</span>
+                            <span id="one_result" style="display: none;">1 result</span>
+                            <span id="many_results" style="display: none;">$NUMBER results</span>
+                        </div>
+                        <div id="results" role="listbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+        
+        
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://tshepang.github.io/icons/sun.svg" id="sun-icon" alt="Light" />
+                <img src="https://tshepang.github.io/icons/moon.svg"
+                     id="moon-icon"
+                     style="filter: invert(1)"
+                     alt="Dark" />
+                
+            </a>
+
+            <!-- Initialize the theme toggle icons -->
+            <script>
+                updateItemToggleTheme()
+            </script>
+        
+    </div>
+</nav>
+
+
+            
+            
+    
+<div class="visible-element-observer-root" data-selector="main article p">
+    <main>
+        <article>
+            <div class="title">
+                
+                
+
+    <div class="page-header">
+        basic usage of Python with Oracle DB, in Debian
+    </div>
+
+
+
+                <div class="meta">
+                    
+                        Posted on <time>2011-01-27</time>
+                    
+
+
+                    
+
+                    
+
+                    
+
+                    
+                    
+
+                    
+                    
+
+                    
+                    
+                        <span class="tags-label">::</span>
+                        <span class="tags">
+                                <a href="https://tshepang.github.io/tags/python/"
+                                   class="post-tag">Python</a>
+                            
+                        </span>
+                    
+
+                    
+
+                </div>
+            </div>
+
+            
+
+            <section class="body">
+                <p>What if you wanted to access Oracle using Python? Once you are <a href="https://tshepang.github.io/accessing-oracle-db-using-python-in-debian/">set up</a>,
+it's real easy. We use <a rel="external" href="http://cx-oracle.sourceforge.net/html/index.html">cx_Oracle</a>, the most popular Python library to
 read Oracle DBs.</p>
 <p>Let's start by simply reading the DB:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>cx_Oracle
-</span><span>conn = cx_Oracle.</span><span style="color:#bf616a;">connect</span><span>(&quot;</span><span style="color:#a3be8c;">usr</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">pwd</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">tns</span><span>&quot;)
-</span><span>cursor = conn.</span><span style="color:#bf616a;">cursor</span><span>()
-</span><span>cursor.</span><span style="color:#bf616a;">execute</span><span>(&quot;</span><span style="color:#b48ead;">SELECT </span><span style="color:#bf616a;">*</span><span style="color:#a3be8c;"> TABLE_NAME</span><span>&quot;)
-</span><span style="color:#b48ead;">for </span><span>item </span><span style="color:#b48ead;">in </span><span>cursor.</span><span style="color:#bf616a;">fetchall</span><span>()[</span><span style="color:#d08770;">0</span><span>]:
-</span><span>    </span><span style="color:#96b5b4;">print</span><span>(item)
-</span><span>conn.</span><span style="color:#bf616a;">close</span><span>()
-</span></code></pre>
-<p>The <a href="http://cx-oracle.sourceforge.net/html/index.html">cx_Oracle</a> explain exactly what each of these means.</p>
+<pre><code data-lang="python">import cx_Oracle
+conn = cx_Oracle.connect(&quot;usr&quot;, &quot;pwd&quot;, &quot;tns&quot;)
+cursor = conn.cursor()
+cursor.execute(&quot;SELECT * TABLE_NAME&quot;)
+for item in cursor.fetchall()[0]:
+    print(item)
+conn.close()
+</code></pre>
+<p>The <a rel="external" href="http://cx-oracle.sourceforge.net/html/index.html">cx_Oracle</a> explain exactly what each of these means.</p>
 <p>If we wanted instead to modify stuff in there, we only add one extra
 line, which is <code>cursor.commit</code>, like this:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>cx_Oracle
-</span><span>conn = cx_Oracle.</span><span style="color:#bf616a;">connect</span><span>(&quot;</span><span style="color:#a3be8c;">usr</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">pwd</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">tns</span><span>&quot;)
-</span><span>cursor = conn.</span><span style="color:#bf616a;">cursor</span><span>()
-</span><span>cursor.</span><span style="color:#bf616a;">execute</span><span>(&quot;</span><span style="color:#b48ead;">SELECT </span><span style="color:#bf616a;">*</span><span style="color:#a3be8c;"> TABLE_NAME</span><span>&quot;)
-</span><span>cursor.</span><span style="color:#bf616a;">commit</span><span>()
-</span><span>conn.</span><span style="color:#bf616a;">close</span><span>()
-</span></code></pre>
+<pre><code data-lang="python">import cx_Oracle
+conn = cx_Oracle.connect(&quot;usr&quot;, &quot;pwd&quot;, &quot;tns&quot;)
+cursor = conn.cursor()
+cursor.execute(&quot;SELECT * TABLE_NAME&quot;)
+cursor.commit()
+conn.close()
+</code></pre>
 <p>For real-world code, you are of course going to add exception handling
 for all this, something like this:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>cx_Oracle
-</span><span style="color:#b48ead;">try</span><span>:
-</span><span>    conn = cx_Oracle.</span><span style="color:#bf616a;">connect</span><span>(&quot;</span><span style="color:#a3be8c;">usr</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">pwd</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">tns</span><span>&quot;)
-</span><span>    cursor = conn.</span><span style="color:#bf616a;">cursor</span><span>()
-</span><span>    cursor.</span><span style="color:#bf616a;">execute</span><span>(&quot;</span><span style="color:#b48ead;">SELECT </span><span style="color:#bf616a;">*</span><span style="color:#a3be8c;"> TABLE_NAME</span><span>&quot;)
-</span><span>    </span><span style="color:#b48ead;">for </span><span>item </span><span style="color:#b48ead;">in </span><span>cursor.</span><span style="color:#bf616a;">fetchall</span><span>()[</span><span style="color:#d08770;">0</span><span>]:
-</span><span>        </span><span style="color:#96b5b4;">print</span><span>(item)
-</span><span>    conn.</span><span style="color:#bf616a;">close</span><span>()
-</span><span style="color:#b48ead;">except </span><span>Exception </span><span style="color:#b48ead;">as </span><span>e:
-</span><span>    </span><span style="color:#96b5b4;">print</span><span>(e)
-</span></code></pre>
+<pre><code data-lang="python">import cx_Oracle
+try:
+    conn = cx_Oracle.connect(&quot;usr&quot;, &quot;pwd&quot;, &quot;tns&quot;)
+    cursor = conn.cursor()
+    cursor.execute(&quot;SELECT * TABLE_NAME&quot;)
+    for item in cursor.fetchall()[0]:
+        print(item)
+    conn.close()
+except Exception as e:
+    print(e)
+</code></pre>
 <p>That exception handling is rather oversimplified though, but is good
 enough for illustrative purposes. Also, note that there is no timeout
 set in case of problematic/slow network access, so my code will just sit
 there waiting to connect.</p>
 
-    </div>
+            </section>
+        </article>
+    </main>
+</div>
 
-    
-        <footer>
-            <hr>
-            <p>
-                
-                
-                
-                    
-                    tagged
-                    
-                        <a href="https://tshepang.github.io/tags/python/">Python</a>
-                        
-                    
-                
-            </p>
+
+
             
+                
             
-        </footer>
+
+            
+        </div>
+
+        <div class="right-content">
+            
     
-</article>
+    
 
+        </div>
+        
 
-
-  <!-- optional scripts -->
-  
-  
-
-  
-
-  
-<script type="text/javascript" src="https://tshepang.github.io/elasticlunr.min.js"></script>
-<script type="text/javascript" src="https://tshepang.github.io/js/search.js"></script>
-
-
-  
-</body>
+    </body>
 
 </html>

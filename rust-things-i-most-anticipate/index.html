@@ -1,162 +1,344 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark light">
 
+    
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  
-  
-
-  <title>
     
-    Rust things I most anticipate
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base" content="https://tshepang.github.io" />
+
     
-</title>
-  <link rel="alternate" type="application/atom+xml" title="Tshepang logs Atom Feed" href="https://tshepang.github.io/atom.xml" />
 
-  
-  <link rel="stylesheet" href="https://tshepang.github.io/site.css">
-  
+    
 
-  
-  
+    
+    
+    
+        <title>
+            
+                Rust things I most anticipate
+            
+        </title>
+
+        
+            <meta property="og:title"
+                  content="Rust things I most anticipate" />
+        
+    
+
+    
+        
+    
+
+    
+        
+    
+
+    
+    
+
+    
+    
+        <link href=https://tshepang.github.io/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+
+    
+    
+        
+            
+                <link rel="alternate"
+                      type="application/atom+xml"
+                      title="
+Tshepang logs
+"
+                      href="https://tshepang.github.io/atom.xml" />
+            
+        
+    
+
+
+    
+
+    
+    
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://tshepang.github.io/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://tshepang.github.io/theme/dark.css" />
+    
+
+    
+        
+            <script>
+                var themeToggleMode = "toggle";
+            </script>
+        
+        <script src=https://tshepang.github.io/js/themetoggle.js></script>
+
+        
+            <script>
+                setTheme(getSavedTheme());
+            </script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://tshepang.github.io/main.css" />
+
+    
+
+    
+        <script defer
+                src="https://tshepang.github.io/js/searchElasticlunr.min.js?h=3626c0ef99daa745b31e"></script>
+
 </head>
 
-<body class="hack dark main container">
-  
-    
+
+    <body>
         
-  
-  <header class="nav-header">
-    <nav itemscope itemtype="http://schema.org/SiteNavigationElement" class="navbar">
-      <div class="nav-links">
+
+        <div class="left-content">
+            
+            
+        </div>
+
+        <div class="content">
+            <nav>
+    <div class="left-nav">
         
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/about-me">
-          <span itemprop="name">about</span></a>
+            <a href=https://tshepang.github.io>Tshepang logs</a>
         
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/tags">
-          <span itemprop="name">tags</span></a>
-        
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/categories/movies">
-          <span itemprop="name">movies</span></a>
-        
-      </div>
-    </nav>
-    
-    <div class="search-container">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="search-icon">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-      </svg>
-      <input type="text" id="search" placeholder="Search...">
-      <div class="search-results">
-        <div class="search-results__items"></div>
-      </div>
+
+
+        <div class="socials">
+            
+                
+            
+            
+                <a rel='me' href="https://github.com/tshepang" class="social">
+                    <img alt="code"
+                         src="https://tshepang.github.io/icons/social/github.svg" />
+                </a>
+            
+        </div>
     </div>
-    
 
-  </header>
-  
-  
-    
+    <div class="right-nav">
+        
+            <a href=https://tshepang.github.io/about-me style="margin-right: 0.5em">about</a>
+        
+            <a href=https://tshepang.github.io/categories/movies style="margin-right: 0.5em">movies</a>
+        
+            <a href=https://tshepang.github.io/tags style="margin-right: 0.5em">tags</a>
+        
 
-<article itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-        <h1 itemprop="headline">Rust things I most anticipate</h1>
-        <span class="muted">
-    2025-10-31
-</span>
-    </header>
-    <div itemprop="articleBody">
-      <br>
-      <ul>
-<li>Wide use of <a href="https://github.com/davidlattimore/wild">Wild</a>, an alternative to mold, lld, and ld</li>
-<li>Wide use of <a href="https://radicle.xyz">Radicle</a>,
+        
+            <button id="search-button"
+                    class="search-button"
+                    title="$SHORTCUT to open search">
+                <img src="https://tshepang.github.io/icons/search.svg"
+                     alt="Search"
+                     class="search-icon" />
+            </button>
+
+            <div id="searchModal"
+                 class="search-modal js"
+                 role="dialog"
+                 aria-labelledby="modalTitle">
+                <div id="modal-content">
+                    <h1 id="modalTitle" class="page-header">
+                        Search
+                    </h1>
+                    <div id="searchBar">
+                        <input id="searchInput"
+                               role="combobox"
+                               autocomplete="off"
+                               spellcheck="false"
+                               aria-expanded="false"
+                               aria-controls="results-container"
+                               placeholder="Search..." />
+                        <button id="clear-search" class="clear-button" title="Clear search">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="results-container">
+                        <div id="results-info">
+                            <span id="zero_results" style="display: none;">No results</span>
+                            <span id="one_result" style="display: none;">1 result</span>
+                            <span id="many_results" style="display: none;">$NUMBER results</span>
+                        </div>
+                        <div id="results" role="listbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+        
+        
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://tshepang.github.io/icons/sun.svg" id="sun-icon" alt="Light" />
+                <img src="https://tshepang.github.io/icons/moon.svg"
+                     id="moon-icon"
+                     style="filter: invert(1)"
+                     alt="Dark" />
+                
+            </a>
+
+            <!-- Initialize the theme toggle icons -->
+            <script>
+                updateItemToggleTheme()
+            </script>
+        
+    </div>
+</nav>
+
+
+            
+            
+    
+<div class="visible-element-observer-root" data-selector="main article p">
+    <main>
+        <article>
+            <div class="title">
+                
+                
+
+    <div class="page-header">
+        Rust things I most anticipate
+    </div>
+
+
+
+                <div class="meta">
+                    
+                        Posted on <time>2025-10-31</time>
+                    
+
+
+                    
+
+                    
+
+                    
+
+                    
+                    
+
+                    
+                    
+
+                    
+                    
+                        <span class="tags-label">::</span>
+                        <span class="tags">
+                                <a href="https://tshepang.github.io/tags/rust/"
+                                   class="post-tag">Rust</a>
+                            
+                        </span>
+                    
+
+                    
+
+                </div>
+            </div>
+
+            
+
+            <section class="body">
+                <ul>
+<li>Wide use of <a rel="external" href="https://github.com/davidlattimore/wild">Wild</a>, an alternative to mold, lld, and ld</li>
+<li>Wide use of <a rel="external" href="https://radicle.xyz">Radicle</a>,
 an alternative to GitHub that is peer-to-peer
-(<a href="https://radicle.xyz/#updates">updates</a>)</li>
-<li>Wide use of <a href="https://github.com/quickwit-oss/tantivy">Tantivy</a>, a full-text search engine library
-(<a href="https://quickwit.io/blog/tantivy-0.24">latest update</a>)</li>
-<li>Wide use of <a href="https://github.com/quickwit-oss/quickwit">Quickwit</a>, a distributed search engine built on <a href="https://github.com/quickwit-oss/tantivy">Tantivy</a>
-(<a href="https://quickwit.io/blog/quickwit-binance-story">latest update</a>)</li>
-<li>Make alternative (to <a href="https://github.com/llvm/llvm-project">LLVM</a>) codegen backends available in a Rust stable toolchain:
+(<a rel="external" href="https://radicle.xyz/#updates">updates</a>)</li>
+<li>Wide use of <a rel="external" href="https://github.com/quickwit-oss/tantivy">Tantivy</a>, a full-text search engine library
+(<a rel="external" href="https://quickwit.io/blog/tantivy-0.24">latest update</a>)</li>
+<li>Wide use of <a rel="external" href="https://github.com/quickwit-oss/quickwit">Quickwit</a>, a distributed search engine built on <a rel="external" href="https://github.com/quickwit-oss/tantivy">Tantivy</a>
+(<a rel="external" href="https://quickwit.io/blog/quickwit-binance-story">latest update</a>)</li>
+<li>Make alternative (to <a rel="external" href="https://github.com/llvm/llvm-project">LLVM</a>) codegen backends available in a Rust stable toolchain:
 <ul>
-<li><a href="https://github.com/bjorn3/rustc_codegen_cranelift">rustc_codegen_cranelift</a>,
-which uses <a href="https://github.com/bytecodealliance/wasmtime/tree/main/cranelift">cranelift</a> for codegen,
+<li><a rel="external" href="https://github.com/bjorn3/rustc_codegen_cranelift">rustc_codegen_cranelift</a>,
+which uses <a rel="external" href="https://github.com/bytecodealliance/wasmtime/tree/main/cranelift">cranelift</a> for codegen,
 is already available via <code>rustup</code> on nightly toolchains,
 and the immediate benefit is fast debug compiles
-(<a href="https://bjorn3.github.io">updates</a>)</li>
-<li><a href="https://github.com/rust-lang/rustc_codegen_gcc">rustc_codegen_gcc</a>,
+(<a rel="external" href="https://bjorn3.github.io">updates</a>)</li>
+<li><a rel="external" href="https://github.com/rust-lang/rustc_codegen_gcc">rustc_codegen_gcc</a>,
 allowing Rust to run in more hardware platforms
-(<a href="https://blog.antoyo.xyz">updates</a>)</li>
+(<a rel="external" href="https://blog.antoyo.xyz">updates</a>)</li>
 </ul>
 </li>
 <li>Use of Rust in safety-critical systems,
-<a href="https://ferrous-systems.com/ferrocene">Ferrocene</a> being the most likely candidate,
-due to being the first Rust toolchain <a href="https://ferrous-systems.com/blog/officially-qualified-ferrocene">qualified for the domain</a></li>
-<li>Removing libc dependency for Linux-based systems (<a href="https://github.com/sunfishcode/mustang">mustang</a> and <a href="https://github.com/bytecodealliance/rsix">rustix</a>)</li>
+<a rel="external" href="https://ferrous-systems.com/ferrocene">Ferrocene</a> being the most likely candidate,
+due to being the first Rust toolchain <a rel="external" href="https://ferrous-systems.com/blog/officially-qualified-ferrocene">qualified for the domain</a></li>
+<li>Removing libc dependency for Linux-based systems (<a rel="external" href="https://github.com/sunfishcode/mustang">mustang</a> and <a rel="external" href="https://github.com/bytecodealliance/rsix">rustix</a>)</li>
 </ul>
 <h3 id="achieved">achieved</h3>
 <ul>
-<li>Wide use of <a href="https://github.com/typst/typst">Typst</a>, a more pleasant alternative to LaTeX:
-goal achieved, due to <a href="https://typst.app/blog/2025/future">the claim</a> that thousands of academic institutions now use it</li>
+<li>Wide use of <a rel="external" href="https://github.com/typst/typst">Typst</a>, a more pleasant alternative to LaTeX:
+goal achieved, due to <a rel="external" href="https://typst.app/blog/2025/future">the claim</a> that thousands of academic institutions now use it</li>
 <li>Usage in production versions of Chromium,
-<a href="https://developer.chrome.com/blog/memory-safety-fonts">released in mid 2024</a></li>
+<a rel="external" href="https://developer.chrome.com/blog/memory-safety-fonts">released in mid 2024</a></li>
 <li>A driver written in Rust in the official Linux kernel:
 <ul>
-<li><a href="https://github.com/torvalds/linux/blob/master/drivers/net/phy/ax88796b_rust.rs">Asix PHYs driver</a>
+<li><a rel="external" href="https://github.com/torvalds/linux/blob/master/drivers/net/phy/ax88796b_rust.rs">Asix PHYs driver</a>
 is the first, released early 2024</li>
 </ul>
 </li>
 </ul>
 
-    </div>
+            </section>
+        </article>
+    </main>
+</div>
 
-    
-        <footer>
-            <hr>
-            <p>
-                
-                
-                
-                    
-                    tagged
-                    
-                        <a href="https://tshepang.github.io/tags/rust/">Rust</a>
-                        
-                    
-                
-            </p>
+
+
             
+                
             
-        </footer>
+
+            
+        </div>
+
+        <div class="right-content">
+            
     
-</article>
+    
 
+        </div>
+        
 
-
-  <!-- optional scripts -->
-  
-  
-
-  
-
-  
-<script type="text/javascript" src="https://tshepang.github.io/elasticlunr.min.js"></script>
-<script type="text/javascript" src="https://tshepang.github.io/js/search.js"></script>
-
-
-  
-</body>
+    </body>
 
 </html>

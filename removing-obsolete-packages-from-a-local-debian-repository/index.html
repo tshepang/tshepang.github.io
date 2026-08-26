@@ -1,93 +1,290 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark light">
 
+    
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  
-  
-
-  <title>
     
-    removing obsolete packages from a local Debian repository
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base" content="https://tshepang.github.io" />
+
     
-</title>
-  <link rel="alternate" type="application/atom+xml" title="Tshepang logs Atom Feed" href="https://tshepang.github.io/atom.xml" />
 
-  
-  <link rel="stylesheet" href="https://tshepang.github.io/site.css">
-  
+    
 
-  
-  
+    
+    
+    
+        <title>
+            
+                removing obsolete packages from a local Debian repository
+            
+        </title>
+
+        
+            <meta property="og:title"
+                  content="removing obsolete packages from a local Debian repository" />
+        
+    
+
+    
+        
+    
+
+    
+        
+    
+
+    
+    
+
+    
+    
+        <link href=https://tshepang.github.io/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+
+    
+    
+        
+            
+                <link rel="alternate"
+                      type="application/atom+xml"
+                      title="
+Tshepang logs
+"
+                      href="https://tshepang.github.io/atom.xml" />
+            
+        
+    
+
+
+    
+
+    
+    
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://tshepang.github.io/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://tshepang.github.io/theme/dark.css" />
+    
+
+    
+        
+            <script>
+                var themeToggleMode = "toggle";
+            </script>
+        
+        <script src=https://tshepang.github.io/js/themetoggle.js></script>
+
+        
+            <script>
+                setTheme(getSavedTheme());
+            </script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://tshepang.github.io/main.css" />
+
+    
+
+    
+        <script defer
+                src="https://tshepang.github.io/js/searchElasticlunr.min.js?h=3626c0ef99daa745b31e"></script>
+
 </head>
 
-<body class="hack dark main container">
-  
-    
+
+    <body>
         
-  
-  <header class="nav-header">
-    <nav itemscope itemtype="http://schema.org/SiteNavigationElement" class="navbar">
-      <div class="nav-links">
+
+        <div class="left-content">
+            
+            
+        </div>
+
+        <div class="content">
+            <nav>
+    <div class="left-nav">
         
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/about-me">
-          <span itemprop="name">about</span></a>
+            <a href=https://tshepang.github.io>Tshepang logs</a>
         
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/tags">
-          <span itemprop="name">tags</span></a>
-        
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/categories/movies">
-          <span itemprop="name">movies</span></a>
-        
-      </div>
-    </nav>
-    
-    <div class="search-container">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="search-icon">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-      </svg>
-      <input type="text" id="search" placeholder="Search...">
-      <div class="search-results">
-        <div class="search-results__items"></div>
-      </div>
+
+
+        <div class="socials">
+            
+                
+            
+            
+                <a rel='me' href="https://github.com/tshepang" class="social">
+                    <img alt="code"
+                         src="https://tshepang.github.io/icons/social/github.svg" />
+                </a>
+            
+        </div>
     </div>
-    
 
-  </header>
-  
-  
-    
+    <div class="right-nav">
+        
+            <a href=https://tshepang.github.io/about-me style="margin-right: 0.5em">about</a>
+        
+            <a href=https://tshepang.github.io/categories/movies style="margin-right: 0.5em">movies</a>
+        
+            <a href=https://tshepang.github.io/tags style="margin-right: 0.5em">tags</a>
+        
 
-<article itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-        <h1 itemprop="headline">removing obsolete packages from a local Debian repository</h1>
-        <span class="muted">
-    2012-02-21
-</span>
-    </header>
-    <div itemprop="articleBody">
-      <br>
-      <h2 id="background-info">background info</h2>
+        
+            <button id="search-button"
+                    class="search-button"
+                    title="$SHORTCUT to open search">
+                <img src="https://tshepang.github.io/icons/search.svg"
+                     alt="Search"
+                     class="search-icon" />
+            </button>
+
+            <div id="searchModal"
+                 class="search-modal js"
+                 role="dialog"
+                 aria-labelledby="modalTitle">
+                <div id="modal-content">
+                    <h1 id="modalTitle" class="page-header">
+                        Search
+                    </h1>
+                    <div id="searchBar">
+                        <input id="searchInput"
+                               role="combobox"
+                               autocomplete="off"
+                               spellcheck="false"
+                               aria-expanded="false"
+                               aria-controls="results-container"
+                               placeholder="Search..." />
+                        <button id="clear-search" class="clear-button" title="Clear search">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="results-container">
+                        <div id="results-info">
+                            <span id="zero_results" style="display: none;">No results</span>
+                            <span id="one_result" style="display: none;">1 result</span>
+                            <span id="many_results" style="display: none;">$NUMBER results</span>
+                        </div>
+                        <div id="results" role="listbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+        
+        
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://tshepang.github.io/icons/sun.svg" id="sun-icon" alt="Light" />
+                <img src="https://tshepang.github.io/icons/moon.svg"
+                     id="moon-icon"
+                     style="filter: invert(1)"
+                     alt="Dark" />
+                
+            </a>
+
+            <!-- Initialize the theme toggle icons -->
+            <script>
+                updateItemToggleTheme()
+            </script>
+        
+    </div>
+</nav>
+
+
+            
+            
+    
+<div class="visible-element-observer-root" data-selector="main article p">
+    <main>
+        <article>
+            <div class="title">
+                
+                
+
+    <div class="page-header">
+        removing obsolete packages from a local Debian repository
+    </div>
+
+
+
+                <div class="meta">
+                    
+                        Posted on <time>2012-02-21</time>
+                    
+
+
+                    
+
+                    
+
+                    
+
+                    
+                    
+
+                    
+                    
+
+                    
+                    
+                        <span class="tags-label">::</span>
+                        <span class="tags">
+                                <a href="https://tshepang.github.io/tags/debian/"
+                                   class="post-tag">Debian</a>
+                            
+                        </span>
+                    
+
+                    
+
+                </div>
+            </div>
+
+            
+
+            <section class="body">
+                <h2 id="background-info">background info</h2>
 <p>Bandwidth in South Africa is neither readily-available nor cheap, so
 whenever I fetch and install Debian packages (e.g. <code>apt-get upgrade</code>), I
 also keep them in a local custom repository. I use a great tool named
-<a href="https://salsa.debian.org/brlink/reprepro">reprepro</a> for this, and this is the command I use to update that
+<a rel="external" href="https://salsa.debian.org/brlink/reprepro">reprepro</a> for this, and this is the command I use to update that
 repository, given the location of the fresh package files:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang /var/cache/apt/archives/*deb
-</span></code></pre>
+<pre><code>$ reprepro -vv --basedir ~/.custom_repo/ includedeb tshepang /var/cache/apt/archives/*deb
+</code></pre>
 <p>What's nice about the command is that, if there is an older version of
 the package I'm adding, it gets replaced, and the package index is
 updated accordingly.</p>
@@ -109,92 +306,77 @@ using that package, it is just a waste of resources (CPU and disk
 usage).</li>
 </ul>
 <p>To help with the cleanup, I have written the following simple script:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;">#!/usr/bin/env python3
-</span><span>
-</span><span style="color:#b48ead;">import </span><span>apt_pkg
-</span><span style="color:#b48ead;">import </span><span>gzip
-</span><span style="color:#b48ead;">import </span><span>subprocess
-</span><span>
-</span><span style="color:#bf616a;">CUSTOM_REPO </span><span>= (&quot;</span><span style="color:#a3be8c;">/home/wena/.custom_repo/dists/tshepang/main/</span><span>&quot;
-</span><span>               &quot;</span><span style="color:#a3be8c;">binary-i386/Packages.gz</span><span>&quot;)
-</span><span style="color:#bf616a;">WHEEZY_REPO </span><span>= (&quot;</span><span style="color:#a3be8c;">/var/lib/apt/lists/ftp.de.debian.org_debian_dists_testing_</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">_</span><span>&quot;
-</span><span>               &quot;</span><span style="color:#a3be8c;">binary-i386_Packages</span><span>&quot;)
-</span><span>
-</span><span>
-</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">main</span><span>():
-</span><span>    custom_repo = apt_pkg.</span><span style="color:#bf616a;">TagFile</span><span>(gzip.</span><span style="color:#bf616a;">open</span><span>(</span><span style="color:#bf616a;">CUSTOM_REPO</span><span>, &quot;</span><span style="color:#a3be8c;">rb</span><span>&quot;))
-</span><span>    archive_areas = &quot;</span><span style="color:#a3be8c;">main contrib non-free</span><span>&quot;.</span><span style="color:#bf616a;">split</span><span>()
-</span><span>    wheezy_packages = </span><span style="color:#bf616a;">list</span><span>()
-</span><span>    </span><span style="color:#b48ead;">for </span><span>archive_area </span><span style="color:#b48ead;">in </span><span>archive_areas:
-</span><span>        repo = WHEEZY_REPO.</span><span style="color:#bf616a;">format</span><span>(archive_area)
-</span><span>        repo = apt_pkg.</span><span style="color:#bf616a;">TagFile</span><span>(gzip.</span><span style="color:#bf616a;">open</span><span>(repo, &quot;</span><span style="color:#a3be8c;">rb</span><span>&quot;))
-</span><span>        wheezy_packages.</span><span style="color:#bf616a;">extend</span><span>([pkg[&quot;</span><span style="color:#a3be8c;">Package</span><span>&quot;] </span><span style="color:#b48ead;">for </span><span>pkg </span><span style="color:#b48ead;">in </span><span>repo])
-</span><span>    </span><span style="color:#b48ead;">for </span><span>package </span><span style="color:#b48ead;">in </span><span>custom_repo:
-</span><span>        package_name = package[&quot;</span><span style="color:#a3be8c;">Package</span><span>&quot;]
-</span><span>        </span><span style="color:#b48ead;">if </span><span>package_name not in wheezy_packages:
-</span><span>            cmd = &quot;</span><span style="color:#a3be8c;">apt-cache policy </span><span>&quot; + package_name
-</span><span>            subprocess.</span><span style="color:#bf616a;">call</span><span>(cmd.</span><span style="color:#bf616a;">split</span><span>())
-</span><span>            choice = </span><span style="color:#96b5b4;">input</span><span>(&quot;</span><span style="color:#a3be8c;">remove from cache [Y/n]? </span><span>&quot;)
-</span><span>            </span><span style="color:#b48ead;">if </span><span>not choice or choice.</span><span style="color:#bf616a;">lower</span><span>().</span><span style="color:#bf616a;">startswith</span><span>(&quot;</span><span style="color:#a3be8c;">y</span><span>&quot;):
-</span><span>                cmd = (&quot;</span><span style="color:#a3be8c;">reprepro -vv --basedir /home/wena/.custom_repo/ </span><span>&quot;
-</span><span>                       &quot;</span><span style="color:#a3be8c;">remove tshepang </span><span>&quot; + package_name)
-</span><span>                subprocess.</span><span style="color:#bf616a;">call</span><span>(cmd.</span><span style="color:#bf616a;">split</span><span>())
-</span><span>
-</span><span style="color:#b48ead;">if </span><span>__name__ == &quot;</span><span style="color:#a3be8c;">__main__</span><span>&quot;:
-</span><span>    </span><span style="color:#bf616a;">main</span><span>()
-</span></code></pre>
+<pre><code data-lang="python">#!/usr/bin/env python3
+
+import apt_pkg
+import gzip
+import subprocess
+
+CUSTOM_REPO = (&quot;/home/wena/.custom_repo/dists/tshepang/main/&quot;
+               &quot;binary-i386/Packages.gz&quot;)
+WHEEZY_REPO = (&quot;/var/lib/apt/lists/ftp.de.debian.org_debian_dists_testing_{}_&quot;
+               &quot;binary-i386_Packages&quot;)
+
+
+def main():
+    custom_repo = apt_pkg.TagFile(gzip.open(CUSTOM_REPO, &quot;rb&quot;))
+    archive_areas = &quot;main contrib non-free&quot;.split()
+    wheezy_packages = list()
+    for archive_area in archive_areas:
+        repo = WHEEZY_REPO.format(archive_area)
+        repo = apt_pkg.TagFile(gzip.open(repo, &quot;rb&quot;))
+        wheezy_packages.extend([pkg[&quot;Package&quot;] for pkg in repo])
+    for package in custom_repo:
+        package_name = package[&quot;Package&quot;]
+        if package_name not in wheezy_packages:
+            cmd = &quot;apt-cache policy &quot; + package_name
+            subprocess.call(cmd.split())
+            choice = input(&quot;remove from cache [Y/n]? &quot;)
+            if not choice or choice.lower().startswith(&quot;y&quot;):
+                cmd = (&quot;reprepro -vv --basedir /home/wena/.custom_repo/ &quot;
+                       &quot;remove tshepang &quot; + package_name)
+                subprocess.call(cmd.split())
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
 <p>And here's a snippet of its output:</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>cx-oracle:
-</span><span>  Installed: 5.1.1-2
-</span><span>  Candidate: 5.1.1-2
-</span><span>  Version table:
-</span><span> *** 5.1.1-2 0
-</span><span>        500 file:/home/wena/.custom_repo/ tshepang/main i386 Packages
-</span><span>        100 /var/lib/dpkg/status
-</span><span>remove from cache [Y/n]?
-</span></code></pre>
+<pre><code>cx-oracle:
+  Installed: 5.1.1-2
+  Candidate: 5.1.1-2
+  Version table:
+ *** 5.1.1-2 0
+        500 file:/home/wena/.custom_repo/ tshepang/main i386 Packages
+        100 /var/lib/dpkg/status
+remove from cache [Y/n]?
+</code></pre>
 <p>What it does is look for packages which are only available in my custom
 repository, as compared with the one in Wheezy (soon to be Debian 7). It
 then prompts me on whether or not to remove it from that custom
 repository. Today, it helped me get rid of dozens of junk.</p>
 
-    </div>
+            </section>
+        </article>
+    </main>
+</div>
 
-    
-        <footer>
-            <hr>
-            <p>
-                
-                
-                
-                    
-                    tagged
-                    
-                        <a href="https://tshepang.github.io/tags/debian/">Debian</a>
-                        
-                    
-                
-            </p>
+
+
             
+                
             
-        </footer>
+
+            
+        </div>
+
+        <div class="right-content">
+            
     
-</article>
+    
 
+        </div>
+        
 
-
-  <!-- optional scripts -->
-  
-  
-
-  
-
-  
-<script type="text/javascript" src="https://tshepang.github.io/elasticlunr.min.js"></script>
-<script type="text/javascript" src="https://tshepang.github.io/js/search.js"></script>
-
-
-  
-</body>
+    </body>
 
 </html>

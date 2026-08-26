@@ -4,74 +4,92 @@ const successIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="
 const errorIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-x-lg" viewBox="0 0 16 16">
             <path d="M2.293 2.293a1 1 0 0 1 1.414 0L8 6.586l4.293-4.293a1 1 0 0 1 1.414 1.414L9.414 8l4.293 4.293a1 1 0 0 1-1.414 1.414L8 9.414l-4.293 4.293a1 1 0 0 1-1.414-1.414L6.586 8 2.293 3.707a1 1 0 0 1 0-1.414z"/>
         </svg>`;
-const copyIcon = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6" />
-</svg>
-`;
+const copyIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-clipboard" viewBox="0 0 16 16">
+                <path d="M10 1.5a.5.5 0 0 1 .5-.5h2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-9a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h2a.5.5 0 0 1 .5.5V3h3V1.5zM6.5 3V2h3v1h-3zm4 0v1h2a1 1 0 0 0-1-1h-2V3zm-5 0H3a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H5.5V3z"/>
+            </svg>`;
 
 // Function to change icons after copying
 const changeIcon = (button, isSuccess) => {
-  button.innerHTML = isSuccess ? successIcon : errorIcon;
-  setTimeout(() => {
-    button.innerHTML = copyIcon; // Reset to copy icon
-  }, 2000);
+    button.innerHTML = isSuccess ? successIcon : errorIcon;
+    setTimeout(() => {
+        button.innerHTML = copyIcon; // Reset to copy icon
+    }, 2000);
 };
 
-// Function to get code text from tables, skipping line numbers
-const getCodeFromTable = (codeBlock) => {
-  return [...codeBlock.querySelectorAll("tr")]
-    .map((row) => row.querySelector("td:last-child")?.innerText ?? "")
-    .join("");
+// Get code text, stripping line numbers if present
+const getCodeText = (codeBlock) => {
+    const clone = codeBlock.cloneNode(true);
+    clone.querySelectorAll('.giallo-ln').forEach(el => el.remove());
+    return clone.textContent.trim();
 };
 
-// Function to get code text from non-table blocks
-const getNonTableCode = (codeBlock) => {
-  return codeBlock.textContent.trim();
-};
+document.addEventListener('DOMContentLoaded', function () {
+    // Select all `pre` elements containing `code`
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Select all `pre` elements containing `code`
-  document.querySelectorAll("pre code").forEach((codeBlock) => {
-    const pre = codeBlock.parentNode;
-    pre.style.position = "relative"; // Ensure parent `pre` can contain absolute elements
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const pre = entry.target.parentNode;
+            const clipboardBtn = pre.querySelector('.clipboard-button');
+            const label = pre.querySelector('.code-label');
 
-    // Create and append the copy button
-    const copyBtn = document.createElement("button");
-    copyBtn.className = "clipboard-button";
-    copyBtn.innerHTML = copyIcon;
-    copyBtn.setAttribute("aria-label", "Copy code to clipboard");
-    pre.appendChild(copyBtn);
+            if (clipboardBtn) {
+                // Adjust the position of the clipboard button when the `code` is not fully visible
+                clipboardBtn.style.right = entry.isIntersecting ? '5px' : `-${entry.boundingClientRect.right - pre.clientWidth + 5}px`;
+            }
 
-    // Create and append the language label
-    const langClass = codeBlock.className.match(/language-(\w+)/);
-    const lang = langClass ? langClass[1].toUpperCase() : "TEXT";
-    const label = document.createElement("span");
-    label.className = "code-label label-" + lang.toLowerCase();
-    label.textContent = lang;
-    pre.appendChild(label);
-
-    // Attach event listener to copy button
-    copyBtn.addEventListener("click", async () => {
-      const codeToCopy = codeBlock.textContent.trim(); // Get the code content
-      try {
-        await navigator.clipboard.writeText(codeToCopy);
-        changeIcon(copyBtn, true); // Show success icon
-      } catch (error) {
-        console.error("Failed to copy text: ", error);
-        changeIcon(copyBtn, false); // Show error icon
-      }
-    });
-
-    let ticking = false;
-    pre.addEventListener("scroll", () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          copyBtn.style.right = `-${pre.scrollLeft}px`; // Ensure button stays on the right
-          label.style.left = `${pre.scrollLeft}px`; // Ensure label stays on the left
-          ticking = false;
+            if (label) {
+                // Adjust the position of the label similarly
+                label.style.right = entry.isIntersecting ? '0px' : `-${entry.boundingClientRect.right - pre.clientWidth}px`;
+            }
         });
-        ticking = true;
-      }
+    }, {
+        root: null, // observing relative to viewport
+        rootMargin: '0px',
+        threshold: 1.0 // Adjust this to control when the callback fires
     });
-  });
+
+    document.querySelectorAll('pre code').forEach(codeBlock => {
+        const pre = codeBlock.parentNode;
+        pre.style.position = 'relative'; // Ensure parent `pre` can contain absolute elements
+
+        // Create and append the copy button
+        const copyBtn = document.createElement('button');
+        copyBtn.className = 'clipboard-button';
+        copyBtn.innerHTML = copyIcon;
+        copyBtn.setAttribute('aria-label', 'Copy code to clipboard');
+        pre.appendChild(copyBtn);
+
+        // Attach event listener to copy button
+        copyBtn.addEventListener('click', async () => {
+            const codeToCopy = getCodeText(codeBlock);
+            try {
+                await navigator.clipboard.writeText(codeToCopy);
+                changeIcon(copyBtn, true); // Show success icon
+            } catch (error) {
+                console.error('Failed to copy text: ', error);
+                changeIcon(copyBtn, false); // Show error icon
+            }
+        });
+
+        const lang = codeBlock.getAttribute('data-lang') || 'default';
+
+        // Create and append the label
+        const label = document.createElement('span');
+        label.className = 'code-label label-' + lang; // Use the specific language class
+        label.textContent = lang.toUpperCase(); // Display the language as label
+        pre.appendChild(label);
+
+        let ticking = false;
+        pre.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    copyBtn.style.right = `-${pre.scrollLeft}px`;
+                    label.style.right = `-${pre.scrollLeft}px`;
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+    });
 });

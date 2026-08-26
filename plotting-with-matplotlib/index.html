@@ -1,191 +1,373 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark light">
 
+    
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  
-  
-
-  <title>
     
-    plotting with matplotlib
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base" content="https://tshepang.github.io" />
+
     
-</title>
-  <link rel="alternate" type="application/atom+xml" title="Tshepang logs Atom Feed" href="https://tshepang.github.io/atom.xml" />
 
-  
-  <link rel="stylesheet" href="https://tshepang.github.io/site.css">
-  
+    
 
-  
-  
+    
+    
+    
+        <title>
+            
+                plotting with matplotlib
+            
+        </title>
+
+        
+            <meta property="og:title"
+                  content="plotting with matplotlib" />
+        
+    
+
+    
+        
+    
+
+    
+        
+    
+
+    
+    
+
+    
+    
+        <link href=https://tshepang.github.io/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+
+    
+    
+        
+            
+                <link rel="alternate"
+                      type="application/atom+xml"
+                      title="
+Tshepang logs
+"
+                      href="https://tshepang.github.io/atom.xml" />
+            
+        
+    
+
+
+    
+
+    
+    
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://tshepang.github.io/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://tshepang.github.io/theme/dark.css" />
+    
+
+    
+        
+            <script>
+                var themeToggleMode = "toggle";
+            </script>
+        
+        <script src=https://tshepang.github.io/js/themetoggle.js></script>
+
+        
+            <script>
+                setTheme(getSavedTheme());
+            </script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://tshepang.github.io/main.css" />
+
+    
+
+    
+        <script defer
+                src="https://tshepang.github.io/js/searchElasticlunr.min.js?h=3626c0ef99daa745b31e"></script>
+
 </head>
 
-<body class="hack dark main container">
-  
-    
+
+    <body>
         
-  
-  <header class="nav-header">
-    <nav itemscope itemtype="http://schema.org/SiteNavigationElement" class="navbar">
-      <div class="nav-links">
+
+        <div class="left-content">
+            
+            
+        </div>
+
+        <div class="content">
+            <nav>
+    <div class="left-nav">
         
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/about-me">
-          <span itemprop="name">about</span></a>
+            <a href=https://tshepang.github.io>Tshepang logs</a>
         
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/tags">
-          <span itemprop="name">tags</span></a>
-        
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/categories/movies">
-          <span itemprop="name">movies</span></a>
-        
-      </div>
-    </nav>
-    
-    <div class="search-container">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="search-icon">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-      </svg>
-      <input type="text" id="search" placeholder="Search...">
-      <div class="search-results">
-        <div class="search-results__items"></div>
-      </div>
+
+
+        <div class="socials">
+            
+                
+            
+            
+                <a rel='me' href="https://github.com/tshepang" class="social">
+                    <img alt="code"
+                         src="https://tshepang.github.io/icons/social/github.svg" />
+                </a>
+            
+        </div>
     </div>
-    
 
-  </header>
-  
-  
-    
+    <div class="right-nav">
+        
+            <a href=https://tshepang.github.io/about-me style="margin-right: 0.5em">about</a>
+        
+            <a href=https://tshepang.github.io/categories/movies style="margin-right: 0.5em">movies</a>
+        
+            <a href=https://tshepang.github.io/tags style="margin-right: 0.5em">tags</a>
+        
 
-<article itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-        <h1 itemprop="headline">plotting with matplotlib</h1>
-        <span class="muted">
-    2011-02-17
-</span>
-    </header>
-    <div itemprop="articleBody">
-      <br>
-      <p>Here's drawing a simple graph:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">from </span><span>matplotlib </span><span style="color:#b48ead;">import </span><span>pyplot
-</span><span>x = </span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>)  </span><span style="color:#65737e;"># a list of 10 integers, 0-9
-</span><span>y = </span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>)
-</span><span>pyplot.</span><span style="color:#bf616a;">plot</span><span>(x, y)
-</span><span>pyplot.</span><span style="color:#bf616a;">show</span><span>()
-</span></code></pre>
+        
+            <button id="search-button"
+                    class="search-button"
+                    title="$SHORTCUT to open search">
+                <img src="https://tshepang.github.io/icons/search.svg"
+                     alt="Search"
+                     class="search-icon" />
+            </button>
+
+            <div id="searchModal"
+                 class="search-modal js"
+                 role="dialog"
+                 aria-labelledby="modalTitle">
+                <div id="modal-content">
+                    <h1 id="modalTitle" class="page-header">
+                        Search
+                    </h1>
+                    <div id="searchBar">
+                        <input id="searchInput"
+                               role="combobox"
+                               autocomplete="off"
+                               spellcheck="false"
+                               aria-expanded="false"
+                               aria-controls="results-container"
+                               placeholder="Search..." />
+                        <button id="clear-search" class="clear-button" title="Clear search">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="results-container">
+                        <div id="results-info">
+                            <span id="zero_results" style="display: none;">No results</span>
+                            <span id="one_result" style="display: none;">1 result</span>
+                            <span id="many_results" style="display: none;">$NUMBER results</span>
+                        </div>
+                        <div id="results" role="listbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+        
+        
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://tshepang.github.io/icons/sun.svg" id="sun-icon" alt="Light" />
+                <img src="https://tshepang.github.io/icons/moon.svg"
+                     id="moon-icon"
+                     style="filter: invert(1)"
+                     alt="Dark" />
+                
+            </a>
+
+            <!-- Initialize the theme toggle icons -->
+            <script>
+                updateItemToggleTheme()
+            </script>
+        
+    </div>
+</nav>
+
+
+            
+            
+    
+<div class="visible-element-observer-root" data-selector="main article p">
+    <main>
+        <article>
+            <div class="title">
+                
+                
+
+    <div class="page-header">
+        plotting with matplotlib
+    </div>
+
+
+
+                <div class="meta">
+                    
+                        Posted on <time>2011-02-17</time>
+                    
+
+
+                    
+
+                    
+
+                    
+
+                    
+                    
+
+                    
+                    
+
+                    
+                    
+                        <span class="tags-label">::</span>
+                        <span class="tags">
+                                <a href="https://tshepang.github.io/tags/python/"
+                                   class="post-tag">Python</a>
+                            
+                        </span>
+                    
+
+                    
+
+                </div>
+            </div>
+
+            
+
+            <section class="body">
+                <p>Here's drawing a simple graph:</p>
+<pre><code data-lang="python">from matplotlib import pyplot
+x = range(10)  # a list of 10 integers, 0-9
+y = range(10)
+pyplot.plot(x, y)
+pyplot.show()
+</code></pre>
 <p>And now for something a little more interesting:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>random
-</span><span style="color:#b48ead;">from </span><span>matplotlib </span><span style="color:#b48ead;">import </span><span>pyplot
-</span><span>x = </span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>)
-</span><span>y = random.</span><span style="color:#bf616a;">sample</span><span>(</span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>), </span><span style="color:#d08770;">10</span><span>)
-</span><span>pyplot.</span><span style="color:#bf616a;">plot</span><span>(x, y)
-</span><span>pyplot.</span><span style="color:#bf616a;">show</span><span>()
-</span></code></pre>
+<pre><code data-lang="python">import random
+from matplotlib import pyplot
+x = range(10)
+y = random.sample(range(10), 10)
+pyplot.plot(x, y)
+pyplot.show()
+</code></pre>
 <p>We can have more than one graph on a single figure:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>random
-</span><span style="color:#b48ead;">from </span><span>matplotlib </span><span style="color:#b48ead;">import </span><span>pyplot
-</span><span>x = </span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>)
-</span><span>y1 = random.</span><span style="color:#bf616a;">sample</span><span>(</span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>), </span><span style="color:#d08770;">10</span><span>)
-</span><span>y2 = random.</span><span style="color:#bf616a;">sample</span><span>(</span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>), </span><span style="color:#d08770;">10</span><span>)
-</span><span>pyplot.</span><span style="color:#bf616a;">plot</span><span>(x, y1, x, y2)
-</span><span>pyplot.</span><span style="color:#bf616a;">show</span><span>()
-</span></code></pre>
+<pre><code data-lang="python">import random
+from matplotlib import pyplot
+x = range(10)
+y1 = random.sample(range(10), 10)
+y2 = random.sample(range(10), 10)
+pyplot.plot(x, y1, x, y2)
+pyplot.show()
+</code></pre>
 <p>What if the two graphs have much differing ranges:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>random
-</span><span style="color:#b48ead;">from </span><span>matplotlib </span><span style="color:#b48ead;">import </span><span>pyplot
-</span><span>x = </span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>)
-</span><span>y1 = random.</span><span style="color:#bf616a;">sample</span><span>(</span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>), </span><span style="color:#d08770;">10</span><span>)
-</span><span>y2 = random.</span><span style="color:#bf616a;">sample</span><span>(</span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">100</span><span>, </span><span style="color:#d08770;">110</span><span>), </span><span style="color:#d08770;">10</span><span>)
-</span><span>pyplot.</span><span style="color:#bf616a;">plot</span><span>(x, y1, x, y2)
-</span><span>pyplot.</span><span style="color:#bf616a;">show</span><span>()
-</span></code></pre>
+<pre><code data-lang="python">import random
+from matplotlib import pyplot
+x = range(10)
+y1 = random.sample(range(10), 10)
+y2 = random.sample(range(100, 110), 10)
+pyplot.plot(x, y1, x, y2)
+pyplot.show()
+</code></pre>
 <p>Depending on need, that might not be ideal. So let's create two
 separate y-axes:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>random
-</span><span style="color:#b48ead;">from </span><span>matplotlib </span><span style="color:#b48ead;">import </span><span>pyplot
-</span><span>x = </span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>)
-</span><span>y1 = random.</span><span style="color:#bf616a;">sample</span><span>(</span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>), </span><span style="color:#d08770;">10</span><span>)
-</span><span>y2 = random.</span><span style="color:#bf616a;">sample</span><span>(</span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">100</span><span>, </span><span style="color:#d08770;">110</span><span>), </span><span style="color:#d08770;">10</span><span>)
-</span><span>pyplot.</span><span style="color:#bf616a;">plot</span><span>(x, y1)
-</span><span>pyplot.</span><span style="color:#bf616a;">twinx</span><span>()
-</span><span>pyplot.</span><span style="color:#bf616a;">plot</span><span>(x, y2)
-</span><span>pyplot.</span><span style="color:#bf616a;">show</span><span>()
-</span></code></pre>
+<pre><code data-lang="python">import random
+from matplotlib import pyplot
+x = range(10)
+y1 = random.sample(range(10), 10)
+y2 = random.sample(range(100, 110), 10)
+pyplot.plot(x, y1)
+pyplot.twinx()
+pyplot.plot(x, y2)
+pyplot.show()
+</code></pre>
 <p>Yeah, not exactly ideal. We lost the automatic coloring, and we don't
 even know which graph is which. Let's do better:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>random
-</span><span style="color:#b48ead;">from </span><span>matplotlib </span><span style="color:#b48ead;">import </span><span>pyplot
-</span><span>x = </span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>)
-</span><span>y1 = random.</span><span style="color:#bf616a;">sample</span><span>(</span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>), </span><span style="color:#d08770;">10</span><span>)
-</span><span>y2 = random.</span><span style="color:#bf616a;">sample</span><span>(</span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">100</span><span>, </span><span style="color:#d08770;">110</span><span>), </span><span style="color:#d08770;">10</span><span>)
-</span><span>pyplot.</span><span style="color:#bf616a;">plot</span><span>(x, y1, &quot;</span><span style="color:#a3be8c;">red</span><span>&quot;)
-</span><span>pyplot.</span><span style="color:#bf616a;">ylabel</span><span>(&quot;</span><span style="color:#a3be8c;">y1</span><span>&quot;, </span><span style="color:#bf616a;">color</span><span>=&quot;</span><span style="color:#a3be8c;">red</span><span>&quot;)
-</span><span>pyplot.</span><span style="color:#bf616a;">twinx</span><span>()
-</span><span>pyplot.</span><span style="color:#bf616a;">plot</span><span>(x, y2, &quot;</span><span style="color:#a3be8c;">blue</span><span>&quot;)
-</span><span>pyplot.</span><span style="color:#bf616a;">ylabel</span><span>(&quot;</span><span style="color:#a3be8c;">y2</span><span>&quot;, </span><span style="color:#bf616a;">color</span><span>=&quot;</span><span style="color:#a3be8c;">blue</span><span>&quot;)
-</span><span>pyplot.</span><span style="color:#bf616a;">show</span><span>()
-</span></code></pre>
-<p>This was done with the help of <a href="http://matplotlib.sourceforge.net/examples/api/two_scales.html">this example</a>. There's a heck of a
-<a href="http://matplotlib.sourceforge.net/examples/index.html">lot</a> <a href="http://matplotlib.sourceforge.net/gallery.html">more</a>.</p>
+<pre><code data-lang="python">import random
+from matplotlib import pyplot
+x = range(10)
+y1 = random.sample(range(10), 10)
+y2 = random.sample(range(100, 110), 10)
+pyplot.plot(x, y1, &quot;red&quot;)
+pyplot.ylabel(&quot;y1&quot;, color=&quot;red&quot;)
+pyplot.twinx()
+pyplot.plot(x, y2, &quot;blue&quot;)
+pyplot.ylabel(&quot;y2&quot;, color=&quot;blue&quot;)
+pyplot.show()
+</code></pre>
+<p>This was done with the help of <a rel="external" href="http://matplotlib.sourceforge.net/examples/api/two_scales.html">this example</a>. There's a heck of a
+<a rel="external" href="http://matplotlib.sourceforge.net/examples/index.html">lot</a> <a rel="external" href="http://matplotlib.sourceforge.net/gallery.html">more</a>.</p>
 <h1 id="further-reading">further reading</h1>
 <ul>
-<li>built-in function: <a href="http://docs.python.org/library/functions#range">range</a></li>
-<li>module: <a href="http://docs.python.org/library/random">random</a></li>
-<li>3rd-party module: <a href="http://matplotlib.sourceforge.net/api/pyplot_api.html">matplotlib.pyplot</a></li>
-<li><a href="http://matplotlib.sourceforge.net/contents.html">matplotlib documentation</a></li>
+<li>built-in function: <a rel="external" href="http://docs.python.org/library/functions#range">range</a></li>
+<li>module: <a rel="external" href="http://docs.python.org/library/random">random</a></li>
+<li>3rd-party module: <a rel="external" href="http://matplotlib.sourceforge.net/api/pyplot_api.html">matplotlib.pyplot</a></li>
+<li><a rel="external" href="http://matplotlib.sourceforge.net/contents.html">matplotlib documentation</a></li>
 </ul>
 
-    </div>
+            </section>
+        </article>
+    </main>
+</div>
 
-    
-        <footer>
-            <hr>
-            <p>
-                
-                
-                
-                    
-                    tagged
-                    
-                        <a href="https://tshepang.github.io/tags/python/">Python</a>
-                        
-                    
-                
-            </p>
+
+
             
+                
             
-        </footer>
+
+            
+        </div>
+
+        <div class="right-content">
+            
     
-</article>
+    
 
+        </div>
+        
 
-
-  <!-- optional scripts -->
-  
-  
-
-  
-
-  
-<script type="text/javascript" src="https://tshepang.github.io/elasticlunr.min.js"></script>
-<script type="text/javascript" src="https://tshepang.github.io/js/search.js"></script>
-
-
-  
-</body>
+    </body>
 
 </html>

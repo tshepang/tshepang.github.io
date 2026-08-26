@@ -1,702 +1,1531 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark light">
 
+    
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
 
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base" content="https://tshepang.github.io" />
 
-  
+    
 
-  <title>Tshepang logs</title>
-  <link rel="alternate" type="application/atom+xml" title="Tshepang logs Atom Feed" href="https://tshepang.github.io/atom.xml" />
+    
 
-  
-  <link rel="stylesheet" href="https://tshepang.github.io/site.css">
-  
+    
+    
+    
+        <title>
+            
+                Tshepang logs
+            
+        </title>
 
-  
-  
+        
+            <meta property="og:title"
+                  content="Tshepang logs" />
+        
+    
+
+    
+        
+    
+
+    
+        
+    
+
+    
+    
+
+    
+    
+        <link href=https://tshepang.github.io/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+
+    
+    
+        
+            
+                <link rel="alternate"
+                      type="application/atom+xml"
+                      title="
+Tshepang logs
+"
+                      href="https://tshepang.github.io/atom.xml" />
+            
+        
+    
+
+
+    
+
+    
+    
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://tshepang.github.io/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://tshepang.github.io/theme/dark.css" />
+    
+
+    
+        
+            <script>
+                var themeToggleMode = "toggle";
+            </script>
+        
+        <script src=https://tshepang.github.io/js/themetoggle.js></script>
+
+        
+            <script>
+                setTheme(getSavedTheme());
+            </script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://tshepang.github.io/main.css" />
+
+    
+
+    
+        <script defer
+                src="https://tshepang.github.io/js/searchElasticlunr.min.js?h=3626c0ef99daa745b31e"></script>
+
 </head>
 
-<body class="hack dark main container">
-  
-    
+
+    <body>
         
-  
-  <header class="nav-header">
-    <nav itemscope itemtype="http://schema.org/SiteNavigationElement" class="navbar">
-      <div class="nav-links">
+
+        <div class="left-content">
+            
+            
+        </div>
+
+        <div class="content">
+            <nav>
+    <div class="left-nav">
         
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/about-me">
-          <span itemprop="name">about</span></a>
+            <a href=https://tshepang.github.io>Tshepang logs</a>
         
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/tags">
-          <span itemprop="name">tags</span></a>
-        
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/categories/movies">
-          <span itemprop="name">movies</span></a>
-        
-      </div>
-    </nav>
-    
-    <div class="search-container">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="search-icon">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-      </svg>
-      <input type="text" id="search" placeholder="Search...">
-      <div class="search-results">
-        <div class="search-results__items"></div>
-      </div>
+
+
+        <div class="socials">
+            
+                
+            
+            
+                <a rel='me' href="https://github.com/tshepang" class="social">
+                    <img alt="code"
+                         src="https://tshepang.github.io/icons/social/github.svg" />
+                </a>
+            
+        </div>
     </div>
+
+    <div class="right-nav">
+        
+            <a href=https://tshepang.github.io/about-me style="margin-right: 0.5em">about</a>
+        
+            <a href=https://tshepang.github.io/categories/movies style="margin-right: 0.5em">movies</a>
+        
+            <a href=https://tshepang.github.io/tags style="margin-right: 0.5em">tags</a>
+        
+
+        
+            <button id="search-button"
+                    class="search-button"
+                    title="$SHORTCUT to open search">
+                <img src="https://tshepang.github.io/icons/search.svg"
+                     alt="Search"
+                     class="search-icon" />
+            </button>
+
+            <div id="searchModal"
+                 class="search-modal js"
+                 role="dialog"
+                 aria-labelledby="modalTitle">
+                <div id="modal-content">
+                    <h1 id="modalTitle" class="page-header">
+                        Search
+                    </h1>
+                    <div id="searchBar">
+                        <input id="searchInput"
+                               role="combobox"
+                               autocomplete="off"
+                               spellcheck="false"
+                               aria-expanded="false"
+                               aria-controls="results-container"
+                               placeholder="Search..." />
+                        <button id="clear-search" class="clear-button" title="Clear search">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="results-container">
+                        <div id="results-info">
+                            <span id="zero_results" style="display: none;">No results</span>
+                            <span id="one_result" style="display: none;">1 result</span>
+                            <span id="many_results" style="display: none;">$NUMBER results</span>
+                        </div>
+                        <div id="results" role="listbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+        
+        
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://tshepang.github.io/icons/sun.svg" id="sun-icon" alt="Light" />
+                <img src="https://tshepang.github.io/icons/moon.svg"
+                     id="moon-icon"
+                     style="filter: invert(1)"
+                     alt="Dark" />
+                
+            </a>
+
+            <!-- Initialize the theme toggle icons -->
+            <script>
+                updateItemToggleTheme()
+            </script>
+        
+    </div>
+</nav>
+
+
+            
+            
     
 
-  </header>
-  
-  
-    
+    <div class="page-header">
+        Entries tagged :: Debian
+    </div>
 
-    <h1>Debian</h1>
 
+<main class="post-list">
     
+<ul>
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/links-2015-01-16/">links 2015-01-16</a>
-                <br>
-                <span class="muted">
-    2015-01-16
-</span>
-            </h2>
-        </header>
-        
-    </article>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/project-of-note-debian-lts/">project of note: Debian LTS</a>
-                <br>
-                <span class="muted">
-    2014-09-11
-</span>
-            </h2>
-        </header>
-        
-    </article>
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2015-01-16</time>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/links-2014-03-20/">links 2014-03-20</a>
-                <br>
-                <span class="muted">
-    2014-03-20
-</span>
-            </h2>
-        </header>
-        
-    </article>
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/links-2015-01-16/">links 2015-01-16
+                        
+                    </a>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/project-of-note-debian-installer/">project of note: Debian Installer</a>
-                <br>
-                <span class="muted">
-    2014-03-20
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </h1>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/my-current-desktop-setup/">my current desktop setup</a>
-                <br>
-                <span class="muted">
-    2014-02-16
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/links-2013-11-18/">links 2013-11-18</a>
-                <br>
-                <span class="muted">
-    2013-11-18
-</span>
-            </h2>
-        </header>
-        
-    </article>
-
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/my-first-debian-upload/">my first Debian upload</a>
-                <br>
-                <span class="muted">
-    2013-10-13
-</span>
-            </h2>
-        </header>
-        
-    </article>
-
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/my-first-server/">my first server</a>
-                <br>
-                <span class="muted">
-    2013-10-10
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/links-2013-10-04/">links 2013-10-04</a>
-                <br>
-                <span class="muted">
-    2013-10-04
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2014-09-11</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/project-of-note-debian-lts/">project of note: Debian LTS
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/packaging-my-first-qt-app/">packaging my first Qt app</a>
-                <br>
-                <span class="muted">
-    2013-08-27
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2014-03-20</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/project-of-note-debian-installer/">project of note: Debian Installer
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/developer-of-note-barry-warsaw/">developer of note: Barry Warsaw</a>
-                <br>
-                <span class="muted">
-    2013-05-28
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2014-03-20</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/links-2014-03-20/">links 2014-03-20
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/debian-7-will-release-with-wajig-2-7-3/">Debian 7 will release with wajig 2.7.3</a>
-                <br>
-                <span class="muted">
-    2012-07-17
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2014-02-16</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/my-current-desktop-setup/">my current desktop setup
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/wajig-2-6-and-2-7/">wajig 2.6 and 2.7</a>
-                <br>
-                <span class="muted">
-    2012-07-02
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2013-11-18</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/links-2013-11-18/">links 2013-11-18
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/developer-of-note-martin-pitt/">developer of note: Martin Pitt</a>
-                <br>
-                <span class="muted">
-    2012-05-15
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2013-10-13</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/my-first-debian-upload/">my first Debian upload
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/accessibility-on-debian/">accessibility on Debian</a>
-                <br>
-                <span class="muted">
-    2012-04-19
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2013-10-10</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/my-first-server/">my first server
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/developer-of-note-stefano-zacchiroli/">developer of note: Stefano Zacchiroli</a>
-                <br>
-                <span class="muted">
-    2012-04-15
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2013-10-04</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/links-2013-10-04/">links 2013-10-04
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/wajig-2-4-released/">wajig 2.4 released</a>
-                <br>
-                <span class="muted">
-    2012-03-29
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2013-08-27</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/packaging-my-first-qt-app/">packaging my first Qt app
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/wajig-2-3-released/">wajig 2.3 released</a>
-                <br>
-                <span class="muted">
-    2012-03-25
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2013-05-28</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/developer-of-note-barry-warsaw/">developer of note: Barry Warsaw
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/removing-obsolete-packages-from-a-local-debian-repository/">removing obsolete packages from a local Debian repository</a>
-                <br>
-                <span class="muted">
-    2012-02-21
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-07-17</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/debian-7-will-release-with-wajig-2-7-3/">Debian 7 will release with wajig 2.7.3
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/attachment-can-lead-to-irrational-behaviour/">attachment can lead to irrational behaviour</a>
-                <br>
-                <span class="muted">
-    2012-02-01
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-07-02</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/wajig-2-6-and-2-7/">wajig 2.6 and 2.7
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/moving-from-acer-travelmate-to-hp-probook-using-debian/">moving from Acer TravelMate to HP Probook, using Debian</a>
-                <br>
-                <span class="muted">
-    2011-07-16
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-05-15</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/developer-of-note-martin-pitt/">developer of note: Martin Pitt
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/thanks-to-the-debian-backports-team/">thanks to the Debian backports team</a>
-                <br>
-                <span class="muted">
-    2011-07-14
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-04-19</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/accessibility-on-debian/">accessibility on Debian
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/wajig-2-2-released/">wajig 2.2 released</a>
-                <br>
-                <span class="muted">
-    2011-05-09
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-04-15</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/developer-of-note-stefano-zacchiroli/">developer of note: Stefano Zacchiroli
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/wajig-2-1-released/">wajig 2.1 released</a>
-                <br>
-                <span class="muted">
-    2011-04-27
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-03-29</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/wajig-2-4-released/">wajig 2.4 released
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/from-squeeze-to-unstable-and-back-again/">from Squeeze to Unstable, and back again</a>
-                <br>
-                <span class="muted">
-    2011-04-26
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-03-25</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/wajig-2-3-released/">wajig 2.3 released
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/developer-of-note-josselin-mouette/">developer of note: Josselin Mouette</a>
-                <br>
-                <span class="muted">
-    2011-04-08
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-02-21</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/removing-obsolete-packages-from-a-local-debian-repository/">removing obsolete packages from a local Debian repository
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/comparing-debian-repositories/">comparing Debian repositories</a>
-                <br>
-                <span class="muted">
-    2011-02-09
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-02-01</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/attachment-can-lead-to-irrational-behaviour/">attachment can lead to irrational behaviour
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/accessing-oracle-db-using-python-in-debian/">accessing Oracle DB using Python, in Debian</a>
-                <br>
-                <span class="muted">
-    2011-01-15
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-07-16</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/moving-from-acer-travelmate-to-hp-probook-using-debian/">moving from Acer TravelMate to HP Probook, using Debian
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/poll-results-of-debian-user-s-favorite-floss/">poll results of debian-user&#x27;s favorite FLOSS</a>
-                <br>
-                <span class="muted">
-    2011-01-15
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-07-14</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/thanks-to-the-debian-backports-team/">thanks to the Debian backports team
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/wajig-2-0-50-released/">wajig 2.0.50 released</a>
-                <br>
-                <span class="muted">
-    2010-10-13
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-05-09</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/wajig-2-2-released/">wajig 2.2 released
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/my-debian-package-management-setup/">my Debian package management setup</a>
-                <br>
-                <span class="muted">
-    2010-09-28
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-04-27</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/wajig-2-1-released/">wajig 2.1 released
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/apt-get-vs-aptitude/">apt-get vs. aptitude</a>
-                <br>
-                <span class="muted">
-    2010-09-23
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-04-26</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/from-squeeze-to-unstable-and-back-again/">from Squeeze to Unstable, and back again
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/developer-of-note-alexander-reichle-schmehl/">developer of note: Alexander Reichle-Schmehl</a>
-                <br>
-                <span class="muted">
-    2010-07-24
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-04-08</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/developer-of-note-josselin-mouette/">developer of note: Josselin Mouette
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/developer-of-note-michael-biebl/">developer of note: Michael Biebl</a>
-                <br>
-                <span class="muted">
-    2010-04-14
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-02-09</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/comparing-debian-repositories/">comparing Debian repositories
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/developer-of-note-manoj-srivastava/">developer of note: Manoj Srivastava</a>
-                <br>
-                <span class="muted">
-    2008-12-19
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-01-15</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/poll-results-of-debian-user-s-favorite-floss/">poll results of debian-user&#39;s favorite FLOSS
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/developer-of-note-andreas-barth/">developer of note: Andreas Barth</a>
-                <br>
-                <span class="muted">
-    2008-06-10
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-01-15</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/accessing-oracle-db-using-python-in-debian/">accessing Oracle DB using Python, in Debian
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/games-in-debian/">games in Debian</a>
-                <br>
-                <span class="muted">
-    2007-12-03
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2010-10-13</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/wajig-2-0-50-released/">wajig 2.0.50 released
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/developer-of-note-steve-langasek/">developer of note: Steve Langasek</a>
-                <br>
-                <span class="muted">
-    2007-06-11
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2010-09-28</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/my-debian-package-management-setup/">my Debian package management setup
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/debian-and-linux/">Debian and Linux</a>
-                <br>
-                <span class="muted">
-    2007-05-17
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2010-09-23</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/apt-get-vs-aptitude/">apt-get vs. aptitude
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/developer-of-note-aurelien-jarno/">developer of note: Aurelien Jarno</a>
-                <br>
-                <span class="muted">
-    2007-05-07
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2010-07-24</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/developer-of-note-alexander-reichle-schmehl/">developer of note: Alexander Reichle-Schmehl
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/1st-usage-of-rss-feeds/">1st usage of RSS feeds</a>
-                <br>
-                <span class="muted">
-    2007-04-16
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2010-04-14</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/developer-of-note-michael-biebl/">developer of note: Michael Biebl
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2008-12-19</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/developer-of-note-manoj-srivastava/">developer of note: Manoj Srivastava
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2008-06-10</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/developer-of-note-andreas-barth/">developer of note: Andreas Barth
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2007-12-03</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/games-in-debian/">games in Debian
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2007-06-11</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/developer-of-note-steve-langasek/">developer of note: Steve Langasek
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2007-05-17</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/debian-and-linux/">Debian and Linux
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2007-05-07</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/developer-of-note-aurelien-jarno/">developer of note: Aurelien Jarno
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2007-04-16</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/1st-usage-of-rss-feeds/">1st usage of RSS feeds
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    </ul>
+
+</main>
 
 
-  <!-- optional scripts -->
-  
-  
 
-  
+            
+                
+            
 
-  
-<script type="text/javascript" src="https://tshepang.github.io/elasticlunr.min.js"></script>
-<script type="text/javascript" src="https://tshepang.github.io/js/search.js"></script>
+            
+        </div>
 
+        <div class="right-content">
+            
+            
+        </div>
+        
 
-  
-</body>
+    </body>
 
 </html>

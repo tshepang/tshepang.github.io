@@ -1,1497 +1,3174 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark light">
 
+    
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
 
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base" content="https://tshepang.github.io" />
 
-  
+    
 
-  <title>Tshepang logs</title>
-  <link rel="alternate" type="application/atom+xml" title="Tshepang logs Atom Feed" href="https://tshepang.github.io/atom.xml" />
+    
 
-  
-  <link rel="stylesheet" href="https://tshepang.github.io/site.css">
-  
+    
+    
+    
+        <title>
+            
+                Tshepang logs
+            
+        </title>
 
-  
-  
+        
+            <meta property="og:title"
+                  content="Tshepang logs" />
+        
+    
+
+    
+        
+    
+
+    
+        
+    
+
+    
+    
+
+    
+    
+        <link href=https://tshepang.github.io/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+
+    
+    
+        
+            
+                <link rel="alternate"
+                      type="application/atom+xml"
+                      title="
+Tshepang logs
+"
+                      href="https://tshepang.github.io/atom.xml" />
+            
+        
+    
+
+
+    
+
+    
+    
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://tshepang.github.io/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://tshepang.github.io/theme/dark.css" />
+    
+
+    
+        
+            <script>
+                var themeToggleMode = "toggle";
+            </script>
+        
+        <script src=https://tshepang.github.io/js/themetoggle.js></script>
+
+        
+            <script>
+                setTheme(getSavedTheme());
+            </script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://tshepang.github.io/main.css" />
+
+    
+
+    
+        <script defer
+                src="https://tshepang.github.io/js/searchElasticlunr.min.js?h=3626c0ef99daa745b31e"></script>
+
 </head>
 
-<body class="hack dark main container">
-  
-    
+
+    <body>
         
-  
-  <header class="nav-header">
-    <nav itemscope itemtype="http://schema.org/SiteNavigationElement" class="navbar">
-      <div class="nav-links">
+
+        <div class="left-content">
+            
+            
+        </div>
+
+        <div class="content">
+            <nav>
+    <div class="left-nav">
         
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/about-me">
-          <span itemprop="name">about</span></a>
+            <a href=https://tshepang.github.io>Tshepang logs</a>
         
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/tags">
-          <span itemprop="name">tags</span></a>
-        
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/categories/movies">
-          <span itemprop="name">movies</span></a>
-        
-      </div>
-    </nav>
-    
-    <div class="search-container">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="search-icon">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-      </svg>
-      <input type="text" id="search" placeholder="Search...">
-      <div class="search-results">
-        <div class="search-results__items"></div>
-      </div>
+
+
+        <div class="socials">
+            
+                
+            
+            
+                <a rel='me' href="https://github.com/tshepang" class="social">
+                    <img alt="code"
+                         src="https://tshepang.github.io/icons/social/github.svg" />
+                </a>
+            
+        </div>
     </div>
-    
-
-  </header>
-  
-  
-    
-
-    <h1>average</h1>
 
-    
+    <div class="right-nav">
+        
+            <a href=https://tshepang.github.io/about-me style="margin-right: 0.5em">about</a>
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/the-hobbit-the-battle-of-the-five-armies/">The Hobbit: The Battle of the Five Armies</a>
-                <br>
-                <span class="muted">
-    2015-04-03
-</span>
-            </h2>
-        </header>
+            <a href=https://tshepang.github.io/categories/movies style="margin-right: 0.5em">movies</a>
+        
+            <a href=https://tshepang.github.io/tags style="margin-right: 0.5em">tags</a>
+        
+
+        
+            <button id="search-button"
+                    class="search-button"
+                    title="$SHORTCUT to open search">
+                <img src="https://tshepang.github.io/icons/search.svg"
+                     alt="Search"
+                     class="search-icon" />
+            </button>
+
+            <div id="searchModal"
+                 class="search-modal js"
+                 role="dialog"
+                 aria-labelledby="modalTitle">
+                <div id="modal-content">
+                    <h1 id="modalTitle" class="page-header">
+                        Search
+                    </h1>
+                    <div id="searchBar">
+                        <input id="searchInput"
+                               role="combobox"
+                               autocomplete="off"
+                               spellcheck="false"
+                               aria-expanded="false"
+                               aria-controls="results-container"
+                               placeholder="Search..." />
+                        <button id="clear-search" class="clear-button" title="Clear search">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="results-container">
+                        <div id="results-info">
+                            <span id="zero_results" style="display: none;">No results</span>
+                            <span id="one_result" style="display: none;">1 result</span>
+                            <span id="many_results" style="display: none;">$NUMBER results</span>
+                        </div>
+                        <div id="results" role="listbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
         
-    </article>
 
-    
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/big-hero-6/">Big Hero 6</a>
-                <br>
-                <span class="muted">
-    2015-03-17
-</span>
-            </h2>
-        </header>
         
-    </article>
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://tshepang.github.io/icons/sun.svg" id="sun-icon" alt="Light" />
+                <img src="https://tshepang.github.io/icons/moon.svg"
+                     id="moon-icon"
+                     style="filter: invert(1)"
+                     alt="Dark" />
+                
+            </a>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/lucy-2014/">Lucy (2014)</a>
-                <br>
-                <span class="muted">
-    2014-11-10
-</span>
-            </h2>
-        </header>
-        
-    </article>
+            <!-- Initialize the theme toggle icons -->
+            <script>
+                updateItemToggleTheme()
+            </script>
+        
+    </div>
+</nav>
+
+
+            
+            
+    
+
+    <div class="page-header">
+        Entries tagged :: average
+    </div>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/the-expendables-3/">The Expendables 3</a>
-                <br>
-                <span class="muted">
-    2014-10-04
-</span>
-            </h2>
-        </header>
-        
-    </article>
 
+<main class="post-list">
     
+<ul>
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/godzilla-2014/">Godzilla (2014)</a>
-                <br>
-                <span class="muted">
-    2014-09-14
-</span>
-            </h2>
-        </header>
-        
-    </article>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/noah-2014/">Noah (2014)</a>
-                <br>
-                <span class="muted">
-    2014-07-13
-</span>
-            </h2>
-        </header>
-        
-    </article>
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2015-04-03</time>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/the-amazing-spider-man-2-2014/">The Amazing Spider-Man 2 (2014)</a>
-                <br>
-                <span class="muted">
-    2014-06-06
-</span>
-            </h2>
-        </header>
-        
-    </article>
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/the-hobbit-the-battle-of-the-five-armies/">The Hobbit: The Battle of the Five Armies
+                        
+                    </a>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/boogie-nights-1997/">Boogie Nights (1997)</a>
-                <br>
-                <span class="muted">
-    2014-05-01
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </h1>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/gangster-squad-2013/">Gangster Squad (2013)</a>
-                <br>
-                <span class="muted">
-    2014-03-24
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/the-butler-2013/">The Butler (2013)</a>
-                <br>
-                <span class="muted">
-    2014-03-14
-</span>
-            </h2>
-        </header>
         
-    </article>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/the-hunger-games-catching-fire-2013/">The Hunger Games: Catching Fire (2013)</a>
-                <br>
-                <span class="muted">
-    2014-02-20
-</span>
-            </h2>
-        </header>
-        
-    </article>
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2015-03-17</time>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/12-years-a-slave-2013/">12 Years a Slave (2013)</a>
-                <br>
-                <span class="muted">
-    2014-01-21
-</span>
-            </h2>
-        </header>
-        
-    </article>
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/big-hero-6/">Big Hero 6
+                        
+                    </a>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/goodbye-bafana-2007/">Goodbye Bafana (2007)</a>
-                <br>
-                <span class="muted">
-    2013-11-30
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </h1>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/mandela-long-walk-to-freedom-2013/">Mandela: Long Walk to Freedom (2013)</a>
-                <br>
-                <span class="muted">
-    2013-11-29
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/pacific-rim-2013/">Pacific Rim (2013)</a>
-                <br>
-                <span class="muted">
-    2013-11-10
-</span>
-            </h2>
-        </header>
-        
-    </article>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/olympus-has-fallen-2013/">Olympus Has Fallen (2013)</a>
-                <br>
-                <span class="muted">
-    2013-09-06
-</span>
-            </h2>
-        </header>
-        
-    </article>
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2014-11-10</time>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/the-hobbit-an-unexpected-journey-2012/">The Hobbit: An Unexpected Journey (2012)</a>
-                <br>
-                <span class="muted">
-    2013-09-04
-</span>
-            </h2>
-        </header>
-        
-    </article>
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/lucy-2014/">Lucy (2014)
+                        
+                    </a>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/devil-s-double-2011/">Devil&#x27;s Double (2011)</a>
-                <br>
-                <span class="muted">
-    2013-08-30
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </h1>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/silent-hill-2006/">Silent Hill (2006)</a>
-                <br>
-                <span class="muted">
-    2013-03-29
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/silent-hill-revelation-2012/">Silent Hill: Revelation (2012)</a>
-                <br>
-                <span class="muted">
-    2013-03-29
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/hotel-transylvania-2012/">Hotel Transylvania (2012)</a>
-                <br>
-                <span class="muted">
-    2013-03-09
-</span>
-            </h2>
-        </header>
-        
-    </article>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/skyfall-2012/">Skyfall (2012)</a>
-                <br>
-                <span class="muted">
-    2013-03-02
-</span>
-            </h2>
-        </header>
-        
-    </article>
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2014-10-04</time>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/taken-2-2012/">Taken 2 (2012)</a>
-                <br>
-                <span class="muted">
-    2013-02-24
-</span>
-            </h2>
-        </header>
-        
-    </article>
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/the-expendables-3/">The Expendables 3
+                        
+                    </a>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/x-men-3-the-last-stand-2006/">X-Men 3: The Last Stand (2006)</a>
-                <br>
-                <span class="muted">
-    2012-12-31
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </h1>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/looper-2012/">Looper (2012)</a>
-                <br>
-                <span class="muted">
-    2012-12-25
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/romance-1999/">Romance (1999)</a>
-                <br>
-                <span class="muted">
-    2012-12-22
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/mission-impossible-ghost-protocol-2011/">Mission: Impossible - Ghost Protocol (2011)</a>
-                <br>
-                <span class="muted">
-    2012-12-09
-</span>
-            </h2>
-        </header>
-        
-    </article>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/brave-2012/">Brave (2012)</a>
-                <br>
-                <span class="muted">
-    2012-11-30
-</span>
-            </h2>
-        </header>
-        
-    </article>
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2014-09-14</time>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/austin-powers-in-goldmember-2002/">Austin Powers in Goldmember (2002)</a>
-                <br>
-                <span class="muted">
-    2012-11-17
-</span>
-            </h2>
-        </header>
-        
-    </article>
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/godzilla-2014/">Godzilla (2014)
+                        
+                    </a>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/the-green-mile-1999/">The Green Mile (1999)</a>
-                <br>
-                <span class="muted">
-    2012-11-13
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </h1>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/idiocracy-2006/">Idiocracy (2006)</a>
-                <br>
-                <span class="muted">
-    2012-10-21
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/blood-the-last-vampire-2009/">Blood: the Last Vampire (2009)</a>
-                <br>
-                <span class="muted">
-    2012-09-30
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/harry-potter-and-the-deathly-hallows-part-1/">Harry Potter and the Deathly Hallows, Part 1</a>
-                <br>
-                <span class="muted">
-    2012-09-22
-</span>
-            </h2>
-        </header>
-        
-    </article>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/harry-potter-and-the-half-blood-prince-2009/">Harry Potter and the Half-Blood Prince (2009)</a>
-                <br>
-                <span class="muted">
-    2012-09-18
-</span>
-            </h2>
-        </header>
-        
-    </article>
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2014-07-13</time>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/killers-2010/">Killers (2010)</a>
-                <br>
-                <span class="muted">
-    2012-09-04
-</span>
-            </h2>
-        </header>
-        
-    </article>
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/noah-2014/">Noah (2014)
+                        
+                    </a>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/the-great-dictator-1940/">The Great Dictator (1940)</a>
-                <br>
-                <span class="muted">
-    2012-07-22
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </h1>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/izulu-lami-2008/">Izulu Lami (2008)</a>
-                <br>
-                <span class="muted">
-    2012-07-21
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/transformers-dark-of-the-moon-2011/">Transformers: Dark of the Moon (2011)</a>
-                <br>
-                <span class="muted">
-    2012-06-08
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/final-fantasy-the-spirits-within/">Final Fantasy: The Spirits Within</a>
-                <br>
-                <span class="muted">
-    2012-06-02
-</span>
-            </h2>
-        </header>
-        
-    </article>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/j-edgar-2011/">J. Edgar (2011)</a>
-                <br>
-                <span class="muted">
-    2012-05-20
-</span>
-            </h2>
-        </header>
-        
-    </article>
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2014-06-06</time>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/secretariat-2010/">Secretariat (2010)</a>
-                <br>
-                <span class="muted">
-    2012-05-06
-</span>
-            </h2>
-        </header>
-        
-    </article>
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/the-amazing-spider-man-2-2014/">The Amazing Spider-Man 2 (2014)
+                        
+                    </a>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/the-science-of-sleep-2006/">The Science of Sleep (2006)</a>
-                <br>
-                <span class="muted">
-    2012-05-06
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </h1>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/persona-1966/">Persona (1966)</a>
-                <br>
-                <span class="muted">
-    2012-04-29
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/things-we-lost-in-the-fire-2007/">Things We Lost in the Fire (2007)</a>
-                <br>
-                <span class="muted">
-    2012-02-01
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/bad-teacher-2011/">Bad Teacher (2011)</a>
-                <br>
-                <span class="muted">
-    2012-01-19
-</span>
-            </h2>
-        </header>
-        
-    </article>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/serpico-1973/">Serpico (1973)</a>
-                <br>
-                <span class="muted">
-    2012-01-15
-</span>
-            </h2>
-        </header>
-        
-    </article>
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2014-05-01</time>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/the-duel-2000/">The Duel (2000)</a>
-                <br>
-                <span class="muted">
-    2012-01-11
-</span>
-            </h2>
-        </header>
-        
-    </article>
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/boogie-nights-1997/">Boogie Nights (1997)
+                        
+                    </a>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/swordsman-ii-1992/">Swordsman II (1992)</a>
-                <br>
-                <span class="muted">
-    2012-01-07
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </h1>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/true-legend-2010/">True Legend (2010)</a>
-                <br>
-                <span class="muted">
-    2012-01-07
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/midnight-in-paris-2011/">Midnight in Paris (2011)</a>
-                <br>
-                <span class="muted">
-    2012-01-05
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/angel-heart-1987/">Angel Heart (1987)</a>
-                <br>
-                <span class="muted">
-    2011-12-27
-</span>
-            </h2>
-        </header>
-        
-    </article>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/just-go-with-it-2011/">Just Go With It (2011)</a>
-                <br>
-                <span class="muted">
-    2011-12-27
-</span>
-            </h2>
-        </header>
-        
-    </article>
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2014-03-24</time>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/love-actually-2003/">Love Actually (2003)</a>
-                <br>
-                <span class="muted">
-    2011-12-27
-</span>
-            </h2>
-        </header>
-        
-    </article>
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/gangster-squad-2013/">Gangster Squad (2013)
+                        
+                    </a>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/sweeney-todd-the-demon-barber-of-fleet-street-2007/">Sweeney Todd - The Demon Barber of Fleet Street (2007)</a>
-                <br>
-                <span class="muted">
-    2011-12-27
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </h1>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/the-elephant-man-1980/">The Elephant Man (1980)</a>
-                <br>
-                <span class="muted">
-    2011-12-27
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/shutter-island-2010/">Shutter Island (2010)</a>
-                <br>
-                <span class="muted">
-    2011-12-12
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/the-sixth-sense-1999/">The Sixth Sense (1999)</a>
-                <br>
-                <span class="muted">
-    2011-12-08
-</span>
-            </h2>
-        </header>
-        
-    </article>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/vanilla-sky-2001/">Vanilla Sky (2001)</a>
-                <br>
-                <span class="muted">
-    2011-11-28
-</span>
-            </h2>
-        </header>
-        
-    </article>
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2014-03-14</time>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/cars-2-2011/">Cars 2 (2011)</a>
-                <br>
-                <span class="muted">
-    2011-11-24
-</span>
-            </h2>
-        </header>
-        
-    </article>
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/the-butler-2013/">The Butler (2013)
+                        
+                    </a>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/lost-in-space-1998/">Lost In Space (1998)</a>
-                <br>
-                <span class="muted">
-    2011-11-22
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </h1>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/entrapment-1999/">Entrapment (1999)</a>
-                <br>
-                <span class="muted">
-    2011-11-02
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/final-destination-2000/">Final Destination (2000)</a>
-                <br>
-                <span class="muted">
-    2011-10-28
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/colors-1988/">Colors (1988)</a>
-                <br>
-                <span class="muted">
-    2011-08-21
-</span>
-            </h2>
-        </header>
-        
-    </article>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/basic-instinct-1992/">Basic Instinct (1992)</a>
-                <br>
-                <span class="muted">
-    2011-08-01
-</span>
-            </h2>
-        </header>
-        
-    </article>
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2014-02-20</time>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/grown-ups-2010/">Grown Ups (2010)</a>
-                <br>
-                <span class="muted">
-    2011-08-01
-</span>
-            </h2>
-        </header>
-        
-    </article>
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/the-hunger-games-catching-fire-2013/">The Hunger Games: Catching Fire (2013)
+                        
+                    </a>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/i-hate-valentine-s-day-2009/">I Hate Valentine&#x27;s Day (2009)</a>
-                <br>
-                <span class="muted">
-    2011-07-17
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </h1>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/asterix-and-the-vikings-2006/">Asterix and the Vikings (2006)</a>
-                <br>
-                <span class="muted">
-    2011-07-16
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/bolt-2008/">Bolt (2008)</a>
-                <br>
-                <span class="muted">
-    2011-07-05
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/das-experiment-2001/">Das Experiment (2001)</a>
-                <br>
-                <span class="muted">
-    2011-06-29
-</span>
-            </h2>
-        </header>
-        
-    </article>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/curious-george-2006/">Curious George (2006)</a>
-                <br>
-                <span class="muted">
-    2011-06-26
-</span>
-            </h2>
-        </header>
-        
-    </article>
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2014-01-21</time>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/gamer-2009/">Gamer (2009)</a>
-                <br>
-                <span class="muted">
-    2011-06-26
-</span>
-            </h2>
-        </header>
-        
-    </article>
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/12-years-a-slave-2013/">12 Years a Slave (2013)
+                        
+                    </a>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/the-experiment-2010/">The Experiment (2010)</a>
-                <br>
-                <span class="muted">
-    2011-06-26
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </h1>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/the-librarian-quest-for-the-spear-2004/">The Librarian: Quest for the Spear (2004)</a>
-                <br>
-                <span class="muted">
-    2011-06-26
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/red-2010/">Red (2010)</a>
-                <br>
-                <span class="muted">
-    2011-06-02
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/paper-man-2009/">Paper Man (2009)</a>
-                <br>
-                <span class="muted">
-    2011-05-29
-</span>
-            </h2>
-        </header>
-        
-    </article>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/rio-2011/">Rio (2011)</a>
-                <br>
-                <span class="muted">
-    2011-05-25
-</span>
-            </h2>
-        </header>
-        
-    </article>
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2013-11-30</time>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/inland-empire-2006/">Inland Empire (2006)</a>
-                <br>
-                <span class="muted">
-    2011-04-25
-</span>
-            </h2>
-        </header>
-        
-    </article>
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/goodbye-bafana-2007/">Goodbye Bafana (2007)
+                        
+                    </a>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/scar-2008/">Scar (2008)</a>
-                <br>
-                <span class="muted">
-    2011-04-25
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </h1>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/straightheads-2007/">Straightheads (2007)</a>
-                <br>
-                <span class="muted">
-    2011-04-25
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/true-grit-1969/">True Grit (1969)</a>
-                <br>
-                <span class="muted">
-    2011-04-25
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/paul-2011/">Paul (2011)</a>
-                <br>
-                <span class="muted">
-    2011-04-02
-</span>
-            </h2>
-        </header>
-        
-    </article>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/saw-the-final-chapter-2010/">Saw: The Final Chapter (2010)</a>
-                <br>
-                <span class="muted">
-    2011-03-27
-</span>
-            </h2>
-        </header>
-        
-    </article>
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2013-11-29</time>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/the-puppet-masters-1994/">The Puppet Masters (1994)</a>
-                <br>
-                <span class="muted">
-    2011-03-13
-</span>
-            </h2>
-        </header>
-        
-    </article>
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/mandela-long-walk-to-freedom-2013/">Mandela: Long Walk to Freedom (2013)
+                        
+                    </a>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/the-lost-battalion-2001/">The Lost Battalion (2001)</a>
-                <br>
-                <span class="muted">
-    2011-03-12
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </h1>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/the-road-2009/">The Road (2009)</a>
-                <br>
-                <span class="muted">
-    2011-03-07
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/mata-hari-1931/">Mata Hari (1931)</a>
-                <br>
-                <span class="muted">
-    2011-03-02
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/sex-and-the-city-2008/">Sex And The City (2008)</a>
-                <br>
-                <span class="muted">
-    2011-02-19
-</span>
-            </h2>
-        </header>
-        
-    </article>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/eat-pray-love-2010/">Eat Pray Love (2010)</a>
-                <br>
-                <span class="muted">
-    2011-02-15
-</span>
-            </h2>
-        </header>
-        
-    </article>
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2013-11-10</time>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/farmhouse-2008/">Farmhouse (2008)</a>
-                <br>
-                <span class="muted">
-    2011-02-13
-</span>
-            </h2>
-        </header>
-        
-    </article>
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/pacific-rim-2013/">Pacific Rim (2013)
+                        
+                    </a>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/percy-jackson-the-olympians-the-lightning-thief-2010/">Percy Jackson &amp; The Olympians: The Lightning Thief (2010)</a>
-                <br>
-                <span class="muted">
-    2011-02-13
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </h1>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/g-i-joe-the-rise-of-cobra-2009/">G.I. Joe: The Rise of Cobra (2009)</a>
-                <br>
-                <span class="muted">
-    2011-02-08
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
 
-    
-        
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/good-will-hunting-1997/">Good Will Hunting (1997)</a>
-                <br>
-                <span class="muted">
-    2011-02-08
-</span>
-            </h2>
-        </header>
-        
-    </article>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
 
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/rashomon-1950/">Rashomon (1950)</a>
-                <br>
-                <span class="muted">
-    2010-05-17
-</span>
-            </h2>
-        </header>
-        
-    </article>
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2013-09-06</time>
 
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/olympus-has-fallen-2013/">Olympus Has Fallen (2013)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
     
         
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-        <header>
-            <h2 itemprop="name">
-                <a href="https://tshepang.github.io/jumper/">Jumper</a>
-                <br>
-                <span class="muted">
-    2008-02-25
-</span>
-            </h2>
-        </header>
-        
-    </article>
 
-    
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2013-09-04</time>
 
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/the-hobbit-an-unexpected-journey-2012/">The Hobbit: An Unexpected Journey (2012)
+                        
+                    </a>
 
-  <!-- optional scripts -->
-  
-  
+                    
+                </h1>
 
-  
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
 
-  
-<script type="text/javascript" src="https://tshepang.github.io/elasticlunr.min.js"></script>
-<script type="text/javascript" src="https://tshepang.github.io/js/search.js"></script>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
 
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2013-08-30</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/devil-s-double-2011/">Devil&#39;s Double (2011)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2013-03-29</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/silent-hill-revelation-2012/">Silent Hill: Revelation (2012)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2013-03-29</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/silent-hill-2006/">Silent Hill (2006)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2013-03-09</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/hotel-transylvania-2012/">Hotel Transylvania (2012)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2013-03-02</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/skyfall-2012/">Skyfall (2012)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2013-02-24</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/taken-2-2012/">Taken 2 (2012)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-12-31</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/x-men-3-the-last-stand-2006/">X-Men 3: The Last Stand (2006)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-12-25</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/looper-2012/">Looper (2012)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-12-22</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/romance-1999/">Romance (1999)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-12-09</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/mission-impossible-ghost-protocol-2011/">Mission: Impossible - Ghost Protocol (2011)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-11-30</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/brave-2012/">Brave (2012)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-11-17</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/austin-powers-in-goldmember-2002/">Austin Powers in Goldmember (2002)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-11-13</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/the-green-mile-1999/">The Green Mile (1999)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-10-21</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/idiocracy-2006/">Idiocracy (2006)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-09-30</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/blood-the-last-vampire-2009/">Blood: the Last Vampire (2009)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-09-22</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/harry-potter-and-the-deathly-hallows-part-1/">Harry Potter and the Deathly Hallows, Part 1
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-09-18</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/harry-potter-and-the-half-blood-prince-2009/">Harry Potter and the Half-Blood Prince (2009)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-09-04</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/killers-2010/">Killers (2010)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-07-22</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/the-great-dictator-1940/">The Great Dictator (1940)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-07-21</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/izulu-lami-2008/">Izulu Lami (2008)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-06-08</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/transformers-dark-of-the-moon-2011/">Transformers: Dark of the Moon (2011)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-06-02</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/final-fantasy-the-spirits-within/">Final Fantasy: The Spirits Within
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-05-20</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/j-edgar-2011/">J. Edgar (2011)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-05-06</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/the-science-of-sleep-2006/">The Science of Sleep (2006)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-05-06</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/secretariat-2010/">Secretariat (2010)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-04-29</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/persona-1966/">Persona (1966)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-02-01</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/things-we-lost-in-the-fire-2007/">Things We Lost in the Fire (2007)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-01-19</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/bad-teacher-2011/">Bad Teacher (2011)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-01-15</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/serpico-1973/">Serpico (1973)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-01-11</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/the-duel-2000/">The Duel (2000)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-01-07</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/true-legend-2010/">True Legend (2010)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-01-07</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/swordsman-ii-1992/">Swordsman II (1992)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2012-01-05</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/midnight-in-paris-2011/">Midnight in Paris (2011)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-12-27</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/the-elephant-man-1980/">The Elephant Man (1980)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-12-27</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/sweeney-todd-the-demon-barber-of-fleet-street-2007/">Sweeney Todd - The Demon Barber of Fleet Street (2007)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-12-27</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/love-actually-2003/">Love Actually (2003)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-12-27</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/just-go-with-it-2011/">Just Go With It (2011)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-12-27</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/angel-heart-1987/">Angel Heart (1987)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-12-12</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/shutter-island-2010/">Shutter Island (2010)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-12-08</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/the-sixth-sense-1999/">The Sixth Sense (1999)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-11-28</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/vanilla-sky-2001/">Vanilla Sky (2001)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-11-24</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/cars-2-2011/">Cars 2 (2011)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-11-22</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/lost-in-space-1998/">Lost In Space (1998)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-11-02</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/entrapment-1999/">Entrapment (1999)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-10-28</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/final-destination-2000/">Final Destination (2000)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-08-21</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/colors-1988/">Colors (1988)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-08-01</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/grown-ups-2010/">Grown Ups (2010)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-08-01</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/basic-instinct-1992/">Basic Instinct (1992)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-07-17</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/i-hate-valentine-s-day-2009/">I Hate Valentine&#39;s Day (2009)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-07-16</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/asterix-and-the-vikings-2006/">Asterix and the Vikings (2006)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-07-05</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/bolt-2008/">Bolt (2008)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-06-29</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/das-experiment-2001/">Das Experiment (2001)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-06-26</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/the-librarian-quest-for-the-spear-2004/">The Librarian: Quest for the Spear (2004)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-06-26</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/the-experiment-2010/">The Experiment (2010)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-06-26</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/gamer-2009/">Gamer (2009)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-06-26</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/curious-george-2006/">Curious George (2006)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-06-02</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/red-2010/">Red (2010)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-05-29</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/paper-man-2009/">Paper Man (2009)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-05-25</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/rio-2011/">Rio (2011)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-04-25</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/true-grit-1969/">True Grit (1969)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-04-25</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/straightheads-2007/">Straightheads (2007)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-04-25</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/scar-2008/">Scar (2008)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-04-25</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/inland-empire-2006/">Inland Empire (2006)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-04-02</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/paul-2011/">Paul (2011)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-03-27</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/saw-the-final-chapter-2010/">Saw: The Final Chapter (2010)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-03-13</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/the-puppet-masters-1994/">The Puppet Masters (1994)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-03-12</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/the-lost-battalion-2001/">The Lost Battalion (2001)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-03-07</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/the-road-2009/">The Road (2009)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-03-02</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/mata-hari-1931/">Mata Hari (1931)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-02-19</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/sex-and-the-city-2008/">Sex And The City (2008)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-02-15</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/eat-pray-love-2010/">Eat Pray Love (2010)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-02-13</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/percy-jackson-the-olympians-the-lightning-thief-2010/">Percy Jackson &amp; The Olympians: The Lightning Thief (2010)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-02-13</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/farmhouse-2008/">Farmhouse (2008)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-02-08</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/good-will-hunting-1997/">Good Will Hunting (1997)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2011-02-08</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/g-i-joe-the-rise-of-cobra-2009/">G.I. Joe: The Rise of Cobra (2009)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2010-05-17</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/rashomon-1950/">Rashomon (1950)
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    
+        
+
+<li class="list-item">
+    <section>
+        <div class="post-header">
+            <time>2008-02-25</time>
+
+            <div>
+                <h1 class="title">
+                    <a href="https://tshepang.github.io/jumper/">Jumper
+                        
+                    </a>
+
+                    
+                </h1>
+
+                <div class="meta">
+                    <div class="description">
+                        
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</li>
+
+    </ul>
+
+</main>
+
+
+
+            
+                
+            
+
+            
+        </div>
+
+        <div class="right-content">
+            
+            
+        </div>
+        
 
-  
-</body>
+    </body>
 
 </html>

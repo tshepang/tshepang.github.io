@@ -1,90 +1,287 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark light">
 
+    
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  
-  
-
-  <title>
     
-    Rust dreams
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base" content="https://tshepang.github.io" />
+
     
-</title>
-  <link rel="alternate" type="application/atom+xml" title="Tshepang logs Atom Feed" href="https://tshepang.github.io/atom.xml" />
 
-  
-  <link rel="stylesheet" href="https://tshepang.github.io/site.css">
-  
+    
 
-  
-  
+    
+    
+    
+        <title>
+            
+                Rust dreams
+            
+        </title>
+
+        
+            <meta property="og:title"
+                  content="Rust dreams" />
+        
+    
+
+    
+        
+    
+
+    
+        
+    
+
+    
+    
+
+    
+    
+        <link href=https://tshepang.github.io/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+
+    
+    
+        
+            
+                <link rel="alternate"
+                      type="application/atom+xml"
+                      title="
+Tshepang logs
+"
+                      href="https://tshepang.github.io/atom.xml" />
+            
+        
+    
+
+
+    
+
+    
+    
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://tshepang.github.io/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://tshepang.github.io/theme/dark.css" />
+    
+
+    
+        
+            <script>
+                var themeToggleMode = "toggle";
+            </script>
+        
+        <script src=https://tshepang.github.io/js/themetoggle.js></script>
+
+        
+            <script>
+                setTheme(getSavedTheme());
+            </script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://tshepang.github.io/main.css" />
+
+    
+
+    
+        <script defer
+                src="https://tshepang.github.io/js/searchElasticlunr.min.js?h=3626c0ef99daa745b31e"></script>
+
 </head>
 
-<body class="hack dark main container">
-  
-    
+
+    <body>
         
-  
-  <header class="nav-header">
-    <nav itemscope itemtype="http://schema.org/SiteNavigationElement" class="navbar">
-      <div class="nav-links">
+
+        <div class="left-content">
+            
+            
+        </div>
+
+        <div class="content">
+            <nav>
+    <div class="left-nav">
         
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/about-me">
-          <span itemprop="name">about</span></a>
+            <a href=https://tshepang.github.io>Tshepang logs</a>
         
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/tags">
-          <span itemprop="name">tags</span></a>
-        
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/categories/movies">
-          <span itemprop="name">movies</span></a>
-        
-      </div>
-    </nav>
-    
-    <div class="search-container">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="search-icon">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-      </svg>
-      <input type="text" id="search" placeholder="Search...">
-      <div class="search-results">
-        <div class="search-results__items"></div>
-      </div>
+
+
+        <div class="socials">
+            
+                
+            
+            
+                <a rel='me' href="https://github.com/tshepang" class="social">
+                    <img alt="code"
+                         src="https://tshepang.github.io/icons/social/github.svg" />
+                </a>
+            
+        </div>
     </div>
-    
 
-  </header>
-  
-  
-    
+    <div class="right-nav">
+        
+            <a href=https://tshepang.github.io/about-me style="margin-right: 0.5em">about</a>
+        
+            <a href=https://tshepang.github.io/categories/movies style="margin-right: 0.5em">movies</a>
+        
+            <a href=https://tshepang.github.io/tags style="margin-right: 0.5em">tags</a>
+        
 
-<article itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-        <h1 itemprop="headline">Rust dreams</h1>
-        <span class="muted">
-    2025-09-13
-</span>
-    </header>
-    <div itemprop="articleBody">
-      <br>
-      <p>(<em>see <a href="https://tshepang.github.io/rust-std-dreams/">Rust std dreams</a> for a similar list, but for the standard library</em>)</p>
+        
+            <button id="search-button"
+                    class="search-button"
+                    title="$SHORTCUT to open search">
+                <img src="https://tshepang.github.io/icons/search.svg"
+                     alt="Search"
+                     class="search-icon" />
+            </button>
+
+            <div id="searchModal"
+                 class="search-modal js"
+                 role="dialog"
+                 aria-labelledby="modalTitle">
+                <div id="modal-content">
+                    <h1 id="modalTitle" class="page-header">
+                        Search
+                    </h1>
+                    <div id="searchBar">
+                        <input id="searchInput"
+                               role="combobox"
+                               autocomplete="off"
+                               spellcheck="false"
+                               aria-expanded="false"
+                               aria-controls="results-container"
+                               placeholder="Search..." />
+                        <button id="clear-search" class="clear-button" title="Clear search">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="results-container">
+                        <div id="results-info">
+                            <span id="zero_results" style="display: none;">No results</span>
+                            <span id="one_result" style="display: none;">1 result</span>
+                            <span id="many_results" style="display: none;">$NUMBER results</span>
+                        </div>
+                        <div id="results" role="listbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+        
+        
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://tshepang.github.io/icons/sun.svg" id="sun-icon" alt="Light" />
+                <img src="https://tshepang.github.io/icons/moon.svg"
+                     id="moon-icon"
+                     style="filter: invert(1)"
+                     alt="Dark" />
+                
+            </a>
+
+            <!-- Initialize the theme toggle icons -->
+            <script>
+                updateItemToggleTheme()
+            </script>
+        
+    </div>
+</nav>
+
+
+            
+            
+    
+<div class="visible-element-observer-root" data-selector="main article p">
+    <main>
+        <article>
+            <div class="title">
+                
+                
+
+    <div class="page-header">
+        Rust dreams
+    </div>
+
+
+
+                <div class="meta">
+                    
+                        Posted on <time>2025-09-13</time>
+                    
+
+
+                    
+
+                    
+
+                    
+
+                    
+                    
+
+                    
+                    
+
+                    
+                    
+                        <span class="tags-label">::</span>
+                        <span class="tags">
+                                <a href="https://tshepang.github.io/tags/rust/"
+                                   class="post-tag">Rust</a>
+                            
+                        </span>
+                    
+
+                    
+
+                </div>
+            </div>
+
+            
+
+            <section class="body">
+                <p>(<em>see <a href="https://tshepang.github.io/rust-std-dreams/">Rust std dreams</a> for a similar list, but for the standard library</em>)</p>
 <p>There is a strong commitment for Rust not to break backwards compatibility,
 meaning that all code that compiled with Rust v1.0 should compile with all
 future Rust versions, all but for exceptional circumstances.
-The effort is commendable, and results in kool things like <a href="https://doc.rust-lang.org/edition-guide/editions">Editions</a>,
+The effort is commendable, and results in kool things like <a rel="external" href="https://doc.rust-lang.org/edition-guide/editions">Editions</a>,
 but mistakes are bound to happen that cannot be fixed with such.
 That is, I wish we will have a breaking release at some point,
 and the pain of such a breaking change could be relieved/eliminated with
@@ -96,119 +293,119 @@ following are my favorite breaking things I want in the Rust language
 <li>
 <p>Assigning values to struct bindings should use the equal sign, not
 the colon:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">// now
-</span><span>Shoe { size: </span><span style="color:#d08770;">10</span><span>, style: &quot;</span><span style="color:#a3be8c;">sneaker</span><span>&quot; };
-</span><span style="color:#65737e;">// dream
-</span><span>Shoe { size = </span><span style="color:#d08770;">10</span><span>, style = &quot;</span><span style="color:#a3be8c;">sneaker</span><span>&quot; };
-</span></code></pre>
+<pre><code data-lang="rust">// now
+Shoe { size: 10, style: &quot;sneaker&quot; };
+// dream
+Shoe { size = 10, style = &quot;sneaker&quot; };
+</code></pre>
 <p>This would be consistent with the rest of the language.</p>
 </li>
 <li>
 <p>It would be nice to make the language a little smaller by unifying syntax for
-functions and closures (<a href="https://twitter.com/brundolfsmith/status/1610431400209158144">inspiration</a>).</p>
+functions and closures (<a rel="external" href="https://twitter.com/brundolfsmith/status/1610431400209158144">inspiration</a>).</p>
 <p>A closure syntax looks like this:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
-</span><span>    </span><span style="color:#b48ead;">let </span><span style="color:#8fa1b3;">square </span><span>= |</span><span style="color:#bf616a;">number</span><span>: </span><span style="color:#b48ead;">i32</span><span>| {
-</span><span>        number * number
-</span><span>    };
-</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#96b5b4;">square</span><span>(</span><span style="color:#d08770;">4</span><span>));
-</span><span>}
-</span></code></pre>
+<pre><code data-lang="rust">fn main() {
+    let square = |number: i32| {
+        number * number
+    };
+    println!(&quot;{}&quot;, square(4));
+}
+</code></pre>
 <p>A function for same looks like this:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">square</span><span>(</span><span style="color:#bf616a;">number</span><span>: </span><span style="color:#b48ead;">i32</span><span>) -&gt; </span><span style="color:#b48ead;">i32 </span><span>{
-</span><span>    number * number
-</span><span>}
-</span><span>
-</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
-</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#96b5b4;">square</span><span>(</span><span style="color:#d08770;">4</span><span>));
-</span><span>}
-</span></code></pre>
+<pre><code data-lang="rust">fn square(number: i32) -&gt; i32 {
+    number * number
+}
+
+fn main() {
+    println!(&quot;{}&quot;, square(4));
+}
+</code></pre>
 <p>Imagine if you could have this instead:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let</span><span> square: |</span><span style="color:#bf616a;">number</span><span>: </span><span style="color:#b48ead;">i32</span><span>| -&gt; </span><span style="color:#b48ead;">i32 </span><span>= {
-</span><span>    number * number
-</span><span>}
-</span><span>
-</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
-</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, </span><span style="color:#96b5b4;">square</span><span>(</span><span style="color:#d08770;">4</span><span>));
-</span><span>}
-</span></code></pre>
+<pre><code data-lang="rust">let square: |number: i32| -&gt; i32 = {
+    number * number
+}
+
+fn main() {
+    println!(&quot;{}&quot;, square(4));
+}
+</code></pre>
 <p>It is a bit more heavy on tokens
 (there is an extra <code>:</code> and there is a <code>=</code>),
 but it also means one less keyword (<code>fn</code>),
 and less syntax to learn for new users.</p>
 <p>As an additional example,
 this is what a function would look like if it returned nothing:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let</span><span> show_square: |</span><span style="color:#bf616a;">number</span><span>: </span><span style="color:#b48ead;">i32</span><span>| = {
-</span><span>    println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, number * number);
-</span><span>}
-</span><span>
-</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
-</span><span>    </span><span style="color:#96b5b4;">show_square</span><span>(</span><span style="color:#d08770;">4</span><span>);
-</span><span>}
-</span></code></pre>
+<pre><code data-lang="rust">let show_square: |number: i32| = {
+    println!(&quot;{}&quot;, number * number);
+}
+
+fn main() {
+    show_square(4);
+}
+</code></pre>
 <p>As a final note on this one,
 this is what an async function would look like
-(<a href="https://hachyderm.io/@kevinmehall/111065682919309293">inspiration</a>):</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let</span><span> show_square: |</span><span style="color:#bf616a;">number</span><span>: </span><span style="color:#b48ead;">i32</span><span>| -&gt; </span><span style="color:#b48ead;">i32 </span><span>= async {
-</span><span>    ...
-</span><span>}
-</span></code></pre>
+(<a rel="external" href="https://hachyderm.io/@kevinmehall/111065682919309293">inspiration</a>):</p>
+<pre><code data-lang="rust">let show_square: |number: i32| -&gt; i32 = async {
+    ...
+}
+</code></pre>
 </li>
 <li>
 <p>Perhaps ridiculous,
 but what if we got rid of <code>struct</code> and <code>enum</code> keywords,
 where the structure of the types is instead inferred:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">// current
-</span><span style="color:#b48ead;">struct </span><span>Character {
-</span><span>  </span><span style="color:#bf616a;">name</span><span>: String,
-</span><span>  </span><span style="color:#bf616a;">kind</span><span>: Kind,
-</span><span>}
-</span><span>
-</span><span style="color:#b48ead;">enum </span><span>Kind {
-</span><span>  Good,
-</span><span>  Bad,
-</span><span>  Ugly(Detail),
-</span><span>}
-</span><span>
-</span><span style="color:#b48ead;">struct </span><span>Detail;
-</span><span>
-</span><span style="color:#65737e;">// wish
-</span><span style="color:#b48ead;">type </span><span>Character = {
-</span><span>  name: String,
-</span><span>  kind: Kind,
-</span><span>}
-</span><span>
-</span><span style="color:#b48ead;">type </span><span>Kind = {
-</span><span>  Good,
-</span><span>  Bad,
-</span><span>  Ugly(Detail), </span><span style="color:#65737e;">// looks like a struct with an unnamed field
-</span><span>}
-</span><span>
-</span><span style="color:#b48ead;">type </span><span>Detail; </span><span style="color:#65737e;">// implicitly a struct
-</span><span style="color:#b48ead;">type </span><span>StructWithUnnamedFields(String, Kind);
-</span><span>
-</span><span style="color:#65737e;">// and unions are a special case, so we use this new syntax...
-</span><span style="color:#b48ead;">type </span><span>SomeUnion = union {
-</span><span>    integer: </span><span style="color:#b48ead;">u32</span><span>,
-</span><span>    float: </span><span style="color:#b48ead;">f32</span><span>,
-</span><span>}
-</span></code></pre>
+<pre><code data-lang="rust">// current
+struct Character {
+  name: String,
+  kind: Kind,
+}
+
+enum Kind {
+  Good,
+  Bad,
+  Ugly(Detail),
+}
+
+struct Detail;
+
+// wish
+type Character = {
+  name: String,
+  kind: Kind,
+}
+
+type Kind = {
+  Good,
+  Bad,
+  Ugly(Detail), // looks like a struct with an unnamed field
+}
+
+type Detail; // implicitly a struct
+type StructWithUnnamedFields(String, Kind);
+
+// and unions are a special case, so we use this new syntax...
+type SomeUnion = union {
+    integer: u32,
+    float: f32,
+}
+</code></pre>
 <p>This brings the syntax close to type aliases.</p>
 </li>
 <li>
 <p>Replace underscores (_) with dashes (-) in bindings/identifers:</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">// current
-</span><span style="color:#b48ead;">let</span><span> we_dream;
-</span><span>
-</span><span style="color:#65737e;">// wish
-</span><span style="color:#b48ead;">let</span><span> we-dream;
-</span></code></pre>
+<pre><code data-lang="rust">// current
+let we_dream;
+
+// wish
+let we-dream;
+</code></pre>
 <p>That is a lot more pretty,
 but would disallow arithmetic operations without spaces,
 (since <code>-</code> is a subtraction symbol).</p>
 </li>
 <li>
-<p>Remove re-exports (<a href="https://phanpy.social/#/hachyderm.io/s/114360667953868210">inspiration</a>)</p>
+<p>Remove re-exports (<a rel="external" href="https://phanpy.social/#/hachyderm.io/s/114360667953868210">inspiration</a>)</p>
 <p>This would make it more clear where functionality comes from.
 Not sure the convenience of not having to explicitly manage a dependency
 is worth the feature.</p>
@@ -217,53 +414,38 @@ is worth the feature.</p>
 <p>Replace <code>&amp;&amp; ||</code> with <code>and or</code>, for less visual noise (like Python)</p>
 </li>
 <li>
-<p>Replace <code>*some_ref</code> with <code>some_ref*</code>, to ease reading of nested dereferencing (<a href="https://hachyderm.io/@GregMorenz/114310163840809475">source</a>).</p>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">// current
-</span><span>*(*(*pointer).field).</span><span style="color:#96b5b4;">complex_method</span><span>()
-</span><span>
-</span><span style="color:#65737e;">// wish
-</span><span>pointer*.field*.</span><span style="color:#96b5b4;">complex_method</span><span>()*
-</span></code></pre>
+<p>Replace <code>*some_ref</code> with <code>some_ref*</code>, to ease reading of nested dereferencing (<a rel="external" href="https://hachyderm.io/@GregMorenz/114310163840809475">source</a>).</p>
+<pre><code data-lang="rust">// current
+*(*(*pointer).field).complex_method()
+
+// wish
+pointer*.field*.complex_method()*
+</code></pre>
 </li>
 </ul>
 
-    </div>
+            </section>
+        </article>
+    </main>
+</div>
 
-    
-        <footer>
-            <hr>
-            <p>
-                
-                
-                
-                    
-                    tagged
-                    
-                        <a href="https://tshepang.github.io/tags/rust/">Rust</a>
-                        
-                    
-                
-            </p>
+
+
             
+                
             
-        </footer>
+
+            
+        </div>
+
+        <div class="right-content">
+            
     
-</article>
+    
 
+        </div>
+        
 
-
-  <!-- optional scripts -->
-  
-  
-
-  
-
-  
-<script type="text/javascript" src="https://tshepang.github.io/elasticlunr.min.js"></script>
-<script type="text/javascript" src="https://tshepang.github.io/js/search.js"></script>
-
-
-  
-</body>
+    </body>
 
 </html>

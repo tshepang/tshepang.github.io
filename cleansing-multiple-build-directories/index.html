@@ -1,86 +1,286 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark light">
 
+    
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  
-  
-
-  <title>
     
-    cleansing multiple build directories
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base" content="https://tshepang.github.io" />
+
     
-</title>
-  <link rel="alternate" type="application/atom+xml" title="Tshepang logs Atom Feed" href="https://tshepang.github.io/atom.xml" />
 
-  
-  <link rel="stylesheet" href="https://tshepang.github.io/site.css">
-  
+    
 
-  
-  
+    
+    
+    
+        <title>
+            
+                cleansing multiple build directories
+            
+        </title>
+
+        
+            <meta property="og:title"
+                  content="cleansing multiple build directories" />
+        
+    
+
+    
+        
+    
+
+    
+        
+    
+
+    
+    
+
+    
+    
+        <link href=https://tshepang.github.io/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+
+    
+    
+        
+            
+                <link rel="alternate"
+                      type="application/atom+xml"
+                      title="
+Tshepang logs
+"
+                      href="https://tshepang.github.io/atom.xml" />
+            
+        
+    
+
+
+    
+
+    
+    
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://tshepang.github.io/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://tshepang.github.io/theme/dark.css" />
+    
+
+    
+        
+            <script>
+                var themeToggleMode = "toggle";
+            </script>
+        
+        <script src=https://tshepang.github.io/js/themetoggle.js></script>
+
+        
+            <script>
+                setTheme(getSavedTheme());
+            </script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://tshepang.github.io/main.css" />
+
+    
+
+    
+        <script defer
+                src="https://tshepang.github.io/js/searchElasticlunr.min.js?h=3626c0ef99daa745b31e"></script>
+
 </head>
 
-<body class="hack dark main container">
-  
-    
+
+    <body>
         
-  
-  <header class="nav-header">
-    <nav itemscope itemtype="http://schema.org/SiteNavigationElement" class="navbar">
-      <div class="nav-links">
+
+        <div class="left-content">
+            
+            
+        </div>
+
+        <div class="content">
+            <nav>
+    <div class="left-nav">
         
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/about-me">
-          <span itemprop="name">about</span></a>
+            <a href=https://tshepang.github.io>Tshepang logs</a>
         
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/tags">
-          <span itemprop="name">tags</span></a>
-        
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/categories/movies">
-          <span itemprop="name">movies</span></a>
-        
-      </div>
-    </nav>
-    
-    <div class="search-container">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="search-icon">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-      </svg>
-      <input type="text" id="search" placeholder="Search...">
-      <div class="search-results">
-        <div class="search-results__items"></div>
-      </div>
+
+
+        <div class="socials">
+            
+                
+            
+            
+                <a rel='me' href="https://github.com/tshepang" class="social">
+                    <img alt="code"
+                         src="https://tshepang.github.io/icons/social/github.svg" />
+                </a>
+            
+        </div>
     </div>
-    
 
-  </header>
-  
-  
-    
+    <div class="right-nav">
+        
+            <a href=https://tshepang.github.io/about-me style="margin-right: 0.5em">about</a>
+        
+            <a href=https://tshepang.github.io/categories/movies style="margin-right: 0.5em">movies</a>
+        
+            <a href=https://tshepang.github.io/tags style="margin-right: 0.5em">tags</a>
+        
 
-<article itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-        <h1 itemprop="headline">cleansing multiple build directories</h1>
-        <span class="muted">
-    2011-03-26
-</span>
-    </header>
-    <div itemprop="articleBody">
-      <br>
-      <p>In my adventures of <a href="https://tshepang.github.io/my-jhbuild-setup/">building GNOME with JHBuild</a>, it often happens that
+        
+            <button id="search-button"
+                    class="search-button"
+                    title="$SHORTCUT to open search">
+                <img src="https://tshepang.github.io/icons/search.svg"
+                     alt="Search"
+                     class="search-icon" />
+            </button>
+
+            <div id="searchModal"
+                 class="search-modal js"
+                 role="dialog"
+                 aria-labelledby="modalTitle">
+                <div id="modal-content">
+                    <h1 id="modalTitle" class="page-header">
+                        Search
+                    </h1>
+                    <div id="searchBar">
+                        <input id="searchInput"
+                               role="combobox"
+                               autocomplete="off"
+                               spellcheck="false"
+                               aria-expanded="false"
+                               aria-controls="results-container"
+                               placeholder="Search..." />
+                        <button id="clear-search" class="clear-button" title="Clear search">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="results-container">
+                        <div id="results-info">
+                            <span id="zero_results" style="display: none;">No results</span>
+                            <span id="one_result" style="display: none;">1 result</span>
+                            <span id="many_results" style="display: none;">$NUMBER results</span>
+                        </div>
+                        <div id="results" role="listbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+        
+        
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://tshepang.github.io/icons/sun.svg" id="sun-icon" alt="Light" />
+                <img src="https://tshepang.github.io/icons/moon.svg"
+                     id="moon-icon"
+                     style="filter: invert(1)"
+                     alt="Dark" />
+                
+            </a>
+
+            <!-- Initialize the theme toggle icons -->
+            <script>
+                updateItemToggleTheme()
+            </script>
+        
+    </div>
+</nav>
+
+
+            
+            
+    
+<div class="visible-element-observer-root" data-selector="main article p">
+    <main>
+        <article>
+            <div class="title">
+                
+                
+
+    <div class="page-header">
+        cleansing multiple build directories
+    </div>
+
+
+
+                <div class="meta">
+                    
+                        Posted on <time>2011-03-26</time>
+                    
+
+
+                    
+
+                    
+
+                    
+
+                    
+                    
+
+                    
+                    
+
+                    
+                    
+                        <span class="tags-label">::</span>
+                        <span class="tags">
+                                <a href="https://tshepang.github.io/tags/gnome/"
+                                   class="post-tag">GNOME</a>
+                            
+                                <a href="https://tshepang.github.io/tags/python/"
+                                   class="post-tag">Python</a>
+                            
+                        </span>
+                    
+
+                    
+
+                </div>
+            </div>
+
+            
+
+            <section class="body">
+                <p>In my adventures of <a href="https://tshepang.github.io/my-jhbuild-setup/">building GNOME with JHBuild</a>, it often happens that
 when I tweak something that affects the build environment (e.g. use
 system Python instead of JHBuild-built one), I get a heck of a lot of
 build failures. This will happen even after I run jhbuild clean (which
@@ -93,84 +293,58 @@ JHBuild path) to get a build failure fixed
 just wipe out the entire installation.</p>
 <p>Note that there's dozens of modules to build, so I wrote this little
 script to take care of it:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>os
-</span><span style="color:#b48ead;">import </span><span>subprocess
-</span><span>top_level = os.path.</span><span style="color:#bf616a;">expanduser</span><span>(&quot;</span><span style="color:#a3be8c;">~/src/gnome</span><span>&quot;)
-</span><span style="color:#b48ead;">for </span><span>filename </span><span style="color:#b48ead;">in </span><span>os.</span><span style="color:#bf616a;">listdir</span><span>(top_level):
-</span><span>    full_path = &quot;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">/</span><span style="color:#d08770;">{}</span><span>&quot;.</span><span style="color:#bf616a;">format</span><span>(top_level, filename)
-</span><span>    </span><span style="color:#b48ead;">if </span><span>os.path.</span><span style="color:#bf616a;">isdir</span><span>(full_path):
-</span><span>        cmd = &quot;</span><span style="color:#a3be8c;">cd ~/src/gnome/</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> &amp;&amp; git clean -dfx</span><span>&quot;.</span><span style="color:#bf616a;">format</span><span>(filename)
-</span><span>        </span><span style="color:#b48ead;">if </span><span>subprocess.</span><span style="color:#bf616a;">call</span><span>(cmd, </span><span style="color:#bf616a;">shell</span><span>=</span><span style="color:#d08770;">True</span><span>) != </span><span style="color:#d08770;">0</span><span>:
-</span><span>            cmd = &quot;</span><span style="color:#a3be8c;">cd ~/src/gnome/</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> &amp;&amp; make distclean</span><span>&quot;.</span><span style="color:#bf616a;">format</span><span>(filename)
-</span><span>            </span><span style="color:#b48ead;">if </span><span>subprocess.</span><span style="color:#bf616a;">call</span><span>(cmd, </span><span style="color:#bf616a;">shell</span><span>=</span><span style="color:#d08770;">True</span><span>) != </span><span style="color:#d08770;">0</span><span>:
-</span><span>                cmd = &quot;</span><span style="color:#a3be8c;">cd ~/src/gnome/</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> &amp;&amp; make clean</span><span>&quot;.</span><span style="color:#bf616a;">format</span><span>(filename)
-</span><span>                subprocess.</span><span style="color:#bf616a;">call</span><span>(cmd, </span><span style="color:#bf616a;">shell</span><span>=</span><span style="color:#d08770;">True</span><span>)
-</span></code></pre>
+<pre><code data-lang="python">import os
+import subprocess
+top_level = os.path.expanduser(&quot;~/src/gnome&quot;)
+for filename in os.listdir(top_level):
+    full_path = &quot;{}/{}&quot;.format(top_level, filename)
+    if os.path.isdir(full_path):
+        cmd = &quot;cd ~/src/gnome/{} &amp;&amp; git clean -dfx&quot;.format(filename)
+        if subprocess.call(cmd, shell=True) != 0:
+            cmd = &quot;cd ~/src/gnome/{} &amp;&amp; make distclean&quot;.format(filename)
+            if subprocess.call(cmd, shell=True) != 0:
+                cmd = &quot;cd ~/src/gnome/{} &amp;&amp; make clean&quot;.format(filename)
+                subprocess.call(cmd, shell=True)
+</code></pre>
 <h3 id="update">update</h3>
-<p>Someone very kind guy made <a href="http://codereview.stackexchange.com/questions/1476/cleansing-multiple-build-directories/1477#1477">a bunch of suggestions</a>, making my code much
+<p>Someone very kind guy made <a rel="external" href="http://codereview.stackexchange.com/questions/1476/cleansing-multiple-build-directories/1477#1477">a bunch of suggestions</a>, making my code much
 better:</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>os
-</span><span style="color:#b48ead;">import </span><span>subprocess
-</span><span>top_level = os.path.</span><span style="color:#bf616a;">expanduser</span><span>(&quot;</span><span style="color:#a3be8c;">~/src/gnome</span><span>&quot;)
-</span><span style="color:#b48ead;">for </span><span>filename </span><span style="color:#b48ead;">in </span><span>os.</span><span style="color:#bf616a;">listdir</span><span>(top_level):
-</span><span>    full_path = os.path.</span><span style="color:#bf616a;">join</span><span>(top_level, filename)
-</span><span>    </span><span style="color:#b48ead;">if </span><span>os.path.</span><span style="color:#bf616a;">isdir</span><span>(full_path):
-</span><span>        os.</span><span style="color:#bf616a;">chdir</span><span>(full_path)
-</span><span>        </span><span style="color:#b48ead;">if </span><span>subprocess.</span><span style="color:#bf616a;">call</span><span>(&quot;</span><span style="color:#a3be8c;">git clean -dfx</span><span>&quot;.</span><span style="color:#bf616a;">split</span><span>()) != </span><span style="color:#d08770;">0</span><span>:
-</span><span>            </span><span style="color:#b48ead;">if </span><span>subprocess.</span><span style="color:#bf616a;">call</span><span>(&quot;</span><span style="color:#a3be8c;">make distclean</span><span>&quot;.</span><span style="color:#bf616a;">split</span><span>()) != </span><span style="color:#d08770;">0</span><span>:
-</span><span>                subprocess.</span><span style="color:#bf616a;">call</span><span>(&quot;</span><span style="color:#a3be8c;">make clean</span><span>&quot;.</span><span style="color:#bf616a;">split</span><span>())
-</span></code></pre>
+<pre><code data-lang="python">import os
+import subprocess
+top_level = os.path.expanduser(&quot;~/src/gnome&quot;)
+for filename in os.listdir(top_level):
+    full_path = os.path.join(top_level, filename)
+    if os.path.isdir(full_path):
+        os.chdir(full_path)
+        if subprocess.call(&quot;git clean -dfx&quot;.split()) != 0:
+            if subprocess.call(&quot;make distclean&quot;.split()) != 0:
+                subprocess.call(&quot;make clean&quot;.split())
+</code></pre>
 <h3 id="further-reading">further reading</h3>
-<p>modules: <a href="http://docs.python.org//library/os">os</a>, <a href="http://docs.python.org//library/os.path">os.path</a>, <a href="http://docs.python.org//library/subprocess">subprocess</a></p>
+<p>modules: <a rel="external" href="http://docs.python.org//library/os">os</a>, <a rel="external" href="http://docs.python.org//library/os.path">os.path</a>, <a rel="external" href="http://docs.python.org//library/subprocess">subprocess</a></p>
 
-    </div>
+            </section>
+        </article>
+    </main>
+</div>
 
-    
-        <footer>
-            <hr>
-            <p>
-                
-                
-                
-                    
-                    tagged
-                    
-                        <a href="https://tshepang.github.io/tags/python/">Python</a>
-                        
-                            
-                                
-                                    and
-                                
-                            
-                        
-                    
-                        <a href="https://tshepang.github.io/tags/gnome/">GNOME</a>
-                        
-                            
-                        
-                    
-                
-            </p>
+
+
             
+                
             
-        </footer>
+
+            
+        </div>
+
+        <div class="right-content">
+            
     
-</article>
+    
 
+        </div>
+        
 
-
-  <!-- optional scripts -->
-  
-  
-
-  
-
-  
-<script type="text/javascript" src="https://tshepang.github.io/elasticlunr.min.js"></script>
-<script type="text/javascript" src="https://tshepang.github.io/js/search.js"></script>
-
-
-  
-</body>
+    </body>
 
 </html>

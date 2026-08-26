@@ -1,86 +1,283 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark light">
 
+    
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  
-  
-
-  <title>
     
-    2011 movie review
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base" content="https://tshepang.github.io" />
+
     
-</title>
-  <link rel="alternate" type="application/atom+xml" title="Tshepang logs Atom Feed" href="https://tshepang.github.io/atom.xml" />
 
-  
-  <link rel="stylesheet" href="https://tshepang.github.io/site.css">
-  
+    
 
-  
-  
+    
+    
+    
+        <title>
+            
+                2011 movie review
+            
+        </title>
+
+        
+            <meta property="og:title"
+                  content="2011 movie review" />
+        
+    
+
+    
+        
+    
+
+    
+        
+    
+
+    
+    
+
+    
+    
+        <link href=https://tshepang.github.io/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+
+    
+    
+        
+            
+                <link rel="alternate"
+                      type="application/atom+xml"
+                      title="
+Tshepang logs
+"
+                      href="https://tshepang.github.io/atom.xml" />
+            
+        
+    
+
+
+    
+
+    
+    
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://tshepang.github.io/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://tshepang.github.io/theme/dark.css" />
+    
+
+    
+        
+            <script>
+                var themeToggleMode = "toggle";
+            </script>
+        
+        <script src=https://tshepang.github.io/js/themetoggle.js></script>
+
+        
+            <script>
+                setTheme(getSavedTheme());
+            </script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://tshepang.github.io/main.css" />
+
+    
+
+    
+        <script defer
+                src="https://tshepang.github.io/js/searchElasticlunr.min.js?h=3626c0ef99daa745b31e"></script>
+
 </head>
 
-<body class="hack dark main container">
-  
-    
+
+    <body>
         
-  
-  <header class="nav-header">
-    <nav itemscope itemtype="http://schema.org/SiteNavigationElement" class="navbar">
-      <div class="nav-links">
+
+        <div class="left-content">
+            
+            
+        </div>
+
+        <div class="content">
+            <nav>
+    <div class="left-nav">
         
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/about-me">
-          <span itemprop="name">about</span></a>
+            <a href=https://tshepang.github.io>Tshepang logs</a>
         
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/tags">
-          <span itemprop="name">tags</span></a>
-        
-        <a itemprop="url"
-          class=""
-          href="https://tshepang.github.io/categories/movies">
-          <span itemprop="name">movies</span></a>
-        
-      </div>
-    </nav>
-    
-    <div class="search-container">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="search-icon">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-      </svg>
-      <input type="text" id="search" placeholder="Search...">
-      <div class="search-results">
-        <div class="search-results__items"></div>
-      </div>
+
+
+        <div class="socials">
+            
+                
+            
+            
+                <a rel='me' href="https://github.com/tshepang" class="social">
+                    <img alt="code"
+                         src="https://tshepang.github.io/icons/social/github.svg" />
+                </a>
+            
+        </div>
     </div>
-    
 
-  </header>
-  
-  
-    
+    <div class="right-nav">
+        
+            <a href=https://tshepang.github.io/about-me style="margin-right: 0.5em">about</a>
+        
+            <a href=https://tshepang.github.io/categories/movies style="margin-right: 0.5em">movies</a>
+        
+            <a href=https://tshepang.github.io/tags style="margin-right: 0.5em">tags</a>
+        
 
-<article itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-        <h1 itemprop="headline">2011 movie review</h1>
-        <span class="muted">
-    2014-03-23
-</span>
-    </header>
-    <div itemprop="articleBody">
-      <br>
-      <p>I was very surprised when I went through a list of movies I tagged as
+        
+            <button id="search-button"
+                    class="search-button"
+                    title="$SHORTCUT to open search">
+                <img src="https://tshepang.github.io/icons/search.svg"
+                     alt="Search"
+                     class="search-icon" />
+            </button>
+
+            <div id="searchModal"
+                 class="search-modal js"
+                 role="dialog"
+                 aria-labelledby="modalTitle">
+                <div id="modal-content">
+                    <h1 id="modalTitle" class="page-header">
+                        Search
+                    </h1>
+                    <div id="searchBar">
+                        <input id="searchInput"
+                               role="combobox"
+                               autocomplete="off"
+                               spellcheck="false"
+                               aria-expanded="false"
+                               aria-controls="results-container"
+                               placeholder="Search..." />
+                        <button id="clear-search" class="clear-button" title="Clear search">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="results-container">
+                        <div id="results-info">
+                            <span id="zero_results" style="display: none;">No results</span>
+                            <span id="one_result" style="display: none;">1 result</span>
+                            <span id="many_results" style="display: none;">$NUMBER results</span>
+                        </div>
+                        <div id="results" role="listbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+        
+        
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://tshepang.github.io/icons/sun.svg" id="sun-icon" alt="Light" />
+                <img src="https://tshepang.github.io/icons/moon.svg"
+                     id="moon-icon"
+                     style="filter: invert(1)"
+                     alt="Dark" />
+                
+            </a>
+
+            <!-- Initialize the theme toggle icons -->
+            <script>
+                updateItemToggleTheme()
+            </script>
+        
+    </div>
+</nav>
+
+
+            
+            
+    
+<div class="visible-element-observer-root" data-selector="main article p">
+    <main>
+        <article>
+            <div class="title">
+                
+                
+
+    <div class="page-header">
+        2011 movie review
+    </div>
+
+
+
+                <div class="meta">
+                    
+                        Posted on <time>2014-03-23</time>
+                    
+
+
+                    
+
+                    
+
+                    
+
+                    
+                    
+
+                    
+                    
+
+                    
+                    
+                        <span class="tags-label">::</span>
+                        <span class="tags">
+                                <a href="https://tshepang.github.io/tags/year-movie-review/"
+                                   class="post-tag">year-movie-review</a>
+                            
+                        </span>
+                    
+
+                    
+
+                </div>
+            </div>
+
+            
+
+            <section class="body">
+                <p>I was very surprised when I went through a list of movies I tagged as
 excellent, which I watched first time in 2011, and found several. One
 problem though is that I can't rank them because I don't fully
 remember the experiences of all. Luckily, I know which of the movies is
@@ -121,7 +318,7 @@ ones in the franchise.</li>
 Treader</a>)</li>
 <li>wall of water (<a href="https://tshepang.github.io/the-chronicles-of-narnia-the-voyage-of-the-dawn-treader-2010/">The Chronicles of Narnia: The Voyage of the Dawn
 Treader</a>)</li>
-<li>Paris chase by the 2 <a href="http://en.wikipedia.org/wiki/Powered_exoskeleton">exoskeletons</a> (<a href="https://tshepang.github.io/g-i-joe-the-rise-of-cobra-2009/">G.I. Joe: The Rise of Cobra</a>)</li>
+<li>Paris chase by the 2 <a rel="external" href="http://en.wikipedia.org/wiki/Powered_exoskeleton">exoskeletons</a> (<a href="https://tshepang.github.io/g-i-joe-the-rise-of-cobra-2009/">G.I. Joe: The Rise of Cobra</a>)</li>
 <li>the storm (<a href="https://tshepang.github.io/gulliver-s-travels-2010/">Gulliver's Travels</a>)</li>
 <li>trash in the recycling plant (<a href="https://tshepang.github.io/toy-story-3-2010/">Toy Story 3</a>) +++ maybe a cheat since
 this is animation, but I needed to mention it</li>
@@ -130,18 +327,18 @@ this is animation, but I needed to mention it</li>
 the Guardians</a>. Both offer lengthy moments of hyper-realistic imagery.
 The runner-up is <a href="https://tshepang.github.io/9-2009/">9</a> with it's wonderful action sequences.</p>
 <p>Although the <strong>best action</strong> is offered by <a href="https://tshepang.github.io/9-2009/">9</a>, the <strong>best action
-sequence</strong> is the <a href="http://en.wikipedia.org/wiki/Powered_exoskeleton">exoskeleton</a> chase in <a href="https://tshepang.github.io/g-i-joe-the-rise-of-cobra-2009/">G.I. Joe: The
+sequence</strong> is the <a rel="external" href="http://en.wikipedia.org/wiki/Powered_exoskeleton">exoskeleton</a> chase in <a href="https://tshepang.github.io/g-i-joe-the-rise-of-cobra-2009/">G.I. Joe: The
 Rise of Cobra</a>. However, there <strong>most innovative sequence</strong> is the
 split-screen bounty hunter scene found in <a href="https://tshepang.github.io/the-green-hornet-2011/">The Green Hornet</a>.</p>
 <h2 id="performances">performances</h2>
-<p>My <strong>favorite performance</strong> is that of <a href="http://en.wikipedia.org/wiki/Andie_MacDowell">Andie MacDowell</a> when playing
+<p>My <strong>favorite performance</strong> is that of <a rel="external" href="http://en.wikipedia.org/wiki/Andie_MacDowell">Andie MacDowell</a> when playing
 the sweet love interest in <a href="https://tshepang.github.io/sex-lies-and-videotape-1989/">Sex, Lies, and Videotape</a>. First runner-up
-is a tie between Vera Farmica as sad mother (<a href="https://tshepang.github.io/orphan-2009/">Orphan</a>) and <a href="http://en.wikipedia.org/wiki/John_de_Lancie">Jon de
+is a tie between Vera Farmica as sad mother (<a href="https://tshepang.github.io/orphan-2009/">Orphan</a>) and <a rel="external" href="http://en.wikipedia.org/wiki/John_de_Lancie">Jon de
 Lancie</a> as lead of pathology (<a href="https://tshepang.github.io/pathology-2008/">Pathology</a>). 2nd runner-up is Sandra Oh
 (<a href="https://tshepang.github.io/rabbit-hole-2010/">Rabbit Hole</a>).</p>
 <p>The <strong>best male performance</strong> is by Geoffrey Rush when playing a
 therapist in <a href="https://tshepang.github.io/the-king-s-speech-2010/">The Kings's Speech</a>.
-The runner-up is <a href="http://en.wikipedia.org/wiki/Miles_Teller">Miles Teller</a> in <a href="https://tshepang.github.io/rabbit-hole-2010/">Rabbit Hole</a>.</p>
+The runner-up is <a rel="external" href="http://en.wikipedia.org/wiki/Miles_Teller">Miles Teller</a> in <a href="https://tshepang.github.io/rabbit-hole-2010/">Rabbit Hole</a>.</p>
 <p>The <strong>best female performance</strong> is by Nicole Kidman in <a href="https://tshepang.github.io/rabbit-hole-2010/">Rabbit Hole</a>,
 and the <strong>best cast</strong> is from the same movie. Maybe it's a distant
 second, but the runner-up on that category is <a href="https://tshepang.github.io/pathology-2008/">Pathology</a>. The <strong>best
@@ -156,13 +353,13 @@ made me care about him, which is the sort of quality I find exceptional
 in terms of character development of villains.</p>
 <p>The <strong>best character design</strong> is that of the main villain in <a href="https://tshepang.github.io/9-2009/">9</a>,
 followed by the ninjas in <a href="https://tshepang.github.io/the-warrior-s-way-2010/">The Warrior's Way</a>.</p>
-<p>The year's <strong>most desirable character</strong> is by <a href="http://en.wikipedia.org/wiki/Sandra_Oh">Sandra Oh</a> in <a href="https://tshepang.github.io/rabbit-hole-2010/">Rabbit Hole</a>,
+<p>The year's <strong>most desirable character</strong> is by <a rel="external" href="http://en.wikipedia.org/wiki/Sandra_Oh">Sandra Oh</a> in <a href="https://tshepang.github.io/rabbit-hole-2010/">Rabbit Hole</a>,
 playing a small role as the love interest. Watching this has changed my
 view of her... I want her, now! Here's the runner-ups:</p>
 <ol>
-<li><a href="http://en.wikipedia.org/wiki/Andie_MacDowell">Andie MacDowell</a> (<a href="https://tshepang.github.io/sex-lies-and-videotape-1989/">Sex, Lies, and Videotape</a>)</li>
-<li><a href="http://en.wikipedia.org/wiki/Teri_Hatcher">Teri Hatcher</a> (<a href="https://tshepang.github.io/tango-cash-1989/">Tango &amp; Cash</a>)</li>
-<li><a href="http://en.wikipedia.org/wiki/Jill_Schoelen">Jill Schoelen</a> (<a href="https://tshepang.github.io/the-stepfather-1987/">The Stepfather</a>)</li>
+<li><a rel="external" href="http://en.wikipedia.org/wiki/Andie_MacDowell">Andie MacDowell</a> (<a href="https://tshepang.github.io/sex-lies-and-videotape-1989/">Sex, Lies, and Videotape</a>)</li>
+<li><a rel="external" href="http://en.wikipedia.org/wiki/Teri_Hatcher">Teri Hatcher</a> (<a href="https://tshepang.github.io/tango-cash-1989/">Tango &amp; Cash</a>)</li>
+<li><a rel="external" href="http://en.wikipedia.org/wiki/Jill_Schoelen">Jill Schoelen</a> (<a href="https://tshepang.github.io/the-stepfather-1987/">The Stepfather</a>)</li>
 </ol>
 <p><a href="https://tshepang.github.io/according-to-greta-2009/">According to Greta</a> boasts both the <strong>most perfect gentleman</strong> (the
 lead's boyfriend) and the <strong>most perfect father</strong> (the lead's
@@ -206,48 +403,30 @@ About Eve</a>. The former is substandard while the second is quite decent.</p>
 this year to appear in this review, for one reason or another.</p>
 <hr />
 <p>For a complete list of the movies I reviewed for the year, visit the
-<a href="http://tshepang.github.io/tags/2011-movie">this tag</a>.</p>
+<a rel="external" href="http://tshepang.github.io/tags/2011-movie">this tag</a>.</p>
 
-    </div>
+            </section>
+        </article>
+    </main>
+</div>
 
-    
-        <footer>
-            <hr>
-            <p>
-                
-                
-                    
-                    in <a href="https://tshepang.github.io/categories/movies/">movies</a>
-                
-                
-                    and
-                    tagged
-                    
-                        <a href="https://tshepang.github.io/tags/year-movie-review/">year-movie-review</a>
-                        
-                    
-                
-            </p>
+
+
             
+                
             
-        </footer>
+
+            
+        </div>
+
+        <div class="right-content">
+            
     
-</article>
+    
 
+        </div>
+        
 
-
-  <!-- optional scripts -->
-  
-  
-
-  
-
-  
-<script type="text/javascript" src="https://tshepang.github.io/elasticlunr.min.js"></script>
-<script type="text/javascript" src="https://tshepang.github.io/js/search.js"></script>
-
-
-  
-</body>
+    </body>
 
 </html>
