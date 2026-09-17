@@ -2097,7 +2097,7 @@ Emacs has a similar feature, except via twisted finger gymnastics.&lt;/p&gt;
 a feature available by default on Emacs
 (where older yanks are accessed with &lt;code&gt;Alt-y&lt;/code&gt;, as contrasted with &lt;code&gt;C-y&lt;/code&gt; for latest yanked text).
 Currently, one has to do the more awkward usage of so-called &lt;em&gt;registers&lt;/em&gt;,
-which have to predefined in advance before an action (like &lt;strong&gt;yank&lt;/strong&gt;, &lt;strong&gt;delete&lt;/strong&gt;, or &lt;strong&gt;change&lt;/strong&gt;).&lt;/p&gt;
+which have to be predefined in advance before an action (like &lt;strong&gt;yank&lt;/strong&gt;, &lt;strong&gt;delete&lt;/strong&gt;, or &lt;strong&gt;change&lt;/strong&gt;).&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;I have installed the editor a few times,
