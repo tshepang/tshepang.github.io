@@ -42,6 +42,60 @@ so intense, so brutal.&lt;/p&gt;
         
     </entry>
     <entry xml:lang="en">
+        <title>Rust things I most anticipate</title>
+        <published>2026-10-10T00:00:00+00:00</published>
+        <updated>2026-10-10T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://tshepang.github.io/rust-things-i-most-anticipate/"/>
+        <id>https://tshepang.github.io/rust-things-i-most-anticipate/</id>
+        
+        <content type="html" xml:base="https://tshepang.github.io/rust-things-i-most-anticipate/">&lt;ul&gt;
+&lt;li&gt;Wide use of &lt;a rel=&quot;external&quot; href=&quot;https://github.com/davidlattimore/wild&quot;&gt;Wild&lt;/a&gt;, an alternative to mold, lld, and ld&lt;/li&gt;
+&lt;li&gt;Wide use of &lt;a rel=&quot;external&quot; href=&quot;https://radicle.xyz&quot;&gt;Radicle&lt;/a&gt;,
+an alternative to GitHub that is peer-to-peer
+(&lt;a rel=&quot;external&quot; href=&quot;https://radicle.xyz/#updates&quot;&gt;updates&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Wide use of &lt;a rel=&quot;external&quot; href=&quot;https://github.com/quickwit-oss/tantivy&quot;&gt;Tantivy&lt;/a&gt;, a full-text search engine library
+(&lt;a rel=&quot;external&quot; href=&quot;https://quickwit.io/blog/tantivy-0.24&quot;&gt;latest update&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Wide use of &lt;a rel=&quot;external&quot; href=&quot;https://github.com/quickwit-oss/quickwit&quot;&gt;Quickwit&lt;/a&gt;, a distributed search engine built on &lt;a rel=&quot;external&quot; href=&quot;https://github.com/quickwit-oss/tantivy&quot;&gt;Tantivy&lt;/a&gt;
+(&lt;a rel=&quot;external&quot; href=&quot;https://quickwit.io/blog/quickwit-binance-story&quot;&gt;latest update&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Make alternative (to &lt;a rel=&quot;external&quot; href=&quot;https://github.com/llvm/llvm-project&quot;&gt;LLVM&lt;/a&gt;) codegen backends available in a Rust stable toolchain:
+&lt;ul&gt;
+&lt;li&gt;&lt;a rel=&quot;external&quot; href=&quot;https://github.com/bjorn3/rustc_codegen_cranelift&quot;&gt;rustc_codegen_cranelift&lt;/a&gt;,
+which uses &lt;a rel=&quot;external&quot; href=&quot;https://github.com/bytecodealliance/wasmtime/tree/main/cranelift&quot;&gt;cranelift&lt;/a&gt; for codegen,
+is already available via &lt;code&gt;rustup&lt;/code&gt; on nightly toolchains,
+and the immediate benefit is fast debug compiles
+(&lt;a rel=&quot;external&quot; href=&quot;https://bjorn3.github.io&quot;&gt;updates&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a rel=&quot;external&quot; href=&quot;https://github.com/rust-lang/rustc_codegen_gcc&quot;&gt;rustc_codegen_gcc&lt;/a&gt;,
+allowing Rust to run in more hardware platforms
+(&lt;a rel=&quot;external&quot; href=&quot;https://blog.antoyo.xyz&quot;&gt;updates&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Removing libc dependency for Linux-based systems (&lt;a rel=&quot;external&quot; href=&quot;https://github.com/sunfishcode/mustang&quot;&gt;mustang&lt;/a&gt; and &lt;a rel=&quot;external&quot; href=&quot;https://github.com/bytecodealliance/rsix&quot;&gt;rustix&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;achieved&quot;&gt;achieved&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Use of Rust in safety-critical systems:
+&lt;a rel=&quot;external&quot; href=&quot;https://www.sonair.com/journal/how-we-safety-certified-the-worlds-first-rust-implementation&quot;&gt;Sonair released a product&lt;/a&gt;, with the help of &lt;a rel=&quot;external&quot; href=&quot;https://ferrous-systems.com/ferrocene&quot;&gt;Ferrocene&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Wide use of &lt;a rel=&quot;external&quot; href=&quot;https://github.com/typst/typst&quot;&gt;Typst&lt;/a&gt;, a more pleasant alternative to LaTeX:
+goal achieved,
+due to &lt;a rel=&quot;external&quot; href=&quot;https://typst.app/blog/2025/future&quot;&gt;the claim&lt;/a&gt; that thousands of academic institutions now use it&lt;/li&gt;
+&lt;li&gt;Usage in production versions of Chromium,
+&lt;a rel=&quot;external&quot; href=&quot;https://developer.chrome.com/blog/memory-safety-fonts&quot;&gt;released in mid 2024&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A driver written in Rust in the official Linux kernel:
+&lt;ul&gt;
+&lt;li&gt;&lt;a rel=&quot;external&quot; href=&quot;https://github.com/torvalds/linux/blob/master/drivers/net/phy/ax88796b_rust.rs&quot;&gt;Asix PHYs driver&lt;/a&gt;
+is the first, released early 2024&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
         <title>2024 review</title>
         <published>2026-10-07T00:00:00+00:00</published>
         <updated>2026-10-07T00:00:00+00:00</updated>
@@ -759,60 +813,6 @@ key = &amp;quot;v&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Nice thing about the tool is it auto-applies the config changes whenever the files are saved...
 no need for a restart.&lt;/p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Rust things I most anticipate</title>
-        <published>2025-10-31T00:00:00+00:00</published>
-        <updated>2025-10-31T00:00:00+00:00</updated>
-        
-        <author>
-          <name>Unknown</name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://tshepang.github.io/rust-things-i-most-anticipate/"/>
-        <id>https://tshepang.github.io/rust-things-i-most-anticipate/</id>
-        
-        <content type="html" xml:base="https://tshepang.github.io/rust-things-i-most-anticipate/">&lt;ul&gt;
-&lt;li&gt;Wide use of &lt;a rel=&quot;external&quot; href=&quot;https://github.com/davidlattimore/wild&quot;&gt;Wild&lt;/a&gt;, an alternative to mold, lld, and ld&lt;/li&gt;
-&lt;li&gt;Wide use of &lt;a rel=&quot;external&quot; href=&quot;https://radicle.xyz&quot;&gt;Radicle&lt;/a&gt;,
-an alternative to GitHub that is peer-to-peer
-(&lt;a rel=&quot;external&quot; href=&quot;https://radicle.xyz/#updates&quot;&gt;updates&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Wide use of &lt;a rel=&quot;external&quot; href=&quot;https://github.com/quickwit-oss/tantivy&quot;&gt;Tantivy&lt;/a&gt;, a full-text search engine library
-(&lt;a rel=&quot;external&quot; href=&quot;https://quickwit.io/blog/tantivy-0.24&quot;&gt;latest update&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Wide use of &lt;a rel=&quot;external&quot; href=&quot;https://github.com/quickwit-oss/quickwit&quot;&gt;Quickwit&lt;/a&gt;, a distributed search engine built on &lt;a rel=&quot;external&quot; href=&quot;https://github.com/quickwit-oss/tantivy&quot;&gt;Tantivy&lt;/a&gt;
-(&lt;a rel=&quot;external&quot; href=&quot;https://quickwit.io/blog/quickwit-binance-story&quot;&gt;latest update&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Make alternative (to &lt;a rel=&quot;external&quot; href=&quot;https://github.com/llvm/llvm-project&quot;&gt;LLVM&lt;/a&gt;) codegen backends available in a Rust stable toolchain:
-&lt;ul&gt;
-&lt;li&gt;&lt;a rel=&quot;external&quot; href=&quot;https://github.com/bjorn3/rustc_codegen_cranelift&quot;&gt;rustc_codegen_cranelift&lt;/a&gt;,
-which uses &lt;a rel=&quot;external&quot; href=&quot;https://github.com/bytecodealliance/wasmtime/tree/main/cranelift&quot;&gt;cranelift&lt;/a&gt; for codegen,
-is already available via &lt;code&gt;rustup&lt;/code&gt; on nightly toolchains,
-and the immediate benefit is fast debug compiles
-(&lt;a rel=&quot;external&quot; href=&quot;https://bjorn3.github.io&quot;&gt;updates&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;a rel=&quot;external&quot; href=&quot;https://github.com/rust-lang/rustc_codegen_gcc&quot;&gt;rustc_codegen_gcc&lt;/a&gt;,
-allowing Rust to run in more hardware platforms
-(&lt;a rel=&quot;external&quot; href=&quot;https://blog.antoyo.xyz&quot;&gt;updates&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Use of Rust in safety-critical systems,
-&lt;a rel=&quot;external&quot; href=&quot;https://ferrous-systems.com/ferrocene&quot;&gt;Ferrocene&lt;/a&gt; being the most likely candidate,
-due to being the first Rust toolchain &lt;a rel=&quot;external&quot; href=&quot;https://ferrous-systems.com/blog/officially-qualified-ferrocene&quot;&gt;qualified for the domain&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Removing libc dependency for Linux-based systems (&lt;a rel=&quot;external&quot; href=&quot;https://github.com/sunfishcode/mustang&quot;&gt;mustang&lt;/a&gt; and &lt;a rel=&quot;external&quot; href=&quot;https://github.com/bytecodealliance/rsix&quot;&gt;rustix&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;achieved&quot;&gt;achieved&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Wide use of &lt;a rel=&quot;external&quot; href=&quot;https://github.com/typst/typst&quot;&gt;Typst&lt;/a&gt;, a more pleasant alternative to LaTeX:
-goal achieved, due to &lt;a rel=&quot;external&quot; href=&quot;https://typst.app/blog/2025/future&quot;&gt;the claim&lt;/a&gt; that thousands of academic institutions now use it&lt;/li&gt;
-&lt;li&gt;Usage in production versions of Chromium,
-&lt;a rel=&quot;external&quot; href=&quot;https://developer.chrome.com/blog/memory-safety-fonts&quot;&gt;released in mid 2024&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;A driver written in Rust in the official Linux kernel:
-&lt;ul&gt;
-&lt;li&gt;&lt;a rel=&quot;external&quot; href=&quot;https://github.com/torvalds/linux/blob/master/drivers/net/phy/ax88796b_rust.rs&quot;&gt;Asix PHYs driver&lt;/a&gt;
-is the first, released early 2024&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 </content>
         
     </entry>
