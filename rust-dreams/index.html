@@ -77,7 +77,7 @@ let we_dream;
 
 // wish
 let we-dream;
-</code></pre> <p>That is a lot more pretty, but would disallow arithmetic operations without spaces, (since <code>-</code> is a subtraction symbol).</p><li><p>Remove re-exports (<a href=https://phanpy.social/#/hachyderm.io/s/114360667953868210 rel=external>inspiration</a>)</p> <p>This would make it more clear where functionality comes from. Not sure the convenience of not having to explicitly manage a dependency is worth the feature.</p><li><p>Replace <code>&& ||</code> with <code>and or</code>, for less visual noise (like Python)</p><li><p>Replace <code>*some_ref</code> with <code>some_ref*</code>, to ease reading of nested dereferencing (<a href=https://hachyderm.io/@GregMorenz/114310163840809475 rel=external>source</a>).</p> <pre><code data-lang=rust>// current
+</code></pre> <p>That is a lot more pretty, but would disallow arithmetic operations without spaces (since <code>-</code> is a subtraction symbol).</p><li><p>Remove re-exports (<a href=https://phanpy.social/#/hachyderm.io/s/114360667953868210 rel=external>inspiration</a>)</p> <p>This would make it more clear where functionality comes from. Not sure the convenience of not having to explicitly manage a dependency is worth the feature.</p><li><p>Replace <code>&& ||</code> with <code>and or</code>, for less visual noise (like Python)</p><li><p>Replace <code>*some_ref</code> with <code>some_ref*</code>, to ease reading of nested dereferencing (<a href=https://hachyderm.io/@GregMorenz/114310163840809475 rel=external>source</a>).</p> <pre><code data-lang=rust>// current
 *(*(*pointer).field).complex_method()
 
 // wish
