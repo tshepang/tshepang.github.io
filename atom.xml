@@ -1177,7 +1177,8 @@ is worth the feature.&lt;/p&gt;
 &lt;p&gt;Replace &lt;code&gt;&amp;amp;&amp;amp; ||&lt;/code&gt; with &lt;code&gt;and or&lt;/code&gt;, for less visual noise (like Python)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Replace &lt;code&gt;*some_ref&lt;/code&gt; with &lt;code&gt;some_ref*&lt;/code&gt;, to ease reading of nested dereferencing (&lt;a rel=&quot;external&quot; href=&quot;https://hachyderm.io/@GregMorenz/114310163840809475&quot;&gt;source&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Replace &lt;code&gt;*some_ref&lt;/code&gt; with &lt;code&gt;some_ref*&lt;/code&gt;,
+to ease reading of nested dereferencing (&lt;a rel=&quot;external&quot; href=&quot;https://hachyderm.io/@GregMorenz/114310163840809475&quot;&gt;source&lt;/a&gt;).&lt;/p&gt;
 &lt;pre&gt;&lt;code data-lang=&quot;rust&quot;&gt;// current
 *(*(*pointer).field).complex_method()
 
